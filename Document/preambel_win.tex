@@ -1,0 +1,89 @@
+\documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibtotoc,oneside,a4paper,fleqn,BCOR8mm]{scrreprt}
+%  \usepackage[colorlinks]{hyperref}
+\usepackage{ngerman,a4}
+\usepackage{cmbright}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}  %[draft]
+\usepackage{graphics}
+%\usepackage{subfigure}
+%\usepackage{rotating}
+%\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage{nomencl}
+\usepackage{lscape}
+\usepackage{ae}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{pstricks}
+\lstloadlanguages{[ANSI]C}
+%\usepackage[table]{xcolor}
+%		\xdefinecolor{RWTHBlue}{rgb}{0.0,0.4039,0.6509} 
+%		\xdefinecolor{RWTHlightBlue}{rgb}{0.4666,0.6196,0.7882}
+%		\xdefinecolor{RWTHRed}{rgb}{0.780392156,0.133333333,0.352941176} 
+%		\xdefinecolor{AVTLightBlue}{rgb}{0.682352941, 0.82745098, 0.941176471} 
+%		\xdefinecolor{AVTLight2Blue}{rgb}{0.423529412, 0.823529412, 0.97254902} 
+%		\xdefinecolor{AVTBlue}{rgb}{0.223529412, 0.749019608, 0.862745098} 
+%		\xdefinecolor{AVTDarkBlue}{rgb}{0.031372549, 0.529411765, 0.768627451} 
+%		\xdefinecolor{AVTLightGreen}{rgb}{0.31372549, 0.71372549, 0.290196078} 
+%		\xdefinecolor{AVTGreen}{rgb}{0.705882353, 0.835294118, 0.243137255} 
+\usepackage[colorlinks=false, linkcolor=AVTBlue, citecolor=AVTLightGreen, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
+%\usepackage{natbib} % nur für dinat gebraucht
+\usepackage{subfig}
+\usepackage{subfloat}
+\usepackage{todonotes}
+\usepackage{paralist}
+
+%\usepackage[activate]{pdfcprot}
+\bibliographystyle{plain}
+\pagestyle{headings}
+\setlength{\unitlength}{1cm}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1.8ex plus0.5ex minus0.5ex}
+\setlength{\baselineskip}{1.5ex plus0.5ex minus0.5ex}
+\sloppy
+
+\setlength{\textwidth}{17cm}
+\setlength{\textheight}{24cm}
+\setlength{\evensidemargin}{-0.5cm}
+\setlength{\oddsidemargin}{-0.5cm}
+\setlength{\topmargin}{-1cm}
+\setlength{\footskip }{8ex}
+\definecolor{avtcolor}{rgb}{0,0.537,0.820}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\renewcommand{\nomname}{Nomenclature}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of Tables}
+\renewcommand{\bibname}{Bibliography}
+\renewcommand{\nompreamble}{\markboth{Nomenclature}{Nomenclature}}
+
+\newcommand{\refeq}[1]{Eq. \ref{#1}}
+\newcommand{\refeqs}[2]{Eqs. \ref{#1} - \ref{#2}}
+\newcommand{\reffig}[1]{Fig. \ref{#1}}
+\newcommand{\reftab}[1]{Tab. \ref{#1}}
+\newcommand{\refsec}[1]{Sec. \ref{#1}}
+\newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+\newcommand{\C}[1]{\makebox(0,0)[m]{#1}}
+\newcommand{\CM}[1]{\C{\begin{tabular}{c}#1\end{tabular}}}
+\newcommand{\gproms}{gPROMS\raisebox{1ex}{\scriptsize \textregistered}\,}
+\newcommand{\aspen}{Aspen Plus\raisebox{1ex}{\scriptsize \textregistered}\,}
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
+\newcommand{\eq}[1]{\begin{align}#1\end{align}}
+\newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
+\newcommand{\regitemize}[1]{\begin{itemize}#1\end{itemize}}
+\newcommand{\nc}[2]{\nomenclature{#1}{#2}}
+
+\makenomenclature
+
+

@@ -1,0 +1,29 @@
+\input{preambel_osx}
+
+\begin{document}
+	\pagenumbering{roman}
+
+	\input{Content/CoverPage}
+	%\include{Aufgabenstellung}
+	%\include{Erklaerung}
+
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\printnomenclature[2.5cm]
+	\clearpage
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+
+	\include{Content/introduction}
+	\include{Content/AirSep}
+	\include{Content/cryo}
+	\include{Content/outlook}
+	
+	%\bibliography{Literature}
+	
+	%\begin{appendix}
+	%	\include{Content/appendix}
+	%\end{appendix}
+	
+\end{document}    
