@@ -1,11 +1,24 @@
 \input{preambel_osx}
 
+\newboolean{draft}
+\setboolean{draft}{true}
+
+\ifthenelse{\boolean{draft}}{
+	\usepackage[colorinlistoftodos,]{todonotes}
+}{
+	\usepackage[colorinlistoftodos, disable]{todonotes}
+}
+
+
 \begin{document}
 	\pagenumbering{roman}
-
-	\input{Content/CoverPage}
-	%\include{Aufgabenstellung}
-	%\include{Erklaerung}
+	
+	\input{Content/Preamble/CoverPage}
+	
+	\ifthenelse{\boolean{draft}}{}{
+		\include{Content/Preamble/TaskDescription}
+		\include{Content/Preamble/StatutoryDeclaration}
+	}
 
 	\tableofcontents
 	\listoffigures
@@ -19,6 +32,8 @@
 	\include{Content/AirSep}
 	\include{Content/cryo}
 	\include{Content/outlook}
+	
+	\listoftodos
 	
 	%\bibliography{Literature}
 	

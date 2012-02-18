@@ -1,5 +1,4 @@
 \documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibtotoc,oneside,a4paper,fleqn,BCOR8mm]{scrreprt}
-%  \usepackage[colorlinks]{hyperref}
 \usepackage{ngerman,a4}
 \usepackage{cmbright}
 \usepackage{color}
@@ -19,11 +18,6 @@
 \usepackage{ae}
 \usepackage{multirow}
 \usepackage{listings}
-%\usepackage{pstricks}
-%\usepackage{ifplatform}
-%\usepackage{xkeyval}
-%\usepackage{pst-pdf}
-%\usepackage{auto-pst-pdf}
 \lstloadlanguages{[ANSI]C}
 \usepackage[table]{xcolor}
 	\xdefinecolor{RWTHBlue}{rgb}{0.0,0.3294,0.6235} 
@@ -41,10 +35,9 @@
 %\usepackage{natbib} % nur für dinat gebraucht
 \usepackage{subfig}
 \usepackage{subfloat}
-\usepackage{todonotes}
 \usepackage{paralist}
+\usepackage{xifthen}
 
-%\usepackage[activate]{pdfcprot}
 \bibliographystyle{plain}
 \pagestyle{headings}
 \setlength{\unitlength}{1cm}
@@ -90,6 +83,7 @@
 \newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
 \newcommand{\regitemize}[1]{\begin{itemize}#1\end{itemize}}
 \newcommand{\nc}[2]{\nomenclature{#1}{#2}}
+\newcommand{\todoil}[2]{\todo[inline, #1]{#2}}
 
 \makenomenclature
 
