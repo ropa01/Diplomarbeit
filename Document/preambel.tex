@@ -1,4 +1,4 @@
-\documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibtotoc,oneside,a4paper,fleqn,BCOR8mm]{scrreprt}
+\documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibliography=totoc,oneside,a4paper,fleqn,BCOR8mm]{scrreprt}
 \usepackage{ngerman,a4}
 \usepackage{cmbright}
 \usepackage{color}
@@ -31,7 +31,7 @@
 	\xdefinecolor{AVTGreen}{rgb}{0.705882353, 0.835294118, 0.243137255} 
 	\xdefinecolor{ImperialDarkBlue}{rgb}{0.0,0.2471,0.4784}
 	\xdefinecolor{ImperialLightBlue}{rgb}{0.4686,0.5961,0.7255}
-\usepackage[colorlinks=trueâ, linkcolor=AVTBlue, citecolor=AVTLightGreen, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
+\usepackage[colorlinks=true, linkcolor=AVTBlue, citecolor=AVTLightGreen, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
 %\usepackage{natbib} % nur für dinat gebraucht
 \usepackage{subfig}
 \usepackage{subfloat}
@@ -84,6 +84,7 @@
 \newcommand{\regitemize}[1]{\begin{itemize}#1\end{itemize}}
 \newcommand{\nc}[2]{\nomenclature{#1}{#2}}
 \newcommand{\todoil}[2]{\todo[inline, #1]{#2}}
+\newcommand{\addref}{\todo[inline, color=red!40]{add citation}}
 
 \makenomenclature
 
