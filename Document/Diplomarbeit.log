@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  19 APR 2012 16:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  20 APR 2012 02:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1157,18 +1157,39 @@ s-converted-to.pdf Pictures/tech_comp_graph.eps>
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/tech_comp_graph-eps-converted-to.pdf, id=94, 613.29124pt x 289.08pt>
+<Pictures/tech_comp_graph-eps-converted-to.pdf, id=96, 613.29124pt x 289.08pt>
 File: Pictures/tech_comp_graph-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures/tech_comp_graph-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures/tech_comp_graph-eps-converted-to.pdf used on 
 input line 8.
 (pdftex.def)             Requested size: 369.88582pt x 174.34917pt.
+)
+(./Pictures/gas_permeation.tex
+Package epstopdf Info: Source file: <Pictures/gas_permeation.eps>
+(epstopdf)                    date: 2012-04-20 02:00:36
+(epstopdf)                    size: 93339 bytes
+(epstopdf)             Output file: <Pictures/gas_permeation-eps-converted-to.p
+df>
+(epstopdf)                    date: 2012-04-20 02:01:22
+(epstopdf)                    size: 17432 bytes
+(epstopdf)             Command: <epstopdf --outfile=Pictures/gas_permeation-eps
+-converted-to.pdf Pictures/gas_permeation.eps>
+(epstopdf)             \includegraphics on input line 7.
+Package epstopdf Info: Output file is already uptodate.
+
+<Pictures/gas_permeation-eps-converted-to.pdf, id=98, 435.6275pt x 125.46875pt>
+File: Pictures/gas_permeation-eps-converted-to.pdf Graphic file (type pdf)
+<use Pictures/gas_permeation-eps-converted-to.pdf>
+Package pdftex.def Info: Pictures/gas_permeation-eps-converted-to.pdf used on i
+nput line 7.
+(pdftex.def)             Requested size: 369.88582pt x 106.53406pt.
 )) [2
 
 
 
-] [3 <./Pictures/tech_comp_graph-eps-converted-to.pdf>]
+] [3 <./Pictures/tech_comp_graph-eps-converted-to.pdf> <./Pictures/gas_permeati
+on-eps-converted-to.pdf>]
 \openout2 = `Content/cryo.aux'.
 
  (./Content/cryo.tex
@@ -1185,7 +1206,7 @@ rted-to.pdf Pictures/ASU_text.eps>
 (epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/ASU_text-eps-converted-to.pdf, id=115, 482.80376pt x 337.26pt>
+<Pictures/ASU_text-eps-converted-to.pdf, id=128, 482.80376pt x 337.26pt>
 File: Pictures/ASU_text-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures/ASU_text-eps-converted-to.pdf>
@@ -1220,15 +1241,15 @@ tent/cryo.aux) (./Content/outlook.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 473E94B48A7A5F2EE11A79A1A28E8567;562.
+(rerunfilecheck)             Checksum: 8C6BC133B9167DF32286AB16E0306C53;562.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 21131 strings out of 493633
- 369121 string characters out of 3143378
- 484583 words of memory out of 3000000
- 23829 multiletter control sequences out of 15000+200000
- 37992 words of font info for 127 fonts, out of 3000000 for 9000
+ 21157 strings out of 493633
+ 369657 string characters out of 3143378
+ 487666 words of memory out of 3000000
+ 23838 multiletter control sequences out of 15000+200000
+ 39000 words of font info for 137 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  74i,13n,80p,424b,810s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
@@ -1241,10 +1262,10 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/l
 ocal/texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local/
 texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb>
-Output written on Diplomarbeit.pdf (11 pages, 209388 bytes).
+Output written on Diplomarbeit.pdf (11 pages, 225729 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 19561 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 19566 words of extra memory for PDF output out of 20736 (max. 10000000)
 
