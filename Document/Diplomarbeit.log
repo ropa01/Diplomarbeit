@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  20 APR 2012 20:56
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  20 APR 2012 21:38
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1049,7 +1049,7 @@ df>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/ICL_Logo-eps-converted-to.pdf, id=63, 169.63374pt x 48.18pt>
+<Pictures/Logos/ICL_Logo-eps-converted-to.pdf, id=79, 169.63374pt x 48.18pt>
 File: Pictures/Logos/ICL_Logo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures/Logos/ICL_Logo-eps-converted-to.pdf>
@@ -1068,7 +1068,7 @@ ficial-eps-converted-to.pdf Pictures/Logos/RWTH_Logo_official.eps>
 (epstopdf)             \includegraphics on input line 13.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/RWTH_Logo_official-eps-converted-to.pdf, id=64, 245.91875pt x 6
+<Pictures/Logos/RWTH_Logo_official-eps-converted-to.pdf, id=80, 245.91875pt x 6
 7.25125pt>
 File: Pictures/Logos/RWTH_Logo_official-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1163,7 +1163,7 @@ s-converted-to.pdf Pictures/tech_comp_graph.eps>
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/tech_comp_graph-eps-converted-to.pdf, id=122, 613.29124pt x 289.08pt>
+<Pictures/tech_comp_graph-eps-converted-to.pdf, id=142, 613.29124pt x 289.08pt>
 File: Pictures/tech_comp_graph-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures/tech_comp_graph-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures/tech_comp_graph-eps-converted-to.pdf used on 
@@ -1176,8 +1176,26 @@ ine 28.
 
 
 
- <./Pictures/tech_comp_graph-eps-converted-to.pdf>] (./Pictures/gas_permeation.
-tex
+ <./Pictures/tech_comp_graph-eps-converted-to.pdf>] (./Pictures/ASU_text.tex
+Package epstopdf Info: Source file: <Pictures/ASU_text.eps>
+(epstopdf)                    date: 2012-01-12 12:25:04
+(epstopdf)                    size: 15461 bytes
+(epstopdf)             Output file: <Pictures/ASU_text-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-01-12 12:36:56
+(epstopdf)                    size: 5964 bytes
+(epstopdf)             Command: <epstopdf --outfile=Pictures/ASU_text-eps-conve
+rted-to.pdf Pictures/ASU_text.eps>
+(epstopdf)             \includegraphics on input line 53.
+Package epstopdf Info: Output file is already uptodate.
+
+<Pictures/ASU_text-eps-converted-to.pdf, id=163, 482.80376pt x 337.26pt>
+File: Pictures/ASU_text-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Pictures/ASU_text-eps-converted-to.pdf>
+Package pdftex.def Info: Pictures/ASU_text-eps-converted-to.pdf used on input l
+ine 53.
+(pdftex.def)             Requested size: 482.70294pt x 337.20256pt.
+) [3 <./Pictures/ASU_text-eps-converted-to.pdf>] (./Pictures/gas_permeation.tex
 Package epstopdf Info: Source file: <Pictures/gas_permeation.eps>
 (epstopdf)                    date: 2012-04-20 19:20:51
 (epstopdf)                    size: 13391 bytes
@@ -1190,19 +1208,19 @@ df>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/gas_permeation-eps-converted-to.pdf, id=142, 435.6275pt x 107.40125pt
+<Pictures/gas_permeation-eps-converted-to.pdf, id=179, 435.6275pt x 107.40125pt
 >
 File: Pictures/gas_permeation-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/gas_permeation-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures/gas_permeation-eps-converted-to.pdf used on i
 nput line 7.
 (pdftex.def)             Requested size: 369.88582pt x 91.19315pt.
-)) [3 <./Pictures/gas_permeation-eps-converted-to.pdf>]
+)) [4 <./Pictures/gas_permeation-eps-converted-to.pdf>]
 \openout2 = `Content/ProcessDesign.aux'.
 
  (./Content/ProcessDesign.tex
 Kapitel 3.
-) [4
+) [5
 
 
 
@@ -1211,30 +1229,11 @@ Kapitel 3.
 
  (./Content/cryo.tex
 Kapitel 4.
-(./Pictures/ASU_text.tex
-Package epstopdf Info: Source file: <Pictures/ASU_text.eps>
-(epstopdf)                    date: 2012-01-12 12:25:04
-(epstopdf)                    size: 15461 bytes
-(epstopdf)             Output file: <Pictures/ASU_text-eps-converted-to.pdf>
-(epstopdf)                    date: 2012-01-12 12:36:56
-(epstopdf)                    size: 5964 bytes
-(epstopdf)             Command: <epstopdf --outfile=Pictures/ASU_text-eps-conve
-rted-to.pdf Pictures/ASU_text.eps>
-(epstopdf)             \includegraphics on input line 53.
-Package epstopdf Info: Output file is already uptodate.
-
-<Pictures/ASU_text-eps-converted-to.pdf, id=159, 482.80376pt x 337.26pt>
-File: Pictures/ASU_text-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Pictures/ASU_text-eps-converted-to.pdf>
-Package pdftex.def Info: Pictures/ASU_text-eps-converted-to.pdf used on input l
-ine 53.
-(pdftex.def)             Requested size: 482.70294pt x 337.20256pt.
-)) [5
+) [6
 
 
 
-] [6 <./Pictures/ASU_text-eps-converted-to.pdf>]
+]
 \openout2 = `Content/outlook.aux'.
 
  (./Content/outlook.tex
@@ -1252,7 +1251,7 @@ Kapitel 5.
 
 ]
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 6.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 7.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
  [9
@@ -1265,7 +1264,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: BA4C44B398384B5BC628EE7E0990EE7B;863.
+(rerunfilecheck)             Checksum: C1BE396890C9433A2D537757B2322D71;1131.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1273,11 +1272,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
  ) 
 Here is how much of TeX's memory you used:
- 21241 strings out of 493633
- 370698 string characters out of 3143378
- 489409 words of memory out of 3000000
- 23856 multiletter control sequences out of 15000+200000
- 44441 words of font info for 178 fonts, out of 3000000 for 9000
+ 21327 strings out of 493633
+ 371575 string characters out of 3143378
+ 489517 words of memory out of 3000000
+ 23865 multiletter control sequences out of 15000+200000
+ 52609 words of font info for 238 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  74i,13n,80p,424b,575s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
@@ -1290,10 +1289,10 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/l
 ocal/texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local/
 texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb>
-Output written on Diplomarbeit.pdf (13 pages, 217994 bytes).
+Output written on Diplomarbeit.pdf (13 pages, 224376 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 19606 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 20150 words of extra memory for PDF output out of 20736 (max. 10000000)
 

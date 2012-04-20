@@ -8,44 +8,44 @@ A level-1 auxiliary file: Content/ProcessDesign.aux
 A level-1 auxiliary file: Content/cryo.aux
 A level-1 auxiliary file: Content/outlook.aux
 Database file #1: Literature.bib
-You've used 2 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            519 strings with 4635 characters,
-and the built_in function-call counts, 766 in all, are:
-= -- 76
-> -- 36
-< -- 0
-+ -- 14
-- -- 12
-* -- 66
-:= -- 133
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 12
+            541 strings with 5421 characters,
+and the built_in function-call counts, 1938 in all, are:
+= -- 201
+> -- 79
+< -- 1
++ -- 31
+- -- 26
+* -- 150
+:= -- 315
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 28
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 22
-empty$ -- 57
-format.name$ -- 12
-if$ -- 151
+cite$ -- 5
+duplicate$ -- 66
+empty$ -- 148
+format.name$ -- 26
+if$ -- 401
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 8
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 20
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 23
 quote$ -- 0
-skip$ -- 14
+skip$ -- 51
 stack$ -- 0
-substring$ -- 66
-swap$ -- 2
-text.length$ -- 0
+substring$ -- 177
+swap$ -- 16
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 20
 warning$ -- 0
-while$ -- 8
-width$ -- 3
-write$ -- 24
+while$ -- 21
+width$ -- 6
+write$ -- 57
