@@ -1,0 +1,9 @@
+\nomenclatureentry{a$C_E$@[{$C_E$}]\begingroup Equipment cost \nomunit{\$}\nomeqref {3.1}|nompageref}{8}
+\nomenclatureentry{a$C_B$@[{$C_B$}]\begingroup Reference equipment cost \nomunit{\$}\nomeqref {3.1}|nompageref}{8}
+\nomenclatureentry{a$Q$@[{$Q$}]\begingroup Equipment specific quantity \nomunit{-}\nomeqref {3.1}|nompageref}{8}
+\nomenclatureentry{a$Q_B$@[{$Q_B$}]\begingroup Equipment specific reference quantity \nomunit{-}\nomeqref {3.1}|nompageref}{8}
+\nomenclatureentry{a$M$@[{$M$}]\begingroup Equipment specific factor \nomunit{-}\nomeqref {3.1}|nompageref}{8}
+\nomenclatureentry{a$C_1$@[{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit{\$}\nomeqref {3.2}|nompageref}{8}
+\nomenclatureentry{a$C_2$@[{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit{\$}\nomeqref {3.2}|nompageref}{8}
+\nomenclatureentry{a$index_1$@[{$index_1$}]\begingroup index at time $1$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}
+\nomenclatureentry{a$index_2$@[{$index_2$}]\begingroup index at time $2$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}

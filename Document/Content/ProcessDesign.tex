@@ -1,6 +1,38 @@
 \chapter{Process Design}
 \label{chp:proces_design}
 
+Once a particular reaction or production sequence has been developed in a laboratory it needs to be scaled 
+up to produce the desired product in quantities large enough to meet market demand to a price that allows 
+competative prices. This is where process design comes into play. At the begin of the design process often 
+only the raw material as well as the desired products, along with the necessary chemical reactions are 
+specified. It is then the task of the process engineer to find a series of production steps which lead to the 
+production of this product. Each step denotes a specific function and the connected functions form a process.
+ At the end each specific function has to be assigned a specific technical realization. 
+
+Usually there are numerous options available to perform certain tasks and in order to be realized any 
+endeavor will need to yield acceptable profits. Different options will therefore have to be compared  from an 
+engineering and an economic standpoint alike. For complex processes the amount of possible options 
+becomes enormous. Too many to be manually examined and evaluated. 
+\todo[inline]{Number of options for separation problem -- ref douglas}
+
+Process Engineers have to rely on heuristics to limit the number of options and identify the most promising 
+candidates for further studies. These candidates can then be compared in terms of economic performance. 
+In order to do so one has to rely on simulation studies and experiments. As experiments and the construction 
+of pilot plants are very costly the aim is to minimize those. WIth the rise in available computing power the 
+numerical simulation of processes has become a very powerful tool to support the design process and has 
+the ability to replace numerous experiments. Not only can possible options be evaluated but also can 
+optimal process configurations from a limited pool of options be generated. 
+
+To conduct simulation studies first a process model needs to be created. This models in its most general 
+case is a set of partial differential and algebraic equations. When formulating the model great care needs 
+to be applied, as any simulation study can only be as accurate as the underlying model. The process 
+engineer is faces with the task to find an adequate representation of the physical system which delivers 
+meaningful results within an reasonable amount of time. Further enhanced is this problem when the model 
+is to be used in model predictive control, where (approximate) solutions of complex systems might need to 
+be available within seconds or fractions of a second. 
+
+In the following sections some general considerations on the physical and economic modeling of chemical process will be given, before in the next chapter those will be applied to real-life problem at hand. AS uncertainty 
+
 \section{Process Model}
 \label{sec:process_model}
 
@@ -9,4 +41,94 @@
 
 \section{Economic Considerations}
 \label{sec:uncertainty}
+
+Aside from question wether a certain process is capable of producing products according to its 
+specifications, it needs to be investigated if it does so in an economically viable manner. The modeling 
+of process economics is a powerful tool to estimate project profitability. The evaluation of process 
+economics has three major aims in the design phase. 
+
+\regitemize{%
+	\item{Compare design options with regard to profitability.}
+	\item{Economically optimize a given design.}
+	\item{Estimate project profitability}
+}%
+
+In any case the total cost of the project as well as the cash flow structure will have to be analyzed to supply 
+an accurate estimate of the economic conditions. Furthermore an adequate measure to compare and 
+analyze a project in economic terms needs to be employed. 
+
+The following sections will first describe how to estimate the total project cost in different stages of the 
+design process. Subsequently different ways of measuring a projects profitability will be discussed. 
+
+\subsection{Project cost}
+An important factor in every given project is the total cost. During the design of a chemical process many 
+important aspects of the future cost structure are unknown, as the final design is in development. In 
+general the total cost of implementing and operating a production site can be broken down into several 
+subcategories. 
+
+\regitemize{%
+	\item{Battery limit investment}
+	\item{Utility investment}
+	\item{Off-Site investment}
+	\item{Engineering fees}
+	\item{Working capital}
+}%
+
+We will now look closer at each of these subcategories. 
+
+\subsubsection{Battery limit investment} denotes all investments necessary to have all required equipment 
+for process operations installed on-site. This includes structures necessary to house the process as well as
+ delivery and installation of all individual assets.  One major part of these cost will the the process 
+ equipment. As the exact manufacturers and models of the equipment will not be known in early design 
+ stages, a different approach has to be chosen. Various process parameters such as temperatures, 
+ pressures and handled volumes will have an effect of the required equipment. High pressure tanks will 
+ most likely be more expensive as stronger materials and thicker walls will be necessary. Each piece of 
+ equipment will have an specific feature that most influences its cost. For vessels and reactors this might be 
+ volume, while for heat exchangers the required heat exchange area. The equipment price $C_E$ can be 
+ approximated by a simple power law
+\eq{
+	C_E = C_B \left( \frac{Q}{Q_B} \right)^M. 
+	\label{eq:equip_cost}
+}%
+\nomenclature{$C_E$}{Equipment cost \nomunit{\$}}
+\nomenclature{$C_B$}{Reference equipment cost \nomunit{\$}}
+\nomenclature{$Q$}{Equipment specific quantity \nomunit{-}}
+\nomenclature{$Q_B$}{Equipment specific reference quantity \nomunit{-}}
+\nomenclature{$M$}{Equipment specific factor \nomunit{-}}
+
+A reference price $C_B$ is multiplied by the determining quantity $Q$ normalized to a reference state 
+$Q_B$ and raised to the power $M$ specific to each piece of equipment. Reference prices for various 
+installations can be obtained from literature. 
+\todo[inline]{add reference}
+As the overall price structure may change dramatically over time these prices will have to be adjusted to 
+current time. To do so several indices have been developed
+\eq{
+	\frac{C_1}{C_2} = \frac{index_1}{index_2}. 
+	\label{eq:index_ratio}
+}%
+\nomenclature{$C_1$}{Reference equipment cost at time $1$ \nomunit{\$}}
+\nomenclature{$C_2$}{Reference equipment cost at time $2$ \nomunit{\$}}
+\nomenclature{$index_1$}{index at time $1$ \nomunit{-}}
+\nomenclature{$index_2$}{index at time $2$ \nomunit{-}}
+
+While for each index an arbitrary reference year is chosen. Among the most common indices are the 
+Marshall \& Swift index (1926: $index = 100$) or the Nellson-Farrar-Index (1946: $index = 100$)
+
+As mentioned before aside from the mere size of the equipment the process conditions will also affect the 
+price. The predominant factors to that respect are pressure, temperature and the question wether corrosive 
+or reactive media will be present. 
+
+\subsection{Profitability measures}
+\begin{figure}
+	\centering
+	\input{pgfplots/ProjectCashFlow}
+	\caption{Accumulated cash flows over project life cycle.}
+\end{figure}
+
+
+
+
+
+
+
 

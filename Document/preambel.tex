@@ -1,5 +1,6 @@
+
 \documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibliography=totoc,oneside,a4paper,fleqn,BCOR8mm]{scrreprt}
-\usepackage{ngerman,a4}
+\usepackage[UKenglish]{babel}
 \usepackage{cmbright}
 \usepackage{color}
 \usepackage[T1]{fontenc}
@@ -31,12 +32,16 @@
 	\xdefinecolor{AVTGreen}{rgb}{0.705882353, 0.835294118, 0.243137255} 
 	\xdefinecolor{ImperialDarkBlue}{rgb}{0.0,0.2471,0.4784}
 	\xdefinecolor{ImperialLightBlue}{rgb}{0.4686,0.5961,0.7255}
-\usepackage[colorlinks=true, linkcolor=AVTBlue, citecolor=AVTLightGreen, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
+\usepackage[colorlinks=true, linkcolor=ImperialDarkBlue, citecolor=ImperialLightBlue, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
 %\usepackage{natbib} % nur für dinat gebraucht
 \usepackage{subfig}
 \usepackage{subfloat}
 \usepackage{paralist}
 \usepackage{xifthen}
+%\usepackage{gnuplottex}
+\usepackage{scrhack}
+\usepackage{pgfplots}
+	\pgfplotsset{compat=newest}
 
 \bibliographystyle{plain}
 \pagestyle{headings}
@@ -57,13 +62,15 @@
 %\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
 \renewcommand{\nomname}{Nomenclature}
-\renewcommand{\figurename}{Figure}
-\renewcommand{\tablename}{Table}
-\renewcommand{\contentsname}{Table of Contents}
-\renewcommand{\listfigurename}{List of Figures}
-\renewcommand{\listtablename}{List of Tables}
-\renewcommand{\bibname}{Bibliography}
+%\renewcommand{\figurename}{Figure}
+%\renewcommand{\tablename}{Table}
+%\renewcommand{\contentsname}{Table of Contents}
+%\renewcommand{\listfigurename}{List of Figures}
+%\renewcommand{\listtablename}{List of Tables}
+%\renewcommand{\bibname}{Bibliography}
 \renewcommand{\nompreamble}{\markboth{Nomenclature}{Nomenclature}}
+\renewcommand{\labelitemi}{$\cpbullet$}
+
 
 \newcommand{\refeq}[1]{Eq. \ref{#1}}
 \newcommand{\refeqs}[2]{Eqs. \ref{#1} - \ref{#2}}
@@ -80,11 +87,13 @@
 \newcommand{\aspen}{Aspen Plus\raisebox{1ex}{\scriptsize \textregistered}\,}
 \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
 \newcommand{\eq}[1]{\begin{align}#1\end{align}}
+\newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}
 \newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
 \newcommand{\regitemize}[1]{\begin{itemize}#1\end{itemize}}
 \newcommand{\nc}[2]{\nomenclature{#1}{#2}}
 \newcommand{\todoil}[2]{\todo[inline, #1]{#2}}
 \newcommand{\addref}{\todo[inline, color=red!40]{add citation}}
+\newcommand{\itemizetext[1]}{\begin{compactitem} #1 \end{compactitem}}
 
 \makenomenclature
 

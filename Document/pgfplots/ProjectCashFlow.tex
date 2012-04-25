@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{axis} [
+		xlabel={time},
+		ylabel=accumulated cash flow,
+		width=13cm,
+		axis lines=middle,
+		axis line style={->},
+		xtick={0},
+		ytick={0},
+		every axis y label/.style={at={(ticklabel cs:0.7)},rotate=90,anchor=near ticklabel},
+		%every axis x label/.style={at={(ticklabel cs:1,10pt)},anchor=near ticklabel},
+		yscale=0.6
+		]
+		\addplot [color=ImperialDarkBlue] coordinates {
+			(0, 0)
+			(4, -1)
+		};
+		\addplot [color=ImperialDarkBlue] coordinates {
+			(0, 0)
+			(8, -1.2)
+		};
+		\addplot [color=ImperialDarkBlue, domain=4:50] {ln(x-2)-1.693};
+		\addplot [color=ImperialDarkBlue, domain=8:50] {ln(1.8*(x-6.88889))-1.893};
+	\end{axis}
+\end{tikzpicture}
