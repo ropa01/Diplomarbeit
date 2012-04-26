@@ -36,9 +36,6 @@ In the following sections some general considerations on the physical and econom
 \section{Process Model}
 \label{sec:process_model}
 
-\section{Uncertainty in Process Modeling}
-\label{sec:uncertainty}
-
 \section{Economic Considerations}
 \label{sec:uncertainty}
 
@@ -76,16 +73,17 @@ subcategories.
 
 We will now look closer at each of these subcategories. 
 
-\subsubsection{Battery limit investment} denotes all investments necessary to have all required equipment 
+\subsubsection{Battery limit investment} 
+The battery limit investment denotes all investments necessary to have all required equipment 
 for process operations installed on-site. This includes structures necessary to house the process as well as
- delivery and installation of all individual assets.  One major part of these cost will the the process 
- equipment. As the exact manufacturers and models of the equipment will not be known in early design 
- stages, a different approach has to be chosen. Various process parameters such as temperatures, 
- pressures and handled volumes will have an effect of the required equipment. High pressure tanks will 
- most likely be more expensive as stronger materials and thicker walls will be necessary. Each piece of 
- equipment will have an specific feature that most influences its cost. For vessels and reactors this might be 
- volume, while for heat exchangers the required heat exchange area. The equipment price $C_E$ can be 
- approximated by a simple power law
+delivery and installation of all individual assets.  One major part of these cost will the the process 
+equipment. As the exact manufacturers and models of the equipment will not be known in early design 
+stages, a different approach has to be chosen. Various process parameters such as temperatures, 
+pressures and handled volumes will have an effect of the required equipment. High pressure tanks will 
+most likely be more expensive as stronger materials and thicker walls will be necessary. Each piece of 
+equipment will have an specific feature that most influences its cost. For vessels and reactors this might be 
+volume, while for heat exchangers the required heat exchange area. The equipment price $C_E$ can be 
+approximated by a simple power law
 \eq{
 	C_E = C_B \left( \frac{Q}{Q_B} \right)^M. 
 	\label{eq:equip_cost}
@@ -108,24 +106,106 @@ current time. To do so several indices have been developed
 }%
 \nomenclature{$C_1$}{Reference equipment cost at time $1$ \nomunit{\$}}
 \nomenclature{$C_2$}{Reference equipment cost at time $2$ \nomunit{\$}}
-\nomenclature{$index_1$}{index at time $1$ \nomunit{-}}
-\nomenclature{$index_2$}{index at time $2$ \nomunit{-}}
-
+\nomenclature{$index_1$}{Cost index at time $1$ \nomunit{-}}
+\nomenclature{$index_2$}{Cost index at time $2$ \nomunit{-}}
 While for each index an arbitrary reference year is chosen. Among the most common indices are the 
 Marshall \& Swift index (1926: $index = 100$) or the Nellson-Farrar-Index (1946: $index = 100$)
 
 As mentioned before aside from the mere size of the equipment the process conditions will also affect the 
 price. The predominant factors to that respect are pressure, temperature and the question wether corrosive 
-or reactive media will be present. 
+or reactive media, which will require more resistant materials, will be present. All these effects are
+accounted for by factors applied to the base cost of the equipment
+\eq{
+	C_E = C_B \left( \frac{Q}{Q_B} \right)^M f_M \, f_P \, f_T. 
+	\label{eq:equip_cost_mpt}
+}%
+\nomenclature{$f_M$}{Material selection correction to equipment cost \nomunit{-}}
+\nomenclature{$f_P$}{Pressure correction to equipment cost \nomunit{-}}
+\nomenclature{$f_T$}{Temperature correction to equipment cost \nomunit{-}}
+Where $f_M$ denotes the factor for material selection, $f_P$ adjusts for extreme pressures and 
+$f_T$ for temperature. 
+
+In addition to the purchased cost, the costs for installing the process equipment need to be considered. 
+The Installation costs include:
+\regitemize{%
+	\item Installations costs
+	\item{Piping ,valves and electrical wiring}
+	\item{Control system}
+	\item{Structures and foundations}
+	\item{Insulation and fire proofing}
+	\item{Labour fees}
+}%
+A word should be said to the cost for the control system. Most obtainable data will most likely refer to 
+a decentralized control system, as it has been in use for many years. WIth ever more powerful computers 
+a centralized approach, namely model predictive control (MPC) is becoming more relevant. As the 
+structure for such a control system may vary significantly from the common designs, the cost factors may 
+as well. 
+ 
+\subsubsection{Services}
+The utility investments and off-site investments are often referred to as services. Therein included are
+all measures necessary to supply the process with the media required for operations. This includes but is
+not limited to generation and distribution of energy, steam, process gases. The utility investments  
+in this context refer to all investments within the greater production site but out of the battery limits of the 
+process. Off-site investments contain everything not contained in the site such as roads, power cables,
+communication systems ore waste disposal. All these costs are expressed as fractions of the equipment 
+cost at moderate temperature and pressure. This means, when applying these fractions, the factors $f_M$, 
+$f_P$ and $f_T$ should not be considered at this point. 
+
+\subsubsection{Working capital}
+The working capital includes all investments necessary for process operations. This means raw
+materials, payroll, extended credit to customers and so on. In contrast to all other costs the 
+working capital can partially be retrieved when the process stops operations.     
+
+\subsubsection{Total investment}
+When all contributions to the total investment are considered an estimate for the total price of the 
+process can be calculated
+\eq{
+	C_F = \sum_i \left[ C_{Bi} \left( \frac{Q}{Q_{Bi}} \right)^{Mi} f_{Mi} \, f_{Pi} \, f_{Ti} \right] 
+		+ \sum_j f_j \cdot \sum_i C_{Ei}. 
+}%
+It should be emphasized that in early design stages these calculations will at best yield an order of
+magnitude estimate for the expected cost of implementing a chemical process. Most literature sources 
+give an accuracy of $\pm 30 \%$  \cite{Peters.2003}. As the poject progresses more and more information 
+becomes available an a more accurate estimate can be prepared. Those often rely on actual proposals
+from prospective manufacturers and suppliers. 
 
 \subsection{Profitability measures}
+The total cost of a project its a very important measure to decide wether to undergo a certain endeavor. 
+However in a complex financial system it cannot be taken as the sole factor to compare investment 
+alternatives. Different other indices are used to measure the attractiveness of an investment. One 
+main destination can be made between different measurements. This is wether the time value of many
+is considered. First two measurements -- payback time and return of investment (ROI) -- not considering time 
+value will be discussed. By analyzing time dependent cash flows indices can be derived, that yield a more 
+realistic view of the economic situation. Out of those the net present value (NPV) as well as the 
+discounted cash flow rate of return (DCFRR) are introduced. 
+
 \begin{figure}
 	\centering
 	\input{pgfplots/ProjectCashFlow}
 	\caption{Accumulated cash flows over project life cycle.}
+	\todo[inline]{add ref: Script PE-VT}
 \end{figure}
 
+\subsubsection{Payback time}
+ Payback time is the time necessary to earn the total investment of the process. It is also often referred to as 
+ the break even point. A profitable venture will form that point on begin to make money. A shorter 
+ payback time is a measure for an more attractive investment. 
 
+\subsubsection{Return of investment}
+The return of investment is defined as 
+\eq{
+	ROI = \frac{\textnormal{average return / period}}{\textnormal{capital expenditure}} \cdot 100 \%.
+	\label{eq:roi}
+}%
+In terms of capital expenditure (CAPEX) a congruent measure for all compared options needs to be chosen. 
+\todo[inline]{CAPEX als total investment oder Buchwert oder ...}
+
+\subsubsection{Net present value}
+
+\subsubsection{Discounted cash flow rate of return}
+
+\section{Uncertainty in Process Modeling}
+\label{sec:design_uncertainty}
 
 
 

@@ -5,5 +5,8 @@
 \nomenclatureentry{a$M$@[{$M$}]\begingroup Equipment specific factor \nomunit{-}\nomeqref {3.1}|nompageref}{8}
 \nomenclatureentry{a$C_1$@[{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit{\$}\nomeqref {3.2}|nompageref}{8}
 \nomenclatureentry{a$C_2$@[{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit{\$}\nomeqref {3.2}|nompageref}{8}
-\nomenclatureentry{a$index_1$@[{$index_1$}]\begingroup index at time $1$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}
-\nomenclatureentry{a$index_2$@[{$index_2$}]\begingroup index at time $2$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}
+\nomenclatureentry{a$index_1$@[{$index_1$}]\begingroup Cost index at time $1$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}
+\nomenclatureentry{a$index_2$@[{$index_2$}]\begingroup Cost index at time $2$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}
+\nomenclatureentry{a$f_M$@[{$f_M$}]\begingroup Material selection correction to equipment cost \nomunit{-}\nomeqref {3.3}|nompageref}{8}
+\nomenclatureentry{a$f_P$@[{$f_P$}]\begingroup Pressure correction to equipment cost \nomunit{-}\nomeqref {3.3}|nompageref}{8}
+\nomenclatureentry{a$f_P$@[{$f_P$}]\begingroup Temperature correction to equipment cost \nomunit{-}\nomeqref {3.3}|nompageref}{8}

@@ -2,23 +2,29 @@
 
  \nomgroup{A}
 
-  \item [{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit{\$}\nomeqref {3.2}
-		\nompageref{8}
-  \item [{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit{\$}\nomeqref {3.2}
-		\nompageref{8}
-  \item [{$C_B$}]\begingroup Reference equipment cost \nomunit{\$}\nomeqref {3.1}
-		\nompageref{8}
-  \item [{$C_E$}]\begingroup Equipment cost \nomunit{\$}\nomeqref {3.1}
-		\nompageref{8}
-  \item [{$index_1$}]\begingroup index at time $1$ \nomunit{-}\nomeqref {3.2}
-		\nompageref{8}
-  \item [{$index_2$}]\begingroup index at time $2$ \nomunit{-}\nomeqref {3.2}
-		\nompageref{8}
-  \item [{$M$}]\begingroup Equipment specific factor \nomunit{-}\nomeqref {3.1}
-		\nompageref{8}
-  \item [{$Q$}]\begingroup Equipment specific quantity \nomunit{-}\nomeqref {3.1}
-		\nompageref{8}
-  \item [{$Q_B$}]\begingroup Equipment specific reference quantity \nomunit{-}\nomeqref {3.1}
-		\nompageref{8}
+  \item [{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit{\$}\nomeqref {2.2}
+		\nompageref{4}
+  \item [{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit{\$}\nomeqref {2.2}
+		\nompageref{4}
+  \item [{$C_B$}]\begingroup Reference equipment cost \nomunit{\$}\nomeqref {2.1}
+		\nompageref{4}
+  \item [{$C_E$}]\begingroup Equipment cost \nomunit{\$}\nomeqref {2.1}
+		\nompageref{4}
+  \item [{$f_M$}]\begingroup Material selection correction to equipment cost \nomunit{-}\nomeqref {2.3}
+		\nompageref{4}
+  \item [{$f_P$}]\begingroup Pressure correction to equipment cost \nomunit{-}\nomeqref {2.3}
+		\nompageref{4}
+  \item [{$f_P$}]\begingroup Temperature correction to equipment cost \nomunit{-}\nomeqref {2.3}
+		\nompageref{4}
+  \item [{$index_1$}]\begingroup Cost index at time $1$ \nomunit{-}\nomeqref {2.2}
+		\nompageref{4}
+  \item [{$index_2$}]\begingroup Cost index at time $2$ \nomunit{-}\nomeqref {2.2}
+		\nompageref{4}
+  \item [{$M$}]\begingroup Equipment specific factor \nomunit{-}\nomeqref {2.1}
+		\nompageref{4}
+  \item [{$Q$}]\begingroup Equipment specific quantity \nomunit{-}\nomeqref {2.1}
+		\nompageref{4}
+  \item [{$Q_B$}]\begingroup Equipment specific reference quantity \nomunit{-}\nomeqref {2.1}
+		\nompageref{4}
 
 \end{thenomenclature}

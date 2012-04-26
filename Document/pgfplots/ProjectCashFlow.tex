@@ -2,24 +2,26 @@
 	\begin{axis} [
 		xlabel={time},
 		ylabel=accumulated cash flow,
-		width=13cm,
+		width=0.8\textwidth,
 		axis lines=middle,
 		axis line style={->},
 		xtick={0},
 		ytick={0},
-		every axis y label/.style={at={(ticklabel cs:0.7)},rotate=90,anchor=near ticklabel},
-		%every axis x label/.style={at={(ticklabel cs:1,10pt)},anchor=near ticklabel},
+		every axis y label/.style={at={(ticklabel cs:0.65)},rotate=90,anchor=near ticklabel},
+		every axis x label/.style={at={(current axis.right of origin)},yshift=-9ex,anchor=east},
 		yscale=0.6
 		]
 		\addplot [color=ImperialDarkBlue] coordinates {
 			(0, 0)
-			(4, -1)
+			(3, -1)
 		};
-		\addplot [color=ImperialDarkBlue] coordinates {
+		\addplot [color=RWTHRed] coordinates {
 			(0, 0)
-			(8, -1.2)
+			(8, -1.5)
 		};
-		\addplot [color=ImperialDarkBlue, domain=4:50] {ln(x-2)-1.693};
-		\addplot [color=ImperialDarkBlue, domain=8:50] {ln(1.8*(x-6.88889))-1.893};
+		\addplot [smooth, samples=100, color=ImperialDarkBlue, domain=3:50] {ln(x-1)-(ln(2)+1)};
+		\node [coordinate, pin=95:{\scriptsize POT}] at (axis cs:6.4365,0) {};
+		\addplot [smooth, samples=100, color=RWTHRed, domain=8:50] {ln(1.8*(x-7.4444))-1.5};
+		\node [coordinate, pin=-85:{\scriptsize POT}] at (axis cs:10,0) {};
 	\end{axis}
-\end{tikzpicture}
+\end{tikzpicture}Ê
