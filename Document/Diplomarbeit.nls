@@ -2,29 +2,59 @@
 
  \nomgroup{A}
 
-  \item [{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit{\$}\nomeqref {2.2}
-		\nompageref{4}
-  \item [{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit{\$}\nomeqref {2.2}
-		\nompageref{4}
-  \item [{$C_B$}]\begingroup Reference equipment cost \nomunit{\$}\nomeqref {2.1}
-		\nompageref{4}
-  \item [{$C_E$}]\begingroup Equipment cost \nomunit{\$}\nomeqref {2.1}
-		\nompageref{4}
-  \item [{$f_M$}]\begingroup Material selection correction to equipment cost \nomunit{-}\nomeqref {2.3}
-		\nompageref{4}
-  \item [{$f_P$}]\begingroup Pressure correction to equipment cost \nomunit{-}\nomeqref {2.3}
-		\nompageref{4}
-  \item [{$f_P$}]\begingroup Temperature correction to equipment cost \nomunit{-}\nomeqref {2.3}
-		\nompageref{4}
-  \item [{$index_1$}]\begingroup Cost index at time $1$ \nomunit{-}\nomeqref {2.2}
-		\nompageref{4}
-  \item [{$index_2$}]\begingroup Cost index at time $2$ \nomunit{-}\nomeqref {2.2}
-		\nompageref{4}
-  \item [{$M$}]\begingroup Equipment specific factor \nomunit{-}\nomeqref {2.1}
-		\nompageref{4}
-  \item [{$Q$}]\begingroup Equipment specific quantity \nomunit{-}\nomeqref {2.1}
-		\nompageref{4}
-  \item [{$Q_B$}]\begingroup Equipment specific reference quantity \nomunit{-}\nomeqref {2.1}
-		\nompageref{4}
+  \item [{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {4.5}
+		\nompageref{11}
+  \item [{$\dot {m}_i$}]\begingroup Mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {4.4}
+		\nompageref{11}
+  \item [{$C^{i}_B$}]\begingroup Reference cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
+		\nompageref{9}
+  \item [{$C^{i}_E$}]\begingroup Cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
+		\nompageref{9}
+  \item [{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {4.5}
+		\nompageref{11}
+  \item [{$C^{i}_{RM}$}]\begingroup Mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {4.4}
+		\nompageref{11}
+  \item [{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {4.1}
+		\nompageref{8}
+  \item [{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {4.1}
+		\nompageref{8}
+  \item [{$C_P$}]\begingroup Total process cost \nomunit {\$}\nomeqref {4.0}
+		\nompageref{8}
+  \item [{$C_P^0$}]\begingroup Reference process cost \nomunit {\$}\nomeqref {4.0}
+		\nompageref{8}
+  \item [{$C_{EC}$}]\begingroup Total cost of energy \nomunit {\$}\nomeqref {4.5}
+		\nompageref{11}
+  \item [{$C_{RM}$}]\begingroup Total cost of raw materials \nomunit {\$}\nomeqref {4.4}
+		\nompageref{11}
+  \item [{$f^{i}_C$}]\begingroup Design complexity correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{9}
+  \item [{$f^{i}_M$}]\begingroup Material selection correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{9}
+  \item [{$f^{i}_P$}]\begingroup Pressure correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{9}
+  \item [{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{9}
+  \item [{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {4.1}
+		\nompageref{8}
+  \item [{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {4.1}
+		\nompageref{8}
+  \item [{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {4.2}
+		\nompageref{9}
+  \item [{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {4.5}
+		\nompageref{11}
+  \item [{$N_{RM}$}]\begingroup Number of raw materials \nomunit {-}\nomeqref {4.4}
+		\nompageref{11}
+  \item [{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {4.2}
+		\nompageref{9}
+  \item [{$Q^{i}_B$}]\begingroup Equipment specific reference quantity \nomunit {variable}\nomeqref {4.2}
+		\nompageref{9}
+  \item [{$Q_P$}]\begingroup Process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
+		\nompageref{8}
+  \item [{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
+		\nompageref{8}
+  \item [{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {4.4}
+		\nompageref{11}
+  \item [{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}
+		\nompageref{8}
 
 \end{thenomenclature}

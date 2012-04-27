@@ -1,12 +1,27 @@
-\nomenclatureentry{a$C_E$@[{$C_E$}]\begingroup Equipment cost \nomunit{\$}\nomeqref {3.1}|nompageref}{8}
-\nomenclatureentry{a$C_B$@[{$C_B$}]\begingroup Reference equipment cost \nomunit{\$}\nomeqref {3.1}|nompageref}{8}
-\nomenclatureentry{a$Q$@[{$Q$}]\begingroup Equipment specific quantity \nomunit{-}\nomeqref {3.1}|nompageref}{8}
-\nomenclatureentry{a$Q_B$@[{$Q_B$}]\begingroup Equipment specific reference quantity \nomunit{-}\nomeqref {3.1}|nompageref}{8}
-\nomenclatureentry{a$M$@[{$M$}]\begingroup Equipment specific factor \nomunit{-}\nomeqref {3.1}|nompageref}{8}
-\nomenclatureentry{a$C_1$@[{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit{\$}\nomeqref {3.2}|nompageref}{8}
-\nomenclatureentry{a$C_2$@[{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit{\$}\nomeqref {3.2}|nompageref}{8}
-\nomenclatureentry{a$index_1$@[{$index_1$}]\begingroup Cost index at time $1$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}
-\nomenclatureentry{a$index_2$@[{$index_2$}]\begingroup Cost index at time $2$ \nomunit{-}\nomeqref {3.2}|nompageref}{8}
-\nomenclatureentry{a$f_M$@[{$f_M$}]\begingroup Material selection correction to equipment cost \nomunit{-}\nomeqref {3.3}|nompageref}{8}
-\nomenclatureentry{a$f_P$@[{$f_P$}]\begingroup Pressure correction to equipment cost \nomunit{-}\nomeqref {3.3}|nompageref}{8}
-\nomenclatureentry{a$f_P$@[{$f_P$}]\begingroup Temperature correction to equipment cost \nomunit{-}\nomeqref {3.3}|nompageref}{8}
+\nomenclatureentry{a$C_P$@[{$C_P$}]\begingroup Total process cost \nomunit {\$}\nomeqref {4.0}|nompageref}{8}
+\nomenclatureentry{a$C_P^0$@[{$C_P^0$}]\begingroup Reference process cost \nomunit {\$}\nomeqref {4.0}|nompageref}{8}
+\nomenclatureentry{a$Q_P$@[{$Q_P$}]\begingroup Process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}|nompageref}{8}
+\nomenclatureentry{a$Q_P^0$@[{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}|nompageref}{8}
+\nomenclatureentry{a$x$@[{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}|nompageref}{8}
+\nomenclatureentry{a$C_1$@[{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {4.1}|nompageref}{8}
+\nomenclatureentry{a$C_2$@[{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {4.1}|nompageref}{8}
+\nomenclatureentry{a$I_1$@[{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {4.1}|nompageref}{8}
+\nomenclatureentry{a$I_2$@[{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {4.1}|nompageref}{8}
+\nomenclatureentry{a$C^{i}_E$@[{$C^{i}_E$}]\begingroup Cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}|nompageref}{9}
+\nomenclatureentry{a$C^{i}_B$@[{$C^{i}_B$}]\begingroup Reference cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}|nompageref}{9}
+\nomenclatureentry{a$Q^{i}$@[{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {4.2}|nompageref}{9}
+\nomenclatureentry{a$Q^{i}_B$@[{$Q^{i}_B$}]\begingroup Equipment specific reference quantity \nomunit {variable}\nomeqref {4.2}|nompageref}{9}
+\nomenclatureentry{a$M^{i}$@[{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {4.2}|nompageref}{9}
+\nomenclatureentry{a$f^{i}_C$@[{$f^{i}_C$}]\begingroup Design complexity correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{9}
+\nomenclatureentry{a$f^{i}_M$@[{$f^{i}_M$}]\begingroup Material selection correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{9}
+\nomenclatureentry{a$f^{i}_P$@[{$f^{i}_P$}]\begingroup Pressure correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{9}
+\nomenclatureentry{a$f^{i}_T$@[{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{9}
+\nomenclatureentry{a$N_{RM}$@[{$N_{RM}$}]\begingroup Number of raw materials \nomunit {-}\nomeqref {4.4}|nompageref}{11}
+\nomenclatureentry{a$C_{RM}$@[{$C_{RM}$}]\begingroup Total cost of raw materials \nomunit {\$}\nomeqref {4.4}|nompageref}{11}
+\nomenclatureentry{a$C^{i}_{RM}$@[{$C^{i}_{RM}$}]\begingroup Mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {4.4}|nompageref}{11}
+\nomenclatureentry{a$\dot {m}_i$@[{$\dot {m}_i$}]\begingroup Mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {4.4}|nompageref}{11}
+\nomenclatureentry{a$t_{op}$@[{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {4.4}|nompageref}{11}
+\nomenclatureentry{a$N_{E}$@[{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {4.5}|nompageref}{11}
+\nomenclatureentry{a$C_{EC}$@[{$C_{EC}$}]\begingroup Total cost of energy \nomunit {\$}\nomeqref {4.5}|nompageref}{11}
+\nomenclatureentry{a$C^{i}_{EC}$@[{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {4.5}|nompageref}{11}
+\nomenclatureentry{a$\dot {e}_{ij}$@[{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {4.5}|nompageref}{11}

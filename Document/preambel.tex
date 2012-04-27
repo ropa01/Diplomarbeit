@@ -72,11 +72,12 @@
 \renewcommand{\labelitemi}{$\cpbullet$}
 
 
-\newcommand{\refeq}[1]{Eq. \ref{#1}}
-\newcommand{\refeqs}[2]{Eqs. \ref{#1} - \ref{#2}}
-\newcommand{\reffig}[1]{Fig. \ref{#1}}
-\newcommand{\reftab}[1]{Tab. \ref{#1}}
-\newcommand{\refsec}[1]{Sec. \ref{#1}}
+\newcommand{\refeq}[1]{eq. \ref{#1}}
+\newcommand{\refeqs}[2]{eqns. \ref{#1} - \ref{#2}}
+\newcommand{\reffig}[1]{fig. \ref{#1}}
+\newcommand{\reftab}[1]{tab. \ref{#1}}
+\newcommand{\refsec}[1]{sec. \ref{#1}}
+\newcommand{\refchp}[1]{chap. \ref{#1}}
 \newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\beq}{\begin{eqnarray}}
@@ -94,6 +95,8 @@
 \newcommand{\todoil}[2]{\todo[inline, #1]{#2}}
 \newcommand{\addref}{\todo[inline, color=red!40]{add citation}}
 \newcommand{\itemizetext[1]}{\begin{compactitem} #1 \end{compactitem}}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
 \makenomenclature
 
