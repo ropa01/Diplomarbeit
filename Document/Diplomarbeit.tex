@@ -10,27 +10,13 @@
 	\usepackage[colorinlistoftodos, disable]{todonotes}
 }
 
-%\includeonly{}
+%\includeonly{Content/ProcessEconomics}
 
 \begin{document}
-	\pagenumbering{roman}
 	
-	\input{Content/Preamble/CoverPage}
-	
-	\ifthenelse{\boolean{draft}}{}{
-		\include{Content/Preamble/TaskDescription}
-		\include{Content/Preamble/StatutoryDeclaration}
-	}
-
-	\tableofcontents
-	\listoffigures
-	\listoftables
-	\printnomenclature[2.5cm]
-	\clearpage
-	\pagenumbering{arabic}
-	\setcounter{page}{1}
-
+	\include{Content/CoverIntro}
 	\include{Content/introduction}
+	
 	\include{Content/AirSep}
 	\include{Content/ProcessDesign}
 	\include{Content/ProcessEconomics}
@@ -38,12 +24,8 @@
 	\include{Content/cryo}
 	\include{Content/outlook}
 	
+	\include{Content/BibAppendix}
+	
 	\listoftodos
-	
-	\bibliography{Literature}
-	
-	%\begin{appendix}
-	%	\include{Content/appendix}
-	%\end{appendix}
 	
 \end{document}    

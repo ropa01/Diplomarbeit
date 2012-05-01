@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.4.24)  27 APR 2012 02:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.4.24)  1 MAY 2012 19:35
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1091,9 +1091,10 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 )
 \c@@todonotes@numberoftodonotes=\count169
 ) (./Diplomarbeit.aux
-(./Content/introduction.aux) (./Content/AirSep.aux)
+(./Content/CoverIntro.aux) (./Content/introduction.aux) (./Content/AirSep.aux)
 (./Content/ProcessDesign.aux) (./Content/ProcessEconomics.aux)
-(./Content/Uncertainty.aux) (./Content/cryo.aux) (./Content/outlook.aux))
+(./Content/Uncertainty.aux) (./Content/cryo.aux) (./Content/outlook.aux)
+(./Content/BibAppendix.aux))
 \openout1 = `Diplomarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -1178,7 +1179,11 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package scrhack Info: undefining \float@addtolists on input line 15.
 
-ABD: EveryShipout initializing macros (./Content/Preamble/CoverPage.tex
+ABD: EveryShipout initializing macros
+\openout2 = `Content/CoverIntro.aux'.
+
+ (./Content/CoverIntro.tex
+(./Content/Preamble/CoverPage.tex
 Package epstopdf Info: Source file: <Pictures/Logos/ICL_Logo.eps>
 (epstopdf)                    date: 2012-01-28 21:14:06
 (epstopdf)                    size: 92395 bytes
@@ -1221,10 +1226,11 @@ Package pdftex.def Info: Pictures/Logos/RWTH_Logo_official-eps-converted-to.pdf
 )
 [1
 
+
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Pictu
 res/Logos/ICL_Logo-eps-converted-to.pdf> <./Pictures/Logos/RWTH_Logo_official-e
 ps-converted-to.pdf>]
-Package tocbasic Info: character protrusion at toc deactivated on input line 25
+Package tocbasic Info: character protrusion at toc deactivated on input line 10
 .
  (./Diplomarbeit.toc
 LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 4.
@@ -1251,7 +1257,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
  [2
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 26
+Package tocbasic Info: character protrusion at lof deactivated on input line 11
 .
 
 (./Diplomarbeit.lof)
@@ -1261,7 +1267,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 26
  [3
 
 ]
-Package tocbasic Info: character protrusion at lot deactivated on input line 27
+Package tocbasic Info: character protrusion at lot deactivated on input line 12
 .
  (./Diplomarbeit.lot)
 \tf@lot=\write8
@@ -1272,12 +1278,13 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 27
 ] [5
 
 ])
-[6]
+[6])
 \openout2 = `Content/introduction.aux'.
 
  (./Content/introduction.tex
 Chapter 1.
 ) [1
+
 
 
 
@@ -1396,13 +1403,13 @@ LaTeX Font Warning: Font shape `OMS/aess/m/n' undefined
 
 
 
-] (./Tables/PriceIndices.tex) [8] [9] [10] [11]
-(./pgfplots/ProjectCashFlow.tex)) [12] [13]
+] (./Tables/PriceIndices.tex) [8] [9] [10] [11] [12]
+(./pgfplots/ProjectCashFlow.tex) [13] [14]) [15]
 \openout2 = `Content/Uncertainty.aux'.
 
  (./Content/Uncertainty.tex
 Chapter 5.
-) [14
+) [16
 
 
 
@@ -1411,7 +1418,7 @@ Chapter 5.
 
  (./Content/cryo.tex
 Chapter 6.
-) [15
+) [17
 
 
 
@@ -1420,53 +1427,53 @@ Chapter 6.
 
  (./Content/outlook.tex
 Chapter 7.
-) [16
+) [18
 
 
 
-] (./Diplomarbeit.tdo)
+]
+\openout2 = `Content/BibAppendix.aux'.
+
+ (./Content/BibAppendix.tex (./Diplomarbeit.bbl
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 7.
+)) [19
+
+
+
+]
+(./Diplomarbeit.tdo)
 \tf@tdo=\write9
 \openout9 = `Diplomarbeit.tdo'.
 
- (./Diplomarbeit.bbl [17
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
+ [20
 
 
 ]
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 7.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
- [18
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
- (./Diplomarbeit.aux
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
+ (./Diplomarbeit.aux (./Content/CoverIntro.aux)
 (./Content/introduction.aux) (./Content/AirSep.aux)
 (./Content/ProcessDesign.aux) (./Content/ProcessEconomics.aux)
-(./Content/Uncertainty.aux) (./Content/cryo.aux) (./Content/outlook.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+(./Content/Uncertainty.aux) (./Content/cryo.aux) (./Content/outlook.aux)
+(./Content/BibAppendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 31.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 31.
+Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: 66D6401A36A1CA420329A328EFF0F877;1549.
 
-
-Package rerunfilecheck Warning: File `Diplomarbeit.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Diplomarbeit.out':
-(rerunfilecheck)             Before: 66D6401A36A1CA420329A328EFF0F877;1549
-(rerunfilecheck)             After:  2EC4C7F0EFE9789F20ECB0B5706AA6AC;1549.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 28672 strings out of 493610
- 592557 string characters out of 3142404
- 812743 words of memory out of 3000000
- 30919 multiletter control sequences out of 15000+200000
- 65116 words of font info for 314 fonts, out of 3000000 for 9000
+ 28742 strings out of 493610
+ 593853 string characters out of 3142404
+ 822052 words of memory out of 3000000
+ 30955 multiletter control sequences out of 15000+200000
+ 65620 words of font info for 319 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 76i,16n,92p,679b,1645s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 77i,16n,95p,679b,1666s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
@@ -1479,11 +1486,12 @@ sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
 al/texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local/te
 xlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/local/texl
 ive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/local/texlive
-/2011/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb>
-Output written on Diplomarbeit.pdf (24 pages, 307406 bytes).
+/2011/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive/2
+011/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb>
+Output written on Diplomarbeit.pdf (26 pages, 329101 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 385 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
  31979 words of extra memory for PDF output out of 35830 (max. 10000000)
 

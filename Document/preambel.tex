@@ -59,8 +59,6 @@
 \setlength{\footskip }{8ex}
 \definecolor{avtcolor}{rgb}{0,0.537,0.820}
 
-%\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
-
 \renewcommand{\nomname}{Nomenclature}
 %\renewcommand{\figurename}{Figure}
 %\renewcommand{\tablename}{Table}
@@ -71,6 +69,8 @@
 \renewcommand{\nompreamble}{\markboth{Nomenclature}{Nomenclature}}
 \renewcommand{\labelitemi}{$\cpbullet$}
 
+\newcommand{\stdfig}[3]{\begin{figure} \center \input{#1} \caption{#2} \label{#3} \end{figure}}
+\newcommand{\stdtab}[3]{\begin{table} \center \input{#1} \caption{#2} \label{#3} \end{table}}
 
 \newcommand{\refeq}[1]{eq. \ref{#1}}
 \newcommand{\refeqs}[2]{eqns. \ref{#1} - \ref{#2}}
@@ -78,25 +78,28 @@
 \newcommand{\reftab}[1]{tab. \ref{#1}}
 \newcommand{\refsec}[1]{sec. \ref{#1}}
 \newcommand{\refchp}[1]{chap. \ref{#1}}
+
+\newcommand{\eq}[1]{\begin{align} #1 \end{align}}
+\newcommand{\eqml}[1]{\begin{multiline} #1 \end{multiline}}
 \newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
-\newcommand{\beq}{\begin{eqnarray}}
-\newcommand{\eeq}{\end{eqnarray}}
-\newcommand{\C}[1]{\makebox(0,0)[m]{#1}}
-\newcommand{\CM}[1]{\C{\begin{tabular}{c}#1\end{tabular}}}
-\newcommand{\gproms}{gPROMS\raisebox{1ex}{\scriptsize \textregistered}\,}
-\newcommand{\aspen}{Aspen Plus\raisebox{1ex}{\scriptsize \textregistered}\,}
+
 \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
-\newcommand{\eq}[1]{\begin{align}#1\end{align}}
+\newcommand{\nc}[3]{\nomenclature{#1}{#2 \nomunit{#3}}}
+
 \newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}
 \newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
 \newcommand{\regitemize}[1]{\begin{itemize}#1\end{itemize}}
-\newcommand{\nc}[2]{\nomenclature{#1}{#2}}
+
 \newcommand{\todoil}[2]{\todo[inline, #1]{#2}}
 \newcommand{\addref}{\todo[inline, color=red!40]{add citation}}
-\newcommand{\itemizetext[1]}{\begin{compactitem} #1 \end{compactitem}}
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\C}[1]{\makebox(0,0)[m]{#1}}
+\newcommand{\CM}[1]{\C{\begin{tabular}{c}#1\end{tabular}}}
+
+\newcommand{\gproms}{gPROMS\raisebox{1ex}{\scriptsize \textregistered}\,}
+\newcommand{\aspen}{Aspen Plus\raisebox{1ex}{\scriptsize \textregistered}\,}
 
 \makenomenclature
 

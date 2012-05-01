@@ -25,3 +25,12 @@
 \nomenclatureentry{a$C_{EC}$@[{$C_{EC}$}]\begingroup Total cost of energy \nomunit {\$}\nomeqref {4.5}|nompageref}{11}
 \nomenclatureentry{a$C^{i}_{EC}$@[{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {4.5}|nompageref}{11}
 \nomenclatureentry{a$\dot {e}_{ij}$@[{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {4.5}|nompageref}{11}
+\nomenclatureentry{a$C_{FILL}$@[{$C_{FILL}$}]\begingroup Cost of raw materials to fill the process \nomunit {\$}\nomeqref {4.6}|nompageref}{11}
+\nomenclatureentry{a$q$@[{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {4.10}|nompageref}{13}
+\nomenclatureentry{a$C_n$@[{$C_n$}]\begingroup Final value of an investment \nomunit {\$}\nomeqref {4.10}|nompageref}{13}
+\nomenclatureentry{a$C_0$@[{$C_0$}]\begingroup Initial value of an investment \nomunit {\$}\nomeqref {4.10}|nompageref}{13}
+\nomenclatureentry{a$i$@[{$i$}]\begingroup Interest rate \nomunit {\%}\nomeqref {4.11}|nompageref}{13}
+\nomenclatureentry{a$a$@[{$a$}]\begingroup Annuity \nomunit {\$}\nomeqref {4.13}|nompageref}{13}
+\nomenclatureentry{a$C_{0e}$@[{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {4.15}|nompageref}{14}
+\nomenclatureentry{a$C_{0r}$@[{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {4.16}|nompageref}{14}
+\nomenclatureentry{a$NPV$@[{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {4.17}|nompageref}{14}
