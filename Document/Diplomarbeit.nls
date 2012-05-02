@@ -46,12 +46,18 @@
 		\nompageref{9}
   \item [{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {4.3}
 		\nompageref{9}
+  \item [{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}
+		\nompageref{17}
+  \item [{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}
+		\nompageref{17}
   \item [{$i$}]\begingroup Interest rate \nomunit {\%}\nomeqref {4.11}
 		\nompageref{13}
   \item [{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {4.1}
 		\nompageref{8}
   \item [{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {4.1}
 		\nompageref{8}
+  \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}
+		\nompageref{17}
   \item [{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {4.2}
 		\nompageref{9}
   \item [{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {4.5}
@@ -60,6 +66,8 @@
 		\nompageref{11}
   \item [{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {4.17}
 		\nompageref{14}
+  \item [{$POT$}]\begingroup Payout time \nomunit {\$}\nomeqref {4.8}
+		\nompageref{12}
   \item [{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {4.10}
 		\nompageref{13}
   \item [{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {4.2}
@@ -70,8 +78,14 @@
 		\nompageref{8}
   \item [{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
 		\nompageref{8}
+  \item [{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}
+		\nompageref{17}
+  \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}
+		\nompageref{17}
   \item [{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {4.4}
 		\nompageref{11}
+  \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}
+		\nompageref{17}
   \item [{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}
 		\nompageref{8}
 

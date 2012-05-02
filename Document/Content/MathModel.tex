@@ -1,0 +1,42 @@
+\chapter{Mathematical process model}
+\label{chp:MathModel}
+
+\section{Physical models}
+\label{sec:PhysModel}
+
+\subsection{Distillation columns}
+\stdfig{pgfplots/ColTray}{Distillation column tray model.}{fig:ColTray}
+\eq{
+	0 = F_j^V + F_j^L + V_{j+1} + L_{j-1} - V_j - S_j^V - L_j - S_j^L
+	\label{eq:col:MassBalance}
+	\nc{$F_j^V$}{Vapour feed to tray $j$}{\frac{mol}{s}}
+	\nc{$F_j^L$}{Liquid feed to tray $j$}{\frac{mol}{s}}
+	\nc{$S_j^V$}{Vapour side flow from tray $j$}{\frac{mol}{s}}
+	\nc{$S_j^L$}{Liquid side flow from tray $j$}{\frac{mol}{s}}
+	\nc{$V_j$}{Vapour flow from tray $j$}{\frac{mol}{s}}
+	\nc{$L_j$}{Liquid flow from tray $j$}{\frac{mol}{s}}
+}%
+\eq{
+	0 = V_{j+1} y_{i,j+1} + L_{j-1} x_{i,j-1} + F_j^V z^V_{i,j} + F_j^L z_{i,j}^L%
+		- \left(V_j + S_j^V\right) y_{i,j} - \left(L_j + S_j^L\right) x_{i,j}
+	\label{eq:col:CompBalance} 
+}%
+\eq{
+	0 = V_{j+1} H^V_{j+1} + L_{j-1} H^L_{j-1} + F_j^V H^{FV}_{j} + F_j^L H^{FL}_{j}%
+		- \left(V_j + S_j^V\right) H^V_{j} - \left(L_j + S_j^L\right) H^L_{j}
+	\label{eq:col:EnergyBalance} 
+}%
+\eq{
+	y_{i,j} = \gamma_{i,j} \cdot K_{i,j} \cdot x_{i, j} 
+	\label{eq:col:Kxy}
+}%
+
+\subsection{Heat exchanger}
+
+\subsection{Compressors}
+
+\subsection{Turbine}
+
+\section{Economic models}
+\label{sec:EconModel}
+

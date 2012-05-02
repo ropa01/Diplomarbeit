@@ -7,8 +7,8 @@ Scanning style file /usr/local/texlive/2011/texmf-dist/makeindex/nomencl/nomencl
 ** Input style error (file = /usr/local/texlive/2011/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
    -- Unknown specifier lethead_flag.
 ...done (10 attributes redefined, 3 ignored).
-Scanning input file Diplomarbeit.nlo....done (36 entries accepted, 0 rejected).
-Sorting entries....done (188 comparisons).
-Generating output file Diplomarbeit.nls....done (78 lines written, 0 warnings).
+Scanning input file Diplomarbeit.nlo....done (43 entries accepted, 0 rejected).
+Sorting entries....done (239 comparisons).
+Generating output file Diplomarbeit.nls....done (92 lines written, 0 warnings).
 Output written in Diplomarbeit.nls.
 Transcript written in Diplomarbeit.ilg.

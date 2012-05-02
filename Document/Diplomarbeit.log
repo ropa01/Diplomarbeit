@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.4.24)  1 MAY 2012 19:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.4.24)  2 MAY 2012 03:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1093,7 +1093,7 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 ) (./Diplomarbeit.aux
 (./Content/CoverIntro.aux) (./Content/introduction.aux) (./Content/AirSep.aux)
 (./Content/ProcessDesign.aux) (./Content/ProcessEconomics.aux)
-(./Content/Uncertainty.aux) (./Content/cryo.aux) (./Content/outlook.aux)
+(./Content/Uncertainty.aux) (./Content/MathModel.aux) (./Content/outlook.aux)
 (./Content/BibAppendix.aux))
 \openout1 = `Diplomarbeit.aux'.
 
@@ -1306,7 +1306,7 @@ s-converted-to.pdf Pictures/tech_comp_graph.eps>
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/tech_comp_graph-eps-converted-to.pdf, id=195, 613.29124pt x 289.08pt>
+<Pictures/tech_comp_graph-eps-converted-to.pdf, id=197, 613.29124pt x 289.08pt>
 File: Pictures/tech_comp_graph-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures/tech_comp_graph-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures/tech_comp_graph-eps-converted-to.pdf used on 
@@ -1331,7 +1331,7 @@ rted-to.pdf Pictures/ASU_text.eps>
 (epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/ASU_text-eps-converted-to.pdf, id=212, 482.80376pt x 337.26pt>
+<Pictures/ASU_text-eps-converted-to.pdf, id=214, 482.80376pt x 337.26pt>
 File: Pictures/ASU_text-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures/ASU_text-eps-converted-to.pdf>
@@ -1350,7 +1350,7 @@ to.pdf Pictures/PSA.eps>
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/PSA-eps-converted-to.pdf, id=223, 409.53pt x 154.5775pt>
+<Pictures/PSA-eps-converted-to.pdf, id=225, 409.53pt x 154.5775pt>
 File: Pictures/PSA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Pictures/PSA-eps-converted-to.pdf>
@@ -1370,7 +1370,7 @@ df>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/gas_permeation-eps-converted-to.pdf, id=234, 435.6275pt x 107.40125pt
+<Pictures/gas_permeation-eps-converted-to.pdf, id=236, 435.6275pt x 107.40125pt
 >
 File: Pictures/gas_permeation-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/gas_permeation-eps-converted-to.pdf>
@@ -1395,103 +1395,121 @@ LaTeX Font Info:    Try loading font information for OMS+aess on input line 13.
 
 LaTeX Font Info:    No file OMSaess.fd. on input line 13.
 
+LaTeX Font Warning: Font shape `OMS/aess/m/n' utures/gas_permeation-eps-converted-to.pdf Graphic file (type pdf)
+<use Pictures/gas_permeation-eps-converted-to.pdf>
+Package pdftex.def Info: Pictures/gas_permeation-eps-converted-to.pdf used on i
+nput line 7.
+(pdftex.def)             Requested size: 369.88582pt x 91.19315pt.
+)
+
+LaTeX Warning: Reference `fig:gas_permeation' on page 5 undefined on input line
+ 123.
+
+) [5 <./Pictures/gas_permeation-eps-converted-to.pdf>]
+\openout2 = `Content/ProcessDesign.aux'.
+
+
+(./Content/ProcessDesign.tex
+Chapter 3.
+) [6
+
+
+
+]
+\openout2 = `Content/ProcessEconomics.aux'.
+
+ (./Content/ProcessEconomics.tex
+Chapter 4.
+LaTeX Font Info:    Try loading font information for OMS+aess on input line 13.
+
+LaTeX Font Info:    No file OMSaess.fd. on input line 13.
+
 LaTeX Font Warning: Font shape `OMS/aess/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbullet' on input line 13.
+
+
+LaTeX Warning: Citation `Peters.2003' on page 7 undefined on input line 30.
+
+
+LaTeX Warning: Reference `sec:ProjectCost' on page 7 undefined on input line 34
+.
+
+
+LaTeX Warning: Reference `sec:InvestmentCriteria' on page 7 undefined on input 
+line 35.
 
 [7
 
 
 
-] (./Tables/PriceIndices.tex) [8] [9] [10] [11] [12]
-(./pgfplots/ProjectCashFlow.tex) [13] [14]) [15]
-\openout2 = `Content/Uncertainty.aux'.
-
- (./Content/Uncertainty.tex
-Chapter 5.
-) [16
-
-
-
 ]
-\openout2 = `Content/cryo.aux'.
 
- (./Content/cryo.tex
-Chapter 6.
-) [17
+LaTeX Warning: Reference `tab:PriceIndices' on page 8 undefined on input line 8
+5.
 
+(./Tables/PriceIndices.tex)
 
+LaTeX Warning: Reference `sec:before' on page 8 undefined on input line 106.
 
-]
-\openout2 = `Content/outlook.aux'.
+[8] [9] [10]
 
- (./Content/outlook.tex
-Chapter 7.
-) [18
+LaTeX Warning: Reference `sec:InvestmentCriteria' on page 11 undefined on input
+ line 215.
 
 
-
-]
-\openout2 = `Content/BibAppendix.aux'.
-
- (./Content/BibAppendix.tex (./Diplomarbeit.bbl
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 7.
-)) [19
+LaTeX Warning: Citation `Peters.2003' on page 11 undefined on input line 236.
 
 
-
-]
-(./Diplomarbeit.tdo)
-\tf@tdo=\write9
-\openout9 = `Diplomarbeit.tdo'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 31.
- [20
+LaTeX Warning: Reference `sec:SinglePeriod' on page 11 undefined on input line 
+247.
 
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
- (./Diplomarbeit.aux (./Content/CoverIntro.aux)
-(./Content/introduction.aux) (./Content/AirSep.aux)
-(./Content/ProcessDesign.aux) (./Content/ProcessEconomics.aux)
-(./Content/Uncertainty.aux) (./Content/cryo.aux) (./Content/outlook.aux)
-(./Content/BibAppendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 31.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 31.
-Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 66D6401A36A1CA420329A328EFF0F877;1549.
+LaTeX Warning: Reference `sec:MultiPeriod' on page 11 undefined on input line 2
+49.
+
+[11]
+
+LaTeX Warning: Reference `fig:CashFlow' on page 12 undefined on input line 285.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+[12] (./pgfplots/ProjectCashFlow.tex
 
- ) 
+./pgfplots/ProjectCashFlow.tex:23: Package pgfkeys Error: I do not know the key
+ '/tikz/latex' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 	\end{axis}
+                
+? 
+./pgfplots/ProjectCashFlow.tex:23: Emergency stop.
+ ...                                              
+                                                  
+l.23 	\end{axis}
+                
+End of file on the terminal!
+
+ 
 Here is how much of TeX's memory you used:
- 28742 strings out of 493610
- 593853 string characters out of 3142404
- 822052 words of memory out of 3000000
- 30955 multiletter control sequences out of 15000+200000
- 65620 words of font info for 319 fonts, out of 3000000 for 9000
+ 28448 strings out of 493610
+ 588444 string characters out of 3142404
+ 776053 words of memory out of 3000000
+ 30774 multiletter control sequences out of 15000+200000
+ 63289 words of font info for 309 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 77i,16n,95p,679b,1666s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/loc
-al/texlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local/te
-xlive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/local/texl
-ive/2011/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/local/texlive
+ 77i,16n,95p,679b,1456s stack positions out of 5000i,500n,10000p,200000b,50000s
+./pgfplots/ProjectCashFlow.tex:23:  ==> Fatal error occurred, no output PDF fil
+e produced!
+onts/type1/public/hfbright/hfbrmi8.pfb></usr/local/texlive
 /2011/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive/2
 011/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb>
-Output written on Diplomarbeit.pdf (26 pages, 329101 bytes).
+Output written on Diplomarbeit.pdf (26 pages, 332600 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
- 385 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 393 compressed objects within 4 object streams
+ 112 named destinations out of 1000 (max. 500000)
  31979 words of extra memory for PDF output out of 35830 (max. 10000000)
 

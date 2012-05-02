@@ -26,6 +26,7 @@
 \nomenclatureentry{a$C^{i}_{EC}$@[{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {4.5}|nompageref}{11}
 \nomenclatureentry{a$\dot {e}_{ij}$@[{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {4.5}|nompageref}{11}
 \nomenclatureentry{a$C_{FILL}$@[{$C_{FILL}$}]\begingroup Cost of raw materials to fill the process \nomunit {\$}\nomeqref {4.6}|nompageref}{11}
+\nomenclatureentry{a$POT$@[{$POT$}]\begingroup Payout time \nomunit {\$}\nomeqref {4.8}|nompageref}{12}
 \nomenclatureentry{a$q$@[{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {4.10}|nompageref}{13}
 \nomenclatureentry{a$C_n$@[{$C_n$}]\begingroup Final value of an investment \nomunit {\$}\nomeqref {4.10}|nompageref}{13}
 \nomenclatureentry{a$C_0$@[{$C_0$}]\begingroup Initial value of an investment \nomunit {\$}\nomeqref {4.10}|nompageref}{13}
@@ -34,3 +35,9 @@
 \nomenclatureentry{a$C_{0e}$@[{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {4.15}|nompageref}{14}
 \nomenclatureentry{a$C_{0r}$@[{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {4.16}|nompageref}{14}
 \nomenclatureentry{a$NPV$@[{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {4.17}|nompageref}{14}
+\nomenclatureentry{a$F_j^V$@[{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}|nompageref}{17}
+\nomenclatureentry{a$F_j^L$@[{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}|nompageref}{17}
+\nomenclatureentry{a$S_j^V$@[{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}|nompageref}{17}
+\nomenclatureentry{a$S_j^L$@[{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}|nompageref}{17}
+\nomenclatureentry{a$V_j$@[{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}|nompageref}{17}
+\nomenclatureentry{a$L_j$@[{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.0}|nompageref}{17}
