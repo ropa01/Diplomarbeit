@@ -4,32 +4,32 @@
 \contentsline {section}{\numberline {2.1}Cryogenic air separation}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Pressure swing adsorption}{4}{section.2.2}
 \contentsline {section}{\numberline {2.3}Gas permeation}{5}{section.2.3}
-\contentsline {chapter}{\numberline {3}Process design}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}Process model}{6}{section.3.1}
-\contentsline {chapter}{\numberline {4}Process economics}{7}{chapter.4}
-\contentsline {section}{\numberline {4.1}Project cost}{7}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Before process design}{8}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}During process design}{8}{subsection.4.1.2}
-\contentsline {subsubsection}{Battery limit investment}{9}{section*.15}
-\contentsline {subsubsection}{Services}{10}{section*.18}
-\contentsline {subsubsection}{Working capital}{11}{section*.19}
-\contentsline {subsubsection}{Total investment}{11}{section*.20}
-\contentsline {section}{\numberline {4.2}Investment criteria}{12}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Single period estimation methods}{12}{subsection.4.2.1}
-\contentsline {subsubsection}{Payout time}{12}{section*.21}
-\contentsline {subsubsection}{Return of investment}{12}{section*.22}
-\contentsline {subsection}{\numberline {4.2.2}Multi period estimation methods}{12}{subsection.4.2.2}
-\contentsline {subsubsection}{Net present value}{14}{section*.25}
-\contentsline {subsubsection}{Discounted cash flow rate of return}{14}{section*.26}
-\contentsline {subsubsection}{Annuity method}{15}{section*.27}
-\contentsline {subsubsection}{Interest Rates}{15}{section*.28}
-\contentsline {chapter}{\numberline {5}Uncertainty in process modeling}{16}{chapter.5}
-\contentsline {chapter}{\numberline {6}Mathematical process model}{17}{chapter.6}
-\contentsline {section}{\numberline {6.1}Physical models}{17}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Distillation columns}{17}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Heat exchanger}{17}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Compressors}{17}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Turbine}{17}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Economic models}{17}{section.6.2}
-\contentsline {chapter}{\numberline {7}Conclusion and further research}{18}{chapter.7}
-\contentsline {chapter}{Bibliography}{19}{chapter*.30}
+\contentsline {chapter}{\numberline {3}Process design}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Process model}{7}{section.3.1}
+\contentsline {chapter}{\numberline {4}Process economics}{8}{chapter.4}
+\contentsline {section}{\numberline {4.1}Project cost}{8}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Before process design}{9}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}During process design}{9}{subsection.4.1.2}
+\contentsline {subsubsection}{Battery limit investment}{10}{section*.16}
+\contentsline {subsubsection}{Services}{11}{section*.19}
+\contentsline {subsubsection}{Working capital}{12}{section*.20}
+\contentsline {subsubsection}{Total investment}{12}{section*.21}
+\contentsline {section}{\numberline {4.2}Investment criteria}{13}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Single period estimation methods}{13}{subsection.4.2.1}
+\contentsline {subsubsection}{Payout time}{13}{section*.22}
+\contentsline {subsubsection}{Return of investment}{13}{section*.23}
+\contentsline {subsection}{\numberline {4.2.2}Multi period estimation methods}{13}{subsection.4.2.2}
+\contentsline {subsubsection}{Net present value}{15}{section*.26}
+\contentsline {subsubsection}{Discounted cash flow rate of return}{15}{section*.27}
+\contentsline {subsubsection}{Annuity method}{16}{section*.28}
+\contentsline {subsubsection}{Interest Rates}{16}{section*.29}
+\contentsline {chapter}{\numberline {5}Uncertainty in process modeling}{17}{chapter.5}
+\contentsline {chapter}{\numberline {6}Mathematical process model}{18}{chapter.6}
+\contentsline {section}{\numberline {6.1}Physical models}{18}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Distillation columns}{18}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Heat exchanger}{18}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Compressors}{18}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Turbine}{18}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Economic models}{18}{section.6.2}
+\contentsline {chapter}{\numberline {7}Conclusion and further research}{19}{chapter.7}
+\contentsline {chapter}{Bibliography}{20}{chapter*.31}
