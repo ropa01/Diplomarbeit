@@ -73,15 +73,18 @@
 \newcommand{\stdfig}[3]{\begin{figure} \center \input{#1} \caption{#2} \label{#3} \end{figure}}
 \newcommand{\stdtab}[3]{\begin{table} \center \input{#1} \caption{#2} \label{#3} \end{table}}
 
-\newcommand{\refeq}[1]{eq. \ref{#1}}
-\newcommand{\refeqs}[2]{eqns. \ref{#1} - \ref{#2}}
+\newcommand{\refeq}[1]{eq. (\ref{#1})}
+\newcommand{\refeqs}[2]{eqns. (\ref{#1}) - (\ref{#2})}
 \newcommand{\reffig}[1]{fig. \ref{#1}}
 \newcommand{\reftab}[1]{tab. \ref{#1}}
 \newcommand{\refsec}[1]{sec. \ref{#1}}
 \newcommand{\refchp}[1]{chap. \ref{#1}}
 
 \newcommand{\eq}[1]{\begin{align} #1 \end{align}}
-\newcommand{\eqml}[1]{\begin{multiline} #1 \end{multiline}}
+\newcommand{\eqml}[1]{\begin{multline} #1 \end{multline}}
+\newcommand{\program}[1]{\begin{equation} \begin{aligned} #1 \end{aligned} \end{equation}}
+\newcommand{\minimize}[1]{\min_{#1}}
+\newcommand{\st}{\text{s.t.}}
 \newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
 

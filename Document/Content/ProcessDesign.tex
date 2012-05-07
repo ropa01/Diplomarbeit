@@ -1,40 +1,106 @@
 \chapter{Process design under uncertainty}
 \label{chp:ProcessDesign}
 
-Once a particular reaction or production sequence has been developed in a laboratory it needs to be scaled 
-up to produce the desired product in quantities large enough to meet market demand to a price that allows 
-competative prices. This is where process design comes into play. At the begin of the design process often 
-only the raw material as well as the desired products, along with the necessary chemical reactions are 
-specified. It is then the task of the process engineer to find a series of production steps which lead to the 
-production of this product. Each step denotes a specific function and the connected functions form a process.
- At the end each specific function has to be assigned a specific technical realization. 
+%Once a particular reaction or production sequence has been developed in a laboratory it needs to be scaled 
+%up to produce the desired product in quantities large enough to meet market demand to a price that allows 
+%competative prices. This is where process design comes into play. At the begin of the design process often 
+%only the raw material as well as the desired products, along with the necessary chemical reactions are 
+%specified. It is then the task of the process engineer to find a series of production steps which lead to the 
+%production of this product. Each step denotes a specific function and the connected functions form a process.
+% At the end each specific function has to be assigned a specific technical realization. 
 
-Usually there are numerous options available to perform certain tasks and in order to be realized any 
-endeavor will need to yield acceptable profits. Different options will therefore have to be compared  from an 
-engineering and an economic standpoint alike. For complex processes the amount of possible options 
-becomes enormous. Too many to be manually examined and evaluated. 
-\todo[inline]{Number of options for separation problem -- ref douglas}
+%Usually there are numerous options available to perform certain tasks and in order to be realized any 
+%endeavor will need to yield acceptable profits. Different options will therefore have to be compared  from an 
+%engineering and an economic standpoint alike. For complex processes the amount of possible options 
+%becomes enormous. Too many to be manually examined and evaluated. 
+%\todo[inline]{Number of options for separation problem -- ref douglas}
 
-Process Engineers have to rely on heuristics to limit the number of options and identify the most promising 
-candidates for further studies. These candidates can then be compared in terms of economic performance. 
-In order to do so one has to rely on simulation studies and experiments. As experiments and the construction 
-of pilot plants are very costly the aim is to minimize those. WIth the rise in available computing power the 
-numerical simulation of processes has become a very powerful tool to support the design process and has 
-the ability to replace numerous experiments. Not only can possible options be evaluated but also can 
-optimal process configurations from a limited pool of options be generated. 
+%Process Engineers have to rely on heuristics to limit the number of options and identify the most promising 
+%candidates for further studies. These candidates can then be compared in terms of economic performance. 
+%In order to do so one has to rely on simulation studies and experiments. As experiments and the construction 
+%of pilot plants are very costly the aim is to minimize those. WIth the rise in available computing power the 
+%numerical simulation of processes has become a very powerful tool to support the design process and has 
+%the ability to replace numerous experiments. Not only can possible options be evaluated but also can 
+%optimal process configurations from a limited pool of options be generated. 
 
-To conduct simulation studies first a process model needs to be created. This models in its most general 
-case is a set of partial differential and algebraic equations. When formulating the model great care needs 
-to be applied, as any simulation study can only be as accurate as the underlying model. The process 
-engineer is faces with the task to find an adequate representation of the physical system which delivers 
-meaningful results within an reasonable amount of time. Further enhanced is this problem when the model 
-is to be used in model predictive control, where (approximate) solutions of complex systems might need to 
-be available within seconds or fractions of a second. 
+%To conduct simulation studies first a process model needs to be created. This models in its most general 
+%case is a set of partial differential and algebraic equations. When formulating the model great care needs 
+%to be applied, as any simulation study can only be as accurate as the underlying model. The process 
+%engineer is faces with the task to find an adequate representation of the physical system which delivers 
+%meaningful results within an reasonable amount of time. Further enhanced is this problem when the model 
+%is to be used in model predictive control, where (approximate) solutions of complex systems might need to 
+%be available within seconds or fractions of a second. 
 
+For many real life decisions uncertainty plays a major role. As one might react differently to various 
+scenarios that might occur in the future. In terms of process design two types of uncertainties can be 
+distinguished. \emph{Internal} and \emph{external} uncertainties., where the internal ones refer to 
+transfer-coefficients, diffusivities, efficiencies and other process parameters that cannot be exactly 
+predetermined or that might change over time. External uncertainties denote all aspects that are not directly 
+part of the process such as future prices for raw materials, energy, or the marketed product. In addition 
+feed composition, pressures or ambient conditions are likely to change during process operations. 
+All these factors will have an impact on operations and profitability of a given process. 
 
-\section{Recourse models}
-\label{sec:des:recourse}
+The aim of the process design is to ensure feasibility for all possible realizations of the uncertain 
+parameters. The naive way to account for such uncertainties is to find an optimal solution for nominal 
+values of the uncertain parameters and then employ heuristic over design in the hope of maintaining 
+feasibility and remain close to an optimal solution. However in practice this strategy will almost always 
+fail to deliver an nearly optimal design \cite{Halemane.1983}. 
 
+Therefore several approaches have been developed to incorporate an rational approach to include
+flexibility in the design process. Ideally the design optimization would simultaneously recognize 
+\emph{feasibility}, \emph{controllability}, \emph{reliability} and \emph{safety} in an multi-objective
+optimization. Although all the aspects stem from similar principles they differ considerably in their 
+manifestation. While feasibility describes the mere possibility to operate a process under the defined
+conditions, controllability denotes wether those conditions can be reached from an initial starting point 
+and gives a measure for quality and stability of the process in connection with the dynamic response to 
+process disturbances. 
+
+Reliability and safety are qualities of a process that describe the consequences of unit failure on 
+the operations of the process or the severity of those consequences with regard to how harmful they 
+might be for personnel, environment or wildlife. 
+
+While all these aspects should be considered during the design phase it is questionable how well
+they all can be incorporated into a singe optimization scheme. 
+
+\section{Earlier work}
+\label{sec:des:EarlierWork}
+In its most general form the design problem for chemical processes can be written as:
+\program{
+&\minimize{d, z} & & C(d, z, x, \theta) \\
+&\st & & h(d, z, x, \theta) = 0 \\
+&&& g(d, z, x, \theta) \leq 0 
+}
+Where $d$, $z$ are the vectors for design and control variables respectively. The vector $x$ contains
+all states specified by the physical process model and $\theta$ is comprised of all parameters subject
+to uncertainty. The aim of the program is therefore to identify the optimal set of design variables $d$
+for which by manipulating the control variables $z$ feasible operations can be ensured for all possible 
+realizations o the uncertain parameters $\theta$. 
+
+Much research has been done within the field of process design under uncertainty that meet the 
+requirements of optimal process design to different degrees. Most frequently used was the stochastic 
+approach. If the probability distribution functions of all uncertain values is available different minimization 
+schemes can be employed. Kittrel and Watson \cite{} \todo{add ref Kittrel and Watson '66 from flexibility}
+thought the optimal design to be the one which minimizes the expected value of cost. Wen and Chang 
+\cite{} \todo{add ref Wen and Chang from flexibility} proposed a \emph{relative sensitivity} of the cost -- 
+defined as fractional change in the cost function from its nominal value -- and minimized either the expected 
+value or the maximum probable value of this factional change. 
 
 \section{Chance constrained optimization}
 \label{sec:des:ChanceConstrained}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
