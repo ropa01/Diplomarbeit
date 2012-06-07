@@ -65,7 +65,7 @@ they all can be incorporated into a singe optimization scheme.
 \section{Earlier work}
 \label{sec:des:EarlierWork}
 In its most general form the design problem for chemical processes can be written as:
-\program{
+\program{prog:generic}{
 &\minimize{d, z} & & C(d, z, x, \theta) \\
 &\st & & h(d, z, x, \theta) = 0 \\
 &&& g(d, z, x, \theta) \leq 0 
@@ -78,18 +78,27 @@ realizations o the uncertain parameters $\theta$.
 
 Much research has been done within the field of process design under uncertainty that meet the 
 requirements of optimal process design to different degrees. Most frequently used was the stochastic 
-approach. If the probability distribution functions of all uncertain values is available different minimization 
+approach. If the probability distribution functions of all uncertain values is available, different minimization 
 schemes can be employed. Kittrel and Watson \cite{} \todo{add ref Kittrel and Watson '66 from flexibility}
 thought the optimal design to be the one which minimizes the expected value of cost. Wen and Chang 
 \cite{} \todo{add ref Wen and Chang from flexibility} proposed a \emph{relative sensitivity} of the cost -- 
 defined as fractional change in the cost function from its nominal value -- and minimized either the expected 
-value or the maximum probable value of this factional change. 
+value or the maximum probable value of this factional change. Other researcher included penalty functions 
+to drive a solution away from constraint violations and then perform an unconstrained minimization or 
+employ Monte Carlo simulation to find suitable over-design factors \cite{} \todo[inline]{add ref: flexibility}. 
 
-\section{Chance constrained optimization}
-\label{sec:des:ChanceConstrained}
+All the aforementioned approaches do not account for a fact derived from the actual application of the 
+problem. In chemical processes, once a certain design is determined by the design variables $d$, the 
+control variables $z$ can still be adjusted to meet feasible operations once the uncertain parameters 
+are realized. It is therefore advantageous to include this basic difference between the design and 
+control variables in the mathematical formulation of the program. Again several different  approaches 
+have been studied. A summary of some of those can be found in \cite{}\todo[inline]{add ref: flexibility}.
 
+As mentioned before the main aim in terms of an design engineer when considering uncertainty must 
+be to ensure feasible operations of a process for all or or the most likely realization of the uncertain 
+parameters with the most attractive investment scheme. 
 
-
+\stdfig{pgfplots/HardSoftConstraint}{test. \cite{Bernardo.2001}}{test}{}
 
 
 

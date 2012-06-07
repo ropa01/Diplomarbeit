@@ -1,0 +1,9 @@
+\begin{tikzpicture}[
+	arrow/.style={line width=1pt,->,>=latex}
+	]
+	\draw [arrow] (0,-0.5) -- (0,3);
+	\draw [arrow] (-0.5,0) -- (6,0);
+	\draw [arrow] (1,0) -- (1,2.5) node [pos=0, below] {$y^L$} node [pos=1, above] {$\infty$};
+	\draw [arrow] (5,0) -- (5,2.5) node [pos=0, below] {$y^U$} node [pos=1, above] {$\infty$};
+	\draw [line width=1pt] (0.5,2.5) .. controls (1,-0.8) and (5,-0.8) .. (5.5,2.5);
+\end{tikzpicture}Ê

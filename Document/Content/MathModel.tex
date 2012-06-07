@@ -1,42 +1,378 @@
 \chapter{Mathematical process model}
 \label{chp:MathModel}
 
-\section{Physical models}
-\label{sec:PhysModel}
+\section{Steady state model}
+\label{sec:SteadyStateModel}
 
-\subsection{Distillation columns}
-\stdfig{pgfplots/ColTray}{Distillation column tray model.}{fig:ColTray}
-\eq{
-	0 = F_j^V + F_j^L + V_{j+1} + L_{j-1} - V_j - S_j^V - L_j - S_j^L
-	\label{eq:col:MassBalance}
-	\nc{$F_j^V$}{Vapour feed to tray $j$}{\frac{mol}{s}}
-	\nc{$F_j^L$}{Liquid feed to tray $j$}{\frac{mol}{s}}
-	\nc{$S_j^V$}{Vapour side flow from tray $j$}{\frac{mol}{s}}
-	\nc{$S_j^L$}{Liquid side flow from tray $j$}{\frac{mol}{s}}
-	\nc{$V_j$}{Vapour flow from tray $j$}{\frac{mol}{s}}
-	\nc{$L_j$}{Liquid flow from tray $j$}{\frac{mol}{s}}
-}%
-\eq{
-	0 = V_{j+1} y_{i,j+1} + L_{j-1} x_{i,j-1} + F_j^V z^V_{i,j} + F_j^L z_{i,j}^L%
-		- \left(V_j + S_j^V\right) y_{i,j} - \left(L_j + S_j^L\right) x_{i,j}
-	\label{eq:col:CompBalance} 
-}%
-\eq{
-	0 = V_{j+1} H^V_{j+1} + L_{j-1} H^L_{j-1} + F_j^V H^{FV}_{j} + F_j^L H^{FL}_{j}%
-		- \left(V_j + S_j^V\right) H^V_{j} - \left(L_j + S_j^L\right) H^L_{j}
-	\label{eq:col:EnergyBalance} 
-}%
-\eq{
-	y_{i,j} = \gamma_{i,j} \cdot K_{i,j} \cdot x_{i, j} 
-	\label{eq:col:Kxy}
-}%
+\subsection{Distillation column}
 
-\subsection{Heat exchanger}
+	\stdfig{pgfplots/ColTray}{Distillation column tray model.}{fig:ColTray}{h}
 
-\subsection{Compressors}
+	\paragraph{Mass balance}
+	\Eq{eq:col:MassBalance}{
+		0 = F_j^V + F_j^L + V_{j+1} + L_{j-1} - V_j - S_j^V - L_j - S_j^L
+		\nc{$F_j^V$}{Vapour feed to tray $j$}{\frac{mol}{s}}
+		\nc{$F_j^L$}{Liquid feed to tray $j$}{\frac{mol}{s}}
+		\nc{$S_j^V$}{Vapour side flow from tray $j$}{\frac{mol}{s}}
+		\nc{$S_j^L$}{Liquid side flow from tray $j$}{\frac{mol}{s}}
+		\nc{$V_j$}{Vapour flow from tray $j$}{\frac{mol}{s}}
+		\nc{$L_j$}{Liquid flow from tray $j$}{\frac{mol}{s}}
+	}%
 
-\subsection{Turbine}
+	\paragraph{Component balances}
+	\Eq{eq:col:CompBalance}{
+		0 = V_{j+1} y_{i,j+1} + L_{j-1} x_{i,j-1} + F_j^V z^V_{i,j} + F_j^L z_{i,j}^L%
+			- \left(V_j + S_j^V\right) y_{i,j} - \left(L_j + S_j^L\right) x_{i,j} 
+	}%
 
+	\paragraph{Energy balance}
+	\Eq{eq:col:EnergyBalance}{
+		0 = V_{j+1} H^V_{j+1} + L_{j-1} H^L_{j-1} + F_j^V H^{FV}_{j} + F_j^L H^{FL}_{j}%
+			- \left(V_j + S_j^V\right) H^V_{j} - \left(L_j + S_j^L\right) H^L_{j} 
+	}%
+
+	\paragraph{Vapour liquid equilibrium}
+	\Eq{eq:col:Kxy}{
+		y_{ij} = \gamma_{ij} \cdot K_{ij} \cdot x_{ij}
+	}%
+
+\subsubsection{Multi stream heat exchanger}
+
+\subsection{Compressor / expander}
+	\stdfig{pgfplots/Compressor}{Compressor model.}{fig:Compressor}{h}
+
+	\paragraph{Mass and component balances}
+	\Eq{eq:comp:MassBalance}{
+		0 = F^{in} - F^{out}
+	}%
+	\Eq{eq:comp:CompBalance}{
+		0 = z_i^{in} - z_i^{out}
+	}%
+
+	\paragraph{Isentropic work}
+	\Eq{eq:comp:SInOut}{
+		S^{in}(T^{in}, p^{in}, z_i^{in}) = S^{out}(T_S^{out}, p^{out}, z_i^{out})
+	}%
+	\Eq{eq:comp:IsentropicWork}{
+		W_S = F^{in} \cdot H^{in}(T^{in}, p^{in}, z_i^{in}) - F^{out} \cdot H^{out}(T_S^{out}, p^{out}, z_i^{out}) 
+	}%
+
+	\paragraph{Compression work}
+	\Eq{eq:comp:WEta}{
+		W \cdot \eta^C = W_S
+	}%
+	\Eq{eq:comp:CompressionWork}{
+		W_S = F^{in} \cdot H^{in}(T^{in}, p^{in}, z_i^{in}) - F^{out} \cdot H^{out}(T^{out}, p^{out}, z_i^{out}) 
+	}%
+
+	\paragraph{Pressure drop}
+	\Eq{eq:comp:PressureDrop}{
+		p^{out} = p^{in} + \Delta p
+	}%
+	
+\subsection{Centrifugal pump}
+	
+	\paragraph{Cost estimation}
+		The cost for the pump excluding the motor can be approximated by
+		\Eq{eq:pump:CostPump}{
+			C_B & = \exp \left[ 9.7171 - 0.6019 \ln[S] + 0.0519 (\ln[S])^2 \right] \eqannote{40 \leq S \leq 100000}\\
+			C_p & = f_T \, f_M \, C_B. 
+		}
+		The cost for the centrifugal pump is approximated by the value $S = Q \cdot \sqrt{H} $, where
+		$Q$ denotes the voulme flow through the pump in gallons per minute $[gpm]$ and $H$ the 
+		pump head in $[ft]$. 
+		
+		The costs given above is excluding the motor needed. It is then estimated separately. In this 
+		case the specific quantity is the power consumption $P_C$ needed for the desired stream transport. 
+		
+		\Eqml{eq:pump:CostMotor}{
+			C_B  = \exp\big[ 5.8259 + 0.13141 \ln[P_C] + 0.053255 (\ln[Pc])^2 \\
+				 + 0.028628 (\ln[P_C])^3 - 0.0035549 (\ln[P_C])^4 \big] 
+		}	
+
+	\todo[inline]{add formulas for vapour fraction}
+	\todo[inline]{check if . or , are used for decimals ...}
+\subsubsection{Expander}
+
+\subsubsection{Condenser}
+
+\subsection{Reboiler}
+
+	\stdfig{pgfplots/Reboiler}{Reboiler model.}{fig:Reboiler}{h}
+
+	\paragraph{Mass balance}
+	\Eq{eq:reboil:MassBalance}{
+		0 = F - V - L
+	}%
+
+	\paragraph{Component balance}
+	\Eq{eq:reboil:CompBalance}{
+		0 = F z_j - V y_j - L x_j
+	}%
+
+	\paragraph{Pressure drop}
+	\Eq{eq:reboil:PressureDrop}{
+		p^R = p^{in} + \Delta p
+	}%
+
+\subsection{Heater}
+
+	\stdfig{pgfplots/Heater}{Heater model.}{fig:Heater}{h}
+
+	\paragraph{Mass and component balances}
+	\Eq{eq:comp:MassBalance}{
+		0 = F^{in} - F^{out}
+	}%
+	\Eq{eq:comp:CompBalance}{
+		0 = z_i^{in} - z_i^{out}
+	}%
+	
+	\paragraph{Pressure drop}
+	\Eq{eq:reboil:PressureDrop}{
+		p^R = p^{in} + \Delta p
+	}%
+	
+	\todo[inline]{add formulas for vapour fraction}
+		
+\subsubsection{Pump}
+
+\subsubsection{Separator}
+
+\subsubsection{Joule-Thompson valve}
+
+\subsection{Splitter}
+	\stdfig{pgfplots/Splitter}{Splitter model}{fig:Splitter}{h}
+	
+	\paragraph{Mass and component balances}
+	\Eq{eq:comp:MassBalance}{
+		0 = F^{in} - \sum_i^N F^{in} \zeta_i
+	}%
+	\Eq{eq:comp:CompBalance}{
+		0 = z_i^{in} - z_i^{out}
+	}%
+	
+	\paragraph{Energy balance}
+	\Eq{eq:comp:MassBalance}{
+		0 = F^{in} H^{in}(T^{in}, p^{in}, z_i^{in}) - \sum_j^N F_j^{out} H^{out}(T^{out}, p^{out}, z_i^{out})
+	}%
+	
+	\paragraph{Pressure drop}
+	\Eq{eq:reboil:PressureDrop}{
+		p^{out} = p^{in} + \Delta p
+	}%
+
+	\todo[inline]{add formulas for vapour fraction}
+	
 \section{Economic models}
 \label{sec:EconModel}
-
+	As discussed earlier economic cosideration play a major role in porcess design. In order to account 
+	for the process economics the cost of the process to be implmented needs to be estimated at the design 
+	level. However as limited infrmation is availble estimation methods have to be employed. In 
+	\refsec{chp:ProcesEconomics} the gerneral approach for cost estimation of process equipment was
+	inroduced, where a specific value such as heat-exchange area or vessel size is used to approximate
+	equipment cost. However for more specific units extended models are available, where statistical 
+	data is employed to yield a more realistic fit to cost data. The cost functions and correction 
+	factors presented in this chapter are, if not stated otherwise, taken from \cite{Seider.2010}. 
+	Also unless otherwise stated the unit cost is given for the year 2006 ($CE = 500$). 
+	
+	\subsection{Destillation column}
+		Out of all the process equipment the destillation column probably is the most elaborate
+		unit. It also poses the greatest challneges when ot comes to finding an appropriate 
+		estimate for its cost. This is die to the fact that the column in itself is rather 
+		large and complex. To properly operate a coulumn the vessel needs to have numerous 
+		valves, scaffolding and several manholes. Due to its size further factors come into 
+		play that need not to be considered for the other relatively small units. Those location 
+		dependent factors might include resiliance towards earthquakes, the ability to withstand 
+		close winds or intensive ambient tmperatures. However as the scope of this work explicitly 
+		focuses on early design stages those location specific influences will be disregarded 
+		to arrive at simpler models for cost estimation. 
+		
+		\subsubsection{Vertical tower}
+			The cost for the vessel $C_V$ which is to be vertically errected vertically is dependent 
+			on teh weight fo the weight $W$ ($[lbs]$) of the vessel. This includes valves, manholes and 
+			other details directly connected with the tower. However the cost for ladders, 
+			platforms and railings necessary to porperly operate the column are calculated 
+			separately 
+			\Eq{eq:cost:column:column}{
+				C_p = f_M \, C_V + C_{PL}.
+			}
+			
+			The correlated equation for the cost of the tower is given by
+			\Eq{eq:cost:column:vessel}{
+				C_V = \exp\big\{ 7.2756 + 0.18255 \cdot \ln[W] + 0.02297 \cdot \pow{\ln[W]}{2} \big\}, \eqannote{9000 \leq W \leq 2.5 \cdot 10^6}.
+			}
+			
+			To the cost of the tower, the cost of the surrounding support structure ist added. It is dependent
+			on the inner diamerter of the vessel ($D_i$) as well as the so called tangent to tangent length ($L$). 
+			This denotes the length of the tube that makes up the vessel exluding the spherical domes that 
+			close the column on each side. With that the additional cost is then computed by
+			\Eq{eq:cost:column:support}{
+				C_{PL} = 300.9 \cdot \pow{D_i}{0.63316} \cdot \pow{L}{0.80161}.
+			}
+			
+		\subsubsection{Weight}
+			As can be seen from the above correlations the weight of the coulumn is a determining factor 
+			for the estimated and actual cost. Therefore some thought souhld be put into how this can
+			be determined, when the final design is unknown. Again several correlations have been applied
+			to real life units which yield satisfactory results. In gerneral the weight of the empty vessel 
+			can be computed by determing the volume of the material and multiplying it with its density ($\varrho$)
+			\Eq{eq:cost:column:weight}{
+				W = \pi (D_i + t_s)(L + 0.8 \cdot D_i) t_s \cdot \varrho.
+			} 
+			The term $0.8 D_i$ is included to approximate the weight of the domes, whereas $t_s$ is the shell 
+			thickness. To determine how thick the walls of teh shell need to be teh ASME prssure vessel code
+			formula is often applied
+			\Eq{eq:cost:column:wallthickness}{
+				t_s = \frac{P_d \, D_i}{2 \, S \, E - 1.2 P_d}. 
+			}
+			Where the maxilmal allowable stress $S$, which the chosen material can withstand at 
+			proces conditions is multiplied by the fractional wel efficiency $E$ to regard the effects
+			of the manufacturing process on the material strength. To ensure an error on the side of
+			caution teh design pressure $P_d$ is calculated from teh actual operatiing pressure $P_o$
+			by means of 
+			\Eq{eq:cost:column:designpressure}{
+				P_d = \exp\big\{ 0.60600 + 0.91615 \cdot \pow{\ln[P_o]}{} + 0.0015655 \cdot \pow{\ln[P_o]}{2}
+			}
+			It is important to consider, that the maximum allowable stress especially needs to take into account 
+			the operating temperature of the distillation process, as it might have significant effects. 
+			
+			Furthermore the given formulas only apply to pressures above ambient conditions. Thus low pressure
+			or vacuum distillation is not covered by the presented formulas. 
+			
+		\subsubsection{Column internals}
+			While internal support sructures are already considered by the equations given above, the 
+			internals responsible to ensure product separation are not. Those make up a very significant 
+			amount of the total column cost and are available . 
+	
+	\subsection{Centrifugal pump}
+		Pumps are among the most common units of process equipment. While there are several different 
+		kinds of punps that can be used, the crtrifugal pump is one of the most popular choices and
+		denotes a very likely choice for the porcess conditions considered in this application. Hence
+		other pump types will not be considered at this point. 
+		
+		\subsubsection{Pump}
+			In terms of operations pumps are best described by the volumetric flow transported $Q$ as 
+			well as the pumph head $H$, the hight that needs to be overcome. Data taken from the company 
+			Mosanto was used to correlate the pump cost to a specific value 
+			\Eq{eq:cost:pump:SpecVal}{
+				S = Q \sqrt{H}.
+			}
+			As a reference unit the base price $C_B$ is estimated for a cast iron single-stage 
+			vertically split case at 3600 $rpm$
+			\Eq{eq:cost:pump:PumpWOMotor}{
+				C_B = \exp \left\{ 9.7171 - 0.6019 \cdot \ln[S] + 0.0519 (\ln[S])^2 \right\}, 
+					\eqannote{400 \leq S \leq 100000}.
+			}
+			
+			The most influential addition factors for the pump price are the material, which is accounted 
+			for in the material factor $f_m$, as well as the rotation, case split orientation (horizontal
+			and vertical), the number of stages, covered flow rate range, pump head range and maximum 
+			motor power, which are all agglomerated in the type factor $f_T$. Values for these factors 
+			are given in \reftab{tab:pump:Type} and \reftab{tab:pump:Material}. 
+			
+			\stdtab{Tables/PumpFactorsType}{Pump type factors \cite{Seider.2010}.}{tab:pump:Type}
+			\stdtab{Tables/PumpFactorsMaterial}{Pump material factors \cite{Seider.2010}.}{tab:pump:Material}
+			
+		\subsubsection{Electric motor}
+			Separately from the pump itself the motor to drive the compression is considered. While the
+			voulumeric flow and the pump head certainly are valid choices to correlate motors for pumps 
+			esecially, the power consumption is a more general specific value 
+			\Eq{eq:cost:pump:MotorPowerConsumption}{
+				P_C = \frac{P_T}{\eta_P \eta_M} = \frac{P_B}{\eta_M}
+			}
+			
+			It can be calculated from the theoretic power of the pump $P_T$ and the efficiencies $\eta_P$
+			$\eta_M$. While an estimate for the expected power consumption might be already available at
+			rather early design stages, the efficiencies will have to be correlated as well if resorting 
+			to average values is considered too coarse. Those correlations rely on the volumetric flow in 
+			gallons per minute ([gpm]) and the brake horse power $P_B = \frac{P_T}{\eta_P}$. 
+			
+			\Eq{eq:cost:pump:MotorEfficiancyP}{
+				\eta_P = -0.316 + 0.24015 \cdot \ln[Q] - 0.01199 \cdot (\ln[Q])^2 \eqannote{50 \leq Q \leq 5000}
+			} 
+			\Eq{eq:cost:pump:MotorEfficiancyM}{
+				\eta_M = 0.80 + 0.0319 \cdot \ln[P_B] - 0.00182 \cdot (\ln[P_B])^2 \eqannote{1 \leq P_B \leq 1500} 
+			}
+			
+			After having calculated the power which the motor needs to supply its base cost of an open, 
+			drip-proof enclosed motor at 3600 $rpm$ can be approximated by
+			\Eqml{eq:cost:pump:Motor}{
+				C_B = \exp\big\{ 5.8259 + 0.13141 \cdot \ln[P_C] + 0.053255 \cdot (\ln[P_C])^2 \\
+					+ 0.028628 \cdot (\ln[P_C])^3 - 0.0035549 \cdot (\ln[P_C])^4 \big\} \eqannote{1 \leq P_C \leq 700}
+			}
+			
+			To adjust the cost for different types of electric motors the type factors from \reftab{tab:pump:MotorTypes}
+			
+			\stdtab{Tables/MotorTypeFactors}{Type factors for different motor types.}{tab:pump:MotorTypes}
+	
+	\subsection{Compressor}
+		The cost of compressors is correlated with their respective power consuption measured in horsepower.
+		Although not the most efficient type of compressor, centrifugal compressors are vrey popular in the
+		process industry, as they are easily controlled an deliver a very steady flow. However as differnt 
+		types might be employed as well base cost correlations for centrifugal, reciprocation and screw
+		compressors are given. 
+		
+			\subsubsection{Centrifugal compressor}
+				\Eq{eq:cost:compressor:centrifugal}{
+					C_B = \exp\big\{ 7.5800 + 0.80 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 30000}
+				}
+			
+			\subsubsection{Reciprocating compressor}
+				\Eq{eq:cost:compressor:centrifugal}{
+					C_B = \exp\big\{ 7.9661 + 0.80 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 20000}
+				}
+				
+			\subsubsection{Screw compressor}
+				\Eq{eq:cost:compressor:centrifugal}{
+					C_B = \exp\big\{ 8.1238 + 0.7243 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 750}
+				}
+		
+		Again as with most othe requipment types correction factors are used to adjust for different realization 
+		of this piece of equipment. Here type of motor as well as the construction material have the biggest 
+		effectson the unit price and are explicitly considered. 
+		\Eq{eq:cost:sompressor:factors}{
+			C_p = f_D \, f_M \, C_B
+		}
+		
+		The alternatives to the electric motor ($f_D = 1.0$) are a steam turbine ($f_D = 1.15$) or a gas turbine
+		($f_D = 1.25$). It should however be noted that aside from beein the cheapest choice, the electric motor
+		is also the most efficient. Thus teh turbines are mostly considered, when process steam or combustion gas 
+		is easily availble, such that the drawbacks might be eleimnated by not havin to supply the electric 
+		energy for the electric motor. In terms of construction material all base costs are for cast iron or
+		carbon steel. Some appliances may require more resistant and also more expensive materials such as
+		stainless steel ($f_M = 2.5$) or an nickel alloy ($f_M = 5.0$).   
+		
+	\subsection{Reboiler / condenser}
+		Reboiler and condenser can be characterized as heat exchangers, and be handeled in the same way, 
+		as the main difference is weather heat is transferred to or from the process stream. In that sense 
+		they must be distinguished when considerin the operating cost, as the cost for hot or cold 
+		auxilliary streams might differ significantly. As customary for heat exchangers the specific 
+		quantity for cost correlations is the necessary heat exchange area $A$ measured in $ft$. 
+		
+		Again the consturction material as well as the operating conditions have an effect on the 
+		final cost 
+		\Eq{eq:cost:condreb:total}{
+			C_p = f_P \, f_M \, C_B. 
+		}
+		
+		The correction for pressures $f_P$ takes into account the operating pressure $P_o$ and 
+		is comouted by 
+		\Eq{eq:cost:condreb:pcorrect}{
+			f_P = 0.8510 + 0.1292 P_o + 0.0198 * P_o^2 . 
+		}
+		
+		The material correction factor $f_M$ 
+		\Eq{}{
+			f_M = 
+		}
+		
+		\subsubsection{Shell and tube heat exchanger}
+		\Eq{eq:cost:condreb}{
+			C_B = \exp\big\{ 11.667 - 0.8709 \cdot \pow{\ln[A]}{} + 0.09005 \cdot \pow{\ln[A]}{2} \big\}
+		}
+		
+		\subsubsection{Double pipe}
+		\Eq{}{
+			C_B = \exp\big\{ 7.146 + 0.1600 \cdot \pow{\ln[A]}{} \big\}
+		}
+		

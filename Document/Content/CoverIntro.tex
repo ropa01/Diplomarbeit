@@ -1,16 +1,16 @@
 \pagenumbering{roman}
 	
-	\input{Content/Preamble/CoverPage}
+\input{Content/Preamble/CoverPage}
 	
-	\ifthenelse{\boolean{draft}}{}{
-		\include{Content/Preamble/TaskDescription}
-		\include{Content/Preamble/StatutoryDeclaration}
-	}
+\ifthenelse{\boolean{draft}}{}{
+	\include{Content/Preamble/TaskDescription}
+	\include{Content/Preamble/StatutoryDeclaration}
+}
 
-	\tableofcontents
-	\listoffigures
-	\listoftables
-	\printnomenclature[2.5cm]
-	\clearpage
-	\pagenumbering{arabic}
-	\setcounter{page}{1}
+\tableofcontents
+\listoffigures
+\listoftables
+\printnomenclature[2.5cm]
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}

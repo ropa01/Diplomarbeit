@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{Bernardo.2001}
+F.~P. Bernardo, Efstratios~N. Pistikopoulos, and Pedro~M. Saraiva.
+\newblock {Q}uality costs and robustness criteria in chemical process design
+  optimization.
+\newblock {\em Computers {\&} Chemical Engineering}, 25(1):27--40, 2001.
+
 \bibitem{Castle.2002}
 W.~F. Castle.
 \newblock {A}ir separation and liquefaction: recent developments and prospects
@@ -7,7 +13,7 @@ W.~F. Castle.
 \newblock {\em International Journal of Refrigeration}, 25(1):158--172, 2002.
 
 \bibitem{Halemane.1983}
-K.~P. Halemane and I.~E. Grossmann.
+K.~P. Halemane and Ignacio~E. Grossmann.
 \newblock {O}ptimal process design under uncertainty.
 \newblock {\em AIChE Journal}, 29(3):425--433, 1983.
 
@@ -29,6 +35,12 @@ Max~Stone Peters, Klaus~D. Timmerhaus, and Ronald~E. West.
 R.~Prasad, F.~Notaro, and D.R Thompson.
 \newblock {E}volution of membranes in commercial air separation.
 \newblock {\em Journal of Membrane Science}, 94(1):225--248, 1994.
+
+\bibitem{Seider.2010}
+W.~D. Seider, J.~D. Seader, D.~R. Lewin, and S.~Widagdo.
+\newblock {\em {P}roduct and {P}rocess {D}esign {P}rinciples: {S}ynthesis,
+  {A}nalysis, and {E}valuation}.
+\newblock J. Wiley, New York, 3 edition, 2010.
 
 \bibitem{Sirdeshpande.2005}
 Avinash~R. Sirdeshpande, Marianthi~G. Ierapetritou, Mark~J. Andrecovich, and

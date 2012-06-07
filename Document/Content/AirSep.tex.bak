@@ -1,0 +1,138 @@
+\chapter{Air separation technology}
+\label{chp:airsep}
+\begin{figure}[h]
+	\input{Pictures/tech_compar}
+	\caption{Comparison of Air Separation Technologies \cite{Prasad.1994}.}
+	\label{fig:tech_compar}
+\end{figure}
+
+There are several ways besides cryogenic air separation that can be employed to separate gas mixtures. 
+In this chapter different competing technologies and their main applications will be discussed. The 
+predominately used technologies are cryogenic distillation, pressure swing adsorption (PSA) as well as 
+gas permeation (GP). In the distillation process the gas is first liquefied. Separation is the achieved 
+by the different concentration differences in vapor and liquid phase. PSA relies on the different affinities 
+of gaseous species to adsorb to certain materials in order to extract a component form a mixture. During gas 
+permeation membranes are used. Each species migrates in different quantities through a given membrane
+depending on process parameters and membrane structure. 
+
+\reffig{fig:tech_compar} illustrates the most economically viable processes depending on product
+purity and product stream volume. It can be seen that alternative air separation processes 
+cannot supply the high quality or quantity of the cryogenic process. Due to that cryogenic air separation is 
+thought to be the main supplier of highly pure gases in industrial quantities for years to come 
+\cite{Castle.2002}. 
+The alternative processes however offer some very appealing characteristics, which make them the 
+favorable choice when lower quantities of product or more moderate purity is required. The cryogenic 
+process is always connected with an considerable energy consumption for the liquefaction and compression. 
+Due to that smaller implementations of the process a very unlikely to yield economically sound solutions
+to a separation problem. 
+
+\addref
+
+\section{Cryogenic air separation}
+\label{sec:cryo_air_sep}
+Cryogenic Air Separation finds applications over a great variety of industries among others refining, petrochemicals, medical, food \& beverages and environmental \cite{Sirdeshpande.2005}. Furthermore 
+prospective processes for power generation from fossil sources in form of the integrated gaseous combined 
+cycle (IGCC) integrates the air separation process in order to enable more environmentally friendly power 
+generation \cite{Mahapatra.2010}. 
+
+\begin{figure}
+	\input{Pictures/ASU_text}
+	\caption[Air Separation Unit]{Schematic representation of the cryogenic air separation process.}
+	\label{fig:ASU}
+\end{figure}
+
+As can be seen in \reffig{fig:ASU} double effect heat integrated distillation column lies at the heart of the air 
+liquefaction processes. It consists of a high pressure column (HPC) operating at 0.68 $MPa$ and 
+temperatures below 130 $K$ as well as a low pressure column (LPC) which operates at around 0.13 
+$MPa$ an comparable temperatures. In order to also attain highly pure argon as a product the process 
+may also include a crude argon column (CAC) which works at slightly lower pressures than the LPC.
+
+The plant air entering the process is initially purified, where carbon and nitrogen oxides as well as solid contaminants are removed, and then compressed to process conditions. The compressed air is then cooled 
+against product streams namely liquefied nitrogen, oxygen and argon. The air stream is then divided into 
+several sub-streams. One of those is fed into the HPC bottom, while another is expanded by means of a 
+turbine and further cooled down through the Joule- Thompson effect. Aside from further cooling energy from 
+the initial compression is thus partially recovered. This expanded air stream is then fed into the LPC. At the 
+bottom of the LPC liquid as well as gaseous oxygen are recovered as desired products. The bottom and top 
+streams from the HPC are made up of an oxygen rich liquid as well as liquid nitrogen. The liquid nitrogen 
+stream is led though an heat exchanger an the fed as reflux into the top of the LPC. The bottom stream is, 
+after heat integration, partially fed into the LPC as well as CAC. From the lower part of the LPC a side stream 
+is drawn and led into the bottom of the CAC. At the same point the reflux from the CAC is fed back into the 
+LPC \cite{Zhu.2010}.
+
+\section{Pressure swing adsorption}
+\label{sec:psa}
+
+Pressure Swing Adsorption has been employed to separate gaseous mixtures for some time. During the 
+80's and 90's commercial applications for the production of oxygen or nitrogen have gained more and 
+more attention. Especially the ability to construct very compact units the size of a briefcase, have led to 
+the implementation  of PSA processes for treatment of asthma patients or other medical appliances. But 
+also larger scale plants have successfully been utilized, for example in the paper industry during the 
+de-lignation of pulp. It remains true however, that for large scale industrial settings with high product 
+quality demands, cryogenic separation remains the most viable alternative. 
+
+Separation is achieved during the PSA process by adsorption of one component in the mixture to a given
+bed. Once the bed is saturated with a the adsorbing species, it has to be regenerated in order to continue 
+production. The ability to adsorb a certain species is dependent on the system pressure. At higher pressures
+more gas can be adsorbed then at lower pressures. Thus by reducing the pressure in the reaction vessel, 
+the Adsorbent can be regenerated. 
+
+\stdfig{pgfplots/PSA}{Schematic representation of the PSA process.}{fig:PSA}{}
+
+\begin{figure}
+	\center
+	\input{Pictures/PSA}
+	\caption{Schematic representation of the PSA process.}
+	\label{fig:PSA}
+\end{figure}
+
+In order to avoid non-continuous processes, two or more reaction vessels are employed. Therefore the 
+saturated vessel can be regenerated, while the other one continues production. By alternating adsorption 
+and regenerating in the different vessels continuous production can be achieved. A schematic for a simple 
+two bed cycle is shown in \reffig{fig:PSA}. Ambient air is first led through the first reaction vessel at the 
+elevated pressure. Within the vessel nitrogen is adsorbed until saturation is reached. At that point the 
+ambient air is led through the second vessel. A fraction of the product stream is fed into the first vessel and 
+used as sweep for the regeneration of the adsorbent at lower pressure. 
+
+Depending on the size of the process two different pressure level are used. One cycle adsorbs the nitrogen 
+at a pressure of approximately  7.5 bar while regeneration is done at ambient pressure. Within the 
+alternative approach adsorption occurs under ambient condition, while for the regeneration step a vacuum 
+pump reduces the vessel pressure. This process is the called Vacuum Pressure Swing Adsorption (VPSA). 
+
+An important role when designing the product is the choice of the adsorbent. For almost all current 
+applications of PSA alumosilicates or zeolithes have been designed, tailored to the specific separation 
+task. Their main advantages include a high selectivity towards a specic gas to be adsorbed as well as a 
+very homogenous distribution of diameters in the molecular sieve. 
+
+\section{Gas permeation}
+\label{sec:membrane}
+\todo[inline]{find paper: DOI: 10.1002/cite.330480804}
+\todo[inline]{add reference: ISBN-10: 354034327X}
+The separation of mixed gases by membrane process is called gas permeation. Its main strength 
+in comparison with alternative processes are the low energy consumption and the possibility to 
+produce flexible mobile units. As mentioned before it is not however capable of producing high
+quantity highly pure product streams. As \reffig{fig:tech_compar} illustrates the main application 
+for the gas permeation process are small to moderate product streams at intermediate purities.   
+
+%\begin{figure}
+%	\center
+%	\input{Pictures/gas_permeation}
+%	\caption{Gas permeation process.}
+%	\label{fig:gas_permeation} 
+%\end{figure}
+
+\stdfig{pgfplots/GasPermeation}{Membrane unit for gas permeation.}{fig:gas_permeation}{}
+
+\reffig{fig:gas_permeation} shows the schematic for a single stage membrane unit. Within the feed stream 
+the gaseous mixture is fed into the unit, which can quickly be implemented. Within the unit one or more 
+species migrate favorably through the membrane. In this case mostly dense polymer membranes are 
+employed used. There have been some impressive results with metallic membranes, but due to 
+the very high material costs they have not been adapted by the industry. Furthermore, since gaseous 
+phases often have rather small molecular species, porous membranes cannot achieve desired separation. 
+The driving force the separation process is a difference in partial pressure or species activity across the 
+membrane. According to the molecular structure of each species, the structure of the separating membrane 
+as well as the process parameters pressure and temperature, they permeate through the membrane in 
+different quantities.
+
+The process of permeation can be subdivided into three separate steps. Sorption at the membrane / 
+feed interface, diffusion through the mostly dense polymer membrane and finally desorption at the 
+permeate side of the membrane. 

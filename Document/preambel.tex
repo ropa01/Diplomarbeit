@@ -1,13 +1,12 @@
-
-\documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibliography=totoc,oneside,a4paper,fleqn,BCOR8mm]{scrreprt}
+\documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibliography=totoc,oneside,a4paper,fleqn,BCOR8mm,abstracton]{scrreprt}
 \usepackage[UKenglish]{babel}
 \usepackage{cmbright}
 \usepackage{color}
 \usepackage[T1]{fontenc}
 \usepackage[applemac]{inputenc}
+%\usepackage[Latin2]{inputenc}
 \usepackage{graphicx}  %[draft]
 \usepackage{graphics}
-%\usepackage[applemac]{inputenc}
 %  \usepackage{subfigure}
 %  \usepackage{rotating}
 \usepackage{longtable}
@@ -34,15 +33,14 @@
 	\xdefinecolor{ImperialLightBlue}{rgb}{0.4686,0.5961,0.7255}
 	\xdefinecolor{05gray}{gray}{0.5}
 \usepackage[colorlinks=true, linkcolor=ImperialDarkBlue, citecolor=ImperialLightBlue, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
-%\usepackage{natbib} % nur für dinat gebraucht
 \usepackage{subfig}
 \usepackage{subfloat}
 \usepackage{paralist}
 \usepackage{xifthen}
-%\usepackage{gnuplottex}
 \usepackage{scrhack}
 \usepackage{pgfplots}
 	\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
 
 \bibliographystyle{plain}
 \pagestyle{headings}
@@ -70,8 +68,8 @@
 \renewcommand{\nompreamble}{\markboth{Nomenclature}{Nomenclature}}
 \renewcommand{\labelitemi}{$\cpbullet$}
 
-\newcommand{\stdfig}[3]{\begin{figure} \center \input{#1} \caption{#2} \label{#3} \end{figure}}
-\newcommand{\stdtab}[3]{\begin{table} \center \input{#1} \caption{#2} \label{#3} \end{table}}
+\newcommand{\stdfig}[4]{\begin{figure}[#4] \center \input{#1} \caption{#2} \label{#3} \end{figure}}
+\newcommand{\stdtab}[3]{\begin{table} \center {\footnotesize \input{#1}} \caption{#2} \label{#3} \end{table}}
 
 \newcommand{\refeq}[1]{eq. (\ref{#1})}
 \newcommand{\refeqs}[2]{eqns. (\ref{#1}) - (\ref{#2})}
@@ -81,12 +79,15 @@
 \newcommand{\refchp}[1]{chap. \ref{#1}}
 
 \newcommand{\eq}[1]{\begin{align} #1 \end{align}}
+\newcommand{\Eq}[2]{\begin{align} #2 \label{#1} \end{align}}
 \newcommand{\eqml}[1]{\begin{multline} #1 \end{multline}}
-\newcommand{\program}[1]{\begin{equation} \begin{aligned} #1 \end{aligned} \end{equation}}
-\newcommand{\minimize}[1]{\min_{#1}}
-\newcommand{\st}{\text{s.t.}}
+\newcommand{\Eqml}[2]{\begin{multline} #2 \label{#1} \end{multline}}
+\newcommand{\minimize}[1]{\underset{#1}{\text{minimize}}}
+\newcommand{\st}{\text{subject to}}
 \newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\eqannote}[1]{\qquad #1}
+\newcommand{\pow}[2]{\left( #1 \right)^{#2}}
 
 \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
 \newcommand{\nc}[3]{\nomenclature{#1}{#2 \nomunit{#3}}}
@@ -104,6 +105,14 @@
 
 \newcommand{\gproms}{gPROMS\raisebox{1ex}{\scriptsize \textregistered}\,}
 \newcommand{\aspen}{Aspen Plus\raisebox{1ex}{\scriptsize \textregistered}\,}
+
+\newcounter{program}
+\setcounter{program}{0}
+\newcommand{\refprogram}[1]{\refstepcounter{program}\label{#1}}
+%\newcommand{\program}[1]{\begin{equation} \begin{aligned} #1 \end{aligned} \end{equation}}
+\newcommand{\program}[2]{\refprogram{#1} \begin{minipage}{0.9\textwidth} \begin{equation*}%
+\begin{aligned} #2 \end{aligned} \end{equation*} \end{minipage} \begin{minipage}{0.09\textwidth}%
+{\hfill (P \arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
 
 \makenomenclature
 

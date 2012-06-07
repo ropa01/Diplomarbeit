@@ -1,55 +1,12 @@
-This is BibTeX, Version 0.99d (TeX Live 2011)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: Diplomarbeit.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: C:\Users\Abakus W7\Dropbox\Studium\Diplomarbeit\Document\Content\..\Diplomarbeit.aux
 The style file: plain.bst
 A level-1 auxiliary file: Content/CoverIntro.aux
-A level-1 auxiliary file: Content/introduction.aux
+A level-1 auxiliary file: Content/Abstract.aux
+A level-1 auxiliary file: Content/Introduction.aux
 A level-1 auxiliary file: Content/AirSep.aux
 A level-1 auxiliary file: Content/ProcessDesign.aux
 A level-1 auxiliary file: Content/ProcessEconomics.aux
-A level-1 auxiliary file: Content/Uncertainty.aux
 A level-1 auxiliary file: Content/MathModel.aux
 A level-1 auxiliary file: Content/outlook.aux
 A level-1 auxiliary file: Content/BibAppendix.aux
 Database file #1: Literature.bib
-You've used 7 entries,
-            2118 wiz_defined-function locations,
-            560 strings with 5799 characters,
-and the built_in function-call counts, 2565 in all, are:
-= -- 263
-> -- 110
-< -- 1
-+ -- 43
-- -- 36
-* -- 196
-:= -- 422
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 39
-chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 89
-empty$ -- 197
-format.name$ -- 36
-if$ -- 530
-int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 8
-newline$ -- 38
-num.names$ -- 14
-pop$ -- 31
-preamble$ -- 1
-purify$ -- 32
-quote$ -- 0
-skip$ -- 65
-stack$ -- 0
-substring$ -- 212
-swap$ -- 18
-text.length$ -- 1
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 26
-warning$ -- 0
-while$ -- 27
-width$ -- 8
-write$ -- 80
