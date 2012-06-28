@@ -3,10 +3,10 @@
 \usepackage{cmbright}
 \usepackage{color}
 \usepackage[T1]{fontenc}
-\usepackage[applemac]{inputenc}
-%\usepackage[Latin2]{inputenc}
+%\usepackage[applemac]{inputenc}
+\usepackage[Latin2]{inputenc}
 \usepackage{graphicx}  %[draft]
-\usepackage{graphics}
+%\usepackage{graphics}
 %  \usepackage{subfigure}
 %  \usepackage{rotating}
 \usepackage{longtable}
@@ -31,6 +31,9 @@
 	\xdefinecolor{AVTGreen}{rgb}{0.705882353, 0.835294118, 0.243137255} 
 	\xdefinecolor{ImperialDarkBlue}{rgb}{0.0,0.2471,0.4784}
 	\xdefinecolor{ImperialLightBlue}{rgb}{0.4686,0.5961,0.7255}
+	\xdefinecolor{CPSEBlue}{HTML}{0a5598}
+	\xdefinecolor{PSEGreen}{HTML}{006c85}
+	\xdefinecolor{PSEOrange}{rgb}{0.96078,0.50980,0.12549}
 	\xdefinecolor{05gray}{gray}{0.5}
 \usepackage[colorlinks=true, linkcolor=ImperialDarkBlue, citecolor=ImperialLightBlue, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
 \usepackage{subfig}
@@ -90,7 +93,7 @@
 \newcommand{\pow}[2]{\left( #1 \right)^{#2}}
 
 \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
-\newcommand{\nc}[3]{\nomenclature{#1}{#2 \nomunit{#3}}}
+\newcommand{\nc}[3]{\nomenclature{$#1$}{#2 \nomunit{#3}}}
 
 \newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}
 \newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
@@ -105,6 +108,8 @@
 
 \newcommand{\gproms}{gPROMS\raisebox{1ex}{\scriptsize \textregistered}\,}
 \newcommand{\aspen}{Aspen Plus\raisebox{1ex}{\scriptsize \textregistered}\,}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
 
 \newcounter{program}
 \setcounter{program}{0}

@@ -1,0 +1,66 @@
+\nomenclatureentry{a$C_P$@[{$C_P$}]\begingroup Total process cost \nomunit {\$}\nomeqref {4.0}|nompageref}{11}
+\nomenclatureentry{a$C_P^0$@[{$C_P^0$}]\begingroup Reference process cost \nomunit {\$}\nomeqref {4.0}|nompageref}{11}
+\nomenclatureentry{a$Q_P$@[{$Q_P$}]\begingroup Process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}|nompageref}{11}
+\nomenclatureentry{a$Q_P^0$@[{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}|nompageref}{11}
+\nomenclatureentry{a$x$@[{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}|nompageref}{11}
+\nomenclatureentry{a$C_1$@[{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {4.1}|nompageref}{11}
+\nomenclatureentry{a$C_2$@[{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {4.1}|nompageref}{11}
+\nomenclatureentry{a$I_1$@[{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {4.1}|nompageref}{11}
+\nomenclatureentry{a$I_2$@[{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {4.1}|nompageref}{11}
+\nomenclatureentry{a$C^{i}_E$@[{$C^{i}_E$}]\begingroup Cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}|nompageref}{12}
+\nomenclatureentry{a$C^{i}_B$@[{$C^{i}_B$}]\begingroup Reference cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}|nompageref}{12}
+\nomenclatureentry{a$Q^{i}$@[{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {4.2}|nompageref}{12}
+\nomenclatureentry{a$Q^{i}_B$@[{$Q^{i}_B$}]\begingroup Equipment specific reference quantity \nomunit {variable}\nomeqref {4.2}|nompageref}{12}
+\nomenclatureentry{a$M^{i}$@[{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {4.2}|nompageref}{12}
+\nomenclatureentry{a$f^{i}_C$@[{$f^{i}_C$}]\begingroup Design complexity correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{12}
+\nomenclatureentry{a$f^{i}_M$@[{$f^{i}_M$}]\begingroup Material selection correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{12}
+\nomenclatureentry{a$f^{i}_P$@[{$f^{i}_P$}]\begingroup Pressure correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{12}
+\nomenclatureentry{a$f^{i}_T$@[{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {4.3}|nompageref}{12}
+\nomenclatureentry{a$N_{RM}$@[{$N_{RM}$}]\begingroup Number of raw materials \nomunit {-}\nomeqref {4.4}|nompageref}{14}
+\nomenclatureentry{a$C_{RM}$@[{$C_{RM}$}]\begingroup Total cost of raw materials \nomunit {\$}\nomeqref {4.4}|nompageref}{14}
+\nomenclatureentry{a$C^{i}_{RM}$@[{$C^{i}_{RM}$}]\begingroup Mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {4.4}|nompageref}{14}
+\nomenclatureentry{a$\dot {m}_i$@[{$\dot {m}_i$}]\begingroup Mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {4.4}|nompageref}{14}
+\nomenclatureentry{a$t_{op}$@[{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {4.4}|nompageref}{14}
+\nomenclatureentry{a$N_{E}$@[{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {4.5}|nompageref}{14}
+\nomenclatureentry{a$C_{EC}$@[{$C_{EC}$}]\begingroup Total cost of energy \nomunit {\$}\nomeqref {4.5}|nompageref}{14}
+\nomenclatureentry{a$C^{i}_{EC}$@[{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {4.5}|nompageref}{14}
+\nomenclatureentry{a$\dot {e}_{ij}$@[{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {4.5}|nompageref}{14}
+\nomenclatureentry{a$C_{FILL}$@[{$C_{FILL}$}]\begingroup Cost of raw materials to fill the process \nomunit {\$}\nomeqref {4.6}|nompageref}{14}
+\nomenclatureentry{a$$POT$$@[{$$POT$$}]\begingroup Payout time \nomunit {\$}\nomeqref {4.8}|nompageref}{15}
+\nomenclatureentry{a$q$@[{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {4.10}|nompageref}{16}
+\nomenclatureentry{a$C_n$@[{$C_n$}]\begingroup Final value of an investment \nomunit {\$}\nomeqref {4.10}|nompageref}{16}
+\nomenclatureentry{a$C_0$@[{$C_0$}]\begingroup Initial value of an investment \nomunit {\$}\nomeqref {4.10}|nompageref}{16}
+\nomenclatureentry{a$i$@[{$i$}]\begingroup Interest rate \nomunit {\%}\nomeqref {4.11}|nompageref}{16}
+\nomenclatureentry{a$a$@[{$a$}]\begingroup Annuity \nomunit {\$}\nomeqref {4.13}|nompageref}{16}
+\nomenclatureentry{a$C_{0e}$@[{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {4.15}|nompageref}{17}
+\nomenclatureentry{a$C_{0r}$@[{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {4.16}|nompageref}{17}
+\nomenclatureentry{a$NPV$@[{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {4.17}|nompageref}{17}
+\nomenclatureentry{a$F_j^V$@[{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}|nompageref}{19}
+\nomenclatureentry{a$F_j^L$@[{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}|nompageref}{19}
+\nomenclatureentry{a$S_j^V$@[{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}|nompageref}{19}
+\nomenclatureentry{a$S_j^L$@[{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}|nompageref}{19}
+\nomenclatureentry{a$V_j$@[{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}|nompageref}{19}
+\nomenclatureentry{a$L_j$@[{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}|nompageref}{19}
+\nomenclatureentry{a$x_i$@[{$x_i$}]\begingroup liquid mole fraction of species $i$ \nomunit {\frac {mol}{mol}}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$y_i$@[{$y_i$}]\begingroup vapour mole fraction of species $i$ \nomunit {\frac {mol}{mol}}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$\gamma _i$@[{$\gamma _i$}]\begingroup liquid activity coefficient of species $i$ \nomunit {-}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$\varphi _i$@[{$\varphi _i$}]\begingroup vapour fugacity coefficient of species $i$ \nomunit {-}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$\varphi ^0_i$@[{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of species $i$ \nomunit {-}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$p^S_i$@[{$p^S_i$}]\begingroup vapour pressure of species $i$ \nomunit {Pa}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$p^S$@[{$p^S$}]\begingroup system pressure \nomunit {Pa}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$F_{p,i}$@[{$F_{p,i}$}]\begingroup liquid compressibility factor for species $i$ \nomunit {-}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$f_i^L$@[{$f_i^L$}]\begingroup liquid fugacity coefficient for species $i$ \nomunit {-}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$f_i^V$@[{$f_i^V$}]\begingroup vapour fugacity coefficient for species $i$ \nomunit {-}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$T$@[{$T$}]\begingroup system temperature \nomunit {K}\nomeqref {6.0}|nompageref}{29}
+\nomenclatureentry{a$K_{i,n}$@[{$K_{i,n}$}]\begingroup equilibrium ration for species $i$ on tray $n$ \nomunit {-}\nomeqref {6.1}|nompageref}{30}
+\nomenclatureentry{a$\alpha _{i,n}$@[{$\alpha _{i,n}$}]\begingroup volatility parameter of species $i$ on tray $n$ \nomunit {-}\nomeqref {6.2}|nompageref}{30}
+\nomenclatureentry{a$K_{b,n}$@[{$K_{b,n}$}]\begingroup $K_b$ parameter \nomunit {-}\nomeqref {6.2}|nompageref}{30}
+\nomenclatureentry{a$B_n$@[{$B_n$}]\begingroup parameter in $K_b$ model for tray $n$ \nomunit {K}\nomeqref {6.6}|nompageref}{30}
+\nomenclatureentry{a$A_n$@[{$A_n$}]\begingroup parameter in $K_b$ model for tray $n$ \nomunit {-}\nomeqref {6.6}|nompageref}{30}
+\nomenclatureentry{a$b_{i, n}$@[{$b_{i, n}$}]\begingroup parameter for CMC equations \nomunit {-}\nomeqref {6.8}|nompageref}{31}
+\nomenclatureentry{a$c_{i, n}$@[{$c_{i, n}$}]\begingroup parameter for CMC equations \nomunit {-}\nomeqref {6.8}|nompageref}{31}
+\nomenclatureentry{a$R^L_n$@[{$R^L_n$}]\begingroup liquid withdrawl parameter for stage $n$ \nomunit {-}\nomeqref {6.15}|nompageref}{31}
+\nomenclatureentry{a$R^V_n$@[{$R^V_n$}]\begingroup vapour withdrawl parameter for stage $n$ \nomunit {-}\nomeqref {6.15}|nompageref}{31}
+\nomenclatureentry{a$S_n$@[{$S_n$}]\begingroup splitting factor for stage $n$ \nomunit {-}\nomeqref {6.15}|nompageref}{31}
+\nomenclatureentry{a$S_b$@[{$S_b$}]\begingroup base splitting factor \nomunit {-}\nomeqref {6.15}|nompageref}{31}
+\nomenclatureentry{a$S_{R, n}$@[{$S_{R, n}$}]\begingroup realtive splitting factor for stage $n$ \nomunit {-}\nomeqref {6.15}|nompageref}{31}

@@ -300,14 +300,14 @@ and the treatment of interest should be reviewed. When investing the capital $C_
 interest for $n$ years at a rate of $i$ \%, the compound amount will yield
 \eq{
 	C_n = C_0 \cdot q^n. 
-	\nc{$q$}{Interest factor}{-}
-	\nc{$C_n$}{Final value of an investment}{\$}
-	\nc{$C_0$}{Initial value of an investment}{\$}
+	\nc{q}{Interest factor}{-}
+	\nc{C_n}{Final value of an investment}{\$}
+	\nc{C_0}{Initial value of an investment}{\$}
 }%
 Where $q$ denotes the interest factor
 \eq{
 	q = 1 + \frac{i}{100}. 
-	\nc{$i$}{Interest rate}{\%}
+	\nc{i}{Interest rate}{\%}
 }
 On the other hand the current value of an investment that will yield $C_n$ in $n$ years can be calculated
 by
@@ -319,7 +319,7 @@ Annuities however are usually in several trances with regular payments to be mad
 predefined instances. Assuming those payments are of equal size $a$, the final value can be computed by
 \eq{
 	C_n = a \cdot q^{\alpha} \cdot \frac{q^n - 1}{q - 1},
-	\nc{$a$}{Annuity}{\$}
+	\nc{a}{Annuity}{\$}
 }%
 while the current value of an annuity yields
 \eq{
@@ -337,19 +337,19 @@ incoming and outgoing -- are discounted to the project start ($t = 0$). The pres
 all expenses is then 
 \eq{
 	C_{0e} = e_0 + e_1 \cdot q^{-1} + \dots + e_n \cdot q^{-n} = \sum_i^n e_i \cdot q^{-i}.
-	\nc{$C_{0e}$}{Present value of all expenses}{\$}
+	\nc{C_{0e}}{Present value of all expenses}{\$}
 }%
 Here it is given that all expenses are paid at the beginning of each period, as it is the most common case. 
 If revenues $r_i$ are realized then as well an equivalent formula would be attained. In most cases 
 revenues will come in at the end of a period in which case the present value becomes
 \eq{
 	C_{0r} = r_0 \cdot q^{-1} + r_1 \cdot q^{-2} + \dots + r_n \cdot q^{-(n+1)} = \sum_i^n r_i \cdot q^{-(i+1)}.
-	\nc{$C_{0r}$}{Present value of all revenues}{\$}
+	\nc{C_{0r}}{Present value of all revenues}{\$}
 }%
 The $NPV$ of a given project is then derived from the present values of all expenses and revenues
 \eq{
 	NPV = C_{0r} - C_{0e}.
-	\nc{$NPV$}{Net present value}{\$}
+	\nc{NPV}{Net present value}{\$}
 }%
 For any project to be considered as investment alternative the present value needs to be positive since 
 otherwise the investment would yield losses. 

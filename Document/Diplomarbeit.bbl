@@ -1,10 +1,22 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{AndreasPfennig.2003}
+{Andreas Pfennig}.
+\newblock {\em {T}hermodynamik der {G}emische}.
+\newblock Springer-Verlag, 2003.
 
 \bibitem{Bernardo.2001}
 F.~P. Bernardo, Efstratios~N. Pistikopoulos, and Pedro~M. Saraiva.
 \newblock {Q}uality costs and robustness criteria in chemical process design
   optimization.
 \newblock {\em Computers {\&} Chemical Engineering}, 25(1):27--40, 2001.
+
+\bibitem{Boston.1974}
+J.~F. Boston and S.~L. Sullivan.
+\newblock {A} new class of solution methods for multicomponent, multistage
+  separation processes.
+\newblock {\em The Canadian Journal of Chemical Engineering}, 52(1):52--63,
+  1974.
 
 \bibitem{Castle.2002}
 W.~F. Castle.

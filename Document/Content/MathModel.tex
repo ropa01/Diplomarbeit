@@ -5,18 +5,18 @@
 \label{sec:SteadyStateModel}
 
 \subsection{Distillation column}
-
+\label{sec:SSM:dist}
 	\stdfig{pgfplots/ColTray}{Distillation column tray model.}{fig:ColTray}{h}
 
 	\paragraph{Mass balance}
 	\Eq{eq:col:MassBalance}{
 		0 = F_j^V + F_j^L + V_{j+1} + L_{j-1} - V_j - S_j^V - L_j - S_j^L
-		\nc{$F_j^V$}{Vapour feed to tray $j$}{\frac{mol}{s}}
-		\nc{$F_j^L$}{Liquid feed to tray $j$}{\frac{mol}{s}}
-		\nc{$S_j^V$}{Vapour side flow from tray $j$}{\frac{mol}{s}}
-		\nc{$S_j^L$}{Liquid side flow from tray $j$}{\frac{mol}{s}}
-		\nc{$V_j$}{Vapour flow from tray $j$}{\frac{mol}{s}}
-		\nc{$L_j$}{Liquid flow from tray $j$}{\frac{mol}{s}}
+		\nc{F_j^V}{Vapour feed to tray $j$}{\frac{mol}{s}}
+		\nc{F_j^L}{Liquid feed to tray $j$}{\frac{mol}{s}}
+		\nc{S_j^V}{Vapour side flow from tray $j$}{\frac{mol}{s}}
+		\nc{S_j^L}{Liquid side flow from tray $j$}{\frac{mol}{s}}
+		\nc{V_j}{Vapour flow from tray $j$}{\frac{mol}{s}}
+		\nc{L_j}{Liquid flow from tray $j$}{\frac{mol}{s}}
 	}%
 
 	\paragraph{Component balances}

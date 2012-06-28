@@ -44,30 +44,35 @@
 \contentsline {paragraph}{Mass balance}{21}{section*.52}
 \contentsline {paragraph}{Component balance}{21}{section*.53}
 \contentsline {paragraph}{Pressure drop}{21}{section*.54}
-\contentsline {subsection}{\numberline {5.1.5}Heater}{21}{subsection.5.1.5}
-\contentsline {paragraph}{Mass and component balances}{21}{section*.56}
+\contentsline {subsection}{\numberline {5.1.5}Heater}{22}{subsection.5.1.5}
+\contentsline {paragraph}{Mass and component balances}{22}{section*.56}
 \contentsline {paragraph}{Pressure drop}{22}{section*.57}
 \contentsline {subsubsection}{Pump}{22}{section*.59}
 \contentsline {subsubsection}{Separator}{22}{section*.60}
 \contentsline {subsubsection}{Joule-Thompson valve}{22}{section*.61}
 \contentsline {subsection}{\numberline {5.1.6}Splitter}{22}{subsection.5.1.6}
 \contentsline {paragraph}{Mass and component balances}{22}{section*.63}
-\contentsline {paragraph}{Energy balance}{22}{section*.64}
+\contentsline {paragraph}{Energy balance}{23}{section*.64}
 \contentsline {paragraph}{Pressure drop}{23}{section*.65}
 \contentsline {section}{\numberline {5.2}Economic models}{23}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Destillation column}{23}{subsection.5.2.1}
 \contentsline {subsubsection}{Vertical tower}{23}{section*.67}
 \contentsline {subsubsection}{Weight}{24}{section*.68}
-\contentsline {subsubsection}{Column internals}{24}{section*.69}
-\contentsline {subsection}{\numberline {5.2.2}Centrifugal pump}{24}{subsection.5.2.2}
+\contentsline {subsubsection}{Column internals}{25}{section*.69}
+\contentsline {subsection}{\numberline {5.2.2}Centrifugal pump}{25}{subsection.5.2.2}
 \contentsline {subsubsection}{Pump}{25}{section*.70}
-\contentsline {subsubsection}{Electric motor}{25}{section*.73}
+\contentsline {subsubsection}{Electric motor}{26}{section*.73}
 \contentsline {subsection}{\numberline {5.2.3}Compressor}{26}{subsection.5.2.3}
-\contentsline {subsubsection}{Centrifugal compressor}{26}{section*.75}
-\contentsline {subsubsection}{Reciprocating compressor}{26}{section*.76}
+\contentsline {subsubsection}{Centrifugal compressor}{27}{section*.75}
+\contentsline {subsubsection}{Reciprocating compressor}{27}{section*.76}
 \contentsline {subsubsection}{Screw compressor}{27}{section*.77}
 \contentsline {subsection}{\numberline {5.2.4}Reboiler / condenser}{27}{subsection.5.2.4}
-\contentsline {subsubsection}{Shell and tube heat exchanger}{27}{section*.78}
-\contentsline {subsubsection}{Double pipe}{27}{section*.79}
-\contentsline {chapter}{\numberline {6}Conclusion and further research}{28}{chapter.6}
-\contentsline {chapter}{Bibliography}{29}{chapter*.80}
+\contentsline {subsubsection}{Shell and tube heat exchanger}{28}{section*.78}
+\contentsline {subsubsection}{Double pipe}{28}{section*.79}
+\contentsline {chapter}{\numberline {6}Mathematical considerations}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Robust column model}{29}{section.6.1}
+\contentsline {subsubsection}{Vapour-liquid equilibrium (VLE)}{29}{section*.80}
+\contentsline {subsubsection}{Component mass conservation (CMC)}{31}{section*.81}
+\contentsline {subsubsection}{Energy conservation (EC)}{31}{section*.82}
+\contentsline {chapter}{\numberline {7}Conclusion and further research}{34}{chapter.7}
+\contentsline {chapter}{Bibliography}{35}{chapter*.83}

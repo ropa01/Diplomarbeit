@@ -1,0 +1,206 @@
+\chapter{Mathematical considerations}
+\label{chp:MathModel}
+
+\section{Robust column model}
+The column model, although rather simple on first sight, form a highly non-linear
+and higly coupled set of equations, which need to be solved simultaniously. Due
+to that even advanced computers and solution algorithms often fail to find feasible 
+steady-state solutions for this higly complex problem. For every solution approach 
+good initial estimates are essential when it comes to finding a fasible solution. 
+Those problems are amplyfied when non-ideal or very close boiling systems are encountered
+in the distillation column. 
+
+In order to adderss these problems Boston and Sullivan \cite{Boston.1974} developed an 
+alternative model fomulation alongside a solution algorithm that has been proven to 
+to very effectively and effciently converge towards a fesible steady state solution. 
+Furthermore they describe a scheme by which initial guesses for all relevant column 
+variables can be derived. 
+
+This alternative formulation involves the introduction of several new variables 
+in order to decouple the intrinsic interdependencies and facilitate the solution 
+of the column model. While the general formulation of the distillation column 
+has been presented in \refsec{sec:SSM:dist} the alternative formulation will be 
+given in the following sections. The alternative model formuation and solution
+algorithm Boston and Sullivan arrived at are described in the following sections. 
+They are widely referred to as the ''inside-out'' -- algorithm as will be adopted 
+in this paper. 
+ 
+\subsubsection{Vapour-liquid equilibrium (VLE)}
+In general the vapour-liquid equilibrium (VLE) between a liquid and a vapour phase 
+can be described by \cite{AndreasPfennig.2003}
+\Eq{eq:io:vle}{
+	x_i \, \underbrace{\gamma_i(\vec{x}, T, p^S) \, F_{P, i} \, \varphi_i^0(T, p_i^S(T)) \, p_i^S(T)}_{f_i^L}
+		= y_i \, \underbrace{\varphi_i(\vec{y}, T, p^s) \, p^s}_{f_i^V} \eqannote{i = 1, \dots, N_s}
+	\nc{x_i}{liquid mole fraction of species $i$}{\frac{mol}{mol}}
+	\nc{y_i}{vapour mole fraction of species $i$}{\frac{mol}{mol}}
+	\nc{\gamma_i}{liquid activity coefficient of species $i$}{-}
+	\nc{\varphi_i}{vapour fugacity coefficient of species $i$}{-}
+	\nc{\varphi^0_i}{reference vapour fugacity coefficient of species $i$}{-}
+	\nc{p^S_i}{vapour pressure of species $i$}{Pa}
+	\nc{p^S}{system pressure}{Pa}
+	\nc{F_{p,i}}{liquid compressibility factor for species $i$}{-}
+	\nc{f_i^L}{liquid fugacity coefficient for species $i$}{-}
+	\nc{f_i^V}{vapour fugacity coefficient for species $i$}{-}
+	\nc{T}{system temperature}{K}
+}
+
+Here $\gamma_i$ denotes the activity coefficient of sepecies $i$ in the liquid mixture, 
+$\varphi_i$ and $\varphi_i^0$ the vapour fucatity coefficient and the reference vapour
+fugacity coefficient at the species's vapour pressure respectively. 
+They to computed from an applicable equation of state (EOS) such as the Sovae-Redlich-Kwong (SRK)
+equation or the Peng-Robinson (PR) equation. For higly non-ideal systems often excess Gibbs 
+energy models such as the Wilson or NRTL model are emplyed to compute the liquid 
+activity coefficients. Considering, that the mentioned models in itself often form qubic 
+or even more complex equation it becomes evident that finding a feasible solution for 
+all involved species simultaniouly form a major challange. One predominant obstacle is 
+that almost all terms in are temperature dependent which introduces tremendous interdependencies
+between all equilibrium equations for all species $N_s$ $N$ on all stages in the distillation column. 
+
+To adress this problem the inside out algorithm includes the so called ''$K_b$ - model'' 
+which aims to separate the the temperature dependencies from the composition dependent terms. 
+
+\refeq{eq:io:vle} can be rewritten in terms of a vapour-liquid equilibrium ratio $K_i$
+\Eq{eq:io:eqratio}{
+	y_{i,n} = \frac{f_{i,n}^L}{f_{i,n}^V} \, x_{i,n} = K_{i,n} \, x_{i,n} \eqannote{i = 1, \dots, N_s}.
+	\nc{K_{i,n}}{equilibrium ration for species $i$ on tray $n$}{-}
+}
+In order to achieve the desired effect the equilibrium ratio was devided in an solely temperature
+dependent parameter $K_b$ and the so called volatility parameter $\alpha_i$ defined by
+\Eq{eq:io:volatilityparam}{
+	K_{i,n} = K_{b,n} \, \alpha_{i,n}, \eqannote{i = 1 \dots N_s}.
+	\nc{\alpha_{i,n}}{volatility parameter of species $i$ on tray $n$}{-}
+	\nc{K_{b,n}}{$K_b$ parameter}{-}
+}
+This volatility parameter is mainly dependent on system composition and only mildly dependent 
+on temperature. To ensure the for the $K_b$ parameter to absorb the temperature effects is
+was required, that the modified bubble point equation (BP) with an temperature independent 
+volatility parameter 
+\Eq{eq:moathcon:io:modbp}{
+	\sum_{i,n} K_b \, \alpha_{i,n} \, x_{i,n} = 1, \eqannote{i = 1 \dots N_s, \, n = 1, \dots, N,}
+}
+matches the temperature sensitivity of the original bubble point equation, 
+\Eq{eq:io:bp}{
+	\sum_i K_{i,n} x_{i,n} = 1
+}
+as closely as possible. This leads directly to \cite{Boston.1974}
+\Eq{eq:io:kbb}{
+	\fracddpart{\log K_{b,n}}{\frac{1}{T_n}} = \sum_i y_{i,n} \left( \fracddpart{\log K_{i,n}}{\frac{1}{T_n}} 
+		\right)_{\vec{x}, \vec{y}} \eqannote{i = 1 \dots N_s} 
+}
+
+It was then further assumed, that a simple model would suffice to capture the temperature dependence of
+$K_b$ over a small temperature interval
+\Eq{}{
+	\log K_{b, n} = A_n - \frac{B_n}{T_n}, \eqannote{n = 1, \dots, N}.
+	\nc{B_n}{parameter in $K_b$ model for tray $n$}{K}
+	\nc{A_n}{parameter in $K_b$ model for tray $n$}{-}
+}
+
+The value of $B_n$ is determied by \refeq{eq:io:kbb} while $A_n$ is initially set to 
+\Eq{}{
+	A_n = \sum_i y_i \, \log K_{i, n} + \frac{B_n}{T_n}
+}
+
+\subsubsection{Component mass conservation (CMC)}
+In order to transform the component mass conservation equations \refeq{eq:col:CompBalance}
+into a system which would be more robust in terms of numerical solution algorithms, 
+they were reformulated in terms of the liquid component flows ($\ell_{i, n}$) alone
+\Eq{eq:io:modcmc}{
+	f_{i, n} = - \ell_{i, n-1} + b_{i, n} \ell_{i, n} - c_{i, n} \ell_{i, n+1}, 
+		\eqannote{i = 1, \dots, N_s, \, n = 2, \dots, N-1}. 
+	\nc{b_{i, n}}{parameter for CMC equations}{-}
+	\nc{c_{i, n}}{parameter for CMC equations}{-}
+}
+Where the parameters $b_{i, n}$ and $c_{i, n}$ are expressed in terms of the newly 
+introduced ''S-parameters'' or splitting factors and the ''R-parameters'' or 
+withdrawl factors
+\Eq{eq:io:c}{
+	b_{i, n} & = R_{L, n} + R_{V_ n} \, S_b \, S_{R, n} \, \alpha_{i, n} 
+		& \eqannote{i = 1, \dots, N_s, \, n = 2, \dots, N-1}, \label{eq:io:b} \\
+	c_{i, n} & = S_b \, S_{R, n+1} \, \alpha_{i, n+1} 
+		& \eqannote{i = 1, \dots, N_s, \, n = 2, \dots, N-1}.
+}
+With the definitions for the newly introduced variables
+\Eq{}{
+	R^L_n & = 1 + \frac{S^L_n}{L_n}, \\
+	R^V_n & = 1 + \frac{S^V_n}{V_n}, \\
+	S_n & = \frac{K_{b, n} \, V_n}{L_n}, \\
+	S_{R, n} & = \frac{S_n}{S_b}, \\
+	S_b & = \sqrt[N]{\prod_n S_n}.  
+	\nc{R^L_n}{liquid withdrawl parameter for stage $n$}{-}
+	\nc{R^V_n}{vapour withdrawl parameter for stage $n$}{-}
+	\nc{S_n}{splitting factor for stage $n$}{-}
+	\nc{S_b}{base splitting factor}{-}
+	\nc{S_{R, n}}{realtive splitting factor for stage $n$}{-}
+}
+From the liquid streams the vapour and liquid compositions are calculated
+\Eq{eq:io:molefrac}{
+	x_{i, n} & = \frac{\ell_{i, n}}{\sum_i \ell_{i, n}}, \\
+	y_{i, n} & = \frac{\alpha_{i, n} \, \ell_{i, n}}{\sum_i \alpha_{i, n} \, \ell_{i, n}}.
+}
+
+\subsubsection{Energy conservation (EC)}
+In order to simplify the engergy conservation equations the total stream enthalpies
+were approximated by several new variables referred to as ''energy parmeters''.
+Here separate models are employed for vapour and liquid enthalpies. 
+
+The total vapour enthalpy can be expressed as 
+\Eq{eq:io:vapenth}{
+	H^V_n =\sum_i y_i \, H^0_{i, n} + \Delta H^V_n (\vec{y}_n, p_n, T_n), \eqannote{i = 1, \dots N_s}
+}  
+where $H^0_{i, n}$ is the ideal gas enthalpy of species $i$ on tray $n$ and $\Delta H^V_n$
+the pressure and composition correction, which can be expressed in terms of the vapour fugacity 
+\Eq{eq:io:vapenthcorr}{
+	\Delta H^V_n (\vec{y}_n, p_n, T_n) = R \sum_i y_i \, \left( \fracddpart{\log \varphi_{i, n}}{\frac{1}{T}} 
+		\right)_{p, \vec{y}_n}
+} 
+To avoid the computaionally exopensive porperty calls the correction term was approximaed by
+\Eq{eq:io:vapenthapprox}{
+	\Delta H^V_n (\vec{y}_n, p_n, T_n) = \Phi_y + \Phi_T (T - T^{\ast})
+}
+where 
+\Eq{}{
+	\Phi_y & = \frac{\Delta H^V_n (\vec{y}_n^{\ast}, p_n, T_n) - \Delta H^V_n (\vec{y}_n^{\ast}, p_n, T_n^{\ast})
+		}{T - T^{\ast}} \\
+	\Phi_T & = \Delta H^V_n (\vec{y}_n^{\ast}, p_n, T_n^{\ast}) + \Delta H^V_n (\vec{y}_n, p_n, T_n)
+		- \Delta H^V_n (\vec{y}_n^{\ast}, p_n, T_n)
+}
+\Eq{}{
+	H_n = \Gamma \, \Theta + \Phi_y + \Phi_T \, (\Gamma - \Gamma^{\ast}) + \sum_i y_i \, H^0_{b, i}
+}
+\Eq{}{
+	\Phi_i & = \frac{H^0_i - H^0_{b, i}}{T - T_b} \\
+	\Theta & = \Theta_b \, \Theta_r \\
+	\Theta_r & = \sum_i y_{r, i} \Phi_{r, i} \\
+	\Theta_b & = \sum_i y_i \, \Phi_{b, i} \\
+	\Phi_{b, i} & = \lim_{T \rightarrow T_b} \Phi_{i} \\
+	\Phi_{r, i} & = \frac{\Phi_i}{\Phi_{b, i}} \\
+	y_{r, i} & = \frac{y_i \, \Phi_{b, i}}{\sum_j y_j \, \Phi_{b, j}} 
+}
+
+An equivalent approach is chosen to model the liquid enthalpy
+\Eq{}{
+	H^L_n = h^0_i + h^E_i
+}
+
+\Eq{}{
+	\phi_i & = \frac{h^0_i - h^0_{b, i}}{T - T_b} \\
+	\theta & = \theta_b \, \theta_r \\
+	\theta_r & = \sum_i x_{r, i} \phi_{r, i} \\
+	\theta_b & = \sum_i x_i \, \phi_{b, i} \\
+	\phi_{b, i} & = \lim_{T \rightarrow T_b} \phi_{i} \\
+	\phi_{r, i} & = \frac{\phi_i}{\phi_{b, i}} \\
+	x_{r, i} & = \frac{x_i \, \phi_{b, i}}{\sum_j x_j \, \phi_{b, j}} 
+}
+
+
+With those the modified energy conservation equation is formulated
+\Eq{eq:io:ec}{
+	E_n - a_n \, S_,^L - a'_n \, (M_{T, n-1} + S^V_n) + a'_{n+1} \, M_{T, n}
+		= - (a_{n-1} - a'_n) \, L_{n-1} + (a_n - a'_{n+1}) \, L_n
+}
+where 
+\Eq{}{
+	a_n & = \Gamma_n \, \theta_n + h^E_n - \lambda^0_{b, n} \\
+	a'_n & = \Gamma_n \, \Theta_n + \Phi_{y, n} + \Phi_{T, n} (\Gamma_n - \Gamma_n^{\ast}) 
+}
