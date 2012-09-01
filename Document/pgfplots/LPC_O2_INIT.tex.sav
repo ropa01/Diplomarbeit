@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+	\begin{axis} [
+        format=inline,
+        row sep=\\,
+        col sep=
+		xlabel={stage number},
+		ylabel={mole fraction},
+		width=0.7\textwidth,
+		axis lines=middle,
+		axis line style={->, >=latex},
+		xtick={5},
+		ytick={0.2},
+		every axis y label/.style={at={(ticklabel cs:0.65)},rotate=90,anchor=near ticklabel},
+		every axis x label/.style={at={(current axis.right of origin)},yshift=-9ex,anchor=east},
+		yscale=0.6
+		]
+        \pgfplotstableread{data.txt} \datatable
+		\addplot [color=ImperialDarkBlue] table[y=a] \datatable
+		%\addplot [color=RWTHRed] coordinates { (0, 0) (8, -1.5) };
+		%\addplot [smooth, samples=100, color=ImperialDarkBlue, domain=3:50] {ln(x-1)-(ln(2)+1)};
+		%\node [coordinate, pin=95:{\scriptsize POT}] at (axis cs:6.4365,0) {};
+		%\addplot [smooth, samples=100, color=RWTHRed, domain=8:50] {ln(1.8*(x-7.4444))-1.5};
+		%\node [coordinate, pin=-85:{\scriptsize POT}] at (axis cs:10,0) {};
+		%\addplot [color=AVTGreen] coordinates { (30, 1.674) (31.5, 1.174) };
+		%\node [coordinate, pin=-95:{\scriptsize retrofit investment}] at (axis cs:30, 1.674) {};
+		%\addplot [smooth, color=AVTGreen, samples=50, domain=31.5:50] {ln(x-29.5) + 1.174 - ln(2)};
+	\end{axis}
+\end{tikzpicture}

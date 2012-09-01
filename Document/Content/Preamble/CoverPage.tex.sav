@@ -1,0 +1,74 @@
+% Beginn Titelseite
+
+\vspace*{-2.0cm} \thispagestyle{empty}
+\begin{minipage}[b]{17cm}
+\begin{minipage}[b]{8.5cm}
+	%\begin{picture}(4.15,0)
+		\raisebox{-2.2mm}{\includegraphics[height=2cm]{Pictures/Logos/CPSE_Logo.eps}}
+		%\raisebox{-3,5mm}{\includegraphics[height=1.5cm]{Pictures/Logos/ICL_Logo.eps}}
+	%\end{picture}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{7.5cm}
+	\begin{flushright}
+		\begin{flushleft}
+			\textcolor{CPSEBlue}{
+			\textbf{Professor Efstratios Pistikopoulos} \\ Centre for Process Systems Engineering \\ Imperial College London}
+		\end{flushleft}
+		%\begin{picture}(4.15,0)
+			%\raisebox{-2.2mm}{\includegraphics[height=1.8cm]{Pictures/Logos/AVT_Logo.eps}}
+			%\raisebox{-3,5mm}{\includegraphics[height=1.5cm]{Pictures/Logos/RWTH_Logo_official.eps}}
+		%\end{picture}
+	\end{flushright}
+\end{minipage}
+\end{minipage}
+\rule{\textwidth}{0.5pt}
+
+\begin{minipage}[b]{8.5cm}
+	\begin{flushleft}
+		\raisebox{-2.2mm}{\includegraphics[height=2cm]{Pictures/Logos/AVT_Logo.png}}
+		%\textcolor{CPSEBlue}{
+		%\textbf{Professor Efstratios Pistikopoulos} \\ Centre for Process Systems Engineering \\ Imperial College London}
+	\end{flushleft}
+\end{minipage}
+\hfill
+%\textcolor{ImperialLightBlue}{\rule{1pt}{1.8cm}}
+\begin{minipage}[b]{7.5cm}
+	\begin{flushleft}
+		\textcolor{AVTDarkBlue}{
+		\textbf{Professor Wolfgang Marquardt} \\ Institute for Process Systems Engineering \\ RWTH Aachen University}
+	\end{flushleft}
+\end{minipage}
+\rule{\textwidth}{0.5pt}
+
+\begin{minipage}[b]{8.5cm}
+	\begin{flushleft}
+		\raisebox{-2.2mm}{\includegraphics[height=2cm]{Pictures/Logos/PSE_Logo.png}}
+		%\textcolor{CPSEBlue}{
+		%\textbf{Professor Efstratios Pistikopoulos} \\ Centre for Process Systems Engineering \\ Imperial College London}
+	\end{flushleft}
+\end{minipage}
+\hfill
+%\textcolor{ImperialLightBlue}{\rule{1pt}{1.8cm}}
+\begin{minipage}[b]{7.5cm}
+	\begin{flushleft}
+		\textcolor{PSEGreen}{
+		\textbf{Professor Constantinos Pantelides} \\ Process Systems Enterprise \\ Managing Director}
+	\end{flushleft}
+\end{minipage}
+
+% Ende Instituskopf
+
+% Beginn Titelseite
+
+\begin{center}
+	\vspace{3cm}
+	 \Huge  Capital Cost Evaluation for Optimum Process Design of Cryogenic Air Separation
+	\vspace{1cm}
+	 \vfill \LARGE
+	{Diploma Thesis\\
+	by\\
+	Robert Pack} \vfill{London, SS 2012}
+\end{center}
+
+% ende erste Seite

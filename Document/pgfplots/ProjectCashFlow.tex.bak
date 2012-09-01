@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+	\begin{axis} [
+		xlabel={time},
+		ylabel=accumulated cash flow,
+		width=0.8\textwidth,
+		axis lines=middle,
+		axis line style={->, >=latex},
+		xtick={0},
+		ytick={0},
+		every axis y label/.style={at={(ticklabel cs:0.65)},rotate=90,anchor=near ticklabel},
+		every axis x label/.style={at={(current axis.right of origin)},yshift=-9ex,anchor=east},
+		yscale=0.6
+		]
+		\addplot [color=ImperialDarkBlue] coordinates { (0, 0) (3, -1) };
+		\addplot [color=RWTHRed] coordinates { (0, 0) (8, -1.5) };
+		\addplot [smooth, samples=100, color=ImperialDarkBlue, domain=3:50] {ln(x-1)-(ln(2)+1)};
+		\node [coordinate, pin=95:{\scriptsize POT}] at (axis cs:6.4365,0) {};
+		\addplot [smooth, samples=100, color=RWTHRed, domain=8:50] {ln(1.8*(x-7.4444))-1.5};
+		\node [coordinate, pin=-85:{\scriptsize POT}] at (axis cs:10,0) {};
+		\addplot [color=AVTGreen] coordinates { (30, 1.674) (31.5, 1.174) };
+		\node [coordinate, pin=-95:{\scriptsize retrofit investment}] at (axis cs:30, 1.674) {};
+		\addplot [smooth, color=AVTGreen, samples=50, domain=31.5:50] {ln(x-29.5) + 1.174 - ln(2)};
+	\end{axis}
+\end{tikzpicture}Ê

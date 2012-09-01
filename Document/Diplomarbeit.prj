@@ -1,0 +1,115 @@
+0 Patch Control
+
+0
+0
+1
+Diplomarbeit.tex
+22
+10
+6
+
+Diplomarbeit.prj
+DATA
+5243122 0 0 1 2 2 50 50 1059 265 1 81 34 -1 -1 0 0 16 0 0 16 1 0 2 2   0
+Diplomarbeit.tex
+TeX:UNIX
+135376891 0 -1 313 -1 654 0 0 934 409 1 73 476 -1 -1 0 0 62 -1 -1 62 1 0 654 -1   0
+Content\MathModel.tex
+TeX:UNIX
+1159163 0 -1 16158 -1 13889 50 50 1059 265 1 89 238 -1 -1 0 0 36 -1 -1 36 1 0 13889 -1   0
+Content\column.tex
+TeX
+1060859 0 -1 7150 -1 7157 125 125 1274 583 0 425 476 -1 -1 0 0 15 -1 -1 15 1 0 7157 -1   0
+Content\ProcessEconomics.tex
+TeX:UNIX
+1159163 1 -1 18086 -1 17988 175 175 1369 633 0 25 204 -1 -1 0 0 27 -1 -1 27 1 0 17988 -1   0
+pgfplots\ProjectCashFlow.tex
+TeX:UNIX
+1159163 0 -1 0 -1 1119 200 200 1394 658 0 161 391 -1 -1 0 0 19 -1 -1 19 1 0 1119 -1   0
+pgfplots\LPC_O2_INIT.tex
+TeX:UNIX
+286371835 0 -1 428 -1 455 0 0 1194 458 1 145 238 -1 -1 0 0 19 -1 -1 19 1 0 455 -1   0
+Pictures\col_complete_super.tex
+TeX:UNIX
+1159163 1 -1 2923 -1 2886 150 150 1299 608 0 57 476 -1 -1 0 0 121 -1 -1 121 1 0 2886 -1   0
+Literature.bib
+BibTeX
+1049586 1 703 22 703 1 100 100 1224 587 0 25 306 -1 -1 0 0 29 0 0 29 1 0 1 703   0
+preambel.tex
+TeX:UNIX
+1159163 0 -1 3921 -1 3921 0 0 1009 215 0 233 459 -1 -1 0 0 129 -1 -1 129 1 0 3921 -1   0
+Pictures\col_stage_super.tex
+TeX:UNIX
+1159163 0 -1 126 -1 480 175 175 1324 633 1 777 85 -1 -1 0 0 -1 -1 -1 -1 1 0 480 -1   0
+Pictures\condenser.tex
+TeX:UNIX
+1159163 0 -1 726 -1 739 75 75 1224 533 0 841 119 -1 -1 0 0 -1 -1 -1 -1 1 0 739 -1   0
+Pictures\reboiler.tex
+TeX:UNIX
+1159163 0 -1 721 -1 734 100 100 1249 558 0 817 119 -1 -1 0 0 -1 -1 -1 -1 1 0 734 -1   0
+Pictures\col_com_stage_super.tex
+TeX:UNIX
+269594619 0 -1 110 -1 109 50 50 1199 508 0 897 0 -1 -1 0 0 -1 -1 -1 -1 1 0 109 -1   0
+E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\enrtl.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 200 200 1349 658 0 25 -2295 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Content\Preamble\StatutoryDeclaration.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 125 125 1059 534 0 25 0 -1 -1 0 0 18 -1 -1 18 1 0 0 -1   0
+Content\Abstract.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 25 25 959 434 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Content\Preamble\TaskDescription.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 175 175 1109 584 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Content\Preamble\CoverPage.tex
+TeX:UNIX
+1159163 0 -1 859 -1 833 150 150 1084 559 0 137 85 -1 -1 0 0 -1 -1 -1 -1 1 0 833 -1   0
+Content\CoverIntro.tex
+TeX:UNIX
+1159163 0 -1 59 -1 316 100 100 1034 509 0 25 272 -1 -1 0 0 -1 -1 -1 -1 1 0 316 -1   0
+Content\ProcessDesign.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 75 75 1009 484 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Content\introduction.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 50 50 984 459 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+
+*Diplomarbeit.tex
+>
+*preambel
+*pgfplots/TikZTemplates
+*Content/CoverIntro
+>
+*Content/Preamble/CoverPage
+*Content/Preamble/TaskDescription
+*Content/Preamble/StatutoryDeclaration
+<
+*Content/Abstract
+*Content/Introduction
+*Content/AirSep
+>
+*Pictures/tech_compar
+*Pictures/ASU_text
+*Pictures/PSA.tex
+<
+*Content/ProcessDesign
+*Content/ProcessEconomics
+>
+*Tables/PriceIndices
+<
+*Content/MathModel
+>
+*Pictures/col_complete_super
+*Pictures/col_stage_super
+*Pictures/condenser
+*Pictures/reboiler
+<
+*Content/MathConsiderations
+*Content/outlook
+*Content/column
+*Content/BibAppendix
+>
+*Literature.bib
+<
+<
