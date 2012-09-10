@@ -1,0 +1,32 @@
+
+\begingroup%
+  \makeatletter%
+    \setlength{\unitlength}{1cm}%
+  \makeatother%
+  \begin{picture}(17, 7)%	
+    \scriptsize
+    \put(2,1){\includegraphics[width=13cm]{Pictures/tech_comp_graph.eps}}%
+    \put(8.5, 0.1){\color[rgb]{0,0,0}\makebox(0,0)[c]{\smash{\normalsize{product stream $[\frac{m^3_{STP}}{h}]$}}}}%
+    \put(0.6, 4){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[c]{\smash{\normalsize{$N_2$-purity $x_{N_2, Ret}$ $[\%]$}}}}}%
+    \put(1.9, 0.65){\color[rgb]{0,0,0}\makebox(0,0)[l]{\smash{$10$}}}%
+    \put(5.15, 0.65){\color[rgb]{0,0,0}\makebox(0,0)[l]{\smash{$10^2$}}}%
+    \put(8.35, 0.65){\color[rgb]{0,0,0}\makebox(0,0)[l]{\smash{$10^3$}}}%
+    \put(11.55, 0.65){\color[rgb]{0,0,0}\makebox(0,0)[l]{\smash{$10^4$}}}%
+    \put(14.75, 0.65){\color[rgb]{0,0,0}\makebox(0,0)[l]{\smash{$10^5$}}}%
+    \put(1.85, 1){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$95$}}}%
+    \put(1.85, 2.45){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$97$}}}%
+    \put(1.85, 3.325){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$98$}}}%
+    \put(1.85, 4.15){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$99$}}}%
+    \put(1.85, 4.8){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$99.5$}}}%
+    \put(1.85, 5.2){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$99.9$}}}%
+    \put(1.85, 5.55){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$99.95$}}}%
+    \put(1.85, 6.1){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$99.99$}}}%
+    \put(1.85, 6.4){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{$99.999$}}}%
+    \put(1.85, 6.4){\color[rgb]{0,0,0}\makebox(0,0)[r]{\smash{}}}%
+    \put(5,3){\color[rgb]{0,0,0}\normalsize{\CM{membrane processes / \\ gas permeation}}}%
+    \put(8.9,3.7){\color[rgb]{0,0,0}\normalsize{\CM{PSA}}}%
+    \put(7,6.20){\color[rgb]{0,0,0}\scriptsize{\CM{membrane \& \\ post oxidation}}}%
+    \put(4,6.5){\color[rgb]{0,0,0}\normalsize{\CM{cryogenic processes \\ (liquid)}}}%
+    \put(12,5.5){\color[rgb]{0,0,0}\normalsize{\CM{cryogenic processes \\ (gaseous)}}}%
+  \end{picture}%
+\endgroup%

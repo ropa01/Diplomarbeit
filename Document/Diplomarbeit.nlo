@@ -1,0 +1,49 @@
+\nomenclatureentry{a$V_j$@[{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$L_j$@[{$L_j$}]\begingroup molar liquid flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$y_{ij}$@[{$y_{ij}$}]\begingroup vapour mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$x_{ij}$@[{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$S^L_j$@[{$S^L_j$}]\begingroup molar liquid side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$S^V_j$@[{$S^V_j$}]\begingroup molar vapour side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$F^L_j$@[{$F^L_j$}]\begingroup molar liquid feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$F^V_j$@[{$F^V_j$}]\begingroup molar vapour feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$z^L_{ij}$@[{$z^L_{ij}$}]\begingroup liquid mole fraction of liquid feed to stage $j$ \nomunit {-}\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$z^V_{ij}$@[{$z^V_{ij}$}]\begingroup vapour mole fraction of vapour feed to stage $j$ \nomunit {-}\nomeqref {5.1}|nompageref}{21}
+\nomenclatureentry{a$s^V_j$@[{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {5.2}|nompageref}{21}
+\nomenclatureentry{a$s^V_j$@[{$s^V_j$}]\begingroup dimensionless liquid side-draw from stage $j$ \nomunit {-}\nomeqref {5.3}|nompageref}{21}
+\nomenclatureentry{a$C$@[{$C$}]\begingroup number of components \nomunit {-}\nomeqref {5.4}|nompageref}{21}
+\nomenclatureentry{a$N$@[{$N$}]\begingroup number of stages \nomunit {-}\nomeqref {5.4}|nompageref}{21}
+\nomenclatureentry{a$\zeta ^{L}_{ij}$@[{$\zeta ^{L}_{ij}$}]\begingroup splitting variable for liquid feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}|nompageref}{22}
+\nomenclatureentry{a$\zeta ^{V}_{ij}$@[{$\zeta ^{V}_{ij}$}]\begingroup splitting variable for vapour feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}|nompageref}{22}
+\nomenclatureentry{a$\zeta ^{SV}_{ij}$@[{$\zeta ^{SV}_{ij}$}]\begingroup splitting variable for vapour side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}|nompageref}{22}
+\nomenclatureentry{a$\zeta ^{SL}_{ij}$@[{$\zeta ^{SL}_{ij}$}]\begingroup splitting variable for liquid side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}|nompageref}{22}
+\nomenclatureentry{a$\zeta ^{R}_{j}$@[{$\zeta ^{R}_{j}$}]\begingroup splitting variable for reboiler reflux on stage $j$ \nomunit {-}\nomeqref {5.6}|nompageref}{22}
+\nomenclatureentry{a$K_{ij}$@[{$K_{ij}$}]\begingroup equilibrium ratio of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.9}|nompageref}{22}
+\nomenclatureentry{a$f_i^V$@[{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {5.10}|nompageref}{22}
+\nomenclatureentry{a$f_i^L$@[{$f_i^L$}]\begingroup liquid fugacity \nomunit {-}\nomeqref {5.10}|nompageref}{22}
+\nomenclatureentry{a$\gamma _i$@[{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}|nompageref}{22}
+\nomenclatureentry{a$\varphi ^0_i$@[{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}|nompageref}{22}
+\nomenclatureentry{a$\varphi _i$@[{$\varphi _i$}]\begingroup vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}|nompageref}{22}
+\nomenclatureentry{a$p^S_i$@[{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {5.11}|nompageref}{22}
+\nomenclatureentry{a$p$@[{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {5.11}|nompageref}{22}
+\nomenclatureentry{a$F_{Pi}$@[{$F_{Pi}$}]\begingroup compressibility factor of component $i$ \nomunit {-}\nomeqref {5.11}|nompageref}{22}
+\nomenclatureentry{a$h^V_j$@[{$h^V_j$}]\begingroup molar vapour enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.13}|nompageref}{23}
+\nomenclatureentry{a$h^L_j$@[{$h^L_j$}]\begingroup molar liquid enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.13}|nompageref}{23}
+\nomenclatureentry{a$h^{FV}_j$@[{$h^{FV}_j$}]\begingroup molar vapour feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.13}|nompageref}{23}
+\nomenclatureentry{a$h^{FL}_j$@[{$h^{FL}_j$}]\begingroup molar liquid feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.13}|nompageref}{23}
+\nomenclatureentry{a$\nu ^R$@[{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {5.18}|nompageref}{25}
+\nomenclatureentry{a$\nu ^D$@[{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {5.18}|nompageref}{25}
+\nomenclatureentry{a$\nu ^{vap}$@[{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {5.19}|nompageref}{25}
+\nomenclatureentry{a$l_{ij}$@[{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}|nompageref}{27}
+\nomenclatureentry{a$v_{ij}$@[{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}|nompageref}{27}
+\nomenclatureentry{a$F_j^V$@[{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}|nompageref}{27}
+\nomenclatureentry{a$F_j^L$@[{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}|nompageref}{27}
+\nomenclatureentry{a$S_j^V$@[{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}|nompageref}{27}
+\nomenclatureentry{a$S_j^L$@[{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}|nompageref}{27}
+\nomenclatureentry{a$V_j$@[{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}|nompageref}{27}
+\nomenclatureentry{a$L_j$@[{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}|nompageref}{27}
+\nomenclatureentry{a$T^{dew}$@[{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {5.31}|nompageref}{29}
+\nomenclatureentry{a$T^{bub}$@[{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {5.31}|nompageref}{29}
+\nomenclatureentry{a$p$@[{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.40}|nompageref}{33}
+\nomenclatureentry{a$m$@[{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.40}|nompageref}{33}
+\nomenclatureentry{a$a_c$@[{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.40}|nompageref}{33}
+\nomenclatureentry{a$b$@[{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.40}|nompageref}{33}

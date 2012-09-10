@@ -1,10 +1,9 @@
 \pagenumbering{roman}
 	
-\input{Content/Preamble/CoverPage}
-	
 \ifthenelse{\boolean{draft}}{}{
-	\include{Content/Preamble/TaskDescription}
-	\include{Content/Preamble/StatutoryDeclaration}
+    \input{Content/Preamble/CoverPage}
+	\input{Content/Preamble/TaskDescription}
+	\input{Content/Preamble/StatutoryDeclaration}
 }
 
 \tableofcontents

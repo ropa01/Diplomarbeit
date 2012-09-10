@@ -4,26 +4,36 @@
 
   \item [{$$POT$$}]\begingroup Payout time \nomunit {\$}\nomeqref {4.8}
 		\nompageref{15}
-  \item [{$\alpha _{i,n}$}]\begingroup volatility parameter of species $i$ on tray $n$ \nomunit {-}\nomeqref {6.2}
-		\nompageref{29}
   \item [{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {4.5}
 		\nompageref{14}
   \item [{$\dot {m}_i$}]\begingroup Mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {4.4}
 		\nompageref{14}
-  \item [{$\gamma _i$}]\begingroup liquid activity coefficient of species $i$ \nomunit {-}\nomeqref {6.0}
-		\nompageref{28}
-  \item [{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of species $i$ \nomunit {-}\nomeqref {6.0}
-		\nompageref{28}
-  \item [{$\varphi _i$}]\begingroup vapour fugacity coefficient of species $i$ \nomunit {-}\nomeqref {6.0}
-		\nompageref{28}
+  \item [{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
+		\nompageref{22}
+  \item [{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {5.18}
+		\nompageref{25}
+  \item [{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {5.18}
+		\nompageref{25}
+  \item [{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {5.19}
+		\nompageref{25}
+  \item [{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
+		\nompageref{22}
+  \item [{$\varphi _i$}]\begingroup vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
+		\nompageref{22}
+  \item [{$\zeta ^{L}_{ij}$}]\begingroup splitting variable for liquid feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
+		\nompageref{22}
+  \item [{$\zeta ^{R}_{j}$}]\begingroup splitting variable for reboiler reflux on stage $j$ \nomunit {-}\nomeqref {5.6}
+		\nompageref{22}
+  \item [{$\zeta ^{SL}_{ij}$}]\begingroup splitting variable for liquid side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
+		\nompageref{22}
+  \item [{$\zeta ^{SV}_{ij}$}]\begingroup splitting variable for vapour side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
+		\nompageref{22}
+  \item [{$\zeta ^{V}_{ij}$}]\begingroup splitting variable for vapour feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
+		\nompageref{22}
   \item [{$a$}]\begingroup Annuity \nomunit {\$}\nomeqref {4.13}
 		\nompageref{16}
-  \item [{$A_n$}]\begingroup parameter in $K_b$ model for tray $n$ \nomunit {-}\nomeqref {6.6}
-		\nompageref{29}
-  \item [{$B_n$}]\begingroup parameter in $K_b$ model for tray $n$ \nomunit {K}\nomeqref {6.6}
-		\nompageref{29}
-  \item [{$b_{i, n}$}]\begingroup parameter for CMC equations \nomunit {-}\nomeqref {6.8}
-		\nompageref{30}
+  \item [{$C$}]\begingroup number of components \nomunit {-}\nomeqref {5.4}
+		\nompageref{21}
   \item [{$C^{i}_B$}]\begingroup Reference cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
 		\nompageref{12}
   \item [{$C^{i}_E$}]\begingroup Cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
@@ -52,10 +62,12 @@
 		\nompageref{14}
   \item [{$C_{FILL}$}]\begingroup Cost of raw materials to fill the process \nomunit {\$}\nomeqref {4.6}
 		\nompageref{14}
-  \item [{$c_{i, n}$}]\begingroup parameter for CMC equations \nomunit {-}\nomeqref {6.8}
-		\nompageref{30}
   \item [{$C_{RM}$}]\begingroup Total cost of raw materials \nomunit {\$}\nomeqref {4.4}
 		\nompageref{14}
+  \item [{$F^L_j$}]\begingroup molar liquid feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$F^V_j$}]\begingroup molar vapour feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}
+		\nompageref{21}
   \item [{$f^{i}_C$}]\begingroup Design complexity correction to equipment cost \nomunit {-}\nomeqref {4.3}
 		\nompageref{12}
   \item [{$f^{i}_M$}]\begingroup Material selection correction to equipment cost \nomunit {-}\nomeqref {4.3}
@@ -64,40 +76,52 @@
 		\nompageref{12}
   \item [{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {4.3}
 		\nompageref{12}
-  \item [{$f_i^L$}]\begingroup liquid fugacity coefficient for species $i$ \nomunit {-}\nomeqref {6.0}
-		\nompageref{28}
-  \item [{$f_i^V$}]\begingroup vapour fugacity coefficient for species $i$ \nomunit {-}\nomeqref {6.0}
-		\nompageref{28}
-  \item [{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}
-		\nompageref{19}
-  \item [{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}
-		\nompageref{19}
-  \item [{$F_{p,i}$}]\begingroup liquid compressibility factor for species $i$ \nomunit {-}\nomeqref {6.0}
-		\nompageref{28}
+  \item [{$f_i^L$}]\begingroup liquid fugacity \nomunit {-}\nomeqref {5.10}
+		\nompageref{22}
+  \item [{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {5.10}
+		\nompageref{22}
+  \item [{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
+		\nompageref{27}
+  \item [{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
+		\nompageref{27}
+  \item [{$F_{Pi}$}]\begingroup compressibility factor of component $i$ \nomunit {-}\nomeqref {5.11}
+		\nompageref{22}
+  \item [{$h^L_j$}]\begingroup molar liquid enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.13}
+		\nompageref{23}
+  \item [{$h^V_j$}]\begingroup molar vapour enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.13}
+		\nompageref{23}
+  \item [{$h^{FL}_j$}]\begingroup molar liquid feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.13}
+		\nompageref{23}
+  \item [{$h^{FV}_j$}]\begingroup molar vapour feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.13}
+		\nompageref{23}
   \item [{$i$}]\begingroup Interest rate \nomunit {\%}\nomeqref {4.11}
 		\nompageref{16}
   \item [{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {4.1}
 		\nompageref{11}
   \item [{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {4.1}
 		\nompageref{11}
-  \item [{$K_{b,n}$}]\begingroup $K_b$ parameter \nomunit {-}\nomeqref {6.2}
-		\nompageref{29}
-  \item [{$K_{i,n}$}]\begingroup equilibrium ration for species $i$ on tray $n$ \nomunit {-}\nomeqref {6.1}
-		\nompageref{29}
-  \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}
-		\nompageref{19}
+  \item [{$K_{ij}$}]\begingroup equilibrium ratio of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.9}
+		\nompageref{22}
+  \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
+		\nompageref{27}
+  \item [{$L_j$}]\begingroup molar liquid flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}
+		\nompageref{27}
   \item [{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {4.2}
 		\nompageref{12}
+  \item [{$N$}]\begingroup number of stages \nomunit {-}\nomeqref {5.4}
+		\nompageref{21}
   \item [{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {4.5}
 		\nompageref{14}
   \item [{$N_{RM}$}]\begingroup Number of raw materials \nomunit {-}\nomeqref {4.4}
 		\nompageref{14}
   \item [{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {4.17}
 		\nompageref{17}
-  \item [{$p^S$}]\begingroup system pressure \nomunit {Pa}\nomeqref {6.0}
-		\nompageref{28}
-  \item [{$p^S_i$}]\begingroup vapour pressure of species $i$ \nomunit {Pa}\nomeqref {6.0}
-		\nompageref{28}
+  \item [{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {5.11}
+		\nompageref{22}
+  \item [{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {5.11}
+		\nompageref{22}
   \item [{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {4.10}
 		\nompageref{16}
   \item [{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {4.2}
@@ -108,31 +132,35 @@
 		\nompageref{11}
   \item [{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
 		\nompageref{11}
-  \item [{$R^L_n$}]\begingroup liquid withdrawl parameter for stage $n$ \nomunit {-}\nomeqref {6.15}
-		\nompageref{30}
-  \item [{$R^V_n$}]\begingroup vapour withdrawl parameter for stage $n$ \nomunit {-}\nomeqref {6.15}
-		\nompageref{30}
-  \item [{$S_b$}]\begingroup base splitting factor \nomunit {-}\nomeqref {6.15}
-		\nompageref{30}
-  \item [{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}
-		\nompageref{19}
-  \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}
-		\nompageref{19}
-  \item [{$S_n$}]\begingroup splitting factor for stage $n$ \nomunit {-}\nomeqref {6.15}
-		\nompageref{30}
-  \item [{$S_{R, n}$}]\begingroup realtive splitting factor for stage $n$ \nomunit {-}\nomeqref {6.15}
-		\nompageref{30}
-  \item [{$T$}]\begingroup system temperature \nomunit {K}\nomeqref {6.0}
-		\nompageref{28}
+  \item [{$S^L_j$}]\begingroup molar liquid side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$S^V_j$}]\begingroup molar vapour side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$s^V_j$}]\begingroup dimensionless liquid side-draw from stage $j$ \nomunit {-}\nomeqref {5.3}
+		\nompageref{21}
+  \item [{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {5.2}
+		\nompageref{21}
+  \item [{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
+		\nompageref{27}
+  \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
+		\nompageref{27}
   \item [{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {4.4}
 		\nompageref{14}
-  \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.0}
-		\nompageref{19}
+  \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
+		\nompageref{27}
+  \item [{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}
+		\nompageref{27}
   \item [{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}
 		\nompageref{11}
-  \item [{$x_i$}]\begingroup liquid mole fraction of species $i$ \nomunit {\frac {mol}{mol}}\nomeqref {6.0}
-		\nompageref{28}
-  \item [{$y_i$}]\begingroup vapour mole fraction of species $i$ \nomunit {\frac {mol}{mol}}\nomeqref {6.0}
-		\nompageref{28}
+  \item [{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$y_{ij}$}]\begingroup vapour mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$z^L_{ij}$}]\begingroup liquid mole fraction of liquid feed to stage $j$ \nomunit {-}\nomeqref {5.1}
+		\nompageref{21}
+  \item [{$z^V_{ij}$}]\begingroup vapour mole fraction of vapour feed to stage $j$ \nomunit {-}\nomeqref {5.1}
+		\nompageref{21}
 
 \end{thenomenclature}

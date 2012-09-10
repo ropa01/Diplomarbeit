@@ -1,16 +1,12 @@
 \chapter{Mathematical process model}
 \label{chp:MathModel}
 
-\section{Steady state model}
-\label{sec:SteadyStateModel}
+%    \begin{figure}
+%        \input{Pictures/double_column}
+%    \end{figure}
 
-\subsection{Distillation column}
-\label{sec:SSM:dist}
-
-    The distillation column form the heart of the air separation process and their
-    operation parameters are crucial in terms of enabling the desired separation.
-    While the aspect of heat integration poses is also essential in terms of profitability of
-    the process.
+    The industrial scale production of highly pure oxygen and nitrogen as well as noble
+    gases is still carried out by means of the cryogenic process.
 
     The initial process for production of pure oxygen first developed by Carl von Linde
     and first operated by Linde in 1902 \cite{Barron.1985} consisted of only
@@ -29,7 +25,48 @@
     heat exchange unit in the middle of the column. This specialty of the process also
     leads to the need that the absolute values of the energies used in condenser and
     reboiler need to be equal. On terms of modelling the process this also forms a
-    considerable challenge. \todo{move process description to different section}
+    considerable challenge.
+
+    \begin{figure}
+        \input{pgfplots/ASU_process_simple}
+        \caption{simplified cryogenic air separation process.}
+        \label{fig:asu_simple}
+    \end{figure}
+
+    A simplified overview of the major process steps is given in \reffig{fig:asu_simple}.
+    Within the following sections the different process steps will be discussed in more detail.
+    When appropriate the mathematical model for single process units is discussed as well.
+    In addition to the separate process steps displayed in \reffig{fig:asu_simple} the aspect
+    of heat integration os essential to successfully operating an air separation unit (ASU).
+    This aspect will be discussed separately as well (\refsec{sec:heat_exchange})
+
+    The pre-purification step of the process aim to reduce the amount of unwanted impurities
+    from the ambient air as far as possible. The main sources of contamination are in this case
+    dust and other organic components that can be found depending on the time of year and
+    location of the plant. Furthermore are water and carbon dioxide common components in
+    ambient air. The removal of these components is undertaken by means of adsorption molecular
+    sieves such as zeolite or for initial steps coarser sieves. However the design and simulation
+    of these pre-purification measures is not within the scope of this work. For more information
+    the interested reader is referred to \cite{Acharya.1996}.
+
+
+\section{Purification}
+\label{sec:SteadyStateModel}
+    The purification of the liquefied gases is performed by distillation columns
+    operated at different pressure.
+    These distillation columns form the heart of the air separation process and their
+    operation parameters are crucial in terms of enabling the desired separation.
+    While the aspect of heat integration poses is also essential in terms of profitability of
+    the process.
+
+    Subsequently this section is concerned with the description of different aspects of
+    modeling distillation columns. First the mathematical model will be presented in
+    more detail. Afterwards the handling of different specifications for individual
+    columns is elaborated upon. Lastly the issue of initializing the respective models
+    and the implemented solution is presented.
+
+\subsection{Distillation column model}
+\label{sec:SSM:dist}
 
     In this section the working equations used to model the different distillation
     columns in the process, known as the MESH equations, are given. These equations,
@@ -44,42 +81,24 @@
         \begin{subfigure}{0.3\textwidth}
             \centering
             \input{Pictures/col_complete_super}
-            \label{fig:col_super}
             \caption{column super structure.}
+            \label{fig:col_super}
         \end{subfigure}
         \qquad
         \begin{subfigure}{0.6\textwidth}
             \centering
             \input{Pictures/col_stage_super}
-            \label{fig:col_stage_super}
             \caption{stage super structure.}
+            \label{fig:col_stage_super}
         \end{subfigure}
-        \label{fig:col_super_structs}
+        %\label{fig:col_super_structs}
         \caption{superstructures for column and column stages.}
     \end{figure}
-%    \begin{figure}
-%        \centering
-%        \input{Pictures/col_com_stage_super}
-%        \label{fig:col_com_stage_super}
-%        \caption{superstructures for column and column stages.}
-%    \end{figure}
 
-    \Reffig{fig:col_super_structs} shows the super structures for a distillation column
-    with a single feed and and no side draws (\reffig{fig:col_super}) and a single inner
-    column stage (\reffig{fig:col_stage_super}).
+    \Reffig{fig:col_super} and \reffig{fig:col_stage_super} show the super structures for a distillation column
+    with a single feed and and no side draws and an inner column stage.
     The acronym MESH stands for Material (M), Equilibrium (E), Summation (S) and Enthalpy (H)
     equations which are given below.
-
-%	\paragraph{Mass balance}
-%	\Eq{eq:col:MassBalance}{
-%		0 = F_j^V + F_j^L + V_{j+1} + L_{j-1} - V_j - S_j^V - L_j - S_j^L
-%		\nc{F_j^V}{Vapour feed to tray $j$}{\frac{mol}{s}}
-%		\nc{F_j^L}{Liquid feed to tray $j$}{\frac{mol}{s}}
-%		\nc{S_j^V}{Vapour side flow from tray $j$}{\frac{mol}{s}}
-%		\nc{S_j^L}{Liquid side flow from tray $j$}{\frac{mol}{s}}
-%		\nc{V_j}{Vapour flow from tray $j$}{\frac{mol}{s}}
-%		\nc{L_j}{Liquid flow from tray $j$}{\frac{mol}{s}}
-%	}%
 
 	\paragraph{Material balances}
         The material balances in their most general form for an inner column stage can be written
@@ -99,12 +118,12 @@
         \nc{F^V_j}{molar vapour feed flowrate to stage $j$}{\mols}
         \nc{z^L_{ij}}{liquid mole fraction of liquid feed to stage $j$}{-}
         \nc{z^V_{ij}}{vapour mole fraction of vapour feed to stage $j$}{-}
-    
+
         Here the vapour and liquid phase of the feed to the stage are considered separately.
         While this is not strictly necessary is allows for certain freedoms in terms of modelling
         column operations, as sometimes the vapour fraction of a given feed is actually fed into
         the vapour phase of a stage and therefore effectively in the liquid phase of the stage above.
-    
+
         To facilitate convergence the side draw streams $S_j^V$ and $S_j^L$ are made dimensionless
         by means of the respective vapour and liquid flows on that stage to form the
         vapour
@@ -127,18 +146,18 @@
     	}%
         \nc{C}{number of components}{-}
         \nc{N}{number of stages}{-}
-    
+
         As the model is also to be used for optimization purposes further extensions are necessary.
         The location of individual feeds as well as the number of theoretical or real stages of the
         column is to be optimized. To accommodate that need, new variables need, namely the feed
-        split $\zeta_{ij}^F$ for feed $i$ to stage $j$ need to be introduced. The split variables are
-        integer variables that can take a value of $0$ or $1$. Additionally it is assumed that each
-        feed will only be fed to a single stage thus
+        split $\zeta_{ij}^F$ for feed $i$ to stage $j$ as employed by \cite{Dunnebier.1999} are introduced.
+        The split variables are integer variables that can take a value of $0$ or $1$. Additionally it is
+        assumed that each feed will only be fed to a single stage thus
         \Eq{eq:col:feedsplit}{
             0 = 1 - \sum_{j=1}^N \zeta_{ij}, \eqannote{i = 1 \dots F, \quad j = 1 \dots N},
         }%
         where $F$ denotes the number of feeds, comprised of vapour ($F^V$) and liquid $F^L$ feeds.
-    
+
         In order to optimize the number of stages several superstructures are possible. One can
         optimize the reboiler reflux location and condenser reflux location or each single one
         along with the feed and side draw locations. The stage number is then changed as all stages
@@ -148,7 +167,7 @@
         reflux is optimized is somewhat arbitrary some studies have shown \cite{Grossmann.2005} that
         the strategy of optimizing only feed location and reboiler reflux location possesses some
         numerical advantages in terms of performance of the solution algorithm.
-    
+
         With the newly introduced split variables for liquid $\zeta^L_{ij}$ and vapour $\zeta^V_{ij}$
         as well as the reboiler reflux $\zeta^R_j$ and the liquid $\zeta^{SL}_{ij}$ and vapour $\zeta^{SV}_{ij}$
         side draws, the material balances can be written as
@@ -164,7 +183,7 @@
         \nc{\zeta^{SV}_{ij}}{splitting variable for vapour side draw $i$ on stage $j$}{-}
         \nc{\zeta^{SL}_{ij}}{splitting variable for liquid side draw $i$ on stage $j$}{-}
         \nc{\zeta^{R}_{j}}{splitting variable for reboiler reflux on stage $j$}{-}
-    
+
         Furthermore to be able to optimize side draws, the stripping factors have to be reformulated
         accordingly
         \Eq{eq:val:vap:strip_opt}{
@@ -180,10 +199,10 @@
             y_{ij} = K_{ij} \cdot x_{ij}, \eqannote{i = 1 \dots C, \quad j = 1 \dots N}.
     	}%
         \nc{K_{ij}}{equilibrium ratio of component $i$ on stage $j$}{-}
-    
+
         Where the equilibrium ratio $K_{ij}$ is computed from the relations that describe
         a vapour liquid equilibrium (VLE).
-    
+
         A vapour and liquid phase are in equilibrium, when the fugacities in the vapour $f_i^V$
         and liquid $f_i^L$ phase for each species $i$ are equal \cite{AndreasPfennig.2003}
         \Eq{eq:col:fug}{
@@ -191,7 +210,7 @@
     	}%
         \nc{f_i^V}{vapour fugacity}{-}
         \nc{f_i^L}{liquid fugacity}{-}
-    
+
         This can also be written in terms of the, liquid activity coefficient $\gamma_i$,
         the pointing factor $F_{Pi}$, the reference vapour fugacity coefficient $\varphi_i$,
         the vapour pressure $p^S_i$ as well as the system pressure $p$ along with the vapour and
@@ -205,14 +224,14 @@
         \nc{p^S_i}{vapour pressure of component $i$}{Pa}
         \nc{p}{system pressure}{Pa}
         \nc{F_{Pi}}{compressibility factor of component $i$}{-}
-    
+
         By reformulating \refeq{eq:col:fug_ext} an expression for the equilibrium ratios
         can be derived
         \Eq{eq:col:fug_ext}{
             y_i = \underbrace{\frac{\gamma_i \, F_{Pi} \, \varphi^0_i \, p^S_i}{\varphi_i \, p}}_{K_i}
                 x_i, \eqannote{i = 1 \dots C}.
     	}%
-    
+
         The equations to determine the quantities used when computing the equilibrium ratios are by
         themselves functions of temperature, pressure, and vapour as well as liquid molar fractions.
         They are further discussed in \refsec{sec:peng-rob}. It therefore becomes evident that the
@@ -239,22 +258,22 @@
             \begin{subfigure}{0.45\textwidth}
                 \centering
                 \input{Pictures/condenser}
-                \label{fig:col_condenser}
                 \caption{condenser stage.}
+                \label{fig:col_condenser}
             \end{subfigure}
             \begin{subfigure}{0.45\textwidth}
                 \centering
                 \input{Pictures/reboiler}
-                \label{fig:col_reboiler}
                 \caption{reboiler stage.}
+                \label{fig:col_reboiler}
             \end{subfigure}
         \end{figure}
-    
+
         Condenser and reboiler are modeled more or less as regular column stages. However they possess
         certain specialties that are explicitly considered in the column model. For one it is assumed
         that no feeds enter the reboiler and condenser stage. Furthermore no vapour side stream is
         drawn from the condenser stage and no liquid side stream from the reboiler stage.
-    
+
         Additionally the condenser stage needs to examined a little further. In terms of operations
         several assumptions can be made for the condenser. In general one can distinguish a total,
         partial vapour and partial vapour liquid condenser. For the total condenser all vapour that
@@ -269,27 +288,101 @@
         balances remain unchanged the equilibrium equations have to be altered. First the vapour and
         liquid compositions are set equal for all but one component
         \Eq{eq:col:total}{
-            x_{i1} = y_{i1} \eqannote{i = 1 \dots C-1}, 
+            x_{i1} = y_{i1} \eqannote{i = 1 \dots C-1},
         }%
-        and the condenser temperature is determined by the bubble point equation 
+        and the condenser temperature is determined by the bubble point equation
         \Eq{eq:col:bub}{
             0 = 1 - \sum_i K_{i1} \cdot x_{i1} \eqannote{i = 1 \dots C}.
         }%
-        
-        When implementing the model in a process simulator it is sensible to consider, that due to 
-        the limited accuracy of computers the omitted component in \refeq{eq:col:total} needs to 
-        a non-trace component in the condenser stage. The implemented model therefore as to specify
-        such a component when a total condenser is chosen to avoid numerical difficulties. 
-        
-        In practice it is highly unlikely, that the exact amount of energy required to condensate all 
-        liquid will be drawn from the condenser. More likely, if all vapour is condensed, a little more
-        energy will be withdrawn and slightly sub-cooled liquid will leave the condenser. Therefore 
-        the model includes the possibility to specify a degree of sub-cooling $T^{sub}$ which will be 
-        considered when calculating the equilibrium ratios. 
-        
-    \subsubsection{Specifications}
 
-    \subsubsection{Column initialization}
+        When implementing the model in a process simulator it is sensible to consider, that due to
+        the limited accuracy of computers the omitted component in \refeq{eq:col:total} needs to
+        a non-trace component in the condenser stage. The implemented model therefore as to specify
+        such a component when a total condenser is chosen to avoid numerical difficulties.
+
+        In practice it is highly unlikely, that the exact amount of energy required to condensate all
+        liquid will be drawn from the condenser. More likely, if all vapour is condensed, a little more
+        energy will be withdrawn and slightly sub-cooled liquid will leave the condenser. Therefore
+        the model includes the possibility to specify a degree of sub-cooling $T^{sub}$ which will be
+        considered when calculating the equilibrium ratios.
+
+    \subsection{Specifications}
+        The equation systems presented above is comprised of $NC$ component balances, $NC$ equilibrium
+        equations, $2N$ summation equations and $N$ energy balances. This gives a total of $N (2C + 3)$
+        equations. On the other hand there are $N$ temperatures and pressures, $2N$ molar flow rates,
+        $N$ energy streams, and $NC$ vapour as well as and liquid concentrations. Additionally the feed flow rates
+        compositions and temperatures and the side draw split fractions or flow rates appear as variables. The
+        feeds and side draws would usually be specified, which leaves a total of $N (2C + 5)$ variables.
+
+        The pressure profile of a distillation column is usually specified. Either by explicitly
+        assigning a given pressure to each stage, or more conveniently by defining a pressure
+        either the top or bottom pressure as well as the pressure drop per stage
+        \Eq{eq:col_pprofile}{
+            \Delta p_{stage} = p_i - p_{i-1}, \eqannote{i = 2 \dots N}.
+        }
+        In terms of unit operations this pressure drop is of high significance,
+        as many columns can only be feasibly operated, if the pressure drop does not exceed certain
+        limits. In case of the ASU the production of Argon only became feasible as structured
+        packings, which display a very low pressure drop, became available. This is due to the large
+        number of theoretical stages required to attain the desired Argon purities.
+
+        The energies $Q_i$ denote addition heaters or cooler on the respective stages. For all
+        intermediate stages these values would be specified as well. If all energies would be
+        specified, that would -- along with the pressure profile -- sum up to $2N$ specifications,
+        which leaves $N (2C + 3)$ unknowns. As the number of equations and unknowns are the equal,
+        this system can them be solved.
+
+        In practice it is often challenging to correctly guess the condenser and reboiler heat loads in
+        advance. This is especially true since they have a tremendous impact on the overall performance
+        of the column. Hence it is often desirable to supply other specifications than the respective
+        heat loads. To allow for such specification so called discrepancy functions can be introduced \cite{Henley.op.2011},
+        which replace the energy balance for the condenser and / or reboiler stage.
+
+        One common specification is the so called reflux ratio $\nu^D = \frac{L_1}{V_1 + S_1^L}$ for
+        the condenser, or the boilup ratio $\nu^R = \frac{L_N}{V_N}$ for the reboiler.
+        They are defined as the ratio of the molar flowrate sent back into the column over the
+        product flowrate which leaves the column. For the reboiler this denotes a liquid stream,
+        while for the condenser the product can be gaseous and liquid. Specifying this leads to
+        \Eq{eq:reflux}{
+            0 & = L_1 - \nu^D \cdot (V_1 + S_1^L), \\
+            0 & = V_N - \nu^R \cdot L_N,
+        }
+        \nc{\nu^R}{boliup ratio}{-}
+        \nc{\nu^D}{reflux ratio}{-}
+        as discrepancy functions. I addition to that further specifications are conceivable. Most
+        commonly distillate ($D$) or bottoms ($B$) flow rates, or purities, component flow rates ($d_i, b_i$)
+        or temperatures. The corresponding discrepancy functions are summarized in \reftab{tab:discrepancy}.
+
+        \begin{table}
+            \centering
+            \footnotesize
+            \input{Tables/Discrepancy}
+            \caption{discrepancy functions for different column specifications.}
+            \label{tab:discrepancy}
+        \end{table}
+
+        The specifications for the reboiler stage are quite straightforward, in contrast to that,
+        different cases for the condenser have to be considered. In the most general case the
+        top product can be drawn as vapour and liquid. This case is here called a partial vapour
+        liquid condenser. The other cases are a total condenser, where all the vapour entering the
+        condenser stage is condensed, and all product is drawn as a liquid stream, as well as
+        a partial vapour condenser, where only the reflux is condensed and all product is drawn
+        as vapour. As discussed earlier no VLE takes place in the condenser stage, if a total
+        condenser is specified, which needs to be accounted for. Both the total and partial
+        vapour condensed implicitly include an extra specification since in former case
+        the top vapour product flow rate becomes zero and in the latter the top liquid product
+        flowrate. Furthermore a specification of the condenser energy is infeasible as well as implicitly
+        given for the total condenser. In case of the partial vapour liquid condenser no implicit
+        specification is given, which requires an additional specification. In general two
+        top specifications are necessary, whereas only one bottom specification is required.
+        These top specification can include the condenser duty, any top flowrate, the reflux ratio
+        as well as a newly introduced quantity, the top vapour fraction defined as
+        \Eq{}{
+            \nu^{vap} = \frac{V_1}{V_1 + S_1^L}.
+        }
+        \nc{\nu^{vap}}{condenser vapour fraction}{-}
+
+    \subsection{Column initialization}
         As mentioned before the solution of the MESH equations can pose a considerable problem
         to numerical solvers. It is therefore necessary to supply the solver with feasible
         estimates for the involved variables that can be used as an initial guess to facilitate
@@ -371,135 +464,398 @@
             y_{ij} = \frac{v_{ij}}{\sum_k^C v_{kj}} \eqannote{i = 1 \dots C, \quad j = 1 \dots N}.
         }%
 
-\subsection{Multi stream heat exchanger}
+        The total molar flow rates used in \refeq{eq:init:compbalance} are computed by solving
+        stage-wise total mass balances under the constant molal overflow assumption. This assumption
+        postulates that the heat of vaporization is independent of system composition.
+        Therefore always the same amount of liquid enters and leaves a given stage
+    	\Eq{eq:col:cmo}{
+    		0 = L_j + S_j^L - L_{j-1} - (1 + q_F^L) \cdot F_j^L - q_F^V \cdot F_j^V
+                \eqannote{j = 1 \dots N}.
+    	}%
+        \nc{F_j^V}{Vapour feed to tray $j$}{\frac{mol}{s}}
+    	\nc{F_j^L}{Liquid feed to tray $j$}{\frac{mol}{s}}
+    	\nc{S_j^V}{Vapour side flow from tray $j$}{\frac{mol}{s}}
+    	\nc{S_j^L}{Liquid side flow from tray $j$}{\frac{mol}{s}}
+    	\nc{V_j}{Vapour flow from tray $j$}{\frac{mol}{s}}
+    	\nc{L_j}{Liquid flow from tray $j$}{\frac{mol}{s}}
 
-\subsection{Compressor / expander}
-	\stdfig{pgfplots/Compressor}{Compressor model.}{fig:Compressor}{h}
+        Only at feed and side draw stages the total flow rates change. To introduce some more accuracy
+        to the model, the available information about the feed is considered. When a feed enters as
+        super-heated vapour or sub-cooled liquid, it has the capability to evaporate some liquid or
+        liquefy some vapour. To account for that fact the feed energy parameters $q_F^L$ and $q_F^V$
+        are introduced
+        \Eq{eq:feed_en_param}{
+            q_i^{FV} & = \frac{H_i^{FV} - H^V_i}{H^V_i - H^L_i}, \eqannote{i = 1 \dots F^V}, \\
+            q_i^{FL} & = \frac{H_i^{FL} - H^L_i}{H^V_i - H^L_i}, \eqannote{i = 1 \dots F^L}.
+        }
 
-	\paragraph{Mass and component balances}
-	\Eq{eq:comp:MassBalance}{
-		0 = F^{in} - F^{out}
-	}%
-	\Eq{eq:comp:CompBalance}{
-		0 = z_i^{in} - z_i^{out}
-	}%
+        The vapour total flow rates are then computed from the total mass balances
+        \Eq{eq:col:MassBalance}{
+    		0 = L_j + S_j^L + V_j + S_j^V - L_{j-1} - V_{j+1} - F_j^L -  F_j^V,
+                \eqannote{j = 1 \dots N}.
+    	}%
 
-	\paragraph{Isentropic work}
-	\Eq{eq:comp:SInOut}{
-		S^{in}(T^{in}, p^{in}, z_i^{in}) = S^{out}(T_S^{out}, p^{out}, z_i^{out})
-	}%
-	\Eq{eq:comp:IsentropicWork}{
-		W_S = F^{in} \cdot H^{in}(T^{in}, p^{in}, z_i^{in}) - F^{out} \cdot H^{out}(T_S^{out}, p^{out}, z_i^{out})
-	}%
+        As no energy balances are included at this stage, the condenser and reboiler stage
+        are characterized by the reflux ($\nu^c = \frac{V_1}{L_1}$) or boilup ratio
+        ($\nu^r = \frac{V_N}{L_N}$) respectively. This leads to
+        \Eq{eq:boilup}{
+            0 = V_1 - \nu^c \cdot L_1, \\
+            0 = L_N - \nu^r \cdot V_N.
+        }
 
-	\paragraph{Compression work}
-	\Eq{eq:comp:WEta}{
-		W \cdot \eta^C = W_S
-	}%
-	\Eq{eq:comp:CompressionWork}{
-		W_S = F^{in} \cdot H^{in}(T^{in}, p^{in}, z_i^{in}) - F^{out} \cdot H^{out}(T^{out}, p^{out}, z_i^{out})
-	}%
+        To close the equation system the global mass balance is included
+        \Eq{eq:globalmassbalance}{
+            0 = V_1 + L_N + \sum_{j=1}^{N} ( S_j^V + S_j^L - F_j^V - F_j^L ),
+                \eqannote{j = 1 \dots N}.
+        }
+        \subsubsection{Init specification}
+            At this point it should be mentioned, that not all specifications are compatible
+            with the initialization procedure. As no energy balances are solved during initialization,
+            specified condenser or reboiler duties cannot be considered in this stage. Furthermore
+            purity specifications are also not applicable during this stage, they are computed by a
+            different approach. Due to that it is necessary -- when duties or purities are specified
+            -- to supply substitute specifications, that can be used during initialization.
+            Essentially all specifications concerning top and bottom flow rates and flow ratios are
+            usable during initialization. The user interface implemented specifically asks for
+            substitute specifications if any aforementioned cases are encountered.
 
-	\paragraph{Pressure drop}
-	\Eq{eq:comp:PressureDrop}{
-		p^{out} = p^{in} + \Delta p
-	}%
-	
-\subsection{Centrifugal pump}
-	
-	\paragraph{Cost estimation}
-		The cost for the pump excluding the motor can be approximated by
-		\Eq{eq:pump:CostPump}{
-			C_B & = \exp \left[ 9.7171 - 0.6019 \ln[S] + 0.0519 (\ln[S])^2 \right] \eqannote{40 \leq S \leq 100000}\\
-			C_p & = f_T \, f_M \, C_B.
-		}
-		The cost for the centrifugal pump is approximated by the value $S = Q \cdot \sqrt{H} $, where
-		$Q$ denotes the volume flow through the pump in gallons per minute $[gpm]$ and $H$ the
-		pump head in $[ft]$.
-		
-		The costs given above is excluding the motor needed. It is then estimated separately. In this
-		case the specific quantity is the power consumption $P_C$ needed for the desired stream transport.
-		
-		\Eqml{eq:pump:CostMotor}{
-			C_B  = \exp\big[ 5.8259 + 0.13141 \ln[P_C] + 0.053255 (\ln[Pc])^2 \\
-				 + 0.028628 (\ln[P_C])^3 - 0.0035549 (\ln[P_C])^4 \big]
-		}	
+        \subsubsection{Example}
 
-	\todo[inline]{add formulas for vapour fraction}
-	\todo[inline]{check if . or , are used for decimals ...}
-\subsubsection{Expander}
+        \begin{figure}
+            \begin{minipage}{0.25\textwidth}
+                \input{Pictures/LPC_example}
+                \caption{example column.}
+                \label{fig:lpc_example}
+            \end{minipage}
+            \begin{minipage}{0.73\textwidth}
+                \raisebox{\depth}{\footnotesize\input{Tables/LPC_example_data}}
+                \captionof{table}{column specifications.}
+                \label{fig:lpc_example}
+            \end{minipage}
+        \end{figure}
 
-\subsubsection{Condenser}
+        To illustrate how the initialization procedure works an example has been constructed of
+        a rather complex column -- or column section -- with multiple feeds and side draws (\reffig{fig:lpc_example}).
+        It is taken from an example process of cryogenic air separation. The column in question
+        is a column section without an condenser stage and displayed the most difficulties in terms
+        of convergence when constructing the process flowsheet.
 
-\subsection{Reboiler}
+        In addition to the aforemention initialization strategy, columns with side draws present are handled
+        in a slightly different manner. Initially the side draws are disregarded. Then the initialization procedure
+        is carried out. Once the column without side draws has converged, a homotopy approach
+        \Eq{eq:homotopy}{
+            f(\vec{x}) = (1-\alpha) \cdot f_0(\vec{x}) + \alpha \cdot f_1(\vec{x})
+        }
+        is employed, where the parameter $\alpha$ is initially set to zero and then gradually moved to a value
+        of one. \todo{mention problems and bounded homotopy?} During the initialization homotopies could
+        generally be employed to move from one step to another. While in some cases robustness is improved by
+        such a strategy, it is always computationally far more expensive then simply jumping between different
+        stages.
 
-	\stdfig{pgfplots/Reboiler}{Reboiler model.}{fig:Reboiler}{h}
+        For clarity reasons the different steps of the initializations procedure a repeated in a tabular manner
 
-	\paragraph{Mass balance}
-	\Eq{eq:reboil:MassBalance}{
-		0 = F - V - L
-	}%
+        \begin{enumerate}
+            \item \cpitemize{
+                \item linear temperature profile between dew ($T^{dew}$) and bubble point temperature ($T^{bub}$)
+                    of mixed feed.
+                \item linear profile between feed flash vapour and liquid compositions for liquid stage
+                    compositions.
+                \item constant profile for vapour compositions.
+                \item molar flow rates from constant molar overflow model.
+                \item side draw flow rates set to zero.
+            }
+            \item \cpitemize{
+                \item total molar flow rates form constant molar overflow model.
+                \item simplified equilibrium ratios from initial liquid mole fractions and linear
+                    temperature profile.
+                \item liquid and vapour mole fractions from linearized mass balances.
+            }
+            \item rigorous solution of MESH equations with side draws still set to zero.
+            \item homotopic approach to MESH equations with side draws considered.
+        \end{enumerate}
 
-	\paragraph{Component balance}
-	\Eq{eq:reboil:CompBalance}{
-		0 = F z_j - V y_j - L x_j
-	}%
+        \nc{T^{dew}}{dew point temperature}{K}
+        \nc{T^{bub}}{bubble point temperature}{K}
 
-	\paragraph{Pressure drop}
-	\Eq{eq:reboil:PressureDrop}{
-		p^R = p^{in} + \Delta p
-	}%
+        The resulting profiles for oxygen and nitrogen concentrations in the example column can be seen
+        in \reffig{fig:lpc_example_o2} and \reffig{fig:lpc_example_n2}.
 
-\subsection{Heater}
+        \begin{figure}
+            \scriptsize
+            \hspace{0.01\textwidth}
+            \begin{subfigure}{0.45\textwidth}
+                \input{GNUPlot/LPC_init_o2}
+                \caption{oxygen concentration profiles.}
+                \label{fig:lpc_example_o2}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}{0.45\textwidth}
+                \input{GNUPlot/LPC_init_n2}
+                \caption{nitrogen concentration profiles.}
+                \label{fig:lpc_example_n2}
+            \end{subfigure}
+            \hspace{0.01\textwidth}
+            \caption{initialization example concentration profiles.}
+        \end{figure}
 
-	\stdfig{pgfplots/Heater}{Heater model.}{fig:Heater}{h}
+\section{Compression \& liquefaction}
+\label{sec:comp_liq}
+    The issue of cooling the ambient air to process temperatures at around 90 $K$ is not an easy
+    one. The main hindrance is, that a heat sink at this temperature level is not readily available.
+    Lucky thermodynamics offer a different way to reach such temperatures. In order to do so,
+    the ambient air first needs to be compressed and then expanded again. Cooling then occurs
+    by either exploiting the \emph{Joule-Thompson} effect or isentropic expansion. First a few
+    comments are made about the compression stage, while afterwards the governing principles
+    for cooling by expansion will be described.
 
-	\paragraph{Mass and component balances}
-	\Eq{eq:comp:MassBalance}{
-		0 = F^{in} - F^{out}
-	}%
-	\Eq{eq:comp:CompBalance}{
-		0 = z_i^{in} - z_i^{out}
-	}%
-	
-	\paragraph{Pressure drop}
-	\Eq{eq:reboil:PressureDrop}{
-		p^R = p^{in} + \Delta p
-	}%
-	
-	\todo[inline]{add formulas for vapour fraction}
-		
-\subsubsection{Pump}
+    \subsubsection{Multi-stage compression}
+        \stdfig{pgfplots/Compressor}{Multi-stage compression.}{fig:multi_stage_compression}{h}
+        Compressors and expanders are among the most common process equipment. A multitude of processes
+        utilizes them as primary or auxiliary units. While the tasks performed by especially the compressors
+        is essential for reaching the required process temperatures, they have less impact in terms of
+        process performance and capital expenditure.
 
-\subsubsection{Separator}
+        The rigorous modeling of continuous flow machines in terms of unit operations poses great challenges.
+        For specific units it may be undertaken by means of CFD simulations or employing characteristics diagrams,
+        which require extensive experiments and can usually be obtained from the manufacturer.
+        For the purposes of process design however a simpler approach with unit efficiencies is appropriate.
 
-\subsubsection{Joule-Thompson valve}
+        In order to attain the desired compression it is beneficial, to use a multi stage compressor with
+        inter-cooling as depicted in \reffig{fig:multi_stage_compression}. This yields a lower energy consumption
+        as a single stage unit for the same compression ratio.
 
-\subsection{Splitter}
-	\stdfig{pgfplots/Splitter}{Splitter model}{fig:Splitter}{h}
-	
-	\paragraph{Mass and component balances}
-	\Eq{eq:comp:MassBalance}{
-		0 = F^{in} - \sum_i^N F^{in} \zeta_i
-	}%
-	\Eq{eq:comp:CompBalance}{
-		0 = z_i^{in} - z_i^{out}
-	}%
-	
-	\paragraph{Energy balance}
-	\Eq{eq:comp:MassBalance}{
-		0 = F^{in} H^{in}(T^{in}, p^{in}, z_i^{in}) - \sum_j^N F_j^{out} H^{out}(T^{out}, p^{out}, z_i^{out})
-	}%
-	
-	\paragraph{Pressure drop}
-	\Eq{eq:reboil:PressureDrop}{
-		p^{out} = p^{in} + \Delta p
-	}%
+%    	\paragraph{Mass and component balances} The mass and component balances are trivial, as no reactions
+%        take place and no phase equilibria have to be considered. It is possible that phase changes might occur
+%        within an compressor. While this is certainly relevant during operations of the specific unit, it is not
+%        explicitly considered in this model.
 
-	\todo[inline]{add formulas for vapour fraction}
+%    	\Eq{eq:comp:MassBalance}{
+%    		0 = F^{in} - F^{out}
+%    	}%
+%    	\Eq{eq:comp:CompBalance}{
+%    		0 = z_i^{in} - z_i^{out} \eqannote{i = 1 \dots C}
+%    	}%
+%
+%    	\paragraph{Compressor work} To calculate the mechanical work associated with the desired compression,
+%        first the isentropic case
+%    	\Eq{eq:comp:SInOut}{
+%    		S^{in} = S^{out}
+%    	}%
+%        is considered.
+%    	\Eq{eq:comp:IsentropicWork}{
+%    		W_S = F^{in} \cdot (H^{in} - H^{out})
+%    	}%
+%
+%    	\paragraph{Compression work}
+%    	\Eq{eq:comp:WEta}{
+%    		W \cdot \eta^C = W_S
+%    	}%
+%    	\Eq{eq:comp:CompressionWork}{
+%    		W_S = F^{in} \cdot H^{in}(T^{in}, p^{in}, z_i^{in}) - F^{out} \cdot H^{out}(T^{out}, p^{out}, z_i^{out})
+%    	}%
+%
+%    	\paragraph{Pressure drop}
+%    	\Eq{eq:comp:PressureDrop}{
+%    		p^{out} = p^{in} + \Delta p
+%    	}%
 
-\subsubsection{Peng-Robinson Equation of State}
+    \subsubsection{Cooling by expansion}
+        The liquefaction of gases requires temperatures well below ambient conditions. In order to reach
+        such conditions one cannot utilize natural occurring coolants, but rather cooling effects that occur
+        during the expansion of compressed gases. First we consider the expansion through an expansion valve
+        or so called \emph{Joule-Thompson} - valve. If we assume very good insulation of  conditions this
+        expansion can closely be approximated by an isenthalpic process ($h_1 = h_2$). To describe the change
+        in temperature during isenthalpic expansion the \emph{Joule-Thompson} coefficient
+        \Eq{}{
+            \mu_{JT} = \left(\fracddpart{T}{p}\right)_h,
+        }
+        which denotes pressure derivative of the temperature at constant enthalpy can be considered.
+        This can be transformed into
+        \Eq{}{
+            \mu_{JT} = \frac{1}{c_p} \left[T \left(\fracddpart{v}{T}\right)_p - v \right]
+        }
+        \todo{elaborate on different terms.}
+        \todo{add derivative in appendix?}
+
+        \stdfig{GNUPlot/pr_isenthalpes}{Isenthalpes computed by Peng-Robinson model.}{fig:pr_isenthalpes}{}
+
+        If we employ the Peng-Robinson equation of state we can plot the isenthalpes for ambient air
+        ($x_{N_2}=0.7812$, $x_{O_2}=0.2095$, $x_{Ar}=0.0093$ ) in a PT-diagramm (\reffig{fig:pr_isenthalpes}).
+        One can easily see, that in certain ranges a pressure decrease will result in an increase in temperature,
+        while for other regions in a decrease. It is interesting to mention that the non-idealities
+        of a given gas give rise to this effect. For an ideal gas the temperature change at isenthalpic
+        expansion would always be zero. Luckily for the cryogenic engineer real gases deviate from ideal
+        behaviour especially at elevated pressures and low temperatures. It is therefore important to give some
+        consideration to the thermodynamic model used to describe the properties of the system in question, as the
+        non-ideal properties need to be captured appropriately.
+
+        A different way of expanding a compressed gas, is by letting it produce work in an fluid kinetic machine.
+        If one assumes an adiabatic devices and disregards irreversible effects, this process can be viewed as
+        isentropic. Analogous to the isenthalpic case an isentropic expansion coefficient can be defined
+        \Eq{}{
+            \mu_S = \left( \fracddpart{T}{p} \right)_S = \frac{T}{c_p} \left( \fracddpart{v}{T} \right)_p.
+        }%
+
+        Here the derivative in the second form corresponds to the volumetric coefficient of thermal expansion
+        $\beta$, which is always positive for gases, which in turn means, that an isentropic expansion
+        will always result in an temperature decrease, whereas the isentropic expansion only led to a decrease in
+        certain cases. Furthermore an isentropic expansion over the same pressure range will always result in
+        lower temperatures than an isenthalpic expansion. Additionally work can be recovered. The reason
+        that isentropic valves are most commonly used in liquefaction systems, is that those work producing
+        machines cannot handle significant phase changes, which is after all the desired result of liquefaction.
+
+        Traditionally only the isenthalpic expansion had been used within the cryogenic air separation process,
+        since -- as mentioned before -- the air needs to be liquefied in order to be fed into be distilled. However
+        in modern process configurations the isentropic expansion is also considered, and partial streams are fed into
+        the low pressure column in gaseous form.
+
+
+\section{Heat exchange}
+\label{sec:heat_exchange}
+    The issue of heat integration is essential to the economic performance of cryogenic air separation. Foremost
+    one must consider the special column configuration used in the process. Since operation of the condenser in the
+    low pressure section only becomes possible if the reboiler in the high pressure section functions as heat sink,
+    no external utilities are supplied to either unit. Rather they are combined into a single heat exchange unit. Thus
+    the absolute value of the reboiler energy must be equal to the energy recovered from the condenser. Furthermore
+    the material streams entering the process can -- and should -- exchange heat with the process streams leaving it.
+    The combined condenser / reboiler for LPC / HPC column is assumed as a given heat exchange. This males sense insofar,
+    as this is a necessity in terms of the actual physical implementation of the process units. Also the usage of the
+    oxygen rich liquid from the HPC as coolant in the Argon condenser is assumed as fixed.
+
+    This leaves the process stream leaving the compression stage of the process as well as all product and waste streams
+    leaving the process. All those streams are -- for simulation purposes -- fed into a single multi-stream heat exchange
+    unit. To model this unit a simple model is employed which essentially consists of one single enthalpy balance
+    \Eq{eq:hx_hbalance}{
+        0 = \sum_i H_i^{out} - H_i^{in}, \eqannote{}.
+    }
+    \todo{add var for no streams, distinguish hot and cold?}
+    The enthalpy streams $H_i^{in}$ and $H_i^{out}$ are determined by their respective material stream, their compositions,
+    pressures and temperatures. All inlet values are supplied by the surrounding process flowsheet. The outlet material streams
+    are equal to the inlet values, as no reactions or material exchange takes place within the unit. The outlet pressure 
+    is determined by a specified pressure drop over the unit. This pressure drop might be specified for each stream separately
+    but in this context a single value seems more reasonable. This leaves the outlet temperatures as free variables. However 
+    as we are dealing with one single equation, consequently the degree of freedom for this model is one, meaning all but one
+    one outlet temperature have to be supplied. 
+    
+    Apparently this approach exhibits several shortcomings. For one the need to specify all but one temperature is 
+    unsatisfactory. In addition to that none of the principles of heat integration are considered in this model. 
+    Neither are there facilities to check whether any energy would be transported across a pinch point, nor is
+    it assured, that the minimum driving force criteria is not violated. Even more essential, no pairing of 
+    hot and cold streams that would exchange heat is undertaken. All those aspects are usually examined separately 
+    by means of an composite curve or other tools for heat integration. Recently an alternative approach for
+    simultaneous heat integration and process optimization has been proposed \cite{Kamath.2012}. The approach 
+    presented there is also able of handling phase changes. However it is associated with considerable computational 
+    effort. As the ASU process, is quite expensive as it is it was decided to exclude this approach for the time being 
+    and manually check the thermodynamic feasibility of converged solutions. 
+
+
+%\subsection{Centrifugal pump}
+%	
+%	\paragraph{Cost estimation}
+%		The cost for the pump excluding the motor can be approximated by
+%		\Eq{eq:pump:CostPump}{
+%			C_B & = \exp \left[ 9.7171 - 0.6019 \ln[S] + 0.0519 (\ln[S])^2 \right] \eqannote{40 \leq S \leq 100000}\\
+%			C_p & = f_T \, f_M \, C_B.
+%		}
+%		The cost for the centrifugal pump is approximated by the value $S = Q \cdot \sqrt{H} $, where
+%		$Q$ denotes the volume flow through the pump in gallons per minute $[gpm]$ and $H$ the
+%		pump head in $[ft]$.
+%		
+%		The costs given above is excluding the motor needed. It is then estimated separately. In this
+%		case the specific quantity is the power consumption $P_C$ needed for the desired stream transport.
+%		
+%		\Eqml{eq:pump:CostMotor}{
+%			C_B  = \exp\big[ 5.8259 + 0.13141 \ln[P_C] + 0.053255 (\ln[Pc])^2 \\
+%				 + 0.028628 (\ln[P_C])^3 - 0.0035549 (\ln[P_C])^4 \big]
+%		}	
+%
+%	\todo[inline]{add formulas for vapour fraction}
+%	\todo[inline]{check if . or , are used for decimals ...}
+
+%\subsubsection{Expander}
+
+
+%\subsection{Heater}
+%
+%	\stdfig{pgfplots/Heater}{Heater model.}{fig:Heater}{h}
+%
+%	\paragraph{Mass and component balances}
+%	\Eq{eq:comp:MassBalance}{
+%		0 = F^{in} - F^{out}
+%	}%
+%	\Eq{eq:comp:CompBalance}{
+%		0 = z_i^{in} - z_i^{out}
+%	}%
+%	
+%	\paragraph{Pressure drop}
+%	\Eq{eq:reboil:PressureDrop}{
+%		p^R = p^{in} + \Delta p
+%	}%
+%	
+%	\todo[inline]{add formulas for vapour fraction}
+%		
+%\subsubsection{Pump}
+%
+%\subsubsection{Separator}
+%
+%\subsubsection{Joule-Thompson valve}
+%    \todo{add effect for cooling....}
+%
+%\subsection{Splitter}
+%	\stdfig{pgfplots/Splitter}{Splitter model}{fig:Splitter}{h}
+%	The splitter is a fairly simple process component. Its sole purpose is -- as the name
+%    suggests -- to split a given material stream into several sub-streams. No reactions
+%    or heat exchange take place in this unit. The molar properties remain unchanged.
+%    The global mass balance is therefore the governing equation for this unit where
+%    the feed $F^{in}$ is split according to the split fractions $\xi_i$ into $N^s$
+%    sub-streams
+%	\paragraph{Mass and component balances}
+%	\Eq{eq:comp:MassBalance}{
+%        0 = F_i^{out} - F^{in} \cdot \xi_i, \eqannote{i = 1 \dots }, \\
+%        0 = 1 - \sum_{i=1}^{N^s}
+%	}%
+%
+%    \paragraph{Pressure drop}
+%    To take into account the actual unit a pressure drop over the unit can be specified
+%	\Eq{eq:split:PressureDrop}{
+%		p^{out} = p^{in} + \Delta p.
+%	}%
+
+\section{Thermodynamic models}
 \label{sec:peng-rob}
+    Aside from the unit operation models, the behaviour of materials in a process needs to be adequately 
+    accounted for. This is done by means of so called equations of state (EOS) and excess Gibbs energy 
+    models. In terms of thermodynamics there are only a limited amount of variables. Namely the pressure, 
+    density and temperature as well as composition. While equations of state can model a given system in 
+    the vapour as well as liquid phase, excess Gibbs energy models only account for the behaviour of a liquid 
+    and need to be used in conjunction with other models for the vapour phase. However they have shown 
+    considerable better performance for highly non-ideal systems \cite{AndreasPfennig.2003}. As mentioned 
+    earlier (\refsec{sec:comp_liq}) it is essential to accurately capture the non-idealities of air 
+    in order to capture the liquefaction process. In the case of cryogenic air separation, the Peng-Robinson
+    as well as the Benders equation of state have shown satisfactory performance. The Peng-Robinson equation 
+    was chosen to be used in the presented model
+    \Eq{eq:peng_rob}{
+        p & = \frac{RT}{V-b} - \frac{a_c \left[1+m\left(1-\sqrt{T_r}\right)\right]^2}{V^2+2bV-b^2} \\
+        m & = 0.37464 + 1.54226 \omega - 0.26992 \omega^2 \\
+        a_c & = 0.45724 \frac{R^2T_c^2}{p_c} \\
+        b & = 0.077796 \frac{RT_c}{p_c} \\
+        \omega & = -1 - \log_{10} \, (p_r^{sat})_{T_r = 0.7}
+    }
+    \nc{p}{pressure}{Pa}
+    \nc{m}{parameter in Peng-Robinson EOS}{-}
+    \nc{a_c}{parameter in Peng-Robinson EOS}{\frac{m^5}{mol^2 s^2}}
+    \nc{b}{parameter in Peng-Robinson EOS}{\frac{m^3}{mol}}
+    However the Peng-Robinson EOS relies on the so called one-fluid theory which models each fluid as pure. 
+    To model mixtures the pure component parameters have to be ''mixed''
+    \Eq{}{
+        a & = \sum_{i=1}^C \sum_{j=1}^C y_i y_j a_{ij}, \\
+        a_{ij} & = \sqrt{a_i a_j} (1 - k_{ij}), \\
+        b & = \sum_{i=1}^C y_i b_i.
+    }
+    
+    From that EOS numerous relevant properties such as excess enthalpy, fugacity coefficients or densities 
+    can be calculated. For a list of some relevant equations refer to \refsec{app:peng_rob_deriv}.
+    \todo{which properties should be included? Or move everything to Appendix?}
 	
 \section{Economic models}
 \label{sec:EconModel}
@@ -513,7 +869,7 @@
 	factors presented in this chapter are, if not stated otherwise, taken from \cite{Seider.2010}.
 	Also unless otherwise stated the unit cost is given for the year 2006 ($CE = 500$).
 	
-	\subsection{Destillation column}
+	\subsubsection{Destillation column}
 		Out of all the process equipment the distillation column probably is the most elaborate
 		unit. It also poses the greatest challenges when it comes to finding an appropriate
 		estimate for its cost. This is die to the fact that the column in itself is rather
@@ -525,7 +881,7 @@
 		focuses on early design stages those location specific influences will be disregarded
 		to arrive at simpler models for cost estimation.
 		
-		\subsubsection{Vertical tower}
+		\paragraph{Vertical tower}
 			The cost for the vessel $C_V$ which is to be vertically erected vertically is dependent
 			on teh weight fo the weight $W$ ($[lbs]$) of the vessel. This includes valves, manholes and
 			other details directly connected with the tower. However the cost for ladders,
@@ -548,7 +904,7 @@
 				C_{PL} = 300.9 \cdot \pow{D_i}{0.63316} \cdot \pow{L}{0.80161}.
 			}
 			
-		\subsubsection{Weight}
+		\paragraph{Weight}
 			As can be seen from the above correlations the weight of the column is a determining factor
 			for the estimated and actual cost. Therefore some thought should be put into how this can
 			be determined, when the final design is unknown. Again several correlations have been applied
@@ -577,18 +933,19 @@
 			Furthermore the given formulas only apply to pressures above ambient conditions. Thus low pressure
 			or vacuum distillation is not covered by the presented formulas.
 			
-		\subsubsection{Column internals}
+		\paragraph{Column internals}
 			While internal support structures are already considered by the equations given above, the
 			internals responsible to ensure product separation are not. Those make up a very significant
 			amount of the total column cost and are available .
-	
-	\subsection{Centrifugal pump}
+	       \todo{finish column internals}
+
+	\subsubsection{Centrifugal pump}
 		Pumps are among the most common units of process equipment. While there are several different
 		kinds of pumps that can be used, the centrifugal pump is one of the most popular choices and
 		denotes a very likely choice for the process conditions considered in this application. Hence
 		other pump types will not be considered at this point.
 		
-		\subsubsection{Pump}
+		\paragraph{Pump}
 			In terms of operations pumps are best described by the volumetric flow transported $Q$ as
 			well as the pump head $H$, the hight that needs to be overcome. Data taken from the company
 			Mosanto was used to correlate the pump cost to a specific value
@@ -611,7 +968,7 @@
 			\stdtab{Tables/PumpFactorsType}{Pump type factors \cite{Seider.2010}.}{tab:pump:Type}
 			\stdtab{Tables/PumpFactorsMaterial}{Pump material factors \cite{Seider.2010}.}{tab:pump:Material}
 			
-		\subsubsection{Electric motor}
+		\paragraph{Electric motor}
 			Separately from the pump itself the motor to drive the compression is considered. While the
 			volumetric flow and the pump head certainly are valid choices to correlate motors for pumps
 			especially, the power consumption is a more general specific value
@@ -643,24 +1000,24 @@
 			
 			\stdtab{Tables/MotorTypeFactors}{Type factors for different motor types.}{tab:pump:MotorTypes}
 	
-	\subsection{Compressor}
+	\subsubsection{Compressor}
 		The cost of compressors is correlated with their respective power consumption measured in horsepower.
 		Although not the most efficient type of compressor, centrifugal compressors are very popular in the
 		process industry, as they are easily controlled an deliver a very steady flow. However as different
 		types might be employed as well base cost correlations for centrifugal, reciprocation and screw
 		compressors are given.
 		
-			\subsubsection{Centrifugal compressor}
+			\paragraph{Centrifugal compressor}
 				\Eq{eq:cost:compressor:centrifugal}{
 					C_B = \exp\big\{ 7.5800 + 0.80 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 30000}
 				}
 			
-			\subsubsection{Reciprocating compressor}
+			\paragraph{Reciprocating compressor}
 				\Eq{eq:cost:compressor:centrifugal}{
 					C_B = \exp\big\{ 7.9661 + 0.80 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 20000}
 				}
 				
-			\subsubsection{Screw compressor}
+			\paragraph{Screw compressor}
 				\Eq{eq:cost:compressor:centrifugal}{
 					C_B = \exp\big\{ 8.1238 + 0.7243 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 750}
 				}
@@ -680,7 +1037,7 @@
 		carbon steel. Some appliances may require more resistant and also more expensive materials such as
 		stainless steel ($f_M = 2.5$) or an nickel alloy ($f_M = 5.0$).
 		
-	\subsection{Reboiler / condenser}
+	\subsubsection{Reboiler / condenser}
 		Reboiler and condenser can be characterized as heat exchangers, and be handled in the same way,
 		as the main difference is weather heat is transferred to or from the process stream. In that sense
 		they must be distinguished when considering the operating cost, as the cost for hot or cold
@@ -696,7 +1053,7 @@
 		The correction for pressures $f_P$ takes into account the operating pressure $P_o$ and
 		is computed by
 		\Eq{eq:cost:condreb:pcorrect}{
-			f_P = 0.8510 + 0.1292 P_o + 0.0198 * P_o^2 .
+			f_P = 0.8510 + 0.1292 P_o + 0.0198 * P_o^2.
 		}
 		
 		The material correction factor $f_M$
@@ -704,13 +1061,83 @@
 			f_M =
 		}
 		
-		\subsubsection{Shell and tube heat exchanger}
+		\paragraph{Shell and tube heat exchanger}
 		\Eq{eq:cost:condreb}{
 			C_B = \exp\big\{ 11.667 - 0.8709 \cdot \pow{\ln[A]}{} + 0.09005 \cdot \pow{\ln[A]}{2} \big\}
 		}
 		
-		\subsubsection{Double pipe}
+		\paragraph{Double pipe}
 		\Eq{}{
 			C_B = \exp\big\{ 7.146 + 0.1600 \cdot \pow{\ln[A]}{} \big\}
 		}
-		
+
+\section{Cryogenic air separation process }	
+    \begin{figure}
+        \centering
+        \input{Pictures/ASU_simple_coco}
+        \caption{simplified cryogenic air separation process.}
+        \label{fig:ASU_simple_coco}
+    \end{figure}
+
+    \subsection{Flowsheet initialization}
+        Even for single unit models initialization might pose difficulties, when a whole process model is considered,
+        this task might become even more difficult. If the process units are mainly sequential, the task of initializing
+        becomes no more difficult, then initializing the single units. But in most chemical processes a purely sequential
+        arrangement of process equipment is not given. As soon as feedbacks are introduced into the process, the question
+        of initialization becomes considerably more complex. In the most general case it is not even ensured, that a steady
+        state of process operations even exists. As feedbacks are introduced, the process might become unstable or display
+        oscillatory behaviour. \Reffig{fig:foreward_process} shows the concept for a purely feed forward process, while
+        \reffig{fig:feedback_process} is an example for a process with feedbacks, in particular an arrangement with an inner
+        and outer feedback loop.
+
+        \begin{figure}
+            \centering
+            \begin{subfigure}{0.4\textwidth}
+                \input{Pictures/foreward}
+                \caption{Feed forward process.}
+                \label{fig:foreward_process}
+            \end{subfigure}
+            \hspace{0.05\textwidth}
+            \begin{subfigure}{0.4\textwidth}
+                \input{Pictures/feedback}
+                \caption{process with feedbacks.}
+                \label{fig:feedback_process}
+            \end{subfigure}
+            \caption{Different process configurations.}
+        \end{figure}
+
+        As mentioned before feedbacks greatly complicate calculations for a given process. With the cryogenic air separation
+        process this is especially true, since it is highly integrated and coupled. The only external cooling that is available
+        comes from the initial compression and expansion of the ambient air. During the compression, since temperatures are
+        still around ambient conditions and conventional coolants can be employed as heat sink. This is done during the
+        multi-stage compression. All other heat exchange within the process can only be done against other internal process
+        streams, as the process operates at conditions far away form ambient conditions. Far more than the feedbacks associated
+        with material streams, it is the energy coupling that makes simulation of this process a non-trivial task. Especially, as
+        the energies in condenser and reboiler of distillation columns have great effects on all operating condition.
+
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.9\textwidth]{Pictures/ASU_simple_gPROMS.eps}
+            \caption{Implementation of simplified cryogenic air separation process in gPROMS.}
+            \label{fig:ASU_simple_gproms}
+        \end{figure}
+
+        \Reffig{fig:ASU_simple_gproms} shows the flowsheet of the simplified ASU process depicted in \reffig{fig:ASU_simple_coco}.
+        In order the symbols in the material streams (blue) and energy streams (red) represend so called recycle breakers, which
+        play a vital role during initialization of the flowsheet. The recycle breakers play no part in the converged flowsheet.
+        Their function is to break the recycle or feedback loops in the process and transform the process into a feed forward process
+        during initial computations. To achieve that, the recycle breakers are supplied with initial guesses for for all properties
+        associated with the respective material or energy streams. For the energy recycle breakers the transformation from open to
+        closed operation mode is rather simple. The outlet energy stream is merely moved from initial guess to inlet stream by
+        means of \refeq{eq:homotopy}. For the material breaker one hast to invest a little more effort, as not all properties can be
+        moved so easily while maintaining physical sense. The material stream and pressure are treated identically, while the temperature
+        needs to computed from an enthalpy balance.
+
+        As for the concrete initialization procedure: first all recycle breakers are open and have the initial guesses at their outlet
+        ports. Then all single units are converged. While this is done simultaneously in terms of the solution algorithm, the downstream
+        units remain in the simplified stages of the unit respective initialization procedures wile the upstream units are solved with the
+        rigorous models. Once all units have been converged, the recycle breakers are closed one after another. First the material stream
+        between the Argon column (ArC) and the low pressure column (LPC), then the energy couple between the Argon condenser and
+        and the oxygen rich material stream is closed. Finally the -- maybe most important -- connection between the LPC reboiler
+        and HPC condenser is established.
+

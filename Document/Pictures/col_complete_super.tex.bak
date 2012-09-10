@@ -27,4 +27,6 @@
     \draw [arrow] (2.5,4.8) -- (4,4.8) ;
     \draw [arrow] (2.5,-4.8) -- (4,-4.8) ;
     \draw [arrow] (-3.0,0.8) -- (-1.0,0.8) ;
+    \node at (2.0,-6.2) {\scriptsize N} ;
+    \node at (2.0,6.2) {\scriptsize 1} ;
 \end{tikzpicture}

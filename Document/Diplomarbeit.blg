@@ -1,48 +1,60 @@
 This is BibTeX, Version 0.99d (TeX Live 2012/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Diplomarbeit.aux
-I found no \citation commands---while reading file Diplomarbeit.aux
-I found no \bibdata command---while reading file Diplomarbeit.aux
-I found no \bibstyle command---while reading file Diplomarbeit.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 498 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+The style file: plain.bst
+A level-1 auxiliary file: Content/Preamble/CoverPage.aux
+A level-1 auxiliary file: Content/Preamble/TaskDescription.aux
+A level-1 auxiliary file: Content/Preamble/StatutoryDeclaration.aux
+A level-1 auxiliary file: Content/Abstract.aux
+A level-1 auxiliary file: Content/Introduction.aux
+A level-1 auxiliary file: Content/AirSep.aux
+A level-1 auxiliary file: Content/ProcessDesign.aux
+A level-1 auxiliary file: Content/ProcessEconomics.aux
+A level-1 auxiliary file: Content/MathModel.aux
+A level-1 auxiliary file: Content/outlook.aux
+A level-1 auxiliary file: Content/BibAppendix.aux
+Database file #1: Literature.bib
+Warning--empty publisher in BOSTONJ.F..
+Warning--empty year in BOSTONJ.F..
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            658 strings with 8365 characters,
+and the built_in function-call counts, 7211 in all, are:
+= -- 732
+> -- 309
+< -- 2
++ -- 121
+- -- 100
+* -- 542
+:= -- 1191
+add.period$ -- 63
+call.type$ -- 21
+change.case$ -- 112
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 23
+duplicate$ -- 260
+empty$ -- 573
+format.name$ -- 100
+if$ -- 1492
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+int.to.str$ -- 21
+missing$ -- 26
+newline$ -- 108
+num.names$ -- 42
+pop$ -- 103
+preamble$ -- 1
+purify$ -- 92
 quote$ -- 0
-skip$ -- 0
+skip$ -- 173
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 551
+swap$ -- 41
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+type$ -- 74
+warning$ -- 2
+while$ -- 76
+width$ -- 23
+write$ -- 235
+(There were 2 warnings)

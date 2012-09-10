@@ -1,0 +1,8 @@
+\begin{tikzpicture}[s}]
+    \draw [line width=1pt] (-1,0) -- (1,1) -- (1,-1) -- cycle ;
+	\draw [arrow] (-3,0) -- (-1,0) node [pos=0.5, above] {\footnotesize $F^{in}$, $z_i^{in}$};
+	\draw [arrow] (1,0.75) -- (3,0.75) node [pos=0.5, above] {\footnotesize $F_1^{out}$, $z_i^{out}$};
+	\node at (2,0.25) {\vdots};
+    \node at (0.25,0) {$\xi_i$};
+	\draw [arrow] (1,-0.75) -- (3,-0.75) node [pos=0.5, above] {\footnotesize $F_n^{out}$, $z_i^{out}$};
+\end{tikzpicture}

@@ -4,18 +4,40 @@
 
 \newboolean{draft}
 \setboolean{draft}{true}
-
+%\setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
-	\usepackage[colorinlistoftodos,]{todonotes}
+    \usepackage[colorinlistoftodos]{todonotes}
+    \includeonly{
+                %Content/Abstract,
+                %Content/Introduction,
+                %Content/AirSep,
+                %Content/ProcessDesign,
+                %Content/ProcessEconomics,
+                Content/MathModel,
+                %Content/outlook,
+                Content/BibAppendix
+    }
 }{
-	\usepackage[colorinlistoftodos, disable]{todonotes}
+    \usepackage[colorinlistoftodos, disable]{todonotes}
 }
 
-\includeonly{Content/column}
-
 \begin{document}
+
+    \pagenumbering{roman}
 	
-	\include{Content/CoverIntro}
+    \include{Content/Preamble/CoverPage}
+	\include{Content/Preamble/TaskDescription}
+	\include{Content/Preamble/StatutoryDeclaration}
+
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    \printnomenclature[2.5cm]
+    \clearpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+%	\include{Content/CoverIntro}
 	\include{Content/Abstract}
 	\include{Content/Introduction}
 	
@@ -24,10 +46,9 @@
 	\include{Content/ProcessEconomics}
 	%\include{Content/Uncertainty}
 	\include{Content/MathModel}
-	\include{Content/MathConsiderations}
+%	\include{Content/MathConsiderations}
 	\include{Content/outlook}
 
-	\include{Content/column}
 	\include{Content/BibAppendix}
 	
 	\listoftodos

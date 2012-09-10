@@ -1,0 +1,44 @@
+% Task Description
+\thispagestyle{plain} 
+
+\begin{center}
+	\LARGE
+	Diploma Thesis\\
+	for\\
+	Mr. Robert Pack\\
+	\vspace{4ex}
+
+	\vspace{3ex} Task Description
+\end{center}
+
+\normalsize
+
+Current air separation process optimization is carried out sequentially with various discrete or continuous process parameters, 
+and then iterated with equipment sizing and costing. Typical process parameters include temperature, pressure, flow, pressure 
+drop, product purity, distillation column feed and/or draw locations staging, and etc. Major equipment used in cryogenic air 
+separation include air compressors, turbines, plate and fin heat exchangers, cooler, distillation columns, condensers, reboilers, 
+and etc. Once process optimum condition is identified, individual equipment is sized and cost estimated. Capital cost is then feed 
+back to process to verify the original optimum condition. If the original optimum condition changes, we will have to re-optimize 
+the process parameter and identify the new process optimum condition. New equipment sizing and costing will have to be 
+adjusted accordingly.
+
+The deficiency of the current process is apparent: manual, sequential and iterative. We would like to streamline the optimization 
+process, incorporate the capital equipment cost into the process optimization. The process optimizer we target is gPROMS. The 
+goal is to simultaneously optimize process and equipment to minimize the total process cost with user defined objective functions.
+
+ \vfill{
+\begin{flushright}
+	\begin{minipage}[r]{10cm}
+		\begin{center}
+			\hrule\vspace*{2ex}Prof. Efstratios Pistikopoulos\\
+			\vspace{2cm}
+			\hrule\vspace*{2ex}Prof. Dr.-Ing. Wolfgang Marquardt\\
+			\vspace{1cm}
+		\end{center}
+	\end{minipage}
+\end{flushright}
+}
+
+Betreuer der Arbeit: Dipl. Ing. Mirko Skiborowski\\
+Tag der Abgabe: xx.xx.2012
+\todoil{color=AVTLight2Blue}{Add due date}

@@ -1,6 +1,11 @@
-\begin{tikzpicture}[arrow/.style={line width=1pt,->,>=latex}]
-	\draw [line width=1pt] (-2,2) rectangle (2,0) node at (0,1) {\footnotesize $\Delta p$, $\eta^C$};
-	\draw [arrow] (-5,1.5) -- (-2,1.5) node [pos=0.5, above] {\footnotesize $F^{in}$, $H^{in}$, $p^{in}$} node [pos=0.5, below] {$T^{in}$, $z_i^{in}$, $S^{in}$};
-	\draw [line width=1pt,->,>=latex,dashed] (-5,0.5) -- (-2,0.5) node [pos=0.5, above] {\footnotesize $W^C$};
-	\draw [arrow] (2,1) -- (5,1) node [pos=0.5, above] {\footnotesize $F^{out}$, $H^{out}$, $p^{out}$, $T^{out}$} node [pos=0.5, below] {$z_i^{out}$, $H_S^{out}$, $T_S^{out}$, $S_{out}$};
-\end{tikzpicture}Ê
+\begin{tikzpicture}[scale=0.6]
+    \compressor{0}{0}{3.0}
+    \heater{5}{-2.625}{3}{line width=1pt}
+    \draw [line width=1pt] (8,-2.625) -- (8,0) ;
+    \compressor{8}{0}{2.0}
+    \heater{12}{-2.625}{3}{line width=1pt}
+    \draw [line width=1pt] (15,-2.625) -- (15,0) ;
+    \compressor{15}{0}{2.0}
+    \heater{19}{-2.625}{3}{line width=1pt}
+    \draw [arrow] (22,-2.625) -- (23,-2.625) ;
+\end{tikzpicture}

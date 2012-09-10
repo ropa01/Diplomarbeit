@@ -1,0 +1,3 @@
+\begin{tikzpicture}[arrow2/.style={line width=0.5pt,->,>=latex,gray},scale=0.52]
+    \draw [arrow] (0,0)  
+\end{tikzpicture}

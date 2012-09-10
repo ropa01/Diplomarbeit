@@ -1,0 +1,35 @@
+%makeindex Diplomarbeit.nlo -s nomencl.ist -o Diplomarbeit.nls
+\input{preambel}
+\input{pgfplots/TikZTemplates}
+
+\newboolean{draft}
+\setboolean{draft}{true}
+
+\ifthenelse{\boolean{draft}}{
+	\usepackage[colorinlistoftodos,]{todonotes}
+}{
+	\usepackage[colorinlistoftodos, disable]{todonotes}
+}
+
+%\includeonly{Content/MathModel}
+
+\begin{document}
+
+	\include{Content/CoverIntro}
+	\include{Content/Abstract}
+	\include{Content/Introduction}
+	
+	\include{Content/AirSep}
+	\include{Content/ProcessDesign}
+	\include{Content/ProcessEconomics}
+	%\include{Content/Uncertainty}
+	\include{Content/MathModel}
+%	\include{Content/MathConsiderations}
+	\include{Content/outlook}
+
+%	\include{Content/column}
+	\include{Content/BibAppendix}
+	
+	\listoftodos
+	
+\end{document}

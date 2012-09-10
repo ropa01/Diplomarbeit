@@ -1,0 +1,7 @@
+\begin{tikzpicture}[arrow2/.style={line width=0.5pt,->,>=latex,gray}]
+    \tower{0}{3.2}{5}{A}{B}
+    \tower{0}{-2}{3}{C}{D}
+    \draw [fill = white,line width = 1pt] (0.75,0.75) rectangle (-0.75,-0.75) ;
+    \draw [line width = 0.75pt] (-0.75,-0.75) -- (-0.35,0.45) -- (0.35,0.45) -- (0.75,-0.75) ;
+    \draw [line width = 0.75pt] (-0.75,0.35) -- (0.55,0.35) -- (0.55,0.10) -- (-0.55,0.10) -- (-0.55,-0.10) -- (0.55,-0.10) -- (0.55,-0.35) -- (-0.75,-0.35) ;
+\end{tikzpicture}

@@ -1,0 +1,147 @@
+\documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibliography=totoc,oneside,a4paper,BCOR8mm,fleqn,abstracton]{scrreprt}
+\usepackage[UKenglish]{babel}
+\usepackage{cmbright}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+%\usepackage[applemac]{inputenc}
+\usepackage[Latin2]{inputenc}
+\usepackage{graphicx}  %[draft]
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{graphics}
+%\usepackage{rotating}
+\usepackage{pstricks}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage{nomencl}
+\usepackage{lscape}
+\usepackage{ae}
+\usepackage{multirow}
+\usepackage{listings}
+\lstloadlanguages{[ANSI]C}
+\usepackage{xcolor}
+    \xdefinecolor{RWTHBlue}{HTML}{00549F}
+	%\xdefinecolor{RWTHBlue}{rgb}{0.0,0.3294,0.6235}
+    \xdefinecolor{RWTHlightBlue}{HTML}{8EBAE5}
+	%\xdefinecolor{RWTHlightBlue}{rgb}{0.5569,0.7294,0.8980}
+    \xdefinecolor{RWTHRed}{HTML}{C7225A}
+	%\xdefinecolor{RWTHRed}{rgb}{0.780392156,0.133333333,0.352941176}
+    \xdefinecolor{AVTLightBlue}{HTML}{AED3F0}
+	%\xdefinecolor{AVTLightBlue}{rgb}{0.682352941, 0.82745098, 0.941176471}
+    \xdefinecolor{AVTLight2Blue}{HTML}{6CD2F8}
+	%\xdefinecolor{AVTLight2Blue}{rgb}{0.423529412, 0.823529412, 0.97254902}
+    \xdefinecolor{AVTBlue}{HTML}{39BFDC}
+	%\xdefinecolor{AVTBlue}{rgb}{0.223529412, 0.749019608, 0.862745098}
+    \xdefinecolor{AVTDarkBlue}{HTML}{0887C4}
+	%\xdefinecolor{AVTDarkBlue}{rgb}{0.031372549, 0.529411765, 0.768627451}
+    \xdefinecolor{AVTLightGreen}{HTML}{50B64A}
+	%\xdefinecolor{AVTLightGreen}{rgb}{0.31372549, 0.71372549, 0.290196078}
+    \xdefinecolor{AVTGreen}{HTML}{B4D53E}
+	%\xdefinecolor{AVTGreen}{rgb}{0.705882353, 0.835294118, 0.243137255}
+    \xdefinecolor{ImperialDarkBlue}{HTML}{003F7A}
+	%\xdefinecolor{ImperialDarkBlue}{rgb}{0.0,0.2471,0.4784}
+    \xdefinecolor{ImperialLightBlue}{HTML}{7798B9}
+	%\xdefinecolor{ImperialLightBlue}{rgb}{0.4686,0.5961,0.7255}
+	\xdefinecolor{CPSEBlue}{HTML}{0a5598}
+	\xdefinecolor{PSEGreen}{HTML}{006c85}
+    \xdefinecolor{PSEOrange}{HTML}{F58220}
+	%\xdefinecolor{PSEOrange}{rgb}{0.96078,0.50980,0.12549}
+	\xdefinecolor{05gray}{gray}{0.5}
+\usepackage[colorlinks=true, linkcolor=ImperialDarkBlue, citecolor=ImperialLightBlue, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
+%\usepackage{subfloat}
+\usepackage{paralist}
+\usepackage{xifthen}
+\usepackage{scrhack}
+\usepackage{pgfplots}
+	\pgfplotsset{compat=newest}
+\usepackage{pgf-pie}
+\usepackage{array}
+
+\bibliographystyle{plain}
+\pagestyle{headings}
+\setlength{\unitlength}{1cm}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1.8ex plus0.5ex minus0.5ex}
+\setlength{\baselineskip}{1.5ex plus0.5ex minus0.5ex}
+\sloppy
+
+\setlength{\textwidth}{17cm}
+\setlength{\textheight}{24cm}
+\setlength{\evensidemargin}{-0.5cm}
+\setlength{\oddsidemargin}{-0.5cm}
+\setlength{\topmargin}{-1cm}
+\setlength{\footskip }{8ex}
+\definecolor{avtcolor}{rgb}{0,0.537,0.820}
+
+\renewcommand{\nomname}{Nomenclature}
+%\renewcommand{\figurename}{Figure}
+%\renewcommand{\tablename}{Table}
+%\renewcommand{\contentsname}{Table of Contents}
+%\renewcommand{\listfigurename}{List of Figures}
+%\renewcommand{\listtablename}{List of Tables}
+%\renewcommand{\bibname}{Bibliography}
+\renewcommand{\nompreamble}{\markboth{Nomenclature}{Nomenclature}}
+\renewcommand{\labelitemi}{$\cpbullet$}
+
+\newcommand{\stdfig}[4]{\begin{figure}[#4] \center \input{#1} \caption{#2} \label{#3} \end{figure}}
+\newcommand{\stdtab}[3]{\begin{table} \center {\footnotesize \input{#1}} \caption{#2} \label{#3} \end{table}}
+
+\newcommand{\refeq}[1]{eq. (\ref{#1})}
+\newcommand{\Refeq}[1]{Eq. (\ref{#1})}
+\newcommand{\refeqs}[2]{eqns. (\ref{#1}) - (\ref{#2})}
+\newcommand{\Refeqs}[2]{Eqns. (\ref{#1}) - (\ref{#2})}
+\newcommand{\reffig}[1]{fig. \ref{#1}}
+\newcommand{\Reffig}[1]{Fig. \ref{#1}}
+\newcommand{\reftab}[1]{tab. \ref{#1}}
+\newcommand{\Reftab}[1]{Tab. \ref{#1}}
+\newcommand{\refsec}[1]{sec. \ref{#1}}
+\newcommand{\Refsec}[1]{Sec. \ref{#1}}
+\newcommand{\refchp}[1]{chap. \ref{#1}}
+\newcommand{\Refchp}[1]{Chap. \ref{#1}}
+
+\newcommand{\eq}[1]{\begin{align} #1 \end{align}}
+\newcommand{\Eq}[2]{\begin{align} #2 \label{#1} \end{align}}
+\newcommand{\eqml}[1]{\begin{multline} #1 \end{multline}}
+\newcommand{\Eqml}[2]{\begin{multline} #2 \label{#1} \end{multline}}
+\newcommand{\minimize}[1]{\underset{#1}{\text{minimize}}}
+\newcommand{\st}{\text{subject to}}
+\newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\eqannote}[1]{\qquad #1}
+\newcommand{\pow}[2]{\left( #1 \right)^{#2}}
+
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
+\newcommand{\nc}[3]{\nomenclature{$#1$}{#2 \nomunit{#3}}}
+
+\newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}
+\newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
+\newcommand{\regitemize}[1]{\begin{itemize}#1\end{itemize}}
+
+\newcommand{\todoil}[2]{\todo[inline, #1]{#2}}
+\newcommand{\addref}{\todo[inline, color=red!40]{add citation}}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\C}[1]{\makebox(0,0)[m]{#1}}
+\newcommand{\CM}[1]{\C{\begin{tabular}{c}#1\end{tabular}}}
+
+\newcommand{\gproms}{gPROMS\raisebox{1ex}{\scriptsize \textregistered}\,}
+\newcommand{\aspen}{Aspen Plus\raisebox{1ex}{\scriptsize \textregistered}\,}
+
+\newcommand{\mols}{\frac{mol}{s}}
+\newcommand{\molenth}{\frac{J}{mol}}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\newcounter{program}
+\setcounter{program}{0}
+\newcommand{\refprogram}[1]{\refstepcounter{program}\label{#1}}
+%\newcommand{\program}[1]{\begin{equation} \begin{aligned} #1 \end{aligned} \end{equation}}
+\newcommand{\program}[2]{\refprogram{#1} \begin{minipage}{0.9\textwidth} \begin{equation*}%
+\begin{aligned} #2 \end{aligned} \end{equation*} \end{minipage} \begin{minipage}{0.09\textwidth}%
+{\hfill (P \arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
+
+\makenomenclature
+
+

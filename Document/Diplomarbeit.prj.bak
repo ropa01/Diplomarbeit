@@ -4,52 +4,130 @@
 0
 1
 Diplomarbeit.tex
-22
-10
-6
+48
+9
+3
 
 Diplomarbeit.prj
 DATA
-5243122 0 0 1 2 2 50 50 1059 265 1 81 34 -1 -1 0 0 16 0 0 16 1 0 2 2   0
+5243122 0 0 1 7 2 50 50 1059 265 1 81 119 -1 -1 0 0 16 0 0 16 1 0 2 7   0
 Diplomarbeit.tex
 TeX:UNIX
-135376891 0 -1 313 -1 654 0 0 934 409 1 73 493 -1 -1 0 0 62 -1 -1 62 1 0 654 -1   0
+135376891 0 7 39 -1 209 0 0 934 409 1 73 102 -1 -1 0 0 62 -1 -1 62 1 0 209 -1   0
 Content\MathModel.tex
 TeX:UNIX
-1159163 0 -1 16158 -1 13889 50 50 1059 265 1 401 0 -1 -1 0 0 36 -1 -1 36 1 0 13889 -1   0
-Content\column.tex
-TeX
-1060859 0 -1 7150 -1 7157 125 125 1274 583 0 425 510 -1 -1 0 0 15 -1 -1 15 1 0 7157 -1   0
-Content\ProcessEconomics.tex
+1159163 0 -1 59842 -1 59856 50 50 1059 265 1 217 544 -1 -1 0 0 36 -1 -1 36 1 0 59856 -1   0
+Pictures\ASU_simple_coco.tex
 TeX:UNIX
-1159163 1 -1 18086 -1 17988 175 175 1369 633 0 25 204 -1 -1 0 0 -1 -1 -1 -1 1 0 17988 -1   0
-pgfplots\ProjectCashFlow.tex
+286371835 0 -1 30 -1 29 125 125 1296 556 0 257 0 -1 -1 0 0 0 -1 -1 0 1 0 29 -1   0
+preambel.tex
 TeX:UNIX
-1159163 0 -1 0 -1 1119 200 200 1394 658 0 161 391 -1 -1 0 0 -1 -1 -1 -1 1 0 1119 -1   0
-pgfplots\LPC_O2_INIT.tex
+1159163 0 -1 2590 -1 2595 0 0 1009 215 0 489 323 -1 -1 0 0 129 -1 -1 129 1 0 2595 -1   0
+pgfplots\ASU_process_simple.tex
 TeX:UNIX
-286371835 0 17 54 -1 58 0 0 1194 458 1 249 34 -1 -1 0 0 -1 -1 -1 -1 1 0 58 -1   0
-Pictures\col_complete_super.tex
+1159163 1 -1 138 -1 157 50 50 1244 508 0 633 34 -1 -1 0 0 19 -1 -1 19 1 0 157 -1   0
+pgfplots\TikZTemplates.tex
 TeX:UNIX
-1159163 1 -1 2923 -1 2886 150 150 1299 608 0 57 527 -1 -1 0 0 121 -1 -1 121 1 0 2886 -1   0
+1159163 1 -1 1056 -1 1074 25 25 1219 483 1 825 459 -1 -1 0 0 177 -1 -1 177 1 0 1074 -1   0
+Pictures\col_com_stage_super.tex
+TeX:UNIX
+1159163 0 -1 1138 -1 1783 50 50 1199 508 0 713 221 -1 -1 0 0 69 -1 -1 69 1 0 1783 -1   0
+pgfplots\Compressor.tex
+TeX:UNIX
+1159163 0 -1 387 -1 90 25 25 1219 483 1 329 34 -1 -1 0 0 0 -1 -1 0 1 0 90 -1   0
+Pictures\double_column.tex
+TeX:UNIX
+1159163 0 11 44 -1 785 75 75 1064 398 1 433 153 -1 -1 0 0 306 -1 -1 306 1 0 785 -1   0
 Literature.bib
 BibTeX
 1049586 1 703 22 703 1 100 100 1224 587 0 25 306 -1 -1 0 0 29 0 0 29 1 0 1 703   0
-preambel.tex
+pgfplots\Heater.tex
 TeX:UNIX
-1159163 0 -1 3921 -1 3921 0 0 1009 215 0 233 459 -1 -1 0 0 129 -1 -1 129 1 0 3921 -1   0
-Pictures\col_stage_super.tex
+269594619 0 -1 19 -1 490 150 150 1344 608 0 25 102 -1 -1 0 0 19 -1 -1 19 1 0 490 -1   0
+Pictures\LPC_example.tex
 TeX:UNIX
-1159163 0 -1 126 -1 480 175 175 1324 633 1 777 85 -1 -1 0 0 -1 -1 -1 -1 1 0 480 -1   0
-Pictures\condenser.tex
+1159163 1 -1 985 -1 710 75 75 1269 533 0 57 119 -1 -1 0 0 30 -1 -1 30 1 0 710 -1   0
+Tables\Discrepancy.tex
 TeX:UNIX
-1159163 0 -1 726 -1 739 75 75 1224 533 0 841 119 -1 -1 0 0 -1 -1 -1 -1 1 0 739 -1   0
+269594619 0 -1 17 -1 355 0 0 1253 458 0 345 85 -1 -1 0 0 -1 -1 -1 -1 1 0 355 -1   0
+:\Users\Abakus W7\Downloads\drawings.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 25 25 1073 367 0 25 -1938 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Pictures\tech_compar.tex
+TeX:UNIX
+269594619 0 -1 0 -1 79 100 100 1089 442 0 145 51 -1 -1 0 0 -1 -1 -1 -1 1 0 79 -1   0
 Pictures\reboiler.tex
 TeX:UNIX
-1159163 0 -1 721 -1 734 100 100 1249 558 0 817 119 -1 -1 0 0 -1 -1 -1 -1 1 0 734 -1   0
-Pictures\col_com_stage_super.tex
+269594619 0 -1 20 -1 20 100 100 1249 558 0 185 0 -1 -1 0 0 30 -1 -1 30 1 0 20 -1   0
+Pictures\PSA.tex
 TeX:UNIX
-269594619 0 -1 110 -1 109 50 50 1199 508 0 897 0 -1 -1 0 0 -1 -1 -1 -1 1 0 109 -1   0
+269594619 0 -1 0 -1 0 50 50 1039 392 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Pictures\condenser.tex
+TeX:UNIX
+269594619 0 -1 20 -1 20 75 75 1224 533 0 185 0 -1 -1 0 0 30 -1 -1 30 1 0 20 -1   0
+Pictures\col_stage_super.tex
+TeX:UNIX
+269594619 0 -1 19 -1 19 175 175 1324 633 1 225 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
+Pictures\col_complete_super.tex
+TeX:UNIX
+269594619 0 -1 20 -1 20 150 150 1299 608 0 185 0 -1 -1 0 0 80 -1 -1 80 1 0 20 -1   0
+pgfplots\Reboiler.tex
+TeX:UNIX
+269594619 0 -1 19 -1 19 200 200 1394 658 0 177 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
+pgfplots\PSA.tex
+TeX:UNIX
+269594619 0 -1 129 -1 19 175 175 1369 633 0 177 0 -1 -1 0 0 21 0 0 21 1 0 19 -1   0
+pgfplots\LPC_O2_INIT.tex
+TeX:UNIX
+286371835 0 -1 1385 -1 1356 0 0 1194 458 1 409 408 -1 -1 0 0 20 -1 -1 20 1 0 1356 -1   0
+pgfplots\GasPermeation.tex
+TeX:UNIX
+269594619 0 -1 19 -1 554 75 75 1269 533 0 25 153 -1 -1 0 0 19 -1 -1 19 1 0 554 -1   0
+pgfplots\ColTray.tex
+TeX:UNIX
+269594619 0 -1 19 -1 19 50 50 1244 508 0 177 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
+pgfplots\Splitter.tex
+TeX:UNIX
+269594619 0 -1 19 -1 19 0 0 1194 458 0 177 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
+Content\ProcessEconomics.tex
+TeX:UNIX
+1159163 1 -1 18086 -1 17988 175 175 1369 633 0 25 204 -1 -1 0 0 27 -1 -1 27 1 0 17988 -1   0
+Content\column.tex
+TeX
+269496315 1 -1 6156 -1 6176 125 125 1274 583 0 897 238 -1 -1 0 0 15 -1 -1 15 1 0 6176 -1   0
+GNUPlot\pr_isenthalpes.tex
+TeX:UNIX
+1159163 0 -1 4333 -1 4334 100 100 1294 558 0 585 408 -1 -1 0 0 40 -1 -1 40 1 0 4334 -1   0
+GNUPlot\LPC_init_o2.tex
+TeX:UNIX
+1159163 0 -1 3426 -1 3427 100 100 1294 558 0 425 476 -1 -1 0 0 40 -1 -1 40 1 0 3427 -1   0
+Content\appendix.tex
+TeX:UNIX
+1159163 0 -1 1459 -1 676 25 25 1029 383 1 281 221 -1 -1 0 0 -1 -1 -1 -1 1 0 676 -1   0
+Content\BibAppendix.tex
+TeX:UNIX
+1159163 0 -1 49 -1 52 50 50 1054 389 0 105 51 -1 -1 0 0 -1 -1 -1 -1 1 0 52 -1   0
+pgfplots\ProjectCashFlow.tex
+TeX:UNIX
+269594619 0 -1 0 -1 1119 200 200 1394 658 0 161 391 -1 -1 0 0 19 -1 -1 19 1 0 1119 -1   0
+pgfplots\HardSoftConstraint.tex
+TeX:UNIX
+269594619 0 -1 0 -1 417 125 125 1319 583 0 161 136 -1 -1 0 0 -1 -1 -1 -1 1 0 417 -1   0
+pgfplots\GasPie.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 100 100 1294 558 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Tables\LPC_example_data.tex
+TeX:UNIX
+269594619 0 -1 799 -1 808 100 100 1294 558 0 617 170 -1 -1 0 0 -1 -1 -1 -1 1 0 808 -1   0
+GNUPlot\LPC_init_n2.tex
+TeX:UNIX
+1159163 0 -1 3157 -1 3158 125 125 1319 583 0 417 306 -1 -1 0 0 -1 -1 -1 -1 1 0 3158 -1   0
+:\Users\Abakus W7\Downloads\template.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 50 50 1244 508 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+E:\Users\robertpack\Desktop\tikztest\tikztest.tex
+TeX:UNIX
+269594619 1 -1 495 -1 342 25 25 1219 483 0 25 357 -1 -1 0 0 -1 -1 -1 -1 1 0 342 -1   0
 E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\enrtl.tex
 TeX:UNIX
 269594619 0 -1 0 -1 0 200 200 1349 658 0 25 -2295 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
@@ -100,16 +178,21 @@ TeX:UNIX
 <
 *Content/MathModel
 >
+*pgfplots/ASU_process_simple
 *Pictures/col_complete_super
 *Pictures/col_stage_super
 *Pictures/condenser
 *Pictures/reboiler
+*Tables/Discrepancy
+*Pictures/LPC_example
+*GNUPlot/LPC_init_o2
+*GNUPlot/LPC_init_n2
 <
-*Content/MathConsiderations
 *Content/outlook
-*Content/column
+*Pictures/ASU_simple_coco
 *Content/BibAppendix
 >
 *Literature.bib
+*Content/appendix
 <
 <

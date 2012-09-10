@@ -1,0 +1,16 @@
+reset
+set terminal epslatex color
+set 
+terminal epslatex size 8.4cm, 8.4cm
+
+set output "/Users/Abakus W7/Dropbox/Studium/GNUPlot/LPC_Init.tex"
+
+set size ratio 1
+
+set ytics 0.2
+
+set xtics 5.0
+set key top center
+s
+plot[0:70][0.0:1.0] "/Users/Abakus W7/Dropbox/Studium/GNUPlot/LPC_data.dat" using 1:2 with lines tit "init step 1" lt 1 lw 3 lc rgb "#B4D53E"
+unset output
