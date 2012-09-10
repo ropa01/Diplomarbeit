@@ -55,7 +55,7 @@
 \contentsline {paragraph}{Shell and tube heat exchanger}{38}{section*.43}
 \contentsline {paragraph}{Double pipe}{38}{section*.44}
 \contentsline {section}{\numberline {5.6}Cryogenic air separation process}{38}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Flowsheet initialization}{38}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.1}Flowsheet initialization}{40}{subsection.5.6.1}
 \contentsline {chapter}{\numberline {6}Conclusion and further research}{41}{chapter.6}
 \contentsline {chapter}{Bibliography}{42}{chapter*.48}
 \contentsline {chapter}{\numberline {A}Appendix A}{44}{appendix.A}
