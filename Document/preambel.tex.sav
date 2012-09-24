@@ -10,7 +10,7 @@
 \usepackage{subcaption}
 %\usepackage{graphics}
 %\usepackage{rotating}
-\usepackage{pstricks}
+%\usepackage{pstricks}
 \usepackage{longtable}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -20,14 +20,17 @@
 \usepackage{ae}
 \usepackage{multirow}
 \usepackage{listings}
+\usepackage{xfrac}
 \lstloadlanguages{[ANSI]C}
 \usepackage{xcolor}
-    \xdefinecolor{RWTHBlue}{HTML}{00549F}
+    \xdefinecolor{RWTHBlue}{HTML}{00539F}
 	%\xdefinecolor{RWTHBlue}{rgb}{0.0,0.3294,0.6235}
-    \xdefinecolor{RWTHlightBlue}{HTML}{8EBAE5}
+    \xdefinecolor{RWTHlightBlue}{HTML}{7FAAD0}
 	%\xdefinecolor{RWTHlightBlue}{rgb}{0.5569,0.7294,0.8980}
     \xdefinecolor{RWTHRed}{HTML}{C7225A}
 	%\xdefinecolor{RWTHRed}{rgb}{0.780392156,0.133333333,0.352941176}
+    \xdefinecolor{RWTHlightgrey}{HTML}{CCCCCC}
+    \xdefinecolor{RWTHgrey}{HTML}{333333}
     \xdefinecolor{AVTLightBlue}{HTML}{AED3F0}
 	%\xdefinecolor{AVTLightBlue}{rgb}{0.682352941, 0.82745098, 0.941176471}
     \xdefinecolor{AVTLight2Blue}{HTML}{6CD2F8}
@@ -54,8 +57,11 @@
 \usepackage{paralist}
 \usepackage{xifthen}
 \usepackage{scrhack}
+\usepackage{pgf}
 \usepackage{pgfplots}
 	\pgfplotsset{compat=newest}
+\usepackage{tikz}
+    \usetikzlibrary{positioning,shapes,shadows,arrows,calc,scopes}
 \usepackage{pgf-pie}
 \usepackage{array}
 
@@ -109,11 +115,9 @@
 \newcommand{\st}{\text{subject to}}
 \newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\fracddpart2}[2]{\frac{\partial^2 #1}{\partial #2^2}}
 \newcommand{\eqannote}[1]{\qquad #1}
 \newcommand{\pow}[2]{\left( #1 \right)^{#2}}
-
-\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
-\newcommand{\nc}[3]{\nomenclature{$#1$}{#2 \nomunit{#3}}}
 
 \newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}
 \newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
@@ -141,6 +145,18 @@
 \newcommand{\program}[2]{\refprogram{#1} \begin{minipage}{0.9\textwidth} \begin{equation*}%
 \begin{aligned} #2 \end{aligned} \end{equation*} \end{minipage} \begin{minipage}{0.09\textwidth}%
 {\hfill (P \arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
+
+% redefinition for noenclature units and subgroups
+\renewcommand{\nomgroup}[1]{%
+\ifthenelse{\equal{#1}{R}}{\item[\textbf{Variables}]}{%
+\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Letters}]}{%
+\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indices}]}{}}}}
+
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
+\newcommand{\nc}[3]{\nomenclature[A ]{$#1$}{#2 \nomunit{#3}}}
+\newcommand{\ncr}[3]{\nomenclature[R ]{$#1$}{#2 \nomunit{#3}}}
+\newcommand{\ncg}[3]{\nomenclature[G ]{$#1$}{#2 \nomunit{#3}}}
+\newcommand{\nci}[2]{\nomenclature[I ]{$#1$}{#2}}
 
 \makenomenclature
 

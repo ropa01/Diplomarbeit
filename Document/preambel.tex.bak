@@ -61,7 +61,7 @@
 \usepackage{pgfplots}
 	\pgfplotsset{compat=newest}
 \usepackage{tikz}
-    \usetikzlibrary{positioning,shapes,shadows,arrows}
+    \usetikzlibrary{positioning,shapes,shadows,arrows,calc,scopes}
 \usepackage{pgf-pie}
 \usepackage{array}
 
@@ -118,9 +118,6 @@
 \newcommand{\eqannote}[1]{\qquad #1}
 \newcommand{\pow}[2]{\left( #1 \right)^{#2}}
 
-\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
-\newcommand{\nc}[3]{\nomenclature{$#1$}{#2 \nomunit{#3}}}
-
 \newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}
 \newcommand{\cpitemize}[1]{\begin{compactitem}#1\end{compactitem}}
 \newcommand{\regitemize}[1]{\begin{itemize}#1\end{itemize}}
@@ -147,6 +144,18 @@
 \newcommand{\program}[2]{\refprogram{#1} \begin{minipage}{0.9\textwidth} \begin{equation*}%
 \begin{aligned} #2 \end{aligned} \end{equation*} \end{minipage} \begin{minipage}{0.09\textwidth}%
 {\hfill (P \arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
+
+% redefinition for noenclature units and subgroups
+\renewcommand{\nomgroup}[1]{%
+\ifthenelse{\equal{#1}{R}}{\item[\textbf{Variables}]}{%
+\ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Letters}]}{%
+\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indices}]}{}}}}
+
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
+\newcommand{\nc}[3]{\nomenclature[A ]{$#1$}{#2 \nomunit{#3}}}
+\newcommand{\ncr}[3]{\nomenclature[R ]{$#1$}{#2 \nomunit{#3}}}
+\newcommand{\ncg}[3]{\nomenclature[G ]{$#1$}{#2 \nomunit{#3}}}
+\newcommand{\nci}[2]{\nomenclature[I ]{$#1$}{#2}}
 
 \makenomenclature
 

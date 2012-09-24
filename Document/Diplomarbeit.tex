@@ -13,9 +13,11 @@
                 %Content/AirSep,
                 %Content/ProcessDesign,
                 %Content/ProcessEconomics,
-                Content/MathModel,
+                %Content/MathModel,
+                Content/Dynamic,
                 %Content/outlook,
-                Content/BibAppendix
+                %Content/BibAppendix,
+                %Content/report_short
     }
 }{
     \usepackage[colorinlistoftodos, disable]{todonotes}
@@ -28,16 +30,11 @@
     \include{Content/Preamble/CoverPage}
 	\include{Content/Preamble/TaskDescription}
 	\include{Content/Preamble/StatutoryDeclaration}
-
-    \tableofcontents
-    \listoffigures
-    \listoftables
-    \printnomenclature[2.5cm]
-    \clearpage
+    \include{Content/Lists}
+    
     \pagenumbering{arabic}
     \setcounter{page}{1}
 
-%	\include{Content/CoverIntro}
 	\include{Content/Abstract}
 	\include{Content/Introduction}
 	
@@ -45,7 +42,9 @@
 	\include{Content/ProcessDesign}
 	\include{Content/ProcessEconomics}
 	%\include{Content/Uncertainty}
+    \include{Content/report_short}
 	\include{Content/MathModel}
+    \include{Content/Dynamic}
 %	\include{Content/MathConsiderations}
 	\include{Content/outlook}
 

@@ -1,0 +1,50 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\colwidth}{8}
+    \pgfmathsetmacro{\downwidth}{1/6*\colwidth}
+    \pgfmathsetmacro{\actwidth}{4/6*\colwidth}
+    \pgfmathsetmacro{\platespace}{3}
+    \pgfmathsetmacro{\colheight}{3*\platespace}
+    \pgfmathsetmacro{\weirheight}{0.3*\platespace}
+    \pgfmathsetmacro{\downlen}{\weirheight + 0.9 *\platespace}
+    \draw [thline] (0,0) -- ++(\downwidth,0) node (a) {} node (downrb) [yshift=1mm,xshift=-1mm] {} node (traylt1) [yshift=-1mm,xshift=1mm] {} ;
+    \node (downlt) [xshift=1mm,yshift=-1mm] at (0,\platespace) {} ;
+    \draw [dashtray] (a) -- ++(\actwidth,0) node (vapin) [pos=0.5] {} node (trayrb) [yshift=1mm,xshift=-1mm] {} node (downlt1) [yshift=-1mm,xshift=1mm] {};
+    \draw [thline] ($(0,0) + 0.5*(0,\colheight)$) -- ($(0,0) - 0.5*(0,\colheight)$) node (e) [xshift=1mm, inner sep=0] {} ;
+    \draw [thline] ($(\colwidth,0) + 0.5*(0,\colheight)$) -- ($(\colwidth,0) - 0.5*(0,\colheight)$) node (g) [pos=0,xshift=-1mm,inner sep=0] {} ;
+    \draw [thline] (\colwidth,\platespace) -- ++(-\downwidth,0) node (b) {} node (f) [yshift=1mm,xshift=1mm,inner sep=0] {} node (h) [yshift=1mm,xshift=-1mm,inner sep=0] {};
+    \draw [dashtray] (b) -- ++(-\actwidth,0) node (traylt) [yshift=-1mm,xshift=1mm] {} ;
+    \draw [thline] (\colwidth,-\platespace) -- ++(-\downwidth,0) node (c) {} node (trayrb1) [yshift=1mm,xshift=-1mm] {} node (downrb1) [pos=0,yshift=1mm,xshift=-1mm] {} ;
+    \draw [dashtray] (c) -- ++(-\actwidth,0) node (d) [yshift=-1mm,xshift=-1mm, inner sep=0] {} ;
+    \draw [thline] ($(\downwidth,0) + (\actwidth,0) + (0,\weirheight)$) -- ++(0,-\downlen) ;
+    \draw [thline] ($(\downwidth,\platespace) + (0,\weirheight)$) -- ++(0,-\downlen) ;
+    \draw [thline] ($(\downwidth,\weirheight-\platespace)$) -- ($(\downwidth,-0.5*\colheight)$) ;
+    \draw [thline] ($(b) + (0,0.1*\platespace)$) -- ($(\downwidth+\actwidth,0.5*\colheight)$) ;
+    \draw [dashvol] (trayrb) rectangle (traylt) ;
+    \draw [dashvol] (trayrb1) rectangle (traylt1) ;
+    \draw [dashvol] (downrb) rectangle (downlt) ;
+    \draw [dashvol] (downrb1) rectangle (downlt1) ;
+    \draw [dashvol] (e) -- (e |- d) -- (d) -- (e -| d) ;
+    \draw [dashvol] (g) -- (g |- f) -- (f) -- (g -| f) ;
+    \draw [dashvol] (g -| h) -- (h) -- (traylt |- h) -- (traylt |- g) ;
+    \node at ($0.5*(\colwidth,\platespace)$) {$n$} ;
+    \node at ($0.5*(\colwidth,-\platespace)$) {$n+1$} ;
+    
+    % arrows
+    \node (liq_in_start) at ($0.5*(\downwidth,0) + 0.2*(0,\platespace) $) {} ;
+    \node (liq_in_end) at ($(a) + 0.2*(\actwidth,0) + 0.6*(0,\weirheight)$) {} ;
+    \draw [arrow] (liq_in_start) .. controls +(-70:0.8) and +(-150:0.5) .. (liq_in_end) node [pos=0.3,left] {\scriptsize $L_{n-1}$};
+    \node (liq_out_start) at ($(a) + 0.8*(\actwidth,\weirheight)$) {} ;
+    \node (liq_out_end) at ($(\downwidth+\actwidth,0) + 0.5*(\downwidth,0) - 0.4*(0,\platespace)$) {} ;
+    \draw [arrow] (liq_out_start) .. controls +(30:1.2) and +(90:2.5) .. (liq_out_end) ;
+    \node (liq_in_start1) at ($(\actwidth+1.5*\downwidth,0) - 0.8*(0,\platespace) $) {} ;
+    \node (liq_in_end1) at ($(c) - 0.2*(\actwidth,0) + 0.6*(0,\weirheight)$) {} ;
+    \draw [arrow] (liq_in_start1) .. controls +(-110:0.8) and +(-30:0.5) .. (liq_in_end1) node [pos=0.3,right] {\scriptsize $L_{n}$};
+    \node (liq_in_start2) at ($(\actwidth+1.5*\downwidth,0) + 1.2*(0,\platespace) $) {} ;
+    \node (liq_in_end2) at ($(b) - 0.2*(\actwidth,0) + 0.6*(0,\weirheight)$) {} ;
+    \draw [arrow] (liq_in_start2) .. controls +(-110:0.8) and +(-30:0.5) .. (liq_in_end2) node [pos=0.3,right] {\scriptsize $L_{n}$};
+    \draw [arrow] ($(\downwidth+0.5*\actwidth,-0.8*\weirheight)$) -- ($(\downwidth+0.5*\actwidth,0.6*\weirheight)$) node [pos=0.3,right] {\scriptsize $V_{n+1}$} ;
+    \draw [arrow] ($(\downwidth+0.5*\actwidth,\platespace-0.8*\weirheight)$) -- ($(\downwidth+0.5*\actwidth,\platespace+0.6*\weirheight)$) node [pos=0.3,right] {\scriptsize $V_{n}$} ;
+    
+    % bemaßung
+    \draw [size] ($$)
+\end{tikzpicture}

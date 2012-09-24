@@ -4,12 +4,87 @@
 
   \item [{$$POT$$}]\begingroup Payout time \nomunit {\$}\nomeqref {4.8}
 		\nompageref{15}
+  \item [{$a$}]\begingroup Annuity \nomunit {\$}\nomeqref {4.13}
+		\nompageref{16}
+  \item [{$C_0$}]\begingroup Initial value of an investment \nomunit {\$}\nomeqref {4.10}
+		\nompageref{16}
+  \item [{$C_n$}]\begingroup Final value of an investment \nomunit {\$}\nomeqref {4.10}
+		\nompageref{16}
+  \item [{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {4.15}
+		\nompageref{17}
+  \item [{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {4.16}
+		\nompageref{17}
+  \item [{$i$}]\begingroup Interest rate \nomunit {\%}\nomeqref {4.11}
+		\nompageref{16}
+  \item [{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {4.17}
+		\nompageref{17}
+  \item [{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {4.10}
+		\nompageref{16}
   \item [{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {4.5}
 		\nompageref{14}
   \item [{$\dot {m}_i$}]\begingroup Mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {4.4}
 		\nompageref{14}
+  \item [{$C^{i}_B$}]\begingroup Reference cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
+		\nompageref{12}
+  \item [{$C^{i}_E$}]\begingroup Cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
+		\nompageref{12}
+  \item [{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {4.5}
+		\nompageref{14}
+  \item [{$C^{i}_{RM}$}]\begingroup Mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {4.4}
+		\nompageref{14}
+  \item [{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {4.1}
+		\nompageref{11}
+  \item [{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {4.1}
+		\nompageref{11}
+  \item [{$C_P$}]\begingroup Total process cost \nomunit {\$}\nomeqref {4.0}
+		\nompageref{11}
+  \item [{$C_P^0$}]\begingroup Reference process cost \nomunit {\$}\nomeqref {4.0}
+		\nompageref{11}
+  \item [{$C_{EC}$}]\begingroup Total cost of energy \nomunit {\$}\nomeqref {4.5}
+		\nompageref{14}
+  \item [{$C_{FILL}$}]\begingroup Cost of raw materials to fill the process \nomunit {\$}\nomeqref {4.6}
+		\nompageref{14}
+  \item [{$C_{RM}$}]\begingroup Total cost of raw materials \nomunit {\$}\nomeqref {4.4}
+		\nompageref{14}
+  \item [{$f^{i}_C$}]\begingroup Design complexity correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{12}
+  \item [{$f^{i}_M$}]\begingroup Material selection correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{12}
+  \item [{$f^{i}_P$}]\begingroup Pressure correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{12}
+  \item [{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {4.3}
+		\nompageref{12}
+  \item [{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {4.1}
+		\nompageref{11}
+  \item [{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {4.1}
+		\nompageref{11}
+  \item [{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {4.2}
+		\nompageref{12}
+  \item [{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {4.5}
+		\nompageref{14}
+  \item [{$N_{RM}$}]\begingroup Number of raw materials \nomunit {-}\nomeqref {4.4}
+		\nompageref{14}
+  \item [{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {4.2}
+		\nompageref{12}
+  \item [{$Q^{i}_B$}]\begingroup Equipment specific reference quantity \nomunit {variable}\nomeqref {4.2}
+		\nompageref{12}
+  \item [{$Q_P$}]\begingroup Process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
+		\nompageref{11}
+  \item [{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
+		\nompageref{11}
+  \item [{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {4.4}
+		\nompageref{14}
+  \item [{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}
+		\nompageref{11}
+
+ \nomgroup{G}
+
   \item [{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
 		\nompageref{22}
+  \item [{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {5.34}
+		\nompageref{31}
+  \item [{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {5.33}
+		\nompageref{31}
   \item [{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {5.18}
 		\nompageref{25}
   \item [{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {5.18}
@@ -30,52 +105,19 @@
 		\nompageref{22}
   \item [{$\zeta ^{V}_{ij}$}]\begingroup splitting variable for vapour feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
 		\nompageref{22}
-  \item [{$a$}]\begingroup Annuity \nomunit {\$}\nomeqref {4.13}
-		\nompageref{16}
+
+ \nomgroup{R}
+
+  \item [{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.40}
+		\nompageref{33}
+  \item [{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.40}
+		\nompageref{33}
   \item [{$C$}]\begingroup number of components \nomunit {-}\nomeqref {5.4}
 		\nompageref{21}
-  \item [{$C^{i}_B$}]\begingroup Reference cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
-		\nompageref{12}
-  \item [{$C^{i}_E$}]\begingroup Cost of equipment $i$ \nomunit {\$}\nomeqref {4.2}
-		\nompageref{12}
-  \item [{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {4.5}
-		\nompageref{14}
-  \item [{$C^{i}_{RM}$}]\begingroup Mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {4.4}
-		\nompageref{14}
-  \item [{$C_0$}]\begingroup Initial value of an investment \nomunit {\$}\nomeqref {4.10}
-		\nompageref{16}
-  \item [{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {4.1}
-		\nompageref{11}
-  \item [{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {4.1}
-		\nompageref{11}
-  \item [{$C_n$}]\begingroup Final value of an investment \nomunit {\$}\nomeqref {4.10}
-		\nompageref{16}
-  \item [{$C_P$}]\begingroup Total process cost \nomunit {\$}\nomeqref {4.0}
-		\nompageref{11}
-  \item [{$C_P^0$}]\begingroup Reference process cost \nomunit {\$}\nomeqref {4.0}
-		\nompageref{11}
-  \item [{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {4.15}
-		\nompageref{17}
-  \item [{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {4.16}
-		\nompageref{17}
-  \item [{$C_{EC}$}]\begingroup Total cost of energy \nomunit {\$}\nomeqref {4.5}
-		\nompageref{14}
-  \item [{$C_{FILL}$}]\begingroup Cost of raw materials to fill the process \nomunit {\$}\nomeqref {4.6}
-		\nompageref{14}
-  \item [{$C_{RM}$}]\begingroup Total cost of raw materials \nomunit {\$}\nomeqref {4.4}
-		\nompageref{14}
   \item [{$F^L_j$}]\begingroup molar liquid feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}
 		\nompageref{21}
   \item [{$F^V_j$}]\begingroup molar vapour feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}
 		\nompageref{21}
-  \item [{$f^{i}_C$}]\begingroup Design complexity correction to equipment cost \nomunit {-}\nomeqref {4.3}
-		\nompageref{12}
-  \item [{$f^{i}_M$}]\begingroup Material selection correction to equipment cost \nomunit {-}\nomeqref {4.3}
-		\nompageref{12}
-  \item [{$f^{i}_P$}]\begingroup Pressure correction to equipment cost \nomunit {-}\nomeqref {4.3}
-		\nompageref{12}
-  \item [{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {4.3}
-		\nompageref{12}
   \item [{$f_i^L$}]\begingroup liquid fugacity \nomunit {-}\nomeqref {5.10}
 		\nompageref{22}
   \item [{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {5.10}
@@ -94,12 +136,6 @@
 		\nompageref{23}
   \item [{$h^{FV}_j$}]\begingroup molar vapour feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.13}
 		\nompageref{23}
-  \item [{$i$}]\begingroup Interest rate \nomunit {\%}\nomeqref {4.11}
-		\nompageref{16}
-  \item [{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {4.1}
-		\nompageref{11}
-  \item [{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {4.1}
-		\nompageref{11}
   \item [{$K_{ij}$}]\begingroup equilibrium ratio of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.9}
 		\nompageref{22}
   \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
@@ -108,30 +144,16 @@
 		\nompageref{21}
   \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}
 		\nompageref{27}
-  \item [{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {4.2}
-		\nompageref{12}
+  \item [{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.40}
+		\nompageref{33}
   \item [{$N$}]\begingroup number of stages \nomunit {-}\nomeqref {5.4}
 		\nompageref{21}
-  \item [{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {4.5}
-		\nompageref{14}
-  \item [{$N_{RM}$}]\begingroup Number of raw materials \nomunit {-}\nomeqref {4.4}
-		\nompageref{14}
-  \item [{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {4.17}
-		\nompageref{17}
+  \item [{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.40}
+		\nompageref{33}
   \item [{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {5.11}
 		\nompageref{22}
   \item [{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {5.11}
 		\nompageref{22}
-  \item [{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {4.10}
-		\nompageref{16}
-  \item [{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {4.2}
-		\nompageref{12}
-  \item [{$Q^{i}_B$}]\begingroup Equipment specific reference quantity \nomunit {variable}\nomeqref {4.2}
-		\nompageref{12}
-  \item [{$Q_P$}]\begingroup Process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
-		\nompageref{11}
-  \item [{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {4.0}
-		\nompageref{11}
   \item [{$S^L_j$}]\begingroup molar liquid side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
 		\nompageref{21}
   \item [{$S^V_j$}]\begingroup molar vapour side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
@@ -144,16 +166,16 @@
 		\nompageref{27}
   \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
 		\nompageref{27}
-  \item [{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {4.4}
-		\nompageref{14}
+  \item [{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {5.31}
+		\nompageref{29}
+  \item [{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {5.31}
+		\nompageref{29}
   \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
 		\nompageref{27}
   \item [{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
 		\nompageref{21}
   \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}
 		\nompageref{27}
-  \item [{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}
-		\nompageref{11}
   \item [{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}
 		\nompageref{21}
   \item [{$y_{ij}$}]\begingroup vapour mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}

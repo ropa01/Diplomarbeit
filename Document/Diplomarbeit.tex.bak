@@ -3,19 +3,21 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-\setboolean{draft}{false}
-
+\setboolean{draft}{true}
+%\setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
     \includeonly{
-                Content/Abstract,
-                Content/Introduction,
-                Content/AirSep,
-                Content/ProcessDesign,
-                Content/ProcessEconomics,
-                Content/MathModel,
-                Content/outlook,
-                Content/BibAppendix
+                %Content/Abstract,
+                %Content/Introduction,
+                %Content/AirSep,
+                %Content/ProcessDesign,
+                %Content/ProcessEconomics,
+                %Content/MathModel,
+                Content/Dynamic,
+                %Content/outlook,
+                %Content/BibAppendix,
+                %Content/report_short
     }
 }{
     \usepackage[colorinlistoftodos, disable]{todonotes}
@@ -29,13 +31,13 @@
 	\include{Content/Preamble/TaskDescription}
 	\include{Content/Preamble/StatutoryDeclaration}
 
-    \tableofcontents
-    \listoffigures
-    \listoftables
-    \printnomenclature[2.5cm]
-    \clearpage
-    \pagenumbering{arabic}
-    \setcounter{page}{1}
+%    \tableofcontents
+%    \listoffigures
+%    \listoftables
+%    \printnomenclature[2.5cm]
+%    \clearpage
+%    \pagenumbering{arabic}
+%    \setcounter{page}{1}
 
 %	\include{Content/CoverIntro}
 	\include{Content/Abstract}
@@ -45,7 +47,9 @@
 	\include{Content/ProcessDesign}
 	\include{Content/ProcessEconomics}
 	%\include{Content/Uncertainty}
+    \include{Content/report_short}
 	\include{Content/MathModel}
+    \include{Content/Dynamic}
 %	\include{Content/MathConsiderations}
 	\include{Content/outlook}
 

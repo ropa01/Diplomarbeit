@@ -3,62 +3,101 @@
 0
 0
 1
-Diplomarbeit.tex
-52
-7
+:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex
+64
+3
 1
 
-Diplomarbeit.prj
-DATA
-5243122 0 0 1 24 89 50 50 1059 265 1 777 408 -1 -1 0 0 16 0 0 16 1 0 89 24   0
+preambel.tex
+TeX:UNIX
+1159163 1 -1 365 -1 321 0 0 1009 215 0 25 136 -1 -1 0 0 129 -1 -1 129 1 0 321 -1   0
+:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex
+TeX
+269496315 0 -1 222 -1 441 125 125 1296 556 0 25 221 -1 -1 0 0 -1 -1 -1 -1 1 0 441 -1   0
+E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\preambel.tex
+TeX:UNIX
+1159163 1 -1 1960 -1 1774 175 175 1346 606 0 25 51 -1 -1 0 0 -1 -1 -1 -1 1 0 1774 -1   0
 Diplomarbeit.tex
 TeX:UNIX
-403812347 0 15 33 -1 331 0 0 934 409 1 81 204 -1 -1 0 0 62 -1 -1 62 1 0 331 -1   0
-Content\CoverIntro.tex
+135376891 0 -1 154 -1 131 0 0 934 409 1 73 85 -1 -1 0 0 62 -1 -1 62 1 0 131 -1   0
+E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\comparison.tex
 TeX:UNIX
-1159163 0 -1 52 -1 232 100 100 1034 509 0 129 170 -1 -1 0 0 21 -1 -1 21 1 0 232 -1   0
-Content\MathModel.tex
+1159163 1 -1 9751 -1 9321 100 100 1081 461 0 25 2108 -1 -1 0 0 49 -1 -1 49 1 0 9321 -1   0
+E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\modeleval.tex
 TeX:UNIX
-1159163 0 -1 45593 -1 45663 50 50 1059 265 1 553 459 -1 -1 0 0 36 -1 -1 36 1 0 45663 -1   0
-Pictures\feedback.tex
+286371835 1 -1 3901 -1 3621 75 75 1246 506 0 25 833 -1 -1 0 0 -1 -1 -1 -1 1 0 3621 -1   0
+:\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\Lebenslauf.tex
 TeX:UNIX
-1159163 0 -1 567 -1 566 175 175 1346 606 0 225 153 -1 -1 0 0 -1 -1 -1 -1 1 0 566 -1   0
-Pictures\foreward.tex
+403812347 0 -1 92 -1 92 25 25 1196 456 0 185 51 -1 -1 0 0 18 -1 -1 18 1 0 92 -1   0
+:\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\content_uk_2.tex
 TeX:UNIX
-1159163 0 -1 310 -1 301 200 200 1371 631 0 153 102 -1 -1 0 0 -1 -1 -1 -1 1 0 301 -1   0
+269594619 0 -1 4501 -1 356 50 50 1221 481 0 897 102 -1 -1 0 0 10 -1 -1 10 1 0 356 -1   0
 Pictures\ASU_simple_coco.tex
 TeX:UNIX
-17936379 0 -1 30 -1 259 125 125 1296 556 0 345 -695 -1 -1 0 0 0 -1 -1 0 1 0 259 -1   0
+286371835 0 -1 30 -1 259 125 125 1296 556 0 345 85 -1 -1 0 0 0 -1 -1 0 1 0 259 -1   0
+pgfplots\TikZTemplates.tex
+TeX:UNIX
+1159163 0 -1 406 -1 408 25 25 1219 483 1 73 119 -1 -1 0 0 436 -1 -1 436 1 0 408 -1   0
+Pictures\tray_model.tex
+TeX:UNIX
+1159163 0 52 22 -1 3938 200 200 1371 631 0 137 476 -1 -1 0 0 19 -1 -1 19 1 0 3938 -1   0
+Content\Dynamic.tex
+TeX
+269496315 0 -1 6416 -1 6427 175 175 1346 606 0 737 476 -1 -1 0 0 23 -1 -1 23 1 0 6427 -1   0
+Content\MathModel.tex
+TeX:UNIX
+1159163 0 -1 14617 -1 14617 50 50 1059 265 1 153 612 -1 -1 0 0 36 -1 -1 36 1 0 14617 -1   0
+Content\lists.tex
+TeX
+1060859 1 -1 90 -1 0 150 150 1131 481 0 25 0 -1 -1 0 0 20 -1 -1 20 1 0 0 -1   0
+:\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\cvheadpic.tex
+TeX:UNIX
+269594619 0 -1 0 -1 803 125 125 1106 456 0 273 340 -1 -1 0 0 30 -1 -1 30 1 0 803 -1   0
+:\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\content_ger_2.tex
+TeX:UNIX
+1159163 0 -1 3450 -1 1158 50 50 1031 381 1 377 459 -1 -1 0 0 11 -1 -1 11 1 0 1158 -1   0
+:\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\cvpreamble.tex
+TeX:DE:UNIX
+17936379 0 -1 2787 -1 2785 100 100 1081 431 0 401 357 -1 -1 0 0 30 -1 -1 30 1 0 2785 -1   0
+:\Users\Abakus W7\Dropbox\Bewerbung\CDI\MotivationLetter\MotivationLetter.tex
+TeX:UNIX
+1159163 0 -1 0 -1 783 75 75 1246 506 0 185 340 -1 -1 0 0 66 -1 -1 66 1 0 783 -1   0
+Pictures\foreward.tex
+TeX:UNIX
+1159163 0 -1 310 -1 301 200 200 1371 631 0 153 102 -1 -1 0 0 19 -1 -1 19 1 0 301 -1   0
+Pictures\feedback.tex
+TeX:UNIX
+1159163 0 -1 567 -1 566 175 175 1346 606 0 225 153 -1 -1 0 0 19 -1 -1 19 1 0 566 -1   0
+Content\appendix.tex
+TeX:UNIX
+269594619 0 -1 71 -1 42 25 25 1029 383 1 73 34 -1 -1 0 0 20 -1 -1 20 1 0 42 -1   0
 Content\Preamble\CoverPage.tex
 TeX:UNIX
-1159163 0 -1 859 -1 2291 150 150 1084 559 0 105 595 -1 -1 0 0 19 -1 -1 19 1 0 2291 -1   0
+1159163 0 -1 859 -1 2291 150 150 1084 559 0 105 612 -1 -1 0 0 19 -1 -1 19 1 0 2291 -1   0
+Content\report_short.tex
+TeX:UNIX
+269594619 0 -1 1792 -1 1805 25 25 1196 456 0 313 408 -1 -1 0 0 0 -1 -1 0 1 0 1805 -1   0
+Diplomarbeit.prj
+DATA
+273678578 0 0 1 24 89 50 50 1059 265 1 777 408 -1 -1 0 0 16 0 0 16 1 0 89 24   0
+Content\CoverIntro.tex
+TeX:UNIX
+1159163 1 -1 313 -1 0 100 100 1034 509 0 25 0 -1 -1 0 0 21 -1 -1 21 1 0 0 -1   0
 Content\Preamble\TaskDescription.tex
 TeX:UNIX
 1159163 1 -1 1881 -1 1871 175 175 1109 584 0 25 612 -1 -1 0 0 18 -1 -1 18 1 0 1871 -1   0
 Content\Preamble\StatutoryDeclaration.tex
 TeX:UNIX
 1159163 0 -1 0 -1 736 125 125 1059 534 0 105 425 -1 -1 0 0 18 -1 -1 18 1 0 736 -1   0
-:\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\Lebenslauf.tex
-TeX:UNIX
-135376891 0 -1 0 -1 733 25 25 1196 456 0 25 323 -1 -1 0 0 -1 -1 -1 -1 1 0 733 -1   0
-:\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\content_uk_2.tex
-TeX:UNIX
-1159163 0 -1 263 -1 361 50 50 1221 481 0 409 68 -1 -1 0 0 -1 -1 -1 -1 1 0 361 -1   0
 pgfplots\Compressor.tex
 TeX:UNIX
 1159163 0 -1 387 -1 90 25 25 1219 483 1 329 34 -1 -1 0 0 0 -1 -1 0 1 0 90 -1   0
 Pictures\col_com_stage_super.tex
 TeX:UNIX
 1159163 0 -1 1138 -1 1783 50 50 1199 508 0 713 221 -1 -1 0 0 69 -1 -1 69 1 0 1783 -1   0
-pgfplots\TikZTemplates.tex
-TeX:UNIX
-1159163 1 -1 1056 -1 1074 25 25 1219 483 1 825 459 -1 -1 0 0 177 -1 -1 177 1 0 1074 -1   0
 pgfplots\ASU_process_simple.tex
 TeX:UNIX
 1159163 1 -1 138 -1 157 50 50 1244 508 0 633 34 -1 -1 0 0 19 -1 -1 19 1 0 157 -1   0
-preambel.tex
-TeX:UNIX
-1159163 0 -1 2590 -1 2595 0 0 1009 215 0 489 323 -1 -1 0 0 129 -1 -1 129 1 0 2595 -1   0
 Pictures\double_column.tex
 TeX:UNIX
 1159163 0 11 44 -1 785 75 75 1064 398 1 433 153 -1 -1 0 0 306 -1 -1 306 1 0 785 -1   0
@@ -125,9 +164,6 @@ TeX:UNIX
 GNUPlot\LPC_init_o2.tex
 TeX:UNIX
 1159163 0 -1 3426 -1 3427 100 100 1294 558 0 425 476 -1 -1 0 0 40 -1 -1 40 1 0 3427 -1   0
-Content\appendix.tex
-TeX:UNIX
-1159163 0 -1 1459 -1 676 25 25 1029 383 1 281 221 -1 -1 0 0 -1 -1 -1 -1 1 0 676 -1   0
 Content\BibAppendix.tex
 TeX:UNIX
 1159163 0 -1 49 -1 52 50 50 1054 389 0 105 51 -1 -1 0 0 -1 -1 -1 -1 1 0 52 -1   0
@@ -165,48 +201,4 @@ Content\introduction.tex
 TeX:UNIX
 1159163 0 -1 0 -1 0 50 50 984 459 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
 
-*Diplomarbeit.tex
->
-*preambel
-*pgfplots/TikZTemplates
-*Content/CoverIntro
->
-*Content/Preamble/CoverPage
-*Content/Preamble/TaskDescription
-*Content/Preamble/StatutoryDeclaration
-<
-*Content/Abstract
-*Content/Introduction
-*Content/AirSep
->
-*Pictures/tech_compar
-*Pictures/ASU_text
-*Pictures/PSA.tex
-<
-*Content/ProcessDesign
-*Content/ProcessEconomics
->
-*Tables/PriceIndices
-<
-*Content/MathModel
->
-*pgfplots/ASU_process_simple
-*Pictures/col_complete_super
-*Pictures/col_stage_super
-*Pictures/condenser
-*Pictures/reboiler
-*Tables/Discrepancy
-*Pictures/LPC_example
-*GNUPlot/LPC_init_o2
-*GNUPlot/LPC_init_n2
-*Pictures/ASU_simple_coco
-*Pictures/foreward
-*Pictures/feedback
-<
-*Content/outlook
-*Content/BibAppendix
->
-*Literature.bib
-*Content/appendix
-<
-<
+*:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex

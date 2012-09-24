@@ -1,0 +1,135 @@
+\chapter{Dynamic model}
+
+
+
+ \subsection{MESH equations}
+ \begin{figure}
+    \input{Pictures/tray_model}
+\end{figure}
+
+ \Eqml{eq:col:CompBalance_opt}{
+    		\fracdd{m_{ij}}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right)
+                \cdot L_j \cdot x_{i,j} - V_{j+1} \cdot y_{i,j+1} \\ \hfill - L_{j-1} \cdot x_{i,j-1}
+                - \sum_{k=1}^{F^V} \zeta_{kj} \cdot F_j^V \cdot z^V_{i,j} - \sum_{l=1}^{F^L}%
+                \zeta_{lj} \cdot F_j^L \cdot z_{i,j}^L - \zeta^R_j \cdot V_N \cdot y_{iN}, \hfill%
+                \\ \eqannote{i = 1 \dots C, \quad j = 1 \dots N, \quad k = 1 \dots F^V, \quad l = 1 \dots F^L}.
+    	}%
+ \Eq{eq:col:Kxy}{
+            y_{ij} = K_{ij} \cdot x_{ij}, \eqannote{i = 1 \dots C, \quad j = 1 \dots N}.
+    	}%
+ \Eqml{eq:col:EnergyBalance}{
+    		\fracdd{H_j}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot h^V_{j} + \left(1 + s_j^L\right)
+                \cdot L_j \cdot h^L_{j} - V_{j+1} \cdot h^V_{j+1} \\ \hfill - L_{j-1} \cdot h^L_{j-1}
+                - \sum_{k=1}^{F^V} \zeta_{kj} \cdot F_k^V \cdot h^{FV}_{j} - \sum_{l=1}^{F^L}
+                \zeta_{lj} \cdot F_j^L \cdot h^{FL}_{j} - \zeta^R_j \cdot V_N \cdot h^V_{N}, \hfill
+                \\ \eqannote{i = 1 \dots C, \quad j = 1 \dots N, \quad k = 1 \dots F^V, \quad l = 1 \dots F^L}.
+    	}%
+
+\section{Models for columns with structured packings}   
+    \cpitemize{
+        \item sections treated as trays 
+                \cpitemize{
+                    \item rate based models 
+                        \cpitemize{
+                            \item film theory based models
+                        }
+                    \item equilibrium stage models  
+                        \cpitemize{
+                            \item HETS / plate efficiency 
+                        }
+                } 
+        \item column divided into small (almost differential ?) sections
+            \cpitemize{
+                \item rate based models only
+            }
+           
+    }
+    
+    \subsection{holdup \& pressure drop}
+        \subsubsection{Model by Rocha et al.}   
+            equation for dimensionless holdup
+            \Eq{eq:struct_holdup}{
+                h_t = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \sqrt[3]{\frac{3 \mu_L v_{LS}}{\varrho_L \sin (\theta) \varepsilon g_{eff}}}
+            }%
+            correction factor for liquid holdup calculated ba Shi/Mersmann equation
+            \Eq{}{
+                F_{t,S-M} & = \frac{29.12 \, (We_L \, Fr_L)^{0.15} S^{0.359}}{Re_L^{0.2} \varepsilon^{0.6} (1 - 0.93 \cos \gamma) (\sin \theta)^{0.3}} \\
+                g_{eff} & = g \left( \frac{\varrho_L - \varrho_g}{\varrho_L} \right) \left[ 1 - \left( \frac{\Delta p / \Delta Z}{(\Delta p / \Delta Z)_{flood}} \right) \right] \\
+                \cos \gamma & = \begin{cases}
+                                    0.9 & \text{if} \quad \sigma \leq 0.055 \frac{N}{m} \\
+                                    5.211 \cdot 10^{-16.835 \sigma} & \text{if} \quad \sigma > 0.055 \frac{N}{m}
+                                \end{cases}
+            }%
+        
+            \Eq{}{
+                Re_L & = \frac{\varrho_L v_L D}{\mu_L} \\
+                We_L & = \frac{\varrho_L v_L^2 D}{\sigma} \\
+                Fr_L & =
+            }
+        
+            dry pressure drop with correlated friction factor funktion...
+            \Eq{}{
+                \frac{\Delta p_{dry}}{\Delta Z} = \underbrace{\frac{0.177 \varrho_g}{S \varepsilon^2 (\sin \theta)^2}}_{A} \cdot v_{gS}^2 + \underbrace{\frac{88.774 \mu_g}{S^2 \varrho \sin \theta}}_{B} \cdot v_{gS} = A v_{gS}^2 + B v_{gS}
+            }%
+            
+        \subsubsection{Delft model}
+            \cpitemize{
+                \item valid in pre-load region
+                \item adjustment by loading factor (Olujic 1999)
+            }
+        \subsubsection{SPR method}
+            \cpitemize{
+                \item valid in pre-load region
+                \item adjustment by loading factor (Olujic 1999)
+            }
+            
+        \subsubsection{Hydrodynamic analogy}
+            \cpitemize{
+                \item employ rigorous methods to solve hydrodynamics by superimposing solutions of easier scenarios
+                
+            }
+            
+            \paragraph{gas flow}
+                \cpitemite{
+                    \item assume round channels with hydraulic diameter
+                    \item laminar fully developed flow
+                    \item ideal mixing at regular intervals to account for abrupt changes in gas flow directions at intersections
+                }
+                
+            \paragraph{liquid flow}
+                \cpitemite{
+                    \item continous thin film flow
+                    \item flow direction according to gravity flow angle
+                    \item laminar fully developed flow
+                    \item neglect of radial maldistribution
+                    \item ideal mixing at periodic intervals
+                }
+            \paragraph{equations}
+                hydraulic diameter
+                \Eq{}{
+                    d_h = \frac{b_0 h}{s_0}
+                }
+                gravity flow angle 
+                \Eq{}{
+                    alpha = \arctan \left( \frac{\cot \varphi }{\sin \left[\arctan \left(\cos \varphi \cot \frac{\gamma}{2} \right)\right]} \right)
+                }
+                
+                undisturbed liquid flow
+                \Eq{}{
+                    z_L & = \frac{b_0}{2 \sin \left( \frac{\gamma}{2} \right)\sin \beta} \\
+                    \beta & = \arcsin \left( \sin \varphi \cos \epsilon \right) \\
+                    \epsilon & = \arctan \left(\cos \varphi \cot \frac{\gamma}{2}
+                }
+                
+                undisturbed gas flow
+                \Eq{}{
+                    \ell_i = \frac{2 B_i L}{b_0}
+                }
+                
+                hydrodynamic equations
+                \Eq{}{
+                    0 = \mu_p \left( \fracddpart2{u_p}{y} \right) - \fracddpart{P_p}{x} + g \varrho_p \sin \alpha, \\
+                    \fracddpart{P_p}{y} = 0 , \qquad p = L, G \\
+                    \fracddpart{p_L}{x} = \fracddpart{p_L}{y} = const = \Delta p \\
+                    u_L |_{y = 0} = 0  \qquad u_L |_{y = \delta} = u_G \qquad \fracddpart
+                }

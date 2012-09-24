@@ -1,0 +1,22 @@
+
+\chapter*{ASU Project - progress report}
+
+\section*{Process model}
+\begin{itemize}
+    \item Process flowsheet converges and can initialize on its own. 
+    \item Some cases do not initialize, which can be ''moved\_to'' from other converged solutions. Most likely reason are poor guesses in the recycle breaker.
+    \item Optimizations for feed locations and tray numbers can be carried out on process flowsheet. 
+    \item Flowsheet does not initialize with costing active for Argon column, as the cost model cannot deal with negative flow rates as inputs. 
+    \item Costing can be active for other columns during initialization. 
+    \item So far no satisfactory process configuration in terms Argon purity. This should however be attainable with appropriate optimization.
+    \item Some specifications are not yet possible (purity, product component flow rates) can be added when needed with moderate effort. 
+\end{itemize} 
+
+\section*{Possible future directions}
+\begin{itemize}
+    \item Define objective functions that can be used for optimizations. 
+    \item Models could be altered to dynamic models to allow for inclusion of control elements in process model (I cannot estimate effort. Since steady state initialization works a solid foundation should be there???)
+    \item Uncertainty optimization. Since deterministic optimization works a scenario based approach should be implementable. Problem : find realistic scenarios, as Rodrigo -- to my knowledge -- cannot offer his expertise. 
+    \item Explore further uncertainty approaches and see if and how they can be implemented in gPROMS. 
+    \item While sizing is largely incorporated in the costing models no real check for operation boundaries (flooding, weeping, etc..) is included. Explore those. 
+\end{itemize}
