@@ -30,16 +30,11 @@
     \include{Content/Preamble/CoverPage}
 	\include{Content/Preamble/TaskDescription}
 	\include{Content/Preamble/StatutoryDeclaration}
+    \include{Content/Lists}
+    
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
 
-%    \tableofcontents
-%    \listoffigures
-%    \listoftables
-%    \printnomenclature[2.5cm]
-%    \clearpage
-%    \pagenumbering{arabic}
-%    \setcounter{page}{1}
-
-%	\include{Content/CoverIntro}
 	\include{Content/Abstract}
 	\include{Content/Introduction}
 	

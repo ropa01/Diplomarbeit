@@ -3,23 +3,26 @@
 0
 0
 1
-:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex
+Diplomarbeit.tex
 64
 3
-1
+0
 
-preambel.tex
-TeX:UNIX
-1159163 1 -1 365 -1 321 0 0 1009 215 0 25 136 -1 -1 0 0 129 -1 -1 129 1 0 321 -1   0
-:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex
-TeX
-269496315 0 -1 222 -1 441 125 125 1296 556 0 25 221 -1 -1 0 0 -1 -1 -1 -1 1 0 441 -1   0
-E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\preambel.tex
-TeX:UNIX
-1159163 1 -1 1960 -1 1774 175 175 1346 606 0 25 51 -1 -1 0 0 -1 -1 -1 -1 1 0 1774 -1   0
 Diplomarbeit.tex
 TeX:UNIX
-135376891 0 -1 154 -1 131 0 0 934 409 1 73 85 -1 -1 0 0 62 -1 -1 62 1 0 131 -1   0
+403812347 0 -1 154 -1 484 0 0 934 409 1 201 255 -1 -1 0 0 62 -1 -1 62 1 0 484 -1   0
+Content\Dynamic.tex
+TeX
+17838075 4 -1 3240 -1 3241 175 175 1346 606 1 737 816 -1 -1 0 0 23 -1 -1 23 1 0 3241 -1   0
+preambel.tex
+TeX:UNIX
+1159163 0 -1 4793 -1 4904 0 0 1009 215 0 433 459 -1 -1 0 0 129 -1 -1 129 1 0 4904 -1   0
+E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\preambel.tex
+TeX:UNIX
+269594619 1 -1 1960 -1 1774 175 175 1346 606 0 25 51 -1 -1 0 0 108 -1 -1 108 1 0 1774 -1   0
+:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex
+TeX
+1060859 0 -1 222 -1 441 125 125 1296 556 0 25 221 -1 -1 0 0 108 -1 -1 108 1 0 441 -1   0
 E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\comparison.tex
 TeX:UNIX
 1159163 1 -1 9751 -1 9321 100 100 1081 461 0 25 2108 -1 -1 0 0 49 -1 -1 49 1 0 9321 -1   0
@@ -41,9 +44,6 @@ TeX:UNIX
 Pictures\tray_model.tex
 TeX:UNIX
 1159163 0 52 22 -1 3938 200 200 1371 631 0 137 476 -1 -1 0 0 19 -1 -1 19 1 0 3938 -1   0
-Content\Dynamic.tex
-TeX
-269496315 0 -1 6416 -1 6427 175 175 1346 606 0 737 476 -1 -1 0 0 23 -1 -1 23 1 0 6427 -1   0
 Content\MathModel.tex
 TeX:UNIX
 1159163 0 -1 14617 -1 14617 50 50 1059 265 1 153 612 -1 -1 0 0 36 -1 -1 36 1 0 14617 -1   0
@@ -201,4 +201,51 @@ Content\introduction.tex
 TeX:UNIX
 1159163 0 -1 0 -1 0 50 50 984 459 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
 
-*:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex
+*Diplomarbeit.tex
+>
+*preambel
+*pgfplots/TikZTemplates
+*Content/Preamble/CoverPage
+*Content/Preamble/TaskDescription
+*Content/Preamble/StatutoryDeclaration
+*Content/Lists
+*Content/Abstract
+*Content/Introduction
+*Content/AirSep
+>
+*Pictures/tech_compar
+*Pictures/ASU_text
+*Pictures/PSA.tex
+<
+*Content/ProcessDesign
+*Content/ProcessEconomics
+>
+*Tables/PriceIndices
+<
+*Content/report_short
+*Content/MathModel
+>
+*pgfplots/ASU_process_simple
+*Pictures/col_complete_super
+*Pictures/col_stage_super
+*Pictures/condenser
+*Pictures/reboiler
+*Tables/Discrepancy
+*Pictures/LPC_example
+*GNUPlot/LPC_init_o2
+*GNUPlot/LPC_init_n2
+*Pictures/ASU_simple_coco
+*Pictures/foreward
+*Pictures/feedback
+<
+*Content/Dynamic
+>
+*Pictures/tray_model
+<
+*Content/outlook
+*Content/BibAppendix
+>
+*Literature.bib
+*Content/appendix
+<
+<
