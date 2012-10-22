@@ -305,7 +305,7 @@
         energy will be withdrawn and slightly sub-cooled liquid will leave the condenser. Therefore
         the model includes the possibility to specify a degree of sub-cooling $T^{sub}$ which will be
         considered when calculating the equilibrium ratios.
-        
+
         \todo{add pressure profile adjustment for optimization case -- give reasons.}
 
     \subsection{Specifications}
@@ -723,13 +723,20 @@
     no external utilities are supplied to either unit. Rather they are combined into a single heat exchange unit. Thus
     the absolute value of the reboiler energy must be equal to the energy recovered from the condenser. Furthermore
     the material streams entering the process can -- and should -- exchange heat with the process streams leaving it.
-    The combined condenser / reboiler for LPC / HPC column is assumed as a given heat exchange. This males sense insofar,
+    The combined condenser / reboiler for LPC / HPC column is assumed as a given heat exchange. This makes sense insofar,
     as this is a necessity in terms of the actual physical implementation of the process units. Also the usage of the
     oxygen rich liquid from the HPC as coolant in the Argon condenser is assumed as fixed.
 
+    \stdfig{Pictures/HX_superstructure}{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}{fig:HX_super}{}
+
+
     This leaves the process stream leaving the compression stage of the process as well as all product and waste streams
     leaving the process. All those streams are -- for simulation purposes -- fed into a single multi-stream heat exchange
-    unit. To model this unit a simple model is employed which essentially consists of one single enthalpy balance
+    unit. 
+    
+    
+    
+    To model this unit a simple model is employed which essentially consists of one single enthalpy balance
     \Eq{eq:hx_hbalance}{
         0 = \sum_i H_i^{out} - H_i^{in}, \eqannote{}.
     }

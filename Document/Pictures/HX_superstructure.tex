@@ -1,0 +1,65 @@
+\begin{tikzpicture}
+	%\draw[dashvol] (0,4) -- (0,-4) ;
+    %\draw[dashvol] (7.5,4) -- (7.5,-4) ;
+    %\draw[dashvol] (15,4) -- (15,-4) ;
+    
+    \node (H1_in_s) [inner sep=1mm] at (0.5,2) {} ;
+    \node (H2_in_s) [inner sep=1mm] at (0,-2) {} ;
+    
+    \draw[arrow,RWTHRed] (-1,2) -- (H1_in_s) -- ++(0.5,0) node (H1_in) [inner sep=0] {} -- ++(0,1) -- ++(1,0) node (H1C1) [inner sep=0] {} ;
+    \node [draw] at ($(H1C1) + (0.5,0.25)$) [circle through={(H1C1)}] {\scriptsize $H_1 / C_1$} ;
+    \node (J) [inner sep=1mm] at ($(H1C1) + (2.5,0)$) {} ;
+    \draw [arrow,RWTHRed] ($(H1C1) + (1,0)$) -- (J) -- ++(0.5,0) -- ++(0,-1) -- ++(2,0) node (H1_out) [inner sep=0] {};
+    \draw[arrow,RWTHRed] (H1_in) -- ++(0,-1) -- ++(1,0) node (H1C2) [inner sep=0] {} ;
+    \node [draw] at ($(H1C2) + (0.5,0.25)$) [circle through={(H1C2)}] {\scriptsize $H_1 / C_2$} ;
+    \node (H) [inner sep=1mm] at ($(H1C2) + (2,0)$) {} ;
+    \node (I) [inner sep=1mm] at ($(H1C2) + (2.5,0)$) {} ;
+    \draw [stdline,RWTHRed] ($(H1C2) + (1,0)$) -- (H) -- (I) -- ++(0.5,0) -- ++(0,1) ;
+    
+    \node (B) [inner sep=1mm] at ($(H1C2) + (-1,0.5)$) {} ;
+    \node (C) [inner sep=1mm] at ($(H1C2) + (-1.5,0.5)$) {} ;
+    \draw [arrow,RWTHBlue] ($(H1C1) + (0,0.5)$) -- ++(-1.5,0) -- ++(0,-1) node (C12_out) [inner sep=0] {} -- ++(-1,0) ;
+    
+    \draw[arrow,RWTHRed] (-1,-2) -- (H2_in_s) -- ++(1,0) node (H2_in) [inner sep=0] {} -- ++(0,1) -- ++(1,0) node (H2C1) [inner sep=0] {};
+    \node [draw] at ($(H2C1) + (0.5,0.25)$) [circle through={(H2C1)}] {\scriptsize $H_1 / C_1$} ;
+    \node (F) [inner sep=1mm] at ($(H2C1) + (2,0)$) {} ;
+    \draw [arrow,RWTHRed] ($(H2C1) + (1,0)$) -- (F) -- ++(1,0) -- ++(0,-1) -- ++(2,0) node (H2_out) [inner sep=0] {};
+    \draw[arrow,RWTHRed] (H2_in) -- ++(0,-1) -- ++(1,0) node (H2C2) [inner sep=0] {} ;
+    \node [draw] at ($(H2C2) + (0.5,0.25)$) [circle through={(H2C2)}] {\scriptsize $H_1 / C_2$} ;
+    \draw [stdline,RWTHRed] ($(H2C2) + (1,0)$) -- ++(2,0) -- ++(0,1) ;
+    
+    \node (A) [inner sep=1mm] at ($(H2_in) + (0,-0.5)$) {} ;
+    \node (E) [inner sep=1mm] at ($(H2_out) + (-2,0.5)$) {} ;
+    \draw [stdline,RWTHBlue] ($(H2C1) + (0,0.5)$) -- ++(-1.5,0) -- (C12_out) ;
+    \draw [arrow,RWTHBlue] ($(H2C2) + (0,0.5)$) -- (A) -- ++(-1,0) -- ++(0,1) node (D) [inner sep=0] {}-- ++(-1,0) ;
+    \draw [stdline,RWTHBlue] ($(H1C2) + (0,0.5)$) -- (B) -- (C) -- ++(-0.5,0) -- (D) ;
+    \draw [arrow,RWTHBlue] (E) -- ++(-1,0) -- ++(0,-1) -- ($(H2C2) + (1,0.5)$) ;
+    \draw [arrow,RWTHBlue] ($(E) + (-1,0)$) -- ($(E) + (-1,3)$) -- ($(H1C2) + (1,0.5)$) ;
+    \node (G) [inner sep=1mm] at ($(F) + (0,0.5)$) {} ;
+    \draw [arrow,RWTHBlue] (G) -- ($(H2C1) + (1,0.5)$) ;
+    \draw [arrow,RWTHBlue] (G) -- ++(0.5,0) -- ($(H1C1) + (2.5,0.5)$) -- ($(H1C1) + (1,0.5)$);
+        
+    \draw[arrow,RWTHRed] (H1_out) -- ++(0,1) -- ++(1,0) node (H2C1) [inner sep=0] {} ;
+    \node [draw] at ($(H2C1) + (0.5,0.25)$) [circle through={(H2C1)}] {\scriptsize $H_1 / C_1$} ;
+    \draw [arrow,RWTHRed] ($(H2C1) + (1,0)$) -- ++(2,0) -- ++(0,-1) -- ++(2,0) ;
+    \draw[arrow,RWTHRed] (H1_out) -- ++(0,-1) -- ++(1,0) node (H2C2) [inner sep=0] {} ;
+    \node [draw] at ($(H2C2) + (0.5,0.25)$) [circle through={(H2C2)}] {\scriptsize $H_1 / C_2$} ;
+    \draw [stdline,RWTHRed] ($(H2C2) + (1,0)$) -- ++(2,0) -- ++(0,1) ;
+    
+    \draw[arrow,RWTHRed] (H2_out) -- ++(0,1) -- ++(1,0) node (H3C1) [inner sep=0] {} ;
+    \node [draw] at ($(H3C1) + (0.5,0.25)$) [circle through={(H3C1)}] {\scriptsize $H_2 / C_1$} ;
+    \draw [arrow,RWTHRed] ($(H3C1) + (1,0)$) -- ++(2,0) -- ++(0,-1) -- ++(2,0) ;
+    \draw[arrow,RWTHRed] (H2_out) -- ++(0,-1) -- ++(1,0) node (H3C2) [inner sep=0] {} ;
+    \node [draw] at ($(H3C2) + (0.5,0.25)$) [circle through={(H3C2)}] {\scriptsize $H_2 / C_2$} ;
+    \draw [stdline,RWTHRed] ($(H3C2) + (1,0)$) -- ++(2,0) -- ++(0,1) ;
+    
+    
+    
+    %\draw[arrow,RWTHRed] (-1,-2) -- (1,-2) ;
+    %\draw[arrow,RWTHRed] (1,-2) -- (1,-1) -- (2,-1) node (E) [inner sep=0] {} ;
+    %\node [draw] at (2.5,-0.75) [circle through={(E)}] {\scriptsize $H_2 - C_1$} ;
+    %\draw [stdline,RWTHRed] (3,-1) -- (5,-1) -- (5,-2) ;
+    %\draw[arrow,RWTHRed] (1,-2) -- (1,-3) -- (2,-3) node (F) [inner sep=0] {} ;
+    %\node [draw] at (2.5,-2.75) [circle through={(F)}] {\scriptsize $H_2 - C_2$} ;
+    %\draw [arrow,RWTHRed] (3,-3) -- (5,-3) -- (5,-2) -- (7,-2);
+\end{tikzpicture}

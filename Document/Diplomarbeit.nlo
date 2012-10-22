@@ -45,7 +45,7 @@
 \nomenclatureentry{R $T^{bub}$@[{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {5.31}|nompageref}{30}
 \nomenclatureentry{G $\mu _{JT}$@[{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {5.33}|nompageref}{32}
 \nomenclatureentry{G $\mu _S$@[{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {5.34}|nompageref}{32}
-\nomenclatureentry{R $p$@[{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.40}|nompageref}{34}
-\nomenclatureentry{R $m$@[{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.40}|nompageref}{34}
-\nomenclatureentry{R $a_c$@[{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.40}|nompageref}{34}
-\nomenclatureentry{R $b$@[{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.40}|nompageref}{34}
+\nomenclatureentry{R $p$@[{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.40}|nompageref}{35}
+\nomenclatureentry{R $m$@[{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.40}|nompageref}{35}
+\nomenclatureentry{R $a_c$@[{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.40}|nompageref}{35}
+\nomenclatureentry{R $b$@[{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.40}|nompageref}{35}

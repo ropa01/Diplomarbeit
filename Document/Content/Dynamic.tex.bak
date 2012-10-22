@@ -40,11 +40,11 @@
     \paragraph{summation equations}
         \Eq{eq:col:summ_dyn}{
             1 & = \sum_i^{n_c} y_{ij} \eqanns, \\
-            1 & = \sum_i^{n_c} x_{ij} \eqanns, \\
+            1 & = \sum_i^{n_c} x_{ij} \eqanns, 
     	}%
     
     \paragraph{holdup calculations}
-        \Eq{eq:col:Kxy}{
+        \Eq{eq:col:holdup}{
             n_{ij} & = x_{ij} n_j^L + y_{ij} n_j^V \eqanncs, \\
             U_j & = n_j^L  h^L_j + n_j^V h^V_j - p_j V_j \eqanns, \\
             V_j & = V_j^L + V_j^V \eqanns, \\
@@ -53,6 +53,17 @@
             n_j & = n_j^L + n_j^V. 
     	}%
         
+    \paragraph{hydraulic equations}
+        \Eq{eq:col:hydraulics}{
+            h_{ow} & = 0.68175 F_w \left( \frac{q_j^L}{h_w} \right)^{\frac{2}{3}} \\
+            n_j^L & = \varrho_j^L A_j (h_w + h_{ow}) \\
+            L_j & = \varrho_j^L q_j^L
+    	}%
+    
+        \Eq{eq:col:dp_dyn}{
+            p_j - p_{j+1} = (h_w + h_{j, ow}) \varrho_j^L g + 0.5 \xi \varrho_{j+1}^V \left( \frac{q_{j+1}^V}{A_h} \right)^2
+    	}%
+    
 \section{Models for columns with structured packings}
     \cpitemize{
         \item sections treated as trays

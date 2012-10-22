@@ -306,6 +306,8 @@
         the model includes the possibility to specify a degree of sub-cooling $T^{sub}$ which will be
         considered when calculating the equilibrium ratios.
 
+        \todo{add pressure profile adjustment for optimization case -- give reasons.}
+
     \subsection{Specifications}
         The equation systems presented above is comprised of $NC$ component balances, $NC$ equilibrium
         equations, $2N$ summation equations and $N$ energy balances. This gives a total of $N (2C + 3)$
@@ -675,7 +677,7 @@
             \mu_{JT} = \frac{1}{c_p} \left[T \left(\fracddpart{v}{T}\right)_p - v \right]
         }
         \ncg{\mu_{JT}}{\emph{Joule-Thompson} coeffivcient}{\frac{K}{Pa}}
-        
+
         \todo{elaborate on different terms.}
         \todo{add derivative in appendix?}
 
@@ -698,7 +700,7 @@
             \mu_S = \left( \fracddpart{T}{p} \right)_S = \frac{T}{c_p} \left( \fracddpart{v}{T} \right)_p.
         }%
         \ncg{\mu_S}{isentropic expansion coefficient}{\frac{K}{Pa}}
-        
+
         Here the derivative in the second form corresponds to the volumetric coefficient of thermal expansion
         $\beta$, which is always positive for gases, which in turn means, that an isentropic expansion
         will always result in an temperature decrease, whereas the isentropic expansion only led to a decrease in
@@ -721,35 +723,42 @@
     no external utilities are supplied to either unit. Rather they are combined into a single heat exchange unit. Thus
     the absolute value of the reboiler energy must be equal to the energy recovered from the condenser. Furthermore
     the material streams entering the process can -- and should -- exchange heat with the process streams leaving it.
-    The combined condenser / reboiler for LPC / HPC column is assumed as a given heat exchange. This males sense insofar,
+    The combined condenser / reboiler for LPC / HPC column is assumed as a given heat exchange. This makes sense insofar,
     as this is a necessity in terms of the actual physical implementation of the process units. Also the usage of the
     oxygen rich liquid from the HPC as coolant in the Argon condenser is assumed as fixed.
 
+    \stdfig{Pictures/HX_superstructure}{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}{fig:HX_super}{}
+
+
     This leaves the process stream leaving the compression stage of the process as well as all product and waste streams
     leaving the process. All those streams are -- for simulation purposes -- fed into a single multi-stream heat exchange
-    unit. To model this unit a simple model is employed which essentially consists of one single enthalpy balance
+    unit. 
+    
+    
+    
+    To model this unit a simple model is employed which essentially consists of one single enthalpy balance
     \Eq{eq:hx_hbalance}{
         0 = \sum_i H_i^{out} - H_i^{in}, \eqannote{}.
     }
     \todo{add var for no streams, distinguish hot and cold?}
     The enthalpy streams $H_i^{in}$ and $H_i^{out}$ are determined by their respective material stream, their compositions,
     pressures and temperatures. All inlet values are supplied by the surrounding process flowsheet. The outlet material streams
-    are equal to the inlet values, as no reactions or material exchange takes place within the unit. The outlet pressure 
+    are equal to the inlet values, as no reactions or material exchange takes place within the unit. The outlet pressure
     is determined by a specified pressure drop over the unit. This pressure drop might be specified for each stream separately
-    but in this context a single value seems more reasonable. This leaves the outlet temperatures as free variables. However 
+    but in this context a single value seems more reasonable. This leaves the outlet temperatures as free variables. However
     as we are dealing with one single equation, consequently the degree of freedom for this model is one, meaning all but one
-    one outlet temperature have to be supplied. 
-    
-    Apparently this approach exhibits several shortcomings. For one the need to specify all but one temperature is 
-    unsatisfactory. In addition to that none of the principles of heat integration are considered in this model. 
+    one outlet temperature have to be supplied.
+
+    Apparently this approach exhibits several shortcomings. For one the need to specify all but one temperature is
+    unsatisfactory. In addition to that none of the principles of heat integration are considered in this model.
     Neither are there facilities to check whether any energy would be transported across a pinch point, nor is
-    it assured, that the minimum driving force criteria is not violated. Even more essential, no pairing of 
-    hot and cold streams that would exchange heat is undertaken. All those aspects are usually examined separately 
+    it assured, that the minimum driving force criteria is not violated. Even more essential, no pairing of
+    hot and cold streams that would exchange heat is undertaken. All those aspects are usually examined separately
     by means of an composite curve or other tools for heat integration. Recently an alternative approach for
-    simultaneous heat integration and process optimization has been proposed \cite{Kamath.2012}. The approach 
-    presented there is also able of handling phase changes. However it is associated with considerable computational 
-    effort. As the ASU process, is quite expensive as it is it was decided to exclude this approach for the time being 
-    and manually check the thermodynamic feasibility of converged solutions. 
+    simultaneous heat integration and process optimization has been proposed \cite{Kamath.2012}. The approach
+    presented there is also able of handling phase changes. However it is associated with considerable computational
+    effort. As the ASU process, is quite expensive as it is it was decided to exclude this approach for the time being
+    and manually check the thermodynamic feasibility of converged solutions.
 
 
 %\subsection{Centrifugal pump}
@@ -826,16 +835,16 @@
 
 \section{Thermodynamic models}
 \label{sec:peng-rob}
-    Aside from the unit operation models, the behaviour of materials in a process needs to be adequately 
-    accounted for. This is done by means of so called equations of state (EOS) and excess Gibbs energy 
-    models. In terms of thermodynamics there are only a limited amount of variables. Namely the pressure, 
-    density and temperature as well as composition. While equations of state can model a given system in 
-    the vapour as well as liquid phase, excess Gibbs energy models only account for the behaviour of a liquid 
-    and need to be used in conjunction with other models for the vapour phase. However they have shown 
-    considerable better performance for highly non-ideal systems \cite{AndreasPfennig.2003}. As mentioned 
-    earlier (\refsec{sec:comp_liq}) it is essential to accurately capture the non-idealities of air 
+    Aside from the unit operation models, the behaviour of materials in a process needs to be adequately
+    accounted for. This is done by means of so called equations of state (EOS) and excess Gibbs energy
+    models. In terms of thermodynamics there are only a limited amount of variables. Namely the pressure,
+    density and temperature as well as composition. While equations of state can model a given system in
+    the vapour as well as liquid phase, excess Gibbs energy models only account for the behaviour of a liquid
+    and need to be used in conjunction with other models for the vapour phase. However they have shown
+    considerable better performance for highly non-ideal systems \cite{AndreasPfennig.2003}. As mentioned
+    earlier (\refsec{sec:comp_liq}) it is essential to accurately capture the non-idealities of air
     in order to capture the liquefaction process. In the case of cryogenic air separation, the Peng-Robinson
-    as well as the Benders equation of state have shown satisfactory performance. The Peng-Robinson equation 
+    as well as the Benders equation of state have shown satisfactory performance. The Peng-Robinson equation
     was chosen to be used in the presented model
     \Eq{eq:peng_rob}{
         p & = \frac{RT}{V-b} - \frac{a_c \left[1+m\left(1-\sqrt{T_r}\right)\right]^2}{V^2+2bV-b^2} \\
@@ -848,15 +857,15 @@
     \ncr{m}{parameter in Peng-Robinson EOS}{-}
     \ncr{a_c}{parameter in Peng-Robinson EOS}{\frac{m^5}{mol^2 s^2}}
     \ncr{b}{parameter in Peng-Robinson EOS}{\frac{m^3}{mol}}
-    However the Peng-Robinson EOS relies on the so called one-fluid theory which models each fluid as pure. 
+    However the Peng-Robinson EOS relies on the so called one-fluid theory which models each fluid as pure.
     To model mixtures the pure component parameters have to be ''mixed''
     \Eq{}{
         a & = \sum_{i=1}^C \sum_{j=1}^C y_i y_j a_{ij}, \\
         a_{ij} & = \sqrt{a_i a_j} (1 - k_{ij}), \\
         b & = \sum_{i=1}^C y_i b_i.
     }
-    
-    From that EOS numerous relevant properties such as excess enthalpy, fugacity coefficients or densities 
+
+    From that EOS numerous relevant properties such as excess enthalpy, fugacity coefficients or densities
     can be calculated. For a list of some relevant equations refer to \refsec{app:peng_rob_deriv}.
     \todo{which properties should be included? Or move everything to Appendix?}
 	
@@ -1075,30 +1084,30 @@
 		}
 
 \section{Cryogenic air separation process }	
-    The roots of cryogenic air separation lie in the first experiment and apparatus by Carl von Linde -- founder of the 
+    The roots of cryogenic air separation lie in the first experiment and apparatus by Carl von Linde -- founder of the
     Linde AG -- which led to the first air separation plant in 1902. This earliest version of the an air separation plant
-    consisted of a single column or one might argue even only half a column as it only possess a reboiler and no condenser).  
-    In 1910 the foundation of to the modern air separation was set with the development of a double column plant. There 
-    each column operated at different pressures, which enabled the condenser and reboiler to be combined into a 
-    single heat exchange unit. This basic principle is in use to this day. However several enhancements have been made to 
-    to the original process design. Some were driven by new technological developments. Among the most prominent is the 
-    recovery of pure Argon -- only a trace element in ambient air -- within the process. Initially the Argon recovery 
-    had to be undertaken through the help of a catalytic converter. With the development of structured packings which 
-    display a very low pressure drop and height equivalent to theoretical stage (HEPT) it became feasible to separate 
-    Argon within a separate distillation column, as it requires a lot of theoretical stages, which would have 
-    previously led to infeasible large towers. Further advancements include internal compression which allows 
-    for compression of liquefied products within the cold box and more advanced designs of the condenser / reboiler unit. 
-    
+    consisted of a single column or one might argue even only half a column as it only possess a reboiler and no condenser).
+    In 1910 the foundation of to the modern air separation was set with the development of a double column plant. There
+    each column operated at different pressures, which enabled the condenser and reboiler to be combined into a
+    single heat exchange unit. This basic principle is in use to this day. However several enhancements have been made to
+    to the original process design. Some were driven by new technological developments. Among the most prominent is the
+    recovery of pure Argon -- only a trace element in ambient air -- within the process. Initially the Argon recovery
+    had to be undertaken through the help of a catalytic converter. With the development of structured packings which
+    display a very low pressure drop and height equivalent to theoretical stage (HEPT) it became feasible to separate
+    Argon within a separate distillation column, as it requires a lot of theoretical stages, which would have
+    previously led to infeasible large towers. Further advancements include internal compression which allows
+    for compression of liquefied products within the cold box and more advanced designs of the condenser / reboiler unit.
+
     \begin{figure}
         \centering
         \input{Pictures/ASU_simple_coco}
         \caption{simplified cryogenic air separation process.}
         \label{fig:ASU_simple_coco}
     \end{figure}
-    
-    For the purposes of this project a simplified version of an ASU has been considered. A process flowsheet is depicted 
-    in \reffig{fig:ASU_simple_coco}. 
-    
+
+    For the purposes of this project a simplified version of an ASU has been considered. A process flowsheet is depicted
+    in \reffig{fig:ASU_simple_coco}.
+
     \subsection{Flowsheet initialization}
         Even for single unit models initialization might pose difficulties, when a whole process model is considered,
         this task might become even more difficult. If the process units are mainly sequential, the task of initializing

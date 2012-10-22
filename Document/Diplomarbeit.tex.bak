@@ -3,17 +3,17 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-\setboolean{draft}{true}
+\setboolean{draft}{false}
 %\setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
-    \includeonly{
+%    \includeonly{
                 %Content/Abstract,
                 %Content/Introduction,
                 %Content/AirSep,
                 %Content/ProcessDesign,
                 %Content/ProcessEconomics,
-                %Content/MathModel,
+                Content/MathModel,
                 Content/Dynamic,
                 %Content/outlook,
                 %Content/BibAppendix,
@@ -31,7 +31,7 @@
 	\include{Content/Preamble/TaskDescription}
 	\include{Content/Preamble/StatutoryDeclaration}
     \include{Content/Lists}
-    
+
     \pagenumbering{arabic}
     \setcounter{page}{1}
 
