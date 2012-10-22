@@ -15,13 +15,14 @@ A level-1 auxiliary file: Content/report_short.aux
 A level-1 auxiliary file: Content/MathModel.aux
 A level-1 auxiliary file: Content/Dynamic.aux
 A level-1 auxiliary file: Content/outlook.aux
+A level-1 auxiliary file: Content/testpage.aux
 A level-1 auxiliary file: Content/BibAppendix.aux
 Database file #1: Literature.bib
 Warning--empty publisher in BOSTONJ.F..
 Warning--empty year in BOSTONJ.F..
 You've used 22 entries,
             2118 wiz_defined-function locations,
-            669 strings with 8640 characters,
+            670 strings with 8660 characters,
 and the built_in function-call counts, 7593 in all, are:
 = -- 771
 > -- 327

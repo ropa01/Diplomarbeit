@@ -3,21 +3,22 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-\setboolean{draft}{false}
+\setboolean{draft}{true}
 %\setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
-%    \includeonly{
+    \includeonly{
                 %Content/Abstract,
                 %Content/Introduction,
                 %Content/AirSep,
                 %Content/ProcessDesign,
                 %Content/ProcessEconomics,
-                Content/MathModel,
-                Content/Dynamic,
+                %Content/MathModel,
+                %Content/Dynamic,
                 %Content/outlook,
                 %Content/BibAppendix,
-                %Content/report_short
+                %Content/report_short,
+                Content/testpage
     }
 }{
     \usepackage[colorinlistoftodos, disable]{todonotes}
@@ -47,6 +48,7 @@
     \include{Content/Dynamic}
 %	\include{Content/MathConsiderations}
 	\include{Content/outlook}
+    \include{Content/testpage}
 
 	\include{Content/BibAppendix}
 	
