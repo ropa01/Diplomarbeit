@@ -6,6 +6,18 @@ D.~Acharya, F.~Fitch, and R.~Jain.
   {S}ystems for {C}ryogenic {A}ir {S}eparation.
 \newblock {\em Separation Science and Technology}, 31(16):2171--2182, 1996.
 
+\bibitem{Akinlabi.2007}
+Charles~O. Akinlabi, Dimitrios~I. Gerogiorgis, Michael~C. Georgiadis, and
+  Efstratios~N. Pistikopoulos.
+\newblock {M}odelling, {D}esign and {O}ptimisation of a {H}ybrid
+  {P}{S}{A}-{M}embrane {G}as {S}eparation {P}rocess.
+\newblock In V.~Plesu and P.~S. Agachi, editors, {\em 17{T}{H}
+  {E}{U}{R}{O}{P}{E}{A}{N} {S}{Y}{M}{P}{O}{S}{I}{U}{M} {O}{N}
+  {C}{O}{M}{P}{U}{T}{E}{R} {A}{I}{D}{E}{D} {P}{R}{O}{C}{E}{S}{S}
+  {E}{N}{G}{I}{N}{E}{E}{R}{I}{N}{G}}, volume~24 of {\em Computer-Aided Chemical
+  Engineering}, pages 363--370, SARA BURGERHARTSTRAAT 25 and PO BOX 211 and
+  1000 AE AMSTERDAM and NETHERLANDS, 2007. ELSEVIER SCIENCE BV.
+
 \bibitem{AndreasPfennig.2003}
 {Andreas Pfennig}.
 \newblock {\em {T}hermodynamik der {G}emische}.
@@ -51,11 +63,23 @@ W.~F. Castle.
   for the beginning of the new millennium.
 \newblock {\em International Journal of Refrigeration}, 25(1):158--172, 2002.
 
+\bibitem{Chen.1987}
+J.~J.~J. Chen.
+\newblock {L}etter to the {E}ditor: {C}omments on improvement on a replacement
+  for the logarithmic mean.
+\newblock {\em Chemical Engineering Science}, 42:2488--2489, 1987.
+
 \bibitem{Dunnebier.1999}
 Guido D{\"u}nnebier and Constantinos~C. Pantelides.
 \newblock {O}ptimal {D}esign of {T}hermally {C}oupled {D}istillation {C}olumns.
 \newblock {\em Industrial {\&} Engineering Chemistry Research}, 38(1):162--176,
   1999.
+
+\bibitem{Duran.1986}
+M.~A. Duran and Ignacio~E. Grossmann.
+\newblock {S}imultaneous optimization and heat integration of chemical
+  processes.
+\newblock {\em AIChE Journal}, 32(1):123--138, 1986.
 
 \bibitem{Fletcher.2000}
 Roger Fletcher and William Morton.
@@ -121,6 +145,12 @@ Avinash~R. Sirdeshpande, Marianthi~G. Ierapetritou, Mark~J. Andrecovich, and
 \newblock {P}rocess synthesis optimization and flexibility evaluation of air
   separation cycles.
 \newblock {\em AIChE Journal}, 51(4):1190--1200, 2005.
+
+\bibitem{Wankat.2011}
+Phillip~C. Wankat and Kyle~P. Kostroski.
+\newblock {H}ybrid {M}embrane-{C}ryogenic {D}istillation {A}ir {S}eparation
+  {P}rocess for {O}xygen {P}roduction.
+\newblock {\em Separation Science and Technology}, 46(10):1539--1545, 2011.
 
 \bibitem{Yee.1990}
 T.F Yee, Ignacio~E. Grossmann, and Z.~Kravanja.

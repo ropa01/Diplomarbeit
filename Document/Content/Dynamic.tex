@@ -1,22 +1,23 @@
 \chapter{Dynamic model}
+\label{chp:dynamics}    
     \todoil{}{change component number form C to $n_C$, also feed number to $n_{F}$ for vapour and liquid feeds ...}
     \todoil{}{explain model development and the resulting equal number of liquid and vapour feeds... }
     \todoil{}{explain model assumptions.}
-    
-    The previously described model is based on a steady state assumption. This means that all variables do not 
-    change with time. While a model like that offers valuable insight into the operation of a process many 
-    aspects remain unclear. In order to gain further insight into the process the dynamics have to be considered. 
-    
-    Due to that in this section a dynamic model of the ASU process will be developed.   
-    
+
+    The previously described model is based on a steady state assumption. This means that all variables do not
+    change with time. While a model like that offers valuable insight into the operation of a process many
+    aspects remain unclear. In order to gain further insight into the process the dynamics have to be considered.
+
+    Due to that in this section a dynamic model of the ASU process will be developed.
+
 \subsection{column tray}
     \begin{figure}
         \input{Pictures/tray_model}
     \end{figure}
 
 \subsubsection{balance equations}
-    First the balance equations have to be rewritten in dynamic form. To do so reservoir terms or holdups 
-    are introduced. Namely the component holdups $n_{ij}$ and internal energy $U_j$ for each stage. 
+    First the balance equations have to be rewritten in dynamic form. To do so reservoir terms or holdups
+    are introduced. Namely the component holdups $n_{ij}$ and internal energy $U_j$ for each stage.
 
     \paragraph{$n_C - 1$ component balances}
         \Eqml{eq:col:CompBalance_opt}{
@@ -34,58 +35,58 @@
                 \zeta_{lj} \cdot F_j^L \cdot h^{FL}_{j} - \zeta^R_j \cdot V_N \cdot h^V_{N}, \hfill
                 \\ \eqannote{i = 1 \dots n_C, \quad j = 1 \dots n, \quad k = 1 \dots n_F, \quad l = 1 \dots n_F}.
     	}%
-     
+
 \subsubsection{constituent equations}
     In addition to the balance equations further constituent equations need to be introduced. From the
-    steady state model we know the equilibrium equations 
+    steady state model we know the equilibrium equations
     \Eq{eq:col:Kxy}{
         y_{ij} & = K_{ij} \cdot x_{ij}, \eqanncs,
     }%
-    
+
     and the summation equations
-    
+
     \Eq{eq:col:summ_dyn}{
         1 & = \sum_i^{n_c} y_{ij} \eqanns, \\
         1 & = \sum_i^{n_c} x_{ij} \eqanns.
     }%
 
-    Furthermore the mass accumulation in vapour $n_j^V$ and liquid $n_j^L$ phase as well as the energy accumulation 
-    need to be considered with 
-    
+    Furthermore the mass accumulation in vapour $n_j^V$ and liquid $n_j^L$ phase as well as the energy accumulation
+    need to be considered with
+
     \Eq{eq:col:holdup}{
         n_{ij} & = x_{ij} n_j^L + y_{ij} n_j^V \eqanncs, \\
         U_j & = n_j^L  h^L_j + n_j^V h^V_j - p_j V_j \eqanns. \\
     }%
 
-    If pressure is to be computed within the model the tray volume constraint needs to 
+    If pressure is to be computed within the model the tray volume constraint needs to
     be introduced
-    
+
     \Eq{eq:dyn:volconstraint}{
-        V_{tray} = \frac{n_j^V}{\varrho_j^V} + \frac{n_j^L}{\varrho_j^L} \eqanns. 
+        V_{tray} = \frac{n_j^V}{\varrho_j^V} + \frac{n_j^L}{\varrho_j^L} \eqanns.
     }%
 
-    The liquid flow rates are determined by the hydraulic equations 
+    The liquid flow rates are determined by the hydraulic equations
     \todoil{}{add correct hydraulic equation}
     \Eq{eq:col:hydraulics}{
         h_{j}^{liq} - h^{weir} & = 0.68175 F_w \left( \frac{q_j^L}{h_w} \right)^{\frac{2}{3}}. \\
     }%
-    
+
     Where the height of the liquid on a stage is determined by the height of the liquid on a
-    stage. It can be calculated form the liquid holdup on the respective stage 
+    stage. It can be calculated form the liquid holdup on the respective stage
     \todoil{}{add or at least mention froth and foaming...}
     \Eq{}{
-        h_{j}^{liq} & = \frac{n_j^L}{\varrho_j^L A_{active}} \eqanns. 
+        h_{j}^{liq} & = \frac{n_j^L}{\varrho_j^L A_{active}} \eqanns.
     }%
-    
-    The pressure difference between stages is the driving force for the vapour streams. Teh pressure drop 
+
+    The pressure difference between stages is the driving force for the vapour streams. Teh pressure drop
     is modeled as having two contributions, the dray and wet pressure drop. While dry pressure drop
-    stems from the vapour flowing through the holes with in tray, the wet pressure drop is caused by the liquid 
-    holdup on the stage. 
+    stems from the vapour flowing through the holes with in tray, the wet pressure drop is caused by the liquid
+    holdup on the stage.
     \todoil{}{add right equation and discuss pressure drop for structured packings.}
     \Eq{eq:col:dp_dyn}{
         p_j - p_{j+1} = h_{j}^{liq} \varrho_j^L g + 0.5 \xi \varrho_{j+1}^V \left( \frac{q_{j+1}^V}{A_h} \right)^2
     }%
-    
+
 
 \section{Models for columns with structured packings}
     \cpitemize{

@@ -4,6 +4,7 @@
 \contentsline {section}{\numberline {2.1}Cryogenic air separation}{4}{section.2.1}
 \contentsline {section}{\numberline {2.2}Pressure swing adsorption}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}Gas permeation}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Hybrid processes}{7}{section.2.4}
 \contentsline {chapter}{\numberline {3}Process design under uncertainty}{8}{chapter.3}
 \contentsline {section}{\numberline {3.1}Earlier work}{8}{section.3.1}
 \contentsline {chapter}{\numberline {4}Process economics}{10}{chapter.4}
@@ -23,41 +24,57 @@
 \contentsline {subsubsection}{Discounted cash flow rate of return}{17}{section*.21}
 \contentsline {subsubsection}{Annuity method}{18}{section*.22}
 \contentsline {subsubsection}{Interest Rates}{18}{section*.23}
-\contentsline {chapter}{\numberline {5}Mathematical process model}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Purification}{21}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Distillation column model}{21}{subsection.5.1.1}
-\contentsline {paragraph}{Material balances}{22}{section*.29}
-\contentsline {paragraph}{Equilibrium equations}{23}{section*.30}
-\contentsline {paragraph}{Enthalpy balances}{24}{section*.31}
-\contentsline {paragraph}{Condenser and reboiler}{24}{figure.caption.33}
+\contentsline {chapter}{\numberline {5}Mathematical process model}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Purification}{20}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Distillation column model}{20}{subsection.5.1.1}
+\contentsline {paragraph}{Material balances}{21}{section*.26}
+\contentsline {paragraph}{Equilibrium equations}{22}{section*.27}
+\contentsline {paragraph}{Enthalpy balances}{23}{section*.28}
+\contentsline {paragraph}{Condenser and reboiler}{23}{figure.caption.30}
+\contentsline {paragraph}{Pressure profile}{24}{section*.31}
 \contentsline {subsection}{\numberline {5.1.2}Specifications}{25}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Column initialization}{27}{subsection.5.1.3}
-\contentsline {subsubsection}{Init specification}{29}{section*.35}
-\contentsline {subsubsection}{Example}{29}{section*.36}
+\contentsline {subsection}{\numberline {5.1.3}Column initialization}{26}{subsection.5.1.3}
+\contentsline {subsubsection}{Init specification}{29}{section*.33}
+\contentsline {subsubsection}{Example}{29}{section*.34}
 \contentsline {section}{\numberline {5.2}Compression \& liquefaction}{30}{section.5.2}
-\contentsline {subsubsection}{Multi-stage compression}{31}{section*.39}
-\contentsline {subsubsection}{Cooling by expansion}{31}{section*.41}
-\contentsline {section}{\numberline {5.3}Heat exchange}{33}{section.5.3}
-\contentsline {section}{\numberline {5.4}Thermodynamic models}{34}{section.5.4}
-\contentsline {section}{\numberline {5.5}Economic models}{35}{section.5.5}
-\contentsline {subsubsection}{Destillation column}{35}{section*.43}
-\contentsline {paragraph}{Vertical tower}{35}{section*.44}
-\contentsline {paragraph}{Weight}{36}{section*.45}
-\contentsline {paragraph}{Column internals}{36}{section*.46}
-\contentsline {subsubsection}{Centrifugal pump}{36}{section*.47}
-\contentsline {paragraph}{Pump}{36}{section*.48}
-\contentsline {paragraph}{Electric motor}{37}{section*.51}
-\contentsline {subsubsection}{Compressor}{38}{section*.53}
-\contentsline {paragraph}{Centrifugal compressor}{38}{section*.54}
-\contentsline {paragraph}{Reciprocating compressor}{38}{section*.55}
-\contentsline {paragraph}{Screw compressor}{38}{section*.56}
-\contentsline {subsubsection}{Reboiler / condenser}{39}{section*.57}
-\contentsline {paragraph}{Shell and tube heat exchanger}{39}{section*.58}
-\contentsline {paragraph}{Double pipe}{39}{section*.59}
-\contentsline {section}{\numberline {5.6}Cryogenic air separation process}{39}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Flowsheet initialization}{40}{subsection.5.6.1}
-\contentsline {chapter}{\numberline {6}Dynamic model}{43}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusion and further research}{45}{chapter.7}
-\contentsline {chapter}{Bibliography}{46}{chapter*.64}
-\contentsline {chapter}{\numberline {A}Appendix A}{48}{appendix.A}
-\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{48}{section.A.1}
+\contentsline {subsubsection}{Multi-stage compression}{31}{section*.37}
+\contentsline {subsubsection}{Cooling by expansion}{31}{section*.39}
+\contentsline {section}{\numberline {5.3}Heat exchange}{32}{section.5.3}
+\contentsline {paragraph}{Model equations}{35}{section*.42}
+\contentsline {section}{\numberline {5.4}Thermodynamic models}{35}{section.5.4}
+\contentsline {section}{\numberline {5.5}Economic models}{36}{section.5.5}
+\contentsline {subsubsection}{Destillation column}{36}{section*.43}
+\contentsline {paragraph}{Vertical tower}{37}{section*.44}
+\contentsline {paragraph}{Weight}{37}{section*.45}
+\contentsline {paragraph}{Column internals}{38}{section*.46}
+\contentsline {subsubsection}{Centrifugal pump}{38}{section*.47}
+\contentsline {paragraph}{Pump}{38}{section*.48}
+\contentsline {paragraph}{Electric motor}{39}{section*.51}
+\contentsline {subsubsection}{Compressor}{40}{section*.53}
+\contentsline {paragraph}{Centrifugal compressor}{40}{section*.54}
+\contentsline {paragraph}{Reciprocating compressor}{40}{section*.55}
+\contentsline {paragraph}{Screw compressor}{40}{section*.56}
+\contentsline {subsubsection}{Reboiler / condenser}{40}{section*.57}
+\contentsline {paragraph}{Shell and tube heat exchanger}{41}{section*.58}
+\contentsline {paragraph}{Double pipe}{41}{section*.59}
+\contentsline {section}{\numberline {5.6}Cryogenic air separation process}{41}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Flowsheet initialization}{43}{subsection.5.6.1}
+\contentsline {chapter}{\numberline {6}Dynamic model}{45}{chapter.6}
+\contentsline {subsection}{\numberline {6.0.2}column tray}{45}{subsection.6.0.2}
+\contentsline {subsubsection}{balance equations}{45}{section*.64}
+\contentsline {paragraph}{$n_C - 1$ component balances}{45}{section*.65}
+\contentsline {paragraph}{Total internal energy balance}{45}{section*.66}
+\contentsline {subsubsection}{constituent equations}{46}{section*.67}
+\contentsline {section}{\numberline {6.1}Models for columns with structured packings}{47}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}holdup \& pressure drop}{47}{subsection.6.1.1}
+\contentsline {subsubsection}{Model by Rocha et al.}{47}{section*.68}
+\contentsline {subsubsection}{Delft model}{48}{section*.69}
+\contentsline {subsubsection}{SPR method}{48}{section*.70}
+\contentsline {subsubsection}{Hydrodynamic analogy}{48}{section*.71}
+\contentsline {paragraph}{gas flow}{48}{section*.72}
+\contentsline {paragraph}{liquid flow}{49}{section*.73}
+\contentsline {paragraph}{equations}{49}{section*.74}
+\contentsline {chapter}{\numberline {7}Conclusion and further research}{50}{chapter.7}
+\contentsline {chapter}{Bibliography}{51}{chapter*.75}
+\contentsline {chapter}{\numberline {A}Appendix A}{53}{appendix.A}
+\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{53}{section.A.1}

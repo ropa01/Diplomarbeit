@@ -138,16 +138,3 @@ to a separation problem.
     permeate side of the membrane.
 
 \section{Hybrid processes}
-    The three different alternatives presented before constitute the major technologies for separations
-    of gases and therefore the production of pure nitrogen and oxygen. All technologies have their specific 
-    advantages and disadvantages. As the separation of gases remains a major issue when facing upcoming challenges 
-    for our industries substantial efforts are being made to improve current processes in terms of ecological 
-    and economic performance. A very promising way to achieve such improvements to combine these technologies 
-    to form hybrid processes. Membranes offer many favourable characteristics are however rather limited when 
-    it comes to large flow-rates and high purities. When lower purities are required or the flow-rates are limited
-    they offer however an efficient and cost effective way for gas separation. Therefore in the past years several 
-    alternatives for PSA - membrane \cite{Akinlabi.2007} or membrane-cryogenic distillation processes \cite{Wankat.2011}
-    have been studied. The membrane can function within the process either as a pretreatment step, where an product enriched
-    stream at medium purities and high flow-rates is produced, or after the main separation, when the main 
-    byproducts are already removed, as a last stage to reach very high purities. 
-    \todoil{}{include hybrid process flowsheet.}

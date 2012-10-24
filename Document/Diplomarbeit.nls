@@ -81,16 +81,16 @@
 
   \item [{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
 		\nompageref{22}
-  \item [{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {5.34}
+  \item [{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {5.35}
+		\nompageref{32}
+  \item [{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {5.34}
 		\nompageref{31}
-  \item [{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {5.33}
-		\nompageref{31}
-  \item [{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {5.18}
+  \item [{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {5.19}
 		\nompageref{25}
-  \item [{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {5.18}
+  \item [{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {5.19}
 		\nompageref{25}
-  \item [{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {5.19}
-		\nompageref{25}
+  \item [{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {5.20}
+		\nompageref{26}
   \item [{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
 		\nompageref{22}
   \item [{$\varphi _i$}]\begingroup vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
@@ -108,10 +108,14 @@
 
  \nomgroup{R}
 
-  \item [{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.40}
-		\nompageref{33}
-  \item [{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.40}
-		\nompageref{33}
+  \item [{$\Delta p$}]\begingroup pressure drop over entire column \nomunit {Pa}\nomeqref {5.16}
+		\nompageref{24}
+  \item [{$\Delta p_{stage}$}]\begingroup stage-wise pressure drop \nomunit {Pa}\nomeqref {5.16}
+		\nompageref{24}
+  \item [{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.45}
+		\nompageref{36}
+  \item [{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.45}
+		\nompageref{36}
   \item [{$C$}]\begingroup number of components \nomunit {-}\nomeqref {5.4}
 		\nompageref{21}
   \item [{$F^L_j$}]\begingroup molar liquid feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}
@@ -122,10 +126,10 @@
 		\nompageref{22}
   \item [{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {5.10}
 		\nompageref{22}
-  \item [{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
-		\nompageref{27}
-  \item [{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
-		\nompageref{27}
+  \item [{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+		\nompageref{28}
+  \item [{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+		\nompageref{28}
   \item [{$F_{Pi}$}]\begingroup compressibility factor of component $i$ \nomunit {-}\nomeqref {5.11}
 		\nompageref{22}
   \item [{$h^L_j$}]\begingroup molar liquid enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.13}
@@ -138,18 +142,18 @@
 		\nompageref{23}
   \item [{$K_{ij}$}]\begingroup equilibrium ratio of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.9}
 		\nompageref{22}
-  \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
-		\nompageref{27}
+  \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+		\nompageref{28}
   \item [{$L_j$}]\begingroup molar liquid flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
 		\nompageref{21}
-  \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}
+  \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.21}
 		\nompageref{27}
-  \item [{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.40}
-		\nompageref{33}
+  \item [{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.45}
+		\nompageref{36}
   \item [{$N$}]\begingroup number of stages \nomunit {-}\nomeqref {5.4}
 		\nompageref{21}
-  \item [{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.40}
-		\nompageref{33}
+  \item [{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.45}
+		\nompageref{36}
   \item [{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {5.11}
 		\nompageref{22}
   \item [{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {5.11}
@@ -162,19 +166,19 @@
 		\nompageref{21}
   \item [{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {5.2}
 		\nompageref{21}
-  \item [{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
-		\nompageref{27}
-  \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
-		\nompageref{27}
-  \item [{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {5.31}
-		\nompageref{29}
-  \item [{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {5.31}
-		\nompageref{29}
-  \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.24}
-		\nompageref{27}
+  \item [{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+		\nompageref{28}
+  \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+		\nompageref{28}
+  \item [{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {5.32}
+		\nompageref{30}
+  \item [{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {5.32}
+		\nompageref{30}
+  \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+		\nompageref{28}
   \item [{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
 		\nompageref{21}
-  \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.20}
+  \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.21}
 		\nompageref{27}
   \item [{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}
 		\nompageref{21}

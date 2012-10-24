@@ -1,10 +1,6 @@
 \chapter{Mathematical process model}
 \label{chp:MathModel}
 
-%    \begin{figure}
-%        \input{Pictures/double_column}
-%    \end{figure}
-
     The industrial scale production of highly pure oxygen and nitrogen as well as noble
     gases is still carried out by means of the cryogenic process.
 
@@ -106,7 +102,7 @@
         \Eqml{eq:col:CompBalance}{
     		0 = \left(V_j + S_j^V\right) \cdot y_{i,j} + \left(L_j + S_j^L\right) \cdot x_{i,j}
                 - V_{j+1} \cdot y_{i,j+1} - L_{j-1} \cdot x_{i,j-1} \\ - F_j^V \cdot z^V_{i,j}
-                - F_j^L \cdot z_{i,j}^L, \eqannote{i = 1 \dots C, \quad j = 1 \dots N}.
+                - F_j^L \cdot z_{i,j}^L, \eqanncs.
     	}%
         \ncr{V_j}{molar vapour flowrate form stage $j$}{\mols}
         \ncr{L_j}{molar liquid flowrate form stage $j$}{\mols}
@@ -128,12 +124,12 @@
         by means of the respective vapour and liquid flows on that stage to form the
         vapour
         \Eq{eq:val:vap:strip}{
-            s_j^V = \frac{S_j^V}{V_j}, \eqannote{j = 1 \dots N}
+            s_j^V = \frac{S_j^V}{V_j}, \eqanns
         }%
         \ncr{s^V_j}{dimensionless vapour side-draw from stage $j$}{-}
         and liquid
         \Eq{eq:val:vap:strip}{
-            s_j^L = \frac{S_j^L}{L_j}, \eqannote{j = 1 \dots N}
+            s_j^L = \frac{S_j^L}{L_j}, \eqanns
         }%
         \ncr{s^V_j}{dimensionless liquid side-draw from stage $j$}{-}
         stripping factors. Replacing the side-streams in the material balances by their
@@ -206,7 +202,7 @@
         A vapour and liquid phase are in equilibrium, when the fugacities in the vapour $f_i^V$
         and liquid $f_i^L$ phase for each species $i$ are equal \cite{AndreasPfennig.2003}
         \Eq{eq:col:fug}{
-            f_i^V = f_i^L, \eqannote{i = 1 \dots C}.
+            f_i^V = f_i^L, \eqannc.
     	}%
         \ncr{f_i^V}{vapour fugacity}{-}
         \ncr{f_i^L}{liquid fugacity}{-}
@@ -216,7 +212,7 @@
         the vapour pressure $p^S_i$ as well as the system pressure $p$ along with the vapour and
         liquid molar fractions
         \Eq{eq:col:fug_ext}{
-            \gamma_i \, F_{Pi} \, \varphi^0_i \, p^S_i \, x_i = \varphi_i \, p \, y_i, \eqannote{i = 1 \dots C}.
+            \gamma_i \, F_{Pi} \, \varphi^0_i \, p^S_i \, x_i = \varphi_i \, p \, y_i, \eqannc.
     	}%
         \ncg{\gamma_i}{liquid activity coefficient of component $i$}{-}
         \ncg{\varphi^0_i}{reference vapour fugacity coefficient of component $i$}{-}
@@ -229,7 +225,7 @@
         can be derived
         \Eq{eq:col:fug_ext}{
             y_i = \underbrace{\frac{\gamma_i \, F_{Pi} \, \varphi^0_i \, p^S_i}{\varphi_i \, p}}_{K_i}
-                x_i, \eqannote{i = 1 \dots C}.
+                x_i, \eqannc.
     	}%
 
         The equations to determine the quantities used when computing the equilibrium ratios are by
@@ -292,7 +288,7 @@
         }%
         and the condenser temperature is determined by the bubble point equation
         \Eq{eq:col:bub}{
-            0 = 1 - \sum_i K_{i1} \cdot x_{i1} \eqannote{i = 1 \dots C}.
+            0 = 1 - \sum_i K_{i1} \cdot x_{i1} \eqannc.
         }%
 
         When implementing the model in a process simulator it is sensible to consider, that due to
@@ -306,7 +302,33 @@
         the model includes the possibility to specify a degree of sub-cooling $T^{sub}$ which will be
         considered when calculating the equilibrium ratios.
 
-        \todo{add pressure profile adjustment for optimization case -- give reasons.}
+    \paragraph{Pressure profile}
+        For a steady-state model the pressure profile of a column would usually be specified. However as it
+        is inconvenient and unpractical to specify a pressure for each stage one might either specify
+        a pressure at the top and bottom stage and assume a uniform pressure profile along the column, or
+        specify either top $p_1$ or bottom pressure $p_N$ along with a total pressure drop $\Delta p$,
+        or a stage-wise one $\Delta p_{stage}$. However the issue is further complicated if one considers the
+        case of optimization for number of trays. In that case several trays will become inactive. For those
+        trays the mass and energy balances become trivial, as only liquid enters and exits these trays.
+        (For the case employed here, where the reboiler reflux is being optimized). This also means,
+        that from the last active tray down to the reboiler -- if present -- there should be a uniform
+        profile. however, if a uniform pressure profile from that stage down is not enforced, the solver
+        will have to compensate for slight changes in the equilibrium due to pressure variations with minimal
+        vapour flow-rates. This is very undesirable, as it might to lead to severe problems in the solver,
+        or the calculation of other properties, dependent on these values. To account for this issue, the reboiler
+        reflux split can once more be employed
+        \Eq{}{
+            p_i = p_{j-1} + \left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \cdot \Delta p_{j-1} \eqanns.
+        }
+        \ncr{\Delta p}{pressure drop over entire column}{Pa}
+        \ncr{\Delta p_{stage}}{stage-wise pressure drop}{Pa}
+
+        As an alternative to specifying the pressure, one might consider calculating the pressure drop
+        form (semi)-empirical models. There a numerous correlations for different types of column internals.
+        These correlations become particularly important id column dynamics are to be considered, as they
+        make a connection between holdups and flow-rates within the column. Two different pressure drop models
+        have been implemented, one for trayed columns and another one for structured packings. As they are closely
+        tied to dynamics, they will be discussed in closed detail in \refsec{chp:dynamics}.
 
     \subsection{Specifications}
         The equation systems presented above is comprised of $NC$ component balances, $NC$ equilibrium
@@ -721,45 +743,110 @@
     one must consider the special column configuration used in the process. Since operation of the condenser in the
     low pressure section only becomes possible if the reboiler in the high pressure section functions as heat sink,
     no external utilities are supplied to either unit. Rather they are combined into a single heat exchange unit. Thus
-    the absolute value of the reboiler energy must be equal to the energy recovered from the condenser. Furthermore
+    the absolute value of the reboiler energy must matched by the energy recovered from the condenser. Furthermore
     the material streams entering the process can -- and should -- exchange heat with the process streams leaving it.
     The combined condenser / reboiler for LPC / HPC column is assumed as a given heat exchange. This makes sense insofar,
     as this is a necessity in terms of the actual physical implementation of the process units. Also the usage of the
     oxygen rich liquid from the HPC as coolant in the Argon condenser is assumed as fixed.
 
+    This leaves the process stream leaving the compression stage of the process as well as all product and waste streams
+    leaving the process. All those streams are -- for simulation purposes and also in some process implementations  -- fed
+    into a single multi-stream heat exchange unit. In actual processes all heat exchange and much of the process operations
+    take place in the so called ''cold box''. As such a heavily insulated area is referred to. This is done to minimize
+    heat exchange with the surroundings. Therefore and for further reasons compact heat exchange units such as plate-fin
+    multi-stream heat exchangers are favoured when dealing with cryogenic processes in general and the cryogenic air septation
+    in particular.
+
+    Due to the importance of heat integration to the ASU process some thought sould be given as to what modelling approach
+    should be employed. Although the field of heat integration is one of the most intensively studied within process engineering,
+    only  a limited amount of approaches is available in open literature \cite{Kamath.2012}.
+
+    Traditionally heat integration has been carried out in a sequential manner, where it is for the purposes of process
+    optimization assumed, that all heating and cooling is done by external utilities. After an (locally) optimal
+    process configuration is identified, all hot and cold streams within the process are identified, and their
+    temperature intervals fixed. %In the context of heat integration hot and cold streams do not refer to whether a given
+    %stream has a subjectively high or low temperature, but rather whether a given stream needs to be cooled (hot) or
+    %heated (cold) within the process. %
+    In subsequent steps first the minimum utility requirements, and maximum number of heat exchangers are identified,
+    and a specific heat exchange network (HEN) is designed. \todo{add citation Lindhoff...}
+    While this approach has been successfully applied to a multitude of processes and led to substantial savings,
+    it is questionable if such a sequential approach will yield an optimal or near optimal solution.
+
+    Therefore some efforts have been made to develop efficient strategies for simultaneous process optimization
+    and heat integration. Two general approaches can be distinguished. The first one based on the pinch concept.
+    \todoil{}{elaborate on pinch concept?} These methods are able to identify the minimum heat requirement
+    as well as stream temperatures during process optimization. The first model along these lines was published
+    by Duran and Grossmann \cite{Duran.1986} in 1986. They introduced a limited number of quite well behaved
+    constraints into the optimization model to ensure no minimum driving force violations. Recently
+    this model has been extended to handle phase changes and by fixing the utilities to zero been applied
+    to the design of a multi-stream heat exchanger \cite{Kamath.2012}. The major drawback with these methods
+    \todoil{}{read about and mention transshipment model by Moriari (sequential)}
+    is that one cannot target area of a given heat exchanger as the approach temperatures are not computed
+    by the model. Therefore the sometimes substantial trade-off between the cost for heat exchange area
+    and utility cost cannot be regarded.
+
+    A second approach employs superstructures of a HEN to find optimal matchings of process streams. No pinch
+    point calculations are required, as the actual heat exchange is more or less modeled explicitly. This
+    leads to the benefit, that approach temperatures as well as exchanged heat duties between each stream coupling
+    are known within the model, and the cost of the designed unit can be considered in an economic objective
+    function.
+
+    The approach and respective superstructure adapted in this thesis were first published by Yee and Grossmann
+    \cite{Yee.1990}. \Reffig{fig:HX_super} shows the stage wise superstructure for a HEN consisting of two hot
+    and two cold streams.
+
     \stdfig{Pictures/HX_superstructure}{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}{fig:HX_super}{}
 
+    In this stagewise structure each hot stream can exchange heat with each cold stream within each stage.
+    The following assumptions were made when the model was developed
+    \begin{itemize}
+        \item Constant heat capacities
+        \item Constant heat transfer coefficients
+        \item Countercurrent heat exchangers
+        \item Isothermal mixing at each stage.
+    \end{itemize}
 
-    This leaves the process stream leaving the compression stage of the process as well as all product and waste streams
-    leaving the process. All those streams are -- for simulation purposes -- fed into a single multi-stream heat exchange
-    unit. 
-    
-    
-    
-    To model this unit a simple model is employed which essentially consists of one single enthalpy balance
-    \Eq{eq:hx_hbalance}{
-        0 = \sum_i H_i^{out} - H_i^{in}, \eqannote{}.
+    The assumption of constant heat capacities is a common one in the design of HEN's. When no phase boundaries are passed
+    and the temperature range of the involved is not too wide, it is a reasonably good approximation of the real conditions.
+    While constant heat transfer coefficients a re assumed the model leaves the flexibility to define different
+    coefficients for each pairing of hot and cold streams. Countercurrent heat exchangers are common in industrial practice.
+    This assumption however does not really pose a limitation, as the model can easily be altered to account for concurrent
+    units.
+
+    The last assumption of isothermal mixing is a more major one. It has been introduced as it allows for significant
+    simplifications and leads to a model, where all constraints are linear and all non-linearities are restricted
+    to the objective function. While that is certainly not true for the entire process model, it should at least
+    allow for some reductions in the model complexity. The assumption states, that regardless of which streams a
+    given stream exchanges heat with, it will leave at the same temperature. Due to that all energy balances around
+    each unit in the superstructure can be eliminated as well as the subsequent mixing of the streams.
+
+    \paragraph{Model equations}
+
+    First of all a heat balance at each stage is necessary
+    \Eq{}{
+        F_i (T_{i, \ell} - T_{i, \ell+1}) = \sum_j q_{ijk} \\
+        f_j (T_{i, \ell} - T_{i, \ell+1}) = \sum_i q_{ijk}
     }
-    \todo{add var for no streams, distinguish hot and cold?}
-    The enthalpy streams $H_i^{in}$ and $H_i^{out}$ are determined by their respective material stream, their compositions,
-    pressures and temperatures. All inlet values are supplied by the surrounding process flowsheet. The outlet material streams
-    are equal to the inlet values, as no reactions or material exchange takes place within the unit. The outlet pressure
-    is determined by a specified pressure drop over the unit. This pressure drop might be specified for each stream separately
-    but in this context a single value seems more reasonable. This leaves the outlet temperatures as free variables. However
-    as we are dealing with one single equation, consequently the degree of freedom for this model is one, meaning all but one
-    one outlet temperature have to be supplied.
 
-    Apparently this approach exhibits several shortcomings. For one the need to specify all but one temperature is
-    unsatisfactory. In addition to that none of the principles of heat integration are considered in this model.
-    Neither are there facilities to check whether any energy would be transported across a pinch point, nor is
-    it assured, that the minimum driving force criteria is not violated. Even more essential, no pairing of
-    hot and cold streams that would exchange heat is undertaken. All those aspects are usually examined separately
-    by means of an composite curve or other tools for heat integration. Recently an alternative approach for
-    simultaneous heat integration and process optimization has been proposed \cite{Kamath.2012}. The approach
-    presented there is also able of handling phase changes. However it is associated with considerable computational
-    effort. As the ASU process, is quite expensive as it is it was decided to exclude this approach for the time being
-    and manually check the thermodynamic feasibility of converged solutions.
+    The heat exchange area $A_{hx}$ can be computed from the exchanged energy, the heat transfer coefficients $\alpha_{ij}$
+    and the logarithmic mean temperature difference $LMTD$.
+    \Eq{}{
+        A_{hx} = \sum_i \sum_j \sum_k \frac{q_{ijk}}{\alpha_{ij} * LMDT_{ijk} + \delta}
+    }
 
+    While the small number $\delta$ is included to avoid problems in the program, when $LMDT$ becomes zero
+    In order to avoid further numerical difficulties when the approach temperatures $\Delta T_{ij}$ at each side of an exchange
+    unit approach zero, it was proposed to use an approximation introduced by Chen \cite{Chen.1987}
+    \Eq{}{
+        LMDT_{ijk} \approx \left[ \Delta T_{ijk} \cdot \Delta T_{ijk+1} \frac{\Delta T_{ijk} + \Delta T_{ijk+1}}{2} \right]^{\frac{1}{3}}.
+    }
+
+    While the approach temperatures are defined as
+    \Eq{}{
+        \Delta T_{ijk} = \max \left\{0, T_{ik} - T_{jk}\right\}
+    }
+    AS the $\max$ function is non-smooth and thus non differentiable at the points $T_{ik} = T_{jk}$, \gproms internally uses a smooth
+    approximation. The exact for of which is unknown to the author.
 
 %\subsection{Centrifugal pump}
 %	
@@ -780,9 +867,7 @@
 %			C_B  = \exp\big[ 5.8259 + 0.13141 \ln[P_C] + 0.053255 (\ln[Pc])^2 \\
 %				 + 0.028628 (\ln[P_C])^3 - 0.0035549 (\ln[P_C])^4 \big]
 %		}	
-%
-%	\todo[inline]{add formulas for vapour fraction}
-%	\todo[inline]{check if . or , are used for decimals ...}
+
 
 %\subsubsection{Expander}
 
@@ -1080,7 +1165,7 @@
 		
 		\paragraph{Double pipe}
 		\Eq{}{
-			C_B = \exp\big\{ 7.146 + 0.1600 \cdot \pow{\ln[A]}{} \big\}
+			C_B = \exp\left\{ 7.146 + 0.1600 \cdot \pow{\ln[A]}{} \right\}
 		}
 
 \section{Cryogenic air separation process }	

@@ -1,11 +1,34 @@
-\BOOKMARK [0][-]{chapter.5}{Mathematical process model}{}% 15
-\BOOKMARK [1][-]{section.5.1}{Purification}{chapter.5}% 16
-\BOOKMARK [2][-]{subsection.5.1.1}{Distillation column model}{section.5.1}% 17
-\BOOKMARK [2][-]{subsection.5.1.2}{Specifications}{section.5.1}% 18
-\BOOKMARK [2][-]{subsection.5.1.3}{Column initialization}{section.5.1}% 19
-\BOOKMARK [1][-]{section.5.2}{Compression \046 liquefaction}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.3}{Heat exchange}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.4}{Thermodynamic models}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.5}{Economic models}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.6}{Cryogenic air separation process}{chapter.5}% 24
-\BOOKMARK [2][-]{subsection.5.6.1}{Flowsheet initialization}{section.5.6}% 25
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Air separation technology}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Cryogenic air separation}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Pressure swing adsorption}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Gas permeation}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Hybrid processes}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Process design under uncertainty}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Earlier work}{chapter.3}% 8
+\BOOKMARK [0][-]{chapter.4}{Process economics}{}% 9
+\BOOKMARK [1][-]{section.4.1}{Project cost}{chapter.4}% 10
+\BOOKMARK [2][-]{subsection.4.1.1}{Before process design}{section.4.1}% 11
+\BOOKMARK [2][-]{subsection.4.1.2}{During process design}{section.4.1}% 12
+\BOOKMARK [1][-]{section.4.2}{Investment criteria}{chapter.4}% 13
+\BOOKMARK [2][-]{subsection.4.2.1}{Single period estimation methods}{section.4.2}% 14
+\BOOKMARK [2][-]{subsection.4.2.2}{Multi period estimation methods}{section.4.2}% 15
+\BOOKMARK [0][-]{chapter.5}{Mathematical process model}{}% 16
+\BOOKMARK [1][-]{section.5.1}{Purification}{chapter.5}% 17
+\BOOKMARK [2][-]{subsection.5.1.1}{Distillation column model}{section.5.1}% 18
+\BOOKMARK [2][-]{subsection.5.1.2}{Specifications}{section.5.1}% 19
+\BOOKMARK [2][-]{subsection.5.1.3}{Column initialization}{section.5.1}% 20
+\BOOKMARK [1][-]{section.5.2}{Compression \046 liquefaction}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.3}{Heat exchange}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.4}{Thermodynamic models}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.5}{Economic models}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.6}{Cryogenic air separation process}{chapter.5}% 25
+\BOOKMARK [2][-]{subsection.5.6.1}{Flowsheet initialization}{section.5.6}% 26
+\BOOKMARK [0][-]{chapter.6}{Dynamic model}{}% 27
+\BOOKMARK [1][-]{subsection.6.0.2}{column tray}{chapter.6}% 28
+\BOOKMARK [1][-]{section.6.1}{Models for columns with structured packings}{chapter.6}% 29
+\BOOKMARK [2][-]{subsection.6.1.1}{holdup \046 pressure drop}{section.6.1}% 30
+\BOOKMARK [0][-]{chapter.7}{Conclusion and further research}{}% 31
+\BOOKMARK [0][-]{chapter*.75}{Bibliography}{}% 32
+\BOOKMARK [0][-]{appendix.A}{Appendix A}{}% 33
+\BOOKMARK [1][-]{section.A.1}{Peng-Robinson derived properties}{appendix.A}% 34
