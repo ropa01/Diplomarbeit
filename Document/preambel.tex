@@ -153,13 +153,15 @@
 \renewcommand{\nomgroup}[1]{%
 \ifthenelse{\equal{#1}{R}}{\item[\textbf{Variables}]}{%
 \ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Letters}]}{%
-\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indices}]}{}}}}
+\ifthenelse{\equal{#1}{C}}{\item[\textbf{Constants}]}{%
+\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indices}]}{}}}}}
 
 \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
-\newcommand{\nc}[3]{\nomenclature[A ]{$#1$}{#2 \nomunit{#3}}}   
-\newcommand{\ncr}[3]{\nomenclature[R ]{$#1$}{#2 \nomunit{#3}}}  % roman 
+\newcommand{\nc}[3]{\nomenclature[A ]{$#1$}{#2 \nomunit{#3}}}
+\newcommand{\ncr}[3]{\nomenclature[R ]{$#1$}{#2 \nomunit{#3}}}  % roman
 \newcommand{\ncg}[3]{\nomenclature[G ]{$#1$}{#2 \nomunit{#3}}}  % greek
 \newcommand{\nci}[2]{\nomenclature[I ]{$#1$}{#2}}               % indices
+\newcommand{\ncc}[3]{\nomenclature[C ]{$#1$}{#2 \nomunit{#3}}}  % roman
 
 \makenomenclature
 

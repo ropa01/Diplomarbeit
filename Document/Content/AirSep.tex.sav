@@ -34,19 +34,19 @@ to a separation problem.
     prospective processes for power generation from fossil sources in form of the integrated gaseous combined
     cycle (IGCC) integrates the air separation process in order to enable more environmentally friendly power
     generation \cite{Mahapatra.2010}.
-    
+
     \begin{figure}
     	\input{Pictures/ASU_text}
     	\caption[Air Separation Unit]{Schematic representation of the cryogenic air separation process.}
     	\label{fig:ASU}
     \end{figure}
-    
+
     As can be seen in \reffig{fig:ASU} double effect heat integrated distillation column lies at the heart of the air
     liquefaction processes. It consists of a high pressure column (HPC) operating at 0.68 $MPa$ and
     temperatures below 130 $K$ as well as a low pressure column (LPC) which operates at around 0.13
     $MPa$ an comparable temperatures. In order to also attain highly pure argon as a product the process
     may also include a crude argon column (CAC) which works at slightly lower pressures than the LPC.
-    
+
     The plant air entering the process is initially purified, where carbon and nitrogen oxides as well as solid contaminants are removed, and then compressed to process conditions. The compressed air is then cooled
     against product streams namely liquefied nitrogen, oxygen and argon. The air stream is then divided into
     several sub-streams. One of those is fed into the HPC bottom, while another is expanded by means of a
@@ -69,14 +69,16 @@ to a separation problem.
     also larger scale plants have successfully been utilized, for example in the paper industry during the
     de-lignation of pulp. It remains true however, that for large scale industrial settings with high product
     quality demands, cryogenic separation remains the most viable alternative.
-    
+
     Separation is achieved during the PSA process by adsorption of one component in the mixture to a given
     bed. Once the bed is saturated with a the adsorbing species, it has to be regenerated in order to continue
     production. The ability to adsorb a certain species is dependent on the system pressure. At higher pressures
     more gas can be adsorbed then at lower pressures. Thus by reducing the pressure in the reaction vessel,
     the Adsorbent can be regenerated.
-    
-    \stdfig{pgfplots/PSA}{Schematic representation of the PSA process.}{fig:PSA}{}
+
+%    \begin{figure}
+%        \stdfig{pgfplots/PSA}{Schematic representation of the PSA process.}{fig:PSA}{}
+%    \end{figure}
     
     \begin{figure}
     	\center
@@ -84,7 +86,7 @@ to a separation problem.
     	\caption{Schematic representation of the PSA process.}
     	\label{fig:PSA}
     \end{figure}
-    
+
     In order to avoid non-continuous processes, two or more reaction vessels are employed. Therefore the
     saturated vessel can be regenerated, while the other one continues production. By alternating adsorption
     and regenerating in the different vessels continuous production can be achieved. A schematic for a simple
@@ -92,17 +94,17 @@ to a separation problem.
     elevated pressure. Within the vessel nitrogen is adsorbed until saturation is reached. At that point the
     ambient air is led through the second vessel. A fraction of the product stream is fed into the first vessel and
     used as sweep for the regeneration of the adsorbent at lower pressure.
-    
+
     Depending on the size of the process two different pressure level are used. One cycle adsorbs the nitrogen
     at a pressure of approximately  7.5 bar while regeneration is done at ambient pressure. Within the
     alternative approach adsorption occurs under ambient condition, while for the regeneration step a vacuum
     pump reduces the vessel pressure. This process is the called Vacuum Pressure Swing Adsorption (VPSA).
-    
+
     An important role when designing the product is the choice of the adsorbent. For almost all current
     applications of PSA alumosilicates or zeolithes have been designed, tailored to the specific separation
     task. Their main advantages include a high selectivity towards a specic gas to be adsorbed as well as a
     very homogenous distribution of diameters in the molecular sieve.
-    
+
 \section{Gas permeation}
     \label{sec:membrane}
     \todo[inline]{find paper: DOI: 10.1002/cite.330480804}
@@ -112,16 +114,16 @@ to a separation problem.
     produce flexible mobile units. As mentioned before it is not however capable of producing high
     quantity highly pure product streams. As \reffig{fig:tech_compar} illustrates the main application
     for the gas permeation process are small to moderate product streams at intermediate purities.
-    
-    %\begin{figure}
-    %	\center
-    %	\input{Pictures/gas_permeation}
-    %	\caption{Gas permeation process.}
-    %	\label{fig:gas_permeation}
-    %\end{figure}
-    
-    \stdfig{pgfplots/GasPermeation}{Membrane unit for gas permeation.}{fig:gas_permeation}{}
-    
+
+    \begin{figure}
+    	\center
+    	\input{pgfplots/GasPermeation}
+	    \caption{Membrane unit for gas permeation.}
+    	\label{fig:gas_permeation}
+    \end{figure}
+
+%    \stdfig{pgfplots/GasPermeation}{Membrane unit for gas permeation.}{fig:gas_permeation}{}
+
     \reffig{fig:gas_permeation} shows the schematic for a single stage membrane unit. Within the feed stream
     the gaseous mixture is fed into the unit, which can quickly be implemented. Within the unit one or more
     species migrate favorably through the membrane. In this case mostly dense polymer membranes are
@@ -132,9 +134,22 @@ to a separation problem.
     membrane. According to the molecular structure of each species, the structure of the separating membrane
     as well as the process parameters pressure and temperature, they permeate through the membrane in
     different quantities.
-    
+
     The process of permeation can be subdivided into three separate steps. Sorption at the membrane /
     feed interface, diffusion through the mostly dense polymer membrane and finally desorption at the
     permeate side of the membrane.
 
 \section{Hybrid processes}
+    The three different alternatives presented before constitute the major technologies for separations
+    of gases and therefore the production of pure nitrogen and oxygen. All technologies have their specific
+    advantages and disadvantages. As the separation of gases remains a major issue when facing upcoming challenges
+    for our industries substantial efforts are being made to improve current processes in terms of ecological
+    and economic performance. A very promising way to achieve such improvements to combine these technologies
+    to form hybrid processes. Membranes offer many favourable characteristics are however rather limited when
+    it comes to large flow-rates and high purities. When lower purities are required or the flow-rates are limited
+    they offer however an efficient and cost effective way for gas separation. Therefore in the past years several
+    alternatives for PSA - membrane \cite{Akinlabi.2007} or membrane-cryogenic distillation processes \cite{Wankat.2011}
+    have been studied. The membrane can function within the process either as a pretreatment step, where an product enriched
+    stream at medium purities and high flow-rates is produced, or after the main separation, when the main
+    byproducts are already removed, as a last stage to reach very high purities.
+    \todoil{}{include hybrid process flowsheet.}

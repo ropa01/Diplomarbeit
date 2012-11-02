@@ -14,49 +14,52 @@ A level-1 auxiliary file: Content/ProcessEconomics.aux
 A level-1 auxiliary file: Content/MathModel.aux
 A level-1 auxiliary file: Content/Dynamic.aux
 A level-1 auxiliary file: Content/outlook.aux
+A level-1 auxiliary file: Content/testpage.aux
 A level-1 auxiliary file: Content/BibAppendix.aux
 Database file #1: Literature.bib
+Warning--to sort, need author, editor, or key in 92
+Warning--empty author and editor in 92
 Warning--empty publisher in BOSTONJ.F..
 Warning--empty year in BOSTONJ.F..
-You've used 26 entries,
+You've used 29 entries,
             2118 wiz_defined-function locations,
-            702 strings with 9685 characters,
-and the built_in function-call counts, 9173 in all, are:
-= -- 936
-> -- 391
+            720 strings with 10201 characters,
+and the built_in function-call counts, 10126 in all, are:
+= -- 1029
+> -- 433
 < -- 4
-+ -- 152
-- -- 126
-* -- 697
-:= -- 1505
-add.period$ -- 79
-call.type$ -- 26
-change.case$ -- 139
++ -- 169
+- -- 140
+* -- 776
+:= -- 1657
+add.period$ -- 87
+call.type$ -- 29
+change.case$ -- 154
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 328
-empty$ -- 727
-format.name$ -- 126
-if$ -- 1903
+cite$ -- 33
+duplicate$ -- 363
+empty$ -- 807
+format.name$ -- 140
+if$ -- 2099
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 31
-newline$ -- 133
-num.names$ -- 54
-pop$ -- 123
+int.to.str$ -- 29
+missing$ -- 34
+newline$ -- 147
+num.names$ -- 58
+pop$ -- 139
 preamble$ -- 1
-purify$ -- 114
+purify$ -- 127
 quote$ -- 0
-skip$ -- 222
+skip$ -- 242
 stack$ -- 0
-substring$ -- 726
-swap$ -- 57
+substring$ -- 797
+swap$ -- 60
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 94
-warning$ -- 2
-while$ -- 98
-width$ -- 28
-write$ -- 293
-(There were 2 warnings)
+type$ -- 104
+warning$ -- 4
+while$ -- 106
+width$ -- 31
+write$ -- 323
+(There were 4 warnings)

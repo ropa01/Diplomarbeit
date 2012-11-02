@@ -1,27 +1,6 @@
-\contentsline {todo}{\color@box {}{red!40}{\leavevmode {\color {red!40}o}}\ add citation}{3}{section*.3}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ find paper: DOI: 10.1002/cite.330480804}{6}{section*.7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add reference: ISBN-10: 354034327X}{6}{section*.8}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add ref Kittrel and Watson '66 from flexibility}{9}{section*.10}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add ref Wen and Chang from flexibility}{9}{section*.11}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add ref: flexibility}{9}{section*.12}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add ref: flexibility}{9}{section*.13}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add citation: PE-VT Script}{12}{section*.16}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add reference}{12}{section*.18}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add ref.}{13}{section*.19}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add ref: (fig. \ref {fig:CashFlow}) Script PE-VT}{16}{section*.26}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add pressure profile adjustment for optimization case -- give reasons.}{25}{section*.8}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on adiabatic column}{27}{section*.10}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ mention problems and bounded homotopy?}{29}{section*.14}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on different terms.}{32}{section*.19}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add derivative in appendix?}{32}{section*.20}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add citation Lindhoff...}{33}{section*.22}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on pinch concept?}{34}{section*.23}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ read about and mention transshipment model by Moriari (sequential)}{34}{section*.24}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ which properties should be included? Or move everything to Appendix?}{35}{section*.26}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ finish column internals}{37}{section*.31}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ change component number form C to $n_C$, also feed number to $n_{F}$ for vapour and liquid feeds ...}{43}{section*.75}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explain model development and the resulting equal number of liquid and vapour feeds... }{43}{section*.76}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explain model assumptions.}{43}{section*.77}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add correct hydraulic equation}{45}{section*.83}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add or at least mention froth and foaming...}{45}{section*.84}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add right equation and discuss pressure drop for structured packings.}{45}{section*.85}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ change component number form C to $n_C$, also feed number to $n_{F}$ for vapour and liquid feeds ...}{45}{section*.1}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explain model development and the resulting equal number of liquid and vapour feeds... }{45}{section*.2}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explain model assumptions.}{45}{section*.3}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ write somewhere that stage indices will be omitted for convenience.}{47}{section*.10}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add right equation and discuss pressure drop for structured packings.}{48}{section*.12}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ mention delft, sti, hydrodynamic continuum}{49}{section*.15}

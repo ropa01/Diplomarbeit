@@ -77,116 +77,169 @@
   \item [{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {4.0}
 		\nompageref{11}
 
+ \nomgroup{C}
+
+  \item [{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {6.10}
+		\nompageref{47}
+
  \nomgroup{G}
 
-  \item [{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
-		\nompageref{22}
-  \item [{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {5.35}
+  \item [{$\beta $}]\begingroup aeration factor \nomunit {-}\nomeqref {6.14}
+		\nompageref{48}
+  \item [{$\delta $}]\begingroup film thickness \nomunit {m}\nomeqref {6.16}
+		\nompageref{48}
+  \item [{$\epsilon $}]\begingroup packing void fraction \nomunit {-}\nomeqref {6.17}
+		\nompageref{48}
+  \item [{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {5.12}
+		\nompageref{23}
+  \item [{$\mu _G$}]\begingroup vapour viscosity \nomunit {Pa \cdot s}\nomeqref {6.17}
+		\nompageref{48}
+  \item [{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {6.20}
+		\nompageref{48}
+  \item [{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {5.36}
 		\nompageref{32}
-  \item [{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {5.34}
+  \item [{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {5.35}
 		\nompageref{31}
-  \item [{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {5.19}
-		\nompageref{25}
-  \item [{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {5.19}
-		\nompageref{25}
-  \item [{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {5.20}
+  \item [{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {5.20}
 		\nompageref{26}
-  \item [{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
+  \item [{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {5.20}
+		\nompageref{26}
+  \item [{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {5.21}
+		\nompageref{26}
+  \item [{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {6.10}
+		\nompageref{47}
+  \item [{$\Theta $}]\begingroup corrugation angle \nomunit {rad}\nomeqref {6.17}
+		\nompageref{48}
+  \item [{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.12}
+		\nompageref{23}
+  \item [{$\varphi _i$}]\begingroup vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.12}
+		\nompageref{23}
+  \item [{$\zeta ^{L}_{ij}$}]\begingroup splitting variable for liquid feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.7}
 		\nompageref{22}
-  \item [{$\varphi _i$}]\begingroup vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {5.11}
+  \item [{$\zeta ^{R}_{j}$}]\begingroup splitting variable for reboiler reflux on stage $j$ \nomunit {-}\nomeqref {5.7}
 		\nompageref{22}
-  \item [{$\zeta ^{L}_{ij}$}]\begingroup splitting variable for liquid feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
+  \item [{$\zeta ^{SL}_{ij}$}]\begingroup splitting variable for liquid side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.7}
 		\nompageref{22}
-  \item [{$\zeta ^{R}_{j}$}]\begingroup splitting variable for reboiler reflux on stage $j$ \nomunit {-}\nomeqref {5.6}
+  \item [{$\zeta ^{SV}_{ij}$}]\begingroup splitting variable for vapour side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.7}
 		\nompageref{22}
-  \item [{$\zeta ^{SL}_{ij}$}]\begingroup splitting variable for liquid side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
-		\nompageref{22}
-  \item [{$\zeta ^{SV}_{ij}$}]\begingroup splitting variable for vapour side draw $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
-		\nompageref{22}
-  \item [{$\zeta ^{V}_{ij}$}]\begingroup splitting variable for vapour feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.6}
+  \item [{$\zeta ^{V}_{ij}$}]\begingroup splitting variable for vapour feed $i$ on stage $j$ \nomunit {-}\nomeqref {5.7}
 		\nompageref{22}
 
  \nomgroup{R}
 
-  \item [{$\Delta p$}]\begingroup pressure drop over entire column \nomunit {Pa}\nomeqref {5.16}
+  \item [{$\Delta p$}]\begingroup pressure drop over entire column \nomunit {Pa}\nomeqref {5.17}
 		\nompageref{24}
-  \item [{$\Delta p_{stage}$}]\begingroup stage-wise pressure drop \nomunit {Pa}\nomeqref {5.16}
+  \item [{$\delta p_{dry}$}]\begingroup dry pressure drop \nomunit {\frac {Pa}{m}}\nomeqref {6.17}
+		\nompageref{48}
+  \item [{$\Delta p_{stage}$}]\begingroup stage-wise pressure drop \nomunit {Pa}\nomeqref {5.17}
 		\nompageref{24}
-  \item [{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.45}
+  \item [{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {6.10}
+		\nompageref{47}
+  \item [{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {5.46}
 		\nompageref{36}
-  \item [{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.45}
+  \item [{$A_{active}$}]\begingroup active tray area \nomunit {m^2}\nomeqref {6.12}
+		\nompageref{47}
+  \item [{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {5.46}
 		\nompageref{36}
-  \item [{$C$}]\begingroup number of components \nomunit {-}\nomeqref {5.4}
+  \item [{$C$}]\begingroup number of components \nomunit {-}\nomeqref {5.5}
 		\nompageref{21}
-  \item [{$F^L_j$}]\begingroup molar liquid feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}
-		\nompageref{21}
-  \item [{$F^V_j$}]\begingroup molar vapour feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.1}
-		\nompageref{21}
-  \item [{$f_i^L$}]\begingroup liquid fugacity \nomunit {-}\nomeqref {5.10}
+  \item [{$C_1$}]\begingroup packing constant \nomunit {}\nomeqref {6.17}
+		\nompageref{48}
+  \item [{$C_2$}]\begingroup packing constant \nomunit {}\nomeqref {6.17}
+		\nompageref{48}
+  \item [{$F^L_j$}]\begingroup molar liquid feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$F^V_j$}]\begingroup molar vapour feed flowrate to stage $j$ \nomunit {\mols }\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$f_i^L$}]\begingroup liquid fugacity \nomunit {-}\nomeqref {5.11}
 		\nompageref{22}
-  \item [{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {5.10}
+  \item [{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {5.11}
 		\nompageref{22}
-  \item [{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+  \item [{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.26}
 		\nompageref{28}
-  \item [{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+  \item [{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.26}
 		\nompageref{28}
-  \item [{$F_{Pi}$}]\begingroup compressibility factor of component $i$ \nomunit {-}\nomeqref {5.11}
+  \item [{$F_{Pi}$}]\begingroup compressibility factor of component $i$ \nomunit {-}\nomeqref {5.12}
+		\nompageref{23}
+  \item [{$h^L_j$}]\begingroup molar liquid enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.14}
+		\nompageref{23}
+  \item [{$h^V_j$}]\begingroup molar vapour enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.14}
+		\nompageref{23}
+  \item [{$h^{FL}_j$}]\begingroup molar liquid feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.14}
+		\nompageref{23}
+  \item [{$h^{FV}_j$}]\begingroup molar vapour feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.14}
+		\nompageref{23}
+  \item [{$h_f$}]\begingroup froth height \nomunit {m}\nomeqref {6.11}
+		\nompageref{47}
+  \item [{$h_L$}]\begingroup dimesionless holdup \nomunit {-}\nomeqref {6.16}
+		\nompageref{48}
+  \item [{$h_w$}]\begingroup weir height \nomunit {m}\nomeqref {6.11}
+		\nompageref{47}
+  \item [{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {6.10}
+		\nompageref{47}
+  \item [{$K_{ij}$}]\begingroup equilibrium ratio of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.10}
 		\nompageref{22}
-  \item [{$h^L_j$}]\begingroup molar liquid enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.13}
-		\nompageref{23}
-  \item [{$h^V_j$}]\begingroup molar vapour enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {5.13}
-		\nompageref{23}
-  \item [{$h^{FL}_j$}]\begingroup molar liquid feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.13}
-		\nompageref{23}
-  \item [{$h^{FV}_j$}]\begingroup molar vapour feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {5.13}
-		\nompageref{23}
-  \item [{$K_{ij}$}]\begingroup equilibrium ratio of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.9}
-		\nompageref{22}
-  \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+  \item [{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.26}
 		\nompageref{28}
-  \item [{$L_j$}]\begingroup molar liquid flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
-		\nompageref{21}
-  \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.21}
+  \item [{$L_j$}]\begingroup molar liquid flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.22}
 		\nompageref{27}
-  \item [{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.45}
+  \item [{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {5.46}
 		\nompageref{36}
-  \item [{$N$}]\begingroup number of stages \nomunit {-}\nomeqref {5.4}
+  \item [{$N$}]\begingroup number of stages \nomunit {-}\nomeqref {5.5}
 		\nompageref{21}
-  \item [{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.45}
+  \item [{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {6.7}
+		\nompageref{46}
+  \item [{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {6.7}
+		\nompageref{46}
+  \item [{$n_{ij}$}]\begingroup holdup of component $i$ on stage $j$  \nomunit {mol}\nomeqref {6.2}
+		\nompageref{45}
+  \item [{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {5.46}
 		\nompageref{36}
-  \item [{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {5.11}
-		\nompageref{22}
-  \item [{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {5.11}
-		\nompageref{22}
-  \item [{$S^L_j$}]\begingroup molar liquid side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
+  \item [{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {5.12}
+		\nompageref{23}
+  \item [{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {5.12}
+		\nompageref{23}
+  \item [{$S$}]\begingroup corrugation side \nomunit {m}\nomeqref {6.16}
+		\nompageref{48}
+  \item [{$S^L_j$}]\begingroup molar liquid side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$S^V_j$}]\begingroup molar vapour side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$s^V_j$}]\begingroup dimensionless liquid side-draw from stage $j$ \nomunit {-}\nomeqref {5.4}
 		\nompageref{21}
-  \item [{$S^V_j$}]\begingroup molar vapour side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
+  \item [{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {5.3}
 		\nompageref{21}
-  \item [{$s^V_j$}]\begingroup dimensionless liquid side-draw from stage $j$ \nomunit {-}\nomeqref {5.3}
-		\nompageref{21}
-  \item [{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {5.2}
-		\nompageref{21}
-  \item [{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+  \item [{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.26}
 		\nompageref{28}
-  \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+  \item [{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.26}
 		\nompageref{28}
-  \item [{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {5.32}
+  \item [{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {5.33}
 		\nompageref{30}
-  \item [{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {5.32}
+  \item [{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {5.33}
 		\nompageref{30}
-  \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.25}
+  \item [{$U_j$}]\begingroup internal energy holdup on stage $j$ \nomunit {J}\nomeqref {6.2}
+		\nompageref{45}
+  \item [{$v_G$}]\begingroup vapour velocity \nomunit {\frac {m}{s}}\nomeqref {6.17}
+		\nompageref{48}
+  \item [{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {5.26}
 		\nompageref{28}
-  \item [{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.1}
-		\nompageref{21}
-  \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.21}
+  \item [{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {6.20}
+		\nompageref{48}
+  \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {5.22}
 		\nompageref{27}
-  \item [{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}
-		\nompageref{21}
-  \item [{$y_{ij}$}]\begingroup vapour mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.1}
-		\nompageref{21}
-  \item [{$z^L_{ij}$}]\begingroup liquid mole fraction of liquid feed to stage $j$ \nomunit {-}\nomeqref {5.1}
-		\nompageref{21}
-  \item [{$z^V_{ij}$}]\begingroup vapour mole fraction of vapour feed to stage $j$ \nomunit {-}\nomeqref {5.1}
-		\nompageref{21}
+  \item [{$V_{stage}$}]\begingroup stage volume \nomunit {m^3}\nomeqref {6.8}
+		\nompageref{47}
+  \item [{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$y_{ij}$}]\begingroup vapour mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$z^L_{ij}$}]\begingroup liquid mole fraction of liquid feed to stage $j$ \nomunit {-}\nomeqref {5.2}
+		\nompageref{20}
+  \item [{$z^V_{ij}$}]\begingroup vapour mole fraction of vapour feed to stage $j$ \nomunit {-}\nomeqref {5.2}
+		\nompageref{20}
 
 \end{thenomenclature}

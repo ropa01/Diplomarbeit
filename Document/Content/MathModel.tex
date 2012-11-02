@@ -1,6 +1,10 @@
 \chapter{Mathematical process model}
 \label{chp:MathModel}
 
+    \Eq{}{
+        \Huge \frac{\partial}{\partial t}
+    }
+
     The industrial scale production of highly pure oxygen and nitrogen as well as noble
     gases is still carried out by means of the cryogenic process.
 
@@ -190,6 +194,7 @@
         }%
 
     \paragraph{Equilibrium equations}
+        \todoil{}{add murphee tray efficiency}
         The equilibrium equations are given by
         \Eq{eq:col:Kxy}{
             y_{ij} = K_{ij} \cdot x_{ij}, \eqannote{i = 1 \dots C, \quad j = 1 \dots N}.
@@ -633,7 +638,14 @@
     for cooling by expansion will be described.
 
     \subsubsection{Multi-stage compression}
-        \stdfig{pgfplots/Compressor}{Multi-stage compression.}{fig:multi_stage_compression}{h}
+        \begin{figure}
+            \center
+            \input{pgfplots/Compressor}
+            \caption{Multi-stage compression.}
+            \label{fig:multi_stage_compression}
+        \end{figure}
+%        \stdfig{pgfplots/Compressor}{Multi-stage compression.}{fig:multi_stage_compression}{h}
+
         Compressors and expanders are among the most common process equipment. A multitude of processes
         utilizes them as primary or auxiliary units. While the tasks performed by especially the compressors
         is essential for reaching the required process temperatures, they have less impact in terms of
@@ -703,7 +715,13 @@
         \todo{elaborate on different terms.}
         \todo{add derivative in appendix?}
 
-        \stdfig{GNUPlot/pr_isenthalpes}{Isenthalpes computed by Peng-Robinson model.}{fig:pr_isenthalpes}{}
+        \begin{figure}
+            \center
+            \input{GNUPlot/pr_isenthalpes}
+            \caption{Isenthalpes computed by Peng-Robinson EOS.}
+            \label{fig:pr_isenthalpes}
+        \end{figure}
+%        \stdfig{GNUPlot/pr_isenthalpes}{Isenthalpes computed by Peng-Robinson model.}{fig:pr_isenthalpes}{}
 
         If we employ the Peng-Robinson equation of state we can plot the isenthalpes for ambient air
         ($x_{N_2}=0.7812$, $x_{O_2}=0.2095$, $x_{Ar}=0.0093$ ) in a PT-diagramm (\reffig{fig:pr_isenthalpes}).
@@ -795,7 +813,12 @@
     \cite{Yee.1990}. \Reffig{fig:HX_super} shows the stage wise superstructure for a HEN consisting of two hot
     and two cold streams.
 
-    \stdfig{Pictures/HX_superstructure}{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}{fig:HX_super}{}
+    \begin{figure}
+        \input{Pictures/HX_superstructure}
+        \caption{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}
+        \label{fig:HX_super}
+    \end{figure}
+%    \stdfig{Pictures/HX_superstructure}{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}{fig:HX_super}{}
 
     In this stagewise structure each hot stream can exchange heat with each cold stream within each stage.
     The following assumptions were made when the model was developed
@@ -847,6 +870,8 @@
     }
     AS the $\max$ function is non-smooth and thus non differentiable at the points $T_{ik} = T_{jk}$, \gproms internally uses a smooth
     approximation. The exact for of which is unknown to the author.
+
+\section{Integrated condenser reboiler unit}
 
 %\subsection{Centrifugal pump}
 %	

@@ -1,73 +1,9 @@
 \begin{figure}
     \begin{tikzpicture}
-        \pgfmathsetmacro{\HXsep}{1.5}
-        \pgfmathsetmacro{\HXrad}{0.5}
-        \pgfmathsetmacro{\HXinsep}{0.7}
-        \pgfmathsetmacro{\Xsep}{2}
-        \pgfmathsetmacro{\Stagesep}{6}
-        
-        \node (H1_in) [inner sep=0] at (0,0) {} ; 
-        \draw ($(H1_in) + (\HXsep,\HXsep) $) circle (\HXrad) node (HX11) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_1 / C_1$} ; 
-        \draw ($(H1_in) + (\HXsep,-\HXsep) $) circle (\HXrad) node (HX12) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_1 / C_2$} ; 
-
-        \node (H2_in) [inner sep=0] at ($(H1_in) + 3*(0,-\HXsep)$) {} ;
-        \draw ($(H2_in) + (\HXsep,\HXsep) $) circle (\HXrad) node (HX21) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_2 / C_1$} ; 
-        \draw ($(H2_in) + (\HXsep,-\HXsep) $) circle (\HXrad) node (HX22) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_2 / C_2$} ; 
-        
-        \draw [arrow,RWTHRed] (H1_in) -- (H1_in |- HX11.south west) -- (HX11.south west) ;
-        \draw [arrow,RWTHRed] (H1_in) -- (H1_in |- HX12.south west) -- (HX12.south west) ;
-        \draw [arrow,RWTHRed] (H2_in) -- (H2_in |- HX21.south west) -- (HX21.south west) ;
-        \draw [arrow,RWTHRed] (H2_in) -- (H2_in |- HX22.south west) -- (HX22.south west) ;
-        
-        \node (H1_in_a) [inner sep=\Xsep] at ($(H1_in) + (-0.5,0)$) {} ;
-        \node (H1_in_b) [inner sep=\Xsep] at (H1_in_a |- HX12.north west) {} ;
-        \node (H1_in_c) [inner sep=\Xsep] at (H1_in |- HX12.north west) {} ;
-        \node (H2_in_b) [inner sep=\Xsep] at (H2_in |- HX22.north west) {} ;
-        \node (H2_in_a) [inner sep=\Xsep] at ($(H2_in) + (-1,0)$) {} ;
-        
-        \draw [arrow,RWTHBlue] (HX21.north west) -- (H1_in_a |- HX21.north west) ;
-        \draw [arrow,RWTHBlue] (HX11.north west) -- (H1_in_a |- HX11.north west) ;
-        \draw [stdline,RWTHBlue] (H1_in_a |- HX21.north west) -- (H1_in_a |- HX11.north west) ;
-        
-        \draw [arrow,RWTHBlue] (HX12.north west) -- (H1_in_c) -- (H1_in_b) -- (H2_in_a |- H1_in_b) ;
-        \draw [arrow,RWTHBlue] (HX22.north west) -- (H2_in_b) -- (H2_in_b -| H2_in_a) ;
-        \draw [stdline,RWTHBlue] (H2_in_b -| H2_in_a) -- (H2_in_a |- H1_in_b) ;
-        
-        \node (H1_out) [inner sep=0] at ($(H1_in) + (0,3)$) {} ;
-        \node (H1_out_a) [inner sep=\Xsep] at ($(H1_out) + (0,0.5)$) {} ;
-        \node (H1_out_b) [inner sep=\Xsep] at ($(HX11.south east) + (1.5,0)$) {} ;
-        
-        \draw [arrow,RWTHRed] (HX11.south east) -- (H1_out_b) -- (H1_out_b -| H1_out) ;
-        
-        
-        
-        \node (H1_mid) [inner sep=0] at ($(H1_in) + (\Stagesep,0)$) {} ; 
-        \draw ($(H1_mid) + (\HXsep,\HXsep) $) circle (\HXrad) node (HX31) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_1 / C_1$} ; 
-        \draw ($(H1_mid) + (\HXsep,-\HXsep) $) circle (\HXrad) node (HX32) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_1 / C_2$} ; 
-
-        \node (H2_mid) [inner sep=0] at ($(H1_mid) + 3*(0,-\HXsep)$) {} ;
-        \draw ($(H2_mid) + (\HXsep,\HXsep) $) circle (\HXrad) node (HX41) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_2 / C_1$} ; 
-        \draw ($(H2_mid) + (\HXsep,-\HXsep) $) circle (\HXrad) node (HX42) [inner sep=\HXinsep,anchor=center] {\scriptsize $H_2 / C_2$} ; 
-        
-        \draw [arrow,RWTHRed] (H1_mid) -- (H1_mid |- HX31.south west) -- (HX31.south west) ;
-        \draw [arrow,RWTHRed] (H1_mid) -- (H1_mid |- HX32.south west) -- (HX32.south west) ;
-        \draw [arrow,RWTHRed] (H2_mid) -- (H2_mid |- HX41.south west) -- (HX41.south west) ;
-        \draw [arrow,RWTHRed] (H2_mid) -- (H2_mid |- HX42.south west) -- (HX42.south west) ;
-        
-        \node (H1_mid_a) [inner sep=\Xsep] at ($(H1_mid) + (-0.5,0)$) {} ;
-        \node (H1_mid_b) [inner sep=\Xsep] at (H1_mid_a |- HX32.north west) {} ;
-        \node (H1_mid_c) [inner sep=\Xsep] at (H1_mid |- HX32.north west) {} ;
-        \node (H2_mid_b) [inner sep=\Xsep] at (H2_mid |- HX42.north west) {} ;
-        \node (H2_mid_a) [inner sep=\Xsep] at ($(H2_mid) + (-1,0)$) {} ;
-        
-        \draw [arrow,RWTHBlue] (HX41.north west) -- (H1_mid_a |- HX41.north west) ;
-        \draw [arrow,RWTHBlue] (HX31.north west) -- (H1_mid_a |- HX31.north west) ;
-        \draw [stdline,RWTHBlue] (H1_mid_a |- HX41.north west) -- (H1_mid_a |- HX31.north west) ;
-        
-        \draw [arrow,RWTHBlue] (HX32.north west) -- (H1_mid_c) -- (H1_mid_b) -- (H2_mid_a |- H1_mid_b) ;
-        \draw [arrow,RWTHBlue] (HX42.north west) -- (H2_mid_b) -- (H2_mid_b -| H2_mid_a) ;
-        \draw [stdline,RWTHBlue] (H2_mid_b -| H2_mid_a) -- (H2_mid_a |- H1_mid_b) ;
-        
-        
+        \pgfmathsetmacro{\colwidth}{4}
+        \pgfmathsetmacro{\colheight}{4}
+        \draw [stdline] (0,0) node (A) {} -- ++(0,-\colheight) ;
+        \draw [stdline] ($(A) + (\colwidth,0)$) --  ++(0,-\colheight) ;
+        \draw [stdline] (A) .. controls (45:1)  and (135:1) .. ($(A) + 0.5*(\colwidth,0)$) .. controls (-45:1) and (-135:1) .. ($(A) + (\colwidth,0)$) ;
     \end{tikzpicture}
 \end{figure}

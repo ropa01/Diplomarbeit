@@ -1,5 +1,5 @@
 \chapter{Dynamic model}
-\label{chp:dynamics}    
+\label{chp:dynamics}
     \todoil{}{change component number form C to $n_C$, also feed number to $n_{F}$ for vapour and liquid feeds ...}
     \todoil{}{explain model development and the resulting equal number of liquid and vapour feeds... }
     \todoil{}{explain model assumptions.}
@@ -36,6 +36,9 @@
                 \\ \eqannote{i = 1 \dots n_C, \quad j = 1 \dots n, \quad k = 1 \dots n_F, \quad l = 1 \dots n_F}.
     	}%
 
+    \ncr{n_{ij}}{holdup of component $i$ on stage $j$ }{mol}
+    \ncr{U_j}{internal energy holdup on stage $j$}{J}
+
 \subsubsection{constituent equations}
     In addition to the balance equations further constituent equations need to be introduced. From the
     steady state model we know the equilibrium equations
@@ -50,35 +53,77 @@
         1 & = \sum_i^{n_c} x_{ij} \eqanns.
     }%
 
-    Furthermore the mass accumulation in vapour $n_j^V$ and liquid $n_j^L$ phase as well as the energy accumulation
+    Furthermore the accumulation of moles in each stage in vapour $n_j^V$ and liquid $n_j^L$
     need to be considered with
 
     \Eq{eq:col:holdup}{
         n_{ij} & = x_{ij} n_j^L + y_{ij} n_j^V \eqanncs, \\
-        U_j & = n_j^L  h^L_j + n_j^V h^V_j - p_j V_j \eqanns. \\
     }%
+    \ncr{n_j^L}{liquid molar holdup on stage $j$}{mol}
+    \ncr{n_j^V}{vapour molar holdup on stage $j$}{mol}
 
-    If pressure is to be computed within the model the tray volume constraint needs to
-    be introduced
+    These holdups are linked by the volume of a given stage $V_{stage}$. Thus the volume constraint
+    can be written as
 
     \Eq{eq:dyn:volconstraint}{
-        V_{tray} = \frac{n_j^V}{\varrho_j^V} + \frac{n_j^L}{\varrho_j^L} \eqanns.
+        V_{stage} = \frac{n_j^V}{\varrho_j^V} + \frac{n_j^L}{\varrho_j^L} \eqanns.
     }%
+    \ncr{V_{stage}}{stage volume}{m^3}
 
-    The liquid flow rates are determined by the hydraulic equations
-    \todoil{}{add correct hydraulic equation}
-    \Eq{eq:col:hydraulics}{
-        h_{j}^{liq} - h^{weir} & = 0.68175 F_w \left( \frac{q_j^L}{h_w} \right)^{\frac{2}{3}}. \\
+    The internal energy in a stage corresponds to its enthalpy, reduced by pressure term
+    \Eq{eq:dyn:internergyholdup}{
+        U_j = n^L_j \cdot h^L_j + n^V_j \cdot h^V_j - p_j \cdot V_{stage}
+    }
+
+    \subsubsection{Hydraulics}
+    \todoil{}{write somewhere that stage indices will be omitted for convenience.}
+
+    As we are no longer dealing in steady state hydraulic equations need to be introduces,
+    which determine the liquid and vapour flow rates leaving a separation stage. As the
+    mechanisms driving these flows might be very different depending on the type of internals
+    used, it is not surprising that the corresponding equations are also very different. In the
+    given model both trayed columns and columns with structured packing are employed.
+
+    \paragraph{Trayed} column hydraulics can be approximated by the following system of equations.
+    All equations presented here were taken from \cite{92}.
+
+    The liquid flow rates are calculated from the well established francis formula ,
+    derived from the law of Bernoulli and taking effects like bubbling into account
+
+    \Eq{eq:col:francis}{
+        L_j = \frac{2}{3} \sqrt{2 g} \varrho^L_j \ell_{weir} \Phi h_{ow}^{\frac{2}{3}} \eqanns.
     }%
+    \ncc{g}{gravitational constant}{\frac{m}{s^2}}
+    \ncr{\ell_{weir}}{length of tray weir}{m}
+    \ncr{h_{ow}}{height over weir}{m}
+    \ncg{\Phi}{relative froth density}{-}
 
-    Where the height of the liquid on a stage is determined by the height of the liquid on a
-    stage. It can be calculated form the liquid holdup on the respective stage
-    \todoil{}{add or at least mention froth and foaming...}
+    Where $h_{ow}$ denotes the height of the liquid over the weir, which can be calculated from the
+    froth height $h_f$ and the weir height $h_w$
     \Eq{}{
-        h_{j}^{liq} & = \frac{n_j^L}{\varrho_j^L A_{active}} \eqanns.
-    }%
+        h_{ow} = h_f - h_w.
+    }
+    \ncr{h_f}{froth height}{m}
+    \ncr{h_w}{weir height}{m}
 
-    The pressure difference between stages is the driving force for the vapour streams. Teh pressure drop
+    While the weir height is a tray design parameter the froth height is computed from the clear
+    liquid height and the relative froth density
+    \Eq{}{
+        h_f = \frac{n^L \, MW^L}{A_{active} \, \varrho^L \, \Phi}.
+    }
+    \ncr{A_{active}}{active tray area}{m^2}
+
+    Lastly in terms of liquid flow rates, the relative froth density is dependent on the
+    degree of aeration within the liquid, expressed by the aeration factor $\beta$
+    from an empirical equation
+    \Eq{}{
+        \beta_j & = 1 - 0.3593 \left( \frac{V_{j-1} \, MW^V_{j-1}}{A_{active} \, \sqrt{\varrho_{j-1}}} \right)^{0.177709} \eqanns, \\
+        \Phi_j & = 2 \beta_j - 1.
+    }
+    \ncg{\beta}{aeration factor}{-}
+
+
+    The pressure difference between stages is the driving force for the vapour streams. The pressure drop
     is modeled as having two contributions, the dray and wet pressure drop. While dry pressure drop
     stems from the vapour flowing through the holes with in tray, the wet pressure drop is caused by the liquid
     holdup on the stage.
@@ -87,112 +132,150 @@
         p_j - p_{j+1} = h_{j}^{liq} \varrho_j^L g + 0.5 \xi \varrho_{j+1}^V \left( \frac{q_{j+1}^V}{A_h} \right)^2
     }%
 
-
-\section{Models for columns with structured packings}
-    \cpitemize{
-        \item sections treated as trays
-                \cpitemize{
-                    \item rate based models
-                        \cpitemize{
-                            \item film theory based models
-                        }
-                    \item equilibrium stage models
-                        \cpitemize{
-                            \item HETS / plate efficiency
-                        }
-                }
-        \item column divided into small (almost differential ?) sections
-            \cpitemize{
-                \item rate based models only
-            }
-
+    \paragraph{Structured packings} and their hydraulic behaviour are currently still under investigation. The number 
+    of available correlations for calculation of internal flow-rates is much more limited than for trays or even 
+    dumped packings. Among the most established models is the one developed by Bravo et al. \cite{Rocha.1993} at the 
+    University of Texas. This model has been extended to be valid in the loading region and account for different types 
+    of packing material \cite{Gualito.1997}. As main linking factor between vapour and liquid flow-rates as well as 
+    the pressure drop, the liquid holdup has bee identified by the authors. It is expressed in dimensionless form $h_t$ in  
+    terms of the corrugation side $S$, and the film thickness $\delta$
+    \Eq{eq:dyn:dimlessholdup}{
+        h_L = \frac{4}{S} \, \delta. 
     }
+    \ncr{h_L}{dimesionless holdup}{-}
+    \ncg{\delta}{film thickness}{m}
+    \ncr{S}{corrugation side}{m}
+    
+    One very important factor while estimating the hydraulic behaviour is the dry pressure drop per meter packing $\delta p_{dry}$. 
+    Within in the presented model it is estimated by
+    \Eq{eq:dyn:drydp}{
+        \delta p_{dry} = \left( \frac{\varrho^G}{\varrho_{air, 1 bar}} \right)^{0.4} \left( \frac{C_1 \varrho^G v_G^2}{S \epsilon^2 
+            (\sin \Theta)^2} + \frac{C_2 \mu_G v_G}{S^2 \epsilon \sin \Theta} \right)
+    }
+    \ncg{\Theta}{corrugation angle}{rad}
+    \ncg{\mu_G}{vapour viscosity}{Pa \cdot s}
+    \ncg{\epsilon}{packing void fraction}{-}
+    \ncr{v_G}{vapour velocity}{\frac{m}{s}}
+    \ncr{\delta p_{dry}}{dry pressure drop}{\frac{Pa}{m}}
+    \ncr{C_1}{packing constant}{}
+    \ncr{C_2}{packing constant}{}
+    
+    Another perquisite for calculating the holdup is the knowledge of the amount of wetted area of the available 
+    surface area within the packing. It seems reasonable to assume that this will be dependent on the characteristic
+    of the liquid flow through the packing. To characterize the current, well known dimensionless numbers are
+    used. Namely \emph{Weber} ($We$), \emph{Froude} ($Fr$) and Reynolds ($Re$) numbers
+    \Eq{}{
+        We & = \frac{v_L^2 \varrho_L S}{\sigma}, \\
+        Fr & = \frac{v_L^2}{S g}, \\
+        Re & = \frac{v_L S \varrho_L}{\mu_L}
+    } 
+    \ncg{\mu_L}{liquid viscosity}{Pa \cdot s}
+    \ncr{v_L}{liquid velocity}{\frac{m}{s}}
+    
+    With that an approximation for the holdup correction factor $F_t$ due to partial wetting can be expressed as 
+    \Eq{eq:dyn:wettedarea}{
+        F_t = \frac{A_1 \left( We \, Fr \right)^{0.15} S^{A_2}}{Re^{0.2} \, \epsilon^{0.6}
+            (1 - 0.93 \cos \gamma) (\sin \Theta)^{0.3} }
+    }
+    
+    \Eq{}{
+        h_L = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \left\{ \frac{3 \mu_L v_L}{\varrho_L \epsilon \sin \Theta
+            g \left[ \left( \frac{\varrho_L - \varrho_G}{\varrho_L} \right) \left(1 - \frac{\delta p}{\delta p_{flood}} \right) \right]} \right\}^{\frac{1}{3}}
+    }
+      
+    \begin{figure}
+        \input{Pictures/packing_geo}
+    \end{figure}
+    
+    \todo{mention delft, sti, hydrodynamic continuum}
 
-    \subsection{holdup \& pressure drop}
-        \subsubsection{Model by Rocha et al.}
-            equation for dimensionless holdup
-            \Eq{eq:struct_holdup}{
-                h_t = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \sqrt[3]{\frac{3 \mu_L v_{LS}}{\varrho_L \sin (\theta) \varepsilon g_{eff}}}
-            }%
-            correction factor for liquid holdup calculated ba Shi/Mersmann equation
-            \Eq{}{
-                F_{t,S-M} & = \frac{29.12 \, (We_L \, Fr_L)^{0.15} S^{0.359}}{Re_L^{0.2} \varepsilon^{0.6} (1 - 0.93 \cos \gamma) (\sin \theta)^{0.3}} \\
-                g_{eff} & = g \left( \frac{\varrho_L - \varrho_g}{\varrho_L} \right) \left[ 1 - \left( \frac{\Delta p / \Delta Z}{(\Delta p / \Delta Z)_{flood}} \right) \right] \\
-                \cos \gamma & = \begin{cases}
-                                    0.9 & \text{if} \quad \sigma \leq 0.055 \frac{N}{m} \\
-                                    5.211 \cdot 10^{-16.835 \sigma} & \text{if} \quad \sigma > 0.055 \frac{N}{m}
-                                \end{cases}
-            }%
 
-            \Eq{}{
-                Re_L & = \frac{\varrho_L v_L D}{\mu_L} \\
-                We_L & = \frac{\varrho_L v_L^2 D}{\sigma} \\
-                Fr_L & =
-            }
 
-            dry pressure drop with correlated friction factor funktion...
-            \Eq{}{
-                \frac{\Delta p_{dry}}{\Delta Z} = \underbrace{\frac{0.177 \varrho_g}{S \varepsilon^2 (\sin \theta)^2}}_{A} \cdot v_{gS}^2 + \underbrace{\frac{88.774 \mu_g}{S^2 \varrho \sin \theta}}_{B} \cdot v_{gS} = A v_{gS}^2 + B v_{gS}
-            }%
+%    \subsection{holdup \& pressure drop}
+%        \subsubsection{Model by Rocha et al.}
+%            equation for dimensionless holdup
+%            \Eq{eq:struct_holdup}{
+%                h_t = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \sqrt[3]{\frac{3 \mu_L v_{LS}}{\varrho_L \sin (\theta) \varepsilon g_{eff}}}
+%            }%
+%            correction factor for liquid holdup calculated ba Shi/Mersmann equation
+%            \Eq{}{
+%                F_{t,S-M} & = \frac{29.12 \, (We_L \, Fr_L)^{0.15} S^{0.359}}{Re_L^{0.2} \varepsilon^{0.6} (1 - 0.93 \cos \gamma) (\sin \theta)^{0.3}} \\
+%                g_{eff} & = g \left( \frac{\varrho_L - \varrho_g}{\varrho_L} \right) \left[ 1 - \left( \frac{\Delta p / \Delta Z}{(\Delta p / \Delta Z)_{flood}} \right) \right] \\
+%                \cos \gamma & = \begin{cases}
+%                                    0.9 & \text{if} \quad \sigma \leq 0.055 \frac{N}{m} \\
+%                                    5.211 \cdot 10^{-16.835 \sigma} & \text{if} \quad \sigma > 0.055 \frac{N}{m}
+%                                \end{cases}
+%            }%
+%
+%            \Eq{}{
+%                Re_L & = \frac{\varrho_L v_L D}{\mu_L} \\
+%                We_L & = \frac{\varrho_L v_L^2 D}{\sigma} \\
+%                Fr_L & =
+%            }
+%
+%            dry pressure drop with correlated friction factor funktion...
+%            \Eq{}{
+%                \frac{\Delta p_{dry}}{\Delta Z} = \underbrace{\frac{0.177 \varrho_g}{S \varepsilon^2 (\sin \theta)^2}}_{A} \cdot v_{gS}^2 + \underbrace{\frac{88.774 \mu_g}{S^2 \varrho \sin \theta}}_{B} \cdot v_{gS} = A v_{gS}^2 + B v_{gS}
+%            }%
 
-        \subsubsection{Delft model}
-            \cpitemize{
-                \item valid in pre-load region
-                \item adjustment by loading factor (Olujic 1999)
-            }
-        \subsubsection{SPR method}
-            \cpitemize{
-                \item valid in pre-load region
-                \item adjustment by loading factor (Olujic 1999)
-            }
-
-        \subsubsection{Hydrodynamic analogy}
-            \cpitemize{
-                \item employ rigorous methods to solve hydrodynamics by superimposing solutions of easier scenarios
-
-            }
-
-            \paragraph{gas flow}
-                \cpitemize{
-                    \item assume round channels with hydraulic diameter
-                    \item laminar fully developed flow
-                    \item ideal mixing at regular intervals to account for abrupt changes in gas flow directions at intersections
-                }
-
-            \paragraph{liquid flow}
-                \cpitemize{
-                    \item continous thin film flow
-                    \item flow direction according to gravity flow angle
-                    \item laminar fully developed flow
-                    \item neglect of radial maldistribution
-                    \item ideal mixing at periodic intervals
-                }
-            \paragraph{equations}
-                hydraulic diameter
-                \Eq{}{
-                    d_h = \frac{b_0 h}{s_0}
-                }
-                gravity flow angle
-                \Eq{}{
-                    alpha = \arctan \left( \frac{\cot \varphi }{\sin \left[\arctan \left(\cos \varphi \cot \frac{\gamma}{2} \right)\right]} \right)
-                }
-
-                undisturbed liquid flow
-                \Eq{}{
-                    z_L & = \frac{b_0}{2 \sin \left( \frac{\gamma}{2} \right)\sin \beta} \\
-                    \beta & = \arcsin \left( \sin \varphi \cos \epsilon \right) \\
-                    \epsilon & = \arctan \left(\cos \varphi \cot \frac{\gamma}{2}\right)
-                }
-
-                undisturbed gas flow
-                \Eq{}{
-                    \ell_i = \frac{2 B_i L}{b_0}
-                }
-
-                hydrodynamic equations
-                \Eq{}{
-                    0 = \mu_p \left( \fracddpart2{u_p}{y} \right) - \fracddpart{P_p}{x} + g \varrho_p \sin \alpha, \\
-                    \fracddpart{P_p}{y} = 0 , \qquad p = L, G \\
-                    \fracddpart{p_L}{x} = \fracddpart{p_L}{y} = const = \Delta p \\
-                    u_L |_{y = 0} = 0  \qquad u_L |_{y = \delta} = u_G \qquad
-                }
+%        \subsubsection{Delft model}
+%            \cpitemize{
+%                \item valid in pre-load region
+%                \item adjustment by loading factor (Olujic 1999)
+%            }
+%        \subsubsection{SPR method}
+%            \cpitemize{
+%                \item valid in pre-load region
+%                \item adjustment by loading factor (Olujic 1999)
+%            }
+%
+%        \subsubsection{Hydrodynamic analogy}
+%            \cpitemize{
+%                \item employ rigorous methods to solve hydrodynamics by superimposing solutions of easier scenarios
+%
+%            }
+%
+%            \paragraph{gas flow}
+%                \cpitemize{
+%                    \item assume round channels with hydraulic diameter
+%                    \item laminar fully developed flow
+%                    \item ideal mixing at regular intervals to account for abrupt changes in gas flow directions at intersections
+%                }
+%
+%            \paragraph{liquid flow}
+%                \cpitemize{
+%                    \item continous thin film flow
+%                    \item flow direction according to gravity flow angle
+%                    \item laminar fully developed flow
+%                    \item neglect of radial maldistribution
+%                    \item ideal mixing at periodic intervals
+%                }
+%            \paragraph{equations}
+%                hydraulic diameter
+%                \Eq{}{
+%                    d_h = \frac{b_0 h}{s_0}
+%                }
+%                gravity flow angle
+%                \Eq{}{
+%                    alpha = \arctan \left( \frac{\cot \varphi }{\sin \left[\arctan \left(\cos \varphi \cot \frac{\gamma}{2} \right)\right]} \right)
+%                }
+%
+%                undisturbed liquid flow
+%                \Eq{}{
+%                    z_L & = \frac{b_0}{2 \sin \left( \frac{\gamma}{2} \right)\sin \beta} \\
+%                    \beta & = \arcsin \left( \sin \varphi \cos \epsilon \right) \\
+%                    \epsilon & = \arctan \left(\cos \varphi \cot \frac{\gamma}{2}\right)
+%                }
+%
+%                undisturbed gas flow
+%                \Eq{}{
+%                    \ell_i = \frac{2 B_i L}{b_0}
+%                }
+%
+%                hydrodynamic equations
+%                \Eq{}{
+%                    0 = \mu_p \left( \fracddpart2{u_p}{y} \right) - \fracddpart{P_p}{x} + g \varrho_p \sin \alpha, \\
+%                    \fracddpart{P_p}{y} = 0 , \qquad p = L, G \\
+%                    \fracddpart{p_L}{x} = \fracddpart{p_L}{y} = const = \Delta p \\
+%                    u_L |_{y = 0} = 0  \qquad u_L |_{y = \delta} = u_G \qquad
+%                }

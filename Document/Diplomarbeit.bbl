@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{92}
+{\em {D}istillation {T}ray {F}undamentals}.
+\newblock Cambridge Univ Pr, 2009.
+
 \bibitem{Acharya.1996}
 D.~Acharya, F.~Fitch, and R.~Jain.
 \newblock {S}ome {I}ssues in {O}perating {A}dsorption {P}repurification
@@ -93,6 +97,13 @@ Ignacio~E. Grossmann, P{\'i}o~A. Aguirre, and Mariana Barttfeld.
   models.
 \newblock {\em Computers {\&} Chemical Engineering}, 29(6):1203--1215, 2005.
 
+\bibitem{Gualito.1997}
+J.~J. Gualito, F.~J. Cerino, J.~C. Cardenas, and J.~A. Rocha.
+\newblock {D}esign {M}ethod for {D}istillation {C}olumns {F}illed with
+  {M}etallic, {C}eramic, or {P}lastic {S}tructured {P}ackings.
+\newblock {\em Industrial {\&} Engineering Chemistry Research},
+  36(5):1747--1757, 1997.
+
 \bibitem{Halemane.1983}
 K.~P. Halemane and Ignacio~E. Grossmann.
 \newblock {O}ptimal process design under uncertainty.
@@ -132,6 +143,13 @@ Max~Stone Peters, Klaus~D. Timmerhaus, and Ronald~E. West.
 R.~Prasad, F.~Notaro, and D.R Thompson.
 \newblock {E}volution of membranes in commercial air separation.
 \newblock {\em Journal of Membrane Science}, 94(1):225--248, 1994.
+
+\bibitem{Rocha.1993}
+J.~Antonio Rocha, Jose~L. Bravo, and James~R. Fair.
+\newblock {D}istillation columns containing structured packings: a
+  comprehensive model for their performance. 1. {H}ydraulic models.
+\newblock {\em Industrial {\&} Engineering Chemistry Research}, 32(4):641--651,
+  1993.
 
 \bibitem{Seider.2010}
 W.~D. Seider, J.~D. Seader, D.~R. Lewin, and S.~Widagdo.
