@@ -31,8 +31,8 @@ can be undertaken\cite{Peters.2003}. At that point a concrete process option wil
 the investment decision will already have to be made. All optimization measures within the scope of this
 thesis will have concluded at that time.
 
-Within \refsec{sec:ProjectCost} first we will take a look at how the total cost of a chemical process might be
-estimated at different design stages. Subsequently in \refsec{sec:InvestmentCriteria} the different ways
+Within \secref{sec:ProjectCost} first we will take a look at how the total cost of a chemical process might be
+estimated at different design stages. Subsequently in \secref{sec:InvestmentCriteria} the different ways
 of evaluating a certain investment options and estimating a projects profitability will be discussed.
 
 \section{Project cost}
@@ -82,7 +82,7 @@ will then be equal to the ration of the price indices at the respective times
 }%
 For each index an somewhat arbitrary reference year is chosen. Among the most common indices are the
 Marshall \& Swift index, the Nellson-Farrar-Index or the Chemical Engineering index. Some exemplary
-values for these indices are given in \reftab{tab:PriceIndices}. As one can see the development within the
+values for these indices are given in \tabref{tab:PriceIndices}. As one can see the development within the
 process industry very well matches the development in the economy as a whole, which is why for this rough
 estimate general indices should suffice.
 
@@ -103,7 +103,7 @@ The battery limit investment denotes all investments necessary to have all requi
 for process operations installed on-site. This includes structures necessary to house the process as well as
 delivery and installation of all individual assets.  One major part of these cost will the the process
 equipment. As the exact manufacturers and models of the equipment will not be known in early design
-stages, an approach similar to the one in \refsec{sec:before} still needs to be employed. In contrast to
+stages, an approach similar to the one in \secref{sec:before} still needs to be employed. In contrast to
 before now the cost for individual pieces of process equipment will be considered separately.
 Each piece of equipment will have an specific feature that most influences its cost. For vessels and
 reactors this might be volume, while for heat exchangers the required heat exchange area is essential.
@@ -212,7 +212,7 @@ The working capital includes all investments necessary for process operations. T
 materials, payroll, extended credit to customers and so on. In contrast to all other costs the
 working capital can partially be retrieved when the process stops operations. How different
 types of cash flows, extended or owed credit should be handled will be disused in
-\refsec{sec:InvestmentCriteria}. In addition to the cost of raw materials needed during process
+\secref{sec:InvestmentCriteria}. In addition to the cost of raw materials needed during process
 operations, which generate a product stream, raw materials are also needed to fill all vessels, reactors,
 columns and piping that male up the process. The cost of these needs to be considered as investment
 and not as operation cost, since more or less the same amount will remain bound until
@@ -235,7 +235,7 @@ the process seizes operations and it can (partially) be retrieved.
     magnitude estimate for the expected cost of implementing a chemical process. Most literature sources
     give an accuracy of $\pm 30 \%$  \cite{Peters.2003}. As the poject progresses more and more information
     becomes available an a more accurate estimate can be prepared. Those often rely on actual proposals
-    from prospective manufacturers and suppliers.   
+    from prospective manufacturers and suppliers.
 
 
 \section{Investment criteria}
@@ -244,9 +244,9 @@ the process seizes operations and it can (partially) be retrieved.
     However in a complex financial system it cannot be taken as the sole factor to compare investment
     alternatives. Different other indices are used to measure the attractiveness of an investment. One
     main distinction can be made between different measurements. Those that work with averaged cash flows
-    and consider the project as a singe time periods (\refsec{sec:SinglePeriod}) and models that take into
+    and consider the project as a singe time periods (\secref{sec:SinglePeriod}) and models that take into
     account cash flows made at different points in time -- so called multi-period models
-    (\refsec{sec:MultiPeriod}).
+    (\secref{sec:MultiPeriod}).
 
 
 \subsection{Single period estimation methods}
@@ -282,7 +282,7 @@ the process seizes operations and it can (partially) be retrieved.
     play a critical role in the evaluation process. Cash reserves, loans, preferred stock or other financial
     instruments are all viable sources of investment capital. Often a mixture of many different sources is
     used to allocate all necessary funds. A generic structure of the cash-flows during the life-cycle of a
-    given project is shown in \reffig{fig:CashFlow}. When the project commences no revenue is generated
+    given project is shown in \figref{fig:CashFlow}. When the project commences no revenue is generated
     and only investments are made. As process operations begin revenue is generated and  the slope
     of the accumulated cash flow curve switches to an upward directions -- assuming the project is profitable.
     As time progresses the produced product might reduce in value through competitors entering the market
@@ -291,15 +291,15 @@ the process seizes operations and it can (partially) be retrieved.
     will affect the expected revenue. As more information is gathered during operations, opportunities
     may arise to optimize the process and leverage so far dormant potentials. These so called retrofit
     Investments would ideally lead to an improved cash flow structure as indicated by the green line.
-    
+
     \begin{figure}
         \input{pgfplots/ProjectCashFlow}
         \caption{Accumulated cash flows over project life cycle.}
         label{fig:CashFlow}
     \end{figure}
 %    \stdfig{pgfplots/ProjectCashFlow}{Accumulated cash flows over project life cycle.}{fig:CashFlow}{}
-    \todo[inline]{add ref: (\reffig{fig:CashFlow}) Script PE-VT}
-    
+    \todo[inline]{add ref: (\figref{fig:CashFlow}) Script PE-VT}
+
     Before further investigating multi-period model some basic ideas about financial mathematics
     and the treatment of interest should be reviewed. When investing the capital $C_0$ at compounded
     interest for $n$ years at a rate of $i$ \%, the compound amount will yield
@@ -332,7 +332,7 @@ the process seizes operations and it can (partially) be retrieved.
     }%
     The factor $\alpha$ in the previous equations denotes wether payments are made at the beginning
     of a period ($\alpha = 1$ or at the end ($\alpha = 0)$
-    
+
     With that multi-period model can be discussed. Here not only different alternatives can be compared,
     but also the profitability in comparison with investments in financial products can be assessed.
 

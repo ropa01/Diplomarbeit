@@ -1,4 +1,10 @@
 \begin{tikzpicture}
+
+
+
+
+
+
     \pgfmathsetmacro{\colwidth}{8}
     \pgfmathsetmacro{\downwidth}{1/6*\colwidth}
     \pgfmathsetmacro{\actwidth}{4/6*\colwidth}

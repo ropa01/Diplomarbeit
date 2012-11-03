@@ -61,7 +61,7 @@
 \usepackage{pgfplots}
 	\pgfplotsset{compat=newest}
 \usepackage{tikz}
-    \usetikzlibrary{positioning,shapes,shadows,arrows,calc,scopes}
+    \usetikzlibrary{positioning,shapes,shadows,arrows,calc,scopes,intersections,through}
 \usepackage{pgf-pie}
 \usepackage{array}
 
@@ -94,18 +94,18 @@
 \newcommand{\stdfig}[4]{\begin{figure}[#4] \center \input{#1} \caption{#2} \label{#3} \end{figure}}
 \newcommand{\stdtab}[3]{\begin{table} \center {\footnotesize \input{#1}} \caption{#2} \label{#3} \end{table}}
 
-\newcommand{\refeq}[1]{eq. (\ref{#1})}
-\newcommand{\Refeq}[1]{Eq. (\ref{#1})}
-\newcommand{\refeqs}[2]{eqns. (\ref{#1}) - (\ref{#2})}
-\newcommand{\Refeqs}[2]{Eqns. (\ref{#1}) - (\ref{#2})}
-\newcommand{\reffig}[1]{fig. \ref{#1}}
-\newcommand{\Reffig}[1]{Fig. \ref{#1}}
-\newcommand{\reftab}[1]{tab. \ref{#1}}
-\newcommand{\Reftab}[1]{Tab. \ref{#1}}
-\newcommand{\refsec}[1]{sec. \ref{#1}}
-\newcommand{\Refsec}[1]{Sec. \ref{#1}}
-\newcommand{\refchp}[1]{chap. \ref{#1}}
-\newcommand{\Refchp}[1]{Chap. \ref{#1}}
+\renewcommand{\eqref}[1]{eq. (\ref{#1})}
+\newcommand{\Eqref}[1]{Eq. (\ref{#1})}
+\newcommand{\figref}[1]{fig. \ref{#1}}
+\newcommand{\Figref}[1]{Fig. \ref{#1}}
+\newcommand{\tabref}[1]{tab. \ref{#1}}
+\newcommand{\Tabref}[1]{Tab. \ref{#1}}
+\newcommand{\secref}[1]{sec. \ref{#1}}
+\newcommand{\Secref}[1]{Sec. \ref{#1}}
+\newcommand{\chpref}[1]{chap. \ref{#1}}
+\newcommand{\Chpref}[1]{Chap. \ref{#1}}
+\newcommand{\eqsref}[2]{eqns. (\ref{#1}) - (\ref{#2})}
+\newcommand{\Eqsref}[2]{Eqns. (\ref{#1}) - (\ref{#2})}
 
 \newcommand{\eq}[1]{\begin{align} #1 \end{align}}
 \newcommand{\Eq}[2]{\begin{align} #2 \label{#1} \end{align}}
@@ -115,8 +115,11 @@
 \newcommand{\st}{\text{subject to}}
 \newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
-\newcommand{\fracddpart2}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\newcommand{\fracddparttwo}[2]{\frac{\partial^2 #1}{\partial #2^2}}
 \newcommand{\eqannote}[1]{\qquad #1}
+\newcommand{\eqannc}{\qquad i = 1 \dots n_C}
+\newcommand{\eqanns}{\qquad j = 1 \dots n_S}
+\newcommand{\eqanncs}{\qquad i = 1 \dots n_C \quad j = 1 \dots n_S}
 \newcommand{\pow}[2]{\left( #1 \right)^{#2}}
 
 \newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}
@@ -150,13 +153,15 @@
 \renewcommand{\nomgroup}[1]{%
 \ifthenelse{\equal{#1}{R}}{\item[\textbf{Variables}]}{%
 \ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek Letters}]}{%
-\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indices}]}{}}}}
+\ifthenelse{\equal{#1}{C}}{\item[\textbf{Constants}]}{%
+\ifthenelse{\equal{#1}{I}}{\item[\textbf{Indices}]}{}}}}}
 
 \newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}$[#1]$}}
 \newcommand{\nc}[3]{\nomenclature[A ]{$#1$}{#2 \nomunit{#3}}}
-\newcommand{\ncr}[3]{\nomenclature[R ]{$#1$}{#2 \nomunit{#3}}}
-\newcommand{\ncg}[3]{\nomenclature[G ]{$#1$}{#2 \nomunit{#3}}}
-\newcommand{\nci}[2]{\nomenclature[I ]{$#1$}{#2}}
+\newcommand{\ncr}[3]{\nomenclature[R ]{$#1$}{#2 \nomunit{#3}}}  % roman
+\newcommand{\ncg}[3]{\nomenclature[G ]{$#1$}{#2 \nomunit{#3}}}  % greek
+\newcommand{\nci}[2]{\nomenclature[I ]{$#1$}{#2}}               % indices
+\newcommand{\ncc}[3]{\nomenclature[C ]{$#1$}{#2 \nomunit{#3}}}  % roman
 
 \makenomenclature
 

@@ -1,0 +1,252 @@
+\subsection{Separation}
+\label{sec:mathpro:steady:sep}
+    \todo{find appropriate place for integrated reboiler condenser unit.}
+    \todo{add flowsheet initialization from MathModel file}
+    \input{Content/Process_steady_separation}
+    
+\subsection{Heat exchange}
+\label{sec:mathpro:steady:hx}
+    \todo{adjust heat exchange section to current approach.}
+    The issue of heat integration is essential to the economic performance of cryogenic air separation. Foremost
+    one must consider the special column configuration used in the process. Since operation of the condenser in the
+    low pressure section only becomes possible if the reboiler in the high pressure section functions as heat sink,
+    no external utilities are supplied to either unit. Rather they are combined into a single heat exchange unit. Thus
+    the absolute value of the reboiler energy must matched by the energy recovered from the condenser. Furthermore
+    the material streams entering the process can -- and should -- exchange heat with the process streams leaving it.
+    The combined condenser / reboiler for LPC / HPC column is assumed as a given heat exchange. This makes sense insofar,
+    as this is a necessity in terms of the actual physical implementation of the process units. Also the usage of the
+    oxygen rich liquid from the HPC as coolant in the Argon condenser is assumed as fixed.
+
+    This leaves the process stream leaving the compression stage of the process as well as all product and waste streams
+    leaving the process. All those streams are -- for simulation purposes and also in some process implementations  -- fed
+    into a single multi-stream heat exchange unit. In actual processes all heat exchange and much of the process operations
+    take place in the so called ''cold box''. As such a heavily insulated area is referred to. This is done to minimize
+    heat exchange with the surroundings. Therefore and for further reasons compact heat exchange units such as plate-fin
+    multi-stream heat exchangers are favoured when dealing with cryogenic processes in general and the cryogenic air septation
+    in particular.
+
+    Due to the importance of heat integration to the ASU process some thought sould be given as to what modelling approach
+    should be employed. Although the field of heat integration is one of the most intensively studied within process engineering,
+    only  a limited amount of approaches is available in open literature \cite{Kamath.2012}.
+
+    Traditionally heat integration has been carried out in a sequential manner, where it is for the purposes of process
+    optimization assumed, that all heating and cooling is done by external utilities. After an (locally) optimal
+    process configuration is identified, all hot and cold streams within the process are identified, and their
+    temperature intervals fixed. %In the context of heat integration hot and cold streams do not refer to whether a given
+    %stream has a subjectively high or low temperature, but rather whether a given stream needs to be cooled (hot) or
+    %heated (cold) within the process. %
+    In subsequent steps first the minimum utility requirements, and maximum number of heat exchangers are identified,
+    and a specific heat exchange network (HEN) is designed. \todo{add citation Lindhoff...}
+    While this approach has been successfully applied to a multitude of processes and led to substantial savings,
+    it is questionable if such a sequential approach will yield an optimal or near optimal solution.
+
+    Therefore some efforts have been made to develop efficient strategies for simultaneous process optimization
+    and heat integration. Two general approaches can be distinguished. The first one based on the pinch concept.
+    \todoil{}{elaborate on pinch concept?} These methods are able to identify the minimum heat requirement
+    as well as stream temperatures during process optimization. The first model along these lines was published
+    by Duran and Grossmann \cite{Duran.1986} in 1986. They introduced a limited number of quite well behaved
+    constraints into the optimization model to ensure no minimum driving force violations. Recently
+    this model has been extended to handle phase changes and by fixing the utilities to zero been applied
+    to the design of a multi-stream heat exchanger \cite{Kamath.2012}. The major drawback with these methods
+    \todoil{}{read about and mention transshipment model by Moriari (sequential)}
+    is that one cannot target area of a given heat exchanger as the approach temperatures are not computed
+    by the model. Therefore the sometimes substantial trade-off between the cost for heat exchange area
+    and utility cost cannot be regarded.
+
+    A second approach employs superstructures of a HEN to find optimal matchings of process streams. No pinch
+    point calculations are required, as the actual heat exchange is more or less modeled explicitly. This
+    leads to the benefit, that approach temperatures as well as exchanged heat duties between each stream coupling
+    are known within the model, and the cost of the designed unit can be considered in an economic objective
+    function.
+
+    The approach and respective superstructure adapted in this thesis were first published by Yee and Grossmann
+    \cite{Yee.1990}. \Figref{fig:HX_super} shows the stage wise superstructure for a HEN consisting of two hot
+    and two cold streams.
+
+    \begin{figure}
+        \input{Pictures/HX_superstructure}
+        \caption{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}
+        \label{fig:HX_super}
+    \end{figure}
+%    \stdfig{Pictures/HX_superstructure}{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}{fig:HX_super}{}
+
+    In this stagewise structure each hot stream can exchange heat with each cold stream within each stage.
+    The following assumptions were made when the model was developed
+    \begin{itemize}
+        \item Constant heat capacities
+        \item Constant heat transfer coefficients
+        \item Countercurrent heat exchangers
+        \item Isothermal mixing at each stage.
+    \end{itemize}
+
+    The assumption of constant heat capacities is a common one in the design of HEN's. When no phase boundaries are passed
+    and the temperature range of the involved is not too wide, it is a reasonably good approximation of the real conditions.
+    While constant heat transfer coefficients a re assumed the model leaves the flexibility to define different
+    coefficients for each pairing of hot and cold streams. Countercurrent heat exchangers are common in industrial practice.
+    This assumption however does not really pose a limitation, as the model can easily be altered to account for concurrent
+    units.
+
+    The last assumption of isothermal mixing is a more major one. It has been introduced as it allows for significant
+    simplifications and leads to a model, where all constraints are linear and all non-linearities are restricted
+    to the objective function. While that is certainly not true for the entire process model, it should at least
+    allow for some reductions in the model complexity. The assumption states, that regardless of which streams a
+    given stream exchanges heat with, it will leave at the same temperature. Due to that all energy balances around
+    each unit in the superstructure can be eliminated as well as the subsequent mixing of the streams.
+
+    \paragraph{Model equations}
+
+    First of all a heat balance at each stage is necessary
+    \Eq{}{
+        F_i (T_{i, \ell} - T_{i, \ell+1}) = \sum_j q_{ijk} \\
+        f_j (T_{i, \ell} - T_{i, \ell+1}) = \sum_i q_{ijk}
+    }
+
+    The heat exchange area $A_{hx}$ can be computed from the exchanged energy, the heat transfer coefficients $\alpha_{ij}$
+    and the logarithmic mean temperature difference $LMTD$.
+    \Eq{}{
+        A_{hx} = \sum_i \sum_j \sum_k \frac{q_{ijk}}{\alpha_{ij} * LMDT_{ijk} + \delta}
+    }
+
+    While the small number $\delta$ is included to avoid problems in the program, when $LMDT$ becomes zero
+    In order to avoid further numerical difficulties when the approach temperatures $\Delta T_{ij}$ at each side of an exchange
+    unit approach zero, it was proposed to use an approximation introduced by Chen \cite{Chen.1987}
+    \Eq{}{
+        LMDT_{ijk} \approx \left[ \Delta T_{ijk} \cdot \Delta T_{ijk+1} \frac{\Delta T_{ijk} + \Delta T_{ijk+1}}{2} \right]^{\frac{1}{3}}.
+    }
+
+    While the approach temperatures are defined as
+    \Eq{}{
+        \Delta T_{ijk} = \max \left\{0, T_{ik} - T_{jk}\right\}
+    }
+    AS the $\max$ function is non-smooth and thus non differentiable at the points $T_{ik} = T_{jk}$, \gproms internally uses a smooth
+    approximation. The exact for of which is unknown to the author.
+
+\subsection{Compression \& expansion}
+\label{sec:mathpro:steady:comp}
+    \todo{revise compressor equations and add equations to nomenclature}
+    The issue of cooling the ambient air to process temperatures at around $90 K$ is not an easy
+    one. The main hindrance is, that a heat sink at this temperature level is not readily available.
+    Lucky thermodynamics offer a different way to reach such temperatures. In order to do so,
+    the ambient air first needs to be compressed and then expanded again. Cooling then occurs
+    by either exploiting the \emph{Joule-Thompson} effect or isentropic expansion. First a few
+    comments are made about the compression stage, while afterwards the governing principles
+    for cooling by expansion will be described.
+
+    \subsubsection{Multi-stage compression}
+        \begin{figure}
+            \center
+            \input{pgfplots/Compressor}
+            \caption{Multi-stage compression.}
+            \label{fig:multi_stage_compression}
+        \end{figure}
+
+        Compressors and expanders are among the most common process equipment. A multitude of processes
+        utilizes them as primary or auxiliary units. In the context of cryogenic air separation the 
+        compression plays a major role, as it enables to reach temperatures needed for liquefying 
+        air and gases in general. As the compression of gases is always associated with a significant 
+        reduction in volume it requires large amounts of energy. Thus in addition to significantly 
+        contributing to the capital cost of the process the compression stage is responsible for 
+        the majority of the operating cost encountered in the ASU process. 
+
+        The rigorous modeling of continuous flow machines in terms of unit operations poses great challenges.
+        For specific units it may be undertaken by means of CFD simulations or employing characteristics diagrams,
+        which require extensive experiments and can usually be obtained from the manufacturer.
+        For the purposes of process design however a simpler approach with unit efficiencies is appropriate.
+
+        As a significant temperature increase goes along with the compression of air and in order to reduce
+        the energy demand of the compression in general, it is beneficial, to use a multi stage compressor with
+        inter-cooling as depicted in \figref{fig:multi_stage_compression}. This yields a lower energy consumption
+        as a single stage unit for the same compression ratio.
+
+        Subsequently the working equations for the compressor model used in the scope of this thesis are 
+        briefly summarized. 
+
+        A trivial material and component balance around the compressor yields the outlet molar flow-rate $F^{out}$
+        as well as the outlet overall composition $z^{out}$
+    	\Eq{eq:comp:MassBalance}{
+    		0 = F^{in} - F^{out},
+    	}%
+    	\Eq{eq:comp:CompBalance}{
+    		0 = z_i^{in} - z_i^{out} \eqannc.
+    	}%
+
+    	To calculate the mechanical work associated with the desired compression,
+        first the isentropic case
+    	\Eq{eq:comp:SInOut}{
+    		S^{in} = S^{out}
+    	}%
+        is considered.
+    	\Eq{eq:comp:IsentropicWork}{
+    		W_S = F^{in} \cdot (H^{in} - H^{out})
+    	}%
+
+    	\Eq{eq:comp:WEta}{
+    		W \cdot \eta^C = W_S
+    	}%
+    	\Eq{eq:comp:CompressionWork}{
+    		W_S = F^{in} \cdot H^{in}(T^{in}, p^{in}, z_i^{in}) - F^{out} \cdot H^{out}(T^{out}, p^{out}, z_i^{out})
+    	}%
+
+    	\paragraph{Pressure drop}
+    	\Eq{eq:comp:PressureDrop}{
+    		p^{out} = p^{in} + \Delta p
+    	}%
+
+    \subsubsection{Cooling by expansion}
+        The liquefaction of gases requires temperatures well below ambient conditions. In order to reach
+        such conditions one cannot utilize natural occurring coolants, but rather cooling effects that occur
+        during the expansion of compressed gases. First we consider the expansion through an expansion valve
+        or so called \emph{Joule-Thompson} - valve. If we assume very good insulation of  conditions this
+        expansion can closely be approximated by an isenthalpic process ($h_1 = h_2$). To describe the change
+        in temperature during isenthalpic expansion the \emph{Joule-Thompson} coefficient
+        \Eq{}{
+            \mu_{JT} = \left(\fracddpart{T}{p}\right)_h,
+        }
+        which denotes pressure derivative of the temperature at constant enthalpy can be considered.
+        This can be transformed into
+        \Eq{}{
+            \mu_{JT} = \frac{1}{c_p} \left[T \left(\fracddpart{v}{T}\right)_p - v \right]
+        }
+        \ncg{\mu_{JT}}{\emph{Joule-Thompson} coeffivcient}{\frac{K}{Pa}}
+
+        \todo{elaborate on different terms.}
+        \todo{add derivative in appendix?}
+
+        \begin{figure}
+            \center
+            \input{GNUPlot/pr_isenthalpes}
+            \caption{Isenthalpes computed by Peng-Robinson EOS.}
+            \label{fig:pr_isenthalpes}
+        \end{figure}
+%        \stdfig{GNUPlot/pr_isenthalpes}{Isenthalpes computed by Peng-Robinson model.}{fig:pr_isenthalpes}{}
+
+        If we employ the Peng-Robinson equation of state we can plot the isenthalpes for ambient air
+        ($x_{N_2}=0.7812$, $x_{O_2}=0.2095$, $x_{Ar}=0.0093$ ) in a PT-diagramm (\figref{fig:pr_isenthalpes}).
+        One can easily see, that in certain ranges a pressure decrease will result in an increase in temperature,
+        while for other regions in a decrease. It is interesting to mention that the non-idealities
+        of a given gas give rise to this effect. For an ideal gas the temperature change at isenthalpic
+        expansion would always be zero. Luckily for the cryogenic engineer real gases deviate from ideal
+        behaviour especially at elevated pressures and low temperatures. It is therefore important to give some
+        consideration to the thermodynamic model used to describe the properties of the system in question, as the
+        non-ideal properties need to be captured appropriately.
+
+        A different way of expanding a compressed gas, is by letting it produce work in an fluid kinetic machine.
+        If one assumes an adiabatic devices and disregards irreversible effects, this process can be viewed as
+        isentropic. Analogous to the isenthalpic case an isentropic expansion coefficient can be defined
+        \Eq{}{
+            \mu_S = \left( \fracddpart{T}{p} \right)_S = \frac{T}{c_p} \left( \fracddpart{v}{T} \right)_p.
+        }%
+        \ncg{\mu_S}{isentropic expansion coefficient}{\frac{K}{Pa}}
+
+        Here the derivative in the second form corresponds to the volumetric coefficient of thermal expansion
+        $\beta$, which is always positive for gases, which in turn means, that an isentropic expansion
+        will always result in an temperature decrease, whereas the isentropic expansion only led to a decrease in
+        certain cases. Furthermore an isentropic expansion over the same pressure range will always result in
+        lower temperatures than an isenthalpic expansion. Additionally work can be recovered. The reason
+        that isentropic valves are most commonly used in liquefaction systems, is that those work producing
+        machines cannot handle significant phase changes, which is after all the desired result of liquefaction.
+
+        Traditionally only the isenthalpic expansion had been used within the cryogenic air separation process,
+        since -- as mentioned before -- the air needs to be liquefied in order to be fed into be distilled. However
+        in modern process configurations the isentropic expansion is also considered, and partial streams are fed into
+        the low pressure column in gaseous form.

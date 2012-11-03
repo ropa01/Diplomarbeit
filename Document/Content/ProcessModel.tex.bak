@@ -1,0 +1,103 @@
+\chapter{Mathematical process model}
+\label{sec:mathprocess}
+    \todo{briefly discuss general process steps. mention pre-purification.}
+    \begin{figure}
+        \input{pgfplots/ASU_process_simple}
+        \caption{simplified cryogenic air separation process.}
+        \label{fig:asu_simple}
+    \end{figure}
+
+%        A simplified overview of the major process steps is given in \figref{fig:asu_simple}.
+%    Within the following sections the different process steps will be discussed in more detail.
+%    When appropriate the mathematical model for single process units is discussed as well.
+%    In addition to the separate process steps displayed in \figref{fig:asu_simple} the aspect
+%    of heat integration os essential to successfully operating an air separation unit (ASU).
+%    This aspect will be discussed separately as well (\secref{sec:heat_exchange})
+%
+%    The pre-purification step of the process aim to reduce the amount of unwanted impurities
+%    from the ambient air as far as possible. The main sources of contamination are in this case
+%    dust and other organic components that can be found depending on the time of year and
+%    location of the plant. Furthermore are water and carbon dioxide common components in
+%    ambient air. The removal of these components is undertaken by means of adsorption molecular
+%    sieves such as zeolite or for initial steps coarser sieves. However the design and simulation
+%    of these pre-purification measures is not within the scope of this work. For more information
+%    the interested reader is referred to \cite{Acharya.1996}.
+
+
+    This chapter deals with the different aspects of the process model developed within the scope of this thesis. 
+    As depicted in \figref{fig:asu_simple} In the case of cryogenic air separation three main tasks for the process 
+    can be identified. These are the compression of raw materials, heat exchange with product streams and the separation 
+    of air. While those different stages are highly interdependent they will be discussed separately and mathematical 
+    models for the main process units will be presented. 
+    
+    The first section (\secref{sec:mathpro:steady}) deals with a steady state version of the process model. Especially 
+    for steady state models the issue of initializing the variables in such a way that the solver can converge to a solution 
+    becomes crucial. With that in mind the strategies developed to initialize in particular the distillation columns will be 
+    elaborated upon within that first section as well. 
+    
+    The second section (\secref{sec:mathpro:dynamic}) is devoted to a dynamic version of the models for some process units. 
+    In addition to the models themselves several aspects which arise, when considering process dynamics will also be part 
+    of that section. 
+    
+    In the third section (\secref{sec:mathpro:econ}) of this chapter takes a closer look at how the economics of the process can be captured during 
+    process simulation. Understandably, the issue of economic evaluation is closely tied to the sizing of each process 
+    unit and with that also to the operational boundaries of the process equipment. As these aspects are for the most 
+    part treated uniformly for the steady state case and dynamic case the will be dealt with in a single section. 
+    
+    All presented models have been implemented in the equation based process simulator \gproms. Certain aspects arising when  
+    implementing the models will be discussed in the last section of this chapter \secref{sec:mathpro:implementation}. 
+    
+
+    \section{Steady - state unit models}
+    \label{sec:mathpro:steady}
+        \input{Content/Process_steady}
+    
+    \section{Dynamic unit models}
+    \label{sec:mathpro:dynamic}
+        \input{Content/Process_dynamic}
+    
+    \section{Economic models}
+    \label{sec:mathpro:econ}
+        \input{Content/Process_econ}
+        
+    \section{Thermodynamic models}
+        \label{sec:mathpro:thermo}
+        
+        Aside from the unit operation models, the behaviour of materials in a process needs to be adequately
+        accounted for. This is done by means of so called equations of state (EOS) and excess Gibbs energy
+        models. In terms of thermodynamics there are only a limited amount of variables. Namely the pressure,
+        density and temperature as well as composition. While equations of state can model a given system in
+        the vapour as well as liquid phase, excess Gibbs energy models only account for the behaviour of a liquid
+        and need to be used in conjunction with other models for the vapour phase. However they have shown
+        considerable better performance for highly non-ideal systems \cite{AndreasPfennig.2003}. As mentioned
+        earlier (\secref{sec:comp_liq}) it is essential to accurately capture the non-idealities of air
+        in order to capture the liquefaction process. In the case of cryogenic air separation, the Peng-Robinson
+        as well as the Benders equation of state have shown satisfactory performance. The Peng-Robinson equation
+        was chosen to be used in the presented model
+        \Eq{eq:peng_rob}{
+            p & = \frac{RT}{V-b} - \frac{a_c \left[1+m\left(1-\sqrt{T_r}\right)\right]^2}{V^2+2bV-b^2} \\
+            m & = 0.37464 + 1.54226 \omega - 0.26992 \omega^2 \\
+            a_c & = 0.45724 \frac{R^2T_c^2}{p_c} \\
+            b & = 0.077796 \frac{RT_c}{p_c} \\
+            \omega & = -1 - \log_{10} \, (p_r^{sat})_{T_r = 0.7}
+        }
+        \ncr{p}{pressure}{Pa}
+        \ncr{m}{parameter in Peng-Robinson EOS}{-}
+        \ncr{a_c}{parameter in Peng-Robinson EOS}{\frac{m^5}{mol^2 s^2}}
+        \ncr{b}{parameter in Peng-Robinson EOS}{\frac{m^3}{mol}}
+        
+        However the Peng-Robinson EOS relies on the so called one-fluid theory which models each fluid as pure.
+        To model mixtures the pure component parameters have to be ''mixed''
+        \Eq{}{
+            a & = \sum_{i=1}^C \sum_{j=1}^C y_i y_j a_{ij}, \\
+            a_{ij} & = \sqrt{a_i a_j} (1 - k_{ij}), \\
+            b & = \sum_{i=1}^C y_i b_i.
+        }
+    
+        From that EOS numerous relevant properties such as excess enthalpy, fugacity coefficients or densities
+        can be calculated. For a list of some relevant equations refer to \secref{app:peng_rob_deriv}.
+        \todo{which properties should be included? Or move everything to Appendix?}
+        
+    \section{Implementation}
+    \label{sec:mathpro:implementation}
+        \input{Content/Process_impl}

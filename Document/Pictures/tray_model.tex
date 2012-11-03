@@ -1,55 +1,40 @@
 \begin{tikzpicture}
+        \pgfmathsetmacro{\colwidth}{6}
+        \pgfmathsetmacro{\colheight}{6}
+        \pgfmathsetmacro{\bza}{35}
+        \pgfmathsetmacro{\bzb}{(180 - \bza)}
+        \pgfmathsetmacro{\bzr}{0.75}
+
+        % side walls
+        \draw [stdline] (0,0) node (A) [inner sep=0] {} -- ++(0,-\colheight) node (B) [inner sep=0] {} ;
+        \draw [stdline] ($(A) + (\colwidth,0)$) --  ++(0,-\colheight) ;
+
+        % upper and lower bezier lines
+        \draw [stdline] (A) .. controls +(\bza:\bzr)  and +(\bzb:\bzr) .. ($(A) + 0.5*(\colwidth,0)$) .. controls +(-\bza:\bzr) and +(-\bzb:\bzr) .. ($(A) + (\colwidth,0)$) .. controls +(\bzb:\bzr) and +(\bza:\bzr) .. ($(A) + 0.5*(\colwidth,0)$) ;
+        \draw [stdline] (B) .. controls +(-\bza:\bzr)  and +(-\bzb:\bzr) .. ($(B) + 0.5*(\colwidth,0)$) .. controls +(\bza:\bzr) and +(\bzb:\bzr) .. ($(B) + (\colwidth,0)$) .. controls +(-\bzb:\bzr) and +(-\bza:\bzr) .. ($(B) + 0.5*(\colwidth,0)$) ;
+
+        % trays
+        \draw [stdline] ($(A) + (\colwidth,0) + 0.3*(0,-\colheight)$) -- ++($-0.15*(\colwidth,0)$) node (C) [inner sep=0] {};
+        \draw [dashtray] (C) -- ++($-0.7*(\colwidth,0)$) node (D) [inner sep=0] {} ;
+        \draw [stdline] ($(D) + 0.1*(0,\colheight)$) -- ++($-0.3*(0,\colheight)$) ;
+
+        \draw [stdline] ($(A) + 0.65*(0,-\colheight)$) -- ++($0.15*(\colwidth,0)$) node (E) [inner sep=0] {};
+        \draw [dashtray] (E) -- ++($0.7*(\colwidth,0)$) node (F) [inner sep=0] {} ;
+        \draw [stdline] ($(F) + 0.1*(0,\colheight)$) -- ++($-0.3*(0,\colheight)$) ;
+
+        % water
+        \draw [CPSEBlue,decorate,decoration={random steps,segment length=3pt,amplitude=1pt},opacity=0.2] ($(D) - ($0.15*(0,\colheight)$)$) -- ($(F) + 0.15*(0,\colheight)$) .. controls +(-15:0.5) and +(105:0.5) .. ($(F) - 0.1*(0,\colheight) + 0.15*(\colwidth,0)$) ;
+        \draw [CPSEBlue,decorate,decoration={random steps,segment length=3pt,amplitude=1pt},opacity=0.2] ($(F) + 0.1*(0,\colheight)$) .. controls +(-35:0.3) and +(35:0.5) .. ($(F) - 0.1*(0,\colheight)$) ;
+        \draw [CPSEBlue,decorate,decoration={random steps,segment length=3pt,amplitude=1pt},opacity=0.2] ($(D) - 0.1*(0,\colheight)$) -- ($(D) - 0.1*(0,\colheight) - 0.15*(\colwidth,0)$) ;
 
 
-
-
-
-
-    \pgfmathsetmacro{\colwidth}{8}
-    \pgfmathsetmacro{\downwidth}{1/6*\colwidth}
-    \pgfmathsetmacro{\actwidth}{4/6*\colwidth}
-    \pgfmathsetmacro{\platespace}{3}
-    \pgfmathsetmacro{\colheight}{3*\platespace}
-    \pgfmathsetmacro{\weirheight}{0.3*\platespace}
-    \pgfmathsetmacro{\downlen}{\weirheight + 0.9 *\platespace}
-    \draw [thline] (0,0) -- ++(\downwidth,0) node (a) {} node (downrb) [yshift=1mm,xshift=-1mm] {} node (traylt1) [yshift=-1mm,xshift=1mm] {} ;
-    \node (downlt) [xshift=1mm,yshift=-1mm] at (0,\platespace) {} ;
-    \draw [dashtray] (a) -- ++(\actwidth,0) node (vapin) [pos=0.5] {} node (trayrb) [yshift=1mm,xshift=-1mm] {} node (downlt1) [yshift=-1mm,xshift=1mm] {};
-    \draw [thline] ($(0,0) + 0.5*(0,\colheight)$) -- ($(0,0) - 0.5*(0,\colheight)$) node (e) [xshift=1mm, inner sep=0] {} ;
-    \draw [thline] ($(\colwidth,0) + 0.5*(0,\colheight)$) -- ($(\colwidth,0) - 0.5*(0,\colheight)$) node (g) [pos=0,xshift=-1mm,inner sep=0] {} ;
-    \draw [thline] (\colwidth,\platespace) -- ++(-\downwidth,0) node (b) {} node (f) [yshift=1mm,xshift=1mm,inner sep=0] {} node (h) [yshift=1mm,xshift=-1mm,inner sep=0] {};
-    \draw [dashtray] (b) -- ++(-\actwidth,0) node (traylt) [yshift=-1mm,xshift=1mm] {} ;
-    \draw [thline] (\colwidth,-\platespace) -- ++(-\downwidth,0) node (c) {} node (trayrb1) [yshift=1mm,xshift=-1mm] {} node (downrb1) [pos=0,yshift=1mm,xshift=-1mm] {} ;
-    \draw [dashtray] (c) -- ++(-\actwidth,0) node (d) [yshift=-1mm,xshift=-1mm, inner sep=0] {} ;
-    \draw [thline] ($(\downwidth,0) + (\actwidth,0) + (0,\weirheight)$) -- ++(0,-\downlen) ;
-    \draw [thline] ($(\downwidth,\platespace) + (0,\weirheight)$) -- ++(0,-\downlen) ;
-    \draw [thline] ($(\downwidth,\weirheight-\platespace)$) -- ($(\downwidth,-0.5*\colheight)$) ;
-    \draw [thline] ($(b) + (0,0.1*\platespace)$) -- ($(\downwidth+\actwidth,0.5*\colheight)$) ;
-    \draw [dashvol] (trayrb) rectangle (traylt) ;
-    \draw [dashvol] (trayrb1) rectangle (traylt1) ;
-    \draw [dashvol] (downrb) rectangle (downlt) ;
-    \draw [dashvol] (downrb1) rectangle (downlt1) ;
-    \draw [dashvol] (e) -- (e |- d) -- (d) -- (e -| d) ;
-    \draw [dashvol] (g) -- (g |- f) -- (f) -- (g -| f) ;
-    \draw [dashvol] (g -| h) -- (h) -- (traylt |- h) -- (traylt |- g) ;
-    \node at ($0.5*(\colwidth,\platespace)$) {$n$} ;
-    \node at ($0.5*(\colwidth,-\platespace)$) {$n+1$} ;
-
-    % arrows
-    \node (liq_in_start) at ($0.5*(\downwidth,0) + 0.2*(0,\platespace) $) {} ;
-    \node (liq_in_end) at ($(a) + 0.2*(\actwidth,0) + 0.6*(0,\weirheight)$) {} ;
-    \draw [arrow] (liq_in_start) .. controls +(-70:0.8) and +(-150:0.5) .. (liq_in_end) node [pos=0.3,left] {\scriptsize $L_{n-1}$};
-    \node (liq_out_start) at ($(a) + 0.8*(\actwidth,\weirheight)$) {} ;
-    \node (liq_out_end) at ($(\downwidth+\actwidth,0) + 0.5*(\downwidth,0) - 0.4*(0,\platespace)$) {} ;
-    \draw [arrow] (liq_out_start) .. controls +(30:1.2) and +(90:2.5) .. (liq_out_end) ;
-    \node (liq_in_start1) at ($(\actwidth+1.5*\downwidth,0) - 0.8*(0,\platespace) $) {} ;
-    \node (liq_in_end1) at ($(c) - 0.2*(\actwidth,0) + 0.6*(0,\weirheight)$) {} ;
-    \draw [arrow] (liq_in_start1) .. controls +(-110:0.8) and +(-30:0.5) .. (liq_in_end1) node [pos=0.3,right] {\scriptsize $L_{n}$};
-    \node (liq_in_start2) at ($(\actwidth+1.5*\downwidth,0) + 1.2*(0,\platespace) $) {} ;
-    \node (liq_in_end2) at ($(b) - 0.2*(\actwidth,0) + 0.6*(0,\weirheight)$) {} ;
-    \draw [arrow] (liq_in_start2) .. controls +(-110:0.8) and +(-30:0.5) .. (liq_in_end2) node [pos=0.3,right] {\scriptsize $L_{n}$};
-    \draw [arrow] ($(\downwidth+0.5*\actwidth,-0.8*\weirheight)$) -- ($(\downwidth+0.5*\actwidth,0.6*\weirheight)$) node [pos=0.3,right] {\scriptsize $V_{n+1}$} ;
-    \draw [arrow] ($(\downwidth+0.5*\actwidth,\platespace-0.8*\weirheight)$) -- ($(\downwidth+0.5*\actwidth,\platespace+0.6*\weirheight)$) node [pos=0.3,right] {\scriptsize $V_{n}$} ;
-
-    % bemaßung
+        % arrows
+        \draw [arrow] ($(A) + 0.5*(\colwidth,0) - 0.375*(0,\colheight)$) -- ++(0,0.15*\colheight) node [above] {\footnotesize $V_j$} ;
+        \draw [arrow] ($(A) + 0.5*(\colwidth,0) - 0.725*(0,\colheight)$) node [below] {\footnotesize $V_{j+1}$} -- ++(0,0.15*\colheight) ;
+        \draw [arrow] ($(F) + 0.125*(0,\colheight) - 0.05*(\colwidth,0)$) .. controls +(5:0.7) and +(90:0.75) .. ($(F) + 0.075*(\colwidth,0) - 0.15*(0,\colheight)$) node [below] {\footnotesize $L_j$} ;
+        \draw [arrow] ($(D) + 0.125*(0,\colheight) + 0.05*(\colwidth,0)$) node [right] {\footnotesize $L_{j-1}$} .. controls +(175:0.7) and +(90:0.75) .. ($(D) - 0.075*(\colwidth,0) - 0.15*(0,\colheight)$) ;
+        \node at ($(A) + 0.5*(\colwidth,0) - 0.475*(0,\colheight)$) {$j$} ;
+        \node at ($(A) + 0.75*(\colwidth,0) - 0.15*(0,\colheight)$) {$j-1$} ;
+        \node at ($(A) + 0.25*(\colwidth,0) - 0.8*(0,\colheight)$) {$j+1$} ;
+        % measurements
 \end{tikzpicture}

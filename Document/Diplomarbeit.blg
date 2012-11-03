@@ -9,57 +9,55 @@ A level-1 auxiliary file: Content/Lists.aux
 A level-1 auxiliary file: Content/Abstract.aux
 A level-1 auxiliary file: Content/Introduction.aux
 A level-1 auxiliary file: Content/AirSep.aux
-A level-1 auxiliary file: Content/ProcessDesign.aux
 A level-1 auxiliary file: Content/ProcessEconomics.aux
-A level-1 auxiliary file: Content/MathModel.aux
-A level-1 auxiliary file: Content/Dynamic.aux
+A level-1 auxiliary file: Content/ProcessModel.aux
 A level-1 auxiliary file: Content/outlook.aux
 A level-1 auxiliary file: Content/testpage.aux
 A level-1 auxiliary file: Content/BibAppendix.aux
 Database file #1: Literature.bib
 Warning--to sort, need author, editor, or key in 92
 Warning--empty author and editor in 92
-Warning--empty publisher in BOSTONJ.F..
-Warning--empty year in BOSTONJ.F..
-You've used 29 entries,
+Warning--empty publisher in Boston.
+Warning--empty year in Boston.
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            720 strings with 10201 characters,
-and the built_in function-call counts, 10126 in all, are:
-= -- 1029
-> -- 433
+            705 strings with 9728 characters,
+and the built_in function-call counts, 9385 in all, are:
+= -- 954
+> -- 398
 < -- 4
-+ -- 169
-- -- 140
-* -- 776
-:= -- 1657
-add.period$ -- 87
-call.type$ -- 29
-change.case$ -- 154
++ -- 155
+- -- 128
+* -- 711
+:= -- 1533
+add.period$ -- 81
+call.type$ -- 27
+change.case$ -- 142
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 363
-empty$ -- 807
-format.name$ -- 140
-if$ -- 2099
+cite$ -- 31
+duplicate$ -- 341
+empty$ -- 751
+format.name$ -- 128
+if$ -- 1951
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 34
-newline$ -- 147
-num.names$ -- 58
-pop$ -- 139
+int.to.str$ -- 27
+missing$ -- 32
+newline$ -- 137
+num.names$ -- 54
+pop$ -- 131
 preamble$ -- 1
-purify$ -- 127
+purify$ -- 117
 quote$ -- 0
-skip$ -- 242
+skip$ -- 230
 stack$ -- 0
-substring$ -- 797
-swap$ -- 60
+substring$ -- 731
+swap$ -- 58
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 104
+type$ -- 96
 warning$ -- 4
-while$ -- 106
-width$ -- 31
-write$ -- 323
+while$ -- 98
+width$ -- 29
+write$ -- 301
 (There were 4 warnings)

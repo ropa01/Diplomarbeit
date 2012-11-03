@@ -137,42 +137,86 @@
     dumped packings. Among the most established models is the one developed by Bravo et al. \cite{Rocha.1993} at the 
     University of Texas. This model has been extended to be valid in the loading region and account for different types 
     of packing material \cite{Gualito.1997}. As main linking factor between vapour and liquid flow-rates as well as 
-    the pressure drop, the liquid holdup has bee identified by the authors. It is expressed in dimensionless form  
+    the pressure drop, the liquid holdup has bee identified by the authors. It is expressed in dimensionless form $h_t$ in  
+    terms of the corrugation side $S$, and the film thickness $\delta$
+    \Eq{eq:dyn:dimlessholdup}{
+        h_L = \frac{4}{S} \, \delta. 
+    }
+    \ncr{h_L}{dimesionless holdup}{-}
+    \ncg{\delta}{film thickness}{m}
+    \ncr{S}{corrugation side}{m}
     
+    One very important factor while estimating the hydraulic behaviour is the dry pressure drop per meter packing $\delta p_{dry}$. 
+    Within in the presented model it is estimated by
+    \Eq{eq:dyn:drydp}{
+        \delta p_{dry} = \left( \frac{\varrho^G}{\varrho_{air, 1 bar}} \right)^{0.4} \left( \frac{C_1 \varrho^G v_G^2}{S \epsilon^2 
+            (\sin \Theta)^2} + \frac{C_2 \mu_G v_G}{S^2 \epsilon \sin \Theta} \right)
+    }
+    \ncg{\Theta}{corrugation angle}{rad}
+    \ncg{\mu_G}{vapour viscosity}{Pa \cdot s}
+    \ncg{\epsilon}{packing void fraction}{-}
+    \ncr{v_G}{vapour velocity}{\frac{m}{s}}
+    \ncr{\delta p_{dry}}{dry pressure drop}{\frac{Pa}{m}}
+    \ncr{C_1}{packing constant}{}
+    \ncr{C_2}{packing constant}{}
+    
+    Another perquisite for calculating the holdup is the knowledge of the amount of wetted area of the available 
+    surface area within the packing. It seems reasonable to assume that this will be dependent on the characteristic
+    of the liquid flow through the packing. To characterize the current, well known dimensionless numbers are
+    used. Namely \emph{Weber} ($We$), \emph{Froude} ($Fr$) and Reynolds ($Re$) numbers
+    \Eq{}{
+        We & = \frac{v_L^2 \varrho_L S}{\sigma}, \\
+        Fr & = \frac{v_L^2}{S g}, \\
+        Re & = \frac{v_L S \varrho_L}{\mu_L}
+    } 
+    \ncg{\mu_L}{liquid viscosity}{Pa \cdot s}
+    \ncr{v_L}{liquid velocity}{\frac{m}{s}}
+    
+    With that an approximation for the holdup correction factor $F_t$ due to partial wetting can be expressed as 
+    \Eq{eq:dyn:wettedarea}{
+        F_t = \frac{A_1 \left( We \, Fr \right)^{0.15} S^{A_2}}{Re^{0.2} \, \epsilon^{0.6}
+            (1 - 0.93 \cos \gamma) (\sin \Theta)^{0.3} }
+    }
+    
+    \Eq{}{
+        h_L = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \left\{ \frac{3 \mu_L v_L}{\varrho_L \epsilon \sin \Theta
+            g \left[ \left( \frac{\varrho_L - \varrho_G}{\varrho_L} \right) \left(1 - \frac{\delta p}{\delta p_{flood}} \right) \right]} \right\}^{\frac{1}{3}}
+    }
+      
     \begin{figure}
-        \include{Pictures/packing_geo}
+        \input{Pictures/packing_geo}
     \end{figure}
     
     \todo{mention delft, sti, hydrodynamic continuum}
 
 
 
-    \subsection{holdup \& pressure drop}
-        \subsubsection{Model by Rocha et al.}
-            equation for dimensionless holdup
-            \Eq{eq:struct_holdup}{
-                h_t = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \sqrt[3]{\frac{3 \mu_L v_{LS}}{\varrho_L \sin (\theta) \varepsilon g_{eff}}}
-            }%
-            correction factor for liquid holdup calculated ba Shi/Mersmann equation
-            \Eq{}{
-                F_{t,S-M} & = \frac{29.12 \, (We_L \, Fr_L)^{0.15} S^{0.359}}{Re_L^{0.2} \varepsilon^{0.6} (1 - 0.93 \cos \gamma) (\sin \theta)^{0.3}} \\
-                g_{eff} & = g \left( \frac{\varrho_L - \varrho_g}{\varrho_L} \right) \left[ 1 - \left( \frac{\Delta p / \Delta Z}{(\Delta p / \Delta Z)_{flood}} \right) \right] \\
-                \cos \gamma & = \begin{cases}
-                                    0.9 & \text{if} \quad \sigma \leq 0.055 \frac{N}{m} \\
-                                    5.211 \cdot 10^{-16.835 \sigma} & \text{if} \quad \sigma > 0.055 \frac{N}{m}
-                                \end{cases}
-            }%
-
-            \Eq{}{
-                Re_L & = \frac{\varrho_L v_L D}{\mu_L} \\
-                We_L & = \frac{\varrho_L v_L^2 D}{\sigma} \\
-                Fr_L & =
-            }
-
-            dry pressure drop with correlated friction factor funktion...
-            \Eq{}{
-                \frac{\Delta p_{dry}}{\Delta Z} = \underbrace{\frac{0.177 \varrho_g}{S \varepsilon^2 (\sin \theta)^2}}_{A} \cdot v_{gS}^2 + \underbrace{\frac{88.774 \mu_g}{S^2 \varrho \sin \theta}}_{B} \cdot v_{gS} = A v_{gS}^2 + B v_{gS}
-            }%
+%    \subsection{holdup \& pressure drop}
+%        \subsubsection{Model by Rocha et al.}
+%            equation for dimensionless holdup
+%            \Eq{eq:struct_holdup}{
+%                h_t = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \sqrt[3]{\frac{3 \mu_L v_{LS}}{\varrho_L \sin (\theta) \varepsilon g_{eff}}}
+%            }%
+%            correction factor for liquid holdup calculated ba Shi/Mersmann equation
+%            \Eq{}{
+%                F_{t,S-M} & = \frac{29.12 \, (We_L \, Fr_L)^{0.15} S^{0.359}}{Re_L^{0.2} \varepsilon^{0.6} (1 - 0.93 \cos \gamma) (\sin \theta)^{0.3}} \\
+%                g_{eff} & = g \left( \frac{\varrho_L - \varrho_g}{\varrho_L} \right) \left[ 1 - \left( \frac{\Delta p / \Delta Z}{(\Delta p / \Delta Z)_{flood}} \right) \right] \\
+%                \cos \gamma & = \begin{cases}
+%                                    0.9 & \text{if} \quad \sigma \leq 0.055 \frac{N}{m} \\
+%                                    5.211 \cdot 10^{-16.835 \sigma} & \text{if} \quad \sigma > 0.055 \frac{N}{m}
+%                                \end{cases}
+%            }%
+%
+%            \Eq{}{
+%                Re_L & = \frac{\varrho_L v_L D}{\mu_L} \\
+%                We_L & = \frac{\varrho_L v_L^2 D}{\sigma} \\
+%                Fr_L & =
+%            }
+%
+%            dry pressure drop with correlated friction factor funktion...
+%            \Eq{}{
+%                \frac{\Delta p_{dry}}{\Delta Z} = \underbrace{\frac{0.177 \varrho_g}{S \varepsilon^2 (\sin \theta)^2}}_{A} \cdot v_{gS}^2 + \underbrace{\frac{88.774 \mu_g}{S^2 \varrho \sin \theta}}_{B} \cdot v_{gS} = A v_{gS}^2 + B v_{gS}
+%            }%
 
 %        \subsubsection{Delft model}
 %            \cpitemize{
