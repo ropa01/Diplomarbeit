@@ -1,40 +1,3 @@
-\nomenclatureentry{a$C_P$@[{$C_P$}]\begingroup Total process cost \nomunit {\$}\nomeqref {3.0}|nompageref}{9}
-\nomenclatureentry{a$C_P^0$@[{$C_P^0$}]\begingroup Reference process cost \nomunit {\$}\nomeqref {3.0}|nompageref}{9}
-\nomenclatureentry{a$Q_P$@[{$Q_P$}]\begingroup Process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.0}|nompageref}{9}
-\nomenclatureentry{a$Q_P^0$@[{$Q_P^0$}]\begingroup Reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.0}|nompageref}{9}
-\nomenclatureentry{a$x$@[{$x$}]\begingroup Degression coefficient \nomunit {-}\nomeqref {3.0}|nompageref}{9}
-\nomenclatureentry{a$C_1$@[{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{a$C_2$@[{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{a$I_1$@[{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{a$I_2$@[{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{a$C^{i}_E$@[{$C^{i}_E$}]\begingroup Cost of equipment $i$ \nomunit {\$}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{a$C^{i}_B$@[{$C^{i}_B$}]\begingroup Reference cost of equipment $i$ \nomunit {\$}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{a$Q^{i}$@[{$Q^{i}$}]\begingroup Specific quantity for equipment $i$ \nomunit {variable}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{a$Q^{i}_B$@[{$Q^{i}_B$}]\begingroup Equipment specific reference quantity \nomunit {variable}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{a$M^{i}$@[{$M^{i}$}]\begingroup Equipment specific factor \nomunit {-}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{a$f^{i}_C$@[{$f^{i}_C$}]\begingroup Design complexity correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{a$f^{i}_M$@[{$f^{i}_M$}]\begingroup Material selection correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{a$f^{i}_P$@[{$f^{i}_P$}]\begingroup Pressure correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{a$f^{i}_T$@[{$f^{i}_T$}]\begingroup Temperature correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{a$N_{RM}$@[{$N_{RM}$}]\begingroup Number of raw materials \nomunit {-}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{a$C_{RM}$@[{$C_{RM}$}]\begingroup Total cost of raw materials \nomunit {\$}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{a$C^{i}_{RM}$@[{$C^{i}_{RM}$}]\begingroup Mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{a$\dot {m}_i$@[{$\dot {m}_i$}]\begingroup Mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{a$t_{op}$@[{$t_{op}$}]\begingroup Time of process operations \nomunit {s}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{a$N_{E}$@[{$N_{E}$}]\begingroup Number of equipment pieces in the process \nomunit {-}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{a$C_{EC}$@[{$C_{EC}$}]\begingroup Total cost of energy \nomunit {\$}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{a$C^{i}_{EC}$@[{$C^{i}_{EC}$}]\begingroup Mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{a$\dot {e}_{ij}$@[{$\dot {e}_{ij}$}]\begingroup Energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{a$C_{FILL}$@[{$C_{FILL}$}]\begingroup Cost of raw materials to fill the process \nomunit {\$}\nomeqref {3.6}|nompageref}{12}
-\nomenclatureentry{A $$POT$$@[{$$POT$$}]\begingroup Payout time \nomunit {\$}\nomeqref {3.8}|nompageref}{13}
-\nomenclatureentry{A $q$@[{$q$}]\begingroup Interest factor \nomunit {-}\nomeqref {3.10}|nompageref}{14}
-\nomenclatureentry{A $C_n$@[{$C_n$}]\begingroup Final value of an investment \nomunit {\$}\nomeqref {3.10}|nompageref}{14}
-\nomenclatureentry{A $C_0$@[{$C_0$}]\begingroup Initial value of an investment \nomunit {\$}\nomeqref {3.10}|nompageref}{14}
-\nomenclatureentry{A $i$@[{$i$}]\begingroup Interest rate \nomunit {\%}\nomeqref {3.11}|nompageref}{14}
-\nomenclatureentry{A $a$@[{$a$}]\begingroup Annuity \nomunit {\$}\nomeqref {3.13}|nompageref}{14}
-\nomenclatureentry{A $C_{0e}$@[{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {3.15}|nompageref}{15}
-\nomenclatureentry{A $C_{0r}$@[{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {3.16}|nompageref}{15}
-\nomenclatureentry{A $NPV$@[{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {3.17}|nompageref}{15}
 \nomenclatureentry{R $n_S$@[{$n_S$}]\begingroup number of column stages \nomunit {-}\nomeqref {4.0}|nompageref}{19}
 \nomenclatureentry{R $n_C$@[{$n_C$}]\begingroup number of components \nomunit {-}\nomeqref {4.0}|nompageref}{19}
 \nomenclatureentry{R $V_j$@[{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}|nompageref}{19}
@@ -49,7 +12,7 @@
 \nomenclatureentry{R $z^V_{ij}$@[{$z^V_{ij}$}]\begingroup vapour mole fraction of vapour feed to stage $j$ \nomunit {-}\nomeqref {4.1}|nompageref}{19}
 \nomenclatureentry{R $s^V_j$@[{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {4.3}|nompageref}{19}
 \nomenclatureentry{R $s^V_j$@[{$s^V_j$}]\begingroup dimensionless liquid side-draw from stage $j$ \nomunit {-}\nomeqref {4.3}|nompageref}{19}
-\nomenclatureentry{R $n_F$@[{$n_F$}]\begingroup number of feeds \nomunit {-}\nomeqref {4.5}|nompageref}{19}
+\nomenclatureentry{R $n_F$@[{$n_F$}]\begingroup number of feeds \nomunit {-}\nomeqref {4.5}|nompageref}{20}
 \nomenclatureentry{G $\zeta ^{L}_{ij}$@[{$\zeta ^{L}_{ij}$}]\begingroup splitting variable for liquid feed $i$ on stage $j$ \nomunit {-}\nomeqref {4.6}|nompageref}{20}
 \nomenclatureentry{G $\zeta ^{V}_{ij}$@[{$\zeta ^{V}_{ij}$}]\begingroup splitting variable for vapour feed $i$ on stage $j$ \nomunit {-}\nomeqref {4.6}|nompageref}{20}
 \nomenclatureentry{G $\zeta ^{SV}_{ij}$@[{$\zeta ^{SV}_{ij}$}]\begingroup splitting variable for vapour side draw $i$ on stage $j$ \nomunit {-}\nomeqref {4.6}|nompageref}{20}
@@ -74,28 +37,28 @@
 \nomenclatureentry{R $\Delta p_{stage}$@[{$\Delta p_{stage}$}]\begingroup stage-wise pressure drop \nomunit {Pa}\nomeqref {4.18}|nompageref}{23}
 \nomenclatureentry{G $\nu ^R$@[{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {4.21}|nompageref}{24}
 \nomenclatureentry{G $\nu ^D$@[{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {4.21}|nompageref}{24}
-\nomenclatureentry{G $\nu ^{vap}$@[{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {4.22}|nompageref}{24}
+\nomenclatureentry{G $\nu ^{vap}$@[{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {4.22}|nompageref}{25}
 \nomenclatureentry{R $l_{ij}$@[{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.24}|nompageref}{26}
 \nomenclatureentry{R $v_{ij}$@[{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.24}|nompageref}{26}
-\nomenclatureentry{R $F_j^V$@[{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{26}
-\nomenclatureentry{R $F_j^L$@[{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{26}
-\nomenclatureentry{R $S_j^V$@[{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{26}
-\nomenclatureentry{R $S_j^L$@[{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{26}
-\nomenclatureentry{R $V_j$@[{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{26}
-\nomenclatureentry{R $L_j$@[{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{26}
+\nomenclatureentry{R $F_j^V$@[{$F_j^V$}]\begingroup Vapour feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{27}
+\nomenclatureentry{R $F_j^L$@[{$F_j^L$}]\begingroup Liquid feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{27}
+\nomenclatureentry{R $S_j^V$@[{$S_j^V$}]\begingroup Vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{27}
+\nomenclatureentry{R $S_j^L$@[{$S_j^L$}]\begingroup Liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{27}
+\nomenclatureentry{R $V_j$@[{$V_j$}]\begingroup Vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{27}
+\nomenclatureentry{R $L_j$@[{$L_j$}]\begingroup Liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.28}|nompageref}{27}
 \nomenclatureentry{R $T^{dew}$@[{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {4.35}|nompageref}{28}
 \nomenclatureentry{R $T^{bub}$@[{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {4.35}|nompageref}{28}
-\nomenclatureentry{G $\mu _{JT}$@[{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {4.49}|nompageref}{33}
+\nomenclatureentry{G $\mu _{JT}$@[{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {4.49}|nompageref}{34}
 \nomenclatureentry{G $\mu _S$@[{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {4.50}|nompageref}{34}
 \nomenclatureentry{R $n_{ij}$@[{$n_{ij}$}]\begingroup holdup of component $i$ on stage $j$  \nomunit {mol}\nomeqref {4.52}|nompageref}{35}
 \nomenclatureentry{R $U_j$@[{$U_j$}]\begingroup internal energy holdup on stage $j$ \nomunit {J}\nomeqref {4.52}|nompageref}{35}
-\nomenclatureentry{R $n_j^L$@[{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.57}|nompageref}{35}
-\nomenclatureentry{R $n_j^V$@[{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.57}|nompageref}{35}
+\nomenclatureentry{R $n_j^L$@[{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.57}|nompageref}{36}
+\nomenclatureentry{R $n_j^V$@[{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.57}|nompageref}{36}
 \nomenclatureentry{R $V_{stage}$@[{$V_{stage}$}]\begingroup stage volume \nomunit {m^3}\nomeqref {4.58}|nompageref}{36}
-\nomenclatureentry{C $g$@[{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {4.60}|nompageref}{36}
-\nomenclatureentry{R $\ell _{weir}$@[{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {4.60}|nompageref}{36}
-\nomenclatureentry{R $h_{ow}$@[{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {4.60}|nompageref}{36}
-\nomenclatureentry{G $\Phi $@[{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {4.60}|nompageref}{36}
+\nomenclatureentry{C $g$@[{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {4.60}|nompageref}{37}
+\nomenclatureentry{R $\ell _{weir}$@[{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {4.60}|nompageref}{37}
+\nomenclatureentry{R $h_{ow}$@[{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {4.60}|nompageref}{37}
+\nomenclatureentry{G $\Phi $@[{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {4.60}|nompageref}{37}
 \nomenclatureentry{R $h_f$@[{$h_f$}]\begingroup froth height \nomunit {m}\nomeqref {4.61}|nompageref}{37}
 \nomenclatureentry{R $h_w$@[{$h_w$}]\begingroup weir height \nomunit {m}\nomeqref {4.61}|nompageref}{37}
 \nomenclatureentry{R $A_{active}$@[{$A_{active}$}]\begingroup active tray area \nomunit {m^2}\nomeqref {4.62}|nompageref}{37}
@@ -110,22 +73,22 @@
 \nomenclatureentry{R $\delta p_{dry}$@[{$\delta p_{dry}$}]\begingroup dry pressure drop \nomunit {\frac {Pa}{m}}\nomeqref {4.67}|nompageref}{38}
 \nomenclatureentry{R $C_1$@[{$C_1$}]\begingroup packing constant \nomunit {}\nomeqref {4.67}|nompageref}{38}
 \nomenclatureentry{R $C_2$@[{$C_2$}]\begingroup packing constant \nomunit {}\nomeqref {4.67}|nompageref}{38}
-\nomenclatureentry{G $\mu _L$@[{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {4.70}|nompageref}{38}
-\nomenclatureentry{R $v_L$@[{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {4.70}|nompageref}{38}
-\nomenclatureentry{R $C_{column}$@[{$C_{column}$}]\begingroup column cost \nomunit {\$}\nomeqref {4.73}|nompageref}{39}
+\nomenclatureentry{G $\mu _L$@[{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {4.70}|nompageref}{39}
+\nomenclatureentry{R $v_L$@[{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {4.70}|nompageref}{39}
+\nomenclatureentry{R $C_{\text {column}}$@[{$C_{\text {column}}$}]\begingroup column cost \nomunit {\$}\nomeqref {4.73}|nompageref}{39}
 \nomenclatureentry{R $C_{tower}$@[{$C_{tower}$}]\begingroup tower cost \nomunit {\$}\nomeqref {4.73}|nompageref}{39}
-\nomenclatureentry{R $C_{platform}$@[{$C_{platform}$}]\begingroup platform cost \nomunit {\$}\nomeqref {4.73}|nompageref}{39}
-\nomenclatureentry{R $C_{internals}$@[{$C_{internals}$}]\begingroup cost of column internals \nomunit {\$}\nomeqref {4.73}|nompageref}{39}
-\nomenclatureentry{R $W_{tower}$@[{$W_{tower}$}]\begingroup weight of a tower \nomunit {lbs}\nomeqref {4.74}|nompageref}{39}
-\nomenclatureentry{R $t_s$@[{$t_s$}]\begingroup tower shell thickness \nomunit {in}\nomeqref {4.76}|nompageref}{39}
-\nomenclatureentry{R $S$@[{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.77}|nompageref}{39}
-\nomenclatureentry{R $E$@[{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.77}|nompageref}{39}
-\nomenclatureentry{R $t_p$@[{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.77}|nompageref}{39}
-\nomenclatureentry{R $p_D$@[{$p_D$}]\begingroup design pressure \nomunit {psig}\nomeqref {4.78}|nompageref}{39}
-\nomenclatureentry{R $p_O$@[{$p_O$}]\begingroup operating pressure \nomunit {psig}\nomeqref {4.78}|nompageref}{39}
+\nomenclatureentry{R $C_{\text {platform}}$@[{$C_{\text {platform}}$}]\begingroup platform cost \nomunit {\$}\nomeqref {4.73}|nompageref}{39}
+\nomenclatureentry{R $C_{\text {internals}}$@[{$C_{\text {internals}}$}]\begingroup cost of column internals \nomunit {\$}\nomeqref {4.73}|nompageref}{39}
+\nomenclatureentry{R $W_{tower}$@[{$W_{tower}$}]\begingroup weight of a tower \nomunit {lbs}\nomeqref {4.74}|nompageref}{40}
+\nomenclatureentry{R $t_s$@[{$t_s$}]\begingroup tower shell thickness \nomunit {in}\nomeqref {4.76}|nompageref}{40}
+\nomenclatureentry{R $S$@[{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.77}|nompageref}{40}
+\nomenclatureentry{R $E$@[{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.77}|nompageref}{40}
+\nomenclatureentry{R $t_p$@[{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.77}|nompageref}{40}
+\nomenclatureentry{R $p_D$@[{$p_D$}]\begingroup design pressure \nomunit {psig}\nomeqref {4.78}|nompageref}{40}
+\nomenclatureentry{R $p_O$@[{$p_O$}]\begingroup operating pressure \nomunit {psig}\nomeqref {4.78}|nompageref}{40}
 \nomenclatureentry{R $t_w$@[{$t_w$}]\begingroup thickness wind and earthquake correction \nomunit {in}\nomeqref {4.79}|nompageref}{40}
-\nomenclatureentry{R $h_{plate}$@[{$h_{plate}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.81}|nompageref}{40}
-\nomenclatureentry{R $ent_j$@[{$ent_j$}]\begingroup fractional entrainment for 80\% flooding on stage $j$ \nomunit {-}\nomeqref {4.82}|nompageref}{40}
+\nomenclatureentry{R $h_{\text {plate}}$@[{$h_{\text {plate}}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.81}|nompageref}{41}
+\nomenclatureentry{R $ent_j$@[{$ent_j$}]\begingroup fractional entrainment for 80\% flooding on stage $j$ \nomunit {-}\nomeqref {4.82}|nompageref}{41}
 \nomenclatureentry{R $FLV_j$@[{$FLV_j$}]\begingroup Sherwood flow parameter on stage $j$ \nomunit {-}\nomeqref {4.83}|nompageref}{41}
 \nomenclatureentry{R $v_j^{flood}$@[{$v_j^{flood}$}]\begingroup flooding velocity on stage $j$ \nomunit {\frac {m}{s}}\nomeqref {4.84}|nompageref}{41}
 \nomenclatureentry{R $K1$@[{$K1$}]\begingroup empirical coefficient \nomunit {-}\nomeqref {4.85}|nompageref}{41}

@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \node (A) [rectdg] at (0,0) {core \\ equations} ;
+    \node (B) [rectdg] at (-7,-2.5) {concentration \\ init profiles} ; 
+    \node (C) [rectdg] at (-3.5,-2.5) {temperature \\ init profiles} ; 
+    \node (D) [rectdg] at (-0,-2.5) {murphee \\ efficiencies} ; 
+    \node (E) [rectdg] at (3.5,-2.5) {cost \& \\ sizing} ; 
+    \node (F) [rectdg] at (7,-2.5) {hydraulics} ; 
+    \node (sec) at (0,-1.25) {} ; 
+    \draw [stdline] (A.south) -- (D.north) ;
+    \draw [stdline] (B.north) -- (B.north |- sec) -- (F.north |- sec) -- (F.north) ;
+    \draw [stdline] (E.north) -- (E.north |- sec) ;
+    \draw [stdline] (C.north) -- (C.north |- sec) ;
+    \node (E1) [rectch] at (3.75,-4.5) {trayed } ;
+    \node (E2) [rectch] at (3.75,-6.5) {structured \\ packing} ;
+    \node (F1) [rectch] at (7.25,-4.5) {trayed } ;
+    \node (F2) [rectch] at (7.25,-6.5) {structured \\ packing} ;
+    \draw [stdline] (2.25,-3.25) -- ++(0,-1.25) -- ++(0.25,0) ;
+    \draw [stdline] (2.25,-4.5) -- ++(0,-2) -- ++(0.25,0) ;
+    \draw [stdline] (5.75,-3.25) -- ++(0,-1.25) -- ++(0.25,0) ;
+    \draw [stdline] (5.75,-4.5) -- ++(0,-2) -- ++(0.25,0) ;
+\end{tikzpicture}

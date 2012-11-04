@@ -50,16 +50,16 @@
 \contentsline {subsubsection}{Trays}{40}{section*.49}
 \contentsline {subsubsection}{Structured packings}{41}{section*.50}
 \contentsline {subsection}{\numberline {4.3.2}Centrifugal pump}{41}{subsection.4.3.2}
-\contentsline {paragraph}{Pump}{41}{section*.51}
+\contentsline {paragraph}{Pump}{42}{section*.51}
 \contentsline {paragraph}{Electric motor}{42}{section*.54}
 \contentsline {subsubsection}{Compressor}{43}{section*.56}
 \contentsline {paragraph}{Centrifugal compressor}{43}{section*.57}
 \contentsline {paragraph}{Reciprocating compressor}{43}{section*.58}
-\contentsline {paragraph}{Screw compressor}{43}{section*.59}
+\contentsline {paragraph}{Screw compressor}{44}{section*.59}
 \contentsline {subsubsection}{Reboiler / condenser}{44}{section*.60}
 \contentsline {paragraph}{Shell and tube heat exchanger}{44}{section*.61}
 \contentsline {paragraph}{Double pipe}{44}{section*.62}
-\contentsline {section}{\numberline {4.4}Thermodynamic models}{44}{section.4.4}
+\contentsline {section}{\numberline {4.4}Thermodynamic models}{45}{section.4.4}
 \contentsline {section}{\numberline {4.5}Implementation}{45}{section.4.5}
 \contentsline {chapter}{\numberline {5}Conclusion and further research}{46}{chapter.5}
 \contentsline {chapter}{Bibliography}{48}{chapter*.64}

@@ -9,146 +9,146 @@ factors presented in this chapter are, if not stated otherwise, taken from \cite
 Also unless otherwise stated the unit cost is given for the year 2006 ($CE = 500$).
 	
 \subsection{Destillation column}
-    The cost of a given distillation column $C_{column}$ is comprised of three main parts, the cost 
+    The cost of a given distillation column $C_{column}$ is comprised of three main parts, the cost
     for the vessel or tower itself $C_{tower}$, the cost for platforms, ladders, manholes, and nozzles
     $C_{platform}$ and the cost for the internals $C_{internals}$
     \Eq{}{
-        C_{column} = C_{tower} + C_{platform} + C_{internals}. 
+        C_{\text{column}} = C_{tower} + C_{platform} + C_{internals}.
     }
     \ncr{C_{column}}{column cost}{\$}
 	\ncr{C_{tower}}{tower cost}{\$}
     \ncr{C_{platform}}{platform cost}{\$}
     \ncr{C_{internals}}{cost of column internals}{\$}
 	
-    The determining factors for the cost of a tower are the construction material and the weight of the vessel. 
-    The material is considered by multiplying a base cost by a material factor $f_M$. Thus the cost for 
+    The determining factors for the cost of a tower are the construction material and the weight of the vessel.
+    The material is considered by multiplying a base cost by a material factor $f_M$. Thus the cost for
     the tower can be approximated by
     \Eq{eq:cost:column:vessel}{
-	   C_{tower} = f_M \cdot \exp\left[ 7.2756 + 0.18255 \cdot \ln(W_{tower}) + 0.02297 \cdot \pow{\ln(W_{tower})}{2} \right], 
+	   C_{tower} = f_M \cdot \exp\left[ 7.2756 + 0.18255 \cdot \ln(W_{tower}) + 0.02297 \cdot \pow{\ln(W_{tower})}{2} \right],
             \eqannote{9000 \leq W_{tower} \leq 2.5 \cdot 10^6}.
 	}
     \ncr{W_{tower}}{weight of  a tower}{lbs}
     In this correlation the weight $W$ is measured in pounds ($[lbs]$)
-    
-    For the support structures the following equation has bee presented 
+
+    For the support structures the following equation has bee presented
 	\Eq{eq:cost:column:support}{
 	   C_{platform} = 300.9 \cdot \pow{d_{column}}{0.63316} \cdot \pow{l_{column}}{0.80161},
 	}	
-    where both the diameter $d_{column}$ and length $l_{column}$ are measured in feet ($[ft]$). 
+    where both the diameter $d_{column}$ and length $l_{column}$ are measured in feet ($[ft]$).
 	
-    The weight of the column is attained by calculation its volume and multiplying it by the 
+    The weight of the column is attained by calculation its volume and multiplying it by the
     mass density of the construction material $\tilde{\varrho}$
     \Eq{eq:cost:column:weight}{
 	   W_{column} = \pi (d_{column} + t_s)(l_{column} + 0.8 \cdot d_{column}) t_s \cdot \tilde{\varrho}.
 	}	
     \ncr{t_s}{tower shell thickness}{in}
-    It needs to be noted, that in this formula, all measurements have to be adjusted to the measurement 
-    of the density. Newly appearing is the shell thickness $t_s$ of the tower. In order to compute 
-    this, several aspects can be considered. 
-    
-    The ASME pressure vessel code formula is used to compute the minimum thickness due to the design 
+    It needs to be noted, that in this formula, all measurements have to be adjusted to the measurement
+    of the density. Newly appearing is the shell thickness $t_s$ of the tower. In order to compute
+    this, several aspects can be considered.
+
+    The ASME pressure vessel code formula is used to compute the minimum thickness due to the design
     pressure $p_D$ of a tower
     \Eq{eq:cost:column:wallthickness}{
 		t_p = \frac{p_D \, d_{column}}{2 \, S \, E - 1.2 p_D},
 	}
-    where $S$ denotes the maximum allowable stress and $E$ the fractional weld efficiency. 
+    where $S$ denotes the maximum allowable stress and $E$ the fractional weld efficiency.
     \ncr{S}{maximum allowable stress}{psi}
     \ncr{E}{fractional weld efficiency}{-}
     \ncr{t_p}{shell thickness die to pressure}{in}
-    
+
     The design pressure is computed from the operating pressure $p_O$
     \Eq{eq:cost:column:designpressure}{
-		p_D = \max\left\{10,\exp\left[ 0.60600 + 0.91615 \cdot \ln(p_O) + 0.0015655 \cdot \left(\ln(p_O)\right)^2 \right]\right\}, 
+		p_D = \max\left\{10,\exp\left[ 0.60600 + 0.91615 \cdot \ln(p_O) + 0.0015655 \cdot \left(\ln(p_O)\right)^2 \right]\right\},
 	}
     \ncr{p_D}{design pressure}{psig}
     \ncr{p_O}{operating pressure}{psig}
-    It should be pointed out the the pressures in the previous equation are measured in pound per square inch 
-    gauge ($[psig]$). 
-    
-    In addition to the thickness due to pressure, it should be considered -- especially for tall vessels -- 
-    that the vessel might have to withstand external forces such as strong winds or earthquakes. 
-    To account for external effects a security addition  $t_w$ to the pressure thickness can be computed 
+    It should be pointed out the the pressures in the previous equation are measured in pound per square inch
+    gauge ($[psig]$).
+
+    In addition to the thickness due to pressure, it should be considered -- especially for tall vessels --
+    that the vessel might have to withstand external forces such as strong winds or earthquakes.
+    To account for external effects a security addition  $t_w$ to the pressure thickness can be computed
     \Eq{}{
-        t_w = \frac{0.22 (d_{column} + 18)l_{column}^2}{S d_{column}} . 
+        t_w = \frac{0.22 (d_{column} + 18)l_{column}^2}{S d_{column}} .
     }
     \ncr{t_w}{thickness wind and earthquake correction}{in}
-    
-    Therefor the total shell thickness amounts to 
+
+    Therefor the total shell thickness amounts to
     \Eq{}{
-        t_s = t_p + t_w. 
+        t_s = t_p + t_w.
     }
-    
-    In the previous equations the column diameter and length have frequently been used, however no mention 
-    has been made as to how to attain these values. While for a given design these values will be fixed, 
-    in the context of an optimization they need to be considered as decision variables. These decisions 
-    are closely linked to the choice of column internals. In case of the column height the procedure 
-    is very similar for columns with trays and structured packings. In case of the diameter however 
-    a clear distinction has to be made. This is due to the fact, that a decision regarding the diameter 
-    will have to ensure feasible column operations, which means it will have to be large enough to 
-    avoid flooding within the column. Consequently the procedures for determining height and diameter 
-    will be dealt with separately for each type of internals. 
-    
+
+    In the previous equations the column diameter and length have frequently been used, however no mention
+    has been made as to how to attain these values. While for a given design these values will be fixed,
+    in the context of an optimization they need to be considered as decision variables. These decisions
+    are closely linked to the choice of column internals. In case of the column height the procedure
+    is very similar for columns with trays and structured packings. In case of the diameter however
+    a clear distinction has to be made. This is due to the fact, that a decision regarding the diameter
+    will have to ensure feasible column operations, which means it will have to be large enough to
+    avoid flooding within the column. Consequently the procedures for determining height and diameter
+    will be dealt with separately for each type of internals.
+
     \subsubsection{Trays}
-        For a trayed column the height can be determined from the number of stages $n_S$ used multiplied by 
-        the plate spacing $h_{plate}$. In addition however it needs to be ensured, that control of the 
-        columns is still possible. At the sump of the tower liquid will accumulate during operations. 
-        While in an ideal case the liquid level would be constant, that cannot be assumed. Regularly 
-        there are three different liquid levels defined in a column. The high level (HLL), normal 
-        level (NLL) and the low level (LLL). These levels are defined such that it sufficient time 
-        for the liquid to reach these levels ($t_{min}^{HLL}, t_{min}^{NLL}, t_{min}^{LLL}$) , 
-        if no liquid id withdrawn anymore, or no liquid comes down from the column. Furthermore 
-        the times for reaching the reboiler inlet and the lowest plat will ne necessary. 
-        What duration to reach those levels will be sufficient needs to be decided by a control engineer. 
-        
-        With these times and heights the height of the tower can be expressed as 
+        For a trayed column the height can be determined from the number of stages $n_S$ used multiplied by
+        the plate spacing $h_{plate}$. In addition however it needs to be ensured, that control of the
+        columns is still possible. At the sump of the tower liquid will accumulate during operations.
+        While in an ideal case the liquid level would be constant, that cannot be assumed. Regularly
+        there are three different liquid levels defined in a column. The high level (HLL), normal
+        level (NLL) and the low level (LLL). These levels are defined such that it sufficient time
+        for the liquid to reach these levels ($t_{min}^{HLL}, t_{min}^{NLL}, t_{min}^{LLL}$) ,
+        if no liquid id withdrawn anymore, or no liquid comes down from the column. Furthermore
+        the times for reaching the reboiler inlet and the lowest plat will ne necessary.
+        What duration to reach those levels will be sufficient needs to be decided by a control engineer.
+
+        With these times and heights the height of the tower can be expressed as
         \Eq{}{
-            l_{column} = n_S \cdot h_{plate} + \left(\sum_i t^{i}_{min} H^{i} \right) \cdot 
-                \frac{L_{n_S}}{A_{column} \varrho^L}. 
-        } 
+            l_{column} = n_S \cdot h_{plate} + \left(\sum_i t^{i}_{min} H^{i} \right) \cdot
+                \frac{L_{n_S}}{A_{column} \varrho^L}.
+        }
         \ncr{h_{plate}}{plate spacing}{m}
-        
-        This leaves the diameter to be determined. The most important factor to that regard is the vapour velocity 
-        within the tower. It is to be chosen such that no flooding or entrainment will occur. The following equation 
-        to compute these operation boundaries are taken from \cite{Lygeros.1986}. 
-        
-        First the fractional entrainment factor $ent_j$ for 80\% flooding at each stage $j$ needs to be calculated 
+
+        This leaves the diameter to be determined. The most important factor to that regard is the vapour velocity
+        within the tower. It is to be chosen such that no flooding or entrainment will occur. The following equation
+        to compute these operation boundaries are taken from \cite{Lygeros.1986}.
+
+        First the fractional entrainment factor $ent_j$ for 80\% flooding at each stage $j$ needs to be calculated
         \Eq{}{
-            ent_j = 2.24 \cdot 10^{-3} \cdot 2.377 \exp\left[ -9.394 \cdot FLV_j^{0.314}\right], \eqanns . 
+            ent_j = 2.24 \cdot 10^{-3} \cdot 2.377 \exp\left[ -9.394 \cdot FLV_j^{0.314}\right], \eqanns .
         }
         \ncr{ent_j}{fractional entrainment for 80\% flooding on stage $j$}{-}
-        
+
         Therein the Sherwood flow parameter $FLV_j$ is used
         \Eq{}{
-            FLV_j = \frac{\tilde{L_j}}{\tilde{V}_j} \cdot \sqrt{\frac{\tilde{\varrho}^V_j}{\tilde{\varrho}^L_j}}, \eqanns. 
+            FLV_j = \frac{\tilde{L_j}}{\tilde{V}_j} \cdot \sqrt{\frac{\tilde{\varrho}^V_j}{\tilde{\varrho}^L_j}}, \eqanns.
         }
         \ncr{FLV_j}{Sherwood flow parameter on stage $j$}{-}
-        
+
         \Eq{}{
-            v_j^{flood} = 60 \cdot \left( \frac{\sigma_j^L}{20} \right) \cdot K1_j \cdot 
-                \sqrt{\frac{\tilde{\varrho}_j^L - \tilde{\varrho}_j^V}{\tilde{\varrho}^V_j}}, \eqanns. 
+            v_j^{flood} = 60 \cdot \left( \frac{\sigma_j^L}{20} \right) \cdot K1_j \cdot
+                \sqrt{\frac{\tilde{\varrho}_j^L - \tilde{\varrho}_j^V}{\tilde{\varrho}^V_j}}, \eqanns.
         }
         \ncr{v_j^{flood}}{flooding velocity on stage $j$}{\frac{m}{s}}
         \todo{check time constant (60) for flooding velocity}
-        
+
         \Eq{}{
-            K1_j = 1.05 \cdot 10^{-2} + 0.1496 \cdot h_{plate} \cdot \exp\left[ -1.463 \cdot FLV_j^{0.842} \right], \eqanns. 
+            K1_j = 1.05 \cdot 10^{-2} + 0.1496 \cdot h_{plate}^{0.755} \cdot \exp\left[ -1.463 \cdot FLV_j^{0.842} \right], \eqanns. 
         }
         \ncr{K1}{empirical coefficient}{-}
-        
+
         With those values the minimum required column area for each stage $A_j^{min}$ can be calculated
         \Eq{}{
-            A_j^{min} = \frac{V_j}{\Psi_{flood} \varrho_j^V v_j^{flood}}, \eqanns, 
+            A_j^{min} = \frac{V_j}{\Psi_{flood} \varrho_j^V v_j^{flood}}, \eqanns,
         }
         \ncr{A_j^{min}}{minimum column area on stage $j$}{m^2}
         \ncg{\Psi_{flood}}{fractional allowed flooding}{-}
-        where $\Psi_{flood}$ is a design parameter which determines the degree of flooding allowed and will usually 
-        have a value around $0.8$. 
-     
+        where $\Psi_{flood}$ is a design parameter which determines the degree of flooding allowed and will usually
+        have a value around $0.8$.
+
     \subsubsection{Structured packings}
-        The calculation of the column height is equivalent to the trayed case, with the one difference, that 
-        rather than using the plate spacing as the height for each stage a value called height equivalent 
-        to to theoretical plate ($HETP$) ist used. In terms of the column diameter the flooding velocity 
-        is determined by the flooding pressure drop as calculated in \secref{sec:mathpro:dynamic:strpackhyd}. 
+        The calculation of the column height is equivalent to the trayed case, with the one difference, that
+        rather than using the plate spacing as the height for each stage a value called height equivalent
+        to to theoretical plate ($HETP$) ist used. In terms of the column diameter the flooding velocity
+        is determined by the flooding pressure drop as calculated in \secref{sec:mathpro:dynamic:strpackhyd}.
         \todo{check results for minimum column diameter when using flooding pressure drop, or fitted flooding velocity}
 
 \subsection{Centrifugal pump}

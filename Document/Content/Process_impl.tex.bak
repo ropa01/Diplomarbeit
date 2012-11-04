@@ -1,0 +1,5 @@
+﻿\todo{explain more elaborate initialization strategies.}
+\begin{figure}
+    \center
+    \input{Pictures/gP_ModelStructure}
+\end{figure}
