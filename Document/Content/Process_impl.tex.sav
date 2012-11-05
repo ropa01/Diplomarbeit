@@ -1,0 +1,40 @@
+﻿As mentioned the presented models have been implemented in the process simulator \gproms. Although application
+to the cryogenic air separation process served as case where the model would be applied, the aim was to develop
+-- especially in the case of the column models -- a flexible model which could be used for a multitude of
+problems while trying to achieve a reasonable amount of complexity, such that a user mainly used to a pure flowsheeting
+environment should be able to apply the models with relative ease.
+
+In the following sections first some general aspects of modeling in \gproms will be pointed out and the structure
+of the implemented model discussed in more detail. Subsequently several strategies for initializing the column model
+based on the previously model structure will be presented.
+
+\subsection{Model structure}
+\label{sec:mathpro:implementation:modelstructure}
+
+    When discussing the structure of \gproms models first some aspects of the modeling language have to be discussed. 
+    In this context CASE selectors, IF statements and the implementation INITIALIZATION\_PROCEDURES in \gproms are most 
+    important. Within this section we will first briefly discuss those features and how they are used in \gproms. 
+    Afterwards it will be shown, how these structures are used, to create a model which can quickly be tailored the
+    specific needs of a given user, and how distillation columns can be initialized within that framework. 
+    
+    IF statements and case selectors have many similarities as they can distinguish between different cases within a 
+    given model. For many applications they might even be used equivalently. As in almost all contexts the IF statements 
+    evaluates a condition and depending on wether it is fulfilled or not and evaluates differen formulae accordingly. 
+    A  CASE statement distinguishes different branches between the model can switch during simulation or initialization. 
+    One major difference ist, that the number of equations in each CASE branch must match while for IF statements that 
+    condition is not enforced. However care must be taken when using these structures -- especially during simulation -- 
+    as they will in many cases introduce discontinuities. Furthermore when using IF statements one must distinguish, 
+    wether the evaluated statement is a parameter, or a variable in the model. Given it is a parameter, the statement will 
+    remain true (or false) for each instance of simulation. This introduces some flexibility in terms of diverging 
+    in the number of equations within model variants. 
+    
+    \begin{landscape}
+        \begin{figure}
+            \center
+            \input{Pictures/gP_ModelStructure}
+            \caption{Distillation column model structure including sub-models and CASE branches.}
+            \label{fig:mathpro:modelstruct}
+        \end{figure}
+    \end{landscape}
+    
+\subsection{Initialization procedures}

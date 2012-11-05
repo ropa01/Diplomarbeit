@@ -41,27 +41,32 @@
 \contentsline {subsubsection}{Cooling by expansion}{33}{section*.41}
 \contentsline {section}{\numberline {4.2}Dynamic unit models}{34}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Distillation column model}{34}{subsection.4.2.1}
-\contentsline {paragraph}{$n_C - 1$ component balances}{35}{section*.43}
-\contentsline {paragraph}{Total internal energy balance}{35}{section*.44}
-\contentsline {subsubsection}{Trayed hydraulics}{36}{section*.45}
-\contentsline {subsubsection}{Structured packing hydraulics}{37}{section*.47}
+\contentsline {subsubsection}{Trayed hydraulics}{36}{section*.43}
+\contentsline {subsubsection}{Structured packing hydraulics}{37}{section*.45}
 \contentsline {section}{\numberline {4.3}Sizing \& costing models}{38}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Destillation column}{39}{subsection.4.3.1}
-\contentsline {subsubsection}{Trays}{40}{section*.49}
-\contentsline {subsubsection}{Structured packings}{41}{section*.50}
+\contentsline {subsubsection}{Trays}{40}{section*.47}
+\contentsline {subsubsection}{Structured packings}{41}{section*.48}
 \contentsline {subsection}{\numberline {4.3.2}Centrifugal pump}{41}{subsection.4.3.2}
-\contentsline {paragraph}{Pump}{42}{section*.51}
-\contentsline {paragraph}{Electric motor}{42}{section*.54}
-\contentsline {subsubsection}{Compressor}{43}{section*.56}
-\contentsline {paragraph}{Centrifugal compressor}{43}{section*.57}
-\contentsline {paragraph}{Reciprocating compressor}{43}{section*.58}
-\contentsline {paragraph}{Screw compressor}{44}{section*.59}
-\contentsline {subsubsection}{Reboiler / condenser}{44}{section*.60}
-\contentsline {paragraph}{Shell and tube heat exchanger}{44}{section*.61}
-\contentsline {paragraph}{Double pipe}{44}{section*.62}
+\contentsline {paragraph}{Pump}{42}{section*.49}
+\contentsline {paragraph}{Electric motor}{42}{section*.52}
+\contentsline {subsubsection}{Compressor}{43}{section*.54}
+\contentsline {paragraph}{Centrifugal compressor}{43}{section*.55}
+\contentsline {paragraph}{Reciprocating compressor}{43}{section*.56}
+\contentsline {paragraph}{Screw compressor}{44}{section*.57}
+\contentsline {subsubsection}{Reboiler / condenser}{44}{section*.58}
+\contentsline {paragraph}{Shell and tube heat exchanger}{44}{section*.59}
+\contentsline {paragraph}{Double pipe}{44}{section*.60}
 \contentsline {section}{\numberline {4.4}Thermodynamic models}{45}{section.4.4}
 \contentsline {section}{\numberline {4.5}Implementation}{45}{section.4.5}
-\contentsline {chapter}{\numberline {5}Conclusion and further research}{46}{chapter.5}
-\contentsline {chapter}{Bibliography}{48}{chapter*.64}
-\contentsline {chapter}{\numberline {A}Appendix A}{50}{appendix.A}
-\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{50}{section.A.1}
+\contentsline {subsection}{\numberline {4.5.1}Model structure}{46}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Initialization procedures}{48}{subsection.4.5.2}
+\contentsline {subsubsection}{Initial specifications}{49}{section*.62}
+\contentsline {subsubsection}{Flash initialization}{49}{section*.63}
+\contentsline {subsubsection}{Linearized material balance}{49}{section*.64}
+\contentsline {subsubsection}{Iterative approach}{50}{section*.65}
+\contentsline {subsubsection}{Side draws}{50}{section*.66}
+\contentsline {chapter}{\numberline {5}Conclusion and further research}{51}{chapter.5}
+\contentsline {chapter}{Bibliography}{53}{chapter*.68}
+\contentsline {chapter}{\numberline {A}Appendix A}{55}{appendix.A}
+\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{55}{section.A.1}

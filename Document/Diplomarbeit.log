@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  4 NOV 2012 01:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  4 NOV 2012 20:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1425,10 +1425,8 @@ File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 \c@@todonotes@numberoftodonotes=\count198
 )
-(./Diplomarbeit.aux (./Content/Preamble/CoverPage.aux)
-(./Content/Preamble/TaskDescription.aux)
-(./Content/Preamble/StatutoryDeclaration.aux) (./Content/Lists.aux)
-(./Content/Abstract.aux) (./Content/Introduction.aux) (./Content/AirSep.aux)
+(./Diplomarbeit.aux (./Content/Lists.aux) (./Content/Abstract.aux)
+(./Content/Introduction.aux) (./Content/AirSep.aux)
 (./Content/ProcessEconomics.aux) (./Content/ProcessModel.aux
 
 LaTeX Warning: Label `eq:col:CompBalance' multiply defined.
@@ -1556,32 +1554,178 @@ LaTeX Info: Redefining \nameref on input line 28.
 Package scrhack Info: undefining \float@addtolists on input line 28.
 
 ABD: EveryShipout initializing macros
+\openout2 = `Content/Lists.aux'.
+
+ (./Content/Lists.tex
+Package tocbasic Info: character protrusion at toc deactivated on input line 1.
+
+ (./Diplomarbeit.toc
+LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 4.
+
+
+(c:/texlive/2012/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
+File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
+)
+LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 4.
+
+
+(c:/texlive/2012/texmf-dist/tex/latex/cmbright/omscmbrs.fd
+File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
+)
+(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+))
+\tf@toc=\write6
+\openout6 = `Diplomarbeit.toc'.
+
+ [1
+
+
+
+{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package tocbasic Info: character protrusion at lof deactivated on input line 2.
+
+ (./Diplomarbeit.lof)
+\tf@lof=\write7
+\openout7 = `Diplomarbeit.lof'.
+
+ [2
+
+]
+Package tocbasic Info: character protrusion at lot deactivated on input line 3.
+
+
+(./Diplomarbeit.lot)
+\tf@lot=\write8
+\openout8 = `Diplomarbeit.lot'.
+
+ (./Diplomarbeit.nls [3
+
+] [4
+
+]
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 101.
+ [5] [6] [7] [8])) [9]
+\openout2 = `Content/Abstract.aux'.
+
+
+(./Content/Abstract.tex [1
+
+
+
+
+])
+\openout2 = `Content/Introduction.aux'.
+
+ (./Content/Introduction.tex
+Chapter 1.
+(./pgfplots/GasPie.tex)) [2
+
+
+
+]
+\openout2 = `Content/AirSep.aux'.
+
+ (./Content/AirSep.tex
+Chapter 2.
+(./Pictures/tech_compar.tex
+Package epstopdf Info: Source file: <Pictures/tech_comp_graph.eps>
+(epstopdf)                    date: 2012-04-19 13:02:47
+(epstopdf)                    size: 357826 bytes
+(epstopdf)             Output file: <Pictures/tech_comp_graph-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2012-04-19 13:21:07
+(epstopdf)                    size: 67221 bytes
+(epstopdf)             Command: <repstopdf --outfile=Pictures/tech_comp_graph-e
+ps-converted-to.pdf Pictures/tech_comp_graph.eps>
+(epstopdf)             \includegraphics on input line 7.
+Package epstopdf Info: Output file is already uptodate.
+
+<Pictures/tech_comp_graph-eps-converted-to.pdf, id=286, 613.29124pt x 289.08pt>
+File: Pictures/tech_comp_graph-eps-converted-to.pdf Graphic file (type pdf)
+<use Pictures/tech_comp_graph-eps-converted-to.pdf>
+Package pdftex.def Info: Pictures/tech_comp_graph-eps-converted-to.pdf used on 
+input line 7.
+(pdftex.def)             Requested size: 369.88582pt x 174.34917pt.
+) [3
+
+
+
+ <./Pictures/tech_comp_graph-eps-converted-to.pdf>] (./Pictures/ASU_text.tex
+Package epstopdf Info: Source file: <Pictures/ASU_text.eps>
+(epstopdf)                    date: 2012-01-12 11:25:04
+(epstopdf)                    size: 15461 bytes
+(epstopdf)             Output file: <Pictures/ASU_text-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-01-12 11:36:56
+(epstopdf)                    size: 5964 bytes
+(epstopdf)             Command: <repstopdf --outfile=Pictures/ASU_text-eps-conv
+erted-to.pdf Pictures/ASU_text.eps>
+(epstopdf)             \includegraphics on input line 53.
+Package epstopdf Info: Output file is already uptodate.
+
+<Pictures/ASU_text-eps-converted-to.pdf, id=301, 482.80376pt x 337.26pt>
+File: Pictures/ASU_text-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Pictures/ASU_text-eps-converted-to.pdf>
+Package pdftex.def Info: Pictures/ASU_text-eps-converted-to.pdf used on input l
+ine 53.
+(pdftex.def)             Requested size: 482.70294pt x 337.20256pt.
+) [4 <./Pictures/ASU_text-eps-converted-to.pdf>] (./Pictures/PSA.tex
+Package epstopdf Info: Source file: <Pictures/PSA.eps>
+(epstopdf)                    date: 2012-04-22 22:21:38
+(epstopdf)                    size: 18222 bytes
+(epstopdf)             Output file: <Pictures/PSA-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-04-22 22:25:27
+(epstopdf)                    size: 3652 bytes
+(epstopdf)             Command: <repstopdf --outfile=Pictures/PSA-eps-converted
+-to.pdf Pictures/PSA.eps>
+(epstopdf)             \includegraphics on input line 8.
+Package epstopdf Info: Output file is already uptodate.
+
+<Pictures/PSA-eps-converted-to.pdf, id=314, 409.53pt x 154.5775pt>
+File: Pictures/PSA-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Pictures/PSA-eps-converted-to.pdf>
+Package pdftex.def Info: Pictures/PSA-eps-converted-to.pdf used on input line 8
+.
+(pdftex.def)             Requested size: 369.88582pt x 139.6232pt.
+) [5 <./Pictures/PSA-eps-converted-to.pdf>] (./pgfplots/GasPermeation.tex)) [6]
+ [7]
+\openout2 = `Content/ProcessEconomics.aux'.
+
+ (./Content/ProcessEconomics.tex
+Chapter 3.
+LaTeX Font Info:    Try loading font information for TS1+aess on input line 13.
+
+LaTeX Font Info:    No file TS1aess.fd. on input line 13.
+
+LaTeX Font Warning: Font shape `TS1/aess/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textbullet' on input line 13.
+
+(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
+(RS)
+) [8
+
+
+
+]
+(./Tables/PriceIndices.tex) [9] [10] [11] [12]
+
+LaTeX Warning: Reference `fig:CashFlow' on page 13 undefined on input line 285.
+
+
+[13] (./pgfplots/ProjectCashFlow.tex) [14] [15]) [16]
 \openout2 = `Content/ProcessModel.aux'.
 
- (./Content/ProcessModel.tex
+
+(./Content/ProcessModel.tex
 Chapter 4.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 3.
-
-Overfull \hbox (16.23227pt too wide) in paragraph at lines 3--3
-\T1/aess/m/n/12 (-20) purification.  
- []
-
-
-Overfull \hbox (16.23227pt too wide) in paragraph at lines 3--3
-\T1/aess/m/n/12 (-20) purification.  
- []
-
-
-Overfull \hbox (16.23227pt too wide) in paragraph at lines 3--3
-\T1/aess/m/n/12 (-20) purification.  
- []
-
-
-Overfull \hbox (16.23227pt too wide) in paragraph at lines 3--3
-\T1/aess/m/n/12 (-20) purification.  
- []
-
 (./pgfplots/ASU_process_simple.tex)
 Overfull \hbox (0.9998pt too wide) in paragraph at lines 9--6
 [][]
@@ -1592,55 +1736,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--6
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+aess on input line 47.
-
-LaTeX Font Info:    No file TS1aess.fd. on input line 47.
-
-LaTeX Font Warning: Font shape `TS1/aess/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textregistered' on input line 47.
-
-(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
-(RS)
-)
-(./Content/Process_steady.tex (./Content/Process_steady_separation.tex
-
-LaTeX Warning: Marginpar on page 17 moved.
-
-[17
+(./Content/Process_steady.tex (./Content/Process_steady_separation.tex [17
 
 
 
-
-
-
-
-
-
-
-
-{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Pictures/col_complete_super.tex)
-LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 33
-.
-
-(c:/texlive/2012/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
-File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
-)
-LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 33
-.
-
-(c:/texlive/2012/texmf-dist/tex/latex/cmbright/omscmbrs.fd
-File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
-)
-(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-(./Pictures/col_stage_super.tex) [18] [19] [20]
+]
+(./Pictures/col_complete_super.tex) (./Pictures/col_stage_super.tex) [18]
+[19] [20]
 
 LaTeX Warning: Reference `sec:peng-rob' on page 21 undefined on input line 190.
 
@@ -1650,27 +1752,7 @@ LaTeX Warning: Reference `sec:peng-rob' on page 21 undefined on input line 190.
 LaTeX Warning: Reference `chp:dynamics' on page 23 undefined on input line 303.
 
 
-[23] (./Tables/Discrepancy.tex) [24]
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 414--414
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 414--414
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 414--414
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 414--414
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-[25] [26] (./Pictures/LPC_example.tex)
+[23] (./Tables/Discrepancy.tex) [24] [25] [26] (./Pictures/LPC_example.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 531--531
 [][][]|\T1/aess/m/n/12 (+20) ex-ample
  []
@@ -1688,27 +1770,7 @@ LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <8> not available
 LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <6> not available
 (Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 552.
 
-[27]
-Overfull \hbox (2.33644pt too wide) in paragraph at lines 554--554
-\T1/aess/m/n/12 (-20) bounded 
- []
-
-
-Overfull \hbox (2.33644pt too wide) in paragraph at lines 554--554
-\T1/aess/m/n/12 (-20) bounded 
- []
-
-
-Overfull \hbox (2.33644pt too wide) in paragraph at lines 554--554
-\T1/aess/m/n/12 (-20) bounded 
- []
-
-
-Overfull \hbox (2.33644pt too wide) in paragraph at lines 554--554
-\T1/aess/m/n/12 (-20) bounded 
- []
-
-(./GNUPlot/LPC_init_o2.tex
+[27] (./GNUPlot/LPC_init_o2.tex
 
 LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <5> not available
 (Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 104.
@@ -1723,7 +1785,7 @@ Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2.eps>
 nverted-to.pdf GNUPlot/LPC_init_o2.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
-<GNUPlot/LPC_init_o2-eps-converted-to.pdf, id=231, 238.8925pt x 141.52875pt>
+<GNUPlot/LPC_init_o2-eps-converted-to.pdf, id=555, 238.8925pt x 141.52875pt>
 File: GNUPlot/LPC_init_o2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/LPC_init_o2-eps-converted-to.pdf>
@@ -1747,7 +1809,7 @@ nverted-to.pdf GNUPlot/LPC_init_n2.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/LPC_init_n2-eps-converted-to.pdf, id=232, 238.8925pt x 141.52875pt>
+<GNUPlot/LPC_init_n2-eps-converted-to.pdf, id=556, 238.8925pt x 141.52875pt>
 File: GNUPlot/LPC_init_n2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/LPC_init_n2-eps-converted-to.pdf>
@@ -1760,42 +1822,12 @@ Overfull \hbox (21.32439pt too wide) in paragraph at lines 107--598
  []
 
 ) [28] [29 <./GNUPlot/LPC_init_o2-eps-converted-to.pdf> <./GNUPlot/LPC_init_n2-
-eps-converted-to.pdf>]
-
-LaTeX Warning: Marginpar on page 30 moved.
-
-(./Pictures/HX_superstructure.tex
+eps-converted-to.pdf>] (./Pictures/HX_superstructure.tex
 
 LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <7> not available
 (Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 117.
 
-) [30] [31]
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 131.
- (./pgfplots/Compressor.tex) [32]
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 212--212
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 212--212
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 212--212
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-
-Overfull \hbox (5.28171pt too wide) in paragraph at lines 212--212
-[][][][]\T1/aess/m/n/12 (-20) elaborate 
- []
-
-
-LaTeX Warning: Marginpar on page 33 moved.
-
-(./GNUPlot/pr_isenthalpes.tex
+) [30] [31] (./pgfplots/Compressor.tex) [32] (./GNUPlot/pr_isenthalpes.tex
 Package epstopdf Info: Source file: <GNUPlot/pr_isenthalpes.eps>
 (epstopdf)                    date: 2012-09-04 15:25:07
 (epstopdf)                    size: 22762 bytes
@@ -1808,88 +1840,62 @@ f>
 (epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/pr_isenthalpes-eps-converted-to.pdf, id=294, 238.8925pt x 141.52875pt>
+<GNUPlot/pr_isenthalpes-eps-converted-to.pdf, id=608, 238.8925pt x 141.52875pt>
 File: GNUPlot/pr_isenthalpes-eps-converted-to.pdf Graphic file (type pdf)
 <use GNUPlot/pr_isenthalpes-eps-converted-to.pdf>
 Package pdftex.def Info: GNUPlot/pr_isenthalpes-eps-converted-to.pdf used on in
 put line 111.
 (pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
-) [33]) [34 <./GNUPlot/pr_isenthalpes-eps-converted-to.pdf>] (./Content/Process
-_dynamic.tex [35]
-(./Pictures/tray_model.tex) [36] [37] (./Pictures/packing_geo.tex) [38]
-Overfull \hbox (1.11873pt too wide) in paragraph at lines 188--188
-\T1/aess/m/n/12 (-20) dynamic 
- []
+) [33])
+(./Content/Process_dynamic.tex [34 <./GNUPlot/pr_isenthalpes-eps-converted-to.p
+df>] [35] (./Pictures/tray_model.tex) [36] (./Pictures/packing_geo.tex)
+[37]) (./Content/Process_econ.tex [38] [39] [40] [41]
+(./Tables/PumpFactorsType.tex) (./Tables/PumpFactorsMaterial.tex) [42]
+(./Tables/MotorTypeFactors.tex) [43])
+
+LaTeX Warning: Reference `sec:comp_liq' on page 44 undefined on input line 73.
+
+[44] (./Content/Process_impl.tex [45] [46] (./Pictures/gP_ModelStructure.tex)
+[47] [48
 
 
-Overfull \hbox (1.11873pt too wide) in paragraph at lines 188--188
-\T1/aess/m/n/12 (-20) dynamic 
- []
+] [49])) [50]
+\openout2 = `Content/outlook.aux'.
 
-
-Overfull \hbox (1.11873pt too wide) in paragraph at lines 188--188
-\T1/aess/m/n/12 (-20) dynamic 
- []
-
-
-Overfull \hbox (1.11873pt too wide) in paragraph at lines 188--188
-\T1/aess/m/n/12 (-20) dynamic 
- []
-
-) (./Content/Process_econ.tex [39] [40] [41] (./Tables/PumpFactorsType.tex)
-(./Tables/PumpFactorsMaterial.tex) [42] (./Tables/MotorTypeFactors.tex)
-[43] [44])
-
-LaTeX Warning: Reference `sec:comp_liq' on page 45 undefined on input line 73.
-
-
-Overfull \hbox (10.69109pt too wide) in paragraph at lines 99--99
-\T1/aess/m/n/12 (-20) everything 
- []
-
-
-Overfull \hbox (10.69109pt too wide) in paragraph at lines 99--99
-\T1/aess/m/n/12 (-20) everything 
- []
-
-
-Overfull \hbox (10.69109pt too wide) in paragraph at lines 99--99
-\T1/aess/m/n/12 (-20) everything 
- []
-
-
-Overfull \hbox (10.69109pt too wide) in paragraph at lines 99--99
-\T1/aess/m/n/12 (-20) everything 
- []
-
-(./Content/Process_impl.tex [45] (./Pictures/gP_ModelStructure.tex)
-Overfull \hbox (0.99982pt too wide) in paragraph at lines 21--15
- [] 
- []
-
-)) [46] (./Diplomarbeit.tdo)
-\tf@tdo=\write6
-\openout6 = `Diplomarbeit.tdo'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
- [52
-
-
+ (./Content/outlook.tex
+Chapter 5.
+) [51
 
 
 
 ]
+\openout2 = `Content/testpage.aux'.
+
+ (./Content/testpage.tex) [52]
+\openout2 = `Content/BibAppendix.aux'.
+
+ (./Content/BibAppendix.tex
+(./Diplomarbeit.bbl [53
+
+
+
+
+
+]) (./Content/appendix.tex [54]
+Appendix A.
+[55
+
+])) [56]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
- (./Diplomarbeit.aux
-(./Content/Preamble/CoverPage.aux) (./Content/Preamble/TaskDescription.aux)
-(./Content/Preamble/StatutoryDeclaration.aux) (./Content/Lists.aux)
-(./Content/Abstract.aux) (./Content/Introduction.aux) (./Content/AirSep.aux)
+ (./Diplomarbeit.aux (./Content/Lists.aux) (./Content/Abstract.aux)
+(./Content/Introduction.aux) (./Content/AirSep.aux)
 (./Content/ProcessEconomics.aux) (./Content/ProcessModel.aux)
 (./Content/outlook.aux) (./Content/testpage.aux) (./Content/BibAppendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 6A60A367EB84EF9D7B2AB7414A38AAF1;983.
+(rerunfilecheck)             Checksum: BA51FE99343AA5B7AD924546312CEB62;2093.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1903,94 +1909,33 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 37816 strings out of 493488
- 782611 string characters out of 3144749
- 997561 words of memory out of 3000000
- 39655 multiletter control sequences out of 15000+200000
- 67491 words of font info for 335 fonts, out of 3000000 for 9000
+ 38424 strings out of 493488
+ 797254 string characters out of 3144749
+ 1037448 words of memory out of 3000000
+ 40092 multiletter control sequences out of 15000+200000
+ 70002 words of font info for 367 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 60i,16n,80p,679b,990s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section.A.1} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Lygeros.1986} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Seider.2010} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Gualito.1997} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Rocha.1993} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.92} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{cite.Chen.1987} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Yee.1990} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Duran.1986} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Kamath.2012} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Barttfeld.2002} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Fletcher.2000} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Boston.} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Boston.1974} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Naphtali.1971} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Coulson.1999} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Henley.op.2011} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.AndreasPfennig.2003} has been referenced but d
-oes not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Grossmann.2005} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.Dunnebier.1999} has been referenced but does n
-ot exist, replaced by a fixed one
-
-{c:/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2012/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2012/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmssbx10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmssi12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbr1
-0.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb><c:/tex
-live/2012/texmf-dist/fonts/type1/public/hfbright/hfbrbx10.pfb><c:/texlive/2012/
-texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb><c:/texlive/2012/texmf-dist
-/fonts/type1/public/hfbright/hfbrmi8.pfb><c:/texlive/2012/texmf-dist/fonts/type
-1/public/hfbright/hfbrsy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/h
-fbright/hfbrsy8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfr
-m0600.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Diplomarbeit.pdf (31 pages, 316260 bytes).
+ 76i,16n,92p,679b,1637s stack positions out of 5000i,500n,10000p,200000b,50000s
+{c:/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2012/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmss12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmss8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+bx10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb
+><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb><c:/texlive
+/2012/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb><c:/texlive/2012/texmf-d
+ist/fonts/type1/public/hfbright/hfbrbx10.pfb><c:/texlive/2012/texmf-dist/fonts/
+type1/public/hfbright/hfbrmi10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/publ
+ic/hfbright/hfbrmi8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright
+/hfbrsy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.p
+fb><c:/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/tex
+live/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on Diplomarbeit.pdf (65 pages, 505255 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
- 244 named destinations out of 1000 (max. 500000)
- 43756 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 974 PDF objects out of 1000 (max. 8388607)
+ 854 compressed objects within 9 object streams
+ 341 named destinations out of 1000 (max. 500000)
+ 43907 words of extra memory for PDF output out of 51595 (max. 10000000)
 

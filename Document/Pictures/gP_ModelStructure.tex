@@ -1,21 +1,118 @@
 \begin{tikzpicture}
-    \node (A) [rectdg] at (0,0) {core \\ equations} ;
-    \node (B) [rectdg] at (-7,-2.5) {concentration \\ init profiles} ; 
-    \node (C) [rectdg] at (-3.5,-2.5) {temperature \\ init profiles} ; 
-    \node (D) [rectdg] at (-0,-2.5) {murphee \\ efficiencies} ; 
-    \node (E) [rectdg] at (3.5,-2.5) {cost \& \\ sizing} ; 
-    \node (F) [rectdg] at (7,-2.5) {hydraulics} ; 
-    \node (sec) at (0,-1.25) {} ; 
-    \draw [stdline] (A.south) -- (D.north) ;
-    \draw [stdline] (B.north) -- (B.north |- sec) -- (F.north |- sec) -- (F.north) ;
-    \draw [stdline] (E.north) -- (E.north |- sec) ;
-    \draw [stdline] (C.north) -- (C.north |- sec) ;
-    \node (E1) [rectch] at (3.75,-4.5) {trayed } ;
-    \node (E2) [rectch] at (3.75,-6.5) {structured \\ packing} ;
-    \node (F1) [rectch] at (7.25,-4.5) {trayed } ;
-    \node (F2) [rectch] at (7.25,-6.5) {structured \\ packing} ;
-    \draw [stdline] (2.25,-3.25) -- ++(0,-1.25) -- ++(0.25,0) ;
-    \draw [stdline] (2.25,-4.5) -- ++(0,-2) -- ++(0.25,0) ;
-    \draw [stdline] (5.75,-3.25) -- ++(0,-1.25) -- ++(0.25,0) ;
-    \draw [stdline] (5.75,-4.5) -- ++(0,-2) -- ++(0.25,0) ;
+%    \node (A) [rectdg] at (0,0) {core \\ equations} ;
+%    \node (B) [rectdg] at (-7,-2.5) {concentration \\ init profiles} ;
+%    \node (C) [rectdg] at (-3.5,-2.5) {temperature \\ init profiles} ;
+%    \node (D) [rectdg] at (-0,-2.5) {murphee \\ efficiencies} ;
+%    \node (E) [rectdg] at (3.5,-2.5) {cost \& \\ sizing} ;
+%    \node (F) [rectdg] at (7,-2.5) {hydraulics} ;
+%    \node (sec) at (0,-1.25) {} ;
+%    \draw [line width=0.5pt] (A.south) -- (D.north) ;
+%    \draw [line width=0.5pt] (B.north) -- (B.north |- sec) -- (F.north |- sec) -- (F.north) ;
+%    \draw [line width=0.5pt] (E.north) -- (E.north |- sec) ;
+%    \draw [line width=0.5pt] (C.north) -- (C.north |- sec) ;
+%    \node (E1) [rectch] at (3.75,-4.5) {trayed } ;
+%    \node (E2) [rectch] at (3.75,-6.5) {structured \\ packing} ;
+%    \node (F1) [rectch] at (7.25,-4.5) {trayed } ;
+%    \node (F2) [rectch] at (7.25,-6.5) {structured \\ packing} ;
+%    \draw [line width=0.5pt] (2.25,-3.25) -- ++(0,-1.25) -- ++(0.25,0) ;
+%    \draw [line width=0.5pt] (2.25,-4.5) -- ++(0,-2) -- ++(0.25,0) ;
+%    \draw [line width=0.5pt] (5.75,-3.25) -- ++(0,-1.25) -- ++(0.25,0) ;
+%    \draw [line width=0.5pt] (5.75,-4.5) -- ++(0,-2) -- ++(0.25,0) ;
+    
+%    \node (G) [model,inner sep=0] at (0,0) {MESH equations} ;
+
+    \draw [line width=0.5pt] (-0.25,1.75) rectangle (16.75,2.75) node [align=center] at (8.25,2.25) {main model (MESH equations)} ;
+    \draw [line width=0.5pt] (-0.25,1.75) -- ++(0,-6.25) -- ++(17,0) -- ++(0,6.25) ;
+    \draw [arrow] (8.25,1.75) -- ++(0,-0.5) -- ++(6.25,0) -- ++(0,-0.5) ; 
+    \draw [arrow] (8.25,1.25) -- ++(-6.25,0) -- ++(0,-0.5) ; 
+    \draw [arrow] (8.25,-4.5) -- ++(0,-1) ; 
+    \draw [arrow] (8.25,-5) -- ++(-4.5,0) -- ++(0,-0.5) ;
+    \draw [arrow] (8.25,-5) -- ++(4.5,0) -- ++(0,-0.5) ;
+    \draw [arrow] (12.75,-5) -- ++(4.5,0) -- ++(0,-0.5) ;
+    \draw [arrow] (17.25,-5) -- ++(2.5,0) -- ++(0,-2) -- ++(-2.5,0) -- ++(0,-0.5) ;
+    \draw [arrow] (3.75,-5) -- ++(-4.5,0) -- ++(0,-0.5) ;
+    
+    \draw [line width=0.5pt] (0,0) rectangle (3.75,0.75) node [align=center] at (1.875,0.375) {material} ; 
+    \draw [line width=0.5pt] (4.25,0) rectangle (8,0.75) node [align=center] at (6.125,0.375) {equilibrium} ;
+    \draw [line width=0.5pt] (8.5,0) rectangle (12.25,0.75) node [align=center] at (10.375,0.375) {enthalpy} ;
+    \draw [line width=0.5pt] (12.75,0) rectangle (16.5,0.75) node [align=center] at (14.625,0.375) {summation} ;
+    
+    \draw [arrow] (0.15,0) -- ++(0,-0.625) -- ++(0.35,0) ; 
+    \draw [arrow] (0.15,-0.625) -- ++(0,-1) -- ++(0.35,0) ; 
+    \draw [arrow] (0.15,-1.625) -- ++(0,-1) -- ++(0.35,0) ; 
+    \draw [line width=0.5pt] (0.5,-1) rectangle (3.5,-0.25) node [align=center] at (2,-0.625) {rigorous} ; 
+    \draw [line width=0.5pt] (0.5,-2) rectangle (3.5,-1.25) node [align=center] at (2,-1.625) {flowrates} ; 
+    \node [rectangle,minimum height=0.75cm,minimum width=3cm,fill=AVTLightBlue,draw] at (2,-2.625) {initialize} ;
+%    \draw [line width=0.5pt] (0.5,-3) rectangle (3.5,-2.25) node [align=center] at (2,-2.625) {initialize} ;
+    
+    \draw [arrow] (4.4,0) -- ++(0,-0.625) -- ++(0.35,0) ; 
+    \draw [arrow] (4.4,-0.625) -- ++(0,-1) -- ++(0.35,0) ; 
+    \draw [arrow] (4.4,-1.625) -- ++(0,-1) -- ++(0.35,0) ; 
+    \draw [arrow] (4.4,-2.625) -- ++(0,-1) -- ++(0.35,0) ; 
+    \draw [line width=0.5pt] (4.75,-1) rectangle (7.75,-0.25) node [align=center] at (6.25,-0.625) {rigorous} ; 
+    \draw [line width=0.5pt] (4.75,-2) rectangle (7.75,-1.25) node [align=center] at (6.25,-1.625) {flowrates} ; 
+    \draw [line width=0.5pt] (4.75,-3) rectangle (7.75,-2.25) node [align=center] at (6.25,-2.625) {iterate} ; 
+    \node [rectangle,minimum height=0.75cm,minimum width=3cm,fill=AVTLightBlue,draw] at (6.25,-3.625) {initialize} ; 
+%    \draw [line width=0.5pt] (4.75,-4) rectangle (7.75,-3.25) node [align=center] at (6.25,-3.625) {initialize} ; 
+    
+    \draw [arrow] (8.65,0) -- ++(0,-0.625) -- ++(0.35,0) ; 
+    \draw [arrow] (8.65,-0.625) -- ++(0,-1) -- ++(0.35,0) ; 
+    \draw [line width=0.5pt] (9,-1) rectangle (12,-0.25) node [align=center] at (10.5,-0.625) {rigorous} ;
+    \node [rectangle,minimum height=0.75cm,minimum width=3cm,fill=AVTLightGreen,draw,line width=0.5pt ] at (10.5,-1.625) {initialize} ; 
+%    \draw [line width=0.5pt] (9,-2) rectangle (12,-1.25) node [align=center] at (10.5,-1.625) {initialize} ; 
+    
+    \draw [arrow] (12.9,0) -- ++(0,-0.625) -- ++(0.35,0) ; 
+    \draw [arrow] (12.9,-0.625) -- ++(0,-1) -- ++(0.35,0) ; 
+    \draw [line width=0.5pt] (13.25,-1) rectangle (16.25,-0.25) node [align=center] at (14.75,-0.625) {rigorous} ; 
+    \draw [line width=0.5pt] (13.25,-2) rectangle (16.25,-1.25) node [align=center] at (14.75,-1.625) {initialize} ; 
+    
+    \draw [line width=0.5pt] (15.25,-5.5) rectangle (19.25,-6.5) node [align=center] at (17.25,-6) {Murphee efficiency} ;
+    \draw [line width=0.5pt] (15.25,-7.5) rectangle (19.25,-8.5) node [align=center] at (17.25,-8) {three phase} ;
+    
+    \node [rectangle,minimum height=1cm,minimum width=4cm,fill=AVTLightBlue,draw] at (-0.75,-6) {concentration profile} ;
+%    \draw [line width=0.5pt] (1.25,-5.5) rectangle (-2.75,-6.5) node [align=center] at (-0.75,-6) {concentration profile} ;
+    \draw [arrow] (-2.6,-6.5) -- ++(0,-0.625) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (-2.25,-6.75) rectangle (1.0,-7.5) node [align=center] at (-0.625,-7.125) {constant} ;
+    \draw [arrow] (-2.6,-7.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (-2.25,-7.75) rectangle (1.0,-8.5)  node [align=center] at (-0.625,-8.125) {linear} ;
+    \draw [arrow] (-2.6,-8.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (-2.25,-8.75) rectangle (1.0,-9.5)  node [align=center] at (-0.625,-9.125) {TP-flashes} ;
+    \draw [arrow] (-2.6,-9.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (-2.25,-9.75) rectangle (1.0,-10.5)  node [align=center] at (-0.625,-10.125) {inactive} ;
+    \draw [line width=0.5pt] (-2.75,-6.5) -- ++(0,-4.5) -- ++(4,0) -- ++(0,4.5) ;
+    
+    \node [rectangle,minimum height=1cm,minimum width=4cm,fill=AVTLightGreen,draw] at (3.75,-6) {temperature profile} ;
+%    \draw [line width=0.5pt] (5.75,-5.5) rectangle (1.75,-6.5) node [align=center] at (3.75,-6) {temperature profile} ;
+    \draw [arrow] (1.9,-6.5) -- ++(0,-0.625) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (2.25,-6.75) rectangle (5.5,-7.5) node [align=center] at (3.875,-7.125) {constant} ;
+    \draw [arrow] (1.9,-7.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (2.25,-7.75) rectangle (5.5,-8.5)  node [align=center] at (3.875,-8.125) {linear} ;
+    \draw [arrow] (1.9,-8.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (2.25,-8.75) rectangle (5.5,-9.5)  node [align=center] at (3.875,-9.125) {non-linear} ;
+    \draw [arrow] (1.9,-9.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (2.25,-9.75) rectangle (5.5,-10.5)  node [align=center] at (3.875,-10.125) {custom} ;
+    \draw [line width=0.5pt] (1.75,-6.5) -- ++(0,-4.5) -- ++(4,0) -- ++(0,4.5) ;
+    
+    \draw [line width=0.5pt] (6.25,-5.5) rectangle (10.25,-6.5) node [align=center] at (8.25,-6) {hydraulics} ;
+    \draw [arrow] (6.4,-6.5) -- ++(0,-0.625) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (6.75,-6.75) rectangle (10,-7.5) node [align=center] at (8.25,-7.125) {trayed} ;
+    \draw [arrow] (6.9,-7.5) -- ++(0,-0.625) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (7.25,-7.75) rectangle (9.75,-8.5)  node [align=center] at (8.5,-8.125) {calculated} ;
+    \draw [arrow] (6.9,-8.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (7.25,-8.75) rectangle (9.75,-9.5)  node [align=center] at (8.5,-9.125) {constant} ;
+    \draw [arrow] (6.4,-7.125) -- ++(0,-3) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (6.75,-9.75) rectangle (10,-10.5)  node [align=center] at (8.25,-10.125) {structured} ;
+    \draw [arrow] (6.9,-10.5) -- ++(0,-0.625) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (7.25,-10.75) rectangle (9.75,-11.5)  node [align=center] at (8.5,-11.125) {calculated} ;
+    \draw [arrow] (6.9,-11.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (7.25,-11.75) rectangle (9.75,-12.5)  node [align=center] at (8.5,-12.125) {constant} ;
+    \draw [line width=0.5pt] (6.25,-6.5) -- ++(0,-6.5) -- ++(4,0) -- ++(0,6.5) ;
+    
+    \draw [line width=0.5pt] (10.75,-5.5) rectangle (14.75,-6.5) node [align=center] at (12.75,-6) {costing \& sizing} ;
+    \draw [arrow] (10.9,-6.5) -- ++(0,-0.625) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (11.25,-6.75) rectangle (14.5,-7.5) node [align=center] at (12.875,-7.125) {trayed} ;
+    \draw [arrow] (10.9,-7.125) -- ++(0,-1) -- ++(0.35,0) ;
+    \draw [line width=0.5pt] (11.25,-7.75) rectangle (14.5,-8.5)  node [align=center] at (12.875,-8.125) {structured} ;
+    \draw [line width=0.5pt] (10.75,-6.5) -- ++(0,-2.5) -- ++(4,0) -- ++(0,2.5) ;
+    
 \end{tikzpicture}

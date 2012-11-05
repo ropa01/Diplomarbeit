@@ -6,13 +6,13 @@
     aspects remain unclear. In order to gain further insight into the process the dynamics have to be considered.
 
     Due to that in this section a dynamic model of the ASU process will be developed.
-    
+
     First the balance equations have to be rewritten in dynamic form. To do so reservoir terms or holdups
     are introduced. Namely the component holdups $n_{ij}$ and internal energy $U_j$ for each stage.
-
+    \todo{include deactivation of dynamics... }
     \paragraph{$n_C - 1$ component balances}
         \Eqml{eq:col:CompBalance_opt}{
-    		\fracdd{n_{ij}}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right)
+    		\left( \sum_k=1^{j-1} \zeta^R_k \right) \fracdd{n_{ij}}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right)
                 \cdot L_j \cdot x_{i,j} - V_{j+1} \cdot y_{i,j+1} \\ \hfill - L_{j-1} \cdot x_{i,j-1}
                 - \sum_{k=1}^{F^V} \zeta_{kj} \cdot F_j^V \cdot z^V_{i,j} - \sum_{l=1}^{F^L}%
                 \zeta_{lj} \cdot F_j^L \cdot z_{i,j}^L - \zeta^R_j \cdot V_N \cdot y_{iN}, \hfill%
@@ -20,7 +20,7 @@
     	}%
     \paragraph{Total internal energy balance}
         \Eqml{eq:col:EnergyBalance}{
-    		\fracdd{U_j}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot h^V_{j} + \left(1 + s_j^L\right)
+    		\left( \sum_k=1^{j-1} \zeta^R_k \right) \fracdd{U_j}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot h^V_{j} + \left(1 + s_j^L\right)
                 \cdot L_j \cdot h^L_{j} - V_{j+1} \cdot h^V_{j+1} \\ \hfill - L_{j-1} \cdot h^L_{j-1}
                 - \sum_{k=1}^{F^V} \zeta_{kj} \cdot F_k^V \cdot h^{FV}_{j} - \sum_{l=1}^{F^L}
                 \zeta_{lj} \cdot F_j^L \cdot h^{FL}_{j} - \zeta^R_j \cdot V_N \cdot h^V_{N}, \hfill
@@ -72,20 +72,20 @@
     given model both trayed columns and columns with structured packing are employed.
 
     \subsubsection{Trayed hydraulics}
-    \label{sec:mathpro:dynamic:trayhyd}  
+    \label{sec:mathpro:dynamic:trayhyd}
         \begin{figure}
             \input{Pictures/tray_model}
             \caption{Column tray}
             \label{fig:col_tray}
         \end{figure}
         \todo{add graphic for tray measuremets.}
-        
+
         Trayed column hydraulics can be approximated by the following system of equations.
         All equations presented here were taken from \cite{92}.
-    
+
         The liquid flow rates are calculated from the well established francis formula ,
         derived from the law of Bernoulli and taking effects like bubbling into account
-    
+
         \Eq{eq:col:francis}{
             L_j = \frac{2}{3} \sqrt{2 g} \varrho^L_j \ell_{weir} \Phi h_{ow}^{\frac{2}{3}} \eqanns.
         }%
@@ -93,7 +93,7 @@
         \ncr{\ell_{weir}}{length of tray weir}{m}
         \ncr{h_{ow}}{height over weir}{m}
         \ncg{\Phi}{relative froth density}{-}
-    
+
         Where $h_{ow}$ denotes the height of the liquid over the weir, which can be calculated from the
         froth height $h_f$ and the weir height $h_w$
         \Eq{}{
@@ -101,14 +101,14 @@
         }
         \ncr{h_f}{froth height}{m}
         \ncr{h_w}{weir height}{m}
-    
+
         While the weir height is a tray design parameter the froth height is computed from the clear
         liquid height and the relative froth density
         \Eq{}{
             h_f = \frac{n^L \, MW^L}{A_{active} \, \varrho^L \, \Phi}.
         }
         \ncr{A_{active}}{active tray area}{m^2}
-    
+
         Lastly in terms of liquid flow rates, the relative froth density is dependent on the
         degree of aeration within the liquid, expressed by the aeration factor $\beta$
         from an empirical equation
@@ -117,22 +117,22 @@
             \Phi_j & = 2 \beta_j - 1.
         }
         \ncg{\beta}{aeration factor}{-}
-    
-    
+
+
         The pressure difference between stages is the driving force for the vapour streams. The pressure drop
         is modeled as having two contributions, the dray and wet pressure drop. While dry pressure drop
         stems from the vapour flowing through the holes with in tray, the wet pressure drop is caused by the liquid
         holdup on the stage.
         \Eq{eq:col:dp_dyn}{
             p_j - p_{j+1} = h_{j}^{liq} \varrho_j^L g + 0.5 \xi \varrho_{j+1}^V \left( \frac{q_{j+1}^V}{A_h} \right)^2
-        }%   
+        }%
 
     \subsubsection{Structured packing hydraulics}
-    \label{sec:mathpro:dynamic:strpackhyd}  
+    \label{sec:mathpro:dynamic:strpackhyd}
         \begin{figure}
             \input{Pictures/packing_geo}
         \end{figure}
-          
+
         \todoil{}{write somewhere that stage indices will be omitted for convenience.}
         Structured packings and their hydraulic behaviour are currently still under investigation. The number
         of available correlations for calculation of internal flow-rates is much more limited than for trays or even
@@ -147,7 +147,7 @@
         \ncr{h_L}{dimesionless holdup}{-}
         \ncg{\delta}{film thickness}{m}
         \ncr{S}{corrugation side}{m}
-    
+
         One very important factor while estimating the hydraulic behaviour is the dry pressure drop per meter packing $\delta p_{dry}$.
         Within in the presented model it is estimated by
         \Eq{eq:dyn:drydp}{
@@ -161,7 +161,7 @@
         \ncr{\delta p_{dry}}{dry pressure drop}{\frac{Pa}{m}}
         \ncr{C_1}{packing constant}{}
         \ncr{C_2}{packing constant}{}
-    
+
         Another perquisite for calculating the holdup is the knowledge of the amount of wetted area of the available
         surface area within the packing. It seems reasonable to assume that this will be dependent on the characteristic
         of the liquid flow through the packing. To characterize the current, well known dimensionless numbers are
@@ -173,13 +173,13 @@
         }
         \ncg{\mu_L}{liquid viscosity}{Pa \cdot s}
         \ncr{v_L}{liquid velocity}{\frac{m}{s}}
-    
+
         With that an approximation for the holdup correction factor $F_t$ due to partial wetting can be expressed as
         \Eq{eq:dyn:wettedarea}{
             F_t = \frac{A_1 \left( We \, Fr \right)^{0.15} S^{A_2}}{Re^{0.2} \, \epsilon^{0.6}
                 (1 - 0.93 \cos \gamma) (\sin \Theta)^{0.3} }
         }
-    
+
         \Eq{}{
             h_L = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \left\{ \frac{3 \mu_L v_L}{\varrho_L \epsilon \sin \Theta
                 g \left[ \left( \frac{\varrho_L - \varrho_G}{\varrho_L} \right) \left(1 - \frac{\delta p}{\delta p_{flood}} \right) \right]} \right\}^{\frac{1}{3}}

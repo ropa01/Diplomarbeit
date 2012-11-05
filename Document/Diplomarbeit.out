@@ -1,3 +1,16 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Air separation technology}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Cryogenic air separation}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Pressure swing adsorption}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Gas permeation}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Hybrid processes}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Process economics}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Project cost}{chapter.3}% 8
+\BOOKMARK [2][-]{subsection.3.1.1}{Before process design}{section.3.1}% 9
+\BOOKMARK [2][-]{subsection.3.1.2}{During process design}{section.3.1}% 10
+\BOOKMARK [1][-]{section.3.2}{Investment criteria}{chapter.3}% 11
+\BOOKMARK [2][-]{subsection.3.2.1}{Single period estimation methods}{section.3.2}% 12
+\BOOKMARK [2][-]{subsection.3.2.2}{Multi period estimation methods}{section.3.2}% 13
 \BOOKMARK [0][-]{chapter.4}{Mathematical process model}{}% 14
 \BOOKMARK [1][-]{section.4.1}{Steady - state unit models}{chapter.4}% 15
 \BOOKMARK [2][-]{subsection.4.1.1}{Separation}{section.4.1}% 16
@@ -12,3 +25,7 @@
 \BOOKMARK [1][-]{section.4.5}{Implementation}{chapter.4}% 25
 \BOOKMARK [2][-]{subsection.4.5.1}{Model structure}{section.4.5}% 26
 \BOOKMARK [2][-]{subsection.4.5.2}{Initialization procedures}{section.4.5}% 27
+\BOOKMARK [0][-]{chapter.5}{Conclusion and further research}{}% 28
+\BOOKMARK [0][-]{chapter*.68}{Bibliography}{}% 29
+\BOOKMARK [0][-]{appendix.A}{Appendix A}{}% 30
+\BOOKMARK [1][-]{section.A.1}{Peng-Robinson derived properties}{appendix.A}% 31
