@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\unitwidth}{5} ;
+    \pgfmathsetmacro{\unitheight}{3} ;
+    \pgfmathsetmacro{\domerad}{0.5*\unitwidth/2} ;
+    \pgfmathsetmacro{\lang}{76} ;
+    \pgfmathsetmacro{\rang}{180-\lang} ;
+    \pgfmathsetmacro{\conheight}{0.7*\unitheight} ;
+    \pgfmathsetmacro{\conwidth}{0.45*\unitwidth} ;
+    
+    \draw [line width=0.5pt,rounded corners] (-0.5*\unitwidth,0) -- ++(0,0.5*\unitheight) .. controls +(\lang:\domerad) and +(\rang:\domerad) .. (0.5*\unitwidth,0.5*\unitheight) node (top) [pos=0.5,inner sep=0] {} -- ++(0,-\unitheight) .. controls +(-\rang:\domerad) and +(-\lang:\domerad) .. (-0.5*\unitwidth,-0.5*\unitheight) node (bot) [pos=0.5,inner sep=0] {} -- cycle ;
+    
+    \draw [line width=0.5pt] (-0.5*\conwidth,0.5*\conheight) rectangle (0.5*\conwidth,-0.5*\conheight) ;
+    \node (cin) [shape=semicircle, shape border rotate=90, minimum height=0.25cm,draw, inner sep=0] at ($(-0.5*\conwidth,0.5*\conheight) - (0.11,0.25)$) {} ;
+    \node (cout) [shape=semicircle, shape border rotate=270, minimum height=0.25cm,draw, inner sep=0] at ($(0.5*\conwidth,-0.5*\conheight) + (0.11,0.25)$) {} ;
+    
+    \draw [arrow] ($(cin) - (2.5,0)$) -- (cin) node [above,pos=0.2] {$V_{con}^{in}$};
+    \draw [arrow] (cout) -- ($(cout) + (2.5,0)$) node [above,pos=0.8] {$L_{con}^{out}$} ;
+    \draw [arrow] (top) -- ++(0,1) -- ++(2,0) node [pos=0.5,above] {$V_{reb}^{out}$} ;
+    \draw [arrow] (bot) -- ++(0,-1) -- ++(2,0) node [pos=0.5,above] {$L_{reb}^{out}$} ;
+    \node (A) at ($(0.5*\unitwidth,0.5*\unitheight)$) {} ;
+    \node (B) at ($(cout) + (2.5,0)$) {} ;
+    \draw [arrow] (A -| B) -- ($(0.5*\unitwidth,0.5*\unitheight) - (1,0)$) node [above,pos=0.2] {$L_{reb}^{in}$} ;
+\end{tikzpicture}

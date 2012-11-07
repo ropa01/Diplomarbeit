@@ -20,8 +20,11 @@
 \usepackage{ae}
 \usepackage{multirow}
 \usepackage{listings}
+% needed only if gPROMS source code is to be displayed. 
+\input{colours}
+\input{listings_gPROMS_def}
+\lstloadlanguages{gPROMS}
 \usepackage{xfrac}
-\lstloadlanguages{[ANSI]C}
 \usepackage{xcolor}
     \xdefinecolor{RWTHBlue}{HTML}{00539F}
 	%\xdefinecolor{RWTHBlue}{rgb}{0.0,0.3294,0.6235}
@@ -118,8 +121,8 @@
 \newcommand{\fracddparttwo}[2]{\frac{\partial^2 #1}{\partial #2^2}}
 \newcommand{\eqannote}[1]{\qquad #1}
 \newcommand{\eqannc}{\qquad i = 1 \dots n_C}
-\newcommand{\eqanns}{\qquad j = 1 \dots N}
-\newcommand{\eqanncs}{\qquad i = 1 \dots n_C \quad j = 1 \dots N}
+\newcommand{\eqanns}{\qquad j = 1 \dots n_S}
+\newcommand{\eqanncs}{\qquad i = 1 \dots n_C \quad j = 1 \dots n_S}
 \newcommand{\pow}[2]{\left( #1 \right)^{#2}}
 
 \newcommand{\cpbullet}{\hspace{0.15cm} \raisebox{0.8mm}{\color{black} \tiny \textbullet}}

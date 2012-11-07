@@ -1,9 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{92}
-{\em {D}istillation {T}ray {F}undamentals}.
-\newblock Cambridge Univ Pr, 2009.
-
 \bibitem{Akinlabi.2007}
 Charles~O. Akinlabi, Dimitrios~I. Gerogiorgis, Michael~C. Georgiadis, and
   Efstratios~N. Pistikopoulos.
@@ -101,6 +97,11 @@ Ravindra~S. Kamath, Lorenz~T. Biegler, and Ignacio~E. Grossmann.
 \newblock {M}odeling multistream heat exchangers with and without phase changes
   for simultaneous optimization and heat integration.
 \newblock {\em AIChE Journal}, 58(1):190--204, 2012.
+
+\bibitem{Lockett.2009}
+M.~J. Lockett.
+\newblock {\em {D}istillation {T}ray {F}undamentals}.
+\newblock Cambridge Univ Pr, Cambridge and New York, 2009.
 
 \bibitem{Lygeros.1986}
 A.I Lygeros and K.G Magoulas.

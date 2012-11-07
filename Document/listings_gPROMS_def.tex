@@ -1,0 +1,76 @@
+\lstdefinelanguage{gPROMS}
+{
+basicstyle=\ttfamily,
+% may need TRANSFORM at some point
+%
+% connection keywords (and some other random green ones)
+%   these have to go first because other keywords are used
+%   for : ; = := and can only take the colour of the "main"
+%   keywords
+keywords={AS,OF,IN,IS,OR,AND,NOT,
+          DEFAULT,
+          BFDM,FFDM,CFDM,OCFEM,
+          STEADY_STATE,TIME,OLD,
+          INTRINSICTASK,
+          SIGNALID, STATUS, % INPUT, INPUT_VARIABLE, OUTPUT, OUTPUT_VARIABLE,
+% top-level solution parameters
+  gExcelOutput,
+  gPLOT,
+  gRMS,
+  gUserOutput,
+  Monitor,
+  OutputLevel,
+  ReportingInterval,
+  ScheduleAnnotations,
+  DASolver,
+  IdentityElimination,
+  IgnoreDAEIndexAnalysis,
+  IndexReduction,
+  PerformStrictDAEStructuralChecks,
+  FPI,
+  FOStatisticsLevel,
+  IgnoreAllFODerivatives,
+  LogAllFODerivatives,
+  LogAllFOMethods,
+  TestAllFODerivatives,
+  IntrinsicTasks,
+  InitialisationProcedure
+% solver parameters are always included as strings
+},
+otherkeywords={:,;,=,:=},
+keywordstyle=\color{MB_conn},
+% language construct and Task keywords (blue)
+morekeywords={[2]FOR,TO,DO,END,IF,THEN,ELSE,CASE,SWITCH,WHEN,STEP,
+                 SEQUENCE,PARALLEL,WHILE,
+                 CONTINUE,UNTIL,RESET,REASSIGN,REPLACE,REINITIAL,WITH,
+                 STOP,MESSAGE,DISTRIBUTION,SAVE,RESTORE,WITHIN,
+                 GET,SEND,SENDMATHINFO,LINEARISE,PAUSE,
+                 USE,START,NEXT,MOVE_TO,JUMP_TO,REVERT,ADVANCE},
+keywordstyle={[2]\color{MB_lang}},
+% function keywords (green)
+morekeywords={[4]SIGMA,PRODUCT,MAX,MIN,
+                 INTEGRAL,PARTIAL,
+                 SIN,COS,TAN,ASIN,ACOS,ATAN,SINH,COSH,TANH,
+                 EXP,LOG,LOG10,SQRT,
+                 SGN,ABS,INT,
+                 NORMAL,TRIANGULAR,UNIFORM,GAMMA,BETA,EXPONENTIAL,WEIBULL},
+keywordstyle={[4]\color{MB_func}},
+% attribute keywords (dark red)
+morekeywords={[5]INTEGER,REAL,LOGICAL,FOREIGN_OBJECT,ORDERED_SET,
+                 TRUE,FALSE,ARRAY,ON,OFF,
+                 PUBLIC,PROTECTED,PRIVATE},
+keywordstyle={[5]\color{MB_attr}},
+% section keywords (red)
+morekeywords={[6]DECLARE,TYPE,STREAM,MODEL,TASK,PROCESS,
+                 PARAMETER,DISTRIBUTION_DOMAIN,UNIT,PORT,VARIABLE,
+                 SELECTOR,SET,BOUNDARY,TOPOLOGY,EQUATION,ASSIGN,
+                 PRESET,INITIAL,INITIALSELECTOR,SOLUTIONPARAMETERS,SCHEDULE,
+                 INITIALISATION_PROCEDURE,INTRINSIC_TASK},
+keywordstyle={[6]\color{MB_sect}},
+sensitive=false,
+morecomment=[l][\color{MB_comm}\itshape]{\#},
+morecomment=[s][\color{MB_comm}\itshape]{\{}{\}},
+morestring=[d][\color{MB_str}]",
+morestring=[d][\color{MB_str}]',
+showstringspaces=false
+}

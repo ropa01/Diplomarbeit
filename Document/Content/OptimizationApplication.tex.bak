@@ -1,0 +1,58 @@
+\chapter{Optimization examples}
+\label{chp:optexample}
+
+The simulation of chemical processes supplies valuable insight into th e
+
+    \section{Steady state single period}
+    \label{chp:optexample:ss_single_perid}
+    Objective function
+    \Eqml{eq:opt:ss_single_objective}{
+        CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right) + \sum_o C_o^{\text{oper}} \\
+            \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}, \text{HX}, \text{CP}, \text{CRM}, \text{CRCAC} \right\} 
+                \quad o = \left\{\text{CP}, \text{EXP} \right\}}
+    }
+    Constraints : 
+    Limits on the product purities:
+    \Eq{eq:opt:ss_single_constraints_1}{
+        y_{1,N_2}^{HPC} & \geq 0.985 \\
+        y_{1,N_2}^{LPC} & \geq 0.985 \\
+        y_{1,Ar}^{CAC} & \geq 0.985 \\
+        x_{reb}^{CRM} & \geq 0.985 
+    }    
+    No flooding in the columns:
+    \Eq{eq:opt:ss_single_constraints_2}{
+        d_{\text{column}}^{\text{HPC}} & \geq d_{min}^{HPC} \\
+        d_{\text{column}}^{\text{LPC}} & \geq d_{min}^{LPC} \\
+        d_{\text{column}}^{\text{CAC}} & \geq d_{min}^{CAC}
+    }
+    No entrainment in the trayed column :
+    \Eq{eq:opt:ss_single_constraints_3}{
+        \left(1- \sum_{k=1}^{j-1} \right) ent_k^{HPC} & \leq 0.1 
+    }
+    Limit on cooling water outlet temperatures to prevent corrosion : 
+    \Eq{eq:opt:ss_single_constraints_4}{
+        T_{\text{w,out}}^{IC1} & \leq 323.15 \\
+        T_{\text{w,out}}^{IC2} & \leq 323.15 \\
+        T_{\text{w,out}}^{IC3} & \leq 323.15 
+    }
+    
+    Design Variables
+    \begin{itemize}
+        \item HPC diameter $d_{\text{column}}^{\text{HPC}}$
+        \item LPC diameter $d_{\text{column}}^{\text{LPC}}$
+        \item CAC diameter $d_{\text{column}}^{\text{CAC}}$
+        \item HPC reflux location $\zeta^R_{\text{HPC}}$ 
+        \item LPC reflux location $\zeta^R_{\text{LPC}}$
+        \item CAC reflux location $\zeta^R_{\text{CAC}}$
+        \item LPC CAC side draw location $\zeta^{SV,\text{LPC}}_{2,j}$
+        \item heat exchange area multi-stream heat exchanger $A_{\text{HX}}^{multiHX}$
+        \item heat exchange area main condenser reboiler $A_{\text{HX}}^{CRM}$
+        \item heat exchange area CAC condenser reboiler $A_{\text{HX}}^{CRCAC}$
+    \end{itemize}
+    
+    Manipulated Variables 
+    \begin{itemize}
+        \item intercooler outlet temperatures ($T_{\text{out}}^{IC1}, T_{\text{out}}^{IC2}, T_{\text{out}}^{IC3}$)
+        \item HPC dimensionless side draw (gaseous $N_2$product) (s_1^{V, \text{HPC}})
+        \item LPC dimensionless side draws (s_i^{V, \text{LPC}})
+    \end{itemize}

@@ -11,23 +11,31 @@ based on the previously model structure will be presented.
 \subsection{Model structure}
 \label{sec:mathpro:implementation:modelstructure}
 
-    When discussing the structure of \gproms models first some aspects of the modeling language have to be discussed. 
-    In this context CASE selectors, IF statements and the implementation INITIALIZATION\_PROCEDURES in \gproms are most 
-    important. Within this section we will first briefly discuss those features and how they are used in \gproms. 
+    When discussing the structure of \gproms models first some aspects of the modeling language have to be discussed.
+    In this context CASE selectors, IF statements and the implementation INITIALIZATION\_PROCEDURE's in \gproms are most
+    important. Within this section we will first briefly discuss those features and how they are used in \gproms.
     Afterwards it will be shown, how these structures are used, to create a model which can quickly be tailored the
-    specific needs of a given user, and how distillation columns can be initialized within that framework. 
-    
-    IF statements and case selectors have many similarities as they can distinguish between different cases within a 
-    given model. For many applications they might even be used equivalently. As in almost all contexts the IF statements 
-    evaluates a condition and depending on wether it is fulfilled or not and evaluates differen formulae accordingly. 
-    A  CASE statement distinguishes different branches between the model can switch during simulation or initialization. 
-    One major difference ist, that the number of equations in each CASE branch must match while for IF statements that 
-    condition is not enforced. However care must be taken when using these structures -- especially during simulation -- 
-    as they will in many cases introduce discontinuities. Furthermore when using IF statements one must distinguish, 
-    wether the evaluated statement is a parameter, or a variable in the model. Given it is a parameter, the statement will 
-    remain true (or false) for each instance of simulation. This introduces some flexibility in terms of diverging 
-    in the number of equations within model variants. 
-    
+    specific needs of a given user, and how distillation columns can be initialized within that framework.
+
+    IF statements and case selectors have many similarities as they can distinguish between different cases within a
+    given model. For many applications they might even be used equivalently. As in almost all contexts the IF statements
+    evaluates a condition and depending on wether it is fulfilled or not and evaluates differen formulae accordingly.
+    A  CASE statement distinguishes different branches between the model can switch during simulation or initialization.
+    One major difference ist, that the number of equations in each CASE branch must match while for IF statements that
+    condition is not enforced. However care must be taken when using these structures -- especially during simulation --
+    as they will in many cases introduce discontinuities. Furthermore when using IF statements one must distinguish,
+    wether the evaluated statement is a parameter, or a variable in the model. Given it is a parameter, the statement will
+    remain true (or false) for each instance of simulation. This introduces some flexibility in terms of diverging
+    in the number of equations within model variants.
+
+    INITIALIZATION\_PROCEDURE's are used -- as the name suggests -- to initialize models. The basic idea is to automatically
+    solve a sequence of increasingly complex models, using the solution of a previous model as starting point for
+    converging the current one. Furthermore the switch between models can be done within a either a so called JUMP\_TO
+    or MOVE\_TO statement. Within the former there is a hard cut between the model variants, while in the latter
+    a homotopic approach is employed to get form one model branch to another. While this should be the more robust
+    solution, if the path of the homotopy remains in a feasible region, it necessitates greater care in terms of model
+    robustness and scaling, as the internal integrator is used to move along the homotopic path.
+
     \begin{landscape}
         \begin{figure}
             \center
@@ -36,5 +44,188 @@ based on the previously model structure will be presented.
             \label{fig:mathpro:modelstruct}
         \end{figure}
     \end{landscape}
-    
+    \todo{include initial specifications in model structure}
+
+    The structure of the developed model is depicted in \figref{fig:mathpro:modelstruct}. The main block denote separate model
+    units that can, with the exception of the main model be activated or deactivated. The connections inside the main blocks
+    denote selectors along with their possible branches.
+
+    The selective deactivation of sub-models is done by creating sub flowsheets and then assigning array of a respective model
+    rather than a specific entity. By assigning an array size of zero, the model is effectively deactivated. This is done to reduce
+    the number of variables and computational effort, if certain model capabilities are superfluous. for the rest of this section
+    various model branches will be briefly elaborated upon. Within the main model, all branches labeled ''rigorous'' correspond
+    to the equations as presented in \secref{sec:mathpro:steady:distmodel} and \secref{sec:mathpro:dynamic}. For the ''flowrates''
+    branches the mass balance has been written in terms of component flowrates rather than total flowrates and mole fractions.
+    The ''initilaize'' branches of the material, equilibrium and energy selectors rely on the concentration profile and temperature
+    profile sub-models to generate values, which are assigned straight forward to the respective variables. The reason those guesses
+    were not directly implemented in the main model was to retain a level of flexibility of implementing alternative approaches
+    without altering the general model structure. The meaning of the ''iterate'' branch within the equilibrium selector
+    will be discussed in further detail in the next section.
+
+    The profile sub-models give several choices for initial profiles. In the case of the concentration profiles, the edge points
+    will always be determined by a TP or vapour fraction flash of the mixed feed. While for temperature profile model the
+    edge points can be either bubble and dew point temperature of the mixed-feed, or the feed temperatures of the highest
+    (in terms of feed location) and lowest feed.
+
+    Having variable pressure along the column, sometimes greatly complicates initial convergence. Therefore can all hydraulics
+    models be turned inactive, in which case they will return a constant previously assigned pressure drop for each stage.
+
+    The sub-model ''three-phase'' somewhat emulates calculations for the case when to liquid phases are present,
+    as it needs to be ensured, that no wrongful information about the phase equilibrium is attained b y
+    the model, which can for instance cause severe errors in the mass balance, while the overall model
+    might still converge. It is simply assumed, that the liquid phases, while separate, are distributed
+    in such a way, that the liquid phase might still be treated as a single phase. Hence in that case,
+    the concentrations and enthalpies of both phases are mixed, while information about both phases is stored
+    in appropriate variables.
+
 \subsection{Initialization procedures}
+    \todo{include gPROMS code for IP's}
+    \todo{mention TP flashes branch of concentration sub-unit similar to adiabatic column, as all streams are in equil..}
+
+    This section deals with different initialization strategies for the distillation columns. Before going
+    deeper into that topic, it needs to be pointed out, that physical property estimation in \gproms is done
+    by means of so called foreign objects. Those are external objects, to which function calls along with
+    the corresponding parameters can be passed and a return value or vector is returned. These calls range
+    from simple properties like molecular weight of components to flash calculations in many variations.
+
+    As an initial remark it should be noted, that for all initialization procedures, if the hydraulic
+    sub-model is activated, first an initial profile is assumed, and after the model has converged,
+    the selector within the hydraulics sub-model is switched to the calculated pressure drops. No problems
+    with the hydraulics models were encountered, if the specified column geometry allowed for feasible
+    column operations.
+
+    \subsubsection{Initial specifications}
+        One issue that comes up when giving specifications for a column is, that not all specifications
+        are compatible with the the used initialization procedure. Specifically this is the case for
+        specified duties purities or temperatures as they cannot be considered in the initialize branches.
+
+        For those cases it is necessary to supply alternative specifications, namely a reflux or boil-up ratio
+        or any flowrate, which can be fulfilled during initial calculations. Additionally, if ''extreme''
+        specifications are given such as very high purities, or extremely low flowrates, convergence might
+        with a given procedure might fail. One strategy, that has proven fruitful in those cases, was to
+        supply a more moderate specification, initialize and converge the model up to the rigorous
+        branches and then switch to the more complex specification. Especially when the switch is made in the
+        rigorous branch, chances are hight, that the solution, if a MOVE\_TO switch is employed, will only
+        pass through feasible regions and a final solution can be attained.
+
+        These initial specification can be used in conjunction with all initialization procedures discussed
+        in the following sections.
+
+    \subsubsection{Flash initialization}
+        The flash initialization, is the simplest, but nevertheless a very effective and efficient way
+        of initializing the model. As initial guess constant profiles are assigned for vapour and liquid
+        concentrations taken from the aforementioned feed flash. For the temperatures a linear profile
+        between dew and bubble point temperature of the feed flash is used. The vapour and liquid
+        flowrates are computed from the constant molar overflow assumption while considering
+        sub-cooled or super-heated feed streams. In terms of the model this strategy translates into
+        starting all selectors in the initialize branches and then simultaneously switching all selectors
+        to the rigorous branches.
+
+    \subsubsection{Linearized material balance}
+        As discussed in the example given in \secref{sec:mathpro:steady:distmodel} this initialization
+        procedure relies on on first initializing the model as for the flash initialization. Afterwards,
+        in an intermediate step, the enthalpy and summation branch are kept in the initialize branch,
+        which means, the initial temperature profile is kept fixed, and the constant molar overflow assumption
+        retained. The material and equilibrium selectors are then switched to the flowrates branches, where
+        a linearized material balance is solved with constant equilibrium ratios and molar flowrates.
+        The constant equilibrium ratios are enforces, by passing the values from the concentration profile
+        sub-model to the physical property calls, rather that the actual computed values for molar
+        concentrations.
+
+        The main reason for formulating this mass balance in terms of component flowrates is, that due to
+        the assumptions a solution will yield discrepant results. Especially if the equilibrium ratios
+        in the converged solution span a large range of values. Due to these discrepancies some
+        molar fractions might even become negative. As the corresponding variable type is bounded to zero
+        or a small negative number, this might cause the solver to fail during convergence of this step.
+
+        Furthermore the molar fractions would also have to be re-normalized, as the summation to one
+        is not enforced in this case.
+
+        Afterwards all selectors are again switched to the rigorous branch.
+
+\begin{lstlisting}
+INITIALISATION_PROCEDURE
+  START
+    material    := initialize ;
+    equilibrium := initialize ;
+    energy      := initialize ;
+    summation   := initialize ;
+    side_scale  := 0 ;
+    hydraulics  := constant ;
+  END
+  NEXT
+    material    := flowrates ;
+    equilibrium := flowrates ;
+  END
+  NEXT
+    REVERT material ;
+    REVERT equilibrium ;
+    REVERT energy ;
+    REVERT summation ;
+  END
+  NEXT 
+    MOVE_TO
+      side_scale := 1 ;
+    END
+  END
+  NEXT 
+    REVERT hydraulics ;
+  END
+\end{lstlisting}
+
+
+
+    \subsubsection{Iterative approach}
+        Previously it has been said, that the inside-out algorithm has proven very robust when
+        it comes to solving complex distillation problems. However it is based on an modular
+        iterative approach which is incompatible with equation based process simulators.
+
+        One of the main aspects is to construct simplified models for enthalpies and the equilibrium,
+        which only give accurate results for the point they have been constructed at, but are much
+        better behaved, than rigourous enthalpy and equilibrium correlations. In eat step of the iteration
+        a new model for the physical properties is constructed, at the point, where the previous model
+        evaluation with the previous physical properties model converged to. The iterative process terminates,
+        when no further (or very little) changes occur in the newly constructed parameters for the
+        new physical property models.
+
+        In order to mimic such an approach in \gproms, the branch ''iterate'' within the equilibrium
+        selector has been created. There the physical properties are called with an new set of concentration
+        variables, which are assigned arbitrary values in all other branches. To do the iterations anther
+        structure of \gproms is used. So called TASKS. With that it becomes possible, to converge
+        a the model, with a given concentration stored in these variables, and after convergence, replace those
+        values with the current values of liquid and vapour mole fractions.
+
+        The drawback however, is that the number of iterations to be carried out needs to be specified in
+        advance. This strategy, while rather time consuming due to large overhead in computational time
+        during execution of the TASK, has generated very promising results and with it it was possible
+        to converge columns with very complex multi-component systems.
+\begin{lstlisting}
+SEQUENCE
+  i := 1 ;
+  WHILE i < number_of_iterations DO
+    SEQUENCE
+      PARALLEL
+        REASSIGN
+          column_section.x_iterate(,) := OLD(column_section.x(,));
+          column_section.y_iterate(,) := OLD(column_section.y(,));
+        END
+        SWITCH
+          column_section.phase_equilibrium
+            := column_section.iterate_to_rigorous;
+        END
+      END
+      i := i + 1 ;
+    END
+  END
+  SWITCH
+    column_section.phase_equilibrium := column_section.rigorous;
+  END
+END
+\end{lstlisting}
+    \subsubsection{Side draws}
+        During construction of process flowsheets and application of the developed models it turned
+        out, that columns with side draws add extra complexity in terms of initialization. To accommodate that
+        fact side draw versions of the previously described initialization procedures have been developed.
+        The only difference is, that the side draws are initially set to zero once convergence has been
+        achieved, they are again set to their specified values. Either by an instant change or again
+        in a continuous fashion.

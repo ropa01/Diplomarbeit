@@ -11,13 +11,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces simplified cryogenic air separation process.\relax }}{17}{figure.caption.22}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces superstructures for column and column stages.\relax }}{18}{figure.caption.24}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces example column.\relax }}{28}{figure.caption.34}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces initialization example concentration profiles.\relax }}{29}{figure.caption.35}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Superstructure for multi-stream heat exchanger. \cite {Yee.1990}\relax }}{30}{figure.caption.36}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Multi-stage compression.\relax }}{32}{figure.caption.39}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Isenthalpes computed by Peng-Robinson EOS.\relax }}{34}{figure.caption.42}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Column tray\relax }}{36}{figure.caption.44}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{47}{figure.caption.61}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces example column.\relax }}{27}{figure.caption.34}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces initialization example concentration profiles.\relax }}{28}{figure.caption.35}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Integrated condenser \& reboiler unit.\relax }}{28}{figure.caption.36}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Superstructure for multi-stream heat exchanger. \cite {Yee.1990}\relax }}{31}{figure.caption.39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Multi-stage compression.\relax }}{33}{figure.caption.42}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Isenthalpes computed by Peng-Robinson EOS.\relax }}{34}{figure.caption.45}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Column tray\relax }}{37}{figure.caption.47}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{47}{figure.caption.64}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
