@@ -5,20 +5,18 @@ Aside from question wether a certain process is capable of producing products ac
 specifications, it needs to be investigated if it does so in an economically viable manner. The modeling
 of process economics is a powerful tool to estimate project profitability. The evaluation of process
 economics has three major aims in the design phase.
-
 \regitemize{%
 	\item{Compare design options with regard to profitability.}
 	\item{Economically optimize a given design.}
 	\item{Estimate project profitability}
 }%
-
-In any case the total cost of the project as well as the cash flow structure will have to be analyzed to supply
-an accurate estimate of the economic conditions. Furthermore an adequate measure to compare and
+In any case the total cost of a given project as well as the cash flow structure will have to be analyzed to supply
+the decision maker with an accurate estimate of the economic conditions. To do so adequate measures to compare and
 analyze a project in economic terms needs to be employed.
 
 The following sections will first describe how to estimate the total project cost in different stages of the
 design process. It is evident that, as the more information about a given process becomes available, the
-accuracy of any cost estimate will increase as well. During the design phase of a process roughly three
+more accurately any cost cost can estimated. During the design phase of a process roughly three
 different stages of cost estimation can be formulated.
 \regitemize{
 	\item{An estimate before designing the process yields an order of magnitude estimation
@@ -28,375 +26,375 @@ different stages of cost estimation can be formulated.
 }
 Once detail engineering commences, even more accurate calculations with errors reducing to $\pm 5\%$
 can be undertaken\cite{Peters.2003}. At that point a concrete process option will have to be chosen and
-the investment decision will already have to be made. All optimization measures within the scope of this
-thesis will have concluded at that time.
+the investment decision, hence the go-ahead for the project,  will already have to be made. All optimization
+measures within the scope of this thesis will already have concluded at that time.
 
 Within \secref{sec:ProjectCost} first we will take a look at how the total cost of a chemical process might be
 estimated at different design stages. Subsequently in \secref{sec:InvestmentCriteria} the different ways
-of evaluating a certain investment options and estimating a projects profitability will be discussed.
+of evaluating certain investment options and estimating a projects profitability will be discussed.
 
-\section{Project cost}
-\label{sec:ProjectCost}
+    \section{Project cost}
+    \label{sec:ProjectCost}
 
-An important factor in every given project is the total cost. During the design of a chemical process many
-important aspects of the future cost structure are unknown, as the final design is in development.
-In general the total cost of implementing and operating a production site can be broken down into
-several subcategories.
-
-\regitemize{%
-	\item{Battery limit investment}
-	\item{Utility investment}
-	\item{Off-Site investment}
-	\item{Engineering fees}
-	\item{Working capital}
-}%
-
-\subsection{Before process design}
-\label{sec:before}
-Before any details about the process to be implemented are known, an estimate can only give an
-order of magnitude towards cost to be expected. The cost of the new process $C_P$ can be
-related to the cost of a reference process $C_{P}^0$ by
-\eq{
-	C_P = C_P^0 \cdot \left( \frac{Q_P}{Q_P^0} \right)^x.
-	\label{eq:cost}
-	\nomenclature{$C_P$}{Total process cost \nomunit{\$}}
-	\nomenclature{$C_P^0$}{Reference process cost \nomunit{\$}}
-	\nomenclature{$Q_P$}{Process capacity \nomunit{\frac{kg}{h}}}
-	\nomenclature{$Q_P^0$}{Reference process capacity \nomunit{\frac{kg}{h}}}
-	\nomenclature{$x$}{Degression coefficient \nomunit{-}}
-}%
-The degression coefficient $x$ needs to be correlated from historical data.
-
-As the overall price structure will change over time, the reference price will not reflect the current
-market situation. In order to adjust for that shortcoming several price indices are published
-all over the word. Some of those tailor to special branches of the industry, others give a picture
-of the price-development in a economy as a whole. The price ration of the prices at different times
-will then be equal to the ration of the price indices at the respective times
-\eq{
-	\frac{C_1}{C_2} = \frac{I_1}{I_2}.
-	\label{eq:index_ratio}
-	\nomenclature{$C_1$}{Reference equipment cost at time $1$ \nomunit{\$}}
-	\nomenclature{$C_2$}{Reference equipment cost at time $2$ \nomunit{\$}}
-	\nomenclature{$I_1$}{Cost index at time $1$ \nomunit{-}}
-	\nomenclature{$I_2$}{Cost index at time $2$ \nomunit{-}}
-}%
-For each index an somewhat arbitrary reference year is chosen. Among the most common indices are the
-Marshall \& Swift index, the Nellson-Farrar-Index or the Chemical Engineering index. Some exemplary
-values for these indices are given in \tabref{tab:PriceIndices}. As one can see the development within the
-process industry very well matches the development in the economy as a whole, which is why for this rough
-estimate general indices should suffice.
-
-\begin{table}
-	\center
-	\input{Tables/PriceIndices}
-	\caption{Price indices and their development.}
-	\todo[inline]{add citation: PE-VT Script}
-	\label{tab:PriceIndices}
-\end{table}
-
-\subsection{During process design}
-Once the future design has been has been broken down to fewer potential options and first process
-flowsheets are available a more elaborate approach becomes possible.
-
-\subsubsection{Battery limit investment}
-The battery limit investment denotes all investments necessary to have all required equipment
-for process operations installed on-site. This includes structures necessary to house the process as well as
-delivery and installation of all individual assets.  One major part of these cost will the the process
-equipment. As the exact manufacturers and models of the equipment will not be known in early design
-stages, an approach similar to the one in \secref{sec:before} still needs to be employed. In contrast to
-before now the cost for individual pieces of process equipment will be considered separately.
-Each piece of equipment will have an specific feature that most influences its cost. For vessels and
-reactors this might be volume, while for heat exchangers the required heat exchange area is essential.
-The price for an piece of equipment  $i$ $C^{i}_E$ can again be approximated by a simple power law
-\eq{
-	C^{i}_E = C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}}.
-	\label{eq:equip_cost}
-	\nomenclature{$C^{i}_E$}{Cost of equipment $i$ \nomunit{\$}}
-	\nomenclature{$C^{i}_B$}{Reference cost of equipment $i$ \nomunit{\$}}
-	\nomenclature{$Q^{i}$}{Specific quantity for equipment $i$ \nomunit{variable}}
-	\nomenclature{$Q^{i}_B$}{Equipment specific reference quantity \nomunit{variable}}
-	\nomenclature{$M^{i}$}{Equipment specific factor \nomunit{-}}
-}%
-A reference price $C^{i}_B$ is multiplied by the determining quantity $Q^{i}$ normalized to a reference state
-$Q^{i}_B$ and raised to the power $M^{i}$ specific to each piece of equipment. Reference prices and
-quantities for various installations can be obtained from literature.
-\todo[inline]{add reference}
-
-If information on the process conditions are available, they also can be considered in price calculations.
-Aside from the mere size of the equipment the process conditions will also have an affect on the expected
-cost. The predominant factors to that respect are pressure, temperature and the question wether corrosive
-or reactive media, which will require more resistant materials, will be present. Furthermore if a more
-detailed choice of process equipment is known this is considered as well. For example an plate-fin heat
-exchanger might be more expensive than a tubular model with the same heat-exchange area.
-In order to account for all those effect a form factor $f_F$ is applied to the equipment cost
-\eq{
-	C^{i}_E = C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}} f_F^{i}
-		=   C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}} \underbrace{\left(1 + f^{i}_C + f^{i}_M + f^{i}_P + f^{i}_T\right)}_{= f_F^{i}}.
-	\label{eq:equip_cost_mpt}
-	\nomenclature{$f^{i}_C$}{Design complexity correction to equipment cost \nomunit{-}}
-	\nomenclature{$f^{i}_M$}{Material selection correction to equipment cost \nomunit{-}}
-	\nomenclature{$f^{i}_P$}{Pressure correction to equipment cost \nomunit{-}}
-	\nomenclature{$f^{i}_T$}{Temperature correction to equipment cost \nomunit{-}}
-}%
-Where $f_F$ denotes the form factor, $f_C$ corrects for design complexity, $f_M$ for material selection,
-$f_P$ adjusts for extreme pressures and $f_T$ for temperature.
-
-As in the previous section all reference prices need to be corrected to compensate for the temporal price
-development, Here again the already discussed indices are used. Furthermore can regional changes
-in price structures be considered. Here again have correction factors to prices in an reference region in
-the world (e.g. USA) been published.
-\todo[inline]{add ref.}
-
-In addition to the purchased cost, the costs for installing the process equipment have an significant effect
-on the total needed investment of the process. These installation costs include:
-\regitemize{%
-	\item Installations costs
-	\item{Piping ,valves and electrical wiring}
-	\item{Control system}
-	\item{Structures and foundations}
-	\item{Insulation and fire proofing}
-	\item{Labour fees}
-}%
-Those again can be expressed as correction factors to the equipment price. Depending on the status
-of the information available they can be expressed as one unified factor or broken down to each specific
-category. One however needs to bare in mind, that costs for piping and valves -- pieces of equipment
-in direct contact with process media -- will be affected by the process conditions in a similar
-way as the actual equipment, whereas the other categories are more likely to remain unchanged. Thus
-attention needs to be paid, in with fashion the factors will be applied.
-
-A word should be said to the cost for the control system. Most obtainable data will most likely refer to
-a decentralized control system, as it has been in use for many years. WIth ever more powerful computers
-a centralized approach, namely model predictive control (MPC) is becoming more relevant. As the
-structure for such a control system may vary significantly from the common designs, the cost factors may
-as well.
-
-\subsubsection{Services}
-The utility investments and off-site investments are often referred to as services. Therein included are
-all measures necessary to supply the process with the media required for operations. This includes but is
-not limited to generation and distribution of energy, steam, process gases. The utility investments
-in this context refer to all investments within the greater production site but out of the battery limits of the
-process. Off-site investments contain everything not contained in the site such as roads, power cables,
-communication systems or waste disposal. All these costs are expressed as fractions of the equipment
-cost at moderate temperature and pressure. This means, when applying these fractions, the factors $f_M$,
-$f_P$ and $f_T$ should not be considered at this point.
-
-Once again in early design stages one has to resort to factors derived for statistical data, to calculate
-the cost of raw materials, energy and support media such as lubricants, heat or catalysts. If more
-detailed information on process streams is available the approach should be refined.
-
-The cost of raw materials $C_{RM}$ can then be calculated if the streams of individual raw materials
-$m_i$ as well as their specific cost are known.
-\eq{
-	C_{RM} = \left( \sum_i^{N_{RM}} \dot{m}_i \cdot C_{RM}^{i} \right) \cdot t_{op}.
-	\nomenclature{$N_{RM}$}{Number of raw materials \nomunit{-}}
-	\nomenclature{$C_{RM}$}{Total cost of raw materials \nomunit{\$}}
-	\nomenclature{$C^{i}_{RM}$}{Mass specific cost of raw material $i$ \nomunit{\frac{\$}{kg}}}
-	\nomenclature{$\dot{m}_i$}{Mass flow of component $i$ \nomunit{\frac{kg}{s}}}
-	\nomenclature{$t_{op}$}{Time of process operations \nomunit{s}}
-}%
-
-Much in the same way the cost for energy can be calculated. This is once more done for each individual
-pice of equipment, rather then for the whole process as it has been done for the raw materials. Hence
-with the needed energy for equipment $i$ with respect to energy carrier $j$ $e_{ij}$ along with
-the price for energy carrier $j$ $C_{EC}^j$ the total energy cost $C_{EC}$ can be assessed.
-\eq{
-	C_{EC} = \left( \sum_i^{N_{E}} \sum_j^{N_{EC}} \dot{e}_{ij} \cdot C_{EC}^{i} \right) \cdot t_{op}.
-	\nomenclature{$N_{E}$}{Number of equipment pieces in the process \nomunit{-}}
-	\nomenclature{$C_{EC}$}{Total cost of energy \nomunit{\$}}
-	\nomenclature{$C^{i}_{EC}$}{Mass specific cost of energy carrier $i$ \nomunit{\frac{\$}{kW}}}
-	\nomenclature{$\dot{e}_{ij}$}{Energy flow of to equipment $i$ from energy carrier $j$ \nomunit{kW}}
-}%
-
-\subsubsection{Working capital}
-The working capital includes all investments necessary for process operations. This means raw
-materials, payroll, extended credit to customers and so on. In contrast to all other costs the
-working capital can partially be retrieved when the process stops operations. How different
-types of cash flows, extended or owed credit should be handled will be disused in
-\secref{sec:InvestmentCriteria}. In addition to the cost of raw materials needed during process
-operations, which generate a product stream, raw materials are also needed to fill all vessels, reactors,
-columns and piping that male up the process. The cost of these needs to be considered as investment
-and not as operation cost, since more or less the same amount will remain bound until
-the process seizes operations and it can (partially) be retrieved.
-
-\eq{
-	C_{FILL} = \sum_i^{N_{RM}} V_i \cdot C_{RM}^{i}.
-	\nomenclature{$C_{FILL}$}{Cost of raw materials to fill the process \nomunit{\$}}
-}
-
-
-\subsubsection{Total investment}
-    When all contributions to the total investment are considered an estimate for the total price of the
-    process can be calculated
-    \eq{
-    	C_P = \sum_i^{N_E} \left[ C_{B}^{i} \left( \frac{Q^{i}}{Q^{i}_{B}} \right)^{M^{i}}
-    		\left(f_F \cdot f_{PIPE} + \sum_j f_j \right)\right] + C_{RM} + C_{EC} + C_{FILL}
+    An important factor in every given project is the total cost. During the design of a chemical process many
+    important aspects of the future cost structure are not known a priori, as the final design is still under development.
+    In general the total cost of implementing and operating a production site can be broken down into
+    several subcategories.
+    \regitemize{%
+    	\item{Battery limit investment}
+    	\item{Utility investment}
+    	\item{Off-Site investment}
+    	\item{Engineering fees}
+    	\item{Working capital}
     }%
-    It should be emphasized that in early design stages these calculations will at best yield an order of
-    magnitude estimate for the expected cost of implementing a chemical process. Most literature sources
-    give an accuracy of $\pm 30 \%$  \cite{Peters.2003}. As the poject progresses more and more information
-    becomes available an a more accurate estimate can be prepared. Those often rely on actual proposals
-    from prospective manufacturers and suppliers.
+    The subsequent sections will present an overview as to how these different costs can be approximated
+    regarding to the level of detail in the available information.
+
+        \subsection{Before process design}
+        \label{sec:before}
+        Before any details about the process to be implemented are known, an estimate can only give an
+        order of magnitude towards cost to be expected. The cost of the new process $C_P$ can be
+        related to the cost of a reference process $C_{P}^0$ by
+        \eq{
+        	C_P = C_P^0 \cdot \left( \frac{Q_P}{Q_P^0} \right)^D.
+        	\label{eq:cost}
+        }%
+        \ncr{C_P}{total process cost}{\$}
+        \ncr{C_P^0}{reference process cost}{\$}
+        \ncr{Q_P}{process capacity}{\frac{kg}{h}}
+        \ncr{Q_P^0}{reference process capacity}{\frac{kg}{h}}
+        \ncr{D}{degression coefficient}{-}
+        The degression coefficient $D$ needs to be correlated from historical data.
+
+        As the overall price structure will change over time, the reference price will not reflect the current
+        market situation. In order to adjust for that shortcoming several price indices are published
+        all over the word. Some of those tailor to special branches of the industry, others give a picture
+        of the price-development in a economy as a whole. The ratio of prices levels at different times
+        is then assumed to be equal to the ratio of the price indices at the respective times
+        \eq{
+        	\frac{C_1}{C_2} = \frac{I_1}{I_2}.
+        	\label{eq:index_ratio}
+        }%
+        \ncr{C_1}{Reference equipment cost at time $1$}{\$}
+        \ncr{C_2}{Reference equipment cost at time $2$}{\$}
+        \ncr{I_1}{Cost index at time $1$}{-}
+        \ncr{I_2}{Cost index at time $2$}{-}
+        For each index an somewhat arbitrary reference year is chosen. Among the most common indices are the
+        Marshall \& Swift index, the Nellson-Farrar-Index or the Chemical Engineering index. Some exemplary
+        values for these indices are given in \tabref{tab:PriceIndices}. As one can see the development within the
+        process industry very well matches the development in the economy as a whole, which is why for this rough
+        estimate general indices should suffice.
+
+        \begin{table}
+        	\center
+        	\input{Tables/PriceIndices}
+        	\caption{Price indices and their development.}
+        	\todo[inline]{add citation: PE-VT Script}
+        	\label{tab:PriceIndices}
+        \end{table}
+
+    \subsection{During process design}
+        Once the future design has been has been broken down to fewer potential options and first process
+        flowsheets are available a more elaborate approach, resulting in far improved estimates, becomes possible.
+
+    \subsubsection{Battery limit investment}
+        The battery limit investment denotes all investments necessary to have all required equipment
+        for process operations installed on-site. This includes structures necessary to house the process as well as
+        delivery and installation of all individual assets.  One major part of these cost will the the process
+        equipment. As the exact manufacturers and models of the equipment will not be known in early design
+        stages, an approximation similar to the one in \secref{sec:before} still needs to be employed. In contrast to
+        before now the cost for individual pieces of process equipment will be considered explicitly.
+        Each piece of equipment will have an specific feature which most heavily affects its cost. For vessels and
+        reactors this might be volume, while for heat exchangers the required heat exchange area is essential.
+        The price for an piece of equipment  $i$ $C^{i}_E$ can again be approximated by a simple power law
+        \eq{
+        	C^{i}_E = C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}}.
+        	\label{eq:equip_cost}
+        	\ncr{C^{i}_E}{cost of equipment $i$}{\$}
+        	\ncr{C^{i}_B}{reference cost of equipment $i$}{\$}
+        	\ncr{Q^{i}}{specific quantity for equipment $i$}{variable}
+        	\ncr{Q^{i}_B}{equipment specific reference quantity}{variable}
+        	\ncr{M^{i}}{equipment specific factor \nomunit}{-}
+        }%
+        A reference price $C^{i}_B$ is multiplied by the determining quantity $Q^{i}$ normalized to a reference state
+        $Q^{i}_B$ and raised to the power $M^{i}$ specific to each piece of equipment. Reference prices and
+        quantities for various installations can be obtained from literature (e.g. \cite{Seider.2010}).
+        
+        If more detailed information on the process conditions are available, they should also find their way into the cost estimation.
+        Aside from the mere size of the equipment the process conditions will also influence the expected (and actual)
+        cost. The predominant factors to that respect are pressure, temperature, corrosiveness
+        and reactive activity, which will require single units to be manufactured from more resistant materials. Knowledge
+        of a specific category for a piece of equipment to be installed will also lead to refined estimates. For example an plate-fin heat
+        exchanger might be more expensive than a tubular model with the same heat-exchange area.
+        In order to account for all those effect a form factor $f_F$ can be applied to the equipment cost
+        \eq{
+        	C^{i}_E = C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}} f_F^{i}
+        		=   C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}} 
+                    \underbrace{\left(1 + f^{i}_C + f^{i}_M + f^{i}_P + f^{i}_T\right)}_{= f_F^{i}}.
+        	\label{eq:equip_cost_mpt}
+        	\ncr{f^{i}_C}{design complexity correction to equipment cost}{-}
+        	\ncr{f^{i}_M}{material selection correction to equipment cost}{-}
+        	\ncr{f^{i}_P}{pressure correction to equipment cost}{-}
+        	\ncr{f^{i}_T}{temperature correction to equipment cost}{-}
+        }%
+        Where $f_F$ denotes the form factor, $f_C$ corrects for design complexity, $f_M$ for material selection,
+        $f_P$ adjusts for extreme pressures and $f_T$ for temperature.
+        
+        As in the previous section all reference prices need to be scaled for the temporal price
+        development. Again the aforementioned indices are used. Furthermore can the prices be corrected for regional
+        differences in price structure. Once more correction factors to prices in an reference region in
+        the world (e.g. USA) are employed.
+        \todo[inline]{add ref.}
+        
+        In addition to the purchased cost, the costs for installing the process equipment have an significant effect
+        on the total needed investment of the process. These installation costs include:
+        \regitemize{%
+        	\item Installations costs
+        	\item{Piping ,valves and electrical wiring}
+        	\item{Control system}
+        	\item{Structures and foundations}
+        	\item{Insulation and fire proofing}
+        	\item{Labour fees}
+        }%
+        To incorporate those additional cost, again correction factors to the main equipment price are used. 
+        Depending on the status
+        of the information available they can be expressed as one unified factor or broken down to each specific
+        category. One however needs to bare in mind, that costs for piping and valves -- pieces of equipment
+        in direct contact with process media -- will be affected by the process conditions in a similar
+        way as the actual equipment, whereas the other categories are more likely to remain unchanged. Thus
+        attention needs to be paid, in with fashion the factors will be applied.
+        
+        A word should be said about the cost for the control system. Most obtainable data will most likely refer to
+        a decentralized control system, as it has been in use for many years. With ever more powerful computers
+        a centralized approach, namely model predictive control (MPC) is becoming more relevant. As the
+        structure for such a control system may vary significantly from the common designs, the cost factors may
+        as well.
+
+    \subsubsection{Services}
+        The utility investments and off-site investments are often referred to as services. Therein included are
+        all measures necessary to supply the process with the media consumed during operation. This includes but is
+        not necessarily limited to generation and distribution of energy, steam and process gases. The utility investments
+        in this context refer to all investments within the greater production site but out of the battery limits of the
+        specific process. Off-site investments contain everything not contained in the site such as roads, power cables,
+        communication systems or waste disposal. All these costs are expressed as fractions of the equipment
+        cost at moderate temperature and pressure. This means, when applying these fractions, the factors $f_M$,
+        $f_P$ and $f_T$ should not be considered at this point.
+        
+        Once again in early design stages one has to resort to factors derived for statistical data, to calculate
+        the cost of raw materials, energy and support media such as lubricants, heat or catalysts. If more
+        detailed information on process streams is available the approach should be refined.
+        
+        The cost of raw materials $C_{RM}$ can then be calculated if the material streams of individual raw materials
+        $m_i$ as well as their specific cost are known.
+        \eq{
+        	C_{RM} = \left( \sum_i^{N_{RM}} \dot{m}_i \cdot C_{RM}^{i} \right) \cdot t_{op}.
+        	\ncr{n_{RM}}{number of different raw materials}{-}
+        	\ncr{C_{RM}}{total cost of raw materials}{\$}
+        	\ncr{C^{i}_{RM}}{mass specific cost of raw material $i$}{\frac{\$}{kg}}
+        	\ncr{\dot{m}_i}{mass flow of component $i$}{\frac{kg}{s}}
+        	\ncr{t_{op}}{time of process operations}{s}
+        }%
+        
+        Much in the same way the cost for energy can be approximated. This is once more done for each individual
+        process unit, rather then for the whole process as it has been done for the raw materials. Hence
+        with the needed energy for equipment $i$ with respect to energy carrier $j$ $e_{ij}$ along with
+        the price for energy carrier $j$ $C_{EC}^j$ the total energy cost $C_{EC}$ can be assessed.
+        \eq{
+        	C_{EC} = \left( \sum_i^{N_{E}} \sum_j^{N_{EC}} \dot{e}_{ij} \cdot C_{EC}^{i} \right) \cdot t_{op}.
+        	\ncr{n_{E}}{number of process units}{-}
+        	\ncr{C_{EC}}{total cost of energy}{\$}
+        	\ncr{C^{i}_{EC}}{mass specific cost of energy carrier $i$}{\frac{\$}{kW}}
+        	\ncr{\dot{e}_{ij}}{energy flow of to equipment $i$ from energy carrier $j$}{kW}
+        }%
+
+    \subsubsection{Working capital}
+        The working capital includes all investments necessary for process operations. This means raw
+        materials, payroll, extended credit to customers and so on. In contrast to all other costs the
+        working capital can partially be retrieved when the process seizes operations. How different
+        types of cash flows, extended or owed credit should be handled will be disused in
+        \secref{sec:InvestmentCriteria}. In addition to the cost of raw materials needed during process
+        operations, which generate a product stream, raw materials are also needed to fill all vessels, reactors,
+        columns and piping that male up the process. The cost of these should be considered as investment
+        and not as operation cost \cite{Coulson.1999}, since more or less the same amount will remain bound until
+        the process seizes operations and it can (partially) be retrieved.
+        \eq{
+        	C_{FILL} = \sum_i^{N_{RM}} V_i \cdot C_{RM}^{i}.
+        	\ncr{C_{FILL}}{cost of raw materials to fill the process}{\$}
+        }%
+
+    \subsubsection{Total investment}
+        When all contributions to the total investment are considered an estimate for the total price of the
+        process can be calculated
+        \eq{
+        	C_P = \sum_i^{N_E} \left[ C_{B}^{i} \left( \frac{Q^{i}}{Q^{i}_{B}} \right)^{M^{i}}
+        		\left(f_F \cdot f_{PIPE} + \sum_j f_j \right)\right] + C_{RM} + C_{EC} + C_{FILL}
+        }%
+        It should be emphasized that in early design stages these calculations will at best yield an order of
+        magnitude estimate for the expected cost of implementing a chemical process. Most literature sources
+        give an accuracy of $\pm 30 \%$  \cite{Peters.2003}. As the project progresses more and more information
+        becomes available an a more accurate estimate can be prepared. The most refined ones rely on actual 
+        proposals from prospective manufacturers and suppliers.
 
 
 \section{Investment criteria}
 \label{sec:InvestmentCriteria}
-    The total cost of a project its a very important measure to decide wether to undergo a certain endeavor.
+    The total cost of a project its a very important measure to decide wether to embark on a certain endeavor.
     However in a complex financial system it cannot be taken as the sole factor to compare investment
-    alternatives. Different other indices are used to measure the attractiveness of an investment. One
+    alternatives. Different other indices are used to measure the attractiveness or feasibility of an investment. One
     main distinction can be made between different measurements. Those that work with averaged cash flows
     and consider the project as a singe time periods (\secref{sec:SinglePeriod}) and models that take into
-    account cash flows made at different points in time -- so called multi-period models
-    (\secref{sec:MultiPeriod}).
+    account cash flows made at different points in time -- so called multi-period models (\secref{sec:MultiPeriod}).
 
 
-\subsection{Single period estimation methods}
-\label{sec:SinglePeriod}
-    Among the most prominent single period methods are the payout time (POT) and the return of
-    investment (ROI).
+    \subsection{Single period estimation methods}
+    \label{sec:SinglePeriod}
+        Among the most prominent single period methods are the payout time (POT) and the return of
+        investment (ROI)which will be discussed in this section.
 
-\subsubsection{Payout time}
-    Payout or amortization  time is the time necessary to earn the total investment of the process. It is also
-    often referred to as the break even point. A profitable venture will form that point on begin to make money.
-    A shorter payback time is a measure for an more attractive investment.
-    \eq{
-    	POT = \frac{\textnormal{capital expenditure}}{\textnormal{incoming cash flow / period}}
-    	\nc{$POT$}{Payout time}{\$}
-}
-\subsubsection{Return of investment}
-    The return of investment is defined as
-    \eq{
-    	ROI = \frac{\textnormal{average return / period}}{\textnormal{capital expenditure}} \cdot 100 \%.
-    	\label{eq:roi}
-    }%
-    It denotes the equivalent to an interest rate if the earned interest is not reinvested such that the same
-    Investment is considered in every period. The average return is calculated form the expected returns
-    over certain duration of time. The time considered might either be the total lifecycle of the process or
-    the expected write-off time. As capital expenditure most likely the total investment will be used. However
-    it might give a more precise picture if write-off or the time of individual payments is considered when
-    evaluating the capital expenditure.
+        \subsubsection{Payout time}
+            Payout or amortization  time is the time necessary to earn the total investment of the process. It is also
+            often referred to as the break even point. A profitable venture will form that point on begin to make money.
+            A shorter payback time can be considered a measure for an more attractive investment.
+            \eq{
+            	POT = \frac{\textnormal{capital expenditure}}{\textnormal{incoming cash flow / period}}
+            	\ncr{POT}{Payout time}{\$}
+            }%
+            \ncr{POT}{payout time}{a}
+            However many aspects especially in potential profits are not included here. 
 
-\subsection{Multi period estimation methods}
-\label{sec:MultiPeriod}
-    As discussed earlier, when using only averaged values and considering only one time period,
-    a distorted picture of the financial situation will evolve. The source of the money to be invested
-    play a critical role in the evaluation process. Cash reserves, loans, preferred stock or other financial
-    instruments are all viable sources of investment capital. Often a mixture of many different sources is
-    used to allocate all necessary funds. A generic structure of the cash-flows during the life-cycle of a
-    given project is shown in \figref{fig:CashFlow}. When the project commences no revenue is generated
-    and only investments are made. As process operations begin revenue is generated and  the slope
-    of the accumulated cash flow curve switches to an upward directions -- assuming the project is profitable.
-    As time progresses the produced product might reduce in value through competitors entering the market
-    or other factors. When the curve intersects the abscissa the project investment is earned and the break
-    point is reached. The two investment alternatives highlight that the amount of initial investment
-    will affect the expected revenue. As more information is gathered during operations, opportunities
-    may arise to optimize the process and leverage so far dormant potentials. These so called retrofit
-    Investments would ideally lead to an improved cash flow structure as indicated by the green line.
+        \subsubsection{Return of investment}
+            The return of investment is defined as
+            \eq{
+            	ROI = \frac{\textnormal{average return / period}}{\textnormal{capital expenditure}} \cdot 100 \%.
+            	\label{eq:roi}
+            }%
+            \ncr{ROI}{return of investment}{-}
+            \todo{check definition of ROI}
+            It denotes the equivalent to an interest rate if the earned interest is not reinvested such that the same
+            Investment is considered in every period. The average return is calculated form the expected returns
+            over certain duration of time. The time considered might either be the total lifecycle of the process or
+            the expected write-off time. As capital expenditure most likely the total investment will be used. However
+            it might give a more precise picture if write-off or the time of individual payments is considered when
+            evaluating the capital expenditure.
+    
+    \subsection{Multi period estimation methods}
+    \label{sec:MultiPeriod}
+        As discussed earlier, when using only averaged values and considering only one time period,
+        a distorted picture of the financial situation will evolve. The sources of the money to be invested
+        play a critical role in the evaluation process. Cash reserves, loans, preferred stock or other financial
+        instruments are all viable sources for investment capital. Especially for large scale projects often a 
+        mixture of many different sources is used to allocate all necessary funds. A generic structure of the 
+        cash-flows during the life-cycle of a given project is shown in \figref{fig:CashFlow}. When the project 
+        commences no revenue is generated and only investments are made. As process operations begin revenue 
+        is generated and  the slope of the accumulated cash flow curve switches to an upward directions 
+        -- assuming the project is profitable. As time progresses the produced product might reduce in value 
+        through competitors entering the market or other factors. When the curve intersects the abscissa the 
+        project investment is earned and the break point is reached. The two investment alternatives highlight 
+        that the amount of initial investment will affect the expected revenue. As more information is gathered 
+        during operations, opportunities may arise to optimize the process and leverage so far dormant potentials. 
+        These so called retrofit Investments would ideally lead to an improved cash flow structure as indicated 
+        by the green line.
+    
+        \begin{figure}
+            \input{pgfplots/ProjectCashFlow}
+            \caption{Accumulated cash flows over project life cycle.}
+            \label{fig:CashFlow}
+        \end{figure}
+        \todo[inline]{add ref: (\figref{fig:CashFlow}) Script PE-VT}
+    
+        Before further investigating multi-period models some basic concepts of financial mathematics
+        and the treatment of interest should be reviewed. When investing the capital $C_0$ at compounded
+        interest for $n$ years at a rate of $i$ \%, the compound amount will yield
+        \eq{
+        	C_n = C_0 \cdot q^n.
+        	\ncr{q}{interest factor}{-}
+        	\ncr{C_n}{final value of an investment}{\$}
+        	\ncr{C_0}{initial value of an investment}{\$}
+        }%
+        Where $q$ denotes the interest factor
+        \eq{
+        	q = 1 + \frac{i}{100}.
+        	\ncr{i}{interest rate}{\%}
+        }
+        On the other hand the current value of an investment that will yield $C_n$ in $n$ years can be calculated
+        by
+        \eq{
+        	C_0 = C_n \cdot q^{-n}
+        }
+        The above considerations always assume a single payment at the beginning or end of the entire period.
+        Annuities however are usually in several trances with regular payments to be made or received at
+        predefined instances. Assuming those payments are of equal size $a$, the final value can be computed by
+        \eq{
+        	C_n = a \cdot q^{\alpha} \cdot \frac{q^n - 1}{q - 1},
+        	\ncr{a}{annuity}{\$}
+        }%
+        while the current value of an annuity yields
+        \eq{
+        	C_0 = a \cdot q^{\alpha - n} \cdot \frac{q^n - 1}{q - 1},
+        }%
+        The factor $\alpha$ in the previous equations denotes wether payments are made at the beginning
+        of a period ($\alpha = 1$ or at the end ($\alpha = 0)$
+    
+        With that multi-period model can be discussed. Here not only different alternatives can be compared,
+        but also the profitability in comparison with investments in financial products can be assessed.
 
-    \begin{figure}
-        \input{pgfplots/ProjectCashFlow}
-        \caption{Accumulated cash flows over project life cycle.}
-        label{fig:CashFlow}
-    \end{figure}
-%    \stdfig{pgfplots/ProjectCashFlow}{Accumulated cash flows over project life cycle.}{fig:CashFlow}{}
-    \todo[inline]{add ref: (\figref{fig:CashFlow}) Script PE-VT}
+        \subsubsection{Net present value}
+            The net present value ($NPV$) describes the amount of money to be invested if all cash flows --
+            incoming and outgoing -- are discounted to the project start ($t = 0$). The present value of
+            all expenses is then
+            \eq{
+            	C_{0e} = e_0 + e_1 \cdot q^{-1} + \dots + e_n \cdot q^{-n} = \sum_i^n e_i \cdot q^{-i}.
+            	\ncr{C_{0e}}{Present value of all expenses}{\$}
+            }%
+            Here it is given that all expenses are paid at the beginning of each period, as it is the most common case.
+            If revenues $r_i$ are realized then as well an equivalent formula would be attained. In most cases
+            revenues will come in at the end of a period in which case the present value becomes
+            \eq{
+            	C_{0r} = r_0 \cdot q^{-1} + r_1 \cdot q^{-2} + \dots + r_n \cdot q^{-(n+1)} = \sum_i^n r_i \cdot q^{-(i+1)}.
+            	\ncr{C_{0r}}{Present value of all revenues}{\$}
+            }%
+            The $NPV$ of a given project is then derived from the present values of all expenses and revenues
+            \eq{
+            	NPV = C_{0r} - C_{0e}.
+            	\ncr{NPV}{Net present value}{\$}
+            }%
+            For any project to be considered as investment alternative the present value needs to be positive since
+            otherwise the investment would yield losses.
+        
+        \subsubsection{Discounted cash flow rate of return}
+            The formula for the discounted cash flow rate of return is very similar to the one for a net present value.
+            The difference is, that rather then computing the net present value with given interest rates, the present
+            value is set to zero and the resulting interest rate its then calculated. Other than with the previous methods
+            no analytical solution can be presented but rather an iterative approach to find a solution to
+            \eq{
+            	0 = \sum_i^n (r_i - e_i) \cdot q^{-i}.
+            }%
+            Here its was assumed that all payments -- incoming and outgoing -- are made at the beginning of a period.
+            The only variable is the interest rate which is included in the interest factors $q$. This methods gives
+            the interest rate which would be necessary to earn all time dependent expenses within $n$ years. In this
+            case a higher $DCFRR$ indicates a more attractive investment.
 
-    Before further investigating multi-period model some basic ideas about financial mathematics
-    and the treatment of interest should be reviewed. When investing the capital $C_0$ at compounded
-    interest for $n$ years at a rate of $i$ \%, the compound amount will yield
-    \eq{
-    	C_n = C_0 \cdot q^n.
-    	\nc{q}{Interest factor}{-}
-    	\nc{C_n}{Final value of an investment}{\$}
-    	\nc{C_0}{Initial value of an investment}{\$}
-    }%
-    Where $q$ denotes the interest factor
-    \eq{
-    	q = 1 + \frac{i}{100}.
-    	\nc{i}{Interest rate}{\%}
-    }
-    On the other hand the current value of an investment that will yield $C_n$ in $n$ years can be calculated
-    by
-    \eq{
-    	C_0 = C_n \cdot q^{-n}
-    }
-    The above considerations always assume a single payment at the beginning or end of the entire period.
-    Annuities however are usually in several trances with regular payments to be made or received at
-    predefined instances. Assuming those payments are of equal size $a$, the final value can be computed by
-    \eq{
-    	C_n = a \cdot q^{\alpha} \cdot \frac{q^n - 1}{q - 1},
-    	\nc{a}{Annuity}{\$}
-    }%
-    while the current value of an annuity yields
-    \eq{
-    	C_0 = a \cdot q^{\alpha - n} \cdot \frac{q^n - 1}{q - 1},
-    }%
-    The factor $\alpha$ in the previous equations denotes wether payments are made at the beginning
-    of a period ($\alpha = 1$ or at the end ($\alpha = 0)$
+        \subsubsection{Annuity method}
+            Within the annuity method two different annuities are calculated and then compared. First the annuity $a$
+            of an investment of $C_0$ at market conditions is of interest.
+            \eq{
+            	a = C_0 \cdot \frac{q^{n-\alpha} (q - 1)}{q^n - 1}
+            }%
+            This annuity is the amount that could be paid out each period if $C_0$ is invested, compound interest
+            is considered and all funds are used up at the end of $n$ years.
+            
+            This is then compared to the annuity of the considered project
+            \eq{
+            	a_P = \sum_i^n (r_i - e_i) \cdot q^{-i} \cdot \frac{q^{n-\alpha} (q - 1)}{q^n - 1}.
+            }%
+            Only if $a_P > a$ is the project more profitable than simply investing the required capital in a
+            financial product.
 
-    With that multi-period model can be discussed. Here not only different alternatives can be compared,
-    but also the profitability in comparison with investments in financial products can be assessed.
-
-\subsubsection{Net present value}
-The net present value ($NPV$) describes the amount of money to be invested if all cash flows --
-incoming and outgoing -- are discounted to the project start ($t = 0$). The present value of
-all expenses is then
-\eq{
-	C_{0e} = e_0 + e_1 \cdot q^{-1} + \dots + e_n \cdot q^{-n} = \sum_i^n e_i \cdot q^{-i}.
-	\nc{C_{0e}}{Present value of all expenses}{\$}
-}%
-Here it is given that all expenses are paid at the beginning of each period, as it is the most common case.
-If revenues $r_i$ are realized then as well an equivalent formula would be attained. In most cases
-revenues will come in at the end of a period in which case the present value becomes
-\eq{
-	C_{0r} = r_0 \cdot q^{-1} + r_1 \cdot q^{-2} + \dots + r_n \cdot q^{-(n+1)} = \sum_i^n r_i \cdot q^{-(i+1)}.
-	\nc{C_{0r}}{Present value of all revenues}{\$}
-}%
-The $NPV$ of a given project is then derived from the present values of all expenses and revenues
-\eq{
-	NPV = C_{0r} - C_{0e}.
-	\nc{NPV}{Net present value}{\$}
-}%
-For any project to be considered as investment alternative the present value needs to be positive since
-otherwise the investment would yield losses.
-
-\subsubsection{Discounted cash flow rate of return}
-The formula for the discounted cash flow rate of return is very similar to the one for a net present value.
-The difference is, that rather then computing the net present value with given interest rates, the present
-value is set to zero and the resulting interest rate its then calculated. Other than with the previous methods
-no analytical solution can be presented but rather an iterative approach to find a solution to
-\eq{
-	0 = \sum_i^n (r_i - e_i) \cdot q^{-i}.
-}%
-Here its was assumed that all payments -- incoming and outgoing -- are made at the beginning of a period.
-The only variable is the interest rate which is included in the interest factors $q$. This methods gives
-the interest rate which would be necessary to earn all time dependent expenses within $n$ years. In this
-case a higher $DCFRR$ indicates a more attractive investment.
-
-\subsubsection{Annuity method}
-Within the annuity method two different annuities are calculated and then compared. First the annuity $a$
-of an investment of $C_0$ at market conditions is of interest.
-\eq{
-	a = C_0 \cdot \frac{q^{n-\alpha} (q - 1)}{q^n - 1}
-}%
-This annuity is the amount that could be paid out each period if $C_0$ is invested, compound interest
-is considered and all funds are used up at the end of $n$ years.
-
-This is then compared to the annuity of the considered project
-\eq{
-	a_P = \sum_i^n (r_i - e_i) \cdot q^{-i} \cdot \frac{q^{n-\alpha} (q - 1)}{q^n - 1}.
-}%
-Only if $a_P > a$ is the project more profitable than simply investing the required capital in an
-financial product.
-
-\subsubsection{Interest Rates}
-With all the presented models its was implicitly assumed that interest rates for debit and credit are
-equal. The reality however is much different. It will therefore be prudent to use different rates of interest
-for each case. The basic calculations however remain unchanged. Especially the interest rate that can be
-earned when investing a certain amount will need to be estimated. As certain products with a know $ROI$
-will not necessarily be the most attractive options on the capital market. Thus in many companies
-there is an internal value given for this interest rate, which is calculated from historical data.
-
-
-
-
+        \subsubsection{Interest Rates}
+            With all the presented models its was implicitly assumed that interest rates for debit and credit are
+            equal. The reality however is much different. It will therefore be prudent to use different rates of interest
+            for each case. The basic calculations however remain unchanged. Especially the interest rate that can be
+            earned when investing a certain amount will need to be estimated. As certain products with a know $ROI$
+            will not necessarily be the most attractive options on the capital market. Thus in many companies
+            there is an internal value given for this interest rate, which is calculated from historical data.
 

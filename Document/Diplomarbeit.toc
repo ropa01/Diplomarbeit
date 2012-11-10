@@ -23,8 +23,8 @@
 \contentsline {subsubsection}{Annuity method}{16}{section*.20}
 \contentsline {subsubsection}{Interest Rates}{16}{section*.21}
 \contentsline {chapter}{\numberline {4}Mathematical process model}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Steady - state unit models}{17}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Separation}{17}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.1}Steady - state unit models}{18}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Separation}{18}{subsection.4.1.1}
 \contentsline {subsubsection}{Distillation column model}{18}{section*.23}
 \contentsline {paragraph}{Material balances}{19}{section*.25}
 \contentsline {paragraph}{Equilibrium}{20}{section*.26}
@@ -36,42 +36,46 @@
 \contentsline {subsection}{\numberline {4.1.2}Integrated condenser \& reboiler}{28}{subsection.4.1.2}
 \contentsline {subsubsection}{Reboiler side}{29}{section*.37}
 \contentsline {subsubsection}{Condenser side}{29}{section*.38}
-\contentsline {subsection}{\numberline {4.1.3}Heat exchange}{29}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.3}Heat exchange}{30}{subsection.4.1.3}
 \contentsline {paragraph}{Model equations}{32}{section*.40}
-\contentsline {subsection}{\numberline {4.1.4}Compression \& expansion}{32}{subsection.4.1.4}
-\contentsline {subsubsection}{Multi-stage compression}{32}{section*.41}
-\contentsline {paragraph}{Pressure drop}{33}{section*.43}
+\contentsline {subsection}{\numberline {4.1.4}Compression \& expansion}{33}{subsection.4.1.4}
+\contentsline {subsubsection}{Multi-stage compression}{33}{section*.41}
+\contentsline {paragraph}{Pressure drop}{34}{section*.43}
 \contentsline {subsubsection}{Cooling by expansion}{34}{section*.44}
 \contentsline {section}{\numberline {4.2}Dynamic unit models}{35}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Distillation column model}{35}{subsection.4.2.1}
-\contentsline {subsubsection}{Trayed hydraulics}{36}{section*.46}
-\contentsline {subsubsection}{Structured packing hydraulics}{37}{section*.48}
-\contentsline {subsection}{\numberline {4.2.2}Integrated condenser / reboiler unit}{38}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Sizing \& costing models}{39}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Destillation column}{39}{subsection.4.3.1}
-\contentsline {subsubsection}{Trays}{40}{section*.50}
-\contentsline {subsubsection}{Structured packings}{41}{section*.51}
-\contentsline {subsection}{\numberline {4.3.2}Centrifugal pump}{42}{subsection.4.3.2}
-\contentsline {paragraph}{Pump}{42}{section*.52}
-\contentsline {paragraph}{Electric motor}{43}{section*.55}
-\contentsline {subsubsection}{Compressor}{43}{section*.57}
-\contentsline {paragraph}{Centrifugal compressor}{43}{section*.58}
-\contentsline {paragraph}{Reciprocating compressor}{44}{section*.59}
-\contentsline {paragraph}{Screw compressor}{44}{section*.60}
-\contentsline {subsubsection}{Reboiler / condenser}{44}{section*.61}
-\contentsline {paragraph}{Shell and tube heat exchanger}{44}{section*.62}
-\contentsline {paragraph}{Double pipe}{45}{section*.63}
-\contentsline {section}{\numberline {4.4}Thermodynamic models}{45}{section.4.4}
-\contentsline {section}{\numberline {4.5}Implementation}{46}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Model structure}{46}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Initialization procedures}{48}{subsection.4.5.2}
-\contentsline {subsubsection}{Initial specifications}{49}{section*.65}
-\contentsline {subsubsection}{Flash initialization}{49}{section*.66}
-\contentsline {subsubsection}{Linearized material balance}{49}{section*.67}
-\contentsline {subsubsection}{Iterative approach}{50}{section*.68}
-\contentsline {subsubsection}{Side draws}{51}{section*.69}
-\contentsline {chapter}{\numberline {5}Optimization examples}{52}{chapter.5}
-\contentsline {section}{\numberline {5.1}Steady state single period}{52}{section.5.1}
-\contentsline {chapter}{Bibliography}{54}{chapter*.70}
-\contentsline {chapter}{\numberline {A}Appendix A}{56}{appendix.A}
-\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{56}{section.A.1}
+\contentsline {subsubsection}{Trayed hydraulics}{37}{section*.46}
+\contentsline {subsubsection}{Structured packing hydraulics}{38}{section*.48}
+\contentsline {subsection}{\numberline {4.2.2}Integrated condenser / reboiler unit}{39}{subsection.4.2.2}
+\contentsline {subsubsection}{Reboiler side}{39}{section*.50}
+\contentsline {subsubsection}{Condenser side}{40}{section*.51}
+\contentsline {subsubsection}{Heat exchange}{40}{section*.52}
+\contentsline {section}{\numberline {4.3}Sizing \& costing models}{40}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Destillation column}{41}{subsection.4.3.1}
+\contentsline {subsubsection}{Trays}{42}{section*.53}
+\contentsline {subsubsection}{Structured packings}{43}{section*.54}
+\contentsline {subsection}{\numberline {4.3.2}Centrifugal pump}{43}{subsection.4.3.2}
+\contentsline {paragraph}{Pump}{44}{section*.55}
+\contentsline {paragraph}{Electric motor}{44}{section*.58}
+\contentsline {subsubsection}{Compressor}{45}{section*.60}
+\contentsline {paragraph}{Centrifugal compressor}{45}{section*.61}
+\contentsline {paragraph}{Reciprocating compressor}{45}{section*.62}
+\contentsline {paragraph}{Screw compressor}{46}{section*.63}
+\contentsline {subsubsection}{Reboiler / condenser}{46}{section*.64}
+\contentsline {paragraph}{Shell and tube heat exchanger}{46}{section*.65}
+\contentsline {paragraph}{Double pipe}{46}{section*.66}
+\contentsline {section}{\numberline {4.4}Thermodynamic models}{47}{section.4.4}
+\contentsline {section}{\numberline {4.5}Implementation}{47}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Model structure}{48}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Initialization procedures}{50}{subsection.4.5.2}
+\contentsline {subsubsection}{Initial specifications}{51}{section*.68}
+\contentsline {subsubsection}{Flash initialization}{51}{section*.69}
+\contentsline {subsubsection}{Linearized material balance}{51}{section*.70}
+\contentsline {subsubsection}{Iterative approach}{53}{section*.71}
+\contentsline {subsubsection}{Side draws}{54}{section*.72}
+\contentsline {chapter}{\numberline {5}Optimization examples}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Steady state single period}{55}{section.5.1}
+\contentsline {section}{\numberline {5.2}Optimization \& control}{56}{section.5.2}
+\contentsline {chapter}{Bibliography}{58}{chapter*.73}
+\contentsline {chapter}{\numberline {A}Appendix A}{61}{appendix.A}
+\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{61}{section.A.1}

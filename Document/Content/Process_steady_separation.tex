@@ -1,27 +1,31 @@
+    The separation step within the process occurs within a double effect distillation column. 
     Distillation columns are among the most widely studied pieces of process equipment. While much has been
     accomplished, the robust simulation poses great challenges to this day. In the context of cryogenic
     air separation the associated mixture displays only moderate non-idealities and furthermore is
     a zeotropic one. However further complexity is added due to the strong interdependencies of the different
     columns arising from thermal and material coupling within the process.
 
-    In this section first the mathematical formulation for a general steady-state distillation column model will
-    be presented (\secref{sec:mathpro:steady:distmodel}). The
+    In this section first the mathematical formulation for a general steady-state distillation column model, 
+    which has been developed as a multi-purpose, easily applicable model for the process simulator \gproms, 
+    will be presented (\secref{sec:mathpro:steady:distmodel}). 
 
     \subsubsection{Distillation column model}
     \label{sec:mathpro:steady:distmodel}
 
-        In this section the working equations used to model the different distillation columns in the process,
-        known as the MESH equations, are given. These equations, although rather plain at first glimpse, form a
-        set of highly non-linear, highly coupled equations. The solutions of these equations is not a trivial
-        task for current solution algorithms, whose success is highly dependent on the quality of initial guesses
-        provided. Therefore a strategy used for the automated generation of such guesses will be described as well.
+        The core equations decerning the operation of any distillation column, or more general vapour liquid contacting 
+        device, are often referred to as the MESH equations \todo{add citation kiester 1992}. These equations, although 
+        rather plain at first glimpse, form a set of highly non-linear, highly coupled equations. The solutions of whic 
+        poses a non-trivial task for current solution algorithms, whose success is highly dependent on the quality of 
+        initial estimates for the involved variables. Therefore a strategy used for the automated generation of such 
+        guesses will be described as well.
 
         The model presented here is not only to be used for the simulation of of a given process, but rather
         for optimization purposes as well. While several of the continuous decision variables associated
         whit process optimization can be optimized from a generic set of equations, others need further consideration.
-        The optimization decision which adds the greatest complexity for distillation columns ist the number
-        of trays used in a given separation process. This introduces integer decisions into the model and requires
-        development of a super structure to be used.
+        The optimization decisions which add the greatest complexity for distillation columns are the locations for feeds
+        and side draws, as well the number of trays for a given separation task. Part of the added complexity is 
+        the introduction of integer decisions into the model and and the associated need for a super structure which 
+        includes all process alternatives to be considered.
 
         \begin{figure}
             \centering
@@ -43,20 +47,25 @@
         \end{figure}
         \todo{add side draws to column super structure}
 
-        The starting point for the modeling a distillation column is considering a single separation stage within the
-        column with all possible connections. \Figref{fig:col_super} shows the superstructure to be used for the complete
-        column, while \figref{fig:col_stage_super} shows a super structure for a singe stage.
+        The starting point for the model development  is considering a single separation stage within the
+        column with all possible material and energy streams entering and leaving the stage. \Figref{fig:col_super} 
+        shows the superstructure to be used for the complete column, while \figref{fig:col_stage_super} shows a super
+        structure for a single separation stage.
 
         As mentioned before the governing equations for a distillation column a known as MESH equations. The acronym
         MESH stands for material, equilibrium, summation and enthalpy. The corresponding equations are as follows.
         If not stated otherwise, all equations presented in this section are true for all stages. In order
-        to improve readability the indices denoting a stage are omitted, if not essential for the meaning of
+        to improve readability the indices denoting a stage are sometimes omitted, if not essential for the meaning of
         a given equation. For all equations the number of stages in the process is denoted by $n_S$, while $n_C$
-        stands for the number of components.
+        stands for the number of components. The number of feeds to a column is denoted by $n_F$, while vapour and 
+        liquid sidedraws by $n_{SV}$ and $n_{SL}$ respectively.  
 
         \ncr{n_S}{number of column stages}{-}
         \ncr{n_C}{number of components}{-}
-
+        \ncr{n_F}{number of feeds}{-}
+        \ncr{n_{SV}}{number of vapour side-draws}{-}
+        \ncr{n_{SL}}{number of liquid side-draws}{-}
+        \todo{correct stage super-structure, remove liquid and vapour feed}
         \paragraph{Material balances} in their most general form for an inner column stage can be written as
         \Eqml{eq:col:CompBalance}{
     		0 = \left(V_j + S_j^V\right) \cdot y_{i,j} + \left(L_j + S_j^L\right) \cdot x_{i,j}
@@ -68,27 +77,23 @@
         \ncr{x_{ij}}{liquid mole fraction of component $i$ on stage $j$}{-}
         \ncr{S^L_j}{molar liquid side-draw flowrate form stage $j$}{\mols}
         \ncr{S^V_j}{molar vapour side-draw flowrate form stage $j$}{\mols}
-        \ncr{F^L_j}{feed molar flowrate to stage $j$}{\mols}
+        \ncr{F_j}{feed molar flowrate to stage $j$}{\mols}
         \ncr{z^L_{ij}}{feed mole fraction to stage $j$}{-}
-        Here the vapour $F^V_j$ and liquid $F^L_j$ phase of the feed to the stage $j$ are considered separately.
-        While this is not strictly necessary is allows for certain freedoms in terms of modelling
-        column operations, as sometimes the vapour fraction of a given feed is actually fed into
-        the vapour phase of a stage and therefore effectively in the liquid phase of the stage above.
-
         A certain amount of the liquid or vapour leaving a stage can be withdrawn from the column by means
-        of the vapour $S^V_j$ and liquid $S^L_j$ side draw streams. However it is convenient and seemed
-        to facilitate convergence to define the side draws in terms of dimensionless fractions by relating them
-        to the respective vapour or liquid stream leaving the stage
+        of the vapour $S^V_j$ and liquid $S^L_j$ side draw streams. During model development it occurred, that 
+        when a specification was made on given side-draw, convergence was sometimes hindered. This behaviour 
+        could be improved by specifying a dimensionless side-draw, 
         %
         \Eq{eq:val:vap:strip}{
             s_j^V = \frac{S_j^V}{V_j}, \eqanns, \\
-            s_j^L = \frac{S_j^L}{V_j}, \eqanns.
+            s_j^L = \frac{S_j^L}{V_j}, \eqanns,
         }%
         \ncr{s^V_j}{dimensionless vapour side-draw from stage $j$}{-}
         \ncr{s^L_j}{dimensionless liquid side-draw from stage $j$}{-}
         %
-        By considering these dimensionless the vapour $s_j^V$ and liquid $s_j^L$ side draws the material
-        balance can be rewritten as
+        rather than an actual stream. 
+        
+        By considering these dimensionless side-draws the material balance can be rewritten as
         \Eqml{eq:col:CompBalance}{
     		0 = \left(1 + s_j^V\right) \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right)
                 \cdot L_j \cdot x_{i,j} - V_{j+1} \cdot y_{i,j+1} - L_{j-1} \cdot x_{i,j-1}
@@ -97,36 +102,38 @@
         %
         As the model is also to be used for optimization purposes further extensions are necessary.
         The location of individual feeds as well as the number of theoretical or real stages of the
-        column is to be optimized. To accommodate that need, new variables are need, namely the feed
-        split $\zeta_{ij}^F$ for feed $i$ to stage $j$ as employed by \cite{Dunnebier.1999} are introduced.
+        column is to be optimized. To accommodate that need, new variables are introduced. Namely the feed
+        split $\zeta_{ij}^F$ for feed $i$ to stage $j$ as employed by \cite{Dunnebier.1999}.
         The split variables are integer variables that can take a value of either $0$ or $1$. Additionally it is
         assumed that each feed will only be fed to a single stage thus
         \Eq{eq:col:feedsplit}{
             1 =  \sum_{j=1}^N \zeta_{ij}, \eqannote{i = 1 \dots n_F, \quad j = 1 \dots n_S},
         }%
         \ncr{n_F}{number of feeds}{-}
-        where $n_F$ denotes the number of feeds.
 
         In order to optimize the number of stages several superstructures are possible. One can
         optimize the reboiler reflux location and condenser reflux location or each single one
         along with the feed and side draw locations. The stage number is then changed as all stages
         between condenser or reboiler reflux are effectively rendered inactive. The solution of
-        the mass and energy balances for each respective stages becomes trivial as only one single
-        vapour or liquid stream enters and exits the stage. While the choice if condenser and or reboiler
+        the mass and energy balances for each respective stage becomes trivial as only one single
+        vapour or liquid stream enters and exits the stage. 
+         
+        While the choice if condenser and or reboiler
         reflux is optimized is somewhat arbitrary some studies have shown \cite{Grossmann.2005} that
         the strategy of optimizing only feed location and reboiler reflux location possesses some
-        numerical advantages in terms of performance of the solution algorithm.
+        numerical advantages in terms of performance of the solution algorithm. Although this might be
+        specific to the solver used in the particular study, the same approach has been adapter here as well. 
 
-        With the newly introduced split variables for liquid $\zeta^L_{ij}$ and vapour $\zeta^V_{ij}$
+        With the newly introduced split variables for the feed $\zeta^F_{ij}$ 
         as well as the reboiler reflux $\zeta^R_j$ and the liquid $\zeta^{SL}_{ij}$ and vapour $\zeta^{SV}_{ij}$
         side draws, the material balances can be written as
         \Eqml{eq:col:CompBalance_opt}{
     		0 = \left(1 + s_j^V\right) \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right)
                 \cdot L_j \cdot x_{i,j} - V_{j+1} \cdot y_{i,j+1} \\ \hfill - L_{j-1} \cdot x_{i,j-1}
-                - \sum_{k=1}^{n_F} \zeta_{kj} \cdot F_j \cdot z_{i,j} - \zeta^R_j \cdot V_{n_S} \cdot y_{in_S}, \hfill%
+                - \sum_{k=1}^{n_F} \zeta^F_{kj} \cdot F_j \cdot z_{i,j} - \zeta^R_j \cdot V_{n_S} \cdot y_{in_S}, \hfill%
                 \\ \eqannote{i = 1 \dots C, \quad j = 1 \dots n_S, \quad k = 1 \dots n_F}.
     	}%
-        \ncg{\zeta^{L}_{ij}}{splitting variable for feed $i$ on stage $j$}{-}
+        \ncg{\zeta^{F}_{ij}}{splitting variable for feed $i$ on stage $j$}{-}
         \ncg{\zeta^{SV}_{ij}}{splitting variable for vapour side draw $i$ on stage $j$}{-}
         \ncg{\zeta^{SL}_{ij}}{splitting variable for liquid side draw $i$ on stage $j$}{-}
         \ncg{\zeta^{R}_{j}}{splitting variable for reboiler reflux on stage $j$}{-}
@@ -157,7 +164,7 @@
         \ncr{f_i^V}{vapour fugacity}{-}
         \ncr{f_i^L}{liquid fugacity}{-}
         %
-        This can also be written in terms of the, liquid activity coefficient $\gamma_i$,
+        These fugacities are calculated from the liquid activity coefficients $\gamma_i$,
         the pointing factor $F_{Pi}$, the reference vapour fugacity coefficient $\varphi_i$,
         the vapour pressure $p^S_i$ as well as the system pressure $p$ along with the vapour and
         liquid molar fractions
@@ -171,7 +178,7 @@
         \ncr{p}{system pressure}{Pa}
         \ncr{F_{Pi}}{compressibility factor of component $i$}{-}
         %
-        By reformulating \eqref{eq:col:fug_ext} an expression for the equilibrium ratios
+        After simple rearrangement \eqref{eq:col:fug_ext} an expression for the equilibrium ratios
         can be derived
         \Eq{eq:col:fug_ext}{
             y_i^{eq} = \underbrace{\frac{\gamma_i \, F_{Pi} \, \varphi^0_i \, p^S_i}{\varphi_i \, p}}_{K_i}
@@ -181,28 +188,28 @@
         The equations to determine the quantities used when computing the equilibrium ratios are by
         themselves functions of temperature, pressure, and vapour as well as liquid molar fractions.
         They are further discussed in \secref{sec:peng-rob}. It therefore becomes evident that the
-        equilibrium ratios are a major source  non-linearities in the MESH equations.
+        equilibrium ratios are a major source for the non-linearities in the presented model.
 
         When simulating a distillation process one might consider only equilibrium stages. This however
         will in most cases not reflect the true behaviour of a given stage as the time a vapour and
-        liquid phase are in contact might not be sufficient to achieve equilibrium. This can be accounted
-        for by introducing the Murphee tray efficiency \cite{Henley.op.2011}
+        liquid phase are in contact might not suffice to achieve equilibrium conditions. This can be 
+        accounted for by introduction of Murphee tray efficiencies \cite{Henley.op.2011}
         \Eq{eq:ss:murphee}{
-            \eta^{eq}_{ij} = \frac{y_{ij} - y_{ij+1}}{y_{ij}^{eq} - y_{ij+1}} \eqanncs.
+            \eta^{eq}_{ij} = \frac{y_{ij} - y_{ij+1}}{y_{ij}^{eq} - y_{ij+1}}, \eqanncs.
         }
         %
         While several models to approximate these efficiencies have been investigated, their predictions are
         most often rather poor \cite{Coulson.1999} and their evaluation rather complex. Furthermore as indicated
         in the formula they might differ for different species involved. For the scope of this model however
-        they are not computed separately, but rather supplied and assumes uniform for each stage and component.
+        they are not computed separately, but rather supplied and assumed constant for all stages and components.
 
         \paragraph{Enthalpy balances} are again written considering the previously defined stripping factors
         and splitting variables
     	\Eqml{eq:col:EnergyBalance}{
     		0 = \left(1 + s_j^V\right) \cdot V_j \cdot h^V_{j} + \left(1 + s_j^L\right)
                 \cdot L_j \cdot h^L_{j} - V_{j+1} \cdot h^V_{j+1} \\ \hfill - L_{j-1} \cdot h^L_{j-1}
-                - \sum_{k=1}^{n_F} \zeta_{kj} \cdot F_k \cdot h^{F}_{j} - \zeta^R_j \cdot V_N \cdot h^V_{N}, \hfill
-                \\ \eqannote{i = 1 \dots C, \quad j = 1 \dots N, \quad k = 1 \dots n_F}.
+                - \sum_{k=1}^{n_F} \zeta^F_{kj} \cdot F_k \cdot h^{F}_{j} - \zeta^R_j \cdot V_{n_S} \cdot h^V_{n_S} - Q_j, \hfill
+                \\ \eqannote{i = 1 \dots n_C, \quad j = 1 \dots n_S, \quad k = 1 \dots n_F}.
     	}%
         \ncr{h^V_j}{molar vapour enthalpy on stage $j$}{\molenth}
         \ncr{h^L_j}{molar liquid enthalpy on stage $j$}{\molenth}
@@ -233,13 +240,13 @@
         several assumptions can be made for the condenser. In general one can distinguish a total,
         partial vapour and partial vapour liquid condenser. For the total condenser all vapour that
         enters the respective stage is condensed and only liquid product is drawn . The partial vapour
-        condenser condenses only the vapour the is fed back into
+        condenser condenses only the vapour the which is to be fed back into
         the column and all product that is drawn is gaseous. The partial vapour liquid condenser
         denotes the most general case, where part of the incoming vapour is condensed and product
-        is drawn from the vapour and liquid phase. The most important thing to consider in these different cases,
-        is that while in both partial condensers a vapour liquid equilibrium takes place, due to the
-        absence of vapour the same does not hold for the total condenser. To accommodate that fact
-        the MESH equations have to be adjusted \cite{Naphtali.1971}. While the material and energy
+        is drawn from the vapour and liquid phase. The most important thing to consider in these 
+        different cases is, that while in both partial condensers a vapour liquid equilibrium takes 
+        place. Due to the absence of vapour the same does not hold for the total condenser. To accommodate 
+        that fact the MESH equations have to be adjusted \cite{Naphtali.1971}. While the material and energy
         balances remain unchanged the equilibrium equations have to be altered. First the vapour and
         liquid compositions are set equal for all but one component
         \Eq{eq:col:total}{
@@ -252,7 +259,7 @@
         %
         When implementing the model in a process simulator it is sensible to consider, that due to
         the limited accuracy of computers the omitted component in \eqref{eq:col:total} needs to
-        a non-trace component in the condenser stage. The implemented model therefore as to specify
+        a non-trace component in the condenser stage. The implemented model therefore has to specify
         such a component when a total condenser is chosen to avoid numerical difficulties.
 
         In practice it is highly unlikely, that the exact amount of energy required to condensate all
@@ -266,7 +273,7 @@
         }%
         \ncr{T^{sub}}{sub-cooling temperature}{K}
         %
-        \paragraph{Pressure} along the entire column is often specified in the steady-state case
+        \paragraph{Pressure} along the entire column is often specified in the steady-state case.
         However as it is inconvenient and unpractical to specify a pressure for each stage one might either specify
         a pressure at the top and bottom stage and assume a uniform pressure profile along the column, or
         specify either top $p_1$ or bottom pressure $p_N$ along with a total pressure drop $\Delta p$,
@@ -275,11 +282,11 @@
         trays the mass and energy balances become trivial, as only liquid enters and exits these trays.
         (For the case employed here, where the reboiler reflux is being optimized). This also means,
         that from the last active tray down to the reboiler -- if present -- there should be a uniform
-        profile. however, if a uniform pressure profile from that stage down is not enforced, the solver
-        will have to compensate for slight changes in the equilibrium due to pressure variations with minimal
-        vapour flow-rates. This is very undesirable, as it might to lead to severe problems in the solver,
-        or the calculation of other properties, dependent on these values. To account for this issue, the reboiler
-        reflux split can once more be employed
+        profile. It is important to note, that if a uniform pressure profile from the lowest active stage 
+        downward is not enforced, the solver will have to compensate for slight changes in the equilibrium 
+        due to pressure variations with minimal vapour flow-rates. This is very undesirable, as it might to 
+        lead to severe problems in the solver, or the calculation of other properties, dependent on these values. 
+        To account for this issue, the reboiler reflux split be employed to deactivate the pressure drop
         \Eq{}{
             p_i = p_{j-1} + \left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \cdot \Delta p_{j-1} \eqanns.
         }
@@ -288,27 +295,22 @@
         %
         As an alternative to specifying the pressure, one might consider calculating the pressure drop
         form (semi)-empirical models. There a numerous correlations for different types of column internals.
-        These correlations become particularly important id column dynamics are to be considered, as they
-        make a connection between holdups and flow-rates within the column. Two different pressure drop models
+        These correlations become particularly important if column dynamics are to be considered, as they
+        for a connection between holdups and flow-rates within the column. Two different pressure drop models
         have been implemented, one for trayed columns and another one for structured packings. As they are closely
-        tied to dynamics, they will be discussed in closed detail in \secref{chp:dynamics}.
+        tied to dynamics, they will be discussed in closed detail in that context (\secref{chp:dynamics}).
 
     \subsubsection{Specifications \& initialization}
     \label{sec:mathpro:steady:specinit}
         \todo{section superfluous? init procedure describen in impl sec...}
-        The equation systems presented above is comprised of $NC$ component balances, $NC$ equilibrium
-        equations, $2N$ summation equations and $N$ energy balances. This gives a total of $N (2C + 3)$
-        equations. On the other hand there are $N$ temperatures and pressures, $2N$ molar flow rates,
-        $N$ energy streams, and $NC$ vapour as well as and liquid concentrations. Additionally the feed flow rates
+        The equation systems presented above is comprised of $n_S n_C$ component balances and equilibrium
+        equations, $2n_S$ summation equations and $n_S$ energy balances. This gives a total of $n_S (2n_C + 3)$
+        equations. On the other hand there are $n_S$ temperatures and pressures, $2n_S$ molar flow rates,
+        $n_S$ energy streams, and $n_S n_C$ vapour as well as and liquid concentrations. Additionally the feed flow rates
         compositions and temperatures and the side draw split fractions or flow rates appear as variables. The
-        feeds and side draws would usually be specified, which leaves a total of $N (2C + 5)$ variables.
+        feeds and side draws would usually be specified, which leaves a total of $n_S (2n_C + 5)$ variables.
 
-        The pressure profile of a distillation column is usually specified. Either by explicitly
-        assigning a given pressure to each stage, or more conveniently by defining a pressure
-        either the top or bottom pressure as well as the pressure drop per stage
-        \Eq{eq:col_pprofile}{
-            \Delta p_{stage} = p_i - p_{i-1}, \eqannote{i = 2 \dots N}.
-        }
+        The pressure profile of a distillation column is usually specified.
         In terms of unit operations this pressure drop is of high significance,
         as many columns can only be feasibly operated, if the pressure drop does not exceed certain
         limits. In case of the ASU the production of Argon only became feasible as structured
@@ -316,10 +318,10 @@
         number of theoretical stages required to attain the desired Argon purities.
 
         The energies $Q_i$ denote addition heaters or cooler on the respective stages. For all
-        intermediate stages these values would be specified as well. If all energies would be
-        specified, that would -- along with the pressure profile -- sum up to $2N$ specifications,
-        which leaves $N (2C + 3)$ unknowns. As the number of equations and unknowns are the equal,
-        this system can then be solved.
+        intermediate stages these values would be specified as well. If all energies are
+        specified, that would -- along with the pressure profile -- sum up to $2 n_S$ specifications,
+        which leaves $n_S (2n_C + 3)$ unknowns. As the number of equations and unknowns are the equal,
+        this system is then well specified.
 
         In practice it is often challenging to correctly guess the condenser and reboiler heat loads in
         advance. This is especially true since they have a tremendous impact on the overall performance
@@ -328,7 +330,7 @@
         \cite{Henley.op.2011}, which replace the energy balance for the condenser and / or reboiler stage.
 
         One common specification is the so called reflux ratio $\nu^D = \frac{L_1}{V_1 + S_1^L}$ for
-        the condenser, or the boilup ratio $\nu^R = \frac{L_N}{V_N}$ for the reboiler.
+        the condenser, or the boil-up ratio $\nu^R = \frac{L_N}{V_N}$ for the reboiler.
         They are defined as the ratio of the molar flowrate sent back into the column over the
         product flowrate which leaves the column. For the reboiler this denotes a liquid stream,
         while for the condenser the product can be gaseous and liquid. Specifying this leads to
@@ -339,7 +341,7 @@
         \ncg{\nu^R}{boliup ratio}{-}
         \ncg{\nu^D}{reflux ratio}{-}
         as discrepancy functions. I addition to that further specifications are conceivable. Most
-        commonly distillate ($D$) or bottoms ($B$) flow rates, or purities, component flow rates ($d_i, b_i$)
+        commonly distillate ($D$) or bottoms ($B$) flow rates, purities, component flow rates ($d_i, b_i$)
         or temperatures. The corresponding discrepancy functions are summarized in \tabref{tab:discrepancy}.
 
         \begin{table}

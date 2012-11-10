@@ -56,7 +56,7 @@
     \label{sec:mathpro:dynamic}
         \input{Content/Process_dynamic}
     
-    \section{Economic models}
+    \section{Sizing \& costing models}
     \label{sec:mathpro:econ}
         \input{Content/Process_econ}
         

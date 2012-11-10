@@ -154,22 +154,28 @@ INITIALISATION_PROCEDURE
     hydraulics  := constant ;
   END
   NEXT
-    material    := flowrates ;
-    equilibrium := flowrates ;
+    JUMP_TO
+      material    := flowrates ;
+      equilibrium := flowrates ;
+    END
   END
   NEXT
-    REVERT material ;
-    REVERT equilibrium ;
-    REVERT energy ;
-    REVERT summation ;
+    JUMP_TO
+      REVERT material ;
+      REVERT equilibrium ;
+      REVERT energy ;
+      REVERT summation ;
+    END
   END
-  NEXT 
-    MOVE TO
+  NEXT
+    MOVE_TO
       side_scale := 1 ;
     END
   END
-  NEXT 
-    REVERT hydraulics ;
+  NEXT
+    JUMP_TO
+      REVERT hydraulics ;
+    END
   END
 \end{lstlisting}
 
@@ -201,8 +207,8 @@ INITIALISATION_PROCEDURE
         to converge columns with very complex multi-component systems.
 \begin{lstlisting}
 SEQUENCE
-  i:=1;
-  WHILE i< number_of_iterations DO
+  i := 1 ;
+  WHILE i < number_of_iterations DO
     SEQUENCE
       PARALLEL
         REASSIGN
@@ -214,7 +220,7 @@ SEQUENCE
             := column_section.iterate_to_rigorous;
         END
       END
-      i:=i+1;
+      i := i + 1 ;
     END
   END
   SWITCH

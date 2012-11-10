@@ -4,7 +4,7 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-%\setboolean{draft}{true}
+\setboolean{draft}{true}
 \setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
@@ -15,8 +15,8 @@
                 %Content/ProcessDesign,
                 %Content/ProcessEconomics,
                 %Content/MathModel,
-                %Content/ProcessModel,
-                Content/OptimizaionApplication,
+                Content/ProcessModel,
+                %Content/OptimizationApplication,
                 %Content/outlook,
                 %Content/BibAppendix,
                 %Content/report_short,
@@ -47,7 +47,7 @@
 %	\include{Content/Uncertainty}
     \include{Content/ProcessModel}
 %    \include{Content/Optimizaion_Theory}
-    \include{Content/OptimizaionApplication}
+    \include{Content/OptimizationApplication}
 %	\include{Content/MathModel}
 %   \include{Content/Dynamic}
 %	\include{Content/MathConsiderations}

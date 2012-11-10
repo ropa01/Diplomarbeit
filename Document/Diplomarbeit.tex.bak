@@ -4,7 +4,7 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-%\setboolean{draft}{true}
+\setboolean{draft}{true}
 \setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}

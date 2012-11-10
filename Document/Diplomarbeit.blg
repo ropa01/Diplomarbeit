@@ -13,45 +13,45 @@ A level-1 auxiliary file: Content/BibAppendix.aux
 Database file #1: Literature.bib
 Warning--empty publisher in Boston.
 Warning--empty year in Boston.
-You've used 27 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            704 strings with 9675 characters,
-and the built_in function-call counts, 9428 in all, are:
-= -- 959
-> -- 404
+            709 strings with 9852 characters,
+and the built_in function-call counts, 9792 in all, are:
+= -- 996
+> -- 422
 < -- 4
-+ -- 157
-- -- 130
-* -- 709
-:= -- 1550
-add.period$ -- 82
-call.type$ -- 27
-change.case$ -- 143
++ -- 164
+- -- 136
+* -- 740
+:= -- 1611
+add.period$ -- 85
+call.type$ -- 28
+change.case$ -- 149
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 340
-empty$ -- 749
-format.name$ -- 130
-if$ -- 1957
+cite$ -- 30
+duplicate$ -- 351
+empty$ -- 776
+format.name$ -- 136
+if$ -- 2030
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 33
-newline$ -- 138
-num.names$ -- 56
-pop$ -- 131
+int.to.str$ -- 28
+missing$ -- 34
+newline$ -- 143
+num.names$ -- 58
+pop$ -- 135
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 123
 quote$ -- 0
-skip$ -- 230
+skip$ -- 237
 stack$ -- 0
-substring$ -- 731
-swap$ -- 58
+substring$ -- 761
+swap$ -- 59
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 100
 warning$ -- 2
-while$ -- 100
-width$ -- 29
-write$ -- 304
+while$ -- 104
+width$ -- 30
+write$ -- 315
 (There were 2 warnings)

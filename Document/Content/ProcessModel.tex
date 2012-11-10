@@ -24,45 +24,46 @@
 %    the interested reader is referred to \cite{Acharya.1996}.
 
 
-    This chapter deals with the different aspects of the process model developed within the scope of this thesis. 
-    As depicted in \figref{fig:asu_simple} In the case of cryogenic air separation three main tasks for the process 
-    can be identified. These are the compression of raw materials, heat exchange with product streams and the separation 
-    of air. While those different stages are highly interdependent they will be discussed separately and mathematical 
-    models for the main process units will be presented. 
-    
-    The first section (\secref{sec:mathpro:steady}) deals with a steady state version of the process model. Especially 
-    for steady state models the issue of initializing the variables in such a way that the solver can converge to a solution 
-    becomes crucial. With that in mind the strategies developed to initialize in particular the distillation columns will be 
-    elaborated upon within that first section as well. 
-    
-    The second section (\secref{sec:mathpro:dynamic}) is devoted to a dynamic version of the models for some process units. 
-    In addition to the models themselves several aspects which arise, when considering process dynamics will also be part 
-    of that section. 
-    
-    In the third section (\secref{sec:mathpro:econ}) of this chapter takes a closer look at how the economics of the process can be captured during 
-    process simulation. Understandably, the issue of economic evaluation is closely tied to the sizing of each process 
-    unit and with that also to the operational boundaries of the process equipment. As these aspects are for the most 
-    part treated uniformly for the steady state case and dynamic case the will be dealt with in a single section. 
-    
-    All presented models have been implemented in the equation based process simulator \gproms. Certain aspects arising when  
-    implementing the models will be discussed in the last section of this chapter \secref{sec:mathpro:implementation}. 
-    
+    This chapter will illustrate with the different process units and their mathematical representation.
+    As depicted in \figref{fig:asu_simple} three main tasks need to be performed within the cryogenic air separation process.
+    These are pre-purification and compression of raw materials, heat exchange with product streams and separation of streams. 
+    While those different stages are highly interdependent they will be discussed separately and mathematical
+    models for the various process units contained in each stage will be presented.
+
+    The first section (\secref{sec:mathpro:steady}) deals with a steady state version of the process model. Especially
+    for steady state models the issue of initializing the variables in such a way that the solver can converge to a solution
+    becomes crucial. With that in mind the strategies developed to initialize in particular the distillation columns will also 
+    be elaborated upon.
+
+    The second section (\secref{sec:mathpro:dynamic}) is devoted to a dynamic version of the models for some process units.
+    In addition to the models themselves several aspects which arise, when considering process dynamics will also be part
+    of that section.
+
+    The third section (\secref{sec:mathpro:econ}) of this chapter takes a closer look at how the economics of the process 
+    can be captured within the framework of process simulation and optimization. Understandably, the issue of economic 
+    evaluation is closely linked to the minimum sizing of each process unit. As these aspects are for the most
+    part treated uniformly for the steady state case and dynamic case -- since only algebraic equations are involved -- 
+    they will be dealt within a separate section.
+
+    All presented models have been implemented in the equation based process simulator \gproms. Certain aspects arising when
+    implementing the models will be discussed in the last section of this chapter \secref{sec:mathpro:implementation}.
+
 
     \section{Steady - state unit models}
     \label{sec:mathpro:steady}
         \input{Content/Process_steady}
-    
+
     \section{Dynamic unit models}
     \label{sec:mathpro:dynamic}
         \input{Content/Process_dynamic}
-    
+
     \section{Sizing \& costing models}
     \label{sec:mathpro:econ}
         \input{Content/Process_econ}
-        
+
     \section{Thermodynamic models}
         \label{sec:mathpro:thermo}
-        
+
         Aside from the unit operation models, the behaviour of materials in a process needs to be adequately
         accounted for. This is done by means of so called equations of state (EOS) and excess Gibbs energy
         models. In terms of thermodynamics there are only a limited amount of variables. Namely the pressure,
@@ -85,7 +86,7 @@
         \ncr{m}{parameter in Peng-Robinson EOS}{-}
         \ncr{a_c}{parameter in Peng-Robinson EOS}{\frac{m^5}{mol^2 s^2}}
         \ncr{b}{parameter in Peng-Robinson EOS}{\frac{m^3}{mol}}
-        
+
         However the Peng-Robinson EOS relies on the so called one-fluid theory which models each fluid as pure.
         To model mixtures the pure component parameters have to be ''mixed''
         \Eq{}{
@@ -93,11 +94,11 @@
             a_{ij} & = \sqrt{a_i a_j} (1 - k_{ij}), \\
             b & = \sum_{i=1}^C y_i b_i.
         }
-    
+
         From that EOS numerous relevant properties such as excess enthalpy, fugacity coefficients or densities
         can be calculated. For a list of some relevant equations refer to \secref{app:peng_rob_deriv}.
         \todo{which properties should be included? Or move everything to Appendix?}
-        
+
     \section{Implementation}
     \label{sec:mathpro:implementation}
         \input{Content/Process_impl}

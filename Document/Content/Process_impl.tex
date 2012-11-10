@@ -44,7 +44,6 @@ based on the previously model structure will be presented.
             \label{fig:mathpro:modelstruct}
         \end{figure}
     \end{landscape}
-    \todo{include initial specifications in model structure}
 
     The structure of the developed model is depicted in \figref{fig:mathpro:modelstruct}. The main block denote separate model
     units that can, with the exception of the main model be activated or deactivated. The connections inside the main blocks
@@ -79,7 +78,6 @@ based on the previously model structure will be presented.
     in appropriate variables.
 
 \subsection{Initialization procedures}
-    \todo{include gPROMS code for IP's}
     \todo{mention TP flashes branch of concentration sub-unit similar to adiabatic column, as all streams are in equil..}
 
     This section deals with different initialization strategies for the distillation columns. Before going
@@ -154,22 +152,28 @@ INITIALISATION_PROCEDURE
     hydraulics  := constant ;
   END
   NEXT
-    material    := flowrates ;
-    equilibrium := flowrates ;
+    JUMP_TO
+      material    := flowrates ;
+      equilibrium := flowrates ;
+    END
   END
   NEXT
-    REVERT material ;
-    REVERT equilibrium ;
-    REVERT energy ;
-    REVERT summation ;
+    JUMP_TO
+      REVERT material ;
+      REVERT equilibrium ;
+      REVERT energy ;
+      REVERT summation ;
+    END
   END
-  NEXT 
+  NEXT
     MOVE_TO
       side_scale := 1 ;
     END
   END
-  NEXT 
-    REVERT hydraulics ;
+  NEXT
+    JUMP_TO
+      REVERT hydraulics ;
+    END
   END
 \end{lstlisting}
 

@@ -11,19 +11,18 @@
     are introduced. Namely the component holdups $n_{ij}$ and internal energy $U_j$ for each stage.
     with that the component balance equations as presented in the previous section can now be rewritten as
         \Eqml{eq:col:CompBalance_opt}{
-    		\left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \fracdd{n_{ij}}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right)
-                \cdot L_j \cdot x_{i,j} - V_{j+1} \cdot y_{i,j+1} \\ \hfill - L_{j-1} \cdot x_{i,j-1}
-                - \sum_{k=1}^{F^V} \zeta_{kj} \cdot F_j^V \cdot z^V_{i,j} - \sum_{l=1}^{F^L}%
-                \zeta_{lj} \cdot F_j^L \cdot z_{i,j}^L - \zeta^R_j \cdot V_N \cdot y_{iN}, \hfill%
+    		\left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \fracdd{n_{ij}}{t} = \left(1 + s_j^V\right)
+                \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right) \cdot L_j \cdot x_{i,j} - V_{j+1}
+                \cdot y_{i,j+1} \\ \hfill - L_{j-1} \cdot x_{i,j-1}
+                - \sum_{l=1}^{n_F} \zeta_{lj} \cdot F_j \cdot z_{i,j} - \zeta^R_j \cdot V_N \cdot y_{iN}, \hfill%
                 \\ \eqannote{i = 1 \dots n_C-1, \quad j = 1 \dots N, \quad k = 1 \dots n_F, \quad l = 1 \dots n_F}.
     	}%
     While the internal energy balances become
         \Eqml{eq:col:EnergyBalance}{
     		\left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \fracdd{U_j}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot h^V_{j} + \left(1 + s_j^L\right)
                 \cdot L_j \cdot h^L_{j} - V_{j+1} \cdot h^V_{j+1} \\ \hfill - L_{j-1} \cdot h^L_{j-1}
-                - \sum_{k=1}^{F^V} \zeta_{kj} \cdot F_k^V \cdot h^{FV}_{j} - \sum_{l=1}^{F^L}
-                \zeta_{lj} \cdot F_j^L \cdot h^{FL}_{j} - \zeta^R_j \cdot V_N \cdot h^V_{N}, \hfill
-                \\ \eqannote{i = 1 \dots n_C, \quad j = 1 \dots n, \quad k = 1 \dots n_F, \quad l = 1 \dots n_F}.
+                - \sum_{k=1}^{n_F} \zeta_{kj} \cdot F_k \cdot h^{F}_{j} - \zeta^R_j \cdot V_N \cdot h^V_{N}, \hfill
+                \\ \eqannote{i = 1 \dots n_C, \quad j = 1 \dots n_S, \quad k = 1 \dots n_F}.
     	}%
     \ncr{n_{ij}}{holdup of component $i$ on stage $j$ }{mol}
     \ncr{U_j}{internal energy holdup on stage $j$}{J}
@@ -186,10 +185,25 @@
 
 \subsection{Integrated condenser / reboiler unit}
     \todo{include Integrated condenser / reboiler unit}
+
+    As it has been stated on several occasions the condenser reboiler unit is essential in the cryogenic air separation process.
+    Even more so, when we consider the dynamics behaviour of the process. In order to model this unit, it is assumed that 
+    all vapour entering the stage will be condensed, thus the unit is regarded as total condenser. Furthermore the holdups on the 
+    condenser side are assumed to negligible. The reboiler side on the other hand is modeled as an equilibrium stage much like 
+    the stages within the column. 
     
-    As it has been stated on several occasions the condenser reboiler unit is essential in the cryogenic air separation process. 
-    When it comes to dynamics the pressure profile deserves much attention, as it is crucial for feasible operations of
-    the entire process. The pressure difference between the low and high pressure column enables the heat exchange 
-    in this unit. 
+    \subsubsection{Reboiler side}
+    As the reboiler side behaves like an equilibrium stage, the governing equations are very similar to those for 
+    a stage inside the columns. And will be given without much further comment. 
     
-    
+    The material balances 
+    \Eq{}{
+        \fracdd{n_i^{reb}}{t} = L_{reb}^{in} \cdot x_i^{reb} - V_{reb}^{out} \cdot y_i^{reb} - L_{reb}^{out} \cdot y_i^{con}, \eqannc.
+    }
+    Internal energy balance
+    \Eq{}{
+        \fracdd{U_{reb}}{t} = L_{reb}^{in} \cdot h_{in}^{reb} - V_{reb}^{out} \cdot h_{V}^{reb} - L_{reb}^{out} \cdot h_{L}^{reb}.
+    }
+    In addition to the balances the equilibrium and summation equations need to be included.
+
+

@@ -4,25 +4,37 @@
 0
 1
 Diplomarbeit.tex
-64
+67
+6
 3
-0
 
 Diplomarbeit.tex
 TeX:UNIX
-403812347 0 -1 154 -1 484 0 0 934 409 1 201 255 -1 -1 0 0 62 -1 -1 62 1 0 484 -1   0
-Content\Dynamic.tex
-TeX
-17838075 4 -1 3240 -1 3241 175 175 1346 606 1 737 816 -1 -1 0 0 23 -1 -1 23 1 0 3241 -1   0
+135376891 0 -1 154 -1 133 0 0 934 409 1 81 102 -1 -1 0 0 62 -1 -1 62 1 0 133 -1   0
+Content\ProcessModel.tex
+TeX:UNIX
+1159163 0 -1 3588 -1 3240 150 150 1056 640 0 545 136 -1 -1 0 0 36 -1 -1 36 1 0 3240 -1   0
+Content\Process_steady.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 125 125 1031 615 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Content\Process_steady_separation.tex
+TeX:UNIX
+269594619 0 -1 21789 -1 22939 150 150 1056 640 1 145 272 -1 -1 0 0 -1 -1 -1 -1 2 0 22939 -1  1 23246 -1   0
+Content\AirSep.tex
+TeX:UNIX
+1159163 0 -1 415 -1 440 125 125 1031 615 0 25 170 -1 -1 0 0 35 -1 -1 35 1 0 440 -1   0
 preambel.tex
 TeX:UNIX
-1159163 0 -1 4793 -1 4904 0 0 1009 215 0 433 459 -1 -1 0 0 129 -1 -1 129 1 0 4904 -1   0
+1159163 0 -1 4793 -1 4904 0 0 1009 215 0 121 459 -1 -1 0 0 129 -1 -1 129 1 0 4904 -1   0
+Content\ProcessEconomics.tex
+TeX:UNIX
+269594619 0 -1 862 -1 610 175 175 1369 633 1 369 204 -1 -1 0 0 27 -1 -1 27 1 0 610 -1   0
+Content\Dynamic.tex
+TeX
+286273531 4 -1 3240 -1 3241 175 175 1346 606 1 345 1122 -1 -1 0 0 23 -1 -1 23 1 0 3241 -1   0
 E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\preambel.tex
 TeX:UNIX
 269594619 1 -1 1960 -1 1774 175 175 1346 606 0 25 51 -1 -1 0 0 108 -1 -1 108 1 0 1774 -1   0
-:\Users\Abakus W7\Desktop\Neuer Ordner (3)\bilder.tex
-TeX
-1060859 0 -1 222 -1 441 125 125 1296 556 0 25 221 -1 -1 0 0 108 -1 -1 108 1 0 441 -1   0
 E:\Users\robertpack\Studium\Studienarbeit\Aktivität\Dokument\comparison.tex
 TeX:UNIX
 1159163 1 -1 9751 -1 9321 100 100 1081 461 0 25 2108 -1 -1 0 0 49 -1 -1 49 1 0 9321 -1   0
@@ -152,9 +164,6 @@ TeX:UNIX
 pgfplots\Splitter.tex
 TeX:UNIX
 269594619 0 -1 19 -1 19 0 0 1194 458 0 177 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
-Content\ProcessEconomics.tex
-TeX:UNIX
-1159163 1 -1 18086 -1 17988 175 175 1369 633 0 25 204 -1 -1 0 0 27 -1 -1 27 1 0 17988 -1   0
 Content\column.tex
 TeX
 269496315 1 -1 6156 -1 6176 125 125 1274 583 0 897 238 -1 -1 0 0 15 -1 -1 15 1 0 6176 -1   0
@@ -204,28 +213,36 @@ TeX:UNIX
 *Diplomarbeit.tex
 >
 *preambel
+>
+*colours
+*listings_gPROMS_def
+<
 *pgfplots/TikZTemplates
-*Content/Preamble/CoverPage
-*Content/Preamble/TaskDescription
-*Content/Preamble/StatutoryDeclaration
 *Content/Lists
 *Content/Abstract
 *Content/Introduction
+>
+*pgfplots/GasPie
+<
 *Content/AirSep
 >
 *Pictures/tech_compar
 *Pictures/ASU_text
 *Pictures/PSA.tex
+*pgfplots/GasPermeation
 <
-*Content/ProcessDesign
 *Content/ProcessEconomics
 >
 *Tables/PriceIndices
+*pgfplots/ProjectCashFlow
 <
-*Content/report_short
-*Content/MathModel
+*Content/ProcessModel
 >
 *pgfplots/ASU_process_simple
+*Content/Process_steady
+>
+*Content/Process_steady_separation
+>
 *Pictures/col_complete_super
 *Pictures/col_stage_super
 *Pictures/condenser
@@ -234,15 +251,24 @@ TeX:UNIX
 *Pictures/LPC_example
 *GNUPlot/LPC_init_o2
 *GNUPlot/LPC_init_n2
-*Pictures/ASU_simple_coco
-*Pictures/foreward
-*Pictures/feedback
 <
-*Content/Dynamic
+*Pictures/condenser_reboiler
+*Pictures/HX_superstructure
+*pgfplots/Compressor
+*GNUPlot/pr_isenthalpes
+<
+*Content/Process_dynamic
 >
 *Pictures/tray_model
+*Pictures/packing_geo
 <
-*Content/outlook
+*Content/Process_econ
+*Content/Process_impl
+>
+*Pictures/gP_ModelStructure
+<
+<
+*Content/OptimizationApplication
 *Content/BibAppendix
 >
 *Literature.bib

@@ -56,3 +56,24 @@ The simulation of chemical processes supplies valuable insight into th e
         \item HPC dimensionless side draw (gaseous $N_2$product) ($s_1^{V, \text{HPC}}$)
         \item LPC dimensionless side draws ($s_i^{V, \text{LPC}}$)
     \end{itemize}
+
+\section{Optimization \& control}
+	To include the design of a PI control structure in the process, the following constraints need to be added. 
+	\Eq{}{
+		u_m & = b_{m,1} + \sum_{j=1}^{n_m} \left( K_{m,n} \cdot e_{m,n} + I_{m,n} \right), 
+			\eqannote{m = 1 \dots n_{in}}, \\
+		e_{m,n} & = set_{m,n} - meas_{n} \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m}, \\
+		\frac{\mathrm{d} I}{\mathrm{d} t} & = \frac{e_{m,n}}{\tau_{m.n}} \eqannote{m = 1 
+			\dots n_{in}, n = 1 \dots n_m}, \\
+		\frac{\mathrm{d} I}{\mathrm{d} t} & = 0 \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m}, \\
+		set_{m,n} & = set_{m-1,n} \eqannote{m = 2 \dots n_{in}, n = 1 \dots n_m}, \\
+		K^L_{m,n} \cdot \zeta^C_{m,n} & \leq K_{m,n}  \leq K^U_{m,n} \eqannote{m = 1 \dots n_{in}, 
+			n = 1 \dots n_m}, \\
+		\sum_{m=1}^{n_m} \zeta_{m,n}^C & = 1 eqannote{m = 1 \dots n_{in}}, \\
+		\sum_{n=1}^{n_{in}} \zeta_{m,n}^C & = 1 eqannote{n = 1 \dots n_{m}}, 
+	}
+	SInce new states have been introduced, the corresponding initial conditions will have to be included
+	\Eq{}{
+		I_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\
+		e_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\
+	} 

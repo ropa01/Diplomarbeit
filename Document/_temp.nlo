@@ -1,0 +1,25 @@
+\nomenclatureentry{R $n_{ij}$@[{$n_{ij}$}]\begingroup holdup of component $i$ on stage $j$  \nomunit {mol}\nomeqref {0.2}|nompageref}{1}
+\nomenclatureentry{R $U_j$@[{$U_j$}]\begingroup internal energy holdup on stage $j$ \nomunit {J}\nomeqref {0.2}|nompageref}{1}
+\nomenclatureentry{R $n_j^L$@[{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {0.7}|nompageref}{2}
+\nomenclatureentry{R $n_j^V$@[{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {0.7}|nompageref}{2}
+\nomenclatureentry{R $V_{stage}$@[{$V_{stage}$}]\begingroup stage volume \nomunit {m^3}\nomeqref {0.8}|nompageref}{2}
+\nomenclatureentry{C $g$@[{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {0.10}|nompageref}{3}
+\nomenclatureentry{R $\ell _{weir}$@[{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {0.10}|nompageref}{3}
+\nomenclatureentry{R $h_{ow}$@[{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {0.10}|nompageref}{3}
+\nomenclatureentry{G $\Phi $@[{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {0.10}|nompageref}{3}
+\nomenclatureentry{R $h_f$@[{$h_f$}]\begingroup froth height \nomunit {m}\nomeqref {0.11}|nompageref}{3}
+\nomenclatureentry{R $h_w$@[{$h_w$}]\begingroup weir height \nomunit {m}\nomeqref {0.11}|nompageref}{3}
+\nomenclatureentry{R $A_{active}$@[{$A_{active}$}]\begingroup active tray area \nomunit {m^2}\nomeqref {0.12}|nompageref}{3}
+\nomenclatureentry{G $\beta $@[{$\beta $}]\begingroup aeration factor \nomunit {-}\nomeqref {0.14}|nompageref}{3}
+\nomenclatureentry{R $h_L$@[{$h_L$}]\begingroup dimesionless holdup \nomunit {-}\nomeqref {0.16}|nompageref}{4}
+\nomenclatureentry{G $\delta $@[{$\delta $}]\begingroup film thickness \nomunit {m}\nomeqref {0.16}|nompageref}{4}
+\nomenclatureentry{R $S$@[{$S$}]\begingroup corrugation side \nomunit {m}\nomeqref {0.16}|nompageref}{4}
+\nomenclatureentry{G $\Theta $@[{$\Theta $}]\begingroup corrugation angle \nomunit {rad}\nomeqref {0.17}|nompageref}{4}
+\nomenclatureentry{G $\mu _G$@[{$\mu _G$}]\begingroup vapour viscosity \nomunit {Pa \cdot s}\nomeqref {0.17}|nompageref}{4}
+\nomenclatureentry{G $\epsilon $@[{$\epsilon $}]\begingroup packing void fraction \nomunit {-}\nomeqref {0.17}|nompageref}{4}
+\nomenclatureentry{R $v_G$@[{$v_G$}]\begingroup vapour velocity \nomunit {\frac {m}{s}}\nomeqref {0.17}|nompageref}{4}
+\nomenclatureentry{R $\delta p_{dry}$@[{$\delta p_{dry}$}]\begingroup dry pressure drop \nomunit {\frac {Pa}{m}}\nomeqref {0.17}|nompageref}{4}
+\nomenclatureentry{R $C_1$@[{$C_1$}]\begingroup packing constant \nomunit {}\nomeqref {0.17}|nompageref}{4}
+\nomenclatureentry{R $C_2$@[{$C_2$}]\begingroup packing constant \nomunit {}\nomeqref {0.17}|nompageref}{4}
+\nomenclatureentry{G $\mu _L$@[{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {0.20}|nompageref}{4}
+\nomenclatureentry{R $v_L$@[{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {0.20}|nompageref}{4}
