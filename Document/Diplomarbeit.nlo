@@ -1,42 +1,3 @@
-\nomenclatureentry{R $C_P$@[{$C_P$}]\begingroup total process cost \nomunit {\$}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{R $C_P^0$@[{$C_P^0$}]\begingroup reference process cost \nomunit {\$}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{R $Q_P$@[{$Q_P$}]\begingroup process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{R $Q_P^0$@[{$Q_P^0$}]\begingroup reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{R $D$@[{$D$}]\begingroup degression coefficient \nomunit {-}\nomeqref {3.1}|nompageref}{9}
-\nomenclatureentry{R $C_1$@[{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {3.2}|nompageref}{9}
-\nomenclatureentry{R $C_2$@[{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {3.2}|nompageref}{9}
-\nomenclatureentry{R $I_1$@[{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {3.2}|nompageref}{9}
-\nomenclatureentry{R $I_2$@[{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {3.2}|nompageref}{9}
-\nomenclatureentry{R $C^{i}_E$@[{$C^{i}_E$}]\begingroup cost of equipment $i$ \nomunit {\$}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{R $C^{i}_B$@[{$C^{i}_B$}]\begingroup reference cost of equipment $i$ \nomunit {\$}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{R $Q^{i}$@[{$Q^{i}$}]\begingroup specific quantity for equipment $i$ \nomunit {variable}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{R $Q^{i}_B$@[{$Q^{i}_B$}]\begingroup equipment specific reference quantity \nomunit {variable}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{R $M^{i}$@[{$M^{i}$}]\begingroup equipment specific factor \nomunit  \nomunit {-}\nomeqref {3.2}|nompageref}{10}
-\nomenclatureentry{R $f^{i}_C$@[{$f^{i}_C$}]\begingroup design complexity correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{R $f^{i}_M$@[{$f^{i}_M$}]\begingroup material selection correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{R $f^{i}_P$@[{$f^{i}_P$}]\begingroup pressure correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{R $f^{i}_T$@[{$f^{i}_T$}]\begingroup temperature correction to equipment cost \nomunit {-}\nomeqref {3.3}|nompageref}{10}
-\nomenclatureentry{R $n_{RM}$@[{$n_{RM}$}]\begingroup number of different raw materials \nomunit {-}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{R $C_{RM}$@[{$C_{RM}$}]\begingroup total cost of raw materials \nomunit {\$}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{R $C^{i}_{RM}$@[{$C^{i}_{RM}$}]\begingroup mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{R $\dot {m}_i$@[{$\dot {m}_i$}]\begingroup mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{R $t_{op}$@[{$t_{op}$}]\begingroup time of process operations \nomunit {s}\nomeqref {3.4}|nompageref}{12}
-\nomenclatureentry{R $n_{E}$@[{$n_{E}$}]\begingroup number of process units \nomunit {-}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{R $C_{EC}$@[{$C_{EC}$}]\begingroup total cost of energy \nomunit {\$}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{R $C^{i}_{EC}$@[{$C^{i}_{EC}$}]\begingroup mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{R $\dot {e}_{ij}$@[{$\dot {e}_{ij}$}]\begingroup energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {3.5}|nompageref}{12}
-\nomenclatureentry{R $C_{FILL}$@[{$C_{FILL}$}]\begingroup cost of raw materials to fill the process \nomunit {\$}\nomeqref {3.6}|nompageref}{12}
-\nomenclatureentry{R $POT$@[{$POT$}]\begingroup Payout time \nomunit {\$}\nomeqref {3.8}|nompageref}{13}
-\nomenclatureentry{R $POT$@[{$POT$}]\begingroup payout time \nomunit {a}\nomeqref {3.9}|nompageref}{13}
-\nomenclatureentry{R $ROI$@[{$ROI$}]\begingroup return of investment \nomunit {-}\nomeqref {3.10}|nompageref}{13}
-\nomenclatureentry{R $q$@[{$q$}]\begingroup interest factor \nomunit {-}\nomeqref {3.10}|nompageref}{14}
-\nomenclatureentry{R $C_n$@[{$C_n$}]\begingroup final value of an investment \nomunit {\$}\nomeqref {3.10}|nompageref}{14}
-\nomenclatureentry{R $C_0$@[{$C_0$}]\begingroup initial value of an investment \nomunit {\$}\nomeqref {3.10}|nompageref}{14}
-\nomenclatureentry{R $i$@[{$i$}]\begingroup interest rate \nomunit {\%}\nomeqref {3.11}|nompageref}{14}
-\nomenclatureentry{R $a$@[{$a$}]\begingroup annuity \nomunit {\$}\nomeqref {3.13}|nompageref}{15}
-\nomenclatureentry{R $C_{0e}$@[{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {3.15}|nompageref}{15}
-\nomenclatureentry{R $C_{0r}$@[{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {3.16}|nompageref}{15}
-\nomenclatureentry{R $NPV$@[{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {3.17}|nompageref}{15}
 \nomenclatureentry{R $n_S$@[{$n_S$}]\begingroup number of column stages \nomunit {-}\nomeqref {4.0}|nompageref}{18}
 \nomenclatureentry{R $n_C$@[{$n_C$}]\begingroup number of components \nomunit {-}\nomeqref {4.0}|nompageref}{18}
 \nomenclatureentry{R $n_F$@[{$n_F$}]\begingroup number of feeds \nomunit {-}\nomeqref {4.0}|nompageref}{18}
@@ -118,22 +79,22 @@
 \nomenclatureentry{R $V_{reb}^{out}$@[{$V_{reb}^{out}$}]\begingroup vapour reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.77}|nompageref}{39}
 \nomenclatureentry{R $y_{i}^{reb}$@[{$y_{i}^{reb}$}]\begingroup reboiler vapour mole fractions \nomunit {-}\nomeqref {4.77}|nompageref}{39}
 \nomenclatureentry{R $x_{i}^{reb}$@[{$x_{i}^{reb}$}]\begingroup reboiler liquid mole fractions \nomunit {-}\nomeqref {4.77}|nompageref}{39}
-\nomenclatureentry{R $U_{reb}$@[{$U_{reb}$}]\begingroup reboiler internal energy holdup \nomunit {kJ}\nomeqref {4.78}|nompageref}{39}
-\nomenclatureentry{R $h_{L}^{reb}$@[{$h_{L}^{reb}$}]\begingroup reboiler liquid enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.78}|nompageref}{39}
-\nomenclatureentry{R $h_{V}^{reb}$@[{$h_{V}^{reb}$}]\begingroup reboiler vapour enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.78}|nompageref}{39}
+\nomenclatureentry{R $U_{reb}$@[{$U_{reb}$}]\begingroup reboiler internal energy holdup \nomunit {kJ}\nomeqref {4.78}|nompageref}{40}
+\nomenclatureentry{R $h_{L}^{reb}$@[{$h_{L}^{reb}$}]\begingroup reboiler liquid enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.78}|nompageref}{40}
+\nomenclatureentry{R $h_{V}^{reb}$@[{$h_{V}^{reb}$}]\begingroup reboiler vapour enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.78}|nompageref}{40}
 \nomenclatureentry{R $C_{\text {column}}$@[{$C_{\text {column}}$}]\begingroup column cost \nomunit {\$}\nomeqref {4.87}|nompageref}{41}
 \nomenclatureentry{R $C_{tower}$@[{$C_{tower}$}]\begingroup tower cost \nomunit {\$}\nomeqref {4.87}|nompageref}{41}
 \nomenclatureentry{R $C_{\text {platform}}$@[{$C_{\text {platform}}$}]\begingroup platform cost \nomunit {\$}\nomeqref {4.87}|nompageref}{41}
 \nomenclatureentry{R $C_{\text {internals}}$@[{$C_{\text {internals}}$}]\begingroup cost of column internals \nomunit {\$}\nomeqref {4.87}|nompageref}{41}
 \nomenclatureentry{R $W_{tower}$@[{$W_{tower}$}]\begingroup weight of a tower \nomunit {lbs}\nomeqref {4.88}|nompageref}{41}
 \nomenclatureentry{R $t_s$@[{$t_s$}]\begingroup tower shell thickness \nomunit {in}\nomeqref {4.90}|nompageref}{41}
-\nomenclatureentry{R $S$@[{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.91}|nompageref}{41}
-\nomenclatureentry{R $E$@[{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.91}|nompageref}{41}
-\nomenclatureentry{R $t_p$@[{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.91}|nompageref}{41}
+\nomenclatureentry{R $S$@[{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.91}|nompageref}{42}
+\nomenclatureentry{R $E$@[{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.91}|nompageref}{42}
+\nomenclatureentry{R $t_p$@[{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.91}|nompageref}{42}
 \nomenclatureentry{R $p_D$@[{$p_D$}]\begingroup design pressure \nomunit {psig}\nomeqref {4.92}|nompageref}{42}
 \nomenclatureentry{R $p_O$@[{$p_O$}]\begingroup operating pressure \nomunit {psig}\nomeqref {4.92}|nompageref}{42}
 \nomenclatureentry{R $t_w$@[{$t_w$}]\begingroup thickness wind and earthquake correction \nomunit {in}\nomeqref {4.93}|nompageref}{42}
-\nomenclatureentry{R $h_{\text {plate}}$@[{$h_{\text {plate}}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.95}|nompageref}{42}
+\nomenclatureentry{R $h_{\text {plate}}$@[{$h_{\text {plate}}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.95}|nompageref}{43}
 \nomenclatureentry{R $ent_j$@[{$ent_j$}]\begingroup fractional entrainment for 80\% flooding on stage $j$ \nomunit {-}\nomeqref {4.96}|nompageref}{43}
 \nomenclatureentry{R $FLV_j$@[{$FLV_j$}]\begingroup Sherwood flow parameter on stage $j$ \nomunit {-}\nomeqref {4.97}|nompageref}{43}
 \nomenclatureentry{R $v_j^{flood}$@[{$v_j^{flood}$}]\begingroup flooding velocity on stage $j$ \nomunit {\frac {m}{s}}\nomeqref {4.98}|nompageref}{43}

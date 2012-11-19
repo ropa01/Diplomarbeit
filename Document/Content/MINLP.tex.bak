@@ -1,0 +1,18 @@
+\chapter{Mixed-integer optimization}
+\label{chp:MINLP}
+
+    \section{solution techniques}
+
+    \begin{itemize}
+        \item branch and bound
+        \item outer approximation
+        \item generalized benders
+        \item extended cutting plane
+    \end{itemize}
+
+    \program{prog:stdMINLP}{
+        & \minimize{x,y} & & C = f(x,y) \\
+        & \st & & g_j(x,y) \leq 0 \j \in \mathbf{J} \\
+        & & & x \in \mathbf{X}, \; y \in \mathbf{Y}
+    }
+ 

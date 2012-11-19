@@ -76,6 +76,8 @@
 \contentsline {chapter}{\numberline {5}Optimization examples}{55}{chapter.5}
 \contentsline {section}{\numberline {5.1}Steady state single period}{55}{section.5.1}
 \contentsline {section}{\numberline {5.2}Optimization \& control}{56}{section.5.2}
-\contentsline {chapter}{Bibliography}{58}{chapter*.73}
-\contentsline {chapter}{\numberline {A}Appendix A}{61}{appendix.A}
-\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{61}{section.A.1}
+\contentsline {chapter}{\numberline {6}Mixed-integer optimization}{58}{chapter.6}
+\contentsline {section}{\numberline {6.1}solution techniques}{58}{section.6.1}
+\contentsline {chapter}{Bibliography}{59}{chapter*.73}
+\contentsline {chapter}{\numberline {A}Appendix A}{62}{appendix.A}
+\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{62}{section.A.1}

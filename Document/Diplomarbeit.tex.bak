@@ -5,7 +5,7 @@
 
 \newboolean{draft}
 \setboolean{draft}{true}
-\setboolean{draft}{false}
+%\setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
     \includeonly{
@@ -15,12 +15,13 @@
                 %Content/ProcessDesign,
                 %Content/ProcessEconomics,
                 %Content/MathModel,
-                Content/ProcessModel,
+                %Content/ProcessModel,
                 %Content/OptimizationApplication,
                 %Content/outlook,
                 %Content/BibAppendix,
                 %Content/report_short,
-                %Content/testpage
+                %Content/testpage,
+                Content/MINLP
     }
 }{
     \usepackage[colorinlistoftodos, disable]{todonotes}
@@ -53,6 +54,7 @@
 %	\include{Content/MathConsiderations}
 %	\include{Content/outlook}
 %    \include{Content/testpage}
+    \include{Content/MINLP}
 
 	\include{Content/BibAppendix}
 	

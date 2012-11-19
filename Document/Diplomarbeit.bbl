@@ -74,6 +74,12 @@ Roger Fletcher and William Morton.
 \newblock {\em Computers {\&} Chemical Engineering}, 23(11-12):1811--1824,
   2000.
 
+\bibitem{Grossmann.2002}
+Ignacio~E. Grossmann.
+\newblock {R}eview of {N}onlinear {M}ixed-{I}nteger and {D}isjunctive
+  {P}rogramming {T}echniques.
+\newblock {\em Optimization and Engineering}, 3(3):227--252, 2002.
+
 \bibitem{Grossmann.2005}
 Ignacio~E. Grossmann, P{\'i}o~A. Aguirre, and Mariana Barttfeld.
 \newblock {O}ptimal synthesis of complex distillation columns using rigorous
@@ -97,6 +103,14 @@ Ravindra~S. Kamath, Lorenz~T. Biegler, and Ignacio~E. Grossmann.
 \newblock {M}odeling multistream heat exchangers with and without phase changes
   for simultaneous optimization and heat integration.
 \newblock {\em AIChE Journal}, 58(1):190--204, 2012.
+
+\bibitem{Kraemer.2010}
+Korbinian Kraemer and Wolfgang Marquardt.
+\newblock {C}ontinuous {R}eformulation of {M}{I}{N}{L}{P} {P}roblems.
+\newblock In Moritz Diehl, Francois Glineur, Elias Jarlebring, and Wim
+  Michiels, editors, {\em {R}ecent {A}dvances in {O}ptimization and its
+  {A}pplications in {E}ngineering}, pages 83--92. Springer Berlin Heidelberg,
+  Berlin and Heidelberg, 2010.
 
 \bibitem{Lockett.2009}
 M.~J. Lockett.
@@ -157,6 +171,12 @@ Avinash~R. Sirdeshpande, Marianthi~G. Ierapetritou, Mark~J. Andrecovich, and
 \newblock {P}rocess synthesis optimization and flexibility evaluation of air
   separation cycles.
 \newblock {\em AIChE Journal}, 51(4):1190--1200, 2005.
+
+\bibitem{Stein.2004}
+Oliver Stein, Jan Oldenburg, and Wolfgang Marquardt.
+\newblock {C}ontinuous reformulations of discrete--continuous optimization
+  problems.
+\newblock {\em Computers {\&} Chemical Engineering}, 28(10):1951--1966, 2004.
 
 \bibitem{Wankat.2011}
 Phillip~C. Wankat and Kyle~P. Kostroski.

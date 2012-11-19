@@ -4,7 +4,7 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-\setboolean{draft}{true}
+%\setboolean{draft}{true}
 \setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
@@ -53,6 +53,7 @@
 %	\include{Content/MathConsiderations}
 %	\include{Content/outlook}
 %    \include{Content/testpage}
+    \include{Content/MINLP}
 
 	\include{Content/BibAppendix}
 	

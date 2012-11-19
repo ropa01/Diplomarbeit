@@ -1,0 +1,55 @@
+\chapter{Mixed-integer optimization}
+\label{chp:MINLP}
+In this section some general considerations about mixed-integer non-linear programming (MINLP) will be presented. 
+First the most commonly applied solution techniques will briefly be discussed on the basis of a review on the 
+subject by Grossmann \cite{Grossmann.2002}. Then then an alternative approach to solve this class of problems,  
+based on a continuous reformulation of the discrete decision variables, which has recently been proposed
+\cite{Kraemer.2010,Stein.2004} will also be introduced. This reformulation is also the basis for a comparison of different 
+approaches to solve this class of problem within the process simulation environment \gproms.  
+
+    \section{solution techniques}
+
+    As previously stated, the following discussion of general solution techniques for MINLP's is largely based 
+    in the comprehensive review by I. E. Grossmann \cite{Grossmann.2002}. 
+    
+    Several approaches to tackle this type of problem have successfully been applied to a multitude of cases for 
+    several years now. In general four major types of solution algorithms can be distinguished.  
+    \begin{itemize}
+        \item branch and bound
+        \item outer approximation
+        \item generalized benders
+        \item extended cutting plane
+    \end{itemize}
+    All these algorithms make use of a limited number of common subproblems, which are then solved 
+    in different configurations. Therefore these subproblems can previously be discussed.  
+
+    The general case of a MINLP takes the form:
+    \program{prog:stdMINLP}{
+        & \minimize{x,y} & & C = f(x,y) \\
+        & \st & & g_j(x,y) \leq 0, \; \; j \in \mathbf{J} \\
+        & & & x \in \mathbf{X}, \; y \in \mathbf{Y}
+    }
+    
+    The relaxed subproblem 
+    \program{prog:relaxedNLP}{
+        & \minimize{x,y} & & C_{LB}^k = f(x,y) \\
+        & \st & & g_j(x,y) \leq 0, \; \; j \in \mathbf{J} \\
+        & & & x \in \mathbf{X}, \; \; y \in \mathbf{Y}_R \\
+        & & & y_i \leq \alpha_i^k, \; i \in \mathbf{I}_{FL}^k \\
+        & & & y_i \geq \beta_i^k, \; i \in \mathbf{I}_{FU}^k
+    }
+    
+    NLP subproblem for fixed $y^k$
+    \program{prog:fixedyNLP}{
+        & \minimize{x} & & C_{LB}^k = f(x,y^k) \\
+        & \st & & g_j(x,y^k) \leq 0, \; \; j \in \mathbf{J} \\
+        & & & x \in \mathbf{X}
+    }
+    
+    NLP feasibility subproblem for fixed $y^k$
+    \program{}{
+        & \minimize{x} & & u \\
+        & \st & & g_j(x,y^k) \leq u, \; \; j \in \mathbf{J} \\
+        & & & x \in \mathbf{X}, \; \; u \in \mathbf{R}^1
+    }
+ 

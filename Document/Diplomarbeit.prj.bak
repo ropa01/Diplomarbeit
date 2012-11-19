@@ -4,25 +4,40 @@
 0
 1
 Diplomarbeit.tex
-65
-5
-3
+69
+8
+1
 
 Diplomarbeit.tex
 TeX:UNIX
-135376891 0 -1 154 -1 133 0 0 934 409 1 81 102 -1 -1 0 0 62 -1 -1 62 1 0 133 -1   0
+403812347 0 -1 1557 -1 1510 0 0 934 409 1 305 697 -1 -1 0 0 62 -1 -1 62 1 0 1510 -1   0
+Content\MINLP.tex
+TeX:UNIX
+1159163 0 -1 263 -1 280 225 225 1321 815 0 57 204 -1 -1 0 0 -1 -1 -1 -1 1 0 280 -1   0
+Pictures\HX_superstructure.tex
+TeX:UNIX
+1159163 0 -1 1683 -1 3080 150 150 1436 840 0 833 748 -1 -1 0 0 23 -1 -1 23 1 0 3080 -1   0
 Content\ProcessModel.tex
 TeX:UNIX
-1159163 0 -1 0 -1 457 150 150 1056 640 0 425 -85 -1 -1 0 0 36 -1 -1 36 1 0 457 -1   0
-Content\ProcessEconomics.tex
+1159163 0 -1 3588 -1 3240 150 150 1056 640 0 577 136 -1 -1 0 0 36 -1 -1 36 1 0 3240 -1   0
+Content\Process_steady.tex
 TeX:UNIX
-1159163 0 -1 862 -1 610 175 175 1369 633 1 369 204 -1 -1 0 0 27 -1 -1 27 1 0 610 -1   0
+1159163 0 -1 0 -1 0 125 125 1031 615 0 25 0 -1 -1 0 0 23 -1 -1 23 1 0 0 -1   0
+Content\Process_steady_separation.tex
+TeX:UNIX
+1159163 0 -1 21789 -1 22939 150 150 1056 640 1 145 272 -1 -1 0 0 93 -1 -1 93 2 0 22939 -1  1 23246 -1   0
 Content\AirSep.tex
 TeX:UNIX
-269594619 0 -1 415 -1 440 125 125 1031 615 0 225 170 -1 -1 0 0 -1 -1 -1 -1 1 0 440 -1   0
+1159163 0 -1 415 -1 440 125 125 1031 615 0 25 170 -1 -1 0 0 35 -1 -1 35 1 0 440 -1   0
 preambel.tex
 TeX:UNIX
 1159163 0 -1 4793 -1 4904 0 0 1009 215 0 121 459 -1 -1 0 0 129 -1 -1 129 1 0 4904 -1   0
+Pictures\ASU_simple_coco.tex
+TeX:UNIX
+286371835 0 -1 0 -1 6822 125 125 1296 556 0 345 289 -1 -1 0 0 0 -1 -1 0 1 0 6822 -1   0
+Content\ProcessEconomics.tex
+TeX:UNIX
+269594619 0 -1 862 -1 610 175 175 1369 633 1 369 204 -1 -1 0 0 27 -1 -1 27 1 0 610 -1   0
 Content\Dynamic.tex
 TeX
 286273531 4 -1 3240 -1 3241 175 175 1346 606 1 345 1122 -1 -1 0 0 23 -1 -1 23 1 0 3241 -1   0
@@ -41,9 +56,6 @@ TeX:UNIX
 :\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\content_uk_2.tex
 TeX:UNIX
 269594619 0 -1 4501 -1 356 50 50 1221 481 0 897 102 -1 -1 0 0 10 -1 -1 10 1 0 356 -1   0
-Pictures\ASU_simple_coco.tex
-TeX:UNIX
-286371835 0 -1 30 -1 259 125 125 1296 556 0 345 85 -1 -1 0 0 0 -1 -1 0 1 0 259 -1   0
 pgfplots\TikZTemplates.tex
 TeX:UNIX
 1159163 0 -1 406 -1 408 25 25 1219 483 1 73 119 -1 -1 0 0 436 -1 -1 436 1 0 408 -1   0
@@ -263,6 +275,7 @@ TeX:UNIX
 <
 <
 *Content/OptimizationApplication
+*Content/MINLP
 *Content/BibAppendix
 >
 *Literature.bib

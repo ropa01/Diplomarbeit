@@ -1,0 +1,15 @@
+\pagenumbering{roman}
+	
+\ifthenelse{\boolean{draft}}{}{
+    \input{Content/Preamble/CoverPage}
+	\input{Content/Preamble/TaskDescription}
+	\input{Content/Preamble/StatutoryDeclaration}
+}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\printnomenclature[2.5cm]
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
