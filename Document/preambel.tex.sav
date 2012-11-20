@@ -19,9 +19,7 @@
 \usepackage{lscape}
 \usepackage{ae}
 \usepackage{multirow}
-\usepackage{listings}
 \usepackage{xfrac}
-\lstloadlanguages{[ANSI]C}
 \usepackage{xcolor}
     \xdefinecolor{RWTHBlue}{HTML}{00539F}
 	%\xdefinecolor{RWTHBlue}{rgb}{0.0,0.3294,0.6235}
@@ -64,6 +62,12 @@
     \usetikzlibrary{positioning,shapes,shadows,arrows,calc,scopes,intersections,through}
 \usepackage{pgf-pie}
 \usepackage{array}
+\usepackage{listings}
+% needed only if gPROMS source code is to be displayed.
+\input{colours}
+\input{listings_gPROMS_def}
+\lstloadlanguages{gPROMS}
+\lstset{language=gPROMS,xleftmargin=5pt}
 
 \bibliographystyle{plain}
 \pagestyle{headings}
@@ -106,13 +110,14 @@
 \newcommand{\Chpref}[1]{Chap. \ref{#1}}
 \newcommand{\eqsref}[2]{eqns. (\ref{#1}) - (\ref{#2})}
 \newcommand{\Eqsref}[2]{Eqns. (\ref{#1}) - (\ref{#2})}
+\newcommand{\progref}[1]{(P\ref{#1})}
+
+\newcommand{\mathset}[1]{\mathcal{#1}}
 
 \newcommand{\eq}[1]{\begin{align} #1 \end{align}}
 \newcommand{\Eq}[2]{\begin{align} #2 \label{#1} \end{align}}
 \newcommand{\eqml}[1]{\begin{multline} #1 \end{multline}}
 \newcommand{\Eqml}[2]{\begin{multline} #2 \label{#1} \end{multline}}
-\newcommand{\minimize}[1]{\underset{#1}{\text{minimize}}}
-\newcommand{\st}{\text{subject to}}
 \newcommand{\fracdd}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\fracddpart}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\fracddparttwo}[2]{\frac{\partial^2 #1}{\partial #2^2}}
@@ -141,13 +146,20 @@
 
 \renewcommand{\vec}[1]{\mathbf{#1}}
 
+% mathematical program environment
+\newcommand{\minimize}[1]{\underset{#1}{\text{min}}}
+\newcommand{\st}{\text{s.t.}}
 \newcounter{program}
 \setcounter{program}{0}
 \newcommand{\refprogram}[1]{\refstepcounter{program}\label{#1}}
 %\newcommand{\program}[1]{\begin{equation} \begin{aligned} #1 \end{aligned} \end{equation}}
-\newcommand{\program}[2]{\refprogram{#1} \begin{minipage}{0.9\textwidth} \begin{equation*}%
+%\newcommand{\program}[2]{\refprogram{#1} \begin{minipage}{0.9\textwidth}%
+%\begin{aligned} #2 \end{aligned} \end{minipage} \begin{minipage}{0.09\textwidth}%
+%{\hfill (P \arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
+
+\newcommand{\program}[2]{\refprogram{#1} \\ \begin{minipage}{0.9\textwidth} \begin{equation*}%
 \begin{aligned} #2 \end{aligned} \end{equation*} \end{minipage} \begin{minipage}{0.09\textwidth}%
-{\hfill (P \arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
+{\hfill (P\arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
 
 % redefinition for noenclature units and subgroups
 \renewcommand{\nomgroup}[1]{%

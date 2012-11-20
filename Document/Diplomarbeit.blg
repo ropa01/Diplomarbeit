@@ -14,16 +14,8 @@ A level-1 auxiliary file: Content/ProcessModel.aux
 A level-1 auxiliary file: Content/MINLP.aux
 A level-1 auxiliary file: Content/OptimizationApplication.aux
 A level-1 auxiliary file: Content/outlook.aux
-I couldn't open auxiliary file Content/appendix_pengrob.aux
----line 144 of file Diplomarbeit.aux
- : \@input{Content/appendix_pengrob.aux
- :                                     }
-I'm skipping whatever remains of this command
-I couldn't open auxiliary file Content/appendix_ModelCompact.aux
----line 145 of file Diplomarbeit.aux
- : \@input{Content/appendix_ModelCompact.aux
- :                                          }
-I'm skipping whatever remains of this command
+A level-1 auxiliary file: Content/appendix_pengrob.aux
+A level-1 auxiliary file: Content/appendix_ModelCompact.aux
 Database file #1: Literature.bib
 Warning--empty publisher in Boston.
 Warning--empty year in Boston.
@@ -68,4 +60,4 @@ warning$ -- 2
 while$ -- 118
 width$ -- 33
 write$ -- 350
-(There were 2 error messages)
+(There were 2 warnings)

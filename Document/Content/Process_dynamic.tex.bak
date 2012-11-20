@@ -187,23 +187,73 @@
     \todo{include Integrated condenser / reboiler unit}
 
     As it has been stated on several occasions the condenser reboiler unit is essential in the cryogenic air separation process.
-    Even more so, when we consider the dynamics behaviour of the process. In order to model this unit, it is assumed that 
-    all vapour entering the stage will be condensed, thus the unit is regarded as total condenser. Furthermore the holdups on the 
-    condenser side are assumed to negligible. The reboiler side on the other hand is modeled as an equilibrium stage much like 
-    the stages within the column. 
-    
+    Even more so, when we consider the dynamics behaviour of the process. In order to model this unit, it is assumed that
+    all vapour entering the stage will be condensed, thus the unit is regarded as total condenser. Furthermore the holdups on the
+    condenser side are assumed to negligible. The reboiler side on the other hand is modeled as an equilibrium stage much like
+    the stages within the column.
+
     \subsubsection{Reboiler side}
-    As the reboiler side behaves like an equilibrium stage, the governing equations are very similar to those for 
-    a stage inside the columns. And will be given without much further comment. 
+        As the reboiler side behaves like an equilibrium stage, the governing equations are very similar to those for
+        a stage inside the columns. And will be given without much further comment.
     
-    The material balances 
-    \Eq{}{
-        \fracdd{n_i^{reb}}{t} = L_{reb}^{in} \cdot x_i^{reb} - V_{reb}^{out} \cdot y_i^{reb} - L_{reb}^{out} \cdot y_i^{con}, \eqannc.
-    }
-    Internal energy balance
-    \Eq{}{
-        \fracdd{U_{reb}}{t} = L_{reb}^{in} \cdot h_{in}^{reb} - V_{reb}^{out} \cdot h_{V}^{reb} - L_{reb}^{out} \cdot h_{L}^{reb}.
-    }
-    In addition to the balances the equilibrium and summation equations need to be included.
+        The material balances
+        \Eq{}{
+            \fracdd{n_i^{reb}}{t} = L_{reb}^{in} \cdot x_{i, reb}^{in} - V_{reb}^{out} \cdot y_i^{reb} 
+                - L_{reb}^{out} \cdot x_i^{reb}, \eqannc.
+        }
+        \ncr{n_i^{reb}}{molar holdup of component $i$ in reboiler}{kmol}
+        \ncr{L_{reb}^{in}}{liquid reboiler influx}{\frac{kmol}{s}}
+        \ncr{L_{reb}^{out}}{liquid reboiler outflow}{\frac{kmol}{s}}
+        \ncr{V_{reb}^{out}}{vapour reboiler outflow}{\frac{kmol}{s}}
+        \ncr{y_{i}^{reb}}{reboiler vapour mole fractions}{-}
+        \ncr{x_{i}^{reb}}{reboiler liquid mole fractions}{-}
+        Internal energy balance
+        \Eq{}{
+            \fracdd{U_{reb}}{t} = L_{reb}^{in} \cdot h_{in}^{reb} - V_{reb}^{out} \cdot h_{V}^{reb} 
+                - L_{reb}^{out} \cdot h_{L}^{reb} + Q_{CR}.
+        }
+        \ncr{U_{reb}}{reboiler internal energy holdup}{kJ}
+        \ncr{h_{L}^{reb}}{reboiler liquid enthalpy}{\frac{kJ}{kmol}}
+        \ncr{h_{V}^{reb}}{reboiler vapour enthalpy}{\frac{kJ}{kmol}}
+        In addition to the balances the equilibrium and summation equations are necessary to complete 
+        the equations system.
+        
+        As for the trays hydraulic equations determine the flowrates leaving the unit. For the liquid 
+        outlet Bernoulli's principle was used to derive an equation
+        \Eq{}{
+            L_{reb}^{out} = A_{\text{valve}} \varrho_L \sqrt{\frac{2 \cdot \left( \Delta p + \tilde{\varrho}_L g h\right)}{\tilde{\varrho}_L}}, 
+        }
+        disregarding the height difference an equation for the vapour flowrate can be derived
+        \Eq{}{
+            V_{reb}^{out} = A_{\text{valve}} \varrho_V \sqrt{\frac{2 \Delta p}{\tilde{\varrho}_V}}. 
+        }
+        
+    \subsubsection{Condenser side}
+        For a total condenser disregarding reservoir terms the mass balances become trivial 
+        \Eq{}{
+            L_{con}^{out} = V_{con}^{in}. 
+        }
+        To ensure bubble point temperature a summation as well as an equilibrium expression are included
+        \Eq{}{
+            1 & = \sum_i^{n_C} K_i x_{i,con}, \eqannc, \\
+            x_{i, con} & = y_{i, con}^{in}, \eqannote{i = 1 \dots n_C - 1}.
+        }
+        An energy balance around the condenser side determines the transferred energy
+        \Eq{}{
+            Q_{CR} = L_{con} \cdot \left( h_{con}^{in} - h_{con}^{out} \right). 
+        }
+        
+    \subsubsection{Heat exchange}
+        As the transferred energy is determined form the condenser energy balance, the temperature
+        difference between condenser and reboiler can be calculated by means of 
+        \Eq{}{
+            Q_{CR} = \alpha A_{HX} \cdot \left( T_{con} - T_{reb} \right). 
+        }
+        Roffel et al \cite{Roffel.2000} found form process data, that the overall heat transfer coefficient ($\alpha A$)
+        can be approximated by a simple formula in terms of the condenser inlet vapour flowrate
+        \Eq{}{
+            \alpha A = c_1 \left( V_{con}^{in} \right)^{0.8}. 
+        }
+        
 
 

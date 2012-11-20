@@ -1,19 +1,6 @@
-\BOOKMARK [0][-]{chapter.4}{Mathematical process model}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Steady - state unit models}{chapter.4}% 15
-\BOOKMARK [2][-]{subsection.4.1.1}{Separation}{section.4.1}% 16
-\BOOKMARK [2][-]{subsection.4.1.2}{Integrated condenser \046 reboiler}{section.4.1}% 17
-\BOOKMARK [2][-]{subsection.4.1.3}{Heat exchange}{section.4.1}% 18
-\BOOKMARK [2][-]{subsection.4.1.4}{Compression \046 expansion}{section.4.1}% 19
-\BOOKMARK [1][-]{section.4.2}{Dynamic unit models}{chapter.4}% 20
-\BOOKMARK [2][-]{subsection.4.2.1}{Distillation column model}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.2}{Integrated condenser / reboiler unit}{section.4.2}% 22
-\BOOKMARK [1][-]{section.4.3}{Sizing \046 costing models}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.3.1}{Destillation column}{section.4.3}% 24
-\BOOKMARK [2][-]{subsection.4.3.2}{Centrifugal pump}{section.4.3}% 25
-\BOOKMARK [1][-]{section.4.4}{Thermodynamic models}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.5}{Implementation}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.5.1}{Model structure}{section.4.5}% 28
-\BOOKMARK [2][-]{subsection.4.5.2}{Initialization procedures}{section.4.5}% 29
 \BOOKMARK [0][-]{chapter.5}{Mixed-integer optimization}{}% 30
 \BOOKMARK [1][-]{section.5.1}{solution techniques}{chapter.5}% 31
-\BOOKMARK [0][-]{chapter*.78}{Bibliography}{}% 30
+\BOOKMARK [2][-]{subsection.5.1.1}{Branch \046 bound}{section.5.1}% 32
+\BOOKMARK [2][-]{subsection.5.1.2}{Outer approximation}{section.5.1}% 33
+\BOOKMARK [1][-]{section.5.2}{Continuous reformulation}{chapter.5}% 34
+\BOOKMARK [0][-]{chapter*.2}{Bibliography}{}% 39

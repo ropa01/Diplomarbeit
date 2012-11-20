@@ -110,6 +110,9 @@
 \newcommand{\Chpref}[1]{Chap. \ref{#1}}
 \newcommand{\eqsref}[2]{eqns. (\ref{#1}) - (\ref{#2})}
 \newcommand{\Eqsref}[2]{Eqns. (\ref{#1}) - (\ref{#2})}
+\newcommand{\progref}[1]{(P\ref{#1})}
+
+\newcommand{\mathset}[1]{\mathcal{#1}}
 
 \newcommand{\eq}[1]{\begin{align} #1 \end{align}}
 \newcommand{\Eq}[2]{\begin{align} #2 \label{#1} \end{align}}
@@ -156,7 +159,7 @@
 
 \newcommand{\program}[2]{\refprogram{#1} \\ \begin{minipage}{0.9\textwidth} \begin{equation*}%
 \begin{aligned} #2 \end{aligned} \end{equation*} \end{minipage} \begin{minipage}{0.09\textwidth}%
-{\hfill (P \arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
+{\hfill (P\arabic{program})} \end{minipage} \\ \vspace{1ex} \linebreak}
 
 % redefinition for noenclature units and subgroups
 \renewcommand{\nomgroup}[1]{%

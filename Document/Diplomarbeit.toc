@@ -73,11 +73,16 @@
 \contentsline {subsubsection}{Linearized material balance}{51}{section*.70}
 \contentsline {subsubsection}{Iterative approach}{53}{section*.71}
 \contentsline {subsubsection}{Side draws}{54}{section*.72}
-\contentsline {chapter}{\numberline {5}Optimization examples}{55}{chapter.5}
-\contentsline {section}{\numberline {5.1}Steady state single period}{55}{section.5.1}
-\contentsline {section}{\numberline {5.2}Optimization \& control}{56}{section.5.2}
-\contentsline {chapter}{\numberline {6}Mixed-integer optimization}{58}{chapter.6}
-\contentsline {section}{\numberline {6.1}solution techniques}{58}{section.6.1}
-\contentsline {chapter}{Bibliography}{59}{chapter*.73}
-\contentsline {chapter}{\numberline {A}Appendix A}{62}{appendix.A}
-\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{62}{section.A.1}
+\contentsline {chapter}{\numberline {5}Mixed-integer optimization}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}solution techniques}{55}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Branch \& bound}{57}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Outer approximation}{57}{subsection.5.1.2}
+\contentsline {chapter}{\numberline {6}Optimization examples}{58}{chapter.6}
+\contentsline {section}{\numberline {6.1}Degrees of freedom}{58}{section.6.1}
+\contentsline {section}{\numberline {6.2}Steady state single period}{58}{section.6.2}
+\contentsline {section}{\numberline {6.3}Optimization \& control}{60}{section.6.3}
+\contentsline {chapter}{\numberline {7}Conclusion and further research}{61}{chapter.7}
+\contentsline {chapter}{Bibliography}{62}{chapter*.73}
+\contentsline {chapter}{\numberline {A}Appendix A}{65}{appendix.A}
+\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{65}{section.A.1}
+\contentsline {chapter}{\numberline {B}Appendix B}{67}{appendix.B}
