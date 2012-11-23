@@ -105,10 +105,16 @@ approaches to solve this class of problem within the process simulation environm
         
         As the points necessary to construct the aforementioned system are not available when the solution process commences, a smaller 
         systems is constructed and extended as more points become available. The first point again results from solving a fully relaxed
-        system. \todo{is this true????} This again yields an absolute lower bound for the original problem. The solution of each 
-        consecutive MILP gives a new lower bound which will always be greater than the bounds from previous iterations. Without any proove 
-        this argument is supported by the fact that adding ne linear constraints will limit the feasible region of the problem and 
-        hence further restrict the possible solutions for the continuous variables. 
+        system. \todo{is this true, that the fully relaxed system is initially solved????} This again yields an absolute lower bound 
+        for the original problem. The solution of each consecutive MILP gives a new lower bound which will always be greater than the 
+        bounds from previous iterations. Without any prove this argument is supported by the fact that adding new linear constraints 
+        will limit the feasible region of the problem and hence further restrict the possible solutions for the continuous variables.
+        
+        The optimal points attained from the NLP subproblems with fixed discrete values form upper bounds on the optimal solution. 
+        Here no statement can be made about the quality of the bound in each step, but rather is the current upper bound updated, 
+        once a lower value is encountered. 
+        
+        The iterative process terminates, once the 
      
         
     \section{Continuous reformulation}

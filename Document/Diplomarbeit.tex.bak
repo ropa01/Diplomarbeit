@@ -21,7 +21,7 @@
                 %Content/BibAppendix,
                 %Content/report_short,
                 %Content/testpage,
-                Content/MINLP
+                Content/optimization
     }
 }{
     \usepackage[colorinlistoftodos, disable]{todonotes}
@@ -45,8 +45,7 @@
 	\include{Content/AirSep}
 	\include{Content/ProcessEconomics}
     \include{Content/ProcessModel}
-    \include{Content/MINLP}
-    \include{Content/OptimizationApplication}
+    \include{Content/optimization}
 	\include{Content/outlook}
 
     \bibliography{Literature}
@@ -67,5 +66,6 @@
 %	\include{Content/MathModel}
 %   \include{Content/Dynamic}
 %	\include{Content/MathConsiderations}
+%   \include{Content/OptimizationApplication}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  20 NOV 2012 20:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  22 NOV 2012 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1452,8 +1452,11 @@ LaTeX Warning: Label `eq:cost:compressor:centrifugal' multiply defined.
 
 LaTeX Warning: Label `eq:cost:compressor:centrifugal' multiply defined.
 
-) (./Content/MINLP.aux) (./Content/OptimizationApplication.aux)
-(./Content/outlook.aux) (./Content/appendix_pengrob.aux)
+) (./Content/optimization.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+) (./Content/outlook.aux) (./Content/appendix_pengrob.aux)
 (./Content/appendix_ModelCompact.aux))
 \openout1 = `Diplomarbeit.aux'.
 
@@ -1554,28 +1557,39 @@ LaTeX Info: Redefining \nameref on input line 30.
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count281
 Package scrhack Info: undefining \float@addtolists on input line 30.
-\openout2 = `Content/MINLP.aux'.
+\openout2 = `Content/optimization.aux'.
 
- (./Content/MINLP.tex
+ (./Content/optimization.tex
 Chapter 5.
-LaTeX Font Info:    Try loading font information for TS1+aess on input line 8.
-LaTeX Font Info:    No file TS1aess.fd. on input line 8.
+(./Content/optimization_theory.tex
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 10.
 
-LaTeX Font Warning: Font shape `TS1/aess/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textregistered' on input line 8.
+Overfull \hbox (6.40527pt too wide) in paragraph at lines 10--10
+[][][][]\T1/aess/m/n/12 (-20) introduce 
+ []
 
-(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
-(RS)
-)
-LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 18
+
+Overfull \hbox (6.40527pt too wide) in paragraph at lines 10--10
+[][][][]\T1/aess/m/n/12 (-20) introduce 
+ []
+
+
+Overfull \hbox (6.40527pt too wide) in paragraph at lines 10--10
+[][][][]\T1/aess/m/n/12 (-20) introduce 
+ []
+
+
+Overfull \hbox (6.40527pt too wide) in paragraph at lines 10--10
+[][][][]\T1/aess/m/n/12 (-20) introduce 
+ []
+
+LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 16
 .
-
 (c:/texlive/2012/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 18
+LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 16
 .
 
 (c:/texlive/2012/texmf-dist/tex/latex/cmbright/omscmbrs.fd
@@ -1587,18 +1601,28 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 30--36
+Underfull \hbox (badness 10000) in paragraph at lines 10--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--36
-
+Overfull \hbox (5.71039pt too wide) in paragraph at lines 40--40
+[][][][]\T1/aess/m/n/12 (-20) feasibility 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--53
+Overfull \hbox (5.71039pt too wide) in paragraph at lines 40--40
+[][][][]\T1/aess/m/n/12 (-20) feasibility 
+ []
 
+
+Overfull \hbox (5.71039pt too wide) in paragraph at lines 40--40
+[][][][]\T1/aess/m/n/12 (-20) feasibility 
+ []
+
+
+Overfull \hbox (5.71039pt too wide) in paragraph at lines 40--40
+[][][][]\T1/aess/m/n/12 (-20) feasibility 
  []
 
 [55
@@ -1614,8 +1638,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--53
 
 
 
-{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 54--68
+{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(./Content/optimization_MINLP.tex
+LaTeX Font Info:    Try loading font information for TS1+aess on input line 7.
+LaTeX Font Info:    No file TS1aess.fd. on input line 7.
+
+
+LaTeX Font Warning: Font shape `TS1/aess/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textregistered' on input line 7.
+
+(c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
+(RS)
+) [56]
+Underfull \hbox (badness 10000) in paragraph at lines 30--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--53
 
  []
 
@@ -1625,65 +1672,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--68
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 54--68
+
+ []
+
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 69--80
 
  []
 
-[56]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 108.
-
-Overfull \hbox (1.88368pt too wide) in paragraph at lines 108--108
-\T1/aess/m/n/12 (-20) true????  
+[58]
+Overfull \hbox (11.9501pt too wide) in paragraph at lines 111--111
+\T1/aess/m/n/12 (-20) solved????  
  []
 
 
-Overfull \hbox (1.88368pt too wide) in paragraph at lines 108--108
-\T1/aess/m/n/12 (-20) true????  
+Overfull \hbox (11.9501pt too wide) in paragraph at lines 111--111
+\T1/aess/m/n/12 (-20) solved????  
  []
 
 
-Overfull \hbox (1.88368pt too wide) in paragraph at lines 108--108
-\T1/aess/m/n/12 (-20) true????  
+Overfull \hbox (11.9501pt too wide) in paragraph at lines 111--111
+\T1/aess/m/n/12 (-20) solved????  
  []
 
 
-Overfull \hbox (1.88368pt too wide) in paragraph at lines 108--108
-\T1/aess/m/n/12 (-20) true????  
+Overfull \hbox (11.9501pt too wide) in paragraph at lines 111--111
+\T1/aess/m/n/12 (-20) solved????  
  []
 
-) [57] (./Diplomarbeit.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--138
+
+ []
+
+[59]) (./Content/optimization_application.tex [60] [61] [62])) [63]
+(./Diplomarbeit.bbl
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 8.
- [62
+pdfTeX warning (ext4): destination with the same identifier (name{page.63}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.95 
+      [63
 
 
 
-
-] [63]) [64] (./Diplomarbeit.tdo)
+] [64]) [65] (./Diplomarbeit.tdo)
 \tf@tdo=\write6
 \openout6 = `Diplomarbeit.tdo'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
- [68
+ [69
 
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
-
-(./Diplomarbeit.aux (./Content/Preamble/CoverPage.aux)
-(./Content/Preamble/TaskDescription.aux)
+ (./Diplomarbeit.aux
+(./Content/Preamble/CoverPage.aux) (./Content/Preamble/TaskDescription.aux)
 (./Content/Preamble/StatutoryDeclaration.aux) (./Content/Lists.aux)
 (./Content/Abstract.aux) (./Content/Introduction.aux) (./Content/AirSep.aux)
 (./Content/ProcessEconomics.aux) (./Content/ProcessModel.aux)
-(./Content/MINLP.aux) (./Content/OptimizationApplication.aux)
-(./Content/outlook.aux) (./Content/appendix_pengrob.aux)
-(./Content/appendix_ModelCompact.aux))
+(./Content/optimization.aux) (./Content/outlook.aux)
+(./Content/appendix_pengrob.aux) (./Content/appendix_ModelCompact.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: D5A8F73F26AE1F146B8A385F33EC8A70;392.
+(rerunfilecheck)             Checksum: B764970797F8FBEA5F85631B6E5C015E;867.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1694,30 +1751,31 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 36516 strings out of 493488
- 758880 string characters out of 3144749
- 953261 words of memory out of 3000000
- 38748 multiletter control sequences out of 15000+200000
- 45175 words of font info for 220 fonts, out of 3000000 for 9000
+ 36644 strings out of 493488
+ 760879 string characters out of 3144749
+ 957127 words of memory out of 3000000
+ 38778 multiletter control sequences out of 15000+200000
+ 50230 words of font info for 253 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  58i,16n,78p,679b,691s stack positions out of 5000i,500n,10000p,200000b,50000s
 {c:/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2012/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2012/texmf-dist/font
-s/type1/public/amsfonts/cm/cmssi12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/
-public/hfbright/hfbr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbri
-ght/hfbr8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrbs10.
-pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb><c:/te
-xlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb><c:/texlive/2012/
-texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb><c:/texlive/2012/texmf-dist
-/fonts/type1/public/hfbright/hfbrsy8.pfb><c:/texlive/2012/texmf-dist/fonts/type
-1/public/cm-super/sfrm0600.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/c
-m-super/sfrm0800.pfb>
-Output written on Diplomarbeit.pdf (7 pages, 149345 bytes).
+st/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2012/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmssi12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfb
+right/hfbr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbr8.
+pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrbs10.pfb><c:/te
+xlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb><c:/texlive/2012
+/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb><c:/texlive/2012/texmf-dist
+/fonts/type1/public/hfbright/hfbrsy10.pfb><c:/texlive/2012/texmf-dist/fonts/typ
+e1/public/hfbright/hfbrsy8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/c
+m-super/sfrm0600.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sf
+rm0800.pfb>
+Output written on Diplomarbeit.pdf (13 pages, 197109 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 500000)
- 20125 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 20173 words of extra memory for PDF output out of 20736 (max. 10000000)
 

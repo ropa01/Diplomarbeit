@@ -4,8 +4,8 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-%\setboolean{draft}{true}
-\setboolean{draft}{false}
+\setboolean{draft}{true}
+%\setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
     \includeonly{
@@ -15,12 +15,13 @@
                 %Content/ProcessDesign,
                 %Content/ProcessEconomics,
                 %Content/MathModel,
-                Content/ProcessModel,
+                %Content/ProcessModel,
                 %Content/OptimizationApplication,
                 %Content/outlook,
                 %Content/BibAppendix,
                 %Content/report_short,
-                %Content/testpage
+                %Content/testpage,
+                Content/MINLP
     }
 }{
     \usepackage[colorinlistoftodos, disable]{todonotes}
@@ -30,33 +31,41 @@
 
     \pagenumbering{roman}
 	
-%    \include{Content/Preamble/CoverPage}
-%	\include{Content/Preamble/TaskDescription}
-%	\include{Content/Preamble/StatutoryDeclaration}
+    \include{Content/Preamble/CoverPage}
+	\include{Content/Preamble/TaskDescription}
+	\include{Content/Preamble/StatutoryDeclaration}
     \include{Content/Lists}
 
     \pagenumbering{arabic}
     \setcounter{page}{1}
 
 	\include{Content/Abstract}
+
 	\include{Content/Introduction}
-	
 	\include{Content/AirSep}
-%	\include{Content/ProcessDesign}
 	\include{Content/ProcessEconomics}
-%	\include{Content/Uncertainty}
     \include{Content/ProcessModel}
-%    \include{Content/Optimizaion_Theory}
-    \include{Content/OptimizationApplication}
+    \include{Content/optimization}
+	\include{Content/outlook}
+
+    \bibliography{Literature}
+	
+    \begin{appendix}
+
+    	\include{Content/appendix_pengrob}
+        \include{Content/appendix_ModelCompact}
+
+    \end{appendix}
+	
+	\listoftodos
+
+%   \include{Content/testpage}
+%	\include{Content/ProcessDesign}
+%	\include{Content/Uncertainty}
+%   \include{Content/Optimizaion_Theory}
 %	\include{Content/MathModel}
 %   \include{Content/Dynamic}
 %	\include{Content/MathConsiderations}
-%	\include{Content/outlook}
-%    \include{Content/testpage}
-    \include{Content/MINLP}
+%   \include{Content/OptimizationApplication}
 
-	\include{Content/BibAppendix}
-	
-	\listoftodos
-	
 \end{document}

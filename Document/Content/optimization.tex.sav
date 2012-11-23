@@ -1,0 +1,15 @@
+\chapter{Process optimization}
+\label{chp:optimization}
+
+    \section{Optimization theory}
+    \label{sec:opt:theory}
+    \input{Content/optimization_theory}
+    
+    \section{Mixed-integer optimization}
+    \label{sec:opt:MINLP}
+    \input{Content/optimization_MINLP}
+    
+    \section{Optimization examples}
+    \label{sec:opt:apllication}
+    \input{Content/optimization_application}
+    

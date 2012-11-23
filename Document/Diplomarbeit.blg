@@ -11,8 +11,7 @@ A level-1 auxiliary file: Content/Introduction.aux
 A level-1 auxiliary file: Content/AirSep.aux
 A level-1 auxiliary file: Content/ProcessEconomics.aux
 A level-1 auxiliary file: Content/ProcessModel.aux
-A level-1 auxiliary file: Content/MINLP.aux
-A level-1 auxiliary file: Content/OptimizationApplication.aux
+A level-1 auxiliary file: Content/optimization.aux
 A level-1 auxiliary file: Content/outlook.aux
 A level-1 auxiliary file: Content/appendix_pengrob.aux
 A level-1 auxiliary file: Content/appendix_ModelCompact.aux
@@ -21,7 +20,7 @@ Warning--empty publisher in Boston.
 Warning--empty year in Boston.
 You've used 31 entries,
             2118 wiz_defined-function locations,
-            737 strings with 10698 characters,
+            736 strings with 10670 characters,
 and the built_in function-call counts, 10971 in all, are:
 = -- 1116
 > -- 474

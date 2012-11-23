@@ -4,31 +4,46 @@
 0
 1
 Diplomarbeit.tex
-76
+81
 7
-5
+3
 
 Diplomarbeit.tex
 TeX:UNIX
-152154107 0 -1 1789 -1 561 0 0 934 409 1 209 306 -1 -1 0 0 62 -1 -1 62 1 0 561 -1   0
-Content\Process_dynamic.tex
+152154107 0 -1 764 -1 776 0 0 934 409 1 361 391 -1 -1 0 0 62 -1 -1 62 1 0 776 -1   0
+:\Users\Abakus W7\Documents\Studium\AppNumOpt\ExamNotes\Summary\OptCond.tex
 TeX:UNIX
-1159163 0 -1 9807 -1 9753 25 25 1121 615 0 25 527 -1 -1 0 0 34 -1 -1 34 1 0 9753 -1   0
-Content\OptimizationApplication.tex
+1159163 4 -1 1611 -1 1610 25 25 1241 524 0 233 408 -1 -1 0 0 -1 -1 -1 -1 1 0 1610 -1   0
+Content\optimization.tex
+TeX:UNIX
+1159163 0 -1 54 -1 391 175 175 1364 674 0 25 255 -1 -1 0 0 -1 -1 -1 -1 1 0 391 -1   0
+Content\optimization_theory.tex
+TeX:UNIX
+269594619 0 -1 1243 -1 1253 200 200 1389 699 0 369 442 -1 -1 0 0 -1 -1 -1 -1 1 0 1253 -1   0
+Content\optimization_MINLP.tex
+TeX:UNIX
+1159163 0 -1 675 -1 1271 225 225 1414 724 0 217 289 -1 -1 0 0 -1 -1 -1 -1 1 0 1271 -1   0
+Content\optimization_application.tex
 TeX
-1060859 0 -1 986 -1 215 50 50 1146 640 0 401 102 -1 -1 0 0 31 -1 -1 31 1 0 215 -1   0
-Content\appendix_ModelCompact.tex
-TeX:UNIX
-1159163 0 -1 19 -1 21 275 275 1371 865 0 25 17 -1 -1 0 0 20 -1 -1 20 1 0 21 -1   0
-Content\ProcessModel.tex
-TeX:UNIX
-1159163 0 -1 6395 -1 5657 150 150 1056 640 0 601 527 -1 -1 0 0 36 -1 -1 36 1 0 5657 -1   0
-Content\MINLP.tex
-TeX:UNIX
-269594619 0 -1 3518 -1 3571 225 225 1321 815 0 329 442 -1 -1 0 0 36 -1 -1 36 1 0 3571 -1   0
+1060859 0 -1 5059 -1 4572 0 0 1189 499 0 729 1377 -1 -1 0 0 -1 -1 -1 -1 1 0 4572 -1   0
 preambel.tex
 TeX:UNIX
-1159163 0 -1 4444 -1 4445 0 0 1009 215 0 313 238 -1 -1 0 0 129 -1 -1 129 1 0 4445 -1   0
+1159163 0 -1 4443 -1 4396 0 0 1009 215 0 241 51 -1 -1 0 0 129 -1 -1 129 1 0 4396 -1   0
+Content\appendix_ModelCompact.tex
+TeX:UNIX
+269594619 0 -1 19 -1 21 275 275 1371 865 0 25 17 -1 -1 0 0 20 -1 -1 20 1 0 21 -1   0
+Content\MINLP.tex
+TeX:UNIX
+269594619 0 -1 111 -1 131 225 225 1321 815 0 265 102 -1 -1 0 0 170 -1 -1 170 1 0 131 -1   0
+Content\ProcessModel.tex
+TeX:UNIX
+269594619 0 -1 6395 -1 5657 150 150 1056 640 0 601 527 -1 -1 0 0 36 -1 -1 36 1 0 5657 -1   0
+Content\OptimizationApplication.tex
+TeX
+269496315 0 -1 986 -1 215 50 50 1146 640 0 401 102 -1 -1 0 0 31 -1 -1 31 1 0 215 -1   0
+Content\Process_dynamic.tex
+TeX:UNIX
+269594619 0 -1 9807 -1 9753 25 25 1121 615 0 25 1241 -1 -1 0 0 34 -1 -1 34 1 0 9753 -1   0
 :\Users\Abakus W7\Dropbox\Studium\Diplomarbeit_files\Offiziell\Vollmacht Carl\Anschreiben.tex
 TeX:DE:UNIX
 286371835 1 -1 0 -1 1957 50 50 1196 535 0 25 680 -1 -1 0 0 66 -1 -1 66 1 0 1957 -1   0
@@ -298,8 +313,12 @@ TeX:UNIX
 *Pictures/gP_ModelStructure
 <
 <
-*Content/MINLP
-*Content/OptimizationApplication
+*Content/optimization
+>
+*Content/optimization_theory
+*Content/optimization_MINLP
+*Content/optimization_application
+<
 *Content/outlook
 *Literature.bib
 *Content/appendix_pengrob

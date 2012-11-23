@@ -1,0 +1,62 @@
+This section will deal with some basic considerations about optimization theory. It purpose is not 
+an exhaustive review of (convex) optimization but rather to introduce some concepts and terms that will 
+prove useful in the following sections. Foremost a brief discussion of optimality conditions for constrained 
+problems -- the so called Karush-Kuhn-Tucker conditions -- will be given. Closely linked to those conditions, 
+and in some cases even a perquisite for their validity, are the constraint qualifications which are subsequently
+discussed. 
+
+    \subsection{Karush-Kuhn-Tucker conditions}
+    \label{sec:opt:theory:kkt}
+    \todo{introduce active set}
+    Considering the most general case of a NLP
+    \program{}{
+        & \minimize{x} & & f(x) \\
+        & \st & & h_i(x) = 0, \; \; i \in \mathset{E} \\
+        & & & g_j(x) \leq 0, \; \; j \in \mathset{I}
+    }
+    where $f(x): \mathbb{R}^n \mapsto \mathbb{R}$ denotes the objective function, $\mathset{E}$ is the set of equality
+    constraints and $\mathset{I}$ the set of inequality constraints.
+
+    The Lagrangian function corresponding to to the problem above can be written as
+    \Eq{}{
+        \mathcal{L}(x,\lambda,\mu) := f(x) + \lambda^T h(x) + \mu^T g(x)
+    }
+
+    First order KKT conditions must hold at the optimal point $(x^{\ast}, \lambda^{\ast}, \mu^{\ast})$
+    \Eq{}{
+        \nabla_x \mathcal{L}(x^{\ast}, \lambda^{\ast}, \mu^{\ast}) & = 0, \\
+        h_i(x^{\ast}) & = 0, \\
+        g_j(x^{\ast}) & \leq 0, \\
+        \mu_j^{\ast} & \geq 0, \\
+        \mu_j^{\ast} g_j(x^{\ast})& = 0, \\
+        i \in \mathset{E}, \; \; j \in \mathset{I}.
+    }
+
+    \subsection{Constraint qualification conditions}
+    \label{sec:opt:theory:cq}
+    
+    Constraint qualifications, given convexity of the problem, can ensure the existence of strictly positive Lagrange 
+    multipliers, such that the unconstrained equivalent problem can be constructed. In general one is interested 
+    in the weakest possible perquisite to ensure feasibility \todo{feasibility the right word here?} of the problem. 
+    There are several constraint qualifications proposed in literature, which are differently hard to fulfil 
+    and verify. 
+
+    \subsubsection{Slater's constraint qualification (SCQ)}
+    Among the most widely used constraint qualifications is Slater's constraint qualification
+    \Eq{}{
+        \exists \tilde{x}, \forall i \in \mathcal{I} : h_i(\tilde{x}) < 0. 
+    } 
+    This qualifications essentially states, that there in fact is a point which will fulfil the constraints. 
+
+    \subsubsection{Linear independence constraint qualification (LICQ)}
+    Another widely used is called the linear independence constraint qualification. It states, 
+    given the set of of feasible solutions of the original problem $\mathcal{C} = \{x \in \mathcal{X} \; | \; h_i(x) \leq 0
+    \forall i \in \mathcal{I} \}$ and the set of active constraints $\mathcal{A}(\bar{x}) = \{i \in \mathcal{i} \; | \; h_i(\bar{x}) = 0 \}$
+    \Eq{}{
+        \{ \nabla h_i(\bar{x}) \; | \; i \in \mathcal{A}(\bar{x}) \} \qquad \text{is linearly independent}. 
+    } 
+    
+    \subsubsection{Mangasarian-Fromovitz constraint qualification (MFCQ)}
+    \Eq{}{
+        \exists \tilde{u}, \forall i \in \mathcal{A}(\bar{x}) : \nabla h_i(\bar{x})(\tilde{u}) < 0. 
+    }
