@@ -93,46 +93,96 @@ approaches to solve this class of problem within the process simulation environm
         algorithm is most attractive, if the solution is computationally inexpensive, or few nodes have to be explored.
 
         \subsubsection{Outer approximation (OA)}
-        The outer approximation (OA) algorithm relies on consecutively solving \progref{prog:fixedyNLP} and 
-        \progref{prog:MILP}. Each solution of the NLP with fixed $y^k$ yields a new point $(x^k,y^k)$ which is used to 
-        construct an updated version of the MILP. The MILP generally includes linearized versions of all constraints and 
-        the objective function. As more and more points become available during the iterative process, new constraints 
+        The outer approximation (OA) algorithm relies on consecutively solving \progref{prog:fixedyNLP} and
+        \progref{prog:MILP}. Each solution of the NLP with fixed $y^k$ yields a new point $(x^k,y^k)$ which is used to
+        construct an updated version of the MILP. The MILP generally includes linearized versions of all constraints and
+        the objective function. As more and more points become available during the iterative process, new constraints
         are constructed for each available point.
 
-        The main theorem for the derivation of the OA algorithm states, that the optimal solution of the problem 
-        \progref{prog:MILP} constructed from all points $(x^k,y^k), k \in K^{\ast}$. Where $K^{\ast}$ is made up of 
-        all optimal solutions of \progref{prog:fixedyNLP} where the current $y^k$ yields a feasible solution, and 
-        \progref{prog:feasibleNLP} where infeasible solutions of the NLP with fixed $y^k$ are encountered. It should 
+        The main theorem for the derivation of the OA algorithm states, that the optimal solution of the problem
+        \progref{prog:MILP} constructed from all points $(x^k,y^k), k \in K^{\ast}$. Where $K^{\ast}$ is made up of
+        all optimal solutions of \progref{prog:fixedyNLP} where the current $y^k$ yields a feasible solution, and
+        \progref{prog:feasibleNLP} where infeasible solutions of the NLP with fixed $y^k$ are encountered. It should
         again be emphasized, that this theorem holds only for convex a objective function and constraints.
 
-        As the points necessary to construct the aforementioned system are not available when the solution process 
-        commences, a smaller systems is constructed and extended as more points become available. The first point again 
-        results from solving a fully relaxed system. \todo{is this true, that the fully relaxed system is initially 
-        solved????} This again yields an absolute lower bound for the original problem. The solution of each consecutive 
-        MILP gives a new lower bound which will always be greater than the bounds from previous iterations. Without any 
-        prove this argument is supported by the fact that adding new linear constraints will limit the feasible region of 
+        As the points necessary to construct the aforementioned system are not available when the solution process
+        commences, a smaller systems is constructed and extended as more points become available. The first point again
+        results from solving a fully relaxed system. \todo{is this true, that the fully relaxed system is initially
+        solved????} This again yields an absolute lower bound for the original problem. The solution of each consecutive
+        MILP gives a new lower bound which will always be greater than the bounds from previous iterations. Without any
+        prove this argument is supported by the fact that adding new linear constraints will limit the feasible region of
         the problem and hence further restrict the possible solutions for the continuous variables.
 
-        The optimal points attained from the NLP subproblems with fixed discrete values form upper bounds on the optimal 
-        solution. Here no statement can be made about the quality of the bound in each step, but rather is the current 
+        The optimal points attained from the NLP subproblems with fixed discrete values form upper bounds on the optimal
+        solution. Here no statement can be made about the quality of the bound in each step, but rather is the current
         upper bound updated, once a lower value is encountered.
 
-        The iterative process terminates, once the current upper and lower bound are within a given tolerance. It can be 
-        pointed out, that the outer approximation algorithm converges to the optimal solution in a single iteration if 
-        objective function and constraints in the original problem are linear, since in that case problems 
-        \progref{prog:stdMINLP} and \progref{prog:MILP} are equivalent. 
-        
-        \subsection{Generalized Benders decomposition (GBD)}
-        The generalized Benders decomposition is very similar to the outer approximation algorithm. The main difference 
-        lies in way that \progref{prog:MILP} is constructed. While for the outer approximation problem all constraints 
-        are included, in case of the GBD only active constraints are $J^k = \{j \; | \; g_j(x^k,y^k) = 0\}$ considered. 
-        Furthermore the set of continuous variables is eliminated by considering the KKT-conditions. The resulting problem 
+        The iterative process terminates, once the current upper and lower bound are within a given tolerance. It can be
+        pointed out, that the outer approximation algorithm converges to the optimal solution in a single iteration if
+        objective function and constraints in the original problem are linear, since in that case problems
+        \progref{prog:stdMINLP} and \progref{prog:MILP} are equivalent.
+
+        \subsubsection{Generalized Benders decomposition (GBD)}
+        The generalized Benders decomposition is very similar to the outer approximation algorithm. The main difference
+        lies in way that \progref{prog:MILP} is constructed. While for the outer approximation problem all constraints
+        are included, in case of the GBD only active constraints are $J^k = \{j \; | \; g_j(x^k,y^k) = 0\}$ considered.
+        Furthermore the set of continuous variables is eliminated by considering the KKT-conditions. The resulting problem
         \program{}{
             & \minimize{y} & & C^K_L = \alpha \\
             & \st & & f(x^k,y^k) + \nabla_y f(x^k,y^k)^T (y - y^k) \\
-            & & & \; \;  + (\mu^k)^T \left[ g(x^k,y^k) + \nabla_y g(x^k,y^k)^T (y - y^k) \right] \leq \alpha \\
-            & & & (\lambda^k)^T \left[ g(x^k,y^k) + \nabla_y g(x^k,y^k)^T (y - y^k) \right] \leq 0 . 
+            & & & \; \;  + (\mu^k)^T \left[ g(x^k,y^k) + \nabla_y g(x^k,y^k)^T (y - y^k) \right] \leq \alpha, \; \; k \in \mathcal{K}_{FS} \\
+            & & & (\lambda^k)^T \left[ g(x^k,y^k) + \nabla_y g(x^k,y^k)^T (y - y^k) \right] \leq 0, \; \; k \in \mathcal{K}_{IS} .
         }
+        Where $\mathcal{K}_{FS}$ and $\mathcal{K}_{IS}$ denote the sets of solutions for of feasible and infeasible
+        iterations respectively.
+
+        This difference in formulation the MILP in the OA and GBD algorithm is what leads to the major computational differences. 
+        In general the MILP in the OA algorithm is expected to return tighter bounds than the respective
+        problem in GBD. However the computational effort to solve the problem might be considerably higher for the
+        OA case. Hence the GBD is expected to need more iterations, before converging, while the cost of a single
+        iteration might be lower.
+
+        \subsubsection{Extended cutting plane (ECP)}
+        The extended cutting plane method requires no solution any NLP subproblems. Rather a version of the linearized
+        problem is solved during each iteration. After each iteration the problem is extended by an addition cut or
+        linearized constraint. Most commonly a linear version of the most violated constraint is added. A further
+        possibility is to add all violated constraints to the problem. It should be noted, that for the ECP method
+        the objective function has to be linear. If necessary non-linearities in the objective function can be moved to the 
+        constraints by introduction of new variables.
+
+        \subsubsection{LP/NLP branch \& bound}
+
 
 
     \subsection{Continuous reformulation}
+    An alternative approach to solving discrete-continuous problems is to reformulate them as continuous problems 
+    and introduce further constraints which ensure that the discrete decision variables will assume integer values. 
+    Several different authors have proposed ways of reformulating integer decisions. The concept of continuous reformulation 
+    will be discussed with the current example of the ASU process in mind. The following discussion is modeled on the 
+    remarks of the topic in \cite{Stein.2004} and fitted to the case under consideration. 
+    
+    In the context of a column model, all decisions regarding feed and side draw locations as well as the minimum number 
+    of trays can be seen as \emph{exclusive or} decisions, as the the stream can only be fed to or drawn from exactly one 
+    stage. This can be expressed in the integer case by adding the constraint  
+    \Eq{}{
+        & \sum_{j}^{n_S} y_{j,k} = 1 \\
+        & y_{j,k} \in \{0,1\}, \; \; k \in \mathcal{K}. 
+    }
+    to the model equations. Here again $j$ denotes the number of stages and $\mathcal{K}$ is the set of decisions to be made, 
+    corresponding to feed and side draw locations as well as the number of trays in a column.
+    
+    If one defines a set $\mathcal{A}_0 = \{(1,0), (0,1)\}$ the summation constraint given earlier can be dropped 
+    \Eq{}{
+        \left( y_{i,k}, \sum_{j \atop j \neq i}^{n_S}} y_{j} \right) \in \mathcal{A}_0, \eqannote{k \in \mathcal{K}}.
+    }
+    To attain a continuous reformulation of the problem, the set $\mathcal{A}_0$ now has to be described by means 
+    of continuous constraints. In the remainder of this section different ways of achieving a continuous representation of that 
+    set will be demonstrated and their theoretical properties concisely mentioned. 
+    
+    One way to formulate the constraints is by introducing th so called complementary constraints alon with the summation 
+    to one
+    \Eq{}{
+        \prod_j y_{j,k} = 0, \; \; k \in \mathcal{K}\\
+        y_{j,k} \geq 0, 
+        \sum_j y_{j,k} = 1 ; 
+    }

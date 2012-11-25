@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  22 NOV 2012 19:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  25 NOV 2012 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1706,12 +1706,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--138
 
  []
 
-[59]) (./Content/optimization_application.tex [60] [61] [62])) [63]
-(./Diplomarbeit.bbl
+[59]
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 8.
-pdfTeX warning (ext4): destination with the same identifier (name{page.63}) has
- been already used, duplicate ignored
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 165.
+ [60]) (./Content/optimization_application.tex [61] [62])) [63]
+(./Diplomarbeit.bblpdfTeX warning (ext4): destination with the same identifier 
+(name{page.63}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.95 
@@ -1740,7 +1740,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: B764970797F8FBEA5F85631B6E5C015E;867.
+(rerunfilecheck)             Checksum: 282ABF0BB77AAFE52E65EA190C8848AA;867.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1751,11 +1751,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
  ) 
 Here is how much of TeX's memory you used:
- 36644 strings out of 493488
- 760879 string characters out of 3144749
- 957127 words of memory out of 3000000
- 38778 multiletter control sequences out of 15000+200000
- 50230 words of font info for 253 fonts, out of 3000000 for 9000
+ 36659 strings out of 493488
+ 761123 string characters out of 3144749
+ 957208 words of memory out of 3000000
+ 38783 multiletter control sequences out of 15000+200000
+ 50734 words of font info for 258 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  58i,16n,78p,679b,691s stack positions out of 5000i,500n,10000p,200000b,50000s
 {c:/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
@@ -1772,10 +1772,10 @@ xlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb><c:/texlive/2012
 e1/public/hfbright/hfbrsy8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/c
 m-super/sfrm0600.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sf
 rm0800.pfb>
-Output written on Diplomarbeit.pdf (13 pages, 197109 bytes).
+Output written on Diplomarbeit.pdf (13 pages, 201522 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
- 108 named destinations out of 1000 (max. 500000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 112 named destinations out of 1000 (max. 500000)
  20173 words of extra memory for PDF output out of 20736 (max. 10000000)
 
