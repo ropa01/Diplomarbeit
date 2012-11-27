@@ -77,21 +77,23 @@
 \contentsline {section}{\numberline {5.1}Optimization theory}{55}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Karush-Kuhn-Tucker conditions}{55}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Constraint qualification conditions}{56}{subsection.5.1.2}
-\contentsline {subsubsection}{Slater's constraint qualification (SQ)}{56}{section*.73}
+\contentsline {subsubsection}{Slater's constraint qualification (SCQ)}{56}{section*.73}
 \contentsline {subsubsection}{Linear independence constraint qualification (LICQ)}{56}{section*.74}
 \contentsline {subsubsection}{Mangasarian-Fromovitz constraint qualification (MFCQ)}{56}{section*.75}
 \contentsline {section}{\numberline {5.2}Mixed-integer optimization}{56}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Solution techniques}{56}{subsection.5.2.1}
-\contentsline {subsubsection}{Branch \& bound}{58}{section*.76}
-\contentsline {subsubsection}{Outer approximation}{58}{section*.77}
-\contentsline {subsection}{\numberline {5.2.2}Generalized Benders decomposition}{59}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Continuous reformulation}{59}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Optimization examples}{59}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Degrees of freedom}{59}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Steady state single period}{60}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Optimization \& control}{61}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Conclusion and further research}{62}{chapter.6}
-\contentsline {chapter}{Bibliography}{63}{chapter*.78}
-\contentsline {chapter}{\numberline {A}Appendix A}{66}{appendix.A}
-\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{66}{section.A.1}
-\contentsline {chapter}{\numberline {B}Appendix B}{68}{appendix.B}
+\contentsline {subsection}{\numberline {5.2.1}Solution techniques}{57}{subsection.5.2.1}
+\contentsline {subsubsection}{Branch \& bound (B\&B)}{58}{section*.76}
+\contentsline {subsubsection}{Outer approximation (OA)}{59}{section*.77}
+\contentsline {subsubsection}{Generalized Benders decomposition (GBD)}{59}{section*.78}
+\contentsline {subsubsection}{Extended cutting plane (ECP)}{60}{section*.79}
+\contentsline {subsubsection}{LP/NLP branch \& bound}{60}{section*.80}
+\contentsline {subsection}{\numberline {5.2.2}Continuous reformulation}{60}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Optimization examples}{62}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Degrees of freedom}{62}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Steady state single period}{63}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Optimization \& control}{64}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Conclusion and further research}{65}{chapter.6}
+\contentsline {chapter}{Bibliography}{66}{chapter*.82}
+\contentsline {chapter}{\numberline {A}Appendix A}{69}{appendix.A}
+\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{69}{section.A.1}
+\contentsline {chapter}{\numberline {B}Appendix B}{71}{appendix.B}

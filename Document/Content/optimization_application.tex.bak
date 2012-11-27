@@ -1,28 +1,51 @@
-\chapter{Optimization examples}
-\label{chp:optexample}
+The simulation of chemical processes supplies valuable insight into the intricacies of a given system. 
+To some extend it is also possible to improve given designs by manual alterations and simulation
+steps in a form of trial an error procedure. However the results of an approach like that are unlikely 
+to yield even locally optimal results in an acceptable amount of time. Hence optimization approaches
+are employed to attain improved designs. 
 
-The simulation of chemical processes supplies valuable insight into the
+The models presented in the previous chapters are capable of projecting various continuous and 
+discrete design decisions. However when synthesizing a process flowsheet, one must take careful 
+consideration as to the optimization objectives. The most obvious objective would be of 
+pure monetary nature, where a process is designed to meet a given set of specifications 
+at minimum cost. An optimization like that can be carried out at steady state. However for
+a steady state model it is never ensured, that this steady state can actually be reached 
+by the process. Furthermore is there no consideration if the desired steady state can be kept for
+changing conditions outside the control of the process operator. 
 
-    \section{Degrees of freedom}
-    In order to gain more insight into the behaviour of the dynamic models presented above an analysis 
+In the case that load changes or different operation modes are required, it becomes questionable, 
+if steady state optimization remains feasible, or if a dynamic approach becomes necessary. 
+
+In this chapter different optimization studies will be given. For once different solution approaches 
+will be applied to the MINLP arising from a steady state simulation. For once the outer approximation 
+algorithm as implemented in \gproms, and secondly the continuous reformulation strategy as described 
+in \Secref{sec:opt:theory:continuous}. 
+
+The process under consideration is a generic cryogenic air separation process. As a starting point for the 
+optimization a base case was manually constructed which met certain somewhat arbitrarily chosen, 
+but reasonable constraints.  
+
+    \subsection{Degrees of freedom}
+    \todo{move to description of dynamic model.}
+    In order to gain more insight into the behaviour of the dynamic models presented above an analysis
     of the degrees of freedom within the model is at hand. For the degrees of freedom the cost correlations
-    will be disregarded, as they for a closed system of equations given the inputs generated form the column 
-    model. Furthermore interdependencies can be disregarded, as the cost model consist only of ''forward'' 
-    computations. In practical terms this statement can be confirmed since the models can be evaluated 
-    with and without costing equations. Hence only the stage and hydraulic equations will be considered. 
-    
+    will be disregarded, as they for a closed system of equations given the inputs generated form the column
+    model. Furthermore interdependencies can be disregarded, as the cost model consist only of ''forward''
+    computations. In practical terms this statement can be confirmed since the models can be evaluated
+    with and without costing equations. Hence only the stage and hydraulic equations will be considered.
+
     For a given column without condenser or reboiler the model is made up of $[n_S (5n_C + 24) + n_F]$
-    differential algebraic equations in $[n_S (5n_C + 29) + n_F (n_S + n_C + 3) + 1]$ variables. In this 
-    isolated case all feed flow rates, their composition and enthalpies would be specified. In this case 
-    the feeds include a hypothetical condenser reflux (the upper most feed) as well as reboiler reflux 
-    (lowest feed). Along with the feeds and their qualities, the feed splits and reflux split have to be 
+    differential algebraic equations in $[n_S (5n_C + 29) + n_F (n_S + n_C + 3) + 1]$ variables. In this
+    isolated case all feed flow rates, their composition and enthalpies would be specified. In this case
+    the feeds include a hypothetical condenser reflux (the upper most feed) as well as reboiler reflux
+    (lowest feed). Along with the feeds and their qualities, the feed splits and reflux split have to be
     assigned. Lastly the column diameter needs to be known. This yields $[n_F (n_S + n_C + 2) + n_S + 1]$
     specifications. To close the system initial conditions for all states have to be given. There
-    are a total of $[4 n_S ]$ dynamic stages in a column section. 
-    
-    The condenser reboiler unit 
+    are a total of $[4 n_S ]$ dynamic stages in a column section.
 
-    \section{Steady state single period}
+    The condenser reboiler unit
+
+    \subsection{Steady state single period}
     \label{chp:optexample:ss_single_perid}
     Objective function
     \Eqml{eq:opt:ss_single_objective}{
@@ -76,7 +99,7 @@ The simulation of chemical processes supplies valuable insight into the
         \item LPC dimensionless side draws ($s_i^{V, \text{LPC}}$)
     \end{itemize}
 
-\section{Optimization \& control}
+\subsection{Optimization \& control}
 	To include the design of a PI control structure in the process, the following constraints need to be added.
 	\Eq{}{
 		u_m & = b_{m,1} + \sum_{j=1}^{n_m} \left( K_{m,n} \cdot e_{m,n} + I_{m,n} \right),
@@ -88,10 +111,10 @@ The simulation of chemical processes supplies valuable insight into the
 		set_{m,n} & = set_{m-1,n} \eqannote{m = 2 \dots n_{in}, n = 1 \dots n_m}, \\
 		K^L_{m,n} \cdot \zeta^C_{m,n} & \leq K_{m,n}  \leq K^U_{m,n} \eqannote{m = 1 \dots n_{in},
 			n = 1 \dots n_m}, \\
-		\sum_{m=1}^{n_m} \zeta_{m,n}^C & = 1 eqannote{m = 1 \dots n_{in}}, \\
-		\sum_{n=1}^{n_{in}} \zeta_{m,n}^C & = 1 eqannote{n = 1 \dots n_{m}},
+		\sum_{m=1}^{n_m} \zeta_{m,n}^C & = 1 \eqannote{m = 1 \dots n_{in}}, \\
+		\sum_{n=1}^{n_{in}} \zeta_{m,n}^C & = 1 \eqannote{n = 1 \dots n_{m}},
 	}
-	SInce new states have been introduced, the corresponding initial conditions will have to be included
+	Since new states have been introduced, the corresponding initial conditions will have to be included
 	\Eq{}{
 		I_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\
 		e_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\

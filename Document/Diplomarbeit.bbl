@@ -104,6 +104,13 @@ Ravindra~S. Kamath, Lorenz~T. Biegler, and Ignacio~E. Grossmann.
   for simultaneous optimization and heat integration.
 \newblock {\em AIChE Journal}, 58(1):190--204, 2012.
 
+\bibitem{Kraemer.2009}
+Korbinian Kraemer, Sven Kossack, and Wolfgang Marquardt.
+\newblock {E}fficient {O}ptimization-{B}ased {D}esign of {D}istillation
+  {P}rocesses for {H}omogeneous {A}zeotropic {M}ixtures.
+\newblock {\em Industrial {\&} Engineering Chemistry Research},
+  48(14):6749--6764, 2009.
+
 \bibitem{Kraemer.2010}
 Korbinian Kraemer and Wolfgang Marquardt.
 \newblock {C}ontinuous {R}eformulation of {M}{I}{N}{L}{P} {P}roblems.

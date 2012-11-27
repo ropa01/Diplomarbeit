@@ -1,6 +1,34 @@
-The simulation of chemical processes supplies valuable insight into the
+The simulation of chemical processes supplies valuable insight into the intricacies of a given system. 
+To some extend it is also possible to improve given designs by manual alterations and simulation
+steps in a form of trial an error procedure. However the results of an approach like that are unlikely 
+to yield even locally optimal results in an acceptable amount of time. Hence optimization approaches
+are employed to attain improved designs. 
+
+The models presented in the previous chapters are capable of projecting various continuous and 
+discrete design decisions. However when synthesizing a process flowsheet, one must take careful 
+consideration as to the optimization objectives. The most obvious objective would be of 
+pure monetary nature, where a process is designed to meet a given set of specifications 
+at minimum cost. An optimization like that can be carried out at steady state. However for
+a steady state model it is never ensured, that this steady state can actually be reached 
+by the process. Furthermore is there no consideration if the desired steady state can be kept for
+changing conditions outside the control of the process operator. 
+
+In the case that load changes or different operation modes are required, it becomes questionable, 
+if steady state optimization remains feasible, or if a dynamic approach becomes necessary. 
+
+In this chapter different optimization studies will be given. For once different solution approaches 
+will be applied to the MINLP arising from a steady state simulation. For once the outer approximation 
+algorithm as implemented in \gproms, and secondly the continuous reformulation strategy as described 
+in \Secref{sec:opt:theory:continuous}. 
+
+The process under consideration is a generic cryogenic air separation process. As a starting point for the 
+optimization a base case was manually constructed which met certain somewhat arbitrarily chosen, 
+but reasonable constraints.  
+
+\todo{describe reference case.}
 
     \subsection{Degrees of freedom}
+    \todo{move to description of dynamic model.}
     In order to gain more insight into the behaviour of the dynamic models presented above an analysis
     of the degrees of freedom within the model is at hand. For the degrees of freedom the cost correlations
     will be disregarded, as they for a closed system of equations given the inputs generated form the column
