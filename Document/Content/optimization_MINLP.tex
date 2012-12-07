@@ -156,55 +156,61 @@ approaches to solve this class of problem within the process simulation environm
 
     \subsection{Continuous reformulation}
     \label{sec:opt:theory:continuous}
-    An alternative approach to solving discrete-continuous problems is to reformulate them as continuous problems
+    An alternative approach to solving discrete-continuous problems is to reformulate them as NLP
     and introduce further constraints which ensure that the discrete decision variables will assume integer values.
     Several different authors have proposed ways of reformulating integer decisions. The concept of continuous reformulation
-    will be discussed with the current example of the ASU process in mind. The following discussion is modeled on the
-    remarks of the topic in \cite{Stein.2004} and fitted to the case under consideration.
-
-    In the context of a column model, all decisions regarding feed and side draw locations as well as the minimum number
-    of trays can be seen as \emph{exclusive or} decisions, as the the stream can only be fed to or drawn from exactly one
-    stage. This can be expressed in the integer case by adding the constraint
-    \Eq{}{
-        & \sum_{j}^{n_S} y_{j,k} = 1 \\
-        & y_{j,k} \in \{0,1\}, \; \; k \in \mathcal{K}.
-    }
-    to the model equations. Here again $j$ denotes the number of stages and $\mathcal{K}$ is the set of decisions to be made,
-    corresponding to feed and side draw locations as well as the number of trays in a column.
-
-    If one defines a set $\mathcal{A}_0 = \{(1,0), (0,1)\}$ the summation constraint given earlier can be dropped
-    \Eq{}{
-        \left( y_{i,k}, \sum_{\genfrac{}{}{0pt}{}{j}{j \neq i}}^{n_S} y_{j} \right) \in \mathcal{A}_0, \eqannote{k \in \mathcal{K}}.
-    }
-    To attain a continuous reformulation of the problem, the set $\mathcal{A}_0$ now has to be described by means
-    of continuous constraints. Several approaches can be found in literature. For an overview of alternatives
-    the reader is referred to \cite{Stein.2004}. Often so called complementary constraints are used. This leads
-    to problems with so called equilibrium constraints. While those can be solved by dedicated solvers, there are
-    some drawbacks which motivate different formulations. Among the reasons for the complexity of these problems is,
-    that the linear independence constraint qualification as well as the Mangasarian-Fromovitz constraint qualification,
-    which has been known to be closely linked to the numerical stability of a program, \todo{cite something} are violated.
-
-    \begin{figure}
-        \scriptsize
-        \center
-        \input{GNUPlot/FB_Plot}
-        \caption{plot of Fischer-Burmeister function.}
-        \label{fig:FB_plot}
-    \end{figure}
-
-    To arrive at a formulation with more favourable theoretical properties Kraemer et al. \cite{Kraemer.2009} proposed
-    a continuous reformulation based on the Fischer-Burmeister nonlinear complementary problem (NCP) - function
-    \Eq{eq:opt:FB}{
-        1 - \sqrt{y_i^2 + (1 - y_i)^2} = 0.
-    }
-    If this function has exactly the values zero and one as solutions and hence forces a continuous variable to
-    take integer values. However it is still very hard to solve complex, large-scale problems by simply enforcing this
-    constraint. In order to facilitate convergence, the FB-function can be relaxed to a fully continuous problem
-    \Eq{eq:opt:FB}{
-        1 - \sqrt{y_i^2 + (1 - y_i)^2} \leq \mu.
-    }
-    The relaxation factor $\mu$ is then gradually reduced to zero in a sequence of NLP problems. \Figref{fig:FB_plot}
-    shows a plot of the FB-function over the domain zero to one. The green lines on the x-axis denote the feasible domain 
-    for a given value of $\mu$. As one can see, if the relaxation factor is chosen large enough the entire span 
-    between zero and one is feasible. 
-
+    will be discussed with the current example of the ASU process in mind. First an approach using 
+    
+        \subsubsection{Non-linear complementary problem (NCP / MECP)}
+        The following discussion is modeled on the remarks of the topic in \cite{Stein.2004} and fitted to the case under consideration.
+    
+%        In the context of a column model, all decisions regarding feed and side draw locations as well as the minimum number
+%        of trays can be seen as \emph{exclusive or} decisions, as the the stream can only be fed to or drawn from exactly one
+%        stage. This can be expressed in the integer case by adding the constraint
+%        \Eq{}{
+%            & \sum_{j}^{n_S} y_{j,k} = 1 \\
+%            & y_{j,k} \in \{0,1\}, \; \; k \in \mathcal{K}.
+%        }
+%        to the model equations. Here again $j$ denotes the number of stages and $\mathcal{K}$ is the set of decisions to be made,
+%        corresponding to feed and side draw locations as well as the number of trays in a column.
+%    
+%        If one defines a set $\mathcal{A}_0 = \{(1,0), (0,1)\}$ the summation constraint given earlier can be dropped
+%        \Eq{}{
+%            \left( y_{i,k}, \sum_{\genfrac{}{}{0pt}{}{j}{j \neq i}}^{n_S} y_{j} \right) \in \mathcal{A}_0, \eqannote{k \in \mathcal{K}}.
+%        }
+        Several approaches can be found in literature as to how discrete-continuous problem can be reformulated. For an overview of alternatives
+        the reader is referred to \cite{Stein.2004}. In many cases these reformulations lead to numerically difficult programs and 
+        unattractive theoretical properties. The aforementioned constraint qualifications are often violated.  
+    
+        \begin{figure}
+            \scriptsize
+            \center
+            \input{GNUPlot/FB_Plot}
+            \caption{plot of Fischer-Burmeister function.}
+            \label{fig:FB_plot}
+        \end{figure}
+    
+        To arrive at a formulation with favourable theoretical properties Kraemer et al. \cite{Kraemer.2009} proposed
+        a continuous reformulation based on the Fischer-Burmeister nonlinear complementary problem (NCP) - function
+        \Eq{eq:opt:FB}{
+            1 - \sqrt{y_i^2 + (1 - y_i)^2} = 0.
+        }
+        If this function has exactly the values zero and one as solutions and hence forces a continuous variable to
+        take integer values. However it is still very hard to solve complex, large-scale problems by simply enforcing this
+        constraint. In order to facilitate convergence, the FB-function can be relaxed to a fully continuous problem
+        \Eq{eq:opt:FB}{
+            1 - \sqrt{y_i^2 + (1 - y_i)^2} \leq \mu.
+        }
+        The relaxation factor $\mu$ is then gradually reduced to zero in a sequence of NLP problems. \Figref{fig:FB_plot}
+        shows a plot of the FB-function over the domain zero to one. The green lines on the x-axis denote the feasible domain
+        for a given value of $\mu$. As one can see, if the relaxation factor is chosen large enough the entire span
+        between zero and one is feasible.
+    
+        \subsubsection{Differentiable distribution function (DDF)}
+        An alternative way of reaching a continuous formulation was brought fourth by Lang and Biegler \cite{Lang.2002}
+        who propose the introduction of a differentiable distribution function (DDF)
+        \Eq{}{
+            \Psi_j = \frac{ \exp\left[ - \left( \frac{j - \sum_i \zeta_i i}{\sigma} \right)^2 \right] }{
+                \sum_k \exp\left[ - \left( \frac{k - \sum_i \zeta_i i}{\sigma} \right)^2 \right]}.
+        } 
+        

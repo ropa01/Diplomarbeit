@@ -1,128 +1,15 @@
 \chapter{Process optimization}
+\label{chp:optimization}
 
-\section{Optimization theory}
-
-\section{Mixed-integer optimization}
-
-\section{Optimization examples}
-
-\chapter{Mixed-integer optimization}
-\label{chp:MINLP}
-In this section some general considerations about mixed-integer non-linear programming (MINLP) will be presented.
-First the most commonly applied solution techniques will briefly be discussed on the basis of a review on the
-subject by Grossmann \cite{Grossmann.2002}. Then then an alternative approach to solve this class of problems,
-based on a continuous reformulation of the discrete decision variables, which has recently been proposed
-\cite{Kraemer.2010,Stein.2004} will also be introduced. This reformulation is also the basis for a comparison of different
-approaches to solve this class of problem within the process simulation environment \gproms.
-
-    \section{solution techniques}
-
-    As previously stated, the following discussion of general solution techniques for MINLP's is largely based
-    in the comprehensive review by I. E. Grossmann \cite{Grossmann.2002}.
-
-    Several approaches to tackle this type of problem have successfully been applied to a multitude of cases for
-    several years now. In general four major types of solution algorithms can be distinguished.
-    \begin{itemize}
-        \item branch and bound
-        \item outer approximation
-        \item generalized benders
-        \item extended cutting plane
-    \end{itemize}
-    All these algorithms make use of a limited number of common subproblems, which are then solved
-    in different configurations. Therefore these subproblems can previously be discussed and will be referred
-    to when going elaborating on different algorithms. Furthermore it needs to be emphasised, that the presented
-    solution techniques are designed for convex problems, and only in those cases an optimal solution can
-    be found with a degree of confidence. While they can be applied to the more general non-convex case, only
-    local optimality can be assured.
-
-    The general case of a MINLP takes the form
-    \program{prog:stdMINLP}{
-        & \minimize{x,y} & & C = f(x,y) \\
-        & \st & & g_j(x,y) \leq 0, \; \; j \in \mathset{J} \\
-        & & & x \in \mathset{X}, \; y \in \mathset{Y}
-    }
-
-    If the discrete variables in the discrete-continuous program are relaxed, the resulting NLP relaxation
-    can be written as
-    \program{prog:relaxedNLP}{
-        & \minimize{x,y} & & C_{LB}^k = f(x,y) \\
-        & \st & & g_j(x,y) \leq 0, \; \; j \in \mathset{J} \\
-        & & & x \in \mathset{X}, \; \; y \in \mathset{Y}_R \\
-        & & & y_i \leq \alpha_i^k, \; i \in \mathset{I}_{FL}^k \\
-        & & & y_i \geq \beta_i^k, \; i \in \mathset{I}_{FU}^k
-    }
-    Here $\mathset{Y}_R$ denotes the relaxed set of the integer set $\mathset{Y}$, $\mathset{I}_{FL}^k$ and
-    $\mathset{I}_{FU}^k$ are subsets of the indices denoting the entire set of integer variables.
-    The relaxed integers contained in these sets are  bounded to the values $\alpha_i^k$ and $\beta_i^k$ respectively.
-    These bounds are lower and upper bound taken from the previous iteration of the algorithm in question. If
-    $\mathset{I}_{FL}^k = \emptyset$ and $\mathset{I}_{FU}^k = \emptyset$ are empty sets, problem \progref{prog:relaxedNLP}
-    denotes the fully relaxed problem, initially solved in all algorithms. The optimal solution to this initially solved
-    problem ($C_{LB}^0$) poses an absolute lower bound to \progref{prog:stdMINLP} since all variables are fully relaxed.
-
-    If all discrete variables are fixed at a given value, the NLP subproblem for fixed $y^k$ results, as
-    only continuous variables are being considered.
-    \program{prog:fixedyNLP}{
-        & \minimize{x} & & C_{LB}^k = f(x,y^k) \\
-        & \st & & g_j(x,y^k) \leq 0, \; \; j \in \mathset{J} \\
-        & & & x \in \mathset{X}
-    }
-    If \progref{prog:fixedyNLP} is infeasible the NLP feasibility subproblem for fixed $y^k$ can be solved.
-    \program{prog:feasibleNLP}{
-        & \minimize{x} & & u \\
-        & \st & & g_j(x,y^k) \leq u, \; \; j \in \mathset{J} \\
-        & & & x \in \mathset{X}, \; \; u \in \mathbb{R}
-    }
-    This NLP returns a strictly positive value for $u$.
-
-    Aside from the presented NLP's a linearized version of \progref{prog:stdMINLP} is regularly solved
-    \program{prog:MILP}{
-        & \minimize{x, y} & & C_L^k = \alpha \\
-        & \st & & f(x^k,y^k) + \nabla f(x^k,y^k)^T \begin{bmatrix} x - x^k \\ y - y^k \end{bmatrix} \leq \alpha \\
-        & & & g_j(x^k,y^k) + \nabla g_j(x^k,y^k)^T \begin{bmatrix} x - x^k \\ y - y^k \end{bmatrix} \leq 0, \; \; j \in \mathset{J} \\
-        & & & x \in \mathset{X}, \; \; y \in \mathset{Y}, \; \; k = {1 \dots K}
-    }
-    The linearized problem can be constructed in several ways from the set of points $K$ attained in previous iterations.
-    Sometimes only violated or active constraints are linearized. When objective function and constraints are convex, the
-    objective function is underestimated, while the constraints are overestimated. From the overestimated constraints stems
-    the name outer approximation.
-
-        \subsection{Branch \& bound}
-        The branch and bound (B\&B) algorithm has originally been proposed for linear problems, but has since been extended to
-        handle non-linear objectives and constraints. As an initial step for the branch and bound the fully relaxed
-        NLP \progref{prog:relaxedNLP} is solved, which, as mentioned before, provides an absolute lower bound to
-        the program in question. In the rare case that all relaxed integer variables assume integer values the optimal
-        solution has been found and the algorithm can terminate. Otherwise a tree search is performed, exploring the
-        space of the integer variables. In each step an increasing number of integer variables is fixed such that
-        a NLP in the form of \progref{prog:fixedyNLP} needs to be solved. The solution of these subproblems is
-        a new lower bound for all descendant nodes. Further exploration of branches can be stopped, once a
-        given subproblem returns a value grater than the current upper bound or becomes infeasible.
-
-        Due to the large number of NLP subproblems that have to be solved within the tree search, the branch and bound
-        algorithm is most attractive, if the solution is computationally inexpensive, or few nodes have to be explored.
-
-        \subsection{Outer approximation}
-        The outer approximation (OA) algorithm relies on consecutively solving \progref{prog:fixedyNLP} and \progref{prog:MILP}.
-        Each solution of the NLP with fixed $y^k$ yields a new point $(x^k,y^k)$ which is used to construct an updated version
-        of the MILP. The MILP generally includes linearized versions of all constraints and the objective function. As more and
-        more points become available during the iterative process, new constraints are constructed for each available point.
-
-        The main theorem for the derivation of the OA algorithm states, that the optimal solution of the problem \progref{prog:MILP}
-        constructed from all points $(x^k,y^k), k \in K^{\ast}$. Where $K^{\ast}$ is made up of all optimal solutions of \progref{prog:fixedyNLP}
-        where the current $y^k$ yields a feasible solution, and \progref{prog:feasibleNLP} where infeasible solutions of the NLP with fixed $y^k$
-        are encountered. It should again be emphasized, that this theorem holds only for convex a objective function and constraints.
-
-        As the points necessary to construct the aforementioned system are not available when the solution process commences, a smaller
-        systems is constructed and extended as more points become available. The first point again results from solving a fully relaxed
-        system. \todo{is this true, that the fully relaxed system is initially solved????} This again yields an absolute lower bound
-        for the original problem. The solution of each consecutive MILP gives a new lower bound which will always be greater than the
-        bounds from previous iterations. Without any prove this argument is supported by the fact that adding new linear constraints
-        will limit the feasible region of the problem and hence further restrict the possible solutions for the continuous variables.
-
-        The optimal points attained from the NLP subproblems with fixed discrete values form upper bounds on the optimal solution.
-        Here no statement can be made about the quality of the bound in each step, but rather is the current upper bound updated,
-        once a lower value is encountered.
-
-        The iterative process terminates, once the
-
-
-    \section{Continuous reformulation}
+    \section{Optimization theory}
+    \label{sec:opt:theory}
+    \input{Content/optimization_theory}
+    
+    \section{Mixed-integer optimization}
+    \label{sec:opt:MINLP}
+    \input{Content/optimization_MINLP}
+    
+    \section{Optimization examples}
+    \label{sec:opt:apllication}
+    \input{Content/optimization_application}
+    

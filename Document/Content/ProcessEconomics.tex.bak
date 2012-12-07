@@ -59,11 +59,11 @@ of evaluating certain investment options and estimating a projects profitability
         	C_P = C_P^0 \cdot \left( \frac{Q_P}{Q_P^0} \right)^D.
         	\label{eq:cost}
         }%
-        \ncr{$C_P$}{total process cost}{\$}
-        \ncr{$C_P^0$}{reference process cost}{\$}
-        \ncr{$Q_P$}{process capacity}{\frac{kg}{h}}
-        \ncr{$Q_P^0$}{reference process capacity}{\frac{kg}{h}}
-        \ncr{$D$}{degression coefficient}{-}
+        \ncr{C_P}{total process cost}{\$}
+        \ncr{C_P^0}{reference process cost}{\$}
+        \ncr{Q_P}{process capacity}{\frac{kg}{h}}
+        \ncr{Q_P^0}{reference process capacity}{\frac{kg}{h}}
+        \ncr{D}{degression coefficient}{-}
         The degression coefficient $D$ needs to be correlated from historical data.
 
         As the overall price structure will change over time, the reference price will not reflect the current
@@ -75,10 +75,10 @@ of evaluating certain investment options and estimating a projects profitability
         	\frac{C_1}{C_2} = \frac{I_1}{I_2}.
         	\label{eq:index_ratio}
         }%
-        \ncr{$C_1$}{Reference equipment cost at time $1$}{\$}
-        \ncr{$C_2$}{Reference equipment cost at time $2$}{\$}
-        \ncr{$I_1$}{Cost index at time $1$}{-}
-        \ncr{$I_2$}{Cost index at time $2$}{-}
+        \ncr{C_1}{Reference equipment cost at time $1$}{\$}
+        \ncr{C_2}{Reference equipment cost at time $2$}{\$}
+        \ncr{I_1}{Cost index at time $1$}{-}
+        \ncr{I_2}{Cost index at time $2$}{-}
         For each index an somewhat arbitrary reference year is chosen. Among the most common indices are the
         Marshall \& Swift index, the Nellson-Farrar-Index or the Chemical Engineering index. Some exemplary
         values for these indices are given in \tabref{tab:PriceIndices}. As one can see the development within the
@@ -110,11 +110,11 @@ of evaluating certain investment options and estimating a projects profitability
         \eq{
         	C^{i}_E = C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}}.
         	\label{eq:equip_cost}
-        	\ncr{$C^{i}_E$}{cost of equipment $i$}{\$}
-        	\ncr{$C^{i}_B$}{reference cost of equipment $i$}{\$}
-        	\ncr{$Q^{i}$}{specific quantity for equipment $i$}{variable}
-        	\ncr{$Q^{i}_B$}{equipment specific reference quantity}{variable}
-        	\ncr{$M^{i}$}{equipment specific factor \nomunit}{-}
+        	\ncr{C^{i}_E}{cost of equipment $i$}{\$}
+        	\ncr{C^{i}_B}{reference cost of equipment $i$}{\$}
+        	\ncr{Q^{i}}{specific quantity for equipment $i$}{variable}
+        	\ncr{Q^{i}_B}{equipment specific reference quantity}{variable}
+        	\ncr{M^{i}}{equipment specific factor \nomunit}{-}
         }%
         A reference price $C^{i}_B$ is multiplied by the determining quantity $Q^{i}$ normalized to a reference state
         $Q^{i}_B$ and raised to the power $M^{i}$ specific to each piece of equipment. Reference prices and
@@ -132,10 +132,10 @@ of evaluating certain investment options and estimating a projects profitability
         		=   C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}} 
                     \underbrace{\left(1 + f^{i}_C + f^{i}_M + f^{i}_P + f^{i}_T\right)}_{= f_F^{i}}.
         	\label{eq:equip_cost_mpt}
-        	\ncr{$f^{i}_C$}{design complexity correction to equipment cost \nomunit{-}}
-        	\ncr{$f^{i}_M$}{material selection correction to equipment cost \nomunit{-}}
-        	\ncr{$f^{i}_P$}{pressure correction to equipment cost \nomunit{-}}
-        	\ncr{$f^{i}_T$}{temperature correction to equipment cost \nomunit{-}}
+        	\ncr{f^{i}_C}{design complexity correction to equipment cost}{-}
+        	\ncr{f^{i}_M}{material selection correction to equipment cost}{-}
+        	\ncr{f^{i}_P}{pressure correction to equipment cost}{-}
+        	\ncr{f^{i}_T}{temperature correction to equipment cost}{-}
         }%
         Where $f_F$ denotes the form factor, $f_C$ corrects for design complexity, $f_M$ for material selection,
         $f_P$ adjusts for extreme pressures and $f_T$ for temperature.
@@ -156,7 +156,8 @@ of evaluating certain investment options and estimating a projects profitability
         	\item{Insulation and fire proofing}
         	\item{Labour fees}
         }%
-        To incorporate those additional cost, again correction factors to the main equipment price are used. Depending on the status
+        To incorporate those additional cost, again correction factors to the main equipment price are used. 
+        Depending on the status
         of the information available they can be expressed as one unified factor or broken down to each specific
         category. One however needs to bare in mind, that costs for piping and valves -- pieces of equipment
         in direct contact with process media -- will be affected by the process conditions in a similar
@@ -187,11 +188,11 @@ of evaluating certain investment options and estimating a projects profitability
         $m_i$ as well as their specific cost are known.
         \eq{
         	C_{RM} = \left( \sum_i^{N_{RM}} \dot{m}_i \cdot C_{RM}^{i} \right) \cdot t_{op}.
-        	\ncr{$n_{RM}$}{number of different raw materials}{-}
-        	\ncr{$C_{RM}$}{total cost of raw materials}{\$}
-        	\ncr{$C^{i}_{RM}$}{mass specific cost of raw material $i$}{\frac{\$}{kg}}
-        	\ncr{$\dot{m}_i$}{mass flow of component $i$}{\frac{kg}{s}}
-        	\ncr{$t_{op}$}{time of process operations}{s}
+        	\ncr{n_{RM}}{number of different raw materials}{-}
+        	\ncr{C_{RM}}{total cost of raw materials}{\$}
+        	\ncr{C^{i}_{RM}}{mass specific cost of raw material $i$}{\frac{\$}{kg}}
+        	\ncr{\dot{m}_i}{mass flow of component $i$}{\frac{kg}{s}}
+        	\ncr{t_{op}}{time of process operations}{s}
         }%
         
         Much in the same way the cost for energy can be approximated. This is once more done for each individual
@@ -200,10 +201,10 @@ of evaluating certain investment options and estimating a projects profitability
         the price for energy carrier $j$ $C_{EC}^j$ the total energy cost $C_{EC}$ can be assessed.
         \eq{
         	C_{EC} = \left( \sum_i^{N_{E}} \sum_j^{N_{EC}} \dot{e}_{ij} \cdot C_{EC}^{i} \right) \cdot t_{op}.
-        	\ncr{$n_{E}$}{number of process units}{-}
-        	\ncr{$C_{EC}$}{total cost of energy}{\$}
-        	\ncr{$C^{i}_{EC}$}{mass specific cost of energy carrier $i$}{\frac{\$}{kW}}
-        	\ncr{$\dot{e}_{ij}$}{energy flow of to equipment $i$ from energy carrier $j$}{kW}
+        	\ncr{n_{E}}{number of process units}{-}
+        	\ncr{C_{EC}}{total cost of energy}{\$}
+        	\ncr{C^{i}_{EC}}{mass specific cost of energy carrier $i$}{\frac{\$}{kW}}
+        	\ncr{\dot{e}_{ij}}{energy flow of to equipment $i$ from energy carrier $j$}{kW}
         }%
 
     \subsubsection{Working capital}
@@ -218,7 +219,7 @@ of evaluating certain investment options and estimating a projects profitability
         the process seizes operations and it can (partially) be retrieved.
         \eq{
         	C_{FILL} = \sum_i^{N_{RM}} V_i \cdot C_{RM}^{i}.
-        	\ncr{$C_{FILL}$}{cost of raw materials to fill the process}{\$}
+        	\ncr{C_{FILL}}{cost of raw materials to fill the process}{\$}
         }%
 
     \subsubsection{Total investment}
@@ -256,10 +257,10 @@ of evaluating certain investment options and estimating a projects profitability
             A shorter payback time can be considered a measure for an more attractive investment.
             \eq{
             	POT = \frac{\textnormal{capital expenditure}}{\textnormal{incoming cash flow / period}}
-            	\nc{$POT$}{Payout time}{\$}
-        }%
-        \ncr{POT}{payout time}{a}
-        However many aspects especially in potential profits are not included here. 
+            	\ncr{POT}{Payout time}{\$}
+            }%
+            \ncr{POT}{payout time}{a}
+            However many aspects especially in potential profits are not included here. 
 
         \subsubsection{Return of investment}
             The return of investment is defined as
@@ -297,7 +298,7 @@ of evaluating certain investment options and estimating a projects profitability
         \begin{figure}
             \input{pgfplots/ProjectCashFlow}
             \caption{Accumulated cash flows over project life cycle.}
-            label{fig:CashFlow}
+            \label{fig:CashFlow}
         \end{figure}
         \todo[inline]{add ref: (\figref{fig:CashFlow}) Script PE-VT}
     
@@ -325,7 +326,7 @@ of evaluating certain investment options and estimating a projects profitability
         predefined instances. Assuming those payments are of equal size $a$, the final value can be computed by
         \eq{
         	C_n = a \cdot q^{\alpha} \cdot \frac{q^n - 1}{q - 1},
-        	\nc{a}{Annuity}{\$}
+        	\ncr{a}{annuity}{\$}
         }%
         while the current value of an annuity yields
         \eq{

@@ -17,6 +17,12 @@ Charles~O. Akinlabi, Dimitrios~I. Gerogiorgis, Michael~C. Georgiadis, and
 \newblock {\em {T}hermodynamik der {G}emische}.
 \newblock Springer-Verlag, 2003.
 
+\bibitem{Barron.1985}
+Randall~F. Barron.
+\newblock {\em {C}ryogenic systems}.
+\newblock Oxford University Press and Clarendon Press, New York and Oxford
+  [Oxfordshire], 2 edition, 1985.
+
 \bibitem{Barttfeld.2002}
 Mariana Barttfeld and P{\'i}o~A. Aguirre.
 \newblock {O}ptimal {S}ynthesis of {M}ulticomponent {Z}eotropic {D}istillation
@@ -119,6 +125,11 @@ Korbinian Kraemer and Wolfgang Marquardt.
   {A}pplications in {E}ngineering}, pages 83--92. Springer Berlin Heidelberg,
   Berlin and Heidelberg, 2010.
 
+\bibitem{Lang.2002}
+Y-D Lang and L.~T. Biegler.
+\newblock {D}istributed stream method for tray optimization.
+\newblock {\em AIChE Journal}, 48(3):582--595, 2002.
+
 \bibitem{Lockett.2009}
 M.~J. Lockett.
 \newblock {\em {D}istillation {T}ray {F}undamentals}.
@@ -142,6 +153,11 @@ P.~Mahapatra and B.~W. Bequette.
 Leonard~M. Naphtali and Donald~P. Sandholm.
 \newblock {M}ulticomponent separation calculations by linearization.
 \newblock {\em AIChE Journal}, 17(1):148--153, 1971.
+
+\bibitem{Nocedal.2006}
+Jorge Nocedal and Stephen~J. Wright.
+\newblock {\em {N}umerical optimization}.
+\newblock Springer, New York, 2 edition, 2006.
 
 \bibitem{Peters.2003}
 Max~Stone Peters, Klaus~D. Timmerhaus, and Ronald~E. West.

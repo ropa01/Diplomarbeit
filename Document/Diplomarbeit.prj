@@ -4,43 +4,67 @@
 0
 1
 Diplomarbeit.tex
-83
-11
-6
+85
+10
+4
 
 Diplomarbeit.tex
 TeX:UNIX
 152154107 0 -1 764 -1 133 0 0 934 409 1 81 102 -1 -1 0 0 62 -1 -1 62 1 0 133 -1   0
-:\Users\Abakus W7\Documents\Studium\AppNumOpt\ExamNotes\Summary\OptCond.tex
-TeX:UNIX
-1159163 4 -1 1611 -1 1610 25 25 1241 524 0 233 187 -1 -1 0 0 31 -1 -1 31 1 0 1610 -1   0
 Content\optimization.tex
 TeX:UNIX
 1159163 0 -1 54 -1 380 175 175 1364 674 0 25 255 -1 -1 0 0 30 -1 -1 30 1 0 380 -1   0
 Content\optimization_theory.tex
 TeX:UNIX
-1159163 1 -1 3121 -1 3167 200 200 1389 699 0 545 442 -1 -1 0 0 13 5 5 13 1 0 3167 -1   0
+1159163 1 -1 3121 -1 3167 200 200 1389 699 0 545 391 -1 -1 0 0 13 5 5 13 1 0 3167 -1   0
 Content\optimization_MINLP.tex
 TeX:UNIX
-1159163 4 -1 11415 -1 11416 225 225 1414 724 1 369 272 -1 -1 0 0 0 -1 -1 0 1 0 11416 -1   0
-Literature.bib
-BibTeX
-1049586 2 564 1491 564 1 100 100 1224 587 0 25 272 -1 -1 0 0 29 0 0 29 1 0 1 564   0
+1159163 4 -1 11415 -1 11416 225 225 1414 724 1 369 68 -1 -1 0 0 0 -1 -1 0 1 0 11416 -1   0
 Content\optimization_application.tex
 TeX
-269496315 0 -1 2001 -1 7031 0 0 1189 499 0 641 425 -1 -1 0 0 105 -1 -1 105 1 0 7031 -1   0
+269496315 0 -1 4700 -1 5156 0 0 1189 499 0 57 510 -1 -1 0 0 105 -1 -1 105 1 0 5156 -1   0
 preambel.tex
 TeX:UNIX
 1159163 1 -1 1542 -1 1548 0 0 1009 215 0 385 289 -1 -1 0 0 129 -1 -1 129 1 0 1548 -1   0
-GNUPlot\FB_Plot.tex
-TeX:UNIX
-1159163 0 -1 3263 -1 3477 0 0 1332 390 0 425 408 -1 -1 0 0 40 -1 -1 40 1 0 3477 -1   0
 Content\Process_steady.tex
 TeX:UNIX
-1159163 0 -1 16352 -1 16351 125 125 1031 615 0 377 4318 -1 -1 0 0 23 -1 -1 23 1 0 16351 -1   0
+1159163 0 -1 19404 -1 19424 125 125 1031 615 1 73 459 -1 -1 0 0 23 -1 -1 23 1 0 19424 -1   0
 Content\Process_steady_separation.tex
 TeX:UNIX
-1159163 1 -1 39134 -1 38477 150 150 1056 640 1 137 238 -1 -1 0 0 93 -1 -1 93 2 0 38477 -1  1 23246 -1   0
+1159163 1 -1 2661 -1 2676 150 150 1056 640 1 425 187 -1 -1 0 0 93 -1 -1 93 3 0 2676 -1  1 23756 -1  2 9731 -1   0
+Tables\SS1_results.tex
+TeX
+1060859 0 -1 565 -1 926 0 0 1375 581 0 25 357 -1 -1 0 0 -1 -1 -1 -1 1 0 926 -1   0
+Content\Process_dynamic.tex
+TeX:UNIX
+1159163 1 -1 5271 -1 4778 25 25 1121 615 0 89 306 -1 -1 0 0 85 -1 -1 85 1 0 4778 -1   0
+Pictures\tray_model_len.tex
+TeX:UNIX
+1159163 0 -1 19 -1 19 125 125 1500 706 0 177 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
+Pictures\tray_model.tex
+TeX:UNIX
+269594619 0 52 22 -1 3195 200 200 1371 631 0 25 782 -1 -1 0 0 19 -1 -1 19 1 0 3195 -1   0
+Content\ProcessModel.tex
+TeX:UNIX
+269594619 2 -1 3734 -1 3700 150 150 1056 640 0 25 272 -1 -1 0 0 36 -1 -1 36 1 0 3700 -1   0
+:\Users\Abakus W7\Documents\Studium\AppNumOpt\ExamNotes\Summary\OptCond.tex
+TeX:UNIX
+1159163 4 -1 1611 -1 1610 25 25 1241 524 0 233 187 -1 -1 0 0 31 -1 -1 31 1 0 1610 -1   0
+Literature.bib
+BibTeX
+1049586 2 564 1491 564 1 100 100 1224 587 0 25 272 -1 -1 0 0 29 0 0 29 1 0 1 564   0
+GNUPlot\FB_Plot.tex
+TeX:UNIX
+1159163 0 -1 3263 -1 3477 0 0 1332 390 0 425 391 -1 -1 0 0 40 -1 -1 40 1 0 3477 -1   0
+Pictures\col_complete_super.tex
+TeX:UNIX
+269594619 0 -1 0 -1 2736 150 150 1299 608 0 497 425 -1 -1 0 0 80 -1 -1 80 1 0 2736 -1   0
+Content\introduction.tex
+TeX:UNIX
+1159163 0 -1 3538 -1 3539 50 50 984 459 0 409 714 -1 -1 0 0 22 -1 -1 22 1 0 3539 -1   0
+Pictures\col_stage_super.tex
+TeX:UNIX
+1159163 1 -1 0 -1 1372 175 175 1324 633 1 73 272 -1 -1 0 0 19 -1 -1 19 1 0 1372 -1   0
 :\GNU\FB_Plot.tex
 TeX:UNIX
 269594619 0 -1 0 -1 0 150 150 1385 540 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
@@ -56,15 +80,9 @@ TeX:UNIX
 Content\MINLP.tex
 TeX:UNIX
 269594619 0 -1 111 -1 131 225 225 1321 815 0 265 102 -1 -1 0 0 170 -1 -1 170 1 0 131 -1   0
-Content\ProcessModel.tex
-TeX:UNIX
-269594619 0 -1 6395 -1 5657 150 150 1056 640 0 601 527 -1 -1 0 0 36 -1 -1 36 1 0 5657 -1   0
 Content\OptimizationApplication.tex
 TeX
 269496315 0 -1 986 -1 215 50 50 1146 640 0 401 102 -1 -1 0 0 31 -1 -1 31 1 0 215 -1   0
-Content\Process_dynamic.tex
-TeX:UNIX
-269594619 0 -1 9807 -1 9753 25 25 1121 615 0 25 1241 -1 -1 0 0 34 -1 -1 34 1 0 9753 -1   0
 :\Users\Abakus W7\Dropbox\Studium\Diplomarbeit_files\Offiziell\Vollmacht Carl\Anschreiben.tex
 TeX:DE:UNIX
 286371835 1 -1 0 -1 1957 50 50 1196 535 0 25 680 -1 -1 0 0 66 -1 -1 66 1 0 1957 -1   0
@@ -116,9 +134,6 @@ TeX:UNIX
 pgfplots\TikZTemplates.tex
 TeX:UNIX
 1159163 0 -1 406 -1 408 25 25 1219 483 1 73 119 -1 -1 0 0 436 -1 -1 436 1 0 408 -1   0
-Pictures\tray_model.tex
-TeX:UNIX
-1159163 0 52 22 -1 3938 200 200 1371 631 0 137 476 -1 -1 0 0 19 -1 -1 19 1 0 3938 -1   0
 Content\MathModel.tex
 TeX:UNIX
 1159163 0 -1 14617 -1 14617 50 50 1059 265 1 153 612 -1 -1 0 0 36 -1 -1 36 1 0 14617 -1   0
@@ -197,12 +212,6 @@ TeX:UNIX
 Pictures\condenser.tex
 TeX:UNIX
 269594619 0 -1 20 -1 20 75 75 1224 533 0 185 0 -1 -1 0 0 30 -1 -1 30 1 0 20 -1   0
-Pictures\col_stage_super.tex
-TeX:UNIX
-269594619 0 -1 19 -1 19 175 175 1324 633 1 225 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
-Pictures\col_complete_super.tex
-TeX:UNIX
-269594619 0 -1 20 -1 20 150 150 1299 608 0 185 0 -1 -1 0 0 80 -1 -1 80 1 0 20 -1   0
 pgfplots\Reboiler.tex
 TeX:UNIX
 269594619 0 -1 19 -1 19 200 200 1394 658 0 177 0 -1 -1 0 0 19 -1 -1 19 1 0 19 -1   0
@@ -254,9 +263,6 @@ TeX:UNIX
 Content\ProcessDesign.tex
 TeX:UNIX
 1159163 0 -1 0 -1 0 75 75 1009 484 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
-Content\introduction.tex
-TeX:UNIX
-1159163 0 -1 0 -1 0 50 50 984 459 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
 
 *Diplomarbeit.tex
 >
@@ -272,9 +278,6 @@ TeX:UNIX
 *Content/Lists
 *Content/Abstract
 *Content/Introduction
->
-*pgfplots/GasPie
-<
 *Content/AirSep
 >
 *Pictures/tech_compar
@@ -311,6 +314,7 @@ TeX:UNIX
 *Content/Process_dynamic
 >
 *Pictures/tray_model
+*Pictures/tray_model_len
 *Pictures/packing_geo
 <
 *Content/Process_econ
@@ -323,6 +327,9 @@ TeX:UNIX
 >
 *Content/optimization_theory
 *Content/optimization_MINLP
+>
+*GNUPlot/FB_Plot
+<
 *Content/optimization_application
 <
 *Content/outlook

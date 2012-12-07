@@ -1,0 +1,21 @@
+\begin{tabular}{lccc}
+	variable & initial & OA & FB (+DDF) \\ \hline
+	plant air flowrate & 12431.196	12459.883 & 12433.674 \\
+    CAC reflux location & 6 & 16 & 15 \\
+    CAC diameter & 3.5 & 1.1723957 & 1.1416101 \\
+    CRCAC reflux ratio & 32 & 33.846962 & 31.734552 \\
+    CRmain reflux ratio & 5 & 4.4252396 & 4.0375166 \\
+    HPC reflux location & 6 & 15 & 13 \\
+    HPC column diameter & 4 & 2.9147873 & 2.8997014 \\
+    HPC GN2 draw flowrate & 2430 & 1861.6652 & 1961.7543 \\
+    LPC column diameter & 5.5 & 3.9411757 & 3.9075384 \\
+    LPC split air feed location & 28 & 26 & 25 \\
+    LPX oxygeb rich feed location & 20 & 23 & 22 \\
+    CAC reflux feed location & 38 & 38 & 38 \\
+    LPC reflux location & 6 & 15 & 16 \\
+    LPC Watse draw location & 8 & 22 & 21 \\
+    CAC side draw location & 38 & 38 & 38 \\
+    Waste flowrate  & 7160 & 7439.883 & 7413.6724 \\
+    CAC feed flowrate & 730 & 665.17664 & 624.61566 \\ \hline
+\end{tabular}
+

@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+        \pgfmathsetmacro{\colwidth}{6}
+        \pgfmathsetmacro{\colheight}{6}
+        \pgfmathsetmacro{\bza}{35}
+        \pgfmathsetmacro{\bzb}{(180 - \bza)}
+        \pgfmathsetmacro{\bzr}{0.75}
+
+        % trays
+        \draw [stdline] ($(A) + (\colwidth,0) + 0.3*(0,-\colheight)$) -- ++($-0.15*(\colwidth,0)$) node (C) [inner sep=0] {};
+        \draw [dashtray] (C) -- ++($-0.7*(\colwidth,0)$) node (D) [inner sep=0] {} ;
+        \draw [stdline] ($(D) + 0.1*(0,\colheight)$) -- ++($-0.3*(0,\colheight)$) ;
+
+        \draw [stdline] ($(A) + 0.65*(0,-\colheight)$) -- ++($0.15*(\colwidth,0)$) node (E) [inner sep=0] {};
+        \draw [dashtray] (E) -- ++($0.7*(\colwidth,0)$) node (F) [inner sep=0] {} ;
+        \draw [stdline] ($(F) + 0.1*(0,\colheight)$) -- ++($-0.3*(0,\colheight)$) ;
+
+\end{tikzpicture}

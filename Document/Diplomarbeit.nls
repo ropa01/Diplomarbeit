@@ -2,303 +2,303 @@
 
  \nomgroup{C}
 
-  \item [{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {4.63}
-		\nompageref{37}
+  \item [{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {4.61}
+		\nompageref{38}
 
  \nomgroup{G}
 
-  \item [{$\beta $}]\begingroup aeration factor \nomunit {-}\nomeqref {4.67}
-		\nompageref{38}
-  \item [{$\delta $}]\begingroup film thickness \nomunit {m}\nomeqref {4.69}
-		\nompageref{38}
-  \item [{$\epsilon $}]\begingroup packing void fraction \nomunit {-}\nomeqref {4.70}
-		\nompageref{38}
-  \item [{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {4.11}
-		\nompageref{21}
-  \item [{$\mu _G$}]\begingroup vapour viscosity \nomunit {Pa \cdot s}\nomeqref {4.70}
-		\nompageref{38}
-  \item [{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {4.73}
+  \item [{$\beta $}]\begingroup aeration factor \nomunit {-}\nomeqref {4.65}
 		\nompageref{39}
-  \item [{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {4.54}
+  \item [{$\delta $}]\begingroup film thickness \nomunit {m}\nomeqref {4.67}
+		\nompageref{39}
+  \item [{$\epsilon $}]\begingroup packing void fraction \nomunit {-}\nomeqref {4.68}
+		\nompageref{39}
+  \item [{$\gamma _i$}]\begingroup liquid activity coefficient of component $i$ \nomunit {-}\nomeqref {4.11}
+		\nompageref{22}
+  \item [{$\mu _G$}]\begingroup vapour viscosity \nomunit {Pa \cdot s}\nomeqref {4.68}
+		\nompageref{39}
+  \item [{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {4.71}
+		\nompageref{40}
+  \item [{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {4.52}
+		\nompageref{36}
+  \item [{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {4.51}
 		\nompageref{35}
-  \item [{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {4.53}
-		\nompageref{34}
   \item [{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {4.20}
-		\nompageref{24}
+		\nompageref{25}
   \item [{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {4.20}
-		\nompageref{24}
+		\nompageref{25}
   \item [{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {4.21}
-		\nompageref{24}
-  \item [{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {4.63}
-		\nompageref{37}
-  \item [{$\Psi _{flood}$}]\begingroup fractional allowed flooding \nomunit {-}\nomeqref {4.99}
-		\nompageref{43}
-  \item [{$\Theta $}]\begingroup corrugation angle \nomunit {rad}\nomeqref {4.70}
+		\nompageref{25}
+  \item [{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {4.61}
 		\nompageref{38}
+  \item [{$\Psi _{flood}$}]\begingroup fractional allowed flooding \nomunit {-}\nomeqref {4.97}
+		\nompageref{44}
+  \item [{$\Theta $}]\begingroup corrugation angle \nomunit {rad}\nomeqref {4.68}
+		\nompageref{39}
   \item [{$\varphi ^0_i$}]\begingroup reference vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {4.11}
-		\nompageref{21}
+		\nompageref{22}
   \item [{$\varphi _i$}]\begingroup vapour fugacity coefficient of component $i$ \nomunit {-}\nomeqref {4.11}
-		\nompageref{21}
+		\nompageref{22}
   \item [{$\zeta ^{F}_{ij}$}]\begingroup splitting variable for feed $i$ on stage $j$ \nomunit {-}\nomeqref {4.6}
-		\nompageref{20}
-  \item [{$\zeta ^{R}_{j}$}]\begingroup splitting variable for reboiler reflux on stage $j$ \nomunit {-}\nomeqref {4.6}
-		\nompageref{20}
+		\nompageref{21}
+  \item [{$\zeta ^{R}_{j}$}]\begingroup splitting variable for reflux on stage $j$ \nomunit {-}\nomeqref {4.6}
+		\nompageref{21}
   \item [{$\zeta ^{SL}_{ij}$}]\begingroup splitting variable for liquid side draw $i$ on stage $j$ \nomunit {-}\nomeqref {4.6}
-		\nompageref{20}
+		\nompageref{21}
   \item [{$\zeta ^{SV}_{ij}$}]\begingroup splitting variable for vapour side draw $i$ on stage $j$ \nomunit {-}\nomeqref {4.6}
-		\nompageref{20}
+		\nompageref{21}
 
  \nomgroup{R}
 
   \item [{$\Delta p$}]\begingroup pressure drop over entire column \nomunit {Pa}\nomeqref {4.18}
-		\nompageref{23}
-  \item [{$\delta p_{dry}$}]\begingroup dry pressure drop \nomunit {\frac {Pa}{m}}\nomeqref {4.70}
-		\nompageref{38}
+		\nompageref{24}
+  \item [{$\delta p_{dry}$}]\begingroup dry pressure drop \nomunit {\frac {Pa}{m}}\nomeqref {4.68}
+		\nompageref{39}
   \item [{$\Delta p_{stage}$}]\begingroup stage-wise pressure drop \nomunit {Pa}\nomeqref {4.18}
-		\nompageref{23}
+		\nompageref{24}
   \item [{$\dot {e}_{ij}$}]\begingroup energy flow of to equipment $i$ from energy carrier $j$ \nomunit {kW}\nomeqref {3.5}
-		\nompageref{12}
+		\nompageref{13}
   \item [{$\dot {m}_i$}]\begingroup mass flow of component $i$ \nomunit {\frac {kg}{s}}\nomeqref {3.4}
-		\nompageref{12}
-  \item [{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {4.63}
-		\nompageref{37}
+		\nompageref{13}
+  \item [{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {4.61}
+		\nompageref{38}
   \item [{$a$}]\begingroup annuity \nomunit {\$}\nomeqref {3.13}
-		\nompageref{15}
-  \item [{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {4.119}
-		\nompageref{47}
-  \item [{$A_j^{min}$}]\begingroup minimum column area on stage $j$ \nomunit {m^2}\nomeqref {4.99}
-		\nompageref{43}
-  \item [{$A_{active}$}]\begingroup active tray area \nomunit {m^2}\nomeqref {4.65}
-		\nompageref{37}
-  \item [{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {4.119}
-		\nompageref{47}
+		\nompageref{16}
+  \item [{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {4.117}
+		\nompageref{48}
+  \item [{$A_j^{min}$}]\begingroup minimum column area on stage $j$ \nomunit {m^2}\nomeqref {4.97}
+		\nompageref{44}
+  \item [{$A_{active}$}]\begingroup active tray area \nomunit {m^2}\nomeqref {4.63}
+		\nompageref{39}
+  \item [{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {4.117}
+		\nompageref{48}
   \item [{$C^{i}_B$}]\begingroup reference cost of equipment $i$ \nomunit {\$}\nomeqref {3.2}
-		\nompageref{10}
+		\nompageref{11}
   \item [{$C^{i}_E$}]\begingroup cost of equipment $i$ \nomunit {\$}\nomeqref {3.2}
-		\nompageref{10}
+		\nompageref{11}
   \item [{$C^{i}_{EC}$}]\begingroup mass specific cost of energy carrier $i$ \nomunit {\frac {\$}{kW}}\nomeqref {3.5}
-		\nompageref{12}
+		\nompageref{13}
   \item [{$C^{i}_{RM}$}]\begingroup mass specific cost of raw material $i$ \nomunit {\frac {\$}{kg}}\nomeqref {3.4}
-		\nompageref{12}
+		\nompageref{13}
   \item [{$C_0$}]\begingroup initial value of an investment \nomunit {\$}\nomeqref {3.10}
-		\nompageref{14}
+		\nompageref{15}
   \item [{$C_1$}]\begingroup Reference equipment cost at time $1$ \nomunit {\$}\nomeqref {3.2}
-		\nompageref{9}
-  \item [{$C_1$}]\begingroup packing constant \nomunit {}\nomeqref {4.70}
-		\nompageref{38}
+		\nompageref{10}
+  \item [{$C_1$}]\begingroup packing constant \nomunit {}\nomeqref {4.68}
+		\nompageref{39}
   \item [{$C_2$}]\begingroup Reference equipment cost at time $2$ \nomunit {\$}\nomeqref {3.2}
-		\nompageref{9}
-  \item [{$C_2$}]\begingroup packing constant \nomunit {}\nomeqref {4.70}
-		\nompageref{38}
+		\nompageref{10}
+  \item [{$C_2$}]\begingroup packing constant \nomunit {}\nomeqref {4.68}
+		\nompageref{39}
   \item [{$C_n$}]\begingroup final value of an investment \nomunit {\$}\nomeqref {3.10}
-		\nompageref{14}
+		\nompageref{15}
   \item [{$C_P$}]\begingroup total process cost \nomunit {\$}\nomeqref {3.1}
-		\nompageref{9}
+		\nompageref{10}
   \item [{$C_P^0$}]\begingroup reference process cost \nomunit {\$}\nomeqref {3.1}
-		\nompageref{9}
+		\nompageref{10}
   \item [{$C_{0e}$}]\begingroup Present value of all expenses \nomunit {\$}\nomeqref {3.15}
-		\nompageref{15}
+		\nompageref{16}
   \item [{$C_{0r}$}]\begingroup Present value of all revenues \nomunit {\$}\nomeqref {3.16}
-		\nompageref{15}
-  \item [{$C_{\text {column}}$}]\begingroup column cost \nomunit {\$}\nomeqref {4.86}
-		\nompageref{41}
-  \item [{$C_{\text {internals}}$}]\begingroup cost of column internals \nomunit {\$}\nomeqref {4.86}
-		\nompageref{41}
-  \item [{$C_{\text {platform}}$}]\begingroup platform cost \nomunit {\$}\nomeqref {4.86}
-		\nompageref{41}
+		\nompageref{16}
+  \item [{$C_{\text {column}}$}]\begingroup column cost \nomunit {\$}\nomeqref {4.84}
+		\nompageref{42}
+  \item [{$C_{\text {internals}}$}]\begingroup cost of column internals \nomunit {\$}\nomeqref {4.84}
+		\nompageref{42}
+  \item [{$C_{\text {platform}}$}]\begingroup platform cost \nomunit {\$}\nomeqref {4.84}
+		\nompageref{42}
   \item [{$C_{EC}$}]\begingroup total cost of energy \nomunit {\$}\nomeqref {3.5}
-		\nompageref{12}
+		\nompageref{13}
   \item [{$C_{FILL}$}]\begingroup cost of raw materials to fill the process \nomunit {\$}\nomeqref {3.6}
-		\nompageref{12}
+		\nompageref{13}
   \item [{$C_{RM}$}]\begingroup total cost of raw materials \nomunit {\$}\nomeqref {3.4}
-		\nompageref{12}
-  \item [{$C_{tower}$}]\begingroup tower cost \nomunit {\$}\nomeqref {4.86}
-		\nompageref{41}
+		\nompageref{13}
+  \item [{$C_{tower}$}]\begingroup tower cost \nomunit {\$}\nomeqref {4.84}
+		\nompageref{42}
   \item [{$D$}]\begingroup degression coefficient \nomunit {-}\nomeqref {3.1}
-		\nompageref{9}
-  \item [{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.90}
-		\nompageref{41}
-  \item [{$ent_j$}]\begingroup fractional entrainment for 80\% flooding on stage $j$ \nomunit {-}\nomeqref {4.95}
-		\nompageref{43}
+		\nompageref{10}
+  \item [{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.88}
+		\nompageref{42}
+  \item [{$ent_j$}]\begingroup fractional entrainment for 80\% flooding on stage $j$ \nomunit {-}\nomeqref {4.93}
+		\nompageref{44}
   \item [{$f^{i}_C$}]\begingroup design complexity correction to equipment cost \nomunit {-}\nomeqref {3.3}
-		\nompageref{10}
+		\nompageref{11}
   \item [{$f^{i}_M$}]\begingroup material selection correction to equipment cost \nomunit {-}\nomeqref {3.3}
-		\nompageref{10}
+		\nompageref{11}
   \item [{$f^{i}_P$}]\begingroup pressure correction to equipment cost \nomunit {-}\nomeqref {3.3}
-		\nompageref{10}
+		\nompageref{11}
   \item [{$f^{i}_T$}]\begingroup temperature correction to equipment cost \nomunit {-}\nomeqref {3.3}
-		\nompageref{10}
+		\nompageref{11}
   \item [{$f_i^L$}]\begingroup liquid fugacity \nomunit {-}\nomeqref {4.10}
-		\nompageref{20}
-  \item [{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {4.10}
-		\nompageref{20}
-  \item [{$F_j$}]\begingroup feed molar flowrate to stage $j$ \nomunit {\mols }\nomeqref {4.1}
-		\nompageref{19}
-  \item [{$F_j$}]\begingroup feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
-		\nompageref{26}
-  \item [{$F_{Pi}$}]\begingroup compressibility factor of component $i$ \nomunit {-}\nomeqref {4.11}
-		\nompageref{21}
-  \item [{$FLV_j$}]\begingroup Sherwood flow parameter on stage $j$ \nomunit {-}\nomeqref {4.96}
-		\nompageref{43}
-  \item [{$h^L_j$}]\begingroup molar liquid enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {4.14}
-		\nompageref{21}
-  \item [{$h^V_j$}]\begingroup molar vapour enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {4.14}
-		\nompageref{21}
-  \item [{$h^{F}_j$}]\begingroup molar liquid feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {4.14}
-		\nompageref{21}
-  \item [{$h_f$}]\begingroup froth height \nomunit {m}\nomeqref {4.64}
-		\nompageref{37}
-  \item [{$h_L$}]\begingroup dimesionless holdup \nomunit {-}\nomeqref {4.69}
-		\nompageref{38}
-  \item [{$h_w$}]\begingroup weir height \nomunit {m}\nomeqref {4.64}
-		\nompageref{37}
-  \item [{$h_{\text {plate}}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.94}
-		\nompageref{42}
-  \item [{$h_{L}^{reb}$}]\begingroup reboiler liquid enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.77}
-		\nompageref{39}
-  \item [{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {4.63}
-		\nompageref{37}
-  \item [{$h_{V}^{reb}$}]\begingroup reboiler vapour enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.77}
-		\nompageref{39}
-  \item [{$i$}]\begingroup interest rate \nomunit {\%}\nomeqref {3.11}
-		\nompageref{14}
-  \item [{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {3.2}
-		\nompageref{9}
-  \item [{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {3.2}
-		\nompageref{9}
-  \item [{$K1$}]\begingroup empirical coefficient \nomunit {-}\nomeqref {4.98}
-		\nompageref{43}
-  \item [{$K_{ij}$}]\begingroup equilibrium constant of component $i$ on stage $j$ \nomunit {-}\nomeqref {4.9}
-		\nompageref{20}
-  \item [{$L_j$}]\begingroup liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
-		\nompageref{26}
-  \item [{$L_j$}]\begingroup molar liquid flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
-		\nompageref{19}
-  \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.23}
-		\nompageref{26}
-  \item [{$L_{reb}^{in}$}]\begingroup liquid reboiler influx \nomunit {\frac {kmol}{s}}\nomeqref {4.76}
-		\nompageref{39}
-  \item [{$L_{reb}^{out}$}]\begingroup liquid reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.76}
-		\nompageref{39}
-  \item [{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {4.119}
-		\nompageref{47}
-  \item [{$M^{i}$}]\begingroup equipment specific factor \nomunit  \nomunit {-}\nomeqref {3.2}
-		\nompageref{10}
-  \item [{$n_C$}]\begingroup number of components \nomunit {-}\nomeqref {4.0}
-		\nompageref{18}
-  \item [{$n_F$}]\begingroup number of feeds \nomunit {-}\nomeqref {4.0}
-		\nompageref{18}
-  \item [{$n_F$}]\begingroup number of feeds \nomunit {-}\nomeqref {4.5}
-		\nompageref{20}
-  \item [{$n_i^{reb}$}]\begingroup molar holdup of component $i$ in reboiler \nomunit {kmol}\nomeqref {4.76}
-		\nompageref{39}
-  \item [{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.60}
-		\nompageref{36}
-  \item [{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.60}
-		\nompageref{36}
-  \item [{$n_S$}]\begingroup number of column stages \nomunit {-}\nomeqref {4.0}
-		\nompageref{18}
-  \item [{$n_{E}$}]\begingroup number of process units \nomunit {-}\nomeqref {3.5}
-		\nompageref{12}
-  \item [{$n_{ij}$}]\begingroup holdup of component $i$ on stage $j$  \nomunit {mol}\nomeqref {4.56}
-		\nompageref{36}
-  \item [{$n_{RM}$}]\begingroup number of different raw materials \nomunit {-}\nomeqref {3.4}
-		\nompageref{12}
-  \item [{$n_{SL}$}]\begingroup number of liquid side-draws \nomunit {-}\nomeqref {4.0}
-		\nompageref{18}
-  \item [{$n_{SV}$}]\begingroup number of vapour side-draws \nomunit {-}\nomeqref {4.0}
-		\nompageref{18}
-  \item [{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {3.17}
-		\nompageref{15}
-  \item [{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {4.119}
-		\nompageref{47}
-  \item [{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {4.11}
-		\nompageref{21}
-  \item [{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {4.11}
-		\nompageref{21}
-  \item [{$p_D$}]\begingroup design pressure \nomunit {psig}\nomeqref {4.91}
-		\nompageref{41}
-  \item [{$p_O$}]\begingroup operating pressure \nomunit {psig}\nomeqref {4.91}
-		\nompageref{41}
-  \item [{$POT$}]\begingroup Payout time \nomunit {\$}\nomeqref {3.8}
-		\nompageref{13}
-  \item [{$POT$}]\begingroup payout time \nomunit {a}\nomeqref {3.9}
-		\nompageref{13}
-  \item [{$q$}]\begingroup interest factor \nomunit {-}\nomeqref {3.10}
-		\nompageref{14}
-  \item [{$Q^{i}$}]\begingroup specific quantity for equipment $i$ \nomunit {variable}\nomeqref {3.2}
-		\nompageref{10}
-  \item [{$Q^{i}_B$}]\begingroup equipment specific reference quantity \nomunit {variable}\nomeqref {3.2}
-		\nompageref{10}
-  \item [{$Q_P$}]\begingroup process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.1}
-		\nompageref{9}
-  \item [{$Q_P^0$}]\begingroup reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.1}
-		\nompageref{9}
-  \item [{$ROI$}]\begingroup return of investment \nomunit {-}\nomeqref {3.10}
-		\nompageref{13}
-  \item [{$S$}]\begingroup corrugation side \nomunit {m}\nomeqref {4.69}
-		\nompageref{38}
-  \item [{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.90}
-		\nompageref{41}
-  \item [{$S^L_j$}]\begingroup molar liquid side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
-		\nompageref{19}
-  \item [{$s^L_j$}]\begingroup dimensionless liquid side-draw from stage $j$ \nomunit {-}\nomeqref {4.3}
-		\nompageref{19}
-  \item [{$S^V_j$}]\begingroup molar vapour side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
-		\nompageref{19}
-  \item [{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {4.3}
-		\nompageref{19}
-  \item [{$S_j^L$}]\begingroup liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
-		\nompageref{26}
-  \item [{$S_j^V$}]\begingroup vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
-		\nompageref{26}
-  \item [{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {4.34}
-		\nompageref{28}
-  \item [{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {4.34}
-		\nompageref{28}
-  \item [{$T^{sub}$}]\begingroup sub-cooling temperature \nomunit {K}\nomeqref {4.17}
 		\nompageref{22}
-  \item [{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.90}
-		\nompageref{41}
-  \item [{$t_s$}]\begingroup tower shell thickness \nomunit {in}\nomeqref {4.89}
-		\nompageref{41}
-  \item [{$t_w$}]\begingroup thickness wind and earthquake correction \nomunit {in}\nomeqref {4.92}
-		\nompageref{42}
-  \item [{$t_{op}$}]\begingroup time of process operations \nomunit {s}\nomeqref {3.4}
-		\nompageref{12}
-  \item [{$U_j$}]\begingroup internal energy holdup on stage $j$ \nomunit {J}\nomeqref {4.56}
-		\nompageref{36}
-  \item [{$U_{reb}$}]\begingroup reboiler internal energy holdup \nomunit {kJ}\nomeqref {4.77}
-		\nompageref{39}
-  \item [{$v_G$}]\begingroup vapour velocity \nomunit {\frac {m}{s}}\nomeqref {4.70}
-		\nompageref{38}
-  \item [{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
-		\nompageref{19}
-  \item [{$V_j$}]\begingroup vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
-		\nompageref{26}
-  \item [{$v_j^{flood}$}]\begingroup flooding velocity on stage $j$ \nomunit {\frac {m}{s}}\nomeqref {4.97}
-		\nompageref{43}
-  \item [{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {4.73}
-		\nompageref{39}
-  \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.23}
-		\nompageref{26}
-  \item [{$V_{reb}^{out}$}]\begingroup vapour reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.76}
-		\nompageref{39}
-  \item [{$V_{stage}$}]\begingroup stage volume \nomunit {m^3}\nomeqref {4.61}
-		\nompageref{36}
-  \item [{$W_{tower}$}]\begingroup weight of a tower \nomunit {lbs}\nomeqref {4.87}
-		\nompageref{41}
-  \item [{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {4.1}
-		\nompageref{19}
-  \item [{$x_{i}^{reb}$}]\begingroup reboiler liquid mole fractions \nomunit {-}\nomeqref {4.76}
-		\nompageref{39}
-  \item [{$y_{ij}$}]\begingroup vapour mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {4.1}
-		\nompageref{19}
-  \item [{$y_{i}^{eq}$}]\begingroup equilibrium vapour concentration of component $i$ on stage $j$ \nomunit {\frac {mol}{mol}}\nomeqref {4.9}
+  \item [{$f_i^V$}]\begingroup vapour fugacity \nomunit {-}\nomeqref {4.10}
+		\nompageref{22}
+  \item [{$F_j$}]\begingroup feed molar flowrate to stage $j$ \nomunit {\mols }\nomeqref {4.1}
 		\nompageref{20}
-  \item [{$y_{i}^{reb}$}]\begingroup reboiler vapour mole fractions \nomunit {-}\nomeqref {4.76}
+  \item [{$F_j$}]\begingroup feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
+		\nompageref{27}
+  \item [{$F_{Pi}$}]\begingroup compressibility factor of component $i$ \nomunit {-}\nomeqref {4.11}
+		\nompageref{22}
+  \item [{$FLV_j$}]\begingroup Sherwood flow parameter on stage $j$ \nomunit {-}\nomeqref {4.94}
+		\nompageref{44}
+  \item [{$h^L_j$}]\begingroup molar liquid enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {4.14}
+		\nompageref{22}
+  \item [{$h^V_j$}]\begingroup molar vapour enthalpy on stage $j$ \nomunit {\molenth }\nomeqref {4.14}
+		\nompageref{22}
+  \item [{$h^{F}_j$}]\begingroup molar liquid feed enthalpy to stage $j$ \nomunit {\molenth }\nomeqref {4.14}
+		\nompageref{22}
+  \item [{$H^{R}$}]\begingroup reflux enthalpy stream \nomunit {\molenth }\nomeqref {4.14}
+		\nompageref{22}
+  \item [{$h_f$}]\begingroup froth height \nomunit {m}\nomeqref {4.62}
+		\nompageref{38}
+  \item [{$h_L$}]\begingroup dimesionless holdup \nomunit {-}\nomeqref {4.67}
 		\nompageref{39}
-  \item [{$z^L_{ij}$}]\begingroup feed mole fraction to stage $j$ \nomunit {-}\nomeqref {4.1}
+  \item [{$h_w$}]\begingroup weir height \nomunit {m}\nomeqref {4.62}
+		\nompageref{38}
+  \item [{$h_{\text {plate}}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.92}
+		\nompageref{43}
+  \item [{$h_{L}^{reb}$}]\begingroup reboiler liquid enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.75}
+		\nompageref{40}
+  \item [{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {4.61}
+		\nompageref{38}
+  \item [{$h_{V}^{reb}$}]\begingroup reboiler vapour enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.75}
+		\nompageref{40}
+  \item [{$i$}]\begingroup interest rate \nomunit {\%}\nomeqref {3.11}
+		\nompageref{15}
+  \item [{$I_1$}]\begingroup Cost index at time $1$ \nomunit {-}\nomeqref {3.2}
+		\nompageref{10}
+  \item [{$I_2$}]\begingroup Cost index at time $2$ \nomunit {-}\nomeqref {3.2}
+		\nompageref{10}
+  \item [{$K1$}]\begingroup empirical coefficient \nomunit {-}\nomeqref {4.96}
+		\nompageref{44}
+  \item [{$K_{ij}$}]\begingroup equilibrium constant of component $i$ on stage $j$ \nomunit {-}\nomeqref {4.9}
+		\nompageref{21}
+  \item [{$L_j$}]\begingroup liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
+		\nompageref{27}
+  \item [{$L_j$}]\begingroup molar liquid flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
+		\nompageref{20}
+  \item [{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.23}
+		\nompageref{27}
+  \item [{$L_{reb}^{in}$}]\begingroup liquid reboiler influx \nomunit {\frac {kmol}{s}}\nomeqref {4.74}
+		\nompageref{40}
+  \item [{$L_{reb}^{out}$}]\begingroup liquid reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.74}
+		\nompageref{40}
+  \item [{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {4.117}
+		\nompageref{48}
+  \item [{$M^{i}$}]\begingroup equipment specific factor \nomunit  \nomunit {-}\nomeqref {3.2}
+		\nompageref{11}
+  \item [{$n_C$}]\begingroup number of components \nomunit {-}\nomeqref {4.0}
 		\nompageref{19}
+  \item [{$n_F$}]\begingroup number of feeds \nomunit {-}\nomeqref {4.0}
+		\nompageref{19}
+  \item [{$n_i^{reb}$}]\begingroup molar holdup of component $i$ in reboiler \nomunit {kmol}\nomeqref {4.74}
+		\nompageref{40}
+  \item [{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.58}
+		\nompageref{37}
+  \item [{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.58}
+		\nompageref{37}
+  \item [{$n_S$}]\begingroup number of column stages \nomunit {-}\nomeqref {4.0}
+		\nompageref{19}
+  \item [{$n_{E}$}]\begingroup number of process units \nomunit {-}\nomeqref {3.5}
+		\nompageref{13}
+  \item [{$n_{ij}$}]\begingroup holdup of component $i$ on stage $j$  \nomunit {mol}\nomeqref {4.54}
+		\nompageref{37}
+  \item [{$n_{RM}$}]\begingroup number of different raw materials \nomunit {-}\nomeqref {3.4}
+		\nompageref{13}
+  \item [{$n_{SL}$}]\begingroup number of liquid side-draws \nomunit {-}\nomeqref {4.0}
+		\nompageref{19}
+  \item [{$n_{SV}$}]\begingroup number of vapour side-draws \nomunit {-}\nomeqref {4.0}
+		\nompageref{19}
+  \item [{$NPV$}]\begingroup Net present value \nomunit {\$}\nomeqref {3.17}
+		\nompageref{16}
+  \item [{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {4.117}
+		\nompageref{48}
+  \item [{$p$}]\begingroup system pressure \nomunit {Pa}\nomeqref {4.11}
+		\nompageref{22}
+  \item [{$p^S_i$}]\begingroup vapour pressure of component $i$ \nomunit {Pa}\nomeqref {4.11}
+		\nompageref{22}
+  \item [{$p_D$}]\begingroup design pressure \nomunit {psig}\nomeqref {4.89}
+		\nompageref{43}
+  \item [{$p_O$}]\begingroup operating pressure \nomunit {psig}\nomeqref {4.89}
+		\nompageref{43}
+  \item [{$POT$}]\begingroup Payout time \nomunit {\$}\nomeqref {3.8}
+		\nompageref{14}
+  \item [{$POT$}]\begingroup payout time \nomunit {a}\nomeqref {3.9}
+		\nompageref{14}
+  \item [{$q$}]\begingroup interest factor \nomunit {-}\nomeqref {3.10}
+		\nompageref{15}
+  \item [{$Q^{i}$}]\begingroup specific quantity for equipment $i$ \nomunit {variable}\nomeqref {3.2}
+		\nompageref{11}
+  \item [{$Q^{i}_B$}]\begingroup equipment specific reference quantity \nomunit {variable}\nomeqref {3.2}
+		\nompageref{11}
+  \item [{$Q_P$}]\begingroup process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.1}
+		\nompageref{10}
+  \item [{$Q_P^0$}]\begingroup reference process capacity \nomunit {\frac {kg}{h}}\nomeqref {3.1}
+		\nompageref{10}
+  \item [{$ROI$}]\begingroup return of investment \nomunit {-}\nomeqref {3.10}
+		\nompageref{14}
+  \item [{$S$}]\begingroup corrugation side \nomunit {m}\nomeqref {4.67}
+		\nompageref{39}
+  \item [{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.88}
+		\nompageref{42}
+  \item [{$S^L_j$}]\begingroup molar liquid side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
+		\nompageref{20}
+  \item [{$s^L_j$}]\begingroup dimensionless liquid side-draw from stage $j$ \nomunit {-}\nomeqref {4.3}
+		\nompageref{20}
+  \item [{$S^V_j$}]\begingroup molar vapour side-draw flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
+		\nompageref{20}
+  \item [{$s^V_j$}]\begingroup dimensionless vapour side-draw from stage $j$ \nomunit {-}\nomeqref {4.3}
+		\nompageref{20}
+  \item [{$S_j^L$}]\begingroup liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
+		\nompageref{27}
+  \item [{$S_j^V$}]\begingroup vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
+		\nompageref{27}
+  \item [{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {4.32}
+		\nompageref{29}
+  \item [{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {4.32}
+		\nompageref{29}
+  \item [{$T^{sub}$}]\begingroup sub-cooling temperature \nomunit {K}\nomeqref {4.17}
+		\nompageref{23}
+  \item [{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.88}
+		\nompageref{42}
+  \item [{$t_s$}]\begingroup tower shell thickness \nomunit {in}\nomeqref {4.87}
+		\nompageref{42}
+  \item [{$t_w$}]\begingroup thickness wind and earthquake correction \nomunit {in}\nomeqref {4.90}
+		\nompageref{43}
+  \item [{$t_{op}$}]\begingroup time of process operations \nomunit {s}\nomeqref {3.4}
+		\nompageref{13}
+  \item [{$U_j$}]\begingroup internal energy holdup on stage $j$ \nomunit {J}\nomeqref {4.54}
+		\nompageref{37}
+  \item [{$U_{reb}$}]\begingroup reboiler internal energy holdup \nomunit {kJ}\nomeqref {4.75}
+		\nompageref{40}
+  \item [{$v_G$}]\begingroup vapour velocity \nomunit {\frac {m}{s}}\nomeqref {4.68}
+		\nompageref{39}
+  \item [{$V_j$}]\begingroup molar vapour flowrate form stage $j$ \nomunit {\mols }\nomeqref {4.1}
+		\nompageref{20}
+  \item [{$V_j$}]\begingroup vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}
+		\nompageref{27}
+  \item [{$v_j^{flood}$}]\begingroup flooding velocity on stage $j$ \nomunit {\frac {m}{s}}\nomeqref {4.95}
+		\nompageref{44}
+  \item [{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {4.71}
+		\nompageref{40}
+  \item [{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.23}
+		\nompageref{27}
+  \item [{$V_{reb}^{out}$}]\begingroup vapour reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.74}
+		\nompageref{40}
+  \item [{$V_{stage}$}]\begingroup stage volume \nomunit {m^3}\nomeqref {4.59}
+		\nompageref{38}
+  \item [{$W_{tower}$}]\begingroup weight of a tower \nomunit {lbs}\nomeqref {4.85}
+		\nompageref{42}
+  \item [{$x_{ij}$}]\begingroup liquid mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {4.1}
+		\nompageref{20}
+  \item [{$x_{i}^{reb}$}]\begingroup reboiler liquid mole fractions \nomunit {-}\nomeqref {4.74}
+		\nompageref{40}
+  \item [{$y_{ij}$}]\begingroup vapour mole fraction of component $i$ on stage $j$ \nomunit {-}\nomeqref {4.1}
+		\nompageref{20}
+  \item [{$y_{i}^{eq}$}]\begingroup equilibrium vapour concentration of component $i$ on stage $j$ \nomunit {\frac {mol}{mol}}\nomeqref {4.9}
+		\nompageref{21}
+  \item [{$y_{i}^{reb}$}]\begingroup reboiler vapour mole fractions \nomunit {-}\nomeqref {4.74}
+		\nompageref{40}
+  \item [{$z^L_{ij}$}]\begingroup feed mole fraction to stage $j$ \nomunit {-}\nomeqref {4.1}
+		\nompageref{20}
 
 \end{thenomenclature}

@@ -1,15 +1,16 @@
- \todo{explain model assumptions.}
+ \todo{explain model assumptions, limitations, mention wave therory marquardt paper.}
 
 \subsection{Distillation column model}
-    The previously described column model is based on a steady state assumption. This means that all variables do not
-    change with time. While a model like that offers valuable insight into the operation of a process many
-    aspects remain unclear. In order to gain further insight into the process the dynamics have to be considered.
-
-    Due to that in this section a dynamic model of the ASU process will be developed.
+    The previously described column model is based on the assumption of steady-state operations. This means that all
+    derivatives with respect to time are zero. While a model like that offers valuable insight into the operation
+    of a process many aspects remain unclear. Questions of operability or stability of the process, or if a given
+    steady state can actually be acquired in finite are beyond the scope of steady state models. In order to
+    supply answers to aforementioned questions, dynamic versions of the previously discussed unit models
+    are needed. The aim is to retain the capability for structural optimization for the dynamic models.
 
     First the balance equations have to be rewritten in dynamic form. To do so reservoir terms or holdups
     are introduced. Namely the component holdups $n_{ij}$ and internal energy $U_j$ for each stage.
-    with that the component balance equations as presented in the previous section can now be rewritten as
+    With that the component balance equations as presented in the previous section can now be rewritten as
         \Eqml{eq:col:CompBalance_opt}{
     		\left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \fracdd{n_{ij}}{t} = \left(1 + s_j^V\right)
                 \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right) \cdot L_j \cdot x_{i,j} - V_{j+1}
@@ -26,6 +27,12 @@
     	}%
     \ncr{n_{ij}}{holdup of component $i$ on stage $j$ }{mol}
     \ncr{U_j}{internal energy holdup on stage $j$}{J}
+    The summation terms in front of the derivatives are needed if integer optimization is to be carried out with the model.
+    In the steady-state case, no equilibrium took place at inactive stages. However in this case, there are the holdups
+    in connection with the column hydraulics to be considered. While still no equilibrium should take place,
+    even inactive trays will have to have a holdup. By means of the summations, the material balance is
+    effectively transformed into a steady state equation, such that inactive trays will operate at steady-state
+    with constant holdups, and therefore have no effect on the active part of the column.
 
     In addition to the balance equations further constituent equations need to be introduced. From the
     steady state model we know the equilibrium equations
@@ -40,8 +47,8 @@
         1 & = \sum_i^{n_c} x_{ij} \eqanns.
     }%
     %
-    Furthermore the accumulation of moles in each stage in vapour $n_j^V$ and liquid $n_j^L$
-    need to be considered with
+    Furthermore defining equations for the accumulation of moles on each stage in vapour $n_j^V$ and
+    liquid $n_j^L$ phase are needed
     %
     \Eq{eq:col:holdup}{
         n_{ij} & = x_{ij} n_j^L + y_{ij} n_j^V \eqanncs.
@@ -49,7 +56,7 @@
     \ncr{n_j^L}{liquid molar holdup on stage $j$}{mol}
     \ncr{n_j^V}{vapour molar holdup on stage $j$}{mol}
     %
-    These holdups are linked by the volume of a given stage $V_{stage}$. Thus the volume constraint
+    These holdups will fill the volume of a given stage $V_{stage}$. Thus a volume constraint
     can be written as
     %
     \Eq{eq:dyn:volconstraint}{
@@ -62,18 +69,28 @@
         U_j = n^L_j \cdot h^L_j + n^V_j \cdot h^V_j - p_j \cdot V_{stage}
     }
     %
-    As we are no longer dealing in steady state hydraulic equations need to be introduces,
+    As we are no longer dealing in steady state hydraulic equations need to be introduced,
     which determine the liquid and vapour flow rates leaving a separation stage. As the
     mechanisms driving these flows might be very different depending on the type of internals
     used, it is not surprising that the corresponding equations are also very different. In the
-    given model both trayed columns and columns with structured packing are employed.
+    presented model implementation, both trayed columns and structured packings can be handled accordingly.
 
     \subsubsection{Trayed hydraulics}
     \label{sec:mathpro:dynamic:trayhyd}
         \begin{figure}
-            \input{Pictures/tray_model}
-            \caption{Column tray}
-            \label{fig:col_tray}
+            \center
+            \begin{subfigure}{0.46\textwidth}
+                \center
+                \input{Pictures/tray_model}
+                \caption{Column tray}
+                \label{fig:col_tray}
+            \end{subfigure}
+            \begin{subfigure}{0.46\textwidth}
+                \center
+                \input{Pictures/tray_model_len}
+                \caption{Column tray}
+                \label{fig:col_tray}
+            \end{subfigure}
         \end{figure}
         \todo{add graphic for tray measuremets.}
 

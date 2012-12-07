@@ -1,29 +1,31 @@
-The simulation of chemical processes supplies valuable insight into the intricacies of a given system. 
+The simulation of chemical processes supplies valuable insight into the intricacies of a given system.
 To some extend it is also possible to improve given designs by manual alterations and simulation
-steps in a form of trial an error procedure. However the results of an approach like that are unlikely 
+steps in a form of trial an error procedure. However the results of an approach like that are unlikely
 to yield even locally optimal results in an acceptable amount of time. Hence optimization approaches
-are employed to attain improved designs. 
+are employed to attain improved designs.
 
-The models presented in the previous chapters are capable of projecting various continuous and 
-discrete design decisions. However when synthesizing a process flowsheet, one must take careful 
-consideration as to the optimization objectives. The most obvious objective would be of 
-pure monetary nature, where a process is designed to meet a given set of specifications 
+The models presented in the previous chapters are capable of projecting various continuous and
+discrete design decisions. However when synthesizing a process flowsheet, one must take careful
+consideration as to the optimization objectives. The most obvious objective would be of
+pure monetary nature, where a process is designed to meet a given set of specifications
 at minimum cost. An optimization like that can be carried out at steady state. However for
-a steady state model it is never ensured, that this steady state can actually be reached 
+a steady state model it is never ensured, that this steady state can actually be reached
 by the process. Furthermore is there no consideration if the desired steady state can be kept for
-changing conditions outside the control of the process operator. 
+changing conditions outside the control of the process operator.
 
-In the case that load changes or different operation modes are required, it becomes questionable, 
-if steady state optimization remains feasible, or if a dynamic approach becomes necessary. 
+In the case that load changes or different operation modes are required, it becomes questionable,
+if steady state optimization remains feasible, or if a dynamic approach becomes necessary.
 
-In this chapter different optimization studies will be given. For once different solution approaches 
-will be applied to the MINLP arising from a steady state simulation. For once the outer approximation 
-algorithm as implemented in \gproms, and secondly the continuous reformulation strategy as described 
-in \Secref{sec:opt:theory:continuous}. 
+In this chapter different optimization studies will be given. For once different solution approaches
+will be applied to the MINLP arising from a steady state simulation. For once the outer approximation
+algorithm as implemented in \gproms, and secondly the continuous reformulation strategy as described
+in \Secref{sec:opt:theory:continuous}.
 
-The process under consideration is a generic cryogenic air separation process. As a starting point for the 
-optimization a base case was manually constructed which met certain somewhat arbitrarily chosen, 
-but reasonable constraints.  
+The process under consideration is a generic cryogenic air separation process. As a starting point for the
+optimization a base case was manually constructed which met certain somewhat arbitrarily chosen,
+but reasonable constraints.
+
+\todo{describe reference case.}
 
     \subsection{Degrees of freedom}
     \todo{move to description of dynamic model.}
@@ -44,6 +46,93 @@ but reasonable constraints.
     are a total of $[4 n_S ]$ dynamic stages in a column section.
 
     The condenser reboiler unit
+
+    \subsection{Steady-state optimization}
+    In a first step optimizations were carried out using the steady-state process model. While an effort
+    has been made to create a realistic scenario, the main focus of this section is to demonstrate
+    optimization capabilities within the model environment \gproms and to compare different solution
+    approaches for complex discrete-continuous problems.
+
+    \subsubsection{Single period optimization}
+    In a first case operations for a single steady-state were optimized. However only structural decisions
+    on the columns were made along with the columns operational parameters.
+    %
+    \begin{table}
+        \center
+        \footnotesize
+        \input{Tables/SS1_results}
+        \label{tab:ss1_results}
+        \caption{steady-state single period optimization results.}
+    \end{table}
+    %
+    \Tabref{tab:ss1_results} shows a list of all optimization variables along with their initial and optimized values.
+    The optimized values are attained by solving the MINLP by outer approximation or as NCP-problem.
+    
+    The objective considers function considers only capital cost for the separation system 
+    \Eq{eq:opt:ss_single_objective}{
+        CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right)
+            \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}\right\} }
+    }
+    %
+    Constraints were enforced on the process outputs
+    \begin{itemize}
+        \item $N_2$ flowrate: $ 3300 \leq \dot{n}_{Ar} \leq 10^4 $,
+        \item $N_2$ purity: $0.999 \leq x_{Ar} \leq 1.0 $,
+        \item $O_2$ flowrate: $ 1700 \leq \dot{n}_{Ar} \leq 10^4 $,
+        \item $O_2$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
+        \item $Ar$ flowrate: $ 20 \leq \dot{n}_{Ar} \leq 10^4 $,
+        \item $Ar$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
+    \end{itemize}
+    as well as the column diameters, to avoid flooding
+    \begin{itemize}
+        \item HPC diameter $d_{\text{column}}^{\text{HPC}} \geq d_{min}^{HPC}$, 
+        \item LPC diameter $d_{\text{column}}^{\text{LPC}} \geq d_{min}^{LPC}$, 
+        \item CAC diameter $d_{\text{column}}^{\text{CAC}} \geq d_{min}^{CAC}$.
+    \end{itemize}
+    When solving the continuous reformulation of the problem, an extra constraint for each integer variable in form of the
+    Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
+    an equality constraint. This closure condition needs not to be explicitly considered using the outer approximation approach,
+    since this is handled internally by declaring so called special ordered sets. This allows \gproms and the OA algorithm
+    to exploit the special structure of the problem due to the \emph{exclusive or} decisions.
+
+    In the process of solving the FB-program \todo{introduce FB-program as term} some difficulties arose. While
+    (almost) integer values were found for most structural decisions, even after the initial iteration, especially
+    the LPC column displayed some convergence problems. As the relaxation factor is reduced, the solutions are pushed
+    towards integer values or in other words, the feasible region between zero and one is is divided into two regions which become
+    smaller and smaller. In some cases the discrete solutions remain on one side of the feasible domain, while still fulfilling
+    the closure constraint. As the relaxation factor is reduced, the solver is no longer able to ''make the jump'' to the other side
+    of the domain. This leads to small values for the integer decisions along most of the column, and as the relaxation factor becomes zero,
+    a failure in the solver since the closure condition and the FB-constraints can no longer both be fulfilled.
+
+    This issue has been addressed, by \cite{Kraemer.2010} who propose a re-initialization strategy based on the magnitude of
+    the Lagrange multipliers associated with the continuous variables. While the results using this adjusted strategy
+    are very promising it could not be implemented within the scope of this thesis. In addition to the adjusted algorithm,
+    the problem formulation can be adjusted to facilitate convergence of the solution algorithm. To strategies can
+    be employed, which exploit the structure of the distillation model, or force the continuous solution to both sides
+    of the feasible domain \cite{Kraemer.2009}.
+
+    The first strategy involves reformulation of purity constraints in terms of the reflux split
+    \Eq{}{
+        \sum_j \zeta_j^R x_j \leq x_{\text{spec}}.
+    }
+    As one will always observe a concentration gradient in a finite distillation column, this formulation favours
+    integer solutions as it competes with a lower capital costs which distributes fractions on lower trays. Hence
+    this strategy is assumed to be most successful for steep concentration gradients at either of the column.
+    It should be considered, that this formulation requires the variable tray location to be on the side at which
+    the specified purity lies. \todo{write about optimization model.}
+
+    The second approach relies on a model reformulation for at least the initial iteration. Rather than optimizing for
+    the locations directly a so called differentiable distribution function (DDF) is introduced
+    \Eq{}{
+        \Psi_j = \frac{ \exp\left[ - \left( \frac{j - \sum_i \zeta_i i}{\sigma} \right)^2 \right] }{
+            \sum_k \exp\left[ - \left( \frac{k - \sum_i \zeta_i i}{\sigma} \right)^2 \right]}.
+    }
+    By adjusting the standard deviation ($\sigma$) it can be assured, that a sufficiently large value for at
+    least on continuous variable is attained. However a to tight distribution might also hinder the solver
+    to later find an optimal solution. Hence car mast be taken, as to what choice is reasonable.
+
+    In order to converge the continuous problem, use of the DDF was only required for the reflux location in the 
+    low pressure column for the first NLP.
 
     \subsection{Steady state single period}
     \label{chp:optexample:ss_single_perid}
