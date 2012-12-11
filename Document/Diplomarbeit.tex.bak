@@ -4,8 +4,8 @@
 \input{pgfplots/TikZTemplates}
 
 \newboolean{draft}
-\setboolean{draft}{true}
-%\setboolean{draft}{false}
+%\setboolean{draft}{true}
+\setboolean{draft}{false}
 \ifthenelse{\boolean{draft}}{
     \usepackage[colorinlistoftodos]{todonotes}
     \includeonly{
@@ -15,13 +15,12 @@
                 %Content/ProcessDesign,
                 %Content/ProcessEconomics,
                 %Content/MathModel,
-                %Content/ProcessModel,
-                %Content/OptimizationApplication,
+                Content/ProcessModel,
                 %Content/outlook,
                 %Content/BibAppendix,
                 %Content/report_short,
                 %Content/testpage,
-                Content/optimization
+                %Content/optimization
     }
 }{
     \usepackage[colorinlistoftodos, disable]{todonotes}

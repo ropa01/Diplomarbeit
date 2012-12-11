@@ -5,12 +5,10 @@ Charles~O. Akinlabi, Dimitrios~I. Gerogiorgis, Michael~C. Georgiadis, and
   Efstratios~N. Pistikopoulos.
 \newblock {M}odelling, {D}esign and {O}ptimisation of a {H}ybrid
   {P}{S}{A}-{M}embrane {G}as {S}eparation {P}rocess.
-\newblock In V.~Plesu and P.~S. Agachi, editors, {\em 17{T}{H}
-  {E}{U}{R}{O}{P}{E}{A}{N} {S}{Y}{M}{P}{O}{S}{I}{U}{M} {O}{N}
-  {C}{O}{M}{P}{U}{T}{E}{R} {A}{I}{D}{E}{D} {P}{R}{O}{C}{E}{S}{S}
-  {E}{N}{G}{I}{N}{E}{E}{R}{I}{N}{G}}, volume~24 of {\em Computer-Aided Chemical
-  Engineering}, pages 363--370, SARA BURGERHARTSTRAAT 25 and PO BOX 211 and
-  1000 AE AMSTERDAM and NETHERLANDS, 2007. ELSEVIER SCIENCE BV.
+\newblock In V.~Plesu and P.~S. Agachi, editors, {\em 17th {E}uropean
+  {S}ymposium on {C}omputer {A}ided {P}rocess {E}ngineering}, volume~24 of {\em
+  Computer-Aided Chemical Engineering}, pages 363--370, Amsterdam, 2007.
+  Elsevier Science B.V.
 
 \bibitem{AndreasPfennig.2003}
 {Andreas Pfennig}.
@@ -56,6 +54,13 @@ J.~J.~J. Chen.
 \newblock {L}etter to the {E}ditor: {C}omments on improvement on a replacement
   for the logarithmic mean.
 \newblock {\em Chemical Engineering Science}, 42:2488--2489, 1987.
+
+\bibitem{Choi.2003}
+Wan-Kyu Choi, Tae-In Kwon, Yeong-Koo Yeo, Hwaung Lee, Hyung~Keun Song, and
+  Byung-Ki Na.
+\newblock {O}ptimal operation of the pressure swing adsorption ({P}{S}{A})
+  process for {C}{O}2 recovery.
+\newblock {\em Korean Journal of Chemical Engineering}, 20(4):617--623, 2003.
 
 \bibitem{Coulson.1999}
 John~M. Coulson and Raymond~K. Sinnott.
@@ -110,6 +115,11 @@ Ravindra~S. Kamath, Lorenz~T. Biegler, and Ignacio~E. Grossmann.
   for simultaneous optimization and heat integration.
 \newblock {\em AIChE Journal}, 58(1):190--204, 2012.
 
+\bibitem{Kammermeyer.1976}
+Karl Kammermeyer.
+\newblock {T}echnical {G}as {P}ermeation {P}rocesses.
+\newblock {\em Chemie Ingenieur Technik}, 48(8):672--675, 1976.
+
 \bibitem{Kraemer.2009}
 Korbinian Kraemer, Sven Kossack, and Wolfgang Marquardt.
 \newblock {E}fficient {O}ptimization-{B}ased {D}esign of {D}istillation
@@ -149,10 +159,29 @@ P.~Mahapatra and B.~W. Bequette.
 \newblock {\em American Control Conference (ACC), 2010}, pages 2003--2008,
   2010.
 
+\bibitem{Marquardt.2008}
+Wolfgang Marquardt.
+\newblock {\em {P}rozessentwicklung in der {V}erfahrenstechnik}.
+\newblock Lecture Notes, Aachener Verfahrenstechnik - Prozesstechnik,
+  RWTH~Aachen University, Aachen, 2008.
+
+\bibitem{Melin.2007}
+Thomas Melin and Robert Rautenbach.
+\newblock {\em {M}embranverfahren: {G}rundlagen der modul- und
+  anlagenauslegung}.
+\newblock Springer-Verlag Berlin Heidelberg, Berlin and and Heidelberg, 3
+  edition, 2007.
+
 \bibitem{Naphtali.1971}
 Leonard~M. Naphtali and Donald~P. Sandholm.
 \newblock {M}ulticomponent separation calculations by linearization.
 \newblock {\em AIChE Journal}, 17(1):148--153, 1971.
+
+\bibitem{Nelson.1993}
+Peter~R. Nelson.
+\newblock {\em {O}xygen from air by pressure swing adsorption}.
+\newblock PhD thesis, {Cape Peninsula University of technology}, Cape Town and
+  South Africa, 1993.
 
 \bibitem{Nocedal.2006}
 Jorge Nocedal and Stephen~J. Wright.
@@ -195,6 +224,12 @@ Avinash~R. Sirdeshpande, Marianthi~G. Ierapetritou, Mark~J. Andrecovich, and
   separation cycles.
 \newblock {\em AIChE Journal}, 51(4):1190--1200, 2005.
 
+\bibitem{Smith.2001}
+A.R Smith and J.~Klosek.
+\newblock {A} review of air separation technologies and their integration with
+  energy conversion processes.
+\newblock {\em Fuel Processing Technology}, 70(2):115--134, 2001.
+
 \bibitem{Stein.2004}
 Oliver Stein, Jan Oldenburg, and Wolfgang Marquardt.
 \newblock {C}ontinuous reformulations of discrete--continuous optimization
@@ -212,13 +247,5 @@ T.F Yee and Ignacio~E. Grossmann.
 \newblock {S}imultaneous optimization models for heat integration---{I}{I}.
   {H}eat exchanger network synthesis.
 \newblock {\em Computers {\&} Chemical Engineering}, 14(10):1165--1184, 1990.
-
-\bibitem{Zhu.2010}
-Yu~Zhu, Sean Legg, and Carl~D. Laird.
-\newblock {O}ptimal design of cryogenic air separation columns under
-  uncertainty: {S}elected papers from the 7th {I}nternational {C}onference on
-  the {F}oundations of {C}omputer-{A}ided {P}rocess {D}esign
-  ({F}{O}{C}{A}{P}{D}, 2009, {B}reckenridge, {C}olorado, {U}{S}{A}.
-\newblock {\em Computers {\&} Chemical Engineering}, 34(9):1377--1384, 2010.
 
 \end{thebibliography}

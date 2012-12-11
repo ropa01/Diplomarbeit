@@ -25,8 +25,31 @@ The process under consideration is a generic cryogenic air separation process. A
 optimization a base case was manually constructed which met certain somewhat arbitrarily chosen,
 but reasonable constraints.
 
-\todo{describe reference case.}
 
+
+    \subsection{Example process}
+    \begin{figure}
+        \footnotesize
+        \center
+        \input{Pictures/ASU_example}
+        \caption{Optimization example process.}
+        \label{fig:opt:exppro}
+    \end{figure}
+    
+    The developed model were combined to a process flowsheet for the cryogenic air separation process. 
+    As no specific process was being evaluated, the process configuration was modeled after an 
+    published example process flowsheet \todo{add citation Coco casebook.}. \Figref{fig:opt:exppro}
+    shows the flowsheet considered henceforth. Air is drawn from the surrounding at ambient conditions
+    and compressed with intercooling stages. Afterwards the entering process stream exchange heat 
+    with the product streams. 
+    
+    The stream is then devided into two separate streams, ond compressed in a turbine, and fed to
+    a low pressure column (LPC) while the majority is fed to the high pressure column (HPC). 
+    Condenser and reboiler are combined in a single unit. A side column to the LPC generates pure 
+    argon. The condensate form the HPC is partially fed into the LPC. The oxygen rich sump product form the HPC
+    is used to condensate the CAC top product, and afterwards fed into the LPC. From the reboiler side liquid oxygen 
+    is recovered from the process. From the top of LPC and HPC gaseous nitrogen is drawn.  
+    
     \subsection{Degrees of freedom}
     \todo{move to description of dynamic model.}
     In order to gain more insight into the behaviour of the dynamic models presented above an analysis
@@ -54,43 +77,51 @@ but reasonable constraints.
     approaches for complex discrete-continuous problems.
 
     \subsubsection{Single period optimization}
-    In a first case operations for a single steady-state were optimized. However only structural decisions
-    on the columns were made along with the columns operational parameters.
+    In a first case operations for two separate steady-states were optimized. However only structural 
+    decisions on the columns were made along with the columns operational parameters.
     %
     \begin{table}
         \center
         \footnotesize
         \input{Tables/SS1_results}
-        \label{tab:ss1_results}
         \caption{steady-state single period optimization results.}
+        \label{tab:ss1_results}
     \end{table}
     %
-    \Tabref{tab:ss1_results} shows a list of all optimization variables along with their initial and optimized values.
-    The optimized values are attained by solving the MINLP by outer approximation or as NCP-problem.
-    
-    The objective considers function considers only capital cost for the separation system 
+    \Tabref{tab:ss1_results} shows a list of all optimization variables along with their initial and optimized values
+    for both steady-states. The optimized values are attained by solving the MINLP by outer approximation or as NCP-problem.
+
+    The objective function considers only capital cost for the separation system
     \Eq{eq:opt:ss_single_objective}{
         CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right)
             \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}\right\} }
     }
     %
-    Constraints were enforced on the process outputs
-    \begin{itemize}
-        \item $N_2$ flowrate: $ 3300 \leq \dot{n}_{Ar} \leq 10^4 $,
-        \item $N_2$ purity: $0.999 \leq x_{Ar} \leq 1.0 $,
-        \item $O_2$ flowrate: $ 1700 \leq \dot{n}_{Ar} \leq 10^4 $,
-        \item $O_2$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
-        \item $Ar$ flowrate: $ 20 \leq \dot{n}_{Ar} \leq 10^4 $,
-        \item $Ar$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
-    \end{itemize}
-    as well as the column diameters, to avoid flooding
-    \begin{itemize}
-        \item HPC diameter $d_{\text{column}}^{\text{HPC}} \geq d_{min}^{HPC}$, 
-        \item LPC diameter $d_{\text{column}}^{\text{LPC}} \geq d_{min}^{LPC}$, 
-        \item CAC diameter $d_{\text{column}}^{\text{CAC}} \geq d_{min}^{CAC}$.
-    \end{itemize}
+    The difference in the operation modes lies on the requirements on product flow rates and purity. The following 
+    constraints were enforced  
+    \begin{table}
+        \center
+        \footnotesize
+        \input{Tables/SS1_constraints}
+        \caption{steady-state single period optimization results.}
+        \label{tab:ss1_results}
+    \end{table}
+%    \begin{itemize}
+%        \item $N_2$ flowrate: $ 3300 \leq \dot{n}_{N_2} \leq 10^4 $,
+%        \item $N_2$ purity: $0.999 \leq x_{N_2} \leq 1.0 $,
+%        \item $O_2$ flowrate: $ 1700 \leq \dot{n}_{O_2} \leq 10^4 $,
+%        \item $O_2$ purity: $0.995 \leq x_{O_2} \leq 1.0 $,
+%        \item $Ar$ flowrate: $ 20 \leq \dot{n}_{Ar} \leq 10^4 $,
+%        \item $Ar$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
+%    \end{itemize}
+%    as well as the column diameters, to avoid flooding
+%    \begin{itemize}
+%        \item HPC diameter: $d_{\text{column}}^{\text{HPC}} \geq d_{min}^{HPC}$,
+%        \item LPC diameter: $d_{\text{column}}^{\text{LPC}} \geq d_{min}^{LPC}$,
+%        \item CAC diameter: $d_{\text{column}}^{\text{CAC}} \geq d_{min}^{CAC}$.
+%    \end{itemize}
     When solving the continuous reformulation of the problem, an extra constraint for each integer variable in form of the
-    Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
+    relaxed Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
     an equality constraint. This closure condition needs not to be explicitly considered using the outer approximation approach,
     since this is handled internally by declaring so called special ordered sets. This allows \gproms and the OA algorithm
     to exploit the special structure of the problem due to the \emph{exclusive or} decisions.
@@ -98,16 +129,26 @@ but reasonable constraints.
     In the process of solving the FB-program \todo{introduce FB-program as term} some difficulties arose. While
     (almost) integer values were found for most structural decisions, even after the initial iteration, especially
     the LPC column displayed some convergence problems. As the relaxation factor is reduced, the solutions are pushed
-    towards integer values or in other words, the feasible region between zero and one is is divided into two regions which become
-    smaller and smaller. In some cases the discrete solutions remain on one side of the feasible domain, while still fulfilling
-    the closure constraint. As the relaxation factor is reduced, the solver is no longer able to ''make the jump'' to the other side
-    of the domain. This leads to small values for the integer decisions along most of the column, and as the relaxation factor becomes zero,
-    a failure in the solver since the closure condition and the FB-constraints can no longer both be fulfilled.
+    towards integer values or in other words, the feasible region between zero and one is is divided into two regions
+    which become smaller and smaller. In some cases the discrete solutions remain on one side of the feasible domain,
+    while still fulfilling the closure constraint. As the relaxation factor is reduced, the solver is no longer able to
+    ''make the jump'' to the other side of the domain. This leads to small values for the integer decisions along most
+    of the column. \Figref{fig:conv_fail} shows an typical example of this for of convergence. After the initial NLP the
+    feed is evenly distributed between two stages, neither really dominant. As the relaxation is tightened, the values
+    are reduced, and distributed among more stages. As the relaxation factor approaches zero the closure condition can
+    no longer be satisfied, which in turn prevents convergence of the solver.
+    \begin{figure}
+        \scriptsize
+        \center
+        \input{GNUPlot/FB_converge}
+        \caption{convergence failure.}
+        \label{fig:conv_fail}
+    \end{figure}
 
     This issue has been addressed, by \cite{Kraemer.2010} who propose a re-initialization strategy based on the magnitude of
     the Lagrange multipliers associated with the continuous variables. While the results using this adjusted strategy
     are very promising it could not be implemented within the scope of this thesis. In addition to the adjusted algorithm,
-    the problem formulation can be adjusted to facilitate convergence of the solution algorithm. To strategies can
+    the problem formulation can be altered to improve convergence of the solution algorithm. Two strategies can
     be employed, which exploit the structure of the distillation model, or force the continuous solution to both sides
     of the feasible domain \cite{Kraemer.2009}.
 
@@ -121,18 +162,12 @@ but reasonable constraints.
     It should be considered, that this formulation requires the variable tray location to be on the side at which
     the specified purity lies. \todo{write about optimization model.}
 
-    The second approach relies on a model reformulation for at least the initial iteration. Rather than optimizing for
-    the locations directly a so called differentiable distribution function (DDF) is introduced
-    \Eq{}{
-        \Psi_j = \frac{ \exp\left[ - \left( \frac{j - \sum_i \zeta_i i}{\sigma} \right)^2 \right] }{
-            \sum_k \exp\left[ - \left( \frac{k - \sum_i \zeta_i i}{\sigma} \right)^2 \right]}.
-    }
-    By adjusting the standard deviation ($\sigma$) it can be assured, that a sufficiently large value for at
-    least on continuous variable is attained. However a to tight distribution might also hinder the solver
-    to later find an optimal solution. Hence car mast be taken, as to what choice is reasonable.
+    The second approach relies on the previously introduced differentiable distribution function. Here a sufficient
+    focus on a given tray can be enforced by adjusting the underlying standard deviation. By introducing that function
+    in the first optimization stage, while continuing with the traditional formulation in the subsequent steps,
+    convergence could be achieved.
 
-    In order to converge the continuous problem, use of the DDF was only required for the reflux location in the 
-    low pressure column for the first NLP.
+    \todo{discuss time consumption and quality of the solution.}
 
     \subsection{Steady state single period}
     \label{chp:optexample:ss_single_perid}

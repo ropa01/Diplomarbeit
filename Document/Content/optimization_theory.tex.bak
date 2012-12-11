@@ -1,53 +1,59 @@
-Some basic considerations about optimization theory are presented in this section. However its purpose is not
-an exhaustive review of (convex) optimization but rather to introduce some elementary concepts and terms that will
-prove useful in the following sections. Foremost a brief discussion of optimality conditions for constrained
-problems -- the so called Karush-Kuhn-Tucker (KKT) conditions -- will be given. Closely linked to those conditions,
-and in some cases even a perquisite for their validity, are the constraint qualifications which are subsequently
-discussed.
+The purpose of this section is not an exhaustive review of (convex) optimization but rather to mention 
+some elementary concepts and terms that will prove useful in the following sections. Foremost a brief 
+discussion of optimality conditions for constrained problems -- the so called Karush-Kuhn-Tucker (KKT) 
+conditions -- will be given. Closely linked to those conditions, and in some cases even a perquisite for their
+validity, are the constraint qualifications which are subsequently discussed.
 
     \subsection{Karush-Kuhn-Tucker conditions}
     \label{sec:opt:theory:kkt}
-    \todo{introduce active set}
-    Considering the most general case of a NLP
+    This formulation of the KKT conditions is adapted from explanations in \cite{Nocedal.2006}. 
+    Before the conditions ca be stated, some definitions are needed. Considering the most general case of a NLP
     \program{}{
         & \minimize{x} & & f(x) \\
         & \st & & h_i(x) = 0, \; \; i \in \mathset{E} \\
         & & & g_i(x) \leq 0, \; \; i \in \mathset{I}
     }
     where $f(x): \mathbb{R}^n \mapsto \mathbb{R}$ denotes the objective function, $\mathset{E}$ and $\mathset{I}$
-    are sets of indices corresponding to equality and inequality constraints respectively. Furthermore are the functions 
-     $f, g$ and $h$ are differentiable real-valued functions. 
-     
-    At this point the term active set should be introduced as well. An active set denotes the union of the set of 
-    equality constraints and the inequality constraints where $g_i(x) = 0$ holds. Thus we can write for the active
-    set at any feasible point $x$
+    are sets of indices corresponding to equality and inequality constraints respectively. Furthermore are 
+    the functions $f, g$ and $h$ differentiable and real-valued.
+
+    An active set denotes the union of the set of equality constraints and the inequality constraints 
+    where $g_i(x) = 0$ holds. Thus we can write for the active set at any feasible point $x$
     \Eq{}{
-       \mathcal{A}(x) = \mathcal{E} \cup \left{ i \in \matcal{I} | g_i(x) = 0 \right}.  
-    }
-    
-    To the constrained problem stated above the Lagrangian is defined as 
-    \Eq{}{
-        \mathcal{L}(x,\lambda,\mu) := f(x) - \sum_{i \in \mathcal{E}} \lambda_i h_i(x) - \sum_{i \in \mathcal{E}} \mu_i g_i(x) 
+       \mathset{A}(x) = \mathset{E} \cup \left\{ i \in \mathset{I} | g_i(x) = 0 \right\}.
     }
 
-    First order KKT conditions must hold at the optimal point $(x^{\ast}, \lambda^{\ast}, \mu^{\ast})$
+    For the constrained problem stated above the Lagrangian is defined as
+    \Eq{}{
+        \mathset{L}(x,\lambda,\mu) := f(x) - \sum_{i \in \mathset{E}} \lambda_i h_i(x) - \sum_{i \in \mathcal{I}} \mu_i g_i(x)
+    }
+
+    With that the optimality conditions for constrained optimization can be stated.
+    First order or necessary KKT conditions must hold at the optimal point $(x^{\ast}, \lambda^{\ast}, \mu^{\ast})$
     \Eq{}{
         \nabla_x \mathcal{L}(x^{\ast}, \lambda^{\ast}, \mu^{\ast}) & = 0, \\
-        h_i(x^{\ast}) & = 0, \\
-        g_j(x^{\ast}) & \leq 0, \\
-        \mu_j^{\ast} & \geq 0, \\
-        \mu_j^{\ast} g_j(x^{\ast})& = 0, \\
-        i \in \mathset{E}, \; \; j \in \mathset{I}.
+        h_i(x^{\ast}) & = 0, & \forall i \in \mathset{E} \\
+        g_i(x^{\ast}) & \leq 0, & \forall i \in \mathset{I} \\
+        \mu_i^{\ast} & \geq 0, & \forall i \in \mathset{I} \\
+        \mu_i^{\ast} g_i(x^{\ast})& = 0, & \forall i \in \mathset{I} \\
+        \lambda_i^{\ast} h_i(x^{\ast})& = 0, & \forall i \in \mathset{E} \\
+    }
+    The second order or sufficient KKT conditions can be written as
+    \todo{check conditions on lagrange multipliers and active set ....}
+    \Eq{}{
+        w^T \nabla_{xx} \mathcal{L}(x^{\ast}, \lambda^{\ast}, \mu^{\ast})w & > 0, \quad \forall w \neq 0, \\
+        \nabla h_i(x^{\ast})^T w & = 0, \quad \forall i \in \mathset{E}, \\
     }
 
     \subsection{Constraint qualification conditions}
     \label{sec:opt:theory:cq}
 
-    Constraint qualifications, given convexity of the problem, can ensure the existence of strictly positive Lagrange
+    Constraint qualifications, can ensure the existence of strictly positive Lagrange
     multipliers, such that the unconstrained equivalent problem can be constructed. In general one is interested
     in the weakest possible perquisite to ensure feasibility \todo{feasibility the right word here?} of the problem.
     There are several constraint qualifications proposed in literature, which are differently hard to fulfil
-    and verify.
+    and verify. In general a minimum point should satisfy some constraint qualifications or regularity conditions.
+    Several more constraint qualifications can be found in literature, but will not be stated here.
 
     \subsubsection{Slater's constraint qualification (SCQ)}
     Among the most widely used constraint qualifications is Slater's constraint qualification
@@ -68,3 +74,6 @@ discussed.
     \Eq{}{
         \exists \tilde{u}, \forall i \in \mathcal{A}(\bar{x}) : \nabla h_i(\bar{x})(\tilde{u}) < 0.
     }
+
+
+

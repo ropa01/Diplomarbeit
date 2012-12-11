@@ -61,14 +61,14 @@ but reasonable constraints.
         \center
         \footnotesize
         \input{Tables/SS1_results}
-        \label{tab:ss1_results}
         \caption{steady-state single period optimization results.}
+        \label{tab:ss1_results}
     \end{table}
     %
     \Tabref{tab:ss1_results} shows a list of all optimization variables along with their initial and optimized values.
     The optimized values are attained by solving the MINLP by outer approximation or as NCP-problem.
-    
-    The objective considers function considers only capital cost for the separation system 
+
+    The objective considers function considers only capital cost for the separation system
     \Eq{eq:opt:ss_single_objective}{
         CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right)
             \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}\right\} }
@@ -76,21 +76,21 @@ but reasonable constraints.
     %
     Constraints were enforced on the process outputs
     \begin{itemize}
-        \item $N_2$ flowrate: $ 3300 \leq \dot{n}_{Ar} \leq 10^4 $,
-        \item $N_2$ purity: $0.999 \leq x_{Ar} \leq 1.0 $,
-        \item $O_2$ flowrate: $ 1700 \leq \dot{n}_{Ar} \leq 10^4 $,
-        \item $O_2$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
+        \item $N_2$ flowrate: $ 3300 \leq \dot{n}_{N_2} \leq 10^4 $,
+        \item $N_2$ purity: $0.999 \leq x_{N_2} \leq 1.0 $,
+        \item $O_2$ flowrate: $ 1700 \leq \dot{n}_{O_2} \leq 10^4 $,
+        \item $O_2$ purity: $0.995 \leq x_{O_2} \leq 1.0 $,
         \item $Ar$ flowrate: $ 20 \leq \dot{n}_{Ar} \leq 10^4 $,
         \item $Ar$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
     \end{itemize}
     as well as the column diameters, to avoid flooding
     \begin{itemize}
-        \item HPC diameter: $d_{\text{column}}^{\text{HPC}} \geq d_{min}^{HPC}$, 
-        \item LPC diameter: $d_{\text{column}}^{\text{LPC}} \geq d_{min}^{LPC}$, 
+        \item HPC diameter: $d_{\text{column}}^{\text{HPC}} \geq d_{min}^{HPC}$,
+        \item LPC diameter: $d_{\text{column}}^{\text{LPC}} \geq d_{min}^{LPC}$,
         \item CAC diameter: $d_{\text{column}}^{\text{CAC}} \geq d_{min}^{CAC}$.
     \end{itemize}
     When solving the continuous reformulation of the problem, an extra constraint for each integer variable in form of the
-    Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
+    relaxed Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
     an equality constraint. This closure condition needs not to be explicitly considered using the outer approximation approach,
     since this is handled internally by declaring so called special ordered sets. This allows \gproms and the OA algorithm
     to exploit the special structure of the problem due to the \emph{exclusive or} decisions.
@@ -98,16 +98,26 @@ but reasonable constraints.
     In the process of solving the FB-program \todo{introduce FB-program as term} some difficulties arose. While
     (almost) integer values were found for most structural decisions, even after the initial iteration, especially
     the LPC column displayed some convergence problems. As the relaxation factor is reduced, the solutions are pushed
-    towards integer values or in other words, the feasible region between zero and one is is divided into two regions which become
-    smaller and smaller. In some cases the discrete solutions remain on one side of the feasible domain, while still fulfilling
-    the closure constraint. As the relaxation factor is reduced, the solver is no longer able to ''make the jump'' to the other side
-    of the domain. This leads to small values for the integer decisions along most of the column, and as the relaxation factor becomes zero,
-    a failure in the solver since the closure condition and the FB-constraints can no longer both be fulfilled.
-
+    towards integer values or in other words, the feasible region between zero and one is is divided into two regions 
+    which become smaller and smaller. In some cases the discrete solutions remain on one side of the feasible domain, 
+    while still fulfilling the closure constraint. As the relaxation factor is reduced, the solver is no longer able to 
+    ''make the jump'' to the other side of the domain. This leads to small values for the integer decisions along most 
+    of the column. \Figref{fig:conv_fail} shows an typical example of this for of convergence. After the initial NLP the 
+    feed is evenly distributed between two stages, neither really dominant. As the relaxation is tightened, the values
+    are reduced, and distributed among more stages. As the relaxation factor approaches zero the closure condition can 
+    no longer be satisfied, which in turn prevents convergence of the solver. 
+    \begin{figure}
+        \scriptsize
+        \center
+        \input{GNUPlot/FB_converge}
+        \caption{convergence failure.}
+        \label{fig:conv_fail}
+    \end{figure}
+    
     This issue has been addressed, by \cite{Kraemer.2010} who propose a re-initialization strategy based on the magnitude of
     the Lagrange multipliers associated with the continuous variables. While the results using this adjusted strategy
     are very promising it could not be implemented within the scope of this thesis. In addition to the adjusted algorithm,
-    the problem formulation can be adjusted to facilitate convergence of the solution algorithm. To strategies can
+    the problem formulation can be altered to improve convergence of the solution algorithm. Two strategies can
     be employed, which exploit the structure of the distillation model, or force the continuous solution to both sides
     of the feasible domain \cite{Kraemer.2009}.
 
@@ -121,18 +131,12 @@ but reasonable constraints.
     It should be considered, that this formulation requires the variable tray location to be on the side at which
     the specified purity lies. \todo{write about optimization model.}
 
-    The second approach relies on a model reformulation for at least the initial iteration. Rather than optimizing for
-    the locations directly a so called differentiable distribution function (DDF) is introduced
-    \Eq{}{
-        \Psi_j = \frac{ \exp\left[ - \left( \frac{j - \sum_i \zeta_i i}{\sigma} \right)^2 \right] }{
-            \sum_k \exp\left[ - \left( \frac{k - \sum_i \zeta_i i}{\sigma} \right)^2 \right]}.
-    }
-    By adjusting the standard deviation ($\sigma$) it can be assured, that a sufficiently large value for at
-    least on continuous variable is attained. However a to tight distribution might also hinder the solver
-    to later find an optimal solution. Hence car mast be taken, as to what choice is reasonable.
-
-    In order to converge the continuous problem, use of the DDF was only required for the reflux location in the 
-    low pressure column for the first NLP.
+    The second approach relies on the previously introduced differentiable distribution function. Here a sufficient 
+    focus on a given tray can be enforced by adjusting the underlying standard deviation. By introducing that function 
+    in the first optimization stage, while continuing with the traditional formulation in the subsequent steps, 
+    convergence could be achieved. 
+    
+    \todo{discuss time consumption and quality of the solution.}
 
     \subsection{Steady state single period}
     \label{chp:optexample:ss_single_perid}

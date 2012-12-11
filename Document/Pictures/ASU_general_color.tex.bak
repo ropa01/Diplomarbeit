@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \pgfmathsetmacro{\blockh}{1.5cm}
+    \pgfmathsetmacro{\blockw}{2.2cm}
+    \tikzset{box/.style={draw, rectangle, minimum height=\blockh, minimum width=\blockw, align=center}}
+    \node (A) [box] at (0,0) {air \\ compression} ;
+    \node (B) [box] at ($(A) + (0,-3)$) {air pre- \\ treatment} ;
+    \draw [arrow] (A.south) -- (B.north) ;
+    \node (C) [box,fill=AVTLightBlue] at ($(B) + (4,0)$) {heat \\ exchange} ;
+    \draw [arrow] ($(B.east) - (0,0.5)$) -- ($(C.west) - (0,0.5)$) ;
+    \node (D) [box,fill=AVTLightBlue] at ($(B) + (8,0)$) {cryogenic \\ separation} ;
+    \node (E) [box] at ($(B) + (12,0)$) {storage} ;
+    \node (F) [box,fill=AVTLightBlue] at ($(A) + (8,0)$) {product \\ compression} ;
+    \node (G) [box] at ($(A) + (12,0)$) {product \\ delivery} ;
+    \draw [arrow] ($(C.east) - (0,0.5)$) -- ($(D.west) - (0,0.5)$) ;
+    \draw [arrow] ($(D.west) + (0,0.5)$) -- ($(C.east) + (0,0.5)$) ;
+    \draw [arrow] (D.west) -- (C.east) ;
+    \draw [arrow] (D.east) -- (E.west) ;
+    \draw [arrow] ($(E.north) + (0.5,0)$) -- ($(G.south) + (0.5,0)$) ;
+    \draw [arrow] ($(C.west) + (0,0.5)$) -- ++(-0.5,0) -- ++(0,1) -- (11.5,-1.5) -- ($(G.south) - (0.5,0)$) ;
+    \draw [arrow] (C.west) -- ++(-1,0) -- ++(0,3) -- (F.west) ;
+    \draw [arrow] (F.east) -- (G.west) ;
+\end{tikzpicture}

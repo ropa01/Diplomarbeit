@@ -160,7 +160,7 @@ Also unless otherwise stated the unit cost is given for the year 2006 ($CE = 500
 		\paragraph{Pump}
 			In terms of operations pumps are best described by the volumetric flow transported $Q$ as
 			well as the pump head $H$, the hight that needs to be overcome. Data taken from the company
-			Mosanto was used to correlate the pump cost to a specific value
+			Mosanto was used to correlate the pump cost to a specific value 
 			\Eq{eq:cost:pump:SpecVal}{
 				S = Q \sqrt{H}.
 			}
@@ -171,14 +171,30 @@ Also unless otherwise stated the unit cost is given for the year 2006 ($CE = 500
 					\eqannote{400 \leq S \leq 100000}.
 			}
 			
-			The most influential addition factors for the pump price are the material, which is accounted
+			The most influential scaling factors for the pump price are the material, which is accounted
 			for in the material factor $f_m$, as well as the rotation, case split orientation (horizontal
 			and vertical), the number of stages, covered flow rate range, pump head range and maximum
 			motor power, which are all agglomerated in the type factor $f_T$. Values for these factors
 			are given in \tabref{tab:pump:Type} and \tabref{tab:pump:Material}.
 			
-			\stdtab{Tables/PumpFactorsType}{Pump type factors \cite{Seider.2010}.}{tab:pump:Type}
-			\stdtab{Tables/PumpFactorsMaterial}{Pump material factors \cite{Seider.2010}.}{tab:pump:Material}
+            \begin{table}
+                \center
+                \begin{subtable}{.68\linewidth}
+                    \footnotesize
+                    \center
+                    \input{Tables/PumpFactorsType}
+                    \caption{type factors.}
+                    \label{tab:pump:Type}
+                \end{subtable}
+                \begin{subtable}{.3\linewidth}
+                    \footnotesize
+                    \center
+                    \input{Tables/PumpFactorsMaterial}
+                    \caption{material factors.}
+                    \label{tab:pump:Material}
+                \end{subtable}
+                \caption{Pump cost factors \cite{Seider.2010}.}
+            \end{table}
 			
 		\paragraph{Electric motor}
 			Separately from the pump itself the motor to drive the compression is considered. While the
@@ -210,8 +226,14 @@ Also unless otherwise stated the unit cost is given for the year 2006 ($CE = 500
 			
 			To adjust the cost for different types of electric motors the type factors from \tabref{tab:pump:MotorTypes}
 			
-			\stdtab{Tables/MotorTypeFactors}{Type factors for different motor types.}{tab:pump:MotorTypes}
-	
+            \begin{table}
+                \footnotesize
+                \center 
+                \input{Tables/MotorTypeFactors}
+                \caption{Type factors for different motor types.}
+                \label{tab:pump:MotorTypes}
+	        \end{table}
+
 	\subsubsection{Compressor}
 		The cost of compressors is correlated with their respective power consumption measured in horsepower.
 		Although not the most efficient type of compressor, centrifugal compressors are very popular in the

@@ -1,0 +1,18 @@
+\footnotesize
+\begin{tabular}{cC{0.2\textwidth}C{0.2\textwidth}C{0.2\textwidth}C{0.2\textwidth}}
+	 & \multicolumn{2}{c}{\begin{minipage}{0.42\textwidth} \center \footnotesize Marshall \& Swift Installed Equipment Index \end{minipage}} 
+		& \begin{minipage}{0.20\textwidth} \center \footnotesize Nelson-Farrar Refinery Construction Index \end{minipage}
+		& \begin{minipage}{0.20\textwidth} \center \footnotesize Chemical Engineering Plant Cost Index \end{minipage}\\ 
+	 & \multicolumn{2}{c}{\begin{minipage}{0.42\textwidth} \center \footnotesize $1926 \equiv 100$ \end{minipage}} 
+		& \begin{minipage}{0.20\textwidth} \center \footnotesize $1946 \equiv 100$ \end{minipage}
+		& \begin{minipage}{0.20\textwidth} \center \footnotesize $1957 \equiv 100$ \end{minipage}\\ \hline
+	 year &  all industries &  process industry & & \\ \hline
+	 1975 & 444 & 452 & 576 & 182 \\
+	 1980 & 560 & 675 & 823 & 261 \\
+	 1985 & 790 & 813 & 1074 & 325 \\
+	 1990 & 915 & 935 & 1226 & 358 \\
+	 1995 & 1027 & 1037 & 1392 & 381 \\
+	 2000 & 1089 & 1103 & 1542 & 394 \\
+	 2001 & 1093 & 1107 & 1565 & 396 \\ \hline
+\end{tabular}
+\normalsize

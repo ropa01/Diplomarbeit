@@ -1,0 +1,10 @@
+\rowcolors{2}{}{lightblue}
+\begin{tabular}{C{0.1\textwidth}C{0.12\textwidth}C{0.12\textwidth}C{0.12\textwidth}C{0.12\textwidth}C{0.12\textwidth}C{0.12\textwidth}}
+	number of stages & shaft rpm & case-split orientation & flow rate range ([gpm]) & pump head range ([ft]) & maximum power ([Hp]) & type factor $f_T$ \\ \hline
+	1 & 3600 & VSC & 50 - 900 & 50 - 400 & 75 & 1.00 \\
+	1 & 1800 & VSC & 50 - 3500 & 50 - 200 & 200 & 1.50 \\
+	1 & 3600 & HSC & 100 - 1500 & 100 - 450 & 150 & 1.70 \\
+	1 & 1800 & HSC & 250 - 5000 & 50 - 500 & 250 & 2.00 \\
+	2 & 3600 & HSC & 50 - 1100 & 300 - 1100 & 250 & 2.70 \\
+	2+ & 3600 & HSC & 100 - 1500 & 650 - 3200 & 1450 & 8.90 \\ \hline
+\end{tabular}

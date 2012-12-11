@@ -88,8 +88,7 @@ of evaluating certain investment options and estimating a projects profitability
         \begin{table}
         	\center
         	\input{Tables/PriceIndices}
-        	\caption{Price indices and their development.}
-        	\todo[inline]{add citation: PE-VT Script}
+        	\caption{Price indices and their development.\cite{Marquardt.2008}}
         	\label{tab:PriceIndices}
         \end{table}
 
@@ -119,7 +118,7 @@ of evaluating certain investment options and estimating a projects profitability
         A reference price $C^{i}_B$ is multiplied by the determining quantity $Q^{i}$ normalized to a reference state
         $Q^{i}_B$ and raised to the power $M^{i}$ specific to each piece of equipment. Reference prices and
         quantities for various installations can be obtained from literature (e.g. \cite{Seider.2010}).
-        
+
         If more detailed information on the process conditions are available, they should also find their way into the cost estimation.
         Aside from the mere size of the equipment the process conditions will also influence the expected (and actual)
         cost. The predominant factors to that respect are pressure, temperature, corrosiveness
@@ -129,7 +128,7 @@ of evaluating certain investment options and estimating a projects profitability
         In order to account for all those effect a form factor $f_F$ can be applied to the equipment cost
         \eq{
         	C^{i}_E = C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}} f_F^{i}
-        		=   C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}} 
+        		=   C^{i}_B \left( \frac{Q^{i}_E}{Q^{i}_B} \right)^{M^{i}}
                     \underbrace{\left(1 + f^{i}_C + f^{i}_M + f^{i}_P + f^{i}_T\right)}_{= f_F^{i}}.
         	\label{eq:equip_cost_mpt}
         	\ncr{f^{i}_C}{design complexity correction to equipment cost}{-}
@@ -139,13 +138,13 @@ of evaluating certain investment options and estimating a projects profitability
         }%
         Where $f_F$ denotes the form factor, $f_C$ corrects for design complexity, $f_M$ for material selection,
         $f_P$ adjusts for extreme pressures and $f_T$ for temperature.
-        
+
         As in the previous section all reference prices need to be scaled for the temporal price
         development. Again the aforementioned indices are used. Furthermore can the prices be corrected for regional
         differences in price structure. Once more correction factors to prices in an reference region in
         the world (e.g. USA) are employed.
         \todo[inline]{add ref.}
-        
+
         In addition to the purchased cost, the costs for installing the process equipment have an significant effect
         on the total needed investment of the process. These installation costs include:
         \regitemize{%
@@ -156,14 +155,14 @@ of evaluating certain investment options and estimating a projects profitability
         	\item{Insulation and fire proofing}
         	\item{Labour fees}
         }%
-        To incorporate those additional cost, again correction factors to the main equipment price are used. 
+        To incorporate those additional cost, again correction factors to the main equipment price are used.
         Depending on the status
         of the information available they can be expressed as one unified factor or broken down to each specific
         category. One however needs to bare in mind, that costs for piping and valves -- pieces of equipment
         in direct contact with process media -- will be affected by the process conditions in a similar
         way as the actual equipment, whereas the other categories are more likely to remain unchanged. Thus
         attention needs to be paid, in with fashion the factors will be applied.
-        
+
         A word should be said about the cost for the control system. Most obtainable data will most likely refer to
         a decentralized control system, as it has been in use for many years. With ever more powerful computers
         a centralized approach, namely model predictive control (MPC) is becoming more relevant. As the
@@ -179,11 +178,11 @@ of evaluating certain investment options and estimating a projects profitability
         communication systems or waste disposal. All these costs are expressed as fractions of the equipment
         cost at moderate temperature and pressure. This means, when applying these fractions, the factors $f_M$,
         $f_P$ and $f_T$ should not be considered at this point.
-        
+
         Once again in early design stages one has to resort to factors derived for statistical data, to calculate
         the cost of raw materials, energy and support media such as lubricants, heat or catalysts. If more
         detailed information on process streams is available the approach should be refined.
-        
+
         The cost of raw materials $C_{RM}$ can then be calculated if the material streams of individual raw materials
         $m_i$ as well as their specific cost are known.
         \eq{
@@ -194,7 +193,7 @@ of evaluating certain investment options and estimating a projects profitability
         	\ncr{\dot{m}_i}{mass flow of component $i$}{\frac{kg}{s}}
         	\ncr{t_{op}}{time of process operations}{s}
         }%
-        
+
         Much in the same way the cost for energy can be approximated. This is once more done for each individual
         process unit, rather then for the whole process as it has been done for the raw materials. Hence
         with the needed energy for equipment $i$ with respect to energy carrier $j$ $e_{ij}$ along with
@@ -232,7 +231,7 @@ of evaluating certain investment options and estimating a projects profitability
         It should be emphasized that in early design stages these calculations will at best yield an order of
         magnitude estimate for the expected cost of implementing a chemical process. Most literature sources
         give an accuracy of $\pm 30 \%$  \cite{Peters.2003}. As the project progresses more and more information
-        becomes available an a more accurate estimate can be prepared. The most refined ones rely on actual 
+        becomes available an a more accurate estimate can be prepared. The most refined ones rely on actual
         proposals from prospective manufacturers and suppliers.
 
 
@@ -260,10 +259,10 @@ of evaluating certain investment options and estimating a projects profitability
             	\ncr{POT}{Payout time}{\$}
             }%
             \ncr{POT}{payout time}{a}
-            However many aspects especially in potential profits are not included here. 
+            However many aspects especially in potential profits are not included here.
 
-        \subsubsection{Return of investment}
-            The return of investment is defined as
+        \subsubsection{Return on investment}
+            The return on investment is defined as
             \eq{
             	ROI = \frac{\textnormal{average return / period}}{\textnormal{capital expenditure}} \cdot 100 \%.
             	\label{eq:roi}
@@ -276,32 +275,32 @@ of evaluating certain investment options and estimating a projects profitability
             the expected write-off time. As capital expenditure most likely the total investment will be used. However
             it might give a more precise picture if write-off or the time of individual payments is considered when
             evaluating the capital expenditure.
-    
+
     \subsection{Multi period estimation methods}
     \label{sec:MultiPeriod}
         As discussed earlier, when using only averaged values and considering only one time period,
         a distorted picture of the financial situation will evolve. The sources of the money to be invested
         play a critical role in the evaluation process. Cash reserves, loans, preferred stock or other financial
-        instruments are all viable sources for investment capital. Especially for large scale projects often a 
-        mixture of many different sources is used to allocate all necessary funds. A generic structure of the 
-        cash-flows during the life-cycle of a given project is shown in \figref{fig:CashFlow}. When the project 
-        commences no revenue is generated and only investments are made. As process operations begin revenue 
-        is generated and  the slope of the accumulated cash flow curve switches to an upward directions 
-        -- assuming the project is profitable. As time progresses the produced product might reduce in value 
-        through competitors entering the market or other factors. When the curve intersects the abscissa the 
-        project investment is earned and the break point is reached. The two investment alternatives highlight 
-        that the amount of initial investment will affect the expected revenue. As more information is gathered 
-        during operations, opportunities may arise to optimize the process and leverage so far dormant potentials. 
-        These so called retrofit Investments would ideally lead to an improved cash flow structure as indicated 
+        instruments are all viable sources for investment capital. Especially for large scale projects often a
+        mixture of many different sources is used to allocate all necessary funds. A generic structure of the
+        cash-flows during the life-cycle of a given project is shown in \figref{fig:CashFlow}. When the project
+        commences no revenue is generated and only investments are made. As process operations begin revenue
+        is generated and  the slope of the accumulated cash flow curve switches to an upward directions
+        -- assuming the project is profitable. As time progresses the produced product might reduce in value
+        through competitors entering the market or other factors. When the curve intersects the abscissa the
+        project investment is earned and the break point is reached. The two investment alternatives highlight
+        that the amount of initial investment will affect the expected revenue. As more information is gathered
+        during operations, opportunities may arise to optimize the process and leverage so far dormant potentials.
+        These so called retrofit Investments would ideally lead to an improved cash flow structure as indicated
         by the green line.
-    
+
         \begin{figure}
             \input{pgfplots/ProjectCashFlow}
             \caption{Accumulated cash flows over project life cycle.}
             \label{fig:CashFlow}
         \end{figure}
         \todo[inline]{add ref: (\figref{fig:CashFlow}) Script PE-VT}
-    
+
         Before further investigating multi-period models some basic concepts of financial mathematics
         and the treatment of interest should be reviewed. When investing the capital $C_0$ at compounded
         interest for $n$ years at a rate of $i$ \%, the compound amount will yield
@@ -334,7 +333,7 @@ of evaluating certain investment options and estimating a projects profitability
         }%
         The factor $\alpha$ in the previous equations denotes wether payments are made at the beginning
         of a period ($\alpha = 1$ or at the end ($\alpha = 0)$
-    
+
         With that multi-period model can be discussed. Here not only different alternatives can be compared,
         but also the profitability in comparison with investments in financial products can be assessed.
 
@@ -360,7 +359,7 @@ of evaluating certain investment options and estimating a projects profitability
             }%
             For any project to be considered as investment alternative the present value needs to be positive since
             otherwise the investment would yield losses.
-        
+
         \subsubsection{Discounted cash flow rate of return}
             The formula for the discounted cash flow rate of return is very similar to the one for a net present value.
             The difference is, that rather then computing the net present value with given interest rates, the present
@@ -382,7 +381,7 @@ of evaluating certain investment options and estimating a projects profitability
             }%
             This annuity is the amount that could be paid out each period if $C_0$ is invested, compound interest
             is considered and all funds are used up at the end of $n$ years.
-            
+
             This is then compared to the annuity of the considered project
             \eq{
             	a_P = \sum_i^n (r_i - e_i) \cdot q^{-i} \cdot \frac{q^{n-\alpha} (q - 1)}{q^n - 1}.

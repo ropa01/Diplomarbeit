@@ -20,7 +20,8 @@
 \usepackage{ae}
 \usepackage{multirow}
 \usepackage{xfrac}
-\usepackage{xcolor}
+%\usepackage{subfig}
+\usepackage[table]{xcolor}
     \xdefinecolor{RWTHBlue}{HTML}{00539F}
 	%\xdefinecolor{RWTHBlue}{rgb}{0.0,0.3294,0.6235}
     \xdefinecolor{RWTHlightBlue}{HTML}{7FAAD0}
@@ -50,12 +51,19 @@
     \xdefinecolor{PSEOrange}{HTML}{F58220}
 	%\xdefinecolor{PSEOrange}{rgb}{0.96078,0.50980,0.12549}
 	\xdefinecolor{05gray}{gray}{0.5}
+    \xdefinecolor{lightblue}{rgb}{0.93,0.95,1.0}
+
+%\let\oldtabular\tabular
+%\let\endoldtabular\endtabular
+%\renewenvironment{tabular}{\rowcolors{2}{}{AVTLightBlue}\oldtabular}{\endoldtabular}
+
 \usepackage[colorlinks=true, linkcolor=ImperialDarkBlue, citecolor=ImperialLightBlue, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
 %\usepackage{subfloat}
 \usepackage{paralist}
 \usepackage{xifthen}
 \usepackage{scrhack}
 \usepackage{pgf}
+\usepackage{pstricks}
 \usepackage{pgfplots}
 	\pgfplotsset{compat=newest}
 \usepackage{tikz}

@@ -1,0 +1,14 @@
+\rowcolors{2}{}{lightblue}
+\begin{tabular}{lc}
+	\footnotesize
+	material of construction & material factor \\ \hline
+	cast iron & 1.00 \\
+	ductile iron & 1.15 \\
+	cast steel & 1.35 \\
+	bronze & 1.90 \\
+	stainless teel & 2.00 \\
+	Hastelloy C & 2.95 \\
+	monel & 3.30 \\
+	nickel & 3.50 \\
+	titanium & 9.70 \\ \hline
+\end{tabular}
