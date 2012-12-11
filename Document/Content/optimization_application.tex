@@ -29,25 +29,25 @@ but reasonable constraints.
     \begin{figure}
         \footnotesize
         \center
-        \input{Pictures/ASU_example}
+        \includegraphics[width=\linewidth]{Pictures/ASU_superstructure}
         \caption{Optimization example process.}
         \label{fig:opt:exppro}
     \end{figure}
-    
-    The developed model were combined to a process flowsheet for the cryogenic air separation process. 
-    As no specific process was being evaluated, the process configuration was modeled after an 
+
+    The developed model were combined to a process flowsheet for the cryogenic air separation process.
+    As no specific process was being evaluated, the process configuration was modeled after an
     published example process flowsheet \todo{add citation Coco casebook.}. \Figref{fig:opt:exppro}
     shows the flowsheet considered henceforth. Air is drawn from the surrounding at ambient conditions
-    and compressed with inter-cooling stages. Afterwards the entering process stream exchange heat 
-    with the product streams. 
-    
+    and compressed with inter-cooling stages. Afterwards the entering process stream exchange heat
+    with the product streams.
+
     The stream is then divided into two separate streams, and compressed in a turbine, and fed to
-    a low pressure column (LPC) while the majority is fed to the high pressure column (HPC). 
-    Condenser and reboiler are combined in a single unit. A side column to the LPC generates pure 
+    a low pressure column (LPC) while the majority is fed to the high pressure column (HPC).
+    Condenser and reboiler are combined in a single unit. A side column to the LPC generates pure
     argon. The condensate form the HPC is partially fed into the LPC. The oxygen rich sump product form the HPC
-    is used to condensate the CAC top product, and afterwards fed into the LPC. From the reboiler side liquid oxygen 
-    is recovered from the process. From the top of LPC and HPC gaseous nitrogen is drawn.  
-    
+    is used to condensate the CAC top product, and afterwards fed into the LPC. From the reboiler side liquid oxygen
+    is recovered from the process. From the top of LPC and HPC gaseous nitrogen is drawn.
+
     \subsection{Degrees of freedom}
     \todo{move to description of dynamic model.}
     In order to gain more insight into the behaviour of the dynamic models presented above an analysis
@@ -74,8 +74,8 @@ but reasonable constraints.
     optimization capabilities within the model environment \gproms and to compare different solution
     approaches for complex discrete-continuous problems.
 
-    \subsubsection{Single period optimization}
-    In a first case operations for two separate steady-states were optimized. However only structural 
+    \subsubsection{Single steady-state operation}
+    In a first case operations for two separate steady-states were optimized. However only structural
     decisions on the columns were made along with the columns operational parameters.
     %
     \begin{table}
@@ -95,8 +95,8 @@ but reasonable constraints.
             \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}\right\} }
     }
     %
-    The difference in the operation modes lies on the requirements on product flow rates and purity. The following 
-    constraints were enforced  
+    The difference in the operation modes lies on the requirements on product flow rates and purity. The following
+    constraints were enforced
     \begin{table}
         \center
         \footnotesize
@@ -104,20 +104,6 @@ but reasonable constraints.
         \caption{steady-state single period optimization results.}
         \label{tab:ss1_results}
     \end{table}
-%    \begin{itemize}
-%        \item $N_2$ flowrate: $ 3300 \leq \dot{n}_{N_2} \leq 10^4 $,
-%        \item $N_2$ purity: $0.999 \leq x_{N_2} \leq 1.0 $,
-%        \item $O_2$ flowrate: $ 1700 \leq \dot{n}_{O_2} \leq 10^4 $,
-%        \item $O_2$ purity: $0.995 \leq x_{O_2} \leq 1.0 $,
-%        \item $Ar$ flowrate: $ 20 \leq \dot{n}_{Ar} \leq 10^4 $,
-%        \item $Ar$ purity: $0.995 \leq x_{Ar} \leq 1.0 $,
-%    \end{itemize}
-%    as well as the column diameters, to avoid flooding
-%    \begin{itemize}
-%        \item HPC diameter: $d_{\text{column}}^{\text{HPC}} \geq d_{min}^{HPC}$,
-%        \item LPC diameter: $d_{\text{column}}^{\text{LPC}} \geq d_{min}^{LPC}$,
-%        \item CAC diameter: $d_{\text{column}}^{\text{CAC}} \geq d_{min}^{CAC}$.
-%    \end{itemize}
     When solving the continuous reformulation of the problem, an extra constraint for each integer variable in form of the
     relaxed Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
     an equality constraint. This closure condition needs not to be explicitly considered using the outer approximation approach,
@@ -166,78 +152,103 @@ but reasonable constraints.
     convergence could be achieved.
 
     \todo{discuss time consumption and quality of the solution.}
+    
+    \subsubsection{Dual steady-state operation}
+    For a second test case it was assumed, that the plant would have to operate under two distinct 
+    operation modes. One requiring a very high nitrogen purity and the other focusing on very pure oxygen.
+    The steady states correspond to the ones from the previous section. To simultaneously consider two steady 
+    states, two instances were were considered, that were allowed to differ in terms of operational decisions, 
+    but fixed for structural decisions. The structural decisions are all stream locations and diameters. 
+    The decision variables correspond to the ones from the previous sections. 
+    
+    This problem could only be converged using the reformulation strategy. The outer approximation algorithm 
+    did not converge for this particular case. However it needs to be pointed out, that a very similar case 
+    for somewhat less complex scenarios was converged by outer approximation. This particular case however could
+    not even be solved using the optimal solution from the continuous reformulation as an initial guess.
+    Nevertheless it is assumed, that with careful tweaking of the optimization parameters and solver setting 
+    convergence could eventually be achieved. 
+    Otherwise the same initial point as in the previous section was used to initialize the optimization. 
+    The results are summarized in \tabref{tab:dual_results}.   
+    
+%    \begin{table}
+%        \center
+%        \footnotesize
+%        \input{Tables/SS1_constraints}
+%        \caption{steady-state single period optimization results.}
+%        \label{tab:dual_results}
+%    \end{table}
 
-    \subsection{Steady state single period}
-    \label{chp:optexample:ss_single_perid}
-    Objective function
-    \Eqml{eq:opt:ss_single_objective}{
-        CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right) + \sum_o C_o^{\text{oper}} \\
-            \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}, \text{HX}, \text{CP}, \text{CRM}, \text{CRCAC} \right\}
-                \quad o = \left\{\text{CP}, \text{EXP} \right\}}
-    }
-    Constraints :
-    Limits on the product purities:
-    \Eq{eq:opt:ss_single_constraints_1}{
-        y_{1,N_2}^{HPC} & \geq 0.985 \\
-        y_{1,N_2}^{LPC} & \geq 0.985 \\
-        y_{1,Ar}^{CAC} & \geq 0.985 \\
-        x_{reb}^{CRM} & \geq 0.985
-    }
-    No flooding in the columns:
-    \Eq{eq:opt:ss_single_constraints_2}{
-        d_{\text{column}}^{\text{HPC}} & \geq d_{min}^{HPC} \\
-        d_{\text{column}}^{\text{LPC}} & \geq d_{min}^{LPC} \\
-        d_{\text{column}}^{\text{CAC}} & \geq d_{min}^{CAC}
-    }
-    No entrainment in the trayed column :
-    \Eq{eq:opt:ss_single_constraints_3}{
-        \left(1- \sum_{k=1}^{j-1} \right) ent_k^{HPC} & \leq 0.1
-    }
-    Limit on cooling water outlet temperatures to prevent corrosion :
-    \Eq{eq:opt:ss_single_constraints_4}{
-        T_{\text{w,out}}^{IC1} & \leq 323.15 \\
-        T_{\text{w,out}}^{IC2} & \leq 323.15 \\
-        T_{\text{w,out}}^{IC3} & \leq 323.15
-    }
-
-    Design Variables
-    \begin{itemize}
-        \item HPC diameter $d_{\text{column}}^{\text{HPC}}$
-        \item LPC diameter $d_{\text{column}}^{\text{LPC}}$
-        \item CAC diameter $d_{\text{column}}^{\text{CAC}}$
-        \item HPC reflux location $\zeta^R_{\text{HPC}}$
-        \item LPC reflux location $\zeta^R_{\text{LPC}}$
-        \item CAC reflux location $\zeta^R_{\text{CAC}}$
-        \item LPC CAC side draw location $\zeta^{SV,\text{LPC}}_{2,j}$
-        \item heat exchange area multi-stream heat exchanger $A_{\text{HX}}^{multiHX}$
-        \item heat exchange area main condenser reboiler $A_{\text{HX}}^{CRM}$
-        \item heat exchange area CAC condenser reboiler $A_{\text{HX}}^{CRCAC}$
-    \end{itemize}
-
-    Manipulated Variables
-    \begin{itemize}
-        \item intercooler outlet temperatures ($T_{\text{out}}^{IC1}, T_{\text{out}}^{IC2}, T_{\text{out}}^{IC3}$)
-        \item HPC dimensionless side draw (gaseous $N_2$product) ($s_1^{V, \text{HPC}}$)
-        \item LPC dimensionless side draws ($s_i^{V, \text{LPC}}$)
-    \end{itemize}
-
-\subsection{Optimization \& control}
-	To include the design of a PI control structure in the process, the following constraints need to be added.
-	\Eq{}{
-		u_m & = b_{m,1} + \sum_{j=1}^{n_m} \left( K_{m,n} \cdot e_{m,n} + I_{m,n} \right),
-			\eqannote{m = 1 \dots n_{in}}, \\
-		e_{m,n} & = set_{m,n} - meas_{n} \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m}, \\
-		\frac{\mathrm{d} I}{\mathrm{d} t} & = \frac{e_{m,n}}{\tau_{m.n}} \eqannote{m = 1
-			\dots n_{in}, n = 1 \dots n_m}, \\
-		\frac{\mathrm{d} I}{\mathrm{d} t} & = 0 \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m}, \\
-		set_{m,n} & = set_{m-1,n} \eqannote{m = 2 \dots n_{in}, n = 1 \dots n_m}, \\
-		K^L_{m,n} \cdot \zeta^C_{m,n} & \leq K_{m,n}  \leq K^U_{m,n} \eqannote{m = 1 \dots n_{in},
-			n = 1 \dots n_m}, \\
-		\sum_{m=1}^{n_m} \zeta_{m,n}^C & = 1 \eqannote{m = 1 \dots n_{in}}, \\
-		\sum_{n=1}^{n_{in}} \zeta_{m,n}^C & = 1 \eqannote{n = 1 \dots n_{m}},
-	}
-	Since new states have been introduced, the corresponding initial conditions will have to be included
-	\Eq{}{
-		I_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\
-		e_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\
-	}
+%    \subsection{Steady state single period}
+%    \label{chp:optexample:ss_single_perid}
+%    Objective function
+%    \Eqml{eq:opt:ss_single_objective}{
+%        CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right) + \sum_o C_o^{\text{oper}} \\
+%            \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}, \text{HX}, \text{CP}, \text{CRM}, \text{CRCAC} \right\}
+%                \quad o = \left\{\text{CP}, \text{EXP} \right\}}
+%    }
+%    Constraints :
+%    Limits on the product purities:
+%    \Eq{eq:opt:ss_single_constraints_1}{
+%        y_{1,N_2}^{HPC} & \geq 0.985 \\
+%        y_{1,N_2}^{LPC} & \geq 0.985 \\
+%        y_{1,Ar}^{CAC} & \geq 0.985 \\
+%        x_{reb}^{CRM} & \geq 0.985
+%    }
+%    No flooding in the columns:
+%    \Eq{eq:opt:ss_single_constraints_2}{
+%        d_{\text{column}}^{\text{HPC}} & \geq d_{min}^{HPC} \\
+%        d_{\text{column}}^{\text{LPC}} & \geq d_{min}^{LPC} \\
+%        d_{\text{column}}^{\text{CAC}} & \geq d_{min}^{CAC}
+%    }
+%    No entrainment in the trayed column :
+%    \Eq{eq:opt:ss_single_constraints_3}{
+%        \left(1- \sum_{k=1}^{j-1} \right) ent_k^{HPC} & \leq 0.1
+%    }
+%    Limit on cooling water outlet temperatures to prevent corrosion :
+%    \Eq{eq:opt:ss_single_constraints_4}{
+%        T_{\text{w,out}}^{IC1} & \leq 323.15 \\
+%        T_{\text{w,out}}^{IC2} & \leq 323.15 \\
+%        T_{\text{w,out}}^{IC3} & \leq 323.15
+%    }
+%
+%    Design Variables
+%    \begin{itemize}
+%        \item HPC diameter $d_{\text{column}}^{\text{HPC}}$
+%        \item LPC diameter $d_{\text{column}}^{\text{LPC}}$
+%        \item CAC diameter $d_{\text{column}}^{\text{CAC}}$
+%        \item HPC reflux location $\zeta^R_{\text{HPC}}$
+%        \item LPC reflux location $\zeta^R_{\text{LPC}}$
+%        \item CAC reflux location $\zeta^R_{\text{CAC}}$
+%        \item LPC CAC side draw location $\zeta^{SV,\text{LPC}}_{2,j}$
+%        \item heat exchange area multi-stream heat exchanger $A_{\text{HX}}^{multiHX}$
+%        \item heat exchange area main condenser reboiler $A_{\text{HX}}^{CRM}$
+%        \item heat exchange area CAC condenser reboiler $A_{\text{HX}}^{CRCAC}$
+%    \end{itemize}
+%
+%    Manipulated Variables
+%    \begin{itemize}
+%        \item intercooler outlet temperatures ($T_{\text{out}}^{IC1}, T_{\text{out}}^{IC2}, T_{\text{out}}^{IC3}$)
+%        \item HPC dimensionless side draw (gaseous $N_2$product) ($s_1^{V, \text{HPC}}$)
+%        \item LPC dimensionless side draws ($s_i^{V, \text{LPC}}$)
+%    \end{itemize}
+%
+%\subsection{Optimization \& control}
+%	To include the design of a PI control structure in the process, the following constraints need to be added.
+%	\Eq{}{
+%		u_m & = b_{m,1} + \sum_{j=1}^{n_m} \left( K_{m,n} \cdot e_{m,n} + I_{m,n} \right),
+%			\eqannote{m = 1 \dots n_{in}}, \\
+%		e_{m,n} & = set_{m,n} - meas_{n} \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m}, \\
+%		\frac{\mathrm{d} I}{\mathrm{d} t} & = \frac{e_{m,n}}{\tau_{m.n}} \eqannote{m = 1
+%			\dots n_{in}, n = 1 \dots n_m}, \\
+%		\frac{\mathrm{d} I}{\mathrm{d} t} & = 0 \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m}, \\
+%		set_{m,n} & = set_{m-1,n} \eqannote{m = 2 \dots n_{in}, n = 1 \dots n_m}, \\
+%		K^L_{m,n} \cdot \zeta^C_{m,n} & \leq K_{m,n}  \leq K^U_{m,n} \eqannote{m = 1 \dots n_{in},
+%			n = 1 \dots n_m}, \\
+%		\sum_{m=1}^{n_m} \zeta_{m,n}^C & = 1 \eqannote{m = 1 \dots n_{in}}, \\
+%		\sum_{n=1}^{n_{in}} \zeta_{m,n}^C & = 1 \eqannote{n = 1 \dots n_{m}},
+%	}
+%	Since new states have been introduced, the corresponding initial conditions will have to be included
+%	\Eq{}{
+%		I_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\
+%		e_{m,n} (t = 0) & = 0, \eqannote{m = 1 \dots n_{in}, n = 1 \dots n_m} \\
+%	}

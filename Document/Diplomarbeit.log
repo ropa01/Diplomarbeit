@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  11 DEC 2012 02:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  11 DEC 2012 23:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1547,9 +1547,6 @@ LaTeX Warning: Label `eq:opt:FB' multiply defined.
 
 LaTeX Warning: Label `tab:ss1_results' multiply defined.
 
-
-LaTeX Warning: Label `eq:opt:ss_single_objective' multiply defined.
-
 ) (./Content/outlook.aux) (./Content/appendix_pengrob.aux)
 (./Content/appendix_ModelCompact.aux))
 \openout1 = `Diplomarbeit.aux'.
@@ -1665,7 +1662,7 @@ ps-converted-to.pdf Pictures/Logos/CPSE_Logo.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/CPSE_Logo-eps-converted-to.pdf, id=211, 119.44624pt x 50.1875pt
+<Pictures/Logos/CPSE_Logo-eps-converted-to.pdf, id=207, 119.44624pt x 50.1875pt
 >
 File: Pictures/Logos/CPSE_Logo-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/Logos/CPSE_Logo-eps-converted-to.pdf>
@@ -1684,7 +1681,7 @@ s-converted-to.pdf Pictures/Logos/AVT_LOGO.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/AVT_LOGO-eps-converted-to.pdf, id=212, 2008.50375pt x 575.14874
+<Pictures/Logos/AVT_LOGO-eps-converted-to.pdf, id=208, 2008.50375pt x 575.14874
 pt>
 File: Pictures/Logos/AVT_LOGO-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/Logos/AVT_LOGO-eps-converted-to.pdf>
@@ -1703,7 +1700,7 @@ s-converted-to.pdf Pictures/Logos/PSE_Logo.eps>
 (epstopdf)             \includegraphics on input line 46.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/PSE_Logo-eps-converted-to.pdf, id=213, 681.54625pt x 681.54625p
+<Pictures/Logos/PSE_Logo-eps-converted-to.pdf, id=209, 681.54625pt x 681.54625p
 t>
 File: Pictures/Logos/PSE_Logo-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/Logos/PSE_Logo-eps-converted-to.pdf>
@@ -1844,7 +1841,7 @@ ps-converted-to.pdf Pictures/tech_comp_graph.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/tech_comp_graph-eps-converted-to.pdf, id=413, 613.29124pt x 289.08pt>
+<Pictures/tech_comp_graph-eps-converted-to.pdf, id=408, 613.29124pt x 289.08pt>
 File: Pictures/tech_comp_graph-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures/tech_comp_graph-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures/tech_comp_graph-eps-converted-to.pdf used on 
@@ -1922,7 +1919,7 @@ Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2.eps>
 nverted-to.pdf GNUPlot/LPC_init_o2.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
-<GNUPlot/LPC_init_o2-eps-converted-to.pdf, id=680, 238.8925pt x 141.52875pt>
+<GNUPlot/LPC_init_o2-eps-converted-to.pdf, id=675, 238.8925pt x 141.52875pt>
 File: GNUPlot/LPC_init_o2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/LPC_init_o2-eps-converted-to.pdf>
@@ -1946,7 +1943,7 @@ nverted-to.pdf GNUPlot/LPC_init_n2.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/LPC_init_n2-eps-converted-to.pdf, id=681, 238.8925pt x 141.52875pt>
+<GNUPlot/LPC_init_n2-eps-converted-to.pdf, id=676, 238.8925pt x 141.52875pt>
 File: GNUPlot/LPC_init_n2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/LPC_init_n2-eps-converted-to.pdf>
@@ -1986,7 +1983,7 @@ f>
 (epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/pr_isenthalpes-eps-converted-to.pdf, id=747, 238.8925pt x 141.52875pt>
+<GNUPlot/pr_isenthalpes-eps-converted-to.pdf, id=742, 238.8925pt x 141.52875pt>
 File: GNUPlot/pr_isenthalpes-eps-converted-to.pdf Graphic file (type pdf)
 <use GNUPlot/pr_isenthalpes-eps-converted-to.pdf>
 Package pdftex.def Info: GNUPlot/pr_isenthalpes-eps-converted-to.pdf used on in
@@ -2081,7 +2078,7 @@ ted-to.pdf GNUPlot/FB_Plot.eps>
 (epstopdf)             \includegraphics on input line 92.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/FB_Plot-eps-converted-to.pdf, id=1095, 238.8925pt x 96.36pt>
+<GNUPlot/FB_Plot-eps-converted-to.pdf, id=1090, 238.8925pt x 96.36pt>
 File: GNUPlot/FB_Plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/FB_Plot-eps-converted-to.pdf>
@@ -2105,7 +2102,7 @@ rted-to.pdf GNUPlot/DDF_Plot.eps>
 (epstopdf)             \includegraphics on input line 99.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/DDF_Plot-eps-converted-to.pdf, id=1096, 238.8925pt x 96.36pt>
+<GNUPlot/DDF_Plot-eps-converted-to.pdf, id=1091, 238.8925pt x 96.36pt>
 File: GNUPlot/DDF_Plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/DDF_Plot-eps-converted-to.pdf>
@@ -2119,11 +2116,31 @@ Overfull \hbox (6.81407pt too wide) in paragraph at lines 101--180
 
 [60] [61 <./GNUPlot/FB_Plot-eps-converted-to.pdf> <./GNUPlot/DDF_Plot-eps-conve
 rted-to.pdf>]) (./Content/optimization_application.tex
-(./Pictures/ASU_example.tex) [62] [63] (./Tables/SS1_results.tex
+Package epstopdf Info: Source file: <Pictures/ASU_superstructure.eps>
+(epstopdf)                    date: 2012-12-11 17:54:03
+(epstopdf)                    size: 70932 bytes
+(epstopdf)             Output file: <Pictures/ASU_superstructure-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2012-12-11 18:01:47
+(epstopdf)                    size: 29016 bytes
+(epstopdf)             Command: <repstopdf --outfile=Pictures/ASU_superstructur
+e-eps-converted-to.pdf Pictures/ASU_superstructure.eps>
+(epstopdf)             \includegraphics on input line 32.
+Package epstopdf Info: Output file is already uptodate.
+
+<Pictures/ASU_superstructure-eps-converted-to.pdf, id=1120, 600.2425pt x 539.01
+375pt>
+File: Pictures/ASU_superstructure-eps-converted-to.pdf Graphic file (type pdf)
+ <use Pictures/ASU_superstructure-eps-converted-to.pdf>
+Package pdftex.def Info: Pictures/ASU_superstructure-eps-converted-to.pdf used 
+on input line 32.
+(pdftex.def)             Requested size: 483.69684pt x 434.36984pt.
+ [62] [63 <./Pictures/ASU_superstructure-eps-converted-to.pdf>] (./Tables/SS1_r
+esults.tex
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <7> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 14.
-) [64]
-(./Tables/SS1_constraints.tex) [65] (./GNUPlot/FB_converge.tex
+)
+[64] (./Tables/SS1_constraints.tex) [65] (./GNUPlot/FB_converge.tex
 Package epstopdf Info: Source file: <GNUPlot/FB_converge.eps>
 (epstopdf)                    date: 2012-12-07 20:03:16
 (epstopdf)                    size: 17672 bytes
@@ -2135,39 +2152,44 @@ nverted-to.pdf GNUPlot/FB_converge.eps>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/FB_converge-eps-converted-to.pdf, id=1152, 238.8925pt x 96.36pt>
+<GNUPlot/FB_converge-eps-converted-to.pdf, id=1156, 238.8925pt x 96.36pt>
 File: GNUPlot/FB_converge-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/FB_converge-eps-converted-to.pdf>
 Package pdftex.def Info: GNUPlot/FB_converge-eps-converted-to.pdf used on input
  line 108.
 (pdftex.def)             Requested size: 238.8919pt x 96.35974pt.
-) [66 <./GNUPlot/FB_converge-eps-converted-to.pdf>] [67])) [68]
+) [66 <./GNUPlot/FB_converge-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `tab:dual_results' on page 67 undefined on input line 
+169.
+
+)) [67]
 \openout2 = `Content/outlook.aux'.
 
  (./Content/outlook.tex
 Chapter 6.
-) [69
+) [68
 
 
 
-] (./Diplomarbeit.bbl [70
+] (./Diplomarbeit.bbl [69
 
 
-] [71]) [72]
+] [70]) [71]
 \openout2 = `Content/appendix_pengrob.aux'.
 
  (./Content/appendix_pengrob.tex
 Appendix A.
-[73
+[72
 
 
-]) [74]
+]) [73]
 \openout2 = `Content/appendix_ModelCompact.aux'.
 
  (./Content/appendix_ModelCompact.tex
 Appendix B.
-) [75
+) [74
 
 
 
@@ -2184,7 +2206,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 18F1DA55BBC39A4532CE3A715FCEBF01;3267.
+(rerunfilecheck)             Checksum: D24B97D04979D74785F585426A6CF5E0;3189.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2198,10 +2220,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 41321 strings out of 493488
- 843002 string characters out of 3144749
- 1087621 words of memory out of 3000000
- 42724 multiletter control sequences out of 15000+200000
+ 40810 strings out of 493488
+ 832522 string characters out of 3144749
+ 1087328 words of memory out of 3000000
+ 42240 multiletter control sequences out of 15000+200000
  80950 words of font info for 361 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  76i,20n,92p,679b,1666s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2225,10 +2247,10 @@ ive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb><c:/texlive/2012/t
 exmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb><c:/texlive/2012/texmf-dist/f
 onts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2012/texmf-dist/fonts/type1
 /public/cm-super/sfrm0800.pfb>
-Output written on Diplomarbeit.pdf (89 pages, 1079364 bytes).
+Output written on Diplomarbeit.pdf (88 pages, 1096578 bytes).
 PDF statistics:
- 1422 PDF objects out of 1440 (max. 8388607)
- 1262 compressed objects within 13 object streams
- 530 named destinations out of 1000 (max. 500000)
- 47127 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1395 PDF objects out of 1440 (max. 8388607)
+ 1231 compressed objects within 13 object streams
+ 505 named destinations out of 1000 (max. 500000)
+ 47124 words of extra memory for PDF output out of 51595 (max. 10000000)
 

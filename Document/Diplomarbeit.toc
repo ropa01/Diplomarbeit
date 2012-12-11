@@ -93,11 +93,10 @@
 \contentsline {subsection}{\numberline {5.3.1}Example process}{62}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Degrees of freedom}{64}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Steady-state optimization}{64}{subsection.5.3.3}
-\contentsline {subsubsection}{Single period optimization}{64}{section*.82}
-\contentsline {subsection}{\numberline {5.3.4}Steady state single period}{67}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Optimization \& control}{68}{subsection.5.3.5}
-\contentsline {chapter}{\numberline {6}Conclusion and further research}{69}{chapter.6}
-\contentsline {chapter}{Bibliography}{70}{chapter*.86}
-\contentsline {chapter}{\numberline {A}Appendix A}{73}{appendix.A}
-\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{73}{section.A.1}
-\contentsline {chapter}{\numberline {B}Appendix B}{75}{appendix.B}
+\contentsline {subsubsection}{Single steady-state operation}{64}{section*.82}
+\contentsline {subsection}{\numberline {5.3.4}Dual steady-state operation}{67}{subsection.5.3.4}
+\contentsline {chapter}{\numberline {6}Conclusion and further research}{68}{chapter.6}
+\contentsline {chapter}{Bibliography}{69}{chapter*.86}
+\contentsline {chapter}{\numberline {A}Appendix A}{72}{appendix.A}
+\contentsline {section}{\numberline {A.1}Peng-Robinson derived properties}{72}{section.A.1}
+\contentsline {chapter}{\numberline {B}Appendix B}{74}{appendix.B}
