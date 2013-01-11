@@ -6,7 +6,7 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Schematic representation of a three bed PSA process.\relax }}{6}{figure.caption.7}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Membrane unit for gas permeation.\relax }}{7}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Accumulated cash flows over project life cycle.\cite {Marquardt.2008}\relax }}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Accumulated cash flows over project life-cycle.\cite {Marquardt.2008}\relax }}{14}{figure.caption.16}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces simplified cryogenic air separation process.\relax }}{17}{figure.caption.21}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces superstructures for column and column stages.\relax }}{19}{figure.caption.23}
@@ -16,10 +16,11 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Superstructure for multi-stream heat exchanger. \cite {Yee.1990}\relax }}{31}{figure.caption.38}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Multi-stage compression.\relax }}{33}{figure.caption.41}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Isenthalpes computed by Peng-Robinson EOS.\relax }}{34}{figure.caption.43}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{49}{figure.caption.64}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Column tray.\relax }}{37}{figure.caption.45}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{49}{figure.caption.63}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Optimization example process.\relax }}{63}{figure.caption.81}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces convergence failure.\relax }}{66}{figure.caption.85}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Optimization example process.\relax }}{63}{figure.caption.80}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces convergence failure.\relax }}{66}{figure.caption.84}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -4,52 +4,121 @@
 0
 1
 Diplomarbeit.tex
-88
-8
-5
+99
+15
+12
 
 Diplomarbeit.tex
 TeX:UNIX
-152154107 0 -1 763 -1 158 0 0 934 409 1 81 119 -1 -1 0 0 62 -1 -1 62 1 0 158 -1   0
+152154107 0 -1 920 -1 422 0 0 934 409 1 385 85 -1 -1 0 0 62 -1 -1 62 1 0 422 -1   0
+Content\Process_steady_separation.tex
+TeX:UNIX
+269594619 0 -1 20378 -1 20302 150 150 1056 640 1 385 476 -1 -1 0 0 93 -1 -1 93 3 0 20302 -1  1 23443 -1  2 9582 -1   0
+Content\Process_steady.tex
+TeX:UNIX
+1159163 0 -1 6076 -1 6076 125 125 1031 615 1 545 357 -1 -1 0 0 23 -1 -1 23 1 0 6076 -1   0
 Content\optimization.tex
 TeX:UNIX
-1159163 0 -1 704 -1 827 175 175 1364 674 0 65 187 -1 -1 0 0 30 -1 -1 30 1 0 827 -1   0
+1159163 0 -1 704 -1 1063 175 175 1364 674 0 281 323 -1 -1 0 0 30 -1 -1 30 1 0 1063 -1   0
 Content\optimization_theory.tex
 TeX:UNIX
-1159163 0 -1 1491 -1 3873 200 200 1389 699 0 521 510 -1 -1 0 0 80 4 4 80 1 0 3873 -1   0
+1159163 0 -1 3413 -1 3327 200 200 1389 699 0 329 119 -1 -1 0 0 80 4 4 80 1 0 3327 -1   0
+Content\Process_econ.tex
+TeX:UNIX
+1159163 0 151 120 -1 9187 125 125 1525 644 1 945 340 -1 -1 0 0 100 -1 -1 100 1 0 9187 -1   0
 Content\optimization_MINLP.tex
 TeX:UNIX
-17936379 1 -1 12725 -1 12697 225 225 1414 724 1 185 34 -1 -1 0 0 0 -1 -1 0 1 0 12697 -1   0
+17936379 0 -1 7689 -1 8150 225 225 1414 724 1 865 357 -1 -1 0 0 0 -1 -1 0 1 0 8150 -1   0
+Content\ProcessModel.tex
+TeX:UNIX
+1159163 0 -1 1406 -1 1440 150 150 1056 640 0 849 374 -1 -1 0 0 36 -1 -1 36 1 0 1440 -1   0
+Pictures\HX_superstructure.tex
+TeX:UNIX
+1159163 6 -1 7858 -1 7739 150 150 1436 840 0 801 170 -1 -1 0 0 23 -1 -1 23 1 0 7739 -1   0
 Content\optimization_application.tex
 TeX
-1060859 0 -1 4417 -1 4415 0 0 1189 499 1 193 391 -1 -1 0 0 105 -1 -1 105 1 0 4415 -1   0
+1060859 0 259 4 -1 12728 0 0 1189 499 1 73 697 -1 -1 0 0 105 -1 -1 105 1 0 12728 -1   0
 Content\AirSep.tex
 TeX:UNIX
-269594619 0 -1 5783 -1 6229 125 125 1031 615 0 753 442 -1 -1 0 0 35 -1 -1 35 1 0 6229 -1   0
+17936379 0 -1 8451 -1 8484 125 125 1031 615 0 473 408 -1 -1 0 0 35 -1 -1 35 1 0 8484 -1   0
+Content\ProcessEconomics.tex
+TeX:UNIX
+1159163 2 -1 9677 -1 9676 175 175 1369 633 1 73 357 -1 -1 0 0 27 -1 -1 27 1 0 9676 -1   0
+Content\outlook.tex
+TeX:UNIX
+1159163 0 -1 3068 -1 3068 225 225 1650 733 0 25 663 -1 -1 0 0 41 -1 -1 41 1 0 3068 -1   0
 preambel.tex
 TeX:UNIX
-1159163 0 -1 2328 -1 2001 0 0 1009 215 0 353 119 -1 -1 0 0 129 -1 -1 129 1 0 2001 -1   0
+1159163 0 -1 5731 -1 5667 0 0 1009 215 0 25 357 -1 -1 0 0 129 -1 -1 129 1 0 5667 -1   0
 Content\Process_dynamic.tex
 TeX:UNIX
-1159163 0 -1 5271 -1 4450 25 25 1121 615 0 481 255 -1 -1 0 0 85 -1 -1 85 1 0 4450 -1   0
+1159163 0 198 54 -1 10902 25 25 1121 615 0 65 323 -1 -1 0 0 85 -1 -1 85 1 0 10902 -1   0
+Content\Preamble\TaskDescription.tex
+TeX:UNIX
+1159163 0 -1 2705 -1 2890 175 175 1109 584 0 121 408 -1 -1 0 0 18 -1 -1 18 1 0 2890 -1   0
+Content\introduction.tex
+TeX:UNIX
+269594619 0 -1 2398 -1 2398 50 50 984 459 0 817 459 -1 -1 0 0 22 -1 -1 22 1 0 2398 -1   0
+Pictures\tech_compar.tex
+TeX:UNIX
+269594619 0 -1 0 -1 79 100 100 1089 442 0 145 51 -1 -1 0 0 12 -1 -1 12 1 0 79 -1   0
+Tables\LPC_example_data.tex
+TeX:UNIX
+1159163 0 -1 585 -1 586 100 100 1294 558 0 129 136 -1 -1 0 0 163 -1 -1 163 1 0 586 -1   0
+GNUPlot\pr_isenthalpes.tex
+TeX:UNIX
+1159163 0 -1 4333 -1 4334 100 100 1294 558 0 585 408 -1 -1 0 0 40 -1 -1 40 1 0 4334 -1   0
+Tables\SS1_results.tex
+TeX
+269496315 0 -1 22 -1 97 0 0 1375 581 0 265 51 -1 -1 0 0 1234 -1 -1 1234 1 0 97 -1   0
+Tables\SS1_constraints.tex
+TeX
+17838075 0 -1 737 -1 797 100 100 1500 619 0 25 238 -1 -1 0 0 26 -1 -1 26 1 0 797 -1   0
+Pictures\ASU_general_color.tex
+TeX:UNIX
+1159163 0 -1 21 -1 29 50 50 1475 545 0 257 0 -1 -1 0 0 30 -1 -1 30 1 0 29 -1   0
+Tables\Discrepancy.tex
+TeX:UNIX
+1159163 1 -1 26 -1 0 0 0 1253 458 0 25 0 -1 -1 0 0 47 -1 -1 47 1 0 0 -1   0
+Pictures\col_complete_super.tex
+TeX:UNIX
+1159163 0 -1 3482 -1 3485 150 150 1299 608 0 537 646 -1 -1 0 0 80 -1 -1 80 1 0 3485 -1   0
+Tables\PriceIndices.tex
+TeX:UNIX
+1159163 0 -1 380 -1 1154 150 150 1575 645 0 25 323 -1 -1 0 0 13 -1 -1 13 1 0 1154 -1   0
+Tables\PumpFactorsType.tex
+TeX:UNIX
+269594619 1 -1 26 -1 0 150 150 1550 669 0 25 0 -1 -1 0 0 26 -1 -1 26 1 0 0 -1   0
+pgfplots\ASU_process_simple.tex
+TeX:UNIX
+269594619 1 -1 138 -1 157 50 50 1244 508 0 633 34 -1 -1 0 0 19 -1 -1 19 1 0 157 -1   0
+Tables\MotorTypeFactors.tex
+TeX
+1060859 0 -1 0 -1 308 0 0 1425 495 0 25 119 -1 -1 0 0 -1 -1 -1 -1 1 0 308 -1   0
+Tables\PumpFactorsMaterial.tex
+TeX
+1060859 1 -1 259 -1 260 175 175 1575 694 0 89 187 -1 -1 0 0 -1 -1 -1 -1 1 0 260 -1   0
 Pictures\ASU_general.tex
 TeX:UNIX
-269594619 0 -1 0 -1 1269 25 25 911 528 0 161 357 -1 -1 0 0 -1 -1 -1 -1 1 0 1269 -1   0
+1159163 0 -1 626 -1 625 25 25 911 528 0 169 187 -1 -1 0 0 19 -1 -1 19 1 0 625 -1   0
+Pictures\PSA_tikz.tex
+TeX:UTF-8
+17838075 0 221 15 -1 9396 150 150 1170 469 0 161 799 -1 -1 0 0 -1 -1 -1 -1 1 0 9396 -1   0
+Pictures\PSA.tex
+TeX:UNIX
+1159163 0 -1 0 -1 0 50 50 1039 392 0 25 0 -1 -1 0 0 0 -1 -1 0 1 0 0 -1   0
+:\Users\Abakus W7\Dropbox\Studium\Diplomarbeit_files\Visio\PSA_tikz.tex
+TeX:UTF-8
+286273531 0 -1 0 -1 9280 75 75 1095 394 0 457 255 -1 -1 0 0 0 -1 -1 0 1 0 9280 -1   0
+:\Users\Abakus W7\Dropbox\Studium\Diplomarbeit_files\Visio\PSA.tex
+TeX:UNIX
+269594619 0 -1 0 -1 14660 25 25 1045 344 0 33 9061 -1 -1 0 0 31 -1 -1 31 1 0 14660 -1   0
 Pictures\ASU_simple_coco.tex
 TeX:UNIX
 17936379 1 -1 5858 -1 5825 125 125 1296 556 0 57 1263 -1 -1 0 0 0 -1 -1 0 1 0 5825 -1   0
 pgfplots\TikZTemplates.tex
 TeX:UNIX
 1159163 1 -1 92 -1 51 25 25 1219 483 1 73 17 -1 -1 0 0 436 -1 -1 436 1 0 51 -1   0
-Tables\SS1_results.tex
-TeX
-269496315 0 -1 946 -1 1553 0 0 1375 581 0 505 391 -1 -1 0 0 1234 -1 -1 1234 1 0 1553 -1   0
-Content\Process_steady_separation.tex
-TeX:UNIX
-1159163 0 -1 2661 -1 2845 150 150 1056 640 1 417 357 -1 -1 0 0 93 -1 -1 93 3 0 2845 -1  1 23756 -1  2 9731 -1   0
-Content\Process_steady.tex
-TeX:UNIX
-269594619 0 -1 19404 -1 19424 125 125 1031 615 1 73 459 -1 -1 0 0 23 -1 -1 23 1 0 19424 -1   0
 GNUPlot\FB_converge.tex
 TeX:UNIX
 269594619 0 -1 3425 -1 3574 75 75 1036 474 0 409 714 -1 -1 0 0 40 -1 -1 40 1 0 3574 -1   0
@@ -62,9 +131,6 @@ TeX:UNIX
 Pictures\tray_model.tex
 TeX:UNIX
 269594619 0 52 22 -1 3195 200 200 1371 631 0 25 782 -1 -1 0 0 19 -1 -1 19 1 0 3195 -1   0
-Content\ProcessModel.tex
-TeX:UNIX
-269594619 2 -1 3734 -1 3700 150 150 1056 640 0 25 272 -1 -1 0 0 36 -1 -1 36 1 0 3700 -1   0
 :\Users\Abakus W7\Documents\Studium\AppNumOpt\ExamNotes\Summary\OptCond.tex
 TeX:UNIX
 1159163 4 -1 1611 -1 1610 25 25 1241 524 0 233 187 -1 -1 0 0 31 -1 -1 31 1 0 1610 -1   0
@@ -74,12 +140,6 @@ BibTeX
 GNUPlot\FB_Plot.tex
 TeX:UNIX
 1159163 0 -1 3263 -1 3477 0 0 1332 390 0 425 391 -1 -1 0 0 40 -1 -1 40 1 0 3477 -1   0
-Pictures\col_complete_super.tex
-TeX:UNIX
-269594619 0 -1 0 -1 2736 150 150 1299 608 0 497 425 -1 -1 0 0 80 -1 -1 80 1 0 2736 -1   0
-Content\introduction.tex
-TeX:UNIX
-1159163 0 -1 3538 -1 3539 50 50 984 459 0 409 714 -1 -1 0 0 22 -1 -1 22 1 0 3539 -1   0
 Pictures\col_stage_super.tex
 TeX:UNIX
 1159163 1 -1 0 -1 1372 175 175 1324 633 1 73 272 -1 -1 0 0 19 -1 -1 19 1 0 1372 -1   0
@@ -116,15 +176,9 @@ TeX
 Content\appendix_pengrob.tex
 TeX:UNIX
 269594619 0 -1 0 -1 0 0 0 1096 590 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
-Pictures\HX_superstructure.tex
-TeX:UNIX
-1159163 6 -1 7858 -1 7739 150 150 1436 840 0 25 170 -1 -1 0 0 23 -1 -1 23 1 0 7739 -1   0
 Content\BibAppendix.tex
 TeX:UNIX
 269594619 1 -1 85 -1 0 50 50 1054 389 0 25 0 -1 -1 0 0 25 -1 -1 25 1 0 0 -1   0
-Content\ProcessEconomics.tex
-TeX:UNIX
-269594619 0 -1 862 -1 610 175 175 1369 633 1 369 204 -1 -1 0 0 27 -1 -1 27 1 0 610 -1   0
 Content\Dynamic.tex
 TeX
 286273531 4 -1 3240 -1 3241 175 175 1346 606 1 345 1122 -1 -1 0 0 23 -1 -1 23 1 0 3241 -1   0
@@ -179,9 +233,6 @@ DATA
 Content\CoverIntro.tex
 TeX:UNIX
 1159163 1 -1 313 -1 0 100 100 1034 509 0 25 0 -1 -1 0 0 21 -1 -1 21 1 0 0 -1   0
-Content\Preamble\TaskDescription.tex
-TeX:UNIX
-1159163 1 -1 1881 -1 1871 175 175 1109 584 0 25 612 -1 -1 0 0 18 -1 -1 18 1 0 1871 -1   0
 Content\Preamble\StatutoryDeclaration.tex
 TeX:UNIX
 1159163 0 -1 0 -1 736 125 125 1059 534 0 105 425 -1 -1 0 0 18 -1 -1 18 1 0 736 -1   0
@@ -191,9 +242,6 @@ TeX:UNIX
 Pictures\col_com_stage_super.tex
 TeX:UNIX
 1159163 0 -1 1138 -1 1783 50 50 1199 508 0 713 221 -1 -1 0 0 69 -1 -1 69 1 0 1783 -1   0
-pgfplots\ASU_process_simple.tex
-TeX:UNIX
-1159163 1 -1 138 -1 157 50 50 1244 508 0 633 34 -1 -1 0 0 19 -1 -1 19 1 0 157 -1   0
 Pictures\double_column.tex
 TeX:UNIX
 1159163 0 11 44 -1 785 75 75 1064 398 1 433 153 -1 -1 0 0 306 -1 -1 306 1 0 785 -1   0
@@ -203,21 +251,12 @@ TeX:UNIX
 Pictures\LPC_example.tex
 TeX:UNIX
 1159163 1 -1 985 -1 710 75 75 1269 533 0 57 119 -1 -1 0 0 30 -1 -1 30 1 0 710 -1   0
-Tables\Discrepancy.tex
-TeX:UNIX
-269594619 0 -1 17 -1 355 0 0 1253 458 0 345 85 -1 -1 0 0 -1 -1 -1 -1 1 0 355 -1   0
 :\Users\Abakus W7\Downloads\drawings.tex
 TeX:UNIX
 269594619 0 -1 0 -1 0 25 25 1073 367 0 25 -1938 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
-Pictures\tech_compar.tex
-TeX:UNIX
-269594619 0 -1 0 -1 79 100 100 1089 442 0 145 51 -1 -1 0 0 -1 -1 -1 -1 1 0 79 -1   0
 Pictures\reboiler.tex
 TeX:UNIX
 269594619 0 -1 20 -1 20 100 100 1249 558 0 185 0 -1 -1 0 0 30 -1 -1 30 1 0 20 -1   0
-Pictures\PSA.tex
-TeX:UNIX
-269594619 0 -1 0 -1 0 50 50 1039 392 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
 Pictures\condenser.tex
 TeX:UNIX
 269594619 0 -1 20 -1 20 75 75 1224 533 0 185 0 -1 -1 0 0 30 -1 -1 30 1 0 20 -1   0
@@ -242,9 +281,6 @@ TeX:UNIX
 Content\column.tex
 TeX
 269496315 1 -1 6156 -1 6176 125 125 1274 583 0 897 238 -1 -1 0 0 15 -1 -1 15 1 0 6176 -1   0
-GNUPlot\pr_isenthalpes.tex
-TeX:UNIX
-1159163 0 -1 4333 -1 4334 100 100 1294 558 0 585 408 -1 -1 0 0 40 -1 -1 40 1 0 4334 -1   0
 pgfplots\ProjectCashFlow.tex
 TeX:UNIX
 269594619 0 -1 0 -1 1119 200 200 1394 658 0 161 391 -1 -1 0 0 19 -1 -1 19 1 0 1119 -1   0
@@ -254,9 +290,6 @@ TeX:UNIX
 pgfplots\GasPie.tex
 TeX:UNIX
 269594619 0 -1 0 -1 0 100 100 1294 558 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
-Tables\LPC_example_data.tex
-TeX:UNIX
-269594619 0 -1 799 -1 808 100 100 1294 558 0 617 170 -1 -1 0 0 -1 -1 -1 -1 1 0 808 -1   0
 :\Users\Abakus W7\Downloads\template.tex
 TeX:UNIX
 269594619 0 -1 0 -1 0 50 50 1244 508 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
@@ -290,8 +323,8 @@ TeX:UNIX
 *Content/AirSep
 >
 *Pictures/tech_compar
-*Pictures/ASU_text
-*Pictures/PSA.tex
+*Pictures/ASU_general
+*Pictures/PSA_tikz.tex
 *pgfplots/GasPermeation
 <
 *Content/ProcessEconomics
@@ -301,7 +334,7 @@ TeX:UNIX
 <
 *Content/ProcessModel
 >
-*pgfplots/ASU_process_simple
+*Pictures/ASU_general_color
 *Content/Process_steady
 >
 *Content/Process_steady_separation
@@ -323,10 +356,13 @@ TeX:UNIX
 *Content/Process_dynamic
 >
 *Pictures/tray_model
-*Pictures/tray_model_len
-*Pictures/packing_geo
 <
 *Content/Process_econ
+>
+*Tables/PumpFactorsType
+*Tables/PumpFactorsMaterial
+*Tables/MotorTypeFactors
+<
 *Content/Process_impl
 >
 *Pictures/gP_ModelStructure
@@ -343,6 +379,7 @@ TeX:UNIX
 *Content/optimization_application
 >
 *Tables/SS1_results
+*Tables/SS1_constraints
 *GNUPlot/FB_converge
 <
 <

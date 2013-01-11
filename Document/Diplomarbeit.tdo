@@ -1,27 +1,25 @@
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ find appropriate place for integrated reboiler condenser unit.}{18}{section*.2}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add flowsheet initialization from MathModel file}{18}{section*.3}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add citation kiester 1992}{18}{section*.5}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add side draws to column super structure}{18}{section*.7}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ adjust pressure equation to accommodate variable top and bottom tray}{23}{section*.14}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ section superfluous? init procedure describen in impl sec...}{23}{section*.16}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on adiabatic column}{25}{section*.18}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check equations in steady state section!!!}{26}{section*.19}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ mention problems and bounded homotopy?}{27}{section*.22}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ adjust heat exchange section to current approach.}{29}{section*.27}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add citation Lindhoff...}{30}{section*.28}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on pinch concept?}{30}{section*.29}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ read about and mention transshipment model by Moriari (sequential)}{30}{section*.30}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ revise compressor equations and add equations to nomenclature}{32}{section*.33}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ complete compressor equations}{34}{section*.36}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on different terms.}{34}{section*.38}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add derivative in appendix?}{34}{section*.39}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explain model assumptions, limitations, mention wave therory marquardt paper.}{35}{section*.41}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add graphic for tray measuremets.}{37}{section*.44}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ write somewhere that stage indices will be omitted for convenience.}{38}{section*.47}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add equation for flooding pressure drop.}{38}{section*.48}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ mention delft, sti, hydrodynamic continuum}{39}{section*.49}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ include Integrated condenser / reboiler unit}{39}{section*.50}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check time constant (60) for flooding velocity}{43}{section*.55}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check results for minimum column diameter when using flooding pressure drop, or fitted flooding velocity}{43}{section*.57}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ which properties should be included? Or move everything to Appendix?}{47}{section*.69}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ mention TP flashes branch of concentration sub-unit similar to adiabatic column, as all streams are in equil..}{50}{section*.71}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ find appropriate place for integrated reboiler condenser unit.}{18}{section*.18}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add flowsheet initialization from MathModel file}{18}{section*.19}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ section superfluous? init procedure describen in impl sec...}{23}{section*.29}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on adiabatic column}{25}{section*.31}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check equations in steady state section!!!}{26}{section*.32}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ adjust heat exchange section to current approach.}{30}{section*.39}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on pinch concept?}{30}{section*.40}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ read about and mention transshipment model by Moriari (sequential)}{31}{section*.41}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ revise compressor equations and add equations to nomenclature}{33}{section*.44}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ complete compressor equations}{34}{section*.47}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on different terms.}{34}{section*.49}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add derivative in appendix?}{34}{section*.50}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explain model assumptions, limitations, mention wave therory marquardt paper.}{35}{section*.52}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ include Integrated condenser / reboiler unit}{39}{section*.56}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check time constant (60) for flooding velocity}{43}{section*.61}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ which properties should be included? Or move everything to Appendix?}{47}{section*.74}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ mention TP flashes branch of concentration sub-unit similar to adiabatic column, as all streams are in equil..}{50}{section*.76}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check conditions on lagrange multipliers and active set ....}{56}{section*.82}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ feasibility the right word here? kkt derived from LICQ?}{56}{section*.83}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ axis label for ddf and fb plot}{61}{section*.93}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add citation Coco casebook.}{64}{section*.97}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ move to description of dynamic model.}{64}{section*.98}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ introduce FB-program as term}{65}{section*.102}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ write about optimization model.}{66}{section*.104}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ discuss time consumption and quality of the solution.}{67}{section*.105}

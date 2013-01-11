@@ -18,45 +18,45 @@ A level-1 auxiliary file: Content/appendix_ModelCompact.aux
 Database file #1: Literature.bib
 Warning--empty publisher in Boston.
 Warning--empty year in Boston.
-You've used 40 entries,
+You've used 42 entries,
             2118 wiz_defined-function locations,
-            795 strings with 11819 characters,
-and the built_in function-call counts, 13564 in all, are:
-= -- 1375
-> -- 587
+            807 strings with 12045 characters,
+and the built_in function-call counts, 14002 in all, are:
+= -- 1415
+> -- 601
 < -- 5
-+ -- 228
-- -- 188
-* -- 1006
-:= -- 2252
-add.period$ -- 122
-call.type$ -- 40
-change.case$ -- 207
++ -- 234
+- -- 192
+* -- 1024
+:= -- 2330
+add.period$ -- 128
+call.type$ -- 42
+change.case$ -- 213
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 496
-empty$ -- 1081
-format.name$ -- 188
-if$ -- 2813
+cite$ -- 44
+duplicate$ -- 520
+empty$ -- 1125
+format.name$ -- 192
+if$ -- 2907
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 49
-newline$ -- 203
-num.names$ -- 84
-pop$ -- 192
+int.to.str$ -- 42
+missing$ -- 53
+newline$ -- 213
+num.names$ -- 88
+pop$ -- 206
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 177
 quote$ -- 0
-skip$ -- 329
+skip$ -- 341
 stack$ -- 0
-substring$ -- 1001
-swap$ -- 78
+substring$ -- 1011
+swap$ -- 80
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 140
+type$ -- 144
 warning$ -- 2
-while$ -- 144
-width$ -- 42
-write$ -- 453
+while$ -- 148
+width$ -- 44
+write$ -- 475
 (There were 2 warnings)

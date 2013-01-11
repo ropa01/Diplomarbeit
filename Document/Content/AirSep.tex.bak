@@ -6,19 +6,20 @@
 	\label{fig:tech_compar}
 \end{figure}
 The separation of air finds many application in the modern industry. Pure oxygen and nitrogen are
-are essential for many processes. Among the most prominent examples is the production of synthesis gas,
+are essential for many processes. The yearly amount of oxygen extracted from air exceeds 100 million 
+tonnes and nitrogen even surpassing these numbers\cite{Emsley.2003c2001}. Among the most prominent 
+examples is the production of synthesis gas,
 which forms the basis for a multitude of very large scale process operations. In addition the
-air separation processes find application as a utility provider rather than producer of raw material
+air separation processes find application as a utility provider rather than producer of producer
 for example in highly efficient integrated combustion cycles \cite{Mahapatra.2010}. Due to the
 many different applications, pure nitrogen or oxygen is needed with various demands on
 purity, flow rate or phase composition. Therefore different technologies are suitable to specific tasks.
 
 In general three main principles of air separation can be identified; adsorption,
-cryogenic distillation and transport through membranes.\Figref{fig:tech_compar} illustrates the most
-economically viable processes depending on product purity and product stream volume.
-In the remainder of this chapter an overview of the available air separation technologies
-will be given. Here the main focus lies on introducing several alternative technologies
-and estimating their applicability to different product demands.
+cryogenic distillation and transport through membranes. \Figref{fig:tech_compar} illustrates the 
+economically most viable processes depending on product stream volume and purity.
+In the further course of this chapter the most prevalent  air separation technologies
+along with their main fields of application and economic scope are introduced.
 
     \section{Cryogenic processes}
     \label{sec:cryo_air_sep}
@@ -28,31 +29,30 @@ and estimating their applicability to different product demands.
         \caption[Air Separation Unit]{Schematic representation of the cryogenic air separation process.}
         \label{fig:ASU}
     \end{figure}
-    Cryogenic Air Separation finds applications over a great variety of industries among others refining,
+    Cryogenic air separation processes are implemented over a great variety of industries among others refining,
     petrochemicals, medical, food \& beverages and environmental \cite{Sirdeshpande.2005}. \Figref{fig:ASU}
-    shows the major unit operations associated with process. Initially the air is compressed and later re-expanded
+    shows the major unit operations associated with the process. Initially the air is compressed and later re-expanded
     to reach the low temperatures required for liquefaction. In an intermediate pre-treatment step most unwanted
-    contaminants are removed. Is is essential to properly control the amount of carbon dioxide in the
-    gas, as it might freeze out at the low temperatures especially within the heat exchanger. This will result in
-    much decreased performance of the heat exchange unit.
-
+    contaminants are removed. Particularly the amount of carbon dioxide in the gas carries great significance, as
+    operating conditions lie beneath its freezing point. Due to freeze out at those low temperatures, especially
+    within the heat exchanger the performance of process units can greatly be reduced, or entirely hindered.
     The pre-treated air is then cooled against product streams leaving the separation stage of the process. To which extend
     the refrigeration is  recovered is among the most dominant factors for economic operations. The requirements
-    towards the product streams determine how much can be recovered. Most process produce gaseous streams at
+    towards the product streams determine how much can be recovered. Most processes produce gaseous streams at
     approximately ambient pressure and temperature \cite{Smith.2001} and hence recover the maximum of energy from the
     process. However often a subsequent compression step or even liquefaction step is employed to deliver the
     desired product to the consumer.
 
-    In terms of economically viable operations, the compression denotes a sizable contribution to the capital cost
+    In terms of economically feasible operations, the compression denotes a sizable contribution to the capital cost
     and is responsible for the majority of the operating cost. However when recovering liquid product, the
-    compression work need to increase to compensate for the loss in recoverable refrigeration. Due to the widespread
-    application of the  process and several increasingly complex process configurations are being implemented
+    compression work needs to increase in order to compensate for the loss in recoverable refrigeration. Due to the widespread
+    application of the  process, several increasingly complex process configurations are being implemented
     with different strategies, for internal recovery of pressure energy and refrigeration.
 
     The cryogenic process can most economically simultaneously produce large quantities of highly pure oxygen and nitrogen.
-    Furthermore can streams of noble gases, especially argon, be produced. Most alternative technologies will
+    In addition argon and other noble gases can be recovered from the process. Most alternative technologies will
     produce one single product stream. Additionally can the economy of scale be largely exploited for this
-    process, which is why current developments are towards large scale single train that can produce an
+    process, which is why current developments are towards large scale single train that can produce
     an excess of several thousand tonnes of product stream per day \cite{Castle.2002}.
 
     \section{Adsorption processes}
@@ -60,8 +60,8 @@ and estimating their applicability to different product demands.
     Certain materials display a higher affinity to adsorb a specific class of molecules. Nitrogen is
     more easily adsorbed in zeolithes than oxygen. Therefore if air is fed through a
     zeolithe bed, an oxygen rich stream is produced. Since any bed will eventually
-    be saturated and its capability for adsorption be exhausted, the process carries a
-    inherent discontinuity. However for most processes which yield large product streams
+    be saturated and its capability for adsorption be exhausted, the process carries an
+    inherent discontinuity. However, for most processes which yield large product streams,
     continuous operations are more cost effective.
 
     To realize a continuous process multiple adsorption vessels are operated simultaneously.
@@ -69,19 +69,19 @@ and estimating their applicability to different product demands.
     is regenerated. Regeneration utilizes the change of adsorption capabilities at varying temperature
     or pressure. By increasing temperature or lowering pressure can the bed therefore be regenerated.
     Due to the switching during operations these processes a commonly known as temperature swing adsorption
-    (TSA) or pressure swing adsorption (PSA). For most industrial applications PSA is preferred due to
+    (TSA) or pressure swing adsorption (PSA). For most industrial applications PSA is preferred for its
     simpler operation and faster cycle times \cite{Smith.2001}.
 
-    Especially the ability to construct very compact units, have led to implementations of PSA processes at 
-    very different scales. Briefcase sized units are constructed for treatment of asthma patients or other 
-    medical appliances. Larger scale plants have successfully been utilized, for example in the paper industry 
-    during the de-lignation of pulp\cite{Nelson.1993}.
+    The ability to construct very compact units, have led to implementations of PSA processes at
+    very different scales. Briefcase sized units are constructed for treatment of asthma patients or other
+    medical appliances. Larger scale plants have successfully been utilized, for example in the paper industry
+    during the de-lignation of pulp \cite{Nelson.1993}.
 
     The bed size is the determining factor for equipment cost. Since cycle times are limited by the regeneration
     step, the bed size and therefore the cost increases rapidly with the product flowrate. For very large
     scale operations the cryogenic process is more economically viable. However the process can be operated
-    much more flexible due to drastically shorter start-up times than the cryogenic process. Furthermore, no
-    by-products can be recovered from the process, without further subsequent separations\cite{Choi.2003}.
+    much more flexible due to drastically shorter start-up times compared to the cryogenic process. Furthermore, no
+    by-products can be recovered from the process without further subsequent separations \cite{Choi.2003}.
 
     \begin{figure}
     	\center
@@ -89,52 +89,52 @@ and estimating their applicability to different product demands.
     	\caption{Schematic representation of a three bed PSA process.}
     	\label{fig:PSA}
     \end{figure}
-    
-    For continuous operations two separate bed would suffice, however in order to increase cycle times and process 
-    throughput as well as exploit possibilities for pressure energy recovery, process configurations with three or more 
-    beds are employed. Variations of the process use sub-atmospheric pressures during the regeneration step. Such processes
-    are commonly referred to as vacuum swing adsorption (VSA.  
+
+    \Figref{fig:PSA} shows a simple flowsheet of a PSA process. For continuous operations two separate beds would
+    suffice, however, to expedite cycle times and process throughput as well as exploit possibilities for pressure
+    energy recovery, process configurations with three or more beds are often installed. Variations of the process
+    use sub-atmospheric pressures during the regeneration step. Such processes are commonly referred to as vacuum swing
+    adsorption (VSA).
 
     \section{Membrane processes}
     \label{sec:membrane}
-    In case of the membrane process , the type of membrane used leads to very different process characteristics. For the
-    production of oxygen either polymeric membranes (PEM) or ion-transport membranes (ITM) are installed. 
-    
+    In case of the membrane process, the type of membrane used leads to very different process characteristics. For the
+    production of oxygen either polymeric membranes (PEM) or ion-transport membranes (ITM) are installed.
+
      \begin{figure}
     	\center
     	\input{pgfplots/GasPermeation}
 	    \caption{Membrane unit for gas permeation.}
     	\label{fig:gas_permeation}
     \end{figure}
-    
-    Polymeric membranes operate at near ambient conditions. The driving force for separation is the difference 
-    diffusion rates through the membrane \cite{Melin.2007}. The product flowrate and selectivity are the 
+
+    Polymeric membranes operate at near ambient conditions. The driving force for separation is the difference
+    diffusion rates through the membrane \cite{Melin.2007}. The product flowrate and selectivity are the
     determining factors for capital cost. These are mainly dependent on the membrane area. Hence
     the capital cost for the process is expected to rise somewhat linear with the product flowrate.
-    The process can economically generate medium process stream ($\approx 20 \; t/d$) at lower purities. 
+    The process can economically generate a medium process stream ($\approx 20 \; t/d$) at lower purities.
     The minimal start-up time and operations near ambient conditions make the process ideal for
-    applications where oxygen enriched process streams suffice and contaminants such as water or carbon 
+    applications where oxygen enriched process streams suffice and contaminants such as water or carbon
     dioxide can be tolerated. Membranes which incorporate active species that facilitate oxygen transport
-    trough the membrane bear the potential to greatly improve process performance \cite{Kammermeyer.1976}. 
-    In general are the alternative technologies more mature than membrane processes. 
-    
+    trough the membrane bear the potential to greatly improve process performance \cite{Kammermeyer.1976}.
+    In general are the alternative technologies more mature than membrane processes.
+
     Processes with ion exchange membranes are drastically different from the ones with PEM's. Foremost they
-    operate at high temperatures ($\approx 900 K$). At the membrane surface oxygen molecules are ionized 
-    and transported through the membrane along an externally applied electric potential. They travel 
-    through the membrane at very high flow rates. The process is capable of producing virtually pure 
-    oxygen. It is especially suited for integration with power generation processes \cite{Smith.2001}.    
-    
+    operate at high temperatures ($\approx 900 K$). At the membrane surface oxygen molecules are ionized
+    and transported through the membrane along an externally applied electric potential. They travel
+    through the membrane at very high flow rates. The process is capable of producing virtually pure
+    oxygen. It is especially suited for integration with power generation processes \cite{Smith.2001}.
+
     \section{Hybrid processes}
     The three different alternatives presented before constitute the major technologies for separations
     of gases and therefore the production of pure nitrogen and oxygen. All technologies have their specific
     advantages and disadvantages. As the separation of gases remains a major issue when facing upcoming challenges
     for our industries substantial efforts are being made to improve current processes in terms of ecological
-    and economic performance. A very promising way to achieve such improvements to combine these technologies
-    to form hybrid processes. Membranes offer many favourable characteristics are however rather limited when
+    and economic performance. A very promising way to achieve such improvements is to combine these technologies
+    to form hybrid processes. Membranes offer many favourable characteristics are subject to limitations when
     it comes to large flow-rates and high purities. When lower purities are required or the flow-rates are limited
-    they offer however an efficient and cost effective way for gas separation. Therefore in the past years several
+    they offer an efficient and cost effective way for gas separation. Therefore in the past years several
     alternatives for PSA - membrane \cite{Akinlabi.2007} or membrane-cryogenic distillation processes \cite{Wankat.2011}
-    have been studied. The membrane can function within the process either as a pretreatment step, where an product enriched
+    have been studied. The membrane can function within the process either as a pretreatment step, where a product enriched
     stream at medium purities and high flow-rates is produced, or after the main separation, when the main
-    byproducts are already removed, as a last stage to reach very high purities.
-    \todoil{}{include hybrid process flowsheet.}
+    by-products are already removed, as a last stage to reach very high purities.

@@ -1,8 +1,8 @@
-\begin{tabular}{lcc}
+\begin{tabular}{lll}
 	specification & replacement for $H_1$ & replacement for $H_N$ \\ \hline
-	reflux or boilup ratio & $0 & = L_1 - \nu^D \cdot (V_1 + S_1^L)$ & $0 & = V_N - \nu^R \cdot L_N$ \\
+	reflux or boilup ratio & $0  = L_1 - \nu^D \cdot (V_1 + S_1^L)$ & $0  = V_N - \nu^R \cdot L_N$ \\
 	temperature & $0 = T_1 - T_{spec}$ & $0 = T_N - T_{spec}$ \\
 	product flowrate & $0 = (V_1 + S_1^L) - D$ & $0 = L_N - B$ \\
-	component product flowrate & & $L_N \cdot x_{iN} - b_i$ \\
+	component product flowrate & & $0 = L_N \cdot x_{iN} - b_i$ \\
 	mole fraction & $0 = y_{i1} - y_{i,spec}$ & $0 = x_{iN} - x_{ispec}$ \\ \hline
 \end{tabular}

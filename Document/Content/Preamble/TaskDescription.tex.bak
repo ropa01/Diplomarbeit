@@ -1,5 +1,5 @@
 % Task Description
-\thispagestyle{plain} 
+\thispagestyle{plain}
 
 \begin{center}
 	\LARGE
@@ -13,18 +13,11 @@
 
 \normalsize
 
-Current air separation process optimization is carried out sequentially with various discrete or continuous process parameters, 
-and then iterated with equipment sizing and costing. Typical process parameters include temperature, pressure, flow, pressure 
-drop, product purity, distillation column feed and/or draw locations staging, and etc. Major equipment used in cryogenic air 
-separation include air compressors, turbines, plate and fin heat exchangers, cooler, distillation columns, condensers, reboilers, 
-and etc. Once process optimum condition is identified, individual equipment is sized and cost estimated. Capital cost is then feed 
-back to process to verify the original optimum condition. If the original optimum condition changes, we will have to re-optimize 
-the process parameter and identify the new process optimum condition. New equipment sizing and costing will have to be 
-adjusted accordingly.
+Conceptual process design is a task of major importance within the development of new and the retrofit of existing processes. While there has been a lot of research on optimization based process design such approaches are rarely integrated in industrial practise. Up to now simulation software is still the standard tool for conceptual design. In order to ease the implementation of optimization based process design in industrial practise, the main goal of this thesis is to facilitate a superstructure-based process optimization within the process modelling environment \gproms, which is widely applied in industry.  Therefore, firstly a superstructure formulation for a distillation column model needs to be implemented. In addition, as initialization plays a significant role during simulation and optimization, a robust, automated initialization procedure is an essential part of the model development. To finally determine an optimal process design an economic model of the process needs to be formulated and a solution strategy together with an adequate optimization algorithm need to be determined.
 
-The deficiency of the current process is apparent: manual, sequential and iterative. We would like to streamline the optimization 
-process, incorporate the capital equipment cost into the process optimization. The process optimizer we target is gPROMS. The 
-goal is to simultaneously optimize process and equipment to minimize the total process cost with user defined objective functions.
+In order to validate the capabilities of the structural optimization approach the design of a cost optimal cryogenic air separation process is chosen as an industrial relevant and complex case study. The process is highly coupled, in terms of energy and material streams, as it employs a double effect column along with a cupeled side stripper column. This gives rise to challenges in terms of simulating and operating the process. Due to these complexities the process serves as an excellent example to illustrate the effectiveness of optimization strategies.
+
+In addition to the structural optimization different aspects of process design or control can be coupled to or even directly be integrated within the optimization. Among those aspects are potentials for heat integration or the question of a suitable control structure. Furthermore several uncertainties arise from unknown process parameters such as changing feed conditions, product demands or the development of the market conditions.   For all these aspects different methodologies have been proposed in the literature, which similar to the structural optimization are not really integrated in industrial practice yet.  Most or at least some of the methodologies should therefore also be investigated within this thesis in order to identify their potential ease of integration and application in the process modelling environment gPROMS.s to simultaneously optimize process and equipment to minimize the total process cost with user defined objective functions.
 
  \vfill{
 \begin{flushright}
@@ -40,5 +33,6 @@ goal is to simultaneously optimize process and equipment to minimize the total p
 }
 
 Betreuer der Arbeit: Dipl. Ing. Mirko Skiborowski\\
-Tag der Abgabe: xx.xx.2012
+Tag der Abgabe: 23.01.2013
 \todoil{color=AVTLight2Blue}{Add due date}
+\clearpage

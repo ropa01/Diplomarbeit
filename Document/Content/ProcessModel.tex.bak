@@ -1,12 +1,14 @@
 \chapter{Mathematical process model}
 \label{sec:mathprocess}
     \begin{figure}
-        \input{pgfplots/ASU_general_color}
+        \center 
+        \footnotesize
+        \input{Pictures/ASU_general_color}
         \caption{simplified cryogenic air separation process.}
         \label{fig:asu_simple}
     \end{figure}
 
-    This chapter will illustrate with the different process units and their mathematical representation.
+    This chapter will illustrate different process units and their mathematical representation.
     As depicted in \figref{fig:asu_simple} three main tasks need to be performed within the cryogenic air separation process.
     These are pre-purification and compression of raw materials, heat exchange with product streams and separation of streams.
     While those different stages are highly interdependent they will be discussed separately and mathematical

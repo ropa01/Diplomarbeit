@@ -79,20 +79,19 @@
     \label{sec:mathpro:dynamic:trayhyd}
         \begin{figure}
             \center
-            \begin{subfigure}{0.46\textwidth}
+%            \begin{subfigure}{0.46\textwidth}
                 \center
                 \input{Pictures/tray_model}
-                \caption{Column tray}
+                \caption{Column tray.}
                 \label{fig:col_tray}
-            \end{subfigure}
-            \begin{subfigure}{0.46\textwidth}
-                \center
-                \input{Pictures/tray_model_len}
-                \caption{Column tray}
-                \label{fig:col_tray}
-            \end{subfigure}
+%            \end{subfigure}
+%            \begin{subfigure}{0.46\textwidth}
+%                \center
+%                \input{Pictures/tray_model_len}
+%                \caption{Column tray}
+%                \label{fig:col_tray}
+%            \end{subfigure}
         \end{figure}
-        \todo{add graphic for tray measuremets.}
 
         Trayed column hydraulics can be approximated by the following system of equations.
         All equations presented here were taken from \cite{Lockett.2009}.
@@ -133,7 +132,7 @@
         \ncg{\beta}{aeration factor}{-}
 
         The pressure difference between stages is the driving force for the vapour streams. The pressure drop
-        is modeled as having two contributions, the dray and wet pressure drop. While dry pressure drop
+        is modeled as having two contributions, the dry and wet pressure drop. While dry pressure drop
         stems from the vapour flowing through the holes with in tray, the wet pressure drop is caused by the liquid
         holdup on the stage.
         \Eq{eq:col:dp_dyn}{
@@ -142,12 +141,10 @@
 
     \subsubsection{Structured packing hydraulics}
     \label{sec:mathpro:dynamic:strpackhyd}
-        \begin{figure}
-            \input{Pictures/packing_geo}
-        \end{figure}
+%        \begin{figure}
+%            \input{Pictures/packing_geo}
+%        \end{figure}
 
-        \todo{write somewhere that stage indices will be omitted for convenience.}
-        \todo{add equation for flooding pressure drop.}
         Structured packings and their hydraulic behaviour are currently still under investigation. The number
         of available correlations for calculation of internal flow-rates is much more limited than for trays or even
         dumped packings. Among the most established models is the one developed by Bravo et al. \cite{Rocha.1993} at the
@@ -199,7 +196,6 @@
                 g \left[ \left( \frac{\varrho_L - \varrho_G}{\varrho_L} \right) \left(1 - \frac{\delta p}{\delta p_{flood}} \right) \right]} \right\}^{\frac{1}{3}}
         }
     %
-    \todo{mention delft, sti, hydrodynamic continuum}
 
 \subsection{Integrated condenser / reboiler unit}
     \todo{include Integrated condenser / reboiler unit}
