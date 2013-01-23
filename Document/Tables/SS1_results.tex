@@ -4,9 +4,9 @@
 \renewcommand{\footnoterule}{}
 \begin{tabular}{lcrcrrcrr}
     variable & & \multicolumn{7}{c}{value} \\ \hline
-\rowcolor{white}    & & \multirow{2}{*}{initial} & & \multicolumn{2}{c}{steady state 1} & & \multicolumn{2}{c}{steady state 2} \\
+    \rowcolor{white} & & \multirow{2}{*}{initial} & & \multicolumn{2}{c}{steady state 1} & & \multicolumn{2}{c}{steady state 2} \\
     & & & & \multicolumn{1}{c}{OA} & \multicolumn{1}{c}{FB(+DDF)} & & \multicolumn{1}{c}{OA} & \multicolumn{1}{c}{FB(+DDF)} \\ \hline
-\textbf{objective} & & \textbf{738279.6} & & \textbf{336157.3} & \textbf{339387.5}  && \textbf{345112.66} & \textbf{345452.5} \\
+    \textbf{objective} & & \textbf{738279.6} & & \textbf{336157.3} & \textbf{339387.5}  && \textbf{345112.66} & \textbf{345452.5} \\
     plant air flowrate & & 12431.2 & & 12459.9 & 12433.7 & & 12234.5 & 12459.9 \\
     CAC reflux location & & 6 & & 16 & 15 & & 16 & 16 \\
     CAC diameter  & & 3.5 & & 1.172 & 1.142 & & 1.407 & 1.383 \\
@@ -17,12 +17,84 @@
     HPC GN2 draw flowrate & & 2430 & & 1861.67 & 1961.75 & & 911.67 & 1092.78 \\
     LPC column diameter & & 5.5 & & 3.942 & 3.908 & & 4.154 & 4.242 \\
     LPC split air feed location & & 28 & & 26 & 25 & & 23 & 23 \\
-    LPX oxygeb rich feed location & & 20 & & 23 & 22 & & 21 & 21 \\
+    LPX oxygen rich feed location & & 20 & & 23 & 22 & & 21 & 21 \\
     CAC reflux feed location & & 38 & & 38 & 38 & & 28 & 28 \\
     LPC reflux location & & 6 & & 15 &  16 & & 16 & 17 \\
-    LPC Watse draw location & & 8 & & 22 & 21 & & 20 & 20 \\
+    LPC waste draw location & & 8 & & 22 & 21 & & 20 & 20 \\
     CAC side draw location & & 38 & & 38 & 38 & & 36 & 36 \\
     Waste flowrate &  & 7160 & & 7439.883 & 7413.6724 & & 7581.9365 & 8257.699 \\
     CAC feed flowrate & & 730 & & 665.17664 & 624.61566 & & 959.4886 & 915.698 \\
 \end{tabular}
+\end{minipage}
+
+
+\rowcolors{2}{}{lightblue}
+\begin{minipage}{\linewidth}
+    \center
+    \footnotesize
+    \begin{tabular}{lrrr}
+        \hline variable name & result OA & result FB & deviation \\ \hline 
+        \textbf{objective function} & \textbf{334701.9} & \textbf{328218.84} & \textbf{1.94 \%} \\
+        plant air flowrate & 12434.568 & 11702.989 & 5.88 \% \\
+        CAC column diameter & 1.2354256 & 1.1639168 & 5.79 \% \\
+        CR CAC reflux ratio & 37.740803 & 33.672794 & 10.78 \% \\
+        CR main reflux ratio & 4.1282525 & 3.8024168 & 7.89 \% \\
+        HPC column diameter & 2.9025557 & 2.8080597 & 3.26 \% \\
+        HPC GN2 draw flowrate & 1945.5199 & 1870.1975 & 3.87 \% \\
+        LPC column diameter & 3.933515 & 3.79809 & 3.44 \% \\
+        waste draw flowrate & 7414.5664 & 7082.9897 & 4.47 \% \\
+        CAC draw flowrate & 738.2457 & 662.04834 & 10.32 \% \\ \hline
+    \end{tabular}
+\end{minipage}
+
+\rowcolors{2}{}{lightblue}
+\begin{minipage}{\linewidth}
+    \center
+    \footnotesize
+    \begin{tabular}{lrrr}
+        \hline variable name & result OA & result FB & deviation \\ \hline 
+        textbf{objective function} & \textbf{346320} & \textbf{346141.75} & \textbf{0.05 \%} \\
+        plant air flowrate & 12068.305 & 11981.135 & 0.72 \% \\
+        CAC column diameter & 1.106994 & 1.1213709 & 1.30 \% \\
+        CR CAC reflux ratio & 39.68482 & 41.54252 & 4.68 \% \\
+        CR main reflux ratio & 2.5416067 & 2.3312824 & 8.28 \% \\
+        HPC column diameter & 2.8864067 & 2.8529642 & 1.16 \% \\
+        HPC GN2 draw flowrate & 532.4324 & 839.93506 & 57.75 \% \\
+        LPC column diameter & 4.132334 & 4.06009 & 1.75 \% \\
+        waste draw flowrate & 7088.123 & 7331.581 & 3.43 \% \\
+        CAC draw flowrate & 581.30206 & 608.0196 & 4.60 \% \\ \hline
+    \end{tabular}
+\end{minipage}
+
+\rowcolors{2}{}{lightblue}
+\begin{minipage}{\linewidth}
+    \center
+    \footnotesize
+    \begin{tabular}{lrrrcrrr}
+        & \multicolumn{3}{c}{steady state 1} & & \multicolumn{3}{c}{steady state 2} \\ \hline
+        \rowcolor{white} variable name & result OA & result FB & deviation & & result OA & result FB & deviation \\ \hline 
+        \textbf{objective function} & \textbf{334702} & \textbf{328219} & \textbf{1.94 \%} & & \textbf{346320} & \textbf{346142} & \textbf{0.05 \%} \\
+        plant air flowrate & 12434.6 & 11703.0 & 5.88 \% & & 12068.3 & 11981.1 & 0.72 \% \\
+        CAC column diameter & 1.23543 & 1.16392 & 5.79 \% & & 1.10699 & 1.12137 & 1.30 \% \\
+        CR CAC reflux ratio & 37.7408 & 33.6728 & 10.78 \% & & 39.6848 & 41.5425 & 4.68 \% \\
+        CR main reflux ratio & 4.12825 & 3.80242 & 7.89 \% & & 2.54161 & 2.33128 & 8.28 \% \\
+        HPC column diameter & 2.90256 & 2.80806 & 3.26 \% & & 2.88641 & 2.85296 & 1.16 \% \\
+        HPC GN2 draw flowrate & 1945.52 & 1870.20 & 3.87 \% & & 532.432 & 839.935 & 57.75 \% \\
+        LPC column diameter & 3.93352 & 3.79809 & 3.44 \% & & 4.13233 & 4.06009 & 1.75 \% \\
+        waste draw flowrate & 7414.57 & 7082.99 & 4.47 \% & & 7088.12 & 7331.58 & 3.43 \% \\
+        CAC draw flowrate & 738.246 & 662.048 & 10.32 \% & & 581.302 & 608.020 & 4.60 \% \\ \hline
+    \end{tabular}
+\end{minipage}
+
+\rowcolors{2}{}{lightblue}
+\begin{minipage}{\linewidth}
+    \center
+    \footnotesize
+    \begin{tabular}{lcccccccc}
+        & CAC N & HPC N & LPC N & LPC F1 & LPC F2 & LPC F3 & LPC S1 & LPC S2 \\ \hline
+        steady-state 1 OA & 45 & 12 & 45 & 13 & 9 & 26 & 7 & 26 \\
+        steady-state 1 FB & 44 & 13 & 47 & 10 & 7 & 23 & 6 & 23 \\
+        steady-state 2 OA & 47 & 10 & 45 & 8 & 8 & 22 & 8 & 22 \\
+        steady-state 2 FB & 45 & 12 & 46 & 8 & 6 & 21 & 6 & 21 \\ \hline
+    \end{tabular}
 \end{minipage}

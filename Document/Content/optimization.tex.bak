@@ -1,9 +1,13 @@
 \chapter{Process optimization}
 \label{chp:optimization}
-In this chapter first some theoretical aspects are discussed. Namely in the first section some theoretical aspects of 
-convex optimization followed by an overview of current solution techniques for discrete-continuous or mixed-integer
-nonlinear programs (MINLP). In the last section of this chapter some applications of optimization with the cryogenic 
-air separation process are presented. 
+Process optimization bears great potential for designing ecologically and economically optimal processes.
+Within this chapter first some basic concepts of constrained optimization are summarized as this proves
+useful for the remainder of the chapter. The problems arising when optimizing chemical processes involve
+both continuous and discrete decisions. In order to solve this class of so called mixed-integer non-linear
+problems (MINLP) designated algorithms have to be employed to accommodate the special nature of the integer
+variables. The major approaches used today to solve this class of program  are summarized in the second section.
+Lastly these approaches be applied to several problems in the context of optimizing the cryogenic air separation
+process.
 
     \section{Optimization theory}
     \label{sec:opt:theory}

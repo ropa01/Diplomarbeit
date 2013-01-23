@@ -9,8 +9,12 @@
 \contentsline {table}{\numberline {4.3}{\ignorespaces Pump cost factors \cite {Seider.2010}.\relax }}{44}{table.caption.53}
 \contentsline {table}{\numberline {4.4}{\ignorespaces Type factors for different motor types.\relax }}{45}{table.caption.55}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces steady-state single period optimization results.\relax }}{65}{table.caption.82}
-\contentsline {table}{\numberline {5.2}{\ignorespaces steady-state single period optimization results.\relax }}{66}{table.caption.83}
+\contentsline {table}{\numberline {5.1}{\ignorespaces steady-state optimization results - continuous variables.\relax }}{65}{table.caption.81}
+\contentsline {table}{\numberline {5.2}{\ignorespaces steady-state optimization results - discrete variables.\relax }}{65}{table.caption.82}
+\contentsline {table}{\numberline {5.3}{\ignorespaces steady-state optimization results - time consumption.\relax }}{65}{table.caption.83}
+\contentsline {table}{\numberline {5.4}{\ignorespaces steady-state optimization constraints.\relax }}{66}{table.caption.84}
+\contentsline {table}{\numberline {5.5}{\ignorespaces dual steady-state optimization results - continuous variables.\relax }}{68}{table.caption.87}
+\contentsline {table}{\numberline {5.6}{\ignorespaces dual steady-state optimization results - discrete variables.\relax }}{68}{table.caption.88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

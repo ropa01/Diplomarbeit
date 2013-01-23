@@ -1,0 +1,14 @@
+% GNUPLOT: LaTeX picture with Postscript
+  \setlength{\unitlength}{1cm}%
+  \begin{picture}(24,17)%
+    \gplgaddtomacro\gplbacktext{%
+        \put(0,1.833){\makebox(0,0)[r]{\strut{} $u_6$}}%
+        \put(0,4.5){\makebox(0,0)[r]{\strut{} $u_5$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+    }%
+    \gplbacktext
+    \put(0.5,0.5){\includegraphics{GNUPlot/B1_Plot}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup

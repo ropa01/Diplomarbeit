@@ -1,0 +1,14 @@
+\rowcolors{2}{}{lightblue}
+\begin{minipage}{\linewidth}
+    \center
+    \footnotesize
+    \begin{tabular}{lrrrcrrr}
+        & \multicolumn{2}{c}{steady state 1} & & \multicolumn{2}{c}{steady state 2} \\ \hline
+        total time & 4847.88 & 1184.5119 & & 2971.09 & 843.3913 \\
+        CPU time & 26.7188 & 225.7191 & & 43.9375 & 201.9849 \\
+        MINLP & 84 & 0 & & 68 & 0 \\
+        NLP & 822 & 85 & & 687 & 68 \\
+        line search & 2069 & 114 & & 1088 & 87 \\ \hline
+    \end{tabular}
+\end{minipage}
+

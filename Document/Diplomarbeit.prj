@@ -4,13 +4,13 @@
 0
 1
 Diplomarbeit.tex
-99
-15
+104
 12
+5
 
 Diplomarbeit.tex
 TeX:UNIX
-152154107 0 -1 920 -1 422 0 0 934 409 1 385 85 -1 -1 0 0 62 -1 -1 62 1 0 422 -1   0
+152154107 0 -1 926 -1 561 0 0 934 409 1 209 153 -1 -1 0 0 62 -1 -1 62 1 0 561 -1   0
 Content\Process_steady_separation.tex
 TeX:UNIX
 1159163 0 -1 20378 -1 20302 150 150 1056 640 1 385 476 -1 -1 0 0 93 -1 -1 93 3 0 20302 -1  1 23443 -1  2 9582 -1   0
@@ -19,40 +19,58 @@ TeX:UNIX
 1159163 0 -1 6076 -1 6076 125 125 1031 615 1 545 357 -1 -1 0 0 23 -1 -1 23 1 0 6076 -1   0
 Content\optimization.tex
 TeX:UNIX
-1159163 0 -1 704 -1 1063 175 175 1364 674 0 281 323 -1 -1 0 0 30 -1 -1 30 1 0 1063 -1   0
+1159163 0 -1 704 -1 884 175 175 1364 674 0 33 221 -1 -1 0 0 30 -1 -1 30 1 0 884 -1   0
+Tables\SS_results_cont.tex
+TeX
+1060859 0 -1 224 -1 1240 25 25 1450 533 0 713 255 -1 -1 0 0 26 -1 -1 26 1 0 1240 -1   0
 Content\optimization_theory.tex
 TeX:UNIX
-1159163 0 -1 3413 -1 3327 200 200 1389 699 0 329 119 -1 -1 0 0 80 4 4 80 1 0 3327 -1   0
-Content\Process_econ.tex
-TeX:UNIX
-1159163 0 151 120 -1 9187 125 125 1525 644 1 945 340 -1 -1 0 0 100 -1 -1 100 1 0 9187 -1   0
+286371835 0 -1 583 -1 4372 200 200 1389 699 0 281 544 -1 -1 0 0 36 4 4 36 1 0 4372 -1   0
 Content\optimization_MINLP.tex
 TeX:UNIX
 17936379 0 -1 7689 -1 8150 225 225 1414 724 1 865 357 -1 -1 0 0 0 -1 -1 0 1 0 8150 -1   0
-Content\ProcessModel.tex
-TeX:UNIX
-1159163 0 -1 1406 -1 1440 150 150 1056 640 0 849 374 -1 -1 0 0 36 -1 -1 36 1 0 1440 -1   0
-Pictures\HX_superstructure.tex
-TeX:UNIX
-1159163 6 -1 7858 -1 7739 150 150 1436 840 0 25 170 -1 -1 0 0 23 -1 -1 23 1 0 7739 -1   0
 Content\optimization_application.tex
 TeX
-1060859 0 259 4 -1 12728 0 0 1189 499 1 73 697 -1 -1 0 0 105 -1 -1 105 1 0 12728 -1   0
-Content\AirSep.tex
+1060859 0 -1 31639 -1 31693 0 0 1189 499 1 73 1377 -1 -1 0 0 105 -1 -1 105 1 0 31693 -1   0
+preambel.tex
 TeX:UNIX
-17936379 0 -1 8451 -1 8484 125 125 1031 615 0 473 408 -1 -1 0 0 35 -1 -1 35 1 0 8484 -1   0
+1159163 2 -1 6128 -1 6131 0 0 1009 215 0 169 561 -1 -1 0 0 129 -1 -1 129 1 0 6131 -1   0
+Tables\SS_results_dual_disc.tex
+TeX
+1060859 0 19 15 -1 310 50 50 1475 558 0 137 136 -1 -1 0 0 26 -1 -1 26 1 0 310 -1   0
+Tables\SS_results_dual_cont.tex
+TeX
+1060859 0 -1 473 -1 473 75 75 1500 583 0 25 170 -1 -1 0 0 26 -1 -1 26 1 0 473 -1   0
+Content\outlook.tex
+TeX:UNIX
+1159163 0 -1 3040 -1 3040 225 225 1650 733 0 345 629 -1 -1 0 0 41 -1 -1 41 1 0 3040 -1   0
+Content\Process_dynamic.tex
+TeX:UNIX
+1159163 0 -1 11745 -1 11752 25 25 1121 615 0 393 544 -1 -1 0 0 85 -1 -1 85 1 0 11752 -1   0
 Content\ProcessEconomics.tex
 TeX:UNIX
 1159163 2 -1 9677 -1 9676 175 175 1369 633 1 73 357 -1 -1 0 0 27 -1 -1 27 1 0 9676 -1   0
-Content\outlook.tex
+Content\AirSep.tex
 TeX:UNIX
-269594619 0 -1 3040 -1 3040 225 225 1650 733 0 25 646 -1 -1 0 0 41 -1 -1 41 1 0 3040 -1   0
-preambel.tex
+17936379 0 -1 8451 -1 8484 125 125 1031 615 0 473 408 -1 -1 0 0 35 -1 -1 35 1 0 8484 -1   0
+Pictures\HX_superstructure.tex
 TeX:UNIX
-1159163 0 -1 5731 -1 5667 0 0 1009 215 0 25 357 -1 -1 0 0 129 -1 -1 129 1 0 5667 -1   0
-Content\Process_dynamic.tex
+269594619 6 -1 7858 -1 7739 150 150 1436 840 0 25 170 -1 -1 0 0 23 -1 -1 23 1 0 7739 -1   0
+Content\ProcessModel.tex
 TeX:UNIX
-1159163 0 198 54 -1 10902 25 25 1121 615 0 65 323 -1 -1 0 0 85 -1 -1 85 1 0 10902 -1   0
+269594619 0 -1 1406 -1 1440 150 150 1056 640 0 849 374 -1 -1 0 0 36 -1 -1 36 1 0 1440 -1   0
+Content\Process_econ.tex
+TeX:UNIX
+1159163 0 151 120 -1 9187 125 125 1525 644 1 945 340 -1 -1 0 0 100 -1 -1 100 1 0 9187 -1   0
+Tables\SS_results_time.tex
+TeX
+269496315 0 -1 616 -1 616 225 225 1650 733 0 25 255 -1 -1 0 0 -1 -1 -1 -1 1 0 616 -1   0
+Tables\SS_results_disc.tex
+TeX
+1060859 0 -1 0 -1 0 0 0 1425 508 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Tables\SS1_results.tex
+TeX
+286273531 0 -1 3671 -1 1821 0 0 1375 581 0 25 493 -1 -1 0 0 1239 -1 -1 1239 1 0 1821 -1   0
 Content\Preamble\TaskDescription.tex
 TeX:UNIX
 1159163 0 -1 2705 -1 2890 175 175 1109 584 0 121 408 -1 -1 0 0 18 -1 -1 18 1 0 2890 -1   0
@@ -68,9 +86,6 @@ TeX:UNIX
 GNUPlot\pr_isenthalpes.tex
 TeX:UNIX
 1159163 0 -1 4333 -1 4334 100 100 1294 558 0 585 408 -1 -1 0 0 40 -1 -1 40 1 0 4334 -1   0
-Tables\SS1_results.tex
-TeX
-269496315 0 -1 22 -1 97 0 0 1375 581 0 265 51 -1 -1 0 0 1234 -1 -1 1234 1 0 97 -1   0
 Tables\SS1_constraints.tex
 TeX
 17838075 0 -1 737 -1 797 100 100 1500 619 0 25 238 -1 -1 0 0 26 -1 -1 26 1 0 797 -1   0
@@ -378,9 +393,13 @@ TeX:UNIX
 <
 *Content/optimization_application
 >
-*Tables/SS1_results
-*Tables/SS1_constraints
+*Tables/SS_results_cont
+*Tables/SS_results_disc
+*Tables/SS_results_time
+*Tables/SS_constraints
 *GNUPlot/FB_converge
+*Tables/SS_results_dual_cont
+*Tables/SS_results_dual_disc
 <
 <
 *Content/outlook

@@ -27,7 +27,7 @@
 \BOOKMARK [1][-]{section.4.5}{Implementation}{chapter.4}% 27
 \BOOKMARK [2][-]{subsection.4.5.1}{Model structure}{section.4.5}% 28
 \BOOKMARK [2][-]{subsection.4.5.2}{Initialization procedures}{section.4.5}% 29
-\BOOKMARK [0][-]{chapter.5}{Process optimization}{}% 30
+\BOOKMARK [0][-]{chapter.5}{Process model application}{}% 30
 \BOOKMARK [1][-]{section.5.1}{Optimization theory}{chapter.5}% 31
 \BOOKMARK [2][-]{subsection.5.1.1}{Karush-Kuhn-Tucker conditions}{section.5.1}% 32
 \BOOKMARK [2][-]{subsection.5.1.2}{Constraint qualifications}{section.5.1}% 33
@@ -38,5 +38,10 @@
 \BOOKMARK [2][-]{subsection.5.3.1}{Example process}{section.5.3}% 38
 \BOOKMARK [2][-]{subsection.5.3.2}{Degrees of freedom}{section.5.3}% 39
 \BOOKMARK [2][-]{subsection.5.3.3}{Steady-state optimization}{section.5.3}% 40
-\BOOKMARK [0][-]{chapter.6}{Conclusion and further research}{}% 41
-\BOOKMARK [0][-]{chapter*.107}{Bibliography}{}% 42
+\BOOKMARK [2][-]{subsection.5.3.4}{Dynamic simulation}{section.5.3}% 41
+\BOOKMARK [2][-]{subsection.5.3.5}{Model intricacies ... change heading !!!}{section.5.3}% 42
+\BOOKMARK [0][-]{chapter.6}{Conclusion and further research}{}% 43
+\BOOKMARK [0][-]{chapter*.94}{Bibliography}{}% 44
+\BOOKMARK [0][-]{appendix.A}{Appendix A}{}% 45
+\BOOKMARK [1][-]{section.A.1}{Peng-Robinson derived properties}{appendix.A}% 46
+\BOOKMARK [0][-]{appendix.B}{Appendix B}{}% 47

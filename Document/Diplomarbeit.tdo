@@ -1,25 +1,5 @@
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ find appropriate place for integrated reboiler condenser unit.}{18}{section*.18}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add flowsheet initialization from MathModel file}{18}{section*.19}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ section superfluous? init procedure describen in impl sec...}{23}{section*.29}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on adiabatic column}{25}{section*.31}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check equations in steady state section!!!}{26}{section*.32}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ adjust heat exchange section to current approach.}{30}{section*.39}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on pinch concept?}{30}{section*.40}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ read about and mention transshipment model by Moriari (sequential)}{31}{section*.41}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ revise compressor equations and add equations to nomenclature}{33}{section*.44}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ complete compressor equations}{34}{section*.47}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ elaborate on different terms.}{34}{section*.49}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add derivative in appendix?}{34}{section*.50}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ explain model assumptions, limitations, mention wave therory marquardt paper.}{35}{section*.52}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ include Integrated condenser / reboiler unit}{39}{section*.56}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check time constant (60) for flooding velocity}{43}{section*.61}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ which properties should be included? Or move everything to Appendix?}{47}{section*.74}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ mention TP flashes branch of concentration sub-unit similar to adiabatic column, as all streams are in equil..}{50}{section*.76}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check conditions on lagrange multipliers and active set ....}{56}{section*.82}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ feasibility the right word here? kkt derived from LICQ?}{56}{section*.83}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ axis label for ddf and fb plot}{61}{section*.93}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add citation Coco casebook.}{64}{section*.97}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ move to description of dynamic model.}{64}{section*.98}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ introduce FB-program as term}{65}{section*.102}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ write about optimization model.}{66}{section*.104}
-\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ discuss time consumption and quality of the solution.}{67}{section*.105}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ check conditions on lagrange multipliers and active set ....}{56}{section*.1}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ axis label for ddf and fb plot}{61}{section*.10}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ add citation Coco casebook.}{63}{section*.14}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ move to description of dynamic model.}{64}{section*.15}
+\contentsline {todo}{\color@box {}{orange}{\leavevmode {\color {orange}o}}\ write about optimization model.}{67}{section*.22}

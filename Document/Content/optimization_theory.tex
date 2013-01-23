@@ -1,8 +1,8 @@
 The purpose of this section is not an exhaustive review of (convex) optimization but rather to mention
-some elementary concepts and terms that will prove useful in the following sections. Initially optimality 
+some elementary concepts and terms that will prove useful in the following sections. Initially optimality
 conditions for constrained problems -- the so called Karush-Kuhn-Tucker (KKT)
-conditions -- briefly discussed. Closely linked to those conditions and  a perquisite for their
-validity, are the constraint qualifications which are subsequently presented.
+conditions -- are briefly discussed. Closely linked to those conditions are the constraint qualifications, 
+which are subsequently discussed.
 
     \subsection{Karush-Kuhn-Tucker conditions}
     \label{sec:opt:theory:kkt}
@@ -14,7 +14,7 @@ validity, are the constraint qualifications which are subsequently presented.
         & & & g_i(x) \leq 0, \; \; i \in \mathset{I}
     }
     where $f(x): \mathbb{R}^n \mapsto \mathbb{R}$ denotes the objective function, $\mathset{E}$ and $\mathset{I}$
-    are sets of indices corresponding to equality and inequality constraints respectively. 
+    are sets of indices corresponding to equality and inequality constraints respectively.
     the functions $f, g$ and $h$ are assumed to be differentiable and real-valued.
 
     The active set denotes the union of the set of equality constraints and the inequality constraints
@@ -36,35 +36,42 @@ validity, are the constraint qualifications which are subsequently presented.
         g_i(x^{\ast}) & \leq 0, & \forall i \in \mathset{I} \\
         \mu_i^{\ast} & \geq 0, & \forall i \in \mathset{I} \\
         \mu_i^{\ast} g_i(x^{\ast})& = 0, & \forall i \in \mathset{I} \\
-        \lambda_i^{\ast} h_i(x^{\ast})& = 0, & \forall i \in \mathset{E} 
+        \lambda_i^{\ast} h_i(x^{\ast})& = 0, & \forall i \in \mathset{E}
     }
     The second order or sufficient KKT conditions can be written as
     \todo{check conditions on lagrange multipliers and active set ....}
     \Eq{}{
         w^T \nabla_{xx} \mathcal{L}(x^{\ast}, \lambda^{\ast}, \mu^{\ast})w & > 0, \quad \forall w \neq 0, \\
         \nabla h_i(x^{\ast})^T w & = 0, \quad \forall \; i \in \mathset{E}, \\
-        \nabla g_i(x^{\ast})^T w & = 0, \quad \forall \; i \in \mathset{A}(x^{\ast}) \cap \mathset{I}, \; \text{with} \; \mu_i^{\ast} > 0\\
+        \nabla g_i(x^{\ast})^T w & = 0, \quad \forall \; i \in \mathset{A}(x^{\ast}) \cap \mathset{I}, \; \text{with} \; \mu_i^{\ast} > 0 \\
         \nabla g_i(x^{\ast})^T w & \geq 0, \quad \forall \; i \in \mathset{A}(x^{\ast}) \cap \mathset{I}, \; \text{with} \; \mu_i^{\ast} = 0
     }
 
     \subsection{Constraint qualifications}
     \label{sec:opt:theory:cq}
 
-    In the case of non-convex optimization constraint qualifications can ensure the existence of strictly positive Lagrange
-    multipliers, such that the unconstrained equivalent problem can be constructed. In general one is interested
-    in the weakest possible perquisite to ensure feasibility \todo{feasibility the right word here? kkt derived from LICQ?} of the problem.
+    Constraint qualifications are used in the derivation of the optimality conditions. In the form presented here, 
+    they are derived from the so call linear-independence constraint qualification. The derivation of 
+    optimality conditions relies on approximating the objective function as well as the constraints by a 
+    first order Taylor expansion. However there is no insurance that this linear model is in fact 
+    an adequate representation of the original model around any given point. To resolve this issue, constraint 
+    qualifications are used, to ensure, that the approximative model yields a similar representation of the 
+    original one \cite{Nocedal.2006}. The significance of constraint qualifications in the context of this thesis, lies in a later 
+    presented solution approach to mixed integer non-linear programs. 
+
     There are several constraint qualifications proposed in literature, which are differently hard to fulfil
     and verify. In general a minimum point should satisfy some constraint qualifications or regularity conditions.
-    Among the most common qualifications are Slater's- (SCQ), linear independence- (LICQ) and the Mangasarian-Fromovitz (MCQ)
-    constraint qualification which are state here. Several more constraint qualifications can be found in literature, but will not be stated here.
+    Among the most common qualifications are Slater's- (SCQ), linear independence- (LICQ) and the Mangasarian-Fromovitz (MFCQ)
+    constraint qualification which are state here. Several more constraint qualifications can be found in literature, 
+    but will not be stated here.
 
     \subsubsection{Slater's constraint qualification (SCQ)}
     Among the most widely used constraint qualifications is Slater's constraint qualification
     \Eq{}{
         \exists \tilde{x}, \forall i \in \mathcal{I} : h_i(\tilde{x}) < 0.
     }
-    The main advantage of the SCQ is that the actual optimal point needs not to be known for checking 
-    if the SCQ is fulfilled.  
+    The main advantage of the SCQ is that the actual optimal point needs not to be known for checking
+    if the SCQ is fulfilled.
 
     \subsubsection{Linear independence constraint qualification (LICQ)}
     Another widely used is called the linear independence constraint qualification. It states,

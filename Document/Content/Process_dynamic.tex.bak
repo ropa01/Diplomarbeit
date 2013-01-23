@@ -145,7 +145,6 @@
 %            \input{Pictures/packing_geo}
 %        \end{figure}
 
-        \todo{add equation for flooding pressure drop.}
         Structured packings and their hydraulic behaviour are currently still under investigation. The number
         of available correlations for calculation of internal flow-rates is much more limited than for trays or even
         dumped packings. Among the most established models is the one developed by Bravo et al. \cite{Rocha.1993} at the
@@ -197,7 +196,6 @@
                 g \left[ \left( \frac{\varrho_L - \varrho_G}{\varrho_L} \right) \left(1 - \frac{\delta p}{\delta p_{flood}} \right) \right]} \right\}^{\frac{1}{3}}
         }
     %
-    \todo{mention delft, sti, hydrodynamic continuum}
 
 \subsection{Integrated condenser / reboiler unit}
     \todo{include Integrated condenser / reboiler unit}

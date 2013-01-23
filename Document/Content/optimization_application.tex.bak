@@ -1,6 +1,6 @@
 The simulation of chemical processes supplies valuable insight into the intricacies of a given system.
-To some extend it is also possible to improve given designs by manual alterations and simulation
-steps in a form of trial an error procedure. However the results of an approach like that are unlikely
+To some extend it is also possible to improve existing designs by manual alterations and simulation
+steps in form of a trial and error procedure. However the results of such an approach are unlikely
 to yield even locally optimal results in an acceptable amount of time. Hence optimization approaches
 are employed to attain improved designs.
 
@@ -10,7 +10,7 @@ consideration as to the optimization objectives. The most obvious objective woul
 pure monetary nature, where a process is designed to meet a given set of specifications
 at minimum cost. An optimization like that can be carried out at steady state. However for
 a steady state model it is never ensured, that this steady state can actually be reached
-by the process. Furthermore is there no consideration if the desired steady state can be kept for
+by the process. Furthermore is there no consideration if the desired steady state can be maintained for
 changing conditions outside the control of the process operator.
 
 In the case that load changes or different operation modes are required, it becomes questionable,
@@ -66,112 +66,369 @@ but reasonable constraints.
     specifications. To close the system initial conditions for all states have to be given. There
     are a total of $[4 n_S ]$ dynamic states in a column section.
 
-    The condenser reboiler unit is made up of a total condenser and a reboiler side. For the condenser side 
-    holdups are neglected. While the reboiler side is modeled much like a column stage. The complete model 
-    consists of $[14 + 6 n_C]$ equations in $[17 + 6 n_C]$ variables. The three specified variables would 
+    The condenser reboiler unit is made up of a total condenser and a reboiler side. For the condenser side
+    holdups are neglected. While the reboiler side is modeled much like a column stage. The complete model
+    consists of $[14 + 6 n_C]$ equations in $[17 + 6 n_C]$ variables. The three specified variables would
     commonly correspond to the condenser pressure, reboiler volume and reflux ratio on the condenser side.
-    While other specifications are conceivable, they cannot be made entirely arbitrarily. A specification 
-    on the reboiler pressure for instance would result in a high index problem ($\approx n_S^{LPC}$) which 
+    While other specifications are conceivable, they cannot be made entirely arbitrarily. A specification
+    on the reboiler pressure for instance would result in a high index problem ($\approx n_S^{LPC}$) which
     could not be solved without drastically reformulating the model.
 
     \subsection{Steady-state optimization}
-    In a first step optimizations were carried out using the steady-state process model. While an effort
-    has been made to create a realistic scenario, the main focus of this section is to demonstrate
+    Initially  optimizations were carried out using the steady-state process models.
+    While an effort has been made to create a realistic scenario, the main focus of this section is to demonstrate
     optimization capabilities within the model environment \gproms and to compare different solution
     approaches for complex discrete-continuous problems.
 
-    \subsubsection{Single steady-state operation}
-    In a first case operations for two separate steady-states were optimized. However only structural
-    decisions on the columns were made along with the columns operational parameters.
-    %
-    \begin{table}
-        \center
-        \footnotesize
-        \input{Tables/SS1_results}
-        \caption{steady-state single period optimization results.}
-        \label{tab:ss1_results}
-    \end{table}
-    %
-    \Tabref{tab:ss1_results} shows a list of all optimization variables along with their initial and optimized values
-    for both steady-states. The optimized values are attained by solving the MINLP by outer approximation or as NCP-problem.
+        \subsubsection{Single steady-state operation}
+        In a first case operations for two separate steady-states were optimized. However only structural
+        decisions on the columns were made along with the columns operational parameters.
+        %
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_cont}
+            \caption{steady-state optimization results - continuous variables.}
+            \label{tab:ss_result_cont}
+        \end{table}
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_disc}
+            \caption{steady-state optimization results - discrete variables.}
+            \label{tab:ss_result_disc}
+        \end{table}
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_time}
+            \caption{steady-state optimization results - time consumption.}
+            \label{tab:ss_result_time}
+        \end{table}
+        %
+        The solutions from both algorithms are summarized in \tabref{tab:ss_result_cont} and \tabref{tab:ss_result_disc},
+        where the for contains the results for all continuous decisions and the latter all discrete decisions. Results
+        attained by outer approximation are labelled as ''OA'' and by solving the NCP as ''FB''.
 
-    The objective function considers only capital cost for the separation system
-    \Eq{eq:opt:ss_single_objective}{
-        CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right)
-            \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}\right\} }
-    }
-    %
-    The difference in the operation modes lies on the requirements on product flow rates and purity. The following
-    constraints were enforced
-    \begin{table}
-        \center
-        \footnotesize
-        \input{Tables/SS1_constraints}
-        \caption{steady-state single period optimization results.}
-        \label{tab:ss1_results}
-    \end{table}
-    When solving the continuous reformulation of the problem, an extra constraint for each integer variable in form of the
-    relaxed Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
-    an equality constraint. This closure condition needs not to be explicitly considered using the outer approximation approach,
-    since this is handled internally by declaring so called special ordered sets. This allows \gproms and the OA algorithm
-    to exploit the special structure of the problem due to the \emph{exclusive or} decisions.
+        The objective function considers only capital cost for the separation sequence
+        \Eq{eq:opt:ss_single_objective}{
+            CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right),
+                \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}\right\} }.
+        }
+        %
+        The difference between the steady-states lies in the requirements on product flow rates and purity. Hence the different
+        constraints enforced for the respective operation modes are summarized in \tabref{tab:ss_constraints}.
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_constraints}
+            \caption{steady-state optimization constraints.}
+            \label{tab:ss_constraints}
+        \end{table}
 
-    In the process of solving the FB-program \todo{introduce FB-program as term} some difficulties arose. While
-    (almost) integer values were found for most structural decisions, even after the initial iteration, especially
-    the LPC column displayed some convergence problems. As the relaxation factor is reduced, the solutions are pushed
-    towards integer values or in other words, the feasible region between zero and one is is divided into two regions
-    which become smaller and smaller. In some cases the discrete solutions remain on one side of the feasible domain,
-    while still fulfilling the closure constraint. As the relaxation factor is reduced, the solver is no longer able to
-    ''make the jump'' to the other side of the domain. This leads to small values for the integer decisions along most
-    of the column. \Figref{fig:conv_fail} shows an typical example of this for of convergence. After the initial NLP the
-    feed is evenly distributed between two stages, neither really dominant. As the relaxation is tightened, the values
-    are reduced, and distributed among more stages. As the relaxation factor approaches zero the closure condition can
-    no longer be satisfied, which in turn prevents convergence of the solver.
-    \begin{figure}
-        \scriptsize
-        \center
-        \input{GNUPlot/FB_converge}
-        \caption{convergence failure.}
-        \label{fig:conv_fail}
-    \end{figure}
+        When solving the continuous reformulation of the problem, an extra constraint for each integer variable in form of the
+        relaxed Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
+        an equality constraint. This closure condition needs not to be explicitly considered using the outer approximation approach,
+        since this is handled internally by declaring so called special ordered sets of type one. This allows \gproms and the
+        outer approximation algorithm to exploit the special structure of the problem due to the \emph{exclusive or} decisions.
 
-    This issue has been addressed, by \cite{Kraemer.2010} who propose a re-initialization strategy based on the magnitude of
-    the Lagrange multipliers associated with the continuous variables. While the results using this adjusted strategy
-    are very promising it could not be implemented within the scope of this thesis. In addition to the adjusted algorithm,
-    the problem formulation can be altered to improve convergence of the solution algorithm. Two strategies can
-    be employed, which exploit the structure of the distillation model, or force the continuous solution to both sides
-    of the feasible domain \cite{Kraemer.2009}.
+        In order to compare the results of the different solution approaches, various aspects can be taken into consideration.
+        Foremost the objective value is a measure of performance. As the complexity of the underlying problem increases,
+        the matter of time becomes a -- sometimes limiting -- factor. Therefore the time in which a solution is found,
+        is a measure for the algorithm performance as well. However before the results are discussed in greater detail,
+        some further aspects are worth mentioning.
 
-    The first strategy involves reformulation of purity constraints in terms of the reflux split
-    \Eq{}{
-        \sum_j \zeta_j^R x_j \leq x_{\text{spec}}.
-    }
-    As one will always observe a concentration gradient in a finite distillation column, this formulation favours
-    integer solutions as it competes with a lower capital costs which distributes fractions on lower trays. Hence
-    this strategy is assumed to be most successful for steep concentration gradients at either of the column.
-    It should be considered, that this formulation requires the variable tray location to be on the side at which
-    the specified purity lies. \todo{write about optimization model.}
+        In the process of solving the continuously reformulated problem, some difficulties arose. While
+        (almost) integer values were found for most structural decisions, even during the initial iteration, especially
+        the LPC column displayed some convergence problems. As the relaxation factor is reduced, the
+        the feasible region between zero and one is is divided into two disjunct regions which become smaller and smaller.
+        In some cases the solutions remain on one side of the feasible domain, namely the one converging to zero,
+        while still fulfilling the closure constraint. As the relaxation factor is reduced, the solver is no longer able to
+        ''make the jump'' to the other side of the domain. This leads to a distribution of small values for the split variables along
+        the column. \Figref{fig:conv_fail} shows a typical example for this type of convergence behaviour. After the initial NLP the
+        feed is somewhat evenly distributed between two stages, neither really dominant. As the relaxation is tightened, the values
+        are reduced, and distributed among more stages to fulfil the closure condition. As the relaxation factor approaches zero the
+        closure condition can no longer be satisfied, which leads to violation of the equality constraint and convergence failure.
+        \begin{figure}
+            \scriptsize
+            \center
+            \input{GNUPlot/FB_converge}
+            \caption{NCP convergence failure.}
+            \label{fig:conv_fail}
+        \end{figure}
 
-    The second approach relies on the previously introduced differentiable distribution function. Here a sufficient
-    focus on a given tray can be enforced by adjusting the underlying standard deviation. By introducing that function
-    in the first optimization stage, while continuing with the traditional formulation in the subsequent steps,
-    convergence could be achieved.
+        This issue has been addressed, by \cite{Kraemer.2010} who propose a re-initialization strategy based on the magnitude of
+        the Lagrange multipliers associated with the continuous variables. While the results using this adjusted strategy
+        are very promising it could not be implemented within the scope of this thesis. In addition to the adjusted algorithm,
+        the problem formulation can be altered to improve convergence of the solution algorithm. Two strategies can
+        be employed, which exploit the structure of the distillation model, or force the continuous solution to both sides
+        of the feasible domain \cite{Kraemer.2009}.
 
-    \todo{discuss time consumption and quality of the solution.}
+        The first strategy involves reformulation of purity constraints in terms of the reflux split
+        \Eq{}{
+            \sum_j \zeta_j^R x_j \leq x_{\text{spec}}.
+        }
+        As one will always observe a concentration gradient in a finite distillation column, this formulation favours
+        integer solutions as it competes with a lower capital costs which distributes fractions on lower trays. Hence
+        this strategy is assumed to be most successful for steep concentration gradients at either of the column.
+        It should be considered, that this formulation requires the variable tray location to be on the side at which
+        the specified purity lies. \todo{write about optimization model.}
 
-    \subsubsection{Dual steady-state operation}
-    For a second test case it was assumed, that the plant would have to operate under two distinct
-    operation modes. One requiring a very high nitrogen purity and the other focusing on very pure oxygen.
-    The steady states correspond to the ones from the previous section. To simultaneously consider two steady
-    states, two instances were were considered, that were allowed to differ in terms of operational decisions,
-    but fixed for structural decisions. The structural decisions are all stream locations and diameters.
-    The decision variables correspond to the ones from the previous sections.
+        The second approach relies on the previously introduced differentiable distribution function. Here a sufficient
+        focus on a given tray can be enforced by adjusting the underlying standard deviation. By introducing that function
+        in the first optimization stage, while continuing with the traditional formulation in the subsequent steps,
+        convergence could be achieved.
 
-    This problem could only be converged using the reformulation strategy. The outer approximation algorithm
-    did not converge for this particular case. However it needs to be pointed out, that a very similar case
-    for somewhat less complex scenarios was converged by outer approximation. This particular case however could
-    not even be solved using the optimal solution from the continuous reformulation as an initial guess.
-    Nevertheless it is assumed, that with careful tweaking of the optimization parameters and solver setting
-    convergence could eventually be achieved.
-    Otherwise the same initial point as in the previous section was used to initialize the optimization.
-    The results are summarized in \tabref{tab:dual_results}.
+        As for the optimization results. It can clearly be seen that both solution approaches return
+        very similar objective values. However somewhat large deviations can be observed in the operational
+        parameters and structural decisions. The deviations given in the results table are based on the results
+        from the outer approximation. The fact that the optimal solutions deviate up to 57 \% in certain parameters
+        further strengthes the argument, that due to the highly non-convex nature of the problem only locally optimal
+        solutions are returned. Furthermore large differences can be seen in the computational time. While the
+        total CPU time is considerably larger for the outer approximation algorithm, the CPU time is smaller.
+        These results however depend heavily on the way the problem is posed. In the course of the thesis several
+        different optimizations have been solved. Some with similar complexity as the cases discussed here.
+        While the NCP always took comparable time for convergence, very large variations were observed,
+        when the outer approximation algorithm was employed. For some cases solution times were even faster
+        than the initial iteration of the NCP. Changes in this behaviour are most likely due to the
+        quality of the linear approximations used to solve the MILP. Drastic changes could be observed
+        when the feasible domain for certain decision variables was adjusted. Furthermore a considerable number
+        of infeasible iterations was observed in the presented case. While in this case infeasible is
+        not meant as violation of constraints but rather failure to converge the underlying process model after
+        solving the MILP. To that regard several observations were made when working with the developed models.
+        As initialization procedures are only carried out when simulating the process and not during optimizations,
+        the solver has to initialize from an available previous solution or a saved variable set. For most cases,
+        when the alteration in the process parameters are not too large, this posed no greater problem. Even changes in stream
+        locations over several stages could be solved from available saved variable sets. However for
+        some integer decisions convergence could fail by changing a stream location by only one tray.
+
+        \subsubsection{Dual steady-state operation}
+        For a second test case it was assumed, that the plant would have to operate under two distinct
+        operation modes. One requiring a very high nitrogen purity and the other focusing on very pure oxygen.
+        The steady states correspond to the ones from the previous section. To simultaneously consider two steady
+        states, two instances of the process were were considered, that were allowed to differ in terms of operational decisions,
+        but fixed in terms of structural decisions. The structural decisions are all stream locations and diameters.
+        The decision variables correspond to the ones from the previous sections.
+
+        This problem could only be converged using the reformulation strategy. The outer approximation algorithm
+        did not converge for this particular case. However it needs to be pointed out, that a very similar case
+        for somewhat less complex scenarios was converged by outer approximation. This particular case however could
+        not even be solved using the optimal solution from the continuous reformulation as an initial guess.
+        Nevertheless it is assumed, that with careful tweaking of the optimization parameters and solver setting
+        convergence could eventually be achieved.
+        Otherwise the same initial point as in the previous section was used to initialize the optimization.
+        The results are summarized in \tabref{tab:ss_result_dual_cont} and \tabref{tab:ss_result_dual_disc}.
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_dual_cont}
+            \caption{dual steady-state optimization results - continuous variables.}
+            \label{tab:ss_result_dual_cont}
+        \end{table}
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_dual_disc}
+            \caption{dual steady-state optimization results - discrete variables.}
+            \label{tab:ss_result_dual_disc}
+        \end{table}
+
+        As only one solution approach produced usable results, no comparison can be made as to the quality of the
+        solution. However aside from from solution quality and time consumption, the robustness of a solution algorithm
+        is very important, when it comes to solving complex scenarios. For the examples examined in the scope of this thesis,
+        all problems which could be solved by outer approximation, could also be solved using the reformulation as NCP.
+        In contrast, not all scenarios which where the NCP approach yielded a solution, could be solved by outer approximation.
+
+        This suggests, that the reformulation strategy has are certain advantages in terms of robustness. It needs to be emphasised,
+        that all findings here are limited to the narrow class of scenarios examined. Due to the limited range of problems, the findings
+        deduced here have no claim for generality. Previous studies have shown \cite{Grossmann.2005} that the MINLP formulation
+        of the separation sequence problem often yields (near) integer variables when solved as an NLP. This is due to the fact,
+        that for each feed stream there is a distinct optimal stage. This stage corresponds to the one stage, where the concentration
+        matches the feed concentration as closely as possible. By feeding a stream to such a stage, energy losses due to
+        entropic mixing effects are minimized, and the need for external energy is kept to a minimum. This beneficial effect
+        is not present for other integer decisions. The use of the DDF function or the reformulated purity constraint, as discussed
+        in the previous section is also exclusive to distillation columns.
+
+    \subsection{Dynamic simulation}
+    The results of steady-state optimizations give very valuable information about the desired operation of
+    the process in question. In real-live applications however, processes will always display transient behaviour,
+    which cannot be captured by steady-state models. Even if the steady-state in question is in general a stable one,
+    which means, that the process will return to the previous operation point given an external disturbance, process
+    start-up and shut-down are in most cases still highly dynamic.
+
+    The question of controlling a process is closely linked to the dynamic simulations. Any given process is required
+    to operate within ceratin bounds and subject to external disturbances, which might cause the process to deviate
+    from requirements on product specifications. To be able to handle such disturbances, or in some cases even be able
+    to meet product requirements, control structures are implemented.
+
+    The consideration of dynamics further opens the possibility to extend the optimization beyond monetary measures, or
+    consider transient aspects which play a role in process profitability. This might include the optimization of transition
+    times between multiple steady states, or an improved start-up or shut down behaviour. In case of the ASU which might also
+    be implemented as a utility to a downstream process, the load following behaviour according to utility requirements could
+    also be analyzed.
+
+    In an effort to demonstrate dynamic optimization capabilities, several steps were taken. To be able to consider a control
+    structure, controllers have to be implemented. Beyond that, as the control structure is not known a priori, a control
+    superstructure has to be considered. The aim was to to optimize the control structure for a minimal transition time between
+    the two steady-states considered during steady state optimization. The highly integrated nature of process leads to degrees
+    freedom different from what would be expected from a regular distillation collum. Furthermore are they different
+    from the steady-state case as described in \secref{sec:mathpro:steady:specinit}.
+
+        \subsubsection{Degrees of freedom}
+        In order to gain more insight into the behaviour of the dynamic models presented above an analysis
+        of the degrees of freedom within the model is at hand. For the degrees of freedom the cost correlations
+        will be disregarded, as they for a closed system of equations given the inputs generated form the column
+        model. Furthermore interdependencies can be disregarded, as the cost model consist only of ''forward''
+        computations. In practical terms this statement can be confirmed since the models can be evaluated
+        with and without costing equations. Hence only the stage and hydraulic equations will be considered.
+
+        For a given column without condenser or reboiler the model is made up of $[n_S (5n_C + 24) + n_F]$
+        differential algebraic equations in $[n_S (5n_C + 29) + n_F (n_S + n_C + 3) + 1]$ variables. In this
+        isolated case all feed flow rates, their composition and enthalpies would be specified. In this case
+        the feeds include a hypothetical condenser reflux (the upper most feed) as well as reboiler reflux
+        (lowest feed). Along with the feeds and their qualities, the feed splits and reflux split have to be
+        assigned. Lastly the column diameter needs to be known. This yields $[n_F (n_S + n_C + 2) + n_S + 1]$
+        specifications. To close the system initial conditions for all states have to be given. There
+        are a total of $[4 n_S ]$ dynamic states in a column section.
+
+        The condenser reboiler unit is made up of a total condenser and a reboiler side. For the condenser side
+        holdups are neglected. While the reboiler side is modeled much like a column stage. The complete model
+        consists of $[14 + 6 n_C]$ equations in $[17 + 6 n_C]$ variables. The three specified variables would
+        commonly correspond to the condenser pressure, reboiler volume and reflux ratio on the condenser side.
+        While other specifications are conceivable, they cannot be made entirely arbitrarily. A specification
+        on the reboiler pressure for instance would result in a high index problem ($\approx n_S^{LPC}$) which
+        could not be solved without drastically reformulating the model.
+
+        \subsubsection{Initial control structure}
+        To identify a possible control structure the dynamic interactions of the process have to be analyzed.
+        The most current method of controlling a process would be model predictive control (MPC), where
+        the set point for all manipulated variables are provided by a central controller, which is based
+        on a rigorous process model. In this case however a simpler and in practice still more common
+        approach is to implement PID control loops. In that case each measured variable is paired
+        with a manipulated variable, which is altered to keep the measured quantity within operational
+        bounds.
+
+        Among the most tested tools to synthesize a control structure are relative gain array (RGA) and the block
+        relative gain (BRG). Those tools provide a measure for the interactions with in the process. As it
+        is unlikely, that one manipulated variable will only affect the controlled variable it os assigned to.
+        Intuitively, highly integrated processes display strong interactions between all manipulated and
+        measured variables. To properly calculate the RGA or BRG, a control (linearized) process model
+        in terms of transfer functions is necessary. However at this stage the requirement is not to find an
+        optimal control structure, but rather a feasible one, which can be used as initial guess for
+        optimization of the same.
+
+        To derive feasible pairings, first all manipulated and measured variables are identified, based on the
+        previously discussed degrees of freedom. The measured variables correspond to the constraints enforced on the process.
+        \begin{itemize}
+            \item LPC nitrogen purity $y_{1,N_2}^{LPC}$
+            \item HPC nitrogen purity $y_{1,N_2}^{HPC}$
+            \item oxygen product purity $x_{O_2}^{CR main}$
+            \item CAC argon purity $y_{1,Ar}^{CAC}$
+            \item nitrogen product flowrate $\dot{n}_{N_2}$
+            \item oxygen product flowrate $\dot{n}_{O_2}$
+            \item argon product flowrate $\dot{n}_{Ar}$
+        \end{itemize}
+
+        The manipulated variables are derived from the degrees of freedom analysis.
+        \begin{itemize}
+            \item main air feed flowrate $\dot{n}_{air}$
+            \item CR main reflux ratio $\nu^{CR main}$
+            \item CR CAC reflux ratio $\nu^{CR CAC}$
+            \item HPC side stream flowrate $S^V_1$
+            \item LPC side stream flowrate 1 $S^V_1$
+            \item LPC side stream flowrate 2 $S^V_2$
+        \end{itemize}
+        
+        To initially analyze the impact of the different manipulated variables, several simulation studies were undertaken. 
+        AS mentioned earlier, the steady state attained during steady state optimization was taken as nominal operating 
+        conditions. To get a feel for the process behaviour, the responses to a $10 \%$ step increase in the manipulated 
+        variables was simulated. The results are displayed in \figref{fig:opt:stepresp}.
+        
+        Before discussing the results in more detail, some comments have to be made as to how these results were attained, 
+        and how they are displayed. While for most cases the step response simulation was
+        straightforward, it did lead to errors for the vapour side draw from the high pressure column. To still produce usable 
+        data, a steep ramp was used alternatively. Over a time-interval of 10 seconds, the nominal value was increased  by 
+        ten percent, and remained steady afterwards. To produce a meaningful and comparable representation of the simulation 
+        results, all values for the measured variables were normalized to their respective values under normal operating conditions. 
+        Furthermore there are two time scales employed, indicated on the bar below the graphs. All cases were simulated for the span 
+        of an entire day, and the step was applied at the very beginning of the simulation. When analysing the results, it turned out, 
+        that dynamic effects were taking place on two different scales. While some measured variables were only approaching steady-state
+        at the end of the day, others acquired it within under an hour. 
+        
+        \begin{landscape}
+            \begin{figure}
+                \center
+                \input{GNUPlot/step_response}
+                \caption{step responses.}
+                \label{fig:opt:stepresp}
+            \end{figure}
+        \end{landscape}
+        
+    \subsection{Model intricacies ... change heading !!!}
+    Aside from the actual model equations care must be taken as to how to implement any set of equations,
+    such that a numerical solver can find feasible solutions. The most prominent issues one is faced with in
+    that context are scaling and singularities within the model. Both aspects will be briefly discussed here.
+
+        \subsubsection{Scaling}
+        When evaluating a model, or integrating over a given time span, Taylor expansion is used to construct
+        an approximate linear process model. This means, that a system of the form
+        \Eq{eq:lin_sys}{
+            \vec{A} x = b,
+        }
+        is solved to a specified absolute accuracy $\varepsilon$. For a single equation the choice of an appropriate
+        value for $\varepsilon$ is rather simple, given that the magnitude of $\vec{A} x$ and $b$ is known.
+        Here one needs to consider, that if either magnitude is much grater than $\varepsilon$ a large number
+        of iterations will be necessary to solve the system in question. On the other hand, if they are of similar
+        magnitude relative error in the attained solution might become unacceptably high.
+
+        To address these issues it is wise to consider the model scaling while implementing the equations.
+        One approach would be to introduce scaling factors on both sides of an equation. While this
+        may certainly improve scaling for the equation itself, the opposite might be true for the respective derivative.
+        Consider the following simple example \cite{MarkPinto.2008} where to holdups are added to a total holdup
+        \Eq{}{
+            f(M_i) = M_1 + M_2 = M_T
+        }
+        Assuming both holdups are of magnitude $M_1 = M_2 = 10^5kg$, then the function value is $2 \cdot 10^5$, while for
+        the derivative
+        \Eq{}{
+            \fracddpart{f}{M_1} = \fracddpart{f}{M_2} = \fracddpart{f}{M_T} = 1
+        }
+        holds. Introducing a scaling factor of $10^{-5}$ to both sides of the equation would lead to a function value
+        of $2$ but have an adverse effect on the derivatives $\fracddpart{f}{M_i} = 10^{-5}$.
+
+        A more robust approach would be to scale the units of the given equation which can simultaneously improve
+        scaling for the function and its derivatives. Writing the same equation in tonnes would lead to  function value of
+        $200$ while maintaining the well scaled derivatives. Alternatively one can introduce further variables and equations
+        with the aim to get more linear equation and rescale some parts of the original equation. A more linear function
+        leads to more constant Jacobian elements and reduces the need for Jacobian updates which can be very expensive in
+        computational terms.
+
+        \subsubsection{Singularities}
+        Singularities in the models considered here often occur, when a variable is raised to a non-integer power,
+        or the logarithm of a variable is evaluated.
+        Expressions like have no solution within the rational domain, when the respective variable becomes negative.
+        Furthermore when negative exponents are involved a value of zero would lead to a division by zero which is
+        undefined. Even before that the function value might become very large as the variable approaches zero.
+
+        In the context of a distillation column, this issue becomes especially relevant, when optimizations or simulations
+        with inactive trays are carried out. Some flowrates in the inactive section of the model will be zero, depending
+        on whether the top or bottom reflux is optimized, those will be either vapour or liquid flowrates. While a
+        solution of zero might cause issues in some cases, a negative solution introduces even more complications. As the
+        equations are solved within numerical accuracy, this might also lead to (slightly) negative solutions, which will
+        cause the numerical solver to fail. Such scenarios have to be anticipated while implementing the model and
+        appropriate measures have to be taken to ''protect'' such variables from hindering model evaluation.
+
+        As \gproms supports state transition networks, one way is to introduce conditional statements. However
+        those statements will in almost all cases lead to discontinuities in the model. While in principal such
+        discontinuities can be detected by numerical solvers \cite{Pantelides.2003}, they are a further source
+        for instabilities. Hence they should in the best case only be introduces, when there is a physical correspondence
+        in the system behaviour.
+
+        In this thesis the problem was approached by decoupling the flowrates within the column, and the ones used for evaluation
+        of the hydraulic model. With the help of the split fractions active and inactive trays can be distinguished.
+        \Eq{}{
+            V_j^{\text{hyd}} = \left( \sum_{k=1}^j \zeta^R_k \right) \cdot V_j + \left(1 - \left( \sum_{k=1}^j \zeta^R_k \right)\right) \cdot V_1
+        }
+        Here it should be pointed out, that it only needs to be ensured, the the hydraulic model can be evaluated for inactive trays.
+        What results are returned for these trays has no effect for the modelled column operation.
+

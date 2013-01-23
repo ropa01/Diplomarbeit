@@ -169,6 +169,10 @@ P.~Mahapatra and B.~W. Bequette.
 \newblock {\em American Control Conference (ACC), 2010}, pages 2003--2008,
   2010.
 
+\bibitem{MarkPinto.2008}
+{Mark Pinto}.
+\newblock {S}caling in g{P}{O}{R}{O}{M}{S}~- training presentation, 2008.
+
 \bibitem{Marquardt.2008}
 Wolfgang Marquardt.
 \newblock {\em {P}rozessentwicklung in der {V}erfahrenstechnik}.
@@ -197,6 +201,13 @@ Peter~R. Nelson.
 Jorge Nocedal and Stephen~J. Wright.
 \newblock {\em {N}umerical optimization}.
 \newblock Springer, New York, 2 edition, 2006.
+
+\bibitem{Pantelides.2003}
+Constantinos~C. Pantelides.
+\newblock {\em {T}he {M}athematical {M}odelling of the {D}ynamic {B}ehaviour of
+  {P}rocess {S}ystems}.
+\newblock Lecture Notes, Centre for Process Systems Engineering, Imperial
+  College London, London, 2003.
 
 \bibitem{Peters.2003}
 Max~Stone Peters, Klaus~D. Timmerhaus, and Ronald~E. West.
