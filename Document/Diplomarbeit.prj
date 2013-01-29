@@ -4,46 +4,97 @@
 0
 1
 Diplomarbeit.tex
-104
-12
-5
+121
+16
+10
 
 Diplomarbeit.tex
 TeX:UNIX
-152154107 0 -1 926 -1 561 0 0 934 409 1 209 153 -1 -1 0 0 62 -1 -1 62 1 0 561 -1   0
-Content\Process_steady_separation.tex
-TeX:UNIX
-1159163 0 -1 20378 -1 20302 150 150 1056 640 1 385 476 -1 -1 0 0 93 -1 -1 93 3 0 20302 -1  1 23443 -1  2 9582 -1   0
-Content\Process_steady.tex
-TeX:UNIX
-1159163 0 -1 6076 -1 6076 125 125 1031 615 1 545 357 -1 -1 0 0 23 -1 -1 23 1 0 6076 -1   0
+152154107 0 -1 1271 -1 1085 0 0 934 409 1 73 153 -1 -1 0 0 62 -1 -1 62 1 0 1085 -1   0
 Content\optimization.tex
 TeX:UNIX
-1159163 0 -1 704 -1 884 175 175 1364 674 0 33 221 -1 -1 0 0 30 -1 -1 30 1 0 884 -1   0
-Tables\SS_results_cont.tex
-TeX
-1060859 0 -1 224 -1 1240 25 25 1450 533 0 713 255 -1 -1 0 0 26 -1 -1 26 1 0 1240 -1   0
+1159163 0 -1 1030 -1 1030 175 175 1364 674 0 25 340 -1 -1 0 0 29 -1 -1 29 1 0 1030 -1   0
 Content\optimization_theory.tex
 TeX:UNIX
-286371835 0 -1 583 -1 4372 200 200 1389 699 0 281 544 -1 -1 0 0 36 4 4 36 1 0 4372 -1   0
+17936379 0 -1 583 -1 3859 200 200 1389 699 0 569 153 -1 -1 0 0 36 4 4 36 1 0 3859 -1   0
 Content\optimization_MINLP.tex
 TeX:UNIX
-17936379 0 -1 7689 -1 8150 225 225 1414 724 1 865 357 -1 -1 0 0 0 -1 -1 0 1 0 8150 -1   0
+17936379 1 -1 12966 -1 12522 225 225 1414 724 1 105 153 -1 -1 0 0 0 -1 -1 0 1 0 12522 -1   0
 Content\optimization_application.tex
 TeX
-1060859 0 -1 31639 -1 31693 0 0 1189 499 1 73 1377 -1 -1 0 0 105 -1 -1 105 1 0 31693 -1   0
+1060859 1 -1 23700 -1 29377 0 0 1189 499 1 145 153 -1 -1 0 0 105 -1 -1 105 1 0 29377 -1   0
+Content\Process_steady_separation.tex
+TeX:UNIX
+1159163 0 -1 20264 -1 37956 150 150 1056 640 1 457 0 -1 -1 0 0 93 -1 -1 93 3 0 37956 -1  1 23485 -1  2 9582 -1   0
+GNUPlot\N2_ADyn_minus.tex
+TeX:UNIX
+1159163 0 -1 4505 -1 4019 75 75 1198 567 0 497 148 -1 -1 0 0 40 -1 -1 40 1 0 4019 -1   0
+Content\ModelApp.tex
+TeX
+1060859 0 -1 98 -1 1150 225 225 1164 717 0 809 187 -1 -1 0 0 35 -1 -1 35 1 0 1150 -1   0
+Content\SteadyApp.tex
+TeX
+1060859 0 -1 5202 -1 16911 200 200 1139 692 0 881 153 -1 -1 0 0 118 -1 -1 118 1 0 16911 -1   0
+Content\DynamicApp.tex
+TeX
+1060859 0 -1 12631 -1 12632 175 175 1114 667 0 385 17 -1 -1 0 0 107 -1 -1 107 1 0 12632 -1   0
+GNUPlot\LPC_init_o2_s1.tex
+TeX:UNIX
+269594619 0 -1 3157 -1 3158 125 125 1228 414 0 417 -28 -1 -1 0 0 40 -1 -1 40 1 0 3158 -1   0
+GNUPlot\LPC_init_o2_s2.tex
+TeX:UNIX
+1159163 0 -1 3157 -1 4198 100 100 1203 389 0 273 357 -1 -1 0 0 40 -1 -1 40 1 0 4198 -1   0
+GNUPlot\LPC_init_o2_s3.tex
+TeX:UNIX
+1159163 0 -1 4286 -1 4283 75 75 1178 364 0 273 323 -1 -1 0 0 40 -1 -1 40 1 0 4283 -1   0
 preambel.tex
 TeX:UNIX
-1159163 2 -1 6128 -1 6131 0 0 1009 215 0 169 561 -1 -1 0 0 129 -1 -1 129 1 0 6131 -1   0
+1159163 0 -1 6128 -1 6112 0 0 1009 215 0 81 136 -1 -1 0 0 129 -1 -1 129 1 0 6112 -1   0
+GNUPlot\N2_ADyn_plus.tex
+TeX:UNIX
+1159163 0 -1 4020 -1 4433 50 50 1173 542 0 465 318 -1 -1 0 0 40 -1 -1 40 1 0 4433 -1   0
+Content\outlook.tex
+TeX:UNIX
+1159163 0 -1 3040 -1 3040 225 225 1650 733 0 345 436 -1 -1 0 0 41 -1 -1 41 1 0 3040 -1   0
+GNUPlot\LPC_init_o2_s4.tex
+TeX:UNIX
+269594619 0 -1 3157 -1 4367 50 50 1153 339 0 273 527 -1 -1 0 0 40 -1 -1 40 1 0 4367 -1   0
+GNUPlot\CAC_asymmetric_dynmaics_plot.tex
+TeX:UNIX
+269594619 0 -1 3426 -1 3427 75 75 1192 567 0 425 272 -1 -1 0 0 40 -1 -1 40 1 0 3427 -1   0
+:\GNU\LPC_init_o2_s4.tex
+TeX:UNIX
+269594619 0 -1 0 -1 4365 100 100 1203 389 0 297 323 -1 -1 0 0 -1 -1 -1 -1 1 0 4365 -1   0
+:\GNU\LPC_init_o2_s3.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 50 50 1153 339 0 25 -1405 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+GNUPlot\LPC_init_n2_step1.tex
+TeX:UNIX
+269594619 0 -1 3157 -1 3158 25 25 1128 314 0 417 119 -1 -1 0 0 40 -1 -1 40 1 0 3158 -1   0
+GNUPlot\LPC_init_n2_step2.tex
+TeX:UNIX
+269594619 0 -1 3157 -1 3158 50 50 1153 339 0 417 34 -1 -1 0 0 40 -1 -1 40 1 0 3158 -1   0
+GNUPlot\LPC_init_n2_step3.tex
+TeX:UNIX
+269594619 0 -1 3157 -1 3158 75 75 1178 364 0 417 51 -1 -1 0 0 40 -1 -1 40 1 0 3158 -1   0
+GNUPlot\LPC_init_n2_step4.tex
+TeX:UNIX
+269594619 0 -1 3157 -1 3158 100 100 1203 389 0 417 17 -1 -1 0 0 -1 -1 -1 -1 1 0 3158 -1   0
+:\GNU\LPC_init_n2_step1.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 0 0 954 38 0 25 -11208 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Tables\SS_results_dual_cont.tex
+TeX
+269496315 0 -1 473 -1 473 75 75 1500 583 0 25 170 -1 -1 0 0 26 -1 -1 26 1 0 473 -1   0
 Tables\SS_results_dual_disc.tex
 TeX
 1060859 0 19 15 -1 310 50 50 1475 558 0 137 136 -1 -1 0 0 26 -1 -1 26 1 0 310 -1   0
-Tables\SS_results_dual_cont.tex
-TeX
-1060859 0 -1 473 -1 473 75 75 1500 583 0 25 170 -1 -1 0 0 26 -1 -1 26 1 0 473 -1   0
-Content\outlook.tex
+Content\Process_steady.tex
 TeX:UNIX
-1159163 0 -1 3040 -1 3040 225 225 1650 733 0 345 629 -1 -1 0 0 41 -1 -1 41 1 0 3040 -1   0
+269594619 0 -1 6076 -1 6076 125 125 1031 615 1 545 357 -1 -1 0 0 23 -1 -1 23 1 0 6076 -1   0
+Tables\SS_results_cont.tex
+TeX
+269496315 0 -1 224 -1 1240 25 25 1450 533 0 713 255 -1 -1 0 0 26 -1 -1 26 1 0 1240 -1   0
 Content\Process_dynamic.tex
 TeX:UNIX
 1159163 0 -1 11745 -1 11752 25 25 1121 615 0 393 544 -1 -1 0 0 85 -1 -1 85 1 0 11752 -1   0
@@ -358,10 +409,6 @@ TeX:UNIX
 *Pictures/col_stage_super
 *Pictures/condenser
 *Pictures/reboiler
-*Tables/Discrepancy
-*Pictures/LPC_example
-*GNUPlot/LPC_init_o2
-*GNUPlot/LPC_init_n2
 <
 *Pictures/condenser_reboiler
 *Pictures/HX_superstructure
@@ -391,8 +438,15 @@ TeX:UNIX
 *GNUPlot/FB_Plot
 *GNUPlot/DDF_Plot
 <
-*Content/optimization_application
+<
+*Content/ModelApp
 >
+*Content/SteadyApp
+>
+*Tables/Discrepancy
+*Pictures/LPC_example
+*GNUPlot/LPC_init_o2
+*GNUPlot/LPC_init_n2
 *Tables/SS_results_cont
 *Tables/SS_results_disc
 *Tables/SS_results_time
@@ -401,9 +455,18 @@ TeX:UNIX
 *Tables/SS_results_dual_cont
 *Tables/SS_results_dual_disc
 <
+*Content/DynamicApp
+>
+*GNUPlot/step_response
+*GNUPlot/N2_ADyn_plus
+*GNUPlot/N2_ADyn_minus
+*GNUPlot/LPC_init_n2_step1
+*GNUPlot/LPC_init_n2_step2
+*GNUPlot/LPC_init_n2_step3
+*GNUPlot/LPC_init_n2_step4
+<
+*Content/IssuesApp
 <
 *Content/outlook
 *Literature.bib
-*Content/appendix_pengrob
-*Content/appendix_ModelCompact
 <

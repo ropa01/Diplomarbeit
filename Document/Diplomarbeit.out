@@ -27,21 +27,24 @@
 \BOOKMARK [1][-]{section.4.5}{Implementation}{chapter.4}% 27
 \BOOKMARK [2][-]{subsection.4.5.1}{Model structure}{section.4.5}% 28
 \BOOKMARK [2][-]{subsection.4.5.2}{Initialization procedures}{section.4.5}% 29
-\BOOKMARK [0][-]{chapter.5}{Process model application}{}% 30
+\BOOKMARK [0][-]{chapter.5}{Process optimization}{}% 30
 \BOOKMARK [1][-]{section.5.1}{Optimization theory}{chapter.5}% 31
 \BOOKMARK [2][-]{subsection.5.1.1}{Karush-Kuhn-Tucker conditions}{section.5.1}% 32
 \BOOKMARK [2][-]{subsection.5.1.2}{Constraint qualifications}{section.5.1}% 33
 \BOOKMARK [1][-]{section.5.2}{Mixed-integer optimization}{chapter.5}% 34
 \BOOKMARK [2][-]{subsection.5.2.1}{Solution techniques}{section.5.2}% 35
 \BOOKMARK [2][-]{subsection.5.2.2}{Continuous reformulation}{section.5.2}% 36
-\BOOKMARK [1][-]{section.5.3}{Optimization examples}{chapter.5}% 37
-\BOOKMARK [2][-]{subsection.5.3.1}{Example process}{section.5.3}% 38
-\BOOKMARK [2][-]{subsection.5.3.2}{Degrees of freedom}{section.5.3}% 39
-\BOOKMARK [2][-]{subsection.5.3.3}{Steady-state optimization}{section.5.3}% 40
-\BOOKMARK [2][-]{subsection.5.3.4}{Dynamic simulation}{section.5.3}% 41
-\BOOKMARK [2][-]{subsection.5.3.5}{Model intricacies ... change heading !!!}{section.5.3}% 42
-\BOOKMARK [0][-]{chapter.6}{Conclusion and further research}{}% 43
-\BOOKMARK [0][-]{chapter*.94}{Bibliography}{}% 44
-\BOOKMARK [0][-]{appendix.A}{Appendix A}{}% 45
-\BOOKMARK [1][-]{section.A.1}{Peng-Robinson derived properties}{appendix.A}% 46
-\BOOKMARK [0][-]{appendix.B}{Appendix B}{}% 47
+\BOOKMARK [0][-]{chapter.6}{Process model application}{}% 37
+\BOOKMARK [1][-]{section.6.1}{Example process}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.2}{Steady-state models}{chapter.6}% 39
+\BOOKMARK [2][-]{subsection.6.2.1}{Degrees of freedom}{section.6.2}% 40
+\BOOKMARK [2][-]{subsection.6.2.2}{Model initialization}{section.6.2}% 41
+\BOOKMARK [2][-]{subsection.6.2.3}{Steady-state optimization}{section.6.2}% 42
+\BOOKMARK [1][-]{section.6.3}{Dynamic models}{chapter.6}% 43
+\BOOKMARK [2][-]{subsection.6.3.1}{Degrees of freedom}{section.6.3}% 44
+\BOOKMARK [2][-]{subsection.6.3.2}{Dynamic process behaviour}{section.6.3}% 45
+\BOOKMARK [1][-]{section.6.4}{model application issues}{chapter.6}% 46
+\BOOKMARK [2][-]{subsection.6.4.1}{Scaling}{section.6.4}% 47
+\BOOKMARK [2][-]{subsection.6.4.2}{Singularities}{section.6.4}% 48
+\BOOKMARK [0][-]{chapter.7}{Conclusion and further research}{}% 49
+\BOOKMARK [0][-]{chapter*.94}{Bibliography}{}% 50

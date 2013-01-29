@@ -73,74 +73,74 @@
 \nomenclatureentry{R $T^{sub}$@[{$T^{sub}$}]\begingroup sub-cooling temperature \nomunit {K}\nomeqref {4.17}|nompageref}{22}
 \nomenclatureentry{R $\Delta p$@[{$\Delta p$}]\begingroup pressure drop over entire column \nomunit {Pa}\nomeqref {4.18}|nompageref}{23}
 \nomenclatureentry{R $\Delta p_{stage}$@[{$\Delta p_{stage}$}]\begingroup stage-wise pressure drop \nomunit {Pa}\nomeqref {4.18}|nompageref}{23}
-\nomenclatureentry{G $\nu ^R$@[{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {4.20}|nompageref}{24}
-\nomenclatureentry{G $\nu ^D$@[{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {4.20}|nompageref}{24}
-\nomenclatureentry{G $\nu ^{vap}$@[{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {4.21}|nompageref}{24}
-\nomenclatureentry{R $l_{ij}$@[{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.23}|nompageref}{26}
-\nomenclatureentry{R $v_{ij}$@[{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {4.23}|nompageref}{26}
-\nomenclatureentry{R $F_j$@[{$F_j$}]\begingroup feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}|nompageref}{26}
-\nomenclatureentry{R $S_j^V$@[{$S_j^V$}]\begingroup vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}|nompageref}{26}
-\nomenclatureentry{R $S_j^L$@[{$S_j^L$}]\begingroup liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}|nompageref}{26}
-\nomenclatureentry{R $V_j$@[{$V_j$}]\begingroup vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}|nompageref}{26}
-\nomenclatureentry{R $L_j$@[{$L_j$}]\begingroup liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {4.27}|nompageref}{26}
-\nomenclatureentry{R $T^{dew}$@[{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {4.32}|nompageref}{28}
-\nomenclatureentry{R $T^{bub}$@[{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {4.32}|nompageref}{28}
-\nomenclatureentry{G $\mu _{JT}$@[{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {4.51}|nompageref}{34}
-\nomenclatureentry{G $\mu _S$@[{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {4.52}|nompageref}{35}
-\nomenclatureentry{R $n_{ij}$@[{$n_{ij}$}]\begingroup holdup of component $i$ on stage $j$  \nomunit {mol}\nomeqref {4.54}|nompageref}{36}
-\nomenclatureentry{R $U_j$@[{$U_j$}]\begingroup internal energy holdup on stage $j$ \nomunit {J}\nomeqref {4.54}|nompageref}{36}
-\nomenclatureentry{R $n_j^L$@[{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.58}|nompageref}{36}
-\nomenclatureentry{R $n_j^V$@[{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.58}|nompageref}{36}
-\nomenclatureentry{R $V_{stage}$@[{$V_{stage}$}]\begingroup stage volume \nomunit {m^3}\nomeqref {4.59}|nompageref}{37}
-\nomenclatureentry{C $g$@[{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {4.61}|nompageref}{37}
-\nomenclatureentry{R $\ell _{weir}$@[{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {4.61}|nompageref}{37}
-\nomenclatureentry{R $h_{ow}$@[{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {4.61}|nompageref}{37}
-\nomenclatureentry{G $\Phi $@[{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {4.61}|nompageref}{37}
-\nomenclatureentry{R $h_f$@[{$h_f$}]\begingroup froth height \nomunit {m}\nomeqref {4.62}|nompageref}{37}
-\nomenclatureentry{R $h_w$@[{$h_w$}]\begingroup weir height \nomunit {m}\nomeqref {4.62}|nompageref}{37}
-\nomenclatureentry{R $A_{active}$@[{$A_{active}$}]\begingroup active tray area \nomunit {m^2}\nomeqref {4.63}|nompageref}{38}
-\nomenclatureentry{G $\beta $@[{$\beta $}]\begingroup aeration factor \nomunit {-}\nomeqref {4.65}|nompageref}{38}
-\nomenclatureentry{R $h_L$@[{$h_L$}]\begingroup dimesionless holdup \nomunit {-}\nomeqref {4.67}|nompageref}{38}
-\nomenclatureentry{G $\delta $@[{$\delta $}]\begingroup film thickness \nomunit {m}\nomeqref {4.67}|nompageref}{38}
-\nomenclatureentry{R $S$@[{$S$}]\begingroup corrugation side \nomunit {m}\nomeqref {4.67}|nompageref}{38}
-\nomenclatureentry{G $\Theta $@[{$\Theta $}]\begingroup corrugation angle \nomunit {rad}\nomeqref {4.68}|nompageref}{38}
-\nomenclatureentry{G $\mu _G$@[{$\mu _G$}]\begingroup vapour viscosity \nomunit {Pa \cdot s}\nomeqref {4.68}|nompageref}{38}
-\nomenclatureentry{G $\epsilon $@[{$\epsilon $}]\begingroup packing void fraction \nomunit {-}\nomeqref {4.68}|nompageref}{38}
-\nomenclatureentry{R $v_G$@[{$v_G$}]\begingroup vapour velocity \nomunit {\frac {m}{s}}\nomeqref {4.68}|nompageref}{38}
-\nomenclatureentry{R $\delta p_{dry}$@[{$\delta p_{dry}$}]\begingroup dry pressure drop \nomunit {\frac {Pa}{m}}\nomeqref {4.68}|nompageref}{38}
-\nomenclatureentry{R $C_1$@[{$C_1$}]\begingroup packing constant \nomunit {}\nomeqref {4.68}|nompageref}{38}
-\nomenclatureentry{R $C_2$@[{$C_2$}]\begingroup packing constant \nomunit {}\nomeqref {4.68}|nompageref}{38}
-\nomenclatureentry{G $\mu _L$@[{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {4.71}|nompageref}{39}
-\nomenclatureentry{R $v_L$@[{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {4.71}|nompageref}{39}
-\nomenclatureentry{R $n_i^{reb}$@[{$n_i^{reb}$}]\begingroup molar holdup of component $i$ in reboiler \nomunit {kmol}\nomeqref {4.74}|nompageref}{39}
-\nomenclatureentry{R $L_{reb}^{in}$@[{$L_{reb}^{in}$}]\begingroup liquid reboiler influx \nomunit {\frac {kmol}{s}}\nomeqref {4.74}|nompageref}{39}
-\nomenclatureentry{R $L_{reb}^{out}$@[{$L_{reb}^{out}$}]\begingroup liquid reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.74}|nompageref}{39}
-\nomenclatureentry{R $V_{reb}^{out}$@[{$V_{reb}^{out}$}]\begingroup vapour reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.74}|nompageref}{39}
-\nomenclatureentry{R $y_{i}^{reb}$@[{$y_{i}^{reb}$}]\begingroup reboiler vapour mole fractions \nomunit {-}\nomeqref {4.74}|nompageref}{39}
-\nomenclatureentry{R $x_{i}^{reb}$@[{$x_{i}^{reb}$}]\begingroup reboiler liquid mole fractions \nomunit {-}\nomeqref {4.74}|nompageref}{39}
-\nomenclatureentry{R $U_{reb}$@[{$U_{reb}$}]\begingroup reboiler internal energy holdup \nomunit {kJ}\nomeqref {4.75}|nompageref}{39}
-\nomenclatureentry{R $h_{L}^{reb}$@[{$h_{L}^{reb}$}]\begingroup reboiler liquid enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.75}|nompageref}{39}
-\nomenclatureentry{R $h_{V}^{reb}$@[{$h_{V}^{reb}$}]\begingroup reboiler vapour enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.75}|nompageref}{39}
-\nomenclatureentry{R $C_{\text {column}}$@[{$C_{\text {column}}$}]\begingroup column cost \nomunit {\$}\nomeqref {4.84}|nompageref}{41}
-\nomenclatureentry{R $C_{tower}$@[{$C_{tower}$}]\begingroup tower cost \nomunit {\$}\nomeqref {4.84}|nompageref}{41}
-\nomenclatureentry{R $C_{\text {platform}}$@[{$C_{\text {platform}}$}]\begingroup platform cost \nomunit {\$}\nomeqref {4.84}|nompageref}{41}
-\nomenclatureentry{R $C_{\text {internals}}$@[{$C_{\text {internals}}$}]\begingroup cost of column internals \nomunit {\$}\nomeqref {4.84}|nompageref}{41}
-\nomenclatureentry{R $W_{tower}$@[{$W_{tower}$}]\begingroup weight of a tower \nomunit {lbs}\nomeqref {4.85}|nompageref}{41}
-\nomenclatureentry{R $t_s$@[{$t_s$}]\begingroup tower shell thickness \nomunit {in}\nomeqref {4.87}|nompageref}{41}
-\nomenclatureentry{R $S$@[{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.88}|nompageref}{41}
-\nomenclatureentry{R $E$@[{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.88}|nompageref}{41}
-\nomenclatureentry{R $t_p$@[{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.88}|nompageref}{41}
-\nomenclatureentry{R $p_D$@[{$p_D$}]\begingroup design pressure \nomunit {psig}\nomeqref {4.89}|nompageref}{41}
-\nomenclatureentry{R $p_O$@[{$p_O$}]\begingroup operating pressure \nomunit {psig}\nomeqref {4.89}|nompageref}{41}
-\nomenclatureentry{R $t_w$@[{$t_w$}]\begingroup thickness wind and earthquake correction \nomunit {in}\nomeqref {4.90}|nompageref}{42}
-\nomenclatureentry{R $h_{\text {plate}}$@[{$h_{\text {plate}}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.92}|nompageref}{42}
-\nomenclatureentry{R $ent_j$@[{$ent_j$}]\begingroup fractional entrainment for 80\% flooding on stage $j$ \nomunit {-}\nomeqref {4.93}|nompageref}{43}
-\nomenclatureentry{R $FLV_j$@[{$FLV_j$}]\begingroup Sherwood flow parameter on stage $j$ \nomunit {-}\nomeqref {4.94}|nompageref}{43}
-\nomenclatureentry{R $v_j^{flood}$@[{$v_j^{flood}$}]\begingroup flooding velocity on stage $j$ \nomunit {\frac {m}{s}}\nomeqref {4.95}|nompageref}{43}
-\nomenclatureentry{R $K1$@[{$K1$}]\begingroup empirical coefficient \nomunit {-}\nomeqref {4.96}|nompageref}{43}
-\nomenclatureentry{R $A_j^{min}$@[{$A_j^{min}$}]\begingroup minimum column area on stage $j$ \nomunit {m^2}\nomeqref {4.97}|nompageref}{43}
-\nomenclatureentry{G $\Psi _{flood}$@[{$\Psi _{flood}$}]\begingroup fractional allowed flooding \nomunit {-}\nomeqref {4.97}|nompageref}{43}
-\nomenclatureentry{R $p$@[{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {4.117}|nompageref}{47}
-\nomenclatureentry{R $m$@[{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {4.117}|nompageref}{47}
-\nomenclatureentry{R $a_c$@[{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {4.117}|nompageref}{47}
-\nomenclatureentry{R $b$@[{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {4.117}|nompageref}{47}
+\nomenclatureentry{G $\mu _{JT}$@[{$\mu _{JT}$}]\begingroup \emph {Joule-Thompson} coeffivcient \nomunit {\frac {K}{Pa}}\nomeqref {4.37}|nompageref}{29}
+\nomenclatureentry{G $\mu _S$@[{$\mu _S$}]\begingroup isentropic expansion coefficient \nomunit {\frac {K}{Pa}}\nomeqref {4.38}|nompageref}{30}
+\nomenclatureentry{R $n_{ij}$@[{$n_{ij}$}]\begingroup holdup of component $i$ on stage $j$  \nomunit {mol}\nomeqref {4.40}|nompageref}{31}
+\nomenclatureentry{R $U_j$@[{$U_j$}]\begingroup internal energy holdup on stage $j$ \nomunit {J}\nomeqref {4.40}|nompageref}{31}
+\nomenclatureentry{R $n_j^L$@[{$n_j^L$}]\begingroup liquid molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.44}|nompageref}{31}
+\nomenclatureentry{R $n_j^V$@[{$n_j^V$}]\begingroup vapour molar holdup on stage $j$ \nomunit {mol}\nomeqref {4.44}|nompageref}{31}
+\nomenclatureentry{R $V_{stage}$@[{$V_{stage}$}]\begingroup stage volume \nomunit {m^3}\nomeqref {4.45}|nompageref}{32}
+\nomenclatureentry{C $g$@[{$g$}]\begingroup gravitational constant \nomunit {\frac {m}{s^2}}\nomeqref {4.47}|nompageref}{32}
+\nomenclatureentry{R $\ell _{weir}$@[{$\ell _{weir}$}]\begingroup length of tray weir \nomunit {m}\nomeqref {4.47}|nompageref}{32}
+\nomenclatureentry{R $h_{ow}$@[{$h_{ow}$}]\begingroup height over weir \nomunit {m}\nomeqref {4.47}|nompageref}{32}
+\nomenclatureentry{G $\Phi $@[{$\Phi $}]\begingroup relative froth density \nomunit {-}\nomeqref {4.47}|nompageref}{32}
+\nomenclatureentry{R $h_f$@[{$h_f$}]\begingroup froth height \nomunit {m}\nomeqref {4.48}|nompageref}{32}
+\nomenclatureentry{R $h_w$@[{$h_w$}]\begingroup weir height \nomunit {m}\nomeqref {4.48}|nompageref}{32}
+\nomenclatureentry{R $A_{active}$@[{$A_{active}$}]\begingroup active tray area \nomunit {m^2}\nomeqref {4.49}|nompageref}{33}
+\nomenclatureentry{G $\beta $@[{$\beta $}]\begingroup aeration factor \nomunit {-}\nomeqref {4.51}|nompageref}{33}
+\nomenclatureentry{R $h_L$@[{$h_L$}]\begingroup dimesionless holdup \nomunit {-}\nomeqref {4.53}|nompageref}{33}
+\nomenclatureentry{G $\delta $@[{$\delta $}]\begingroup film thickness \nomunit {m}\nomeqref {4.53}|nompageref}{33}
+\nomenclatureentry{R $S$@[{$S$}]\begingroup corrugation side \nomunit {m}\nomeqref {4.53}|nompageref}{33}
+\nomenclatureentry{G $\Theta $@[{$\Theta $}]\begingroup corrugation angle \nomunit {rad}\nomeqref {4.54}|nompageref}{33}
+\nomenclatureentry{G $\mu _G$@[{$\mu _G$}]\begingroup vapour viscosity \nomunit {Pa \cdot s}\nomeqref {4.54}|nompageref}{33}
+\nomenclatureentry{G $\epsilon $@[{$\epsilon $}]\begingroup packing void fraction \nomunit {-}\nomeqref {4.54}|nompageref}{33}
+\nomenclatureentry{R $v_G$@[{$v_G$}]\begingroup vapour velocity \nomunit {\frac {m}{s}}\nomeqref {4.54}|nompageref}{33}
+\nomenclatureentry{R $\delta p_{dry}$@[{$\delta p_{dry}$}]\begingroup dry pressure drop \nomunit {\frac {Pa}{m}}\nomeqref {4.54}|nompageref}{33}
+\nomenclatureentry{R $C_1$@[{$C_1$}]\begingroup packing constant \nomunit {}\nomeqref {4.54}|nompageref}{33}
+\nomenclatureentry{R $C_2$@[{$C_2$}]\begingroup packing constant \nomunit {}\nomeqref {4.54}|nompageref}{33}
+\nomenclatureentry{G $\mu _L$@[{$\mu _L$}]\begingroup liquid viscosity \nomunit {Pa \cdot s}\nomeqref {4.57}|nompageref}{34}
+\nomenclatureentry{R $v_L$@[{$v_L$}]\begingroup liquid velocity \nomunit {\frac {m}{s}}\nomeqref {4.57}|nompageref}{34}
+\nomenclatureentry{R $n_i^{reb}$@[{$n_i^{reb}$}]\begingroup molar holdup of component $i$ in reboiler \nomunit {kmol}\nomeqref {4.60}|nompageref}{34}
+\nomenclatureentry{R $L_{reb}^{in}$@[{$L_{reb}^{in}$}]\begingroup liquid reboiler influx \nomunit {\frac {kmol}{s}}\nomeqref {4.60}|nompageref}{34}
+\nomenclatureentry{R $L_{reb}^{out}$@[{$L_{reb}^{out}$}]\begingroup liquid reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.60}|nompageref}{34}
+\nomenclatureentry{R $V_{reb}^{out}$@[{$V_{reb}^{out}$}]\begingroup vapour reboiler outflow \nomunit {\frac {kmol}{s}}\nomeqref {4.60}|nompageref}{34}
+\nomenclatureentry{R $y_{i}^{reb}$@[{$y_{i}^{reb}$}]\begingroup reboiler vapour mole fractions \nomunit {-}\nomeqref {4.60}|nompageref}{34}
+\nomenclatureentry{R $x_{i}^{reb}$@[{$x_{i}^{reb}$}]\begingroup reboiler liquid mole fractions \nomunit {-}\nomeqref {4.60}|nompageref}{34}
+\nomenclatureentry{R $U_{reb}$@[{$U_{reb}$}]\begingroup reboiler internal energy holdup \nomunit {kJ}\nomeqref {4.61}|nompageref}{34}
+\nomenclatureentry{R $h_{L}^{reb}$@[{$h_{L}^{reb}$}]\begingroup reboiler liquid enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.61}|nompageref}{34}
+\nomenclatureentry{R $h_{V}^{reb}$@[{$h_{V}^{reb}$}]\begingroup reboiler vapour enthalpy \nomunit {\frac {kJ}{kmol}}\nomeqref {4.61}|nompageref}{34}
+\nomenclatureentry{R $C_{\text {column}}$@[{$C_{\text {column}}$}]\begingroup column cost \nomunit {\$}\nomeqref {4.70}|nompageref}{36}
+\nomenclatureentry{R $C_{tower}$@[{$C_{tower}$}]\begingroup tower cost \nomunit {\$}\nomeqref {4.70}|nompageref}{36}
+\nomenclatureentry{R $C_{\text {platform}}$@[{$C_{\text {platform}}$}]\begingroup platform cost \nomunit {\$}\nomeqref {4.70}|nompageref}{36}
+\nomenclatureentry{R $C_{\text {internals}}$@[{$C_{\text {internals}}$}]\begingroup cost of column internals \nomunit {\$}\nomeqref {4.70}|nompageref}{36}
+\nomenclatureentry{R $W_{tower}$@[{$W_{tower}$}]\begingroup weight of a tower \nomunit {lbs}\nomeqref {4.71}|nompageref}{36}
+\nomenclatureentry{R $t_s$@[{$t_s$}]\begingroup tower shell thickness \nomunit {in}\nomeqref {4.73}|nompageref}{36}
+\nomenclatureentry{R $S$@[{$S$}]\begingroup maximum allowable stress \nomunit {psi}\nomeqref {4.74}|nompageref}{36}
+\nomenclatureentry{R $E$@[{$E$}]\begingroup fractional weld efficiency \nomunit {-}\nomeqref {4.74}|nompageref}{36}
+\nomenclatureentry{R $t_p$@[{$t_p$}]\begingroup shell thickness die to pressure \nomunit {in}\nomeqref {4.74}|nompageref}{36}
+\nomenclatureentry{R $p_D$@[{$p_D$}]\begingroup design pressure \nomunit {psig}\nomeqref {4.75}|nompageref}{36}
+\nomenclatureentry{R $p_O$@[{$p_O$}]\begingroup operating pressure \nomunit {psig}\nomeqref {4.75}|nompageref}{36}
+\nomenclatureentry{R $t_w$@[{$t_w$}]\begingroup thickness wind and earthquake correction \nomunit {in}\nomeqref {4.76}|nompageref}{37}
+\nomenclatureentry{R $h_{\text {plate}}$@[{$h_{\text {plate}}$}]\begingroup plate spacing \nomunit {m}\nomeqref {4.78}|nompageref}{37}
+\nomenclatureentry{R $ent_j$@[{$ent_j$}]\begingroup fractional entrainment for 80\% flooding on stage $j$ \nomunit {-}\nomeqref {4.79}|nompageref}{38}
+\nomenclatureentry{R $FLV_j$@[{$FLV_j$}]\begingroup Sherwood flow parameter on stage $j$ \nomunit {-}\nomeqref {4.80}|nompageref}{38}
+\nomenclatureentry{R $v_j^{flood}$@[{$v_j^{flood}$}]\begingroup flooding velocity on stage $j$ \nomunit {\frac {m}{s}}\nomeqref {4.81}|nompageref}{38}
+\nomenclatureentry{R $K1$@[{$K1$}]\begingroup empirical coefficient \nomunit {-}\nomeqref {4.82}|nompageref}{38}
+\nomenclatureentry{R $A_j^{min}$@[{$A_j^{min}$}]\begingroup minimum column area on stage $j$ \nomunit {m^2}\nomeqref {4.83}|nompageref}{38}
+\nomenclatureentry{G $\Psi _{flood}$@[{$\Psi _{flood}$}]\begingroup fractional allowed flooding \nomunit {-}\nomeqref {4.83}|nompageref}{38}
+\nomenclatureentry{R $p$@[{$p$}]\begingroup pressure \nomunit {Pa}\nomeqref {4.103}|nompageref}{42}
+\nomenclatureentry{R $m$@[{$m$}]\begingroup parameter in Peng-Robinson EOS \nomunit {-}\nomeqref {4.103}|nompageref}{42}
+\nomenclatureentry{R $a_c$@[{$a_c$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^5}{mol^2 s^2}}\nomeqref {4.103}|nompageref}{42}
+\nomenclatureentry{R $b$@[{$b$}]\begingroup parameter in Peng-Robinson EOS \nomunit {\frac {m^3}{mol}}\nomeqref {4.103}|nompageref}{42}
+\nomenclatureentry{G $\nu ^R$@[{$\nu ^R$}]\begingroup boliup ratio \nomunit {-}\nomeqref {6.2}|nompageref}{60}
+\nomenclatureentry{G $\nu ^D$@[{$\nu ^D$}]\begingroup reflux ratio \nomunit {-}\nomeqref {6.2}|nompageref}{60}
+\nomenclatureentry{G $\nu ^{vap}$@[{$\nu ^{vap}$}]\begingroup condenser vapour fraction \nomunit {-}\nomeqref {6.3}|nompageref}{61}
+\nomenclatureentry{R $l_{ij}$@[{$l_{ij}$}]\begingroup liquid molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {6.5}|nompageref}{62}
+\nomenclatureentry{R $v_{ij}$@[{$v_{ij}$}]\begingroup vapour molar flowrate of component $i$ from stage $j$ \nomunit {\mols }\nomeqref {6.5}|nompageref}{62}
+\nomenclatureentry{R $F_j$@[{$F_j$}]\begingroup feed to tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.9}|nompageref}{63}
+\nomenclatureentry{R $S_j^V$@[{$S_j^V$}]\begingroup vapour side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.9}|nompageref}{63}
+\nomenclatureentry{R $S_j^L$@[{$S_j^L$}]\begingroup liquid side flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.9}|nompageref}{63}
+\nomenclatureentry{R $V_j$@[{$V_j$}]\begingroup vapour flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.9}|nompageref}{63}
+\nomenclatureentry{R $L_j$@[{$L_j$}]\begingroup liquid flow from tray $j$ \nomunit {\frac {mol}{s}}\nomeqref {6.9}|nompageref}{63}
+\nomenclatureentry{R $T^{dew}$@[{$T^{dew}$}]\begingroup dew point temperature \nomunit {K}\nomeqref {6.14}|nompageref}{65}
+\nomenclatureentry{R $T^{bub}$@[{$T^{bub}$}]\begingroup bubble point temperature \nomunit {K}\nomeqref {6.14}|nompageref}{65}

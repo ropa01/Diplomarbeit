@@ -305,7 +305,6 @@
 
     \subsubsection{Specifications \& initialization}
     \label{sec:mathpro:steady:specinit}
-        \todo{section superfluous? init procedure describen in impl sec...}
         The equation systems presented above is comprised of $n_S n_C$ component balances and equilibrium
         equations, $2n_S$ summation equations and $n_S$ energy balances. This gives a total of $n_S (2n_C + 3)$
         equations. On the other hand there are $n_S$ temperatures and pressures, $2n_S$ molar flow rates,

@@ -338,23 +338,28 @@ but reasonable constraints.
             \item LPC side stream flowrate 1 $S^V_1$
             \item LPC side stream flowrate 2 $S^V_2$
         \end{itemize}
-        
-        To initially analyze the impact of the different manipulated variables, several simulation studies were undertaken. 
-        AS mentioned earlier, the steady state attained during steady state optimization was taken as nominal operating 
-        conditions. To get a feel for the process behaviour, the responses to a $10 \%$ step increase in the manipulated 
+
+        To initially analyze the impact of the different manipulated variables, several simulation studies were undertaken.
+        AS mentioned earlier, the steady state attained during steady state optimization was taken as nominal operating
+        conditions. To get a feel for the process behaviour, the responses to a $10 \%$ step increase in the manipulated
         variables was simulated. The results are displayed in \figref{fig:opt:stepresp}.
-        
-        Before discussing the results in more detail, some comments have to be made as to how these results were attained, 
-        and how they are displayed. While for most cases the step response simulation was
-        straightforward, it did lead to errors for the vapour side draw from the high pressure column. To still produce usable 
-        data, a steep ramp was used alternatively. Over a time-interval of 10 seconds, the nominal value was increased  by 
-        ten percent, and remained steady afterwards. To produce a meaningful and comparable representation of the simulation 
-        results, all values for the measured variables were normalized to their respective values under normal operating conditions. 
-        Furthermore there are two time scales employed, indicated on the bar below the graphs. All cases were simulated for the span 
-        of an entire day, and the step was applied at the very beginning of the simulation. When analysing the results, it turned out, 
+
+        Before discussing the results in more detail, some comments have to be made as to how these results were attained,
+        and how they are displayed. While for most cases the step response simulation was straightforward,
+        it did lead to errors for the vapour side draw from the high pressure column. To still produce usable
+        data, a steep ramp was used alternatively. Over a time-interval of 10 seconds, the nominal value was increased  by
+        ten percent, and remained steady afterwards. To produce a meaningful and comparable representation of the simulation
+        results, all values for the measured variables were normalized to their respective values under normal operating conditions.
+        Furthermore there are two time scales employed, indicated on the bar below the graphs. All cases were simulated for the span
+        of an entire day, and the step was applied at the very beginning of the simulation. When analysing the results, it turned out,
         that dynamic effects were taking place on two different scales. While some measured variables were only approaching steady-state
-        at the end of the day, others acquired it within under an hour. 
-        
+        at the end of the day, others reached it within about an hour. The different time scales are due to the nature of the measured
+        variables. Pressure associated values such as flowrates change much more quickly, than temperature or concentrations \cite{Roffel.2000}.
+        It also needs to be pointed out, that the y-scales for the graphs differ between measured variables. To maintain some degree or comparability,
+        the y-scales are constant for each measured variable. In the given process configuration, the changes inflicted by the applied steps are
+        of rather low amplitude. For the considered concentrations, the changes to the order of $10^-{3}$ or 0.1 \% were observed. Non the less, 
+        given these responses, preliminary candidates for coupling between controlled and measured variables can be obtained. 
+
         \begin{landscape}
             \begin{figure}
                 \center
@@ -363,7 +368,7 @@ but reasonable constraints.
                 \label{fig:opt:stepresp}
             \end{figure}
         \end{landscape}
-        
+
     \subsection{Model intricacies ... change heading !!!}
     Aside from the actual model equations care must be taken as to how to implement any set of equations,
     such that a numerical solver can find feasible solutions. The most prominent issues one is faced with in

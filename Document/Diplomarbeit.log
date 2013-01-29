@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  23 JAN 2013 22:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2012.8.3)  28 JAN 2013 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1478,7 +1478,7 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 (c:/texlive/2012/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 76.
+Package scrhack Info: loading listings hack on input line 83.
 
 (c:/texlive/2012/texmf-dist/tex/latex/koma-script/listings.hak
 File: listings.hak 2012/07/29 v3.11b KOMA-Script hacking package listings
@@ -1514,9 +1514,6 @@ LaTeX Warning: Label `eq:col:fug_ext' multiply defined.
 LaTeX Warning: Label `eq:col:bub' multiply defined.
 
 
-LaTeX Warning: Label `fig:lpc_example' multiply defined.
-
-
 LaTeX Warning: Label `eq:col:CompBalance_opt' multiply defined.
 
 
@@ -1538,8 +1535,35 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `eq:opt:FB' multiply defined.
 
-) (./Content/outlook.aux) (./Content/appendix_pengrob.aux)
-(./Content/appendix_ModelCompact.aux))
+) (./Content/ModelApp.aux
+
+LaTeX Warning: Label `fig:lpc_example' multiply defined.
+
+
+LaTeX Warning: Label `fig:N2_ADyn_plus' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:N2_ADyn_plus' multiply defined.
+
+
+LaTeX Warning: Label `fig:N2_ADyn_minus' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:N2_ADyn_minus' multiply defined.
+
+
+LaTeX Warning: Label `fig:N2_ADyn_plus' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:N2_ADyn_plus' multiply defined.
+
+
+LaTeX Warning: Label `fig:N2_ADyn_minus' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:N2_ADyn_minus' multiply defined.
+
+) (./Content/outlook.aux))
 \openout1 = `Diplomarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -1556,16 +1580,14 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
-
-(c:/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2012/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Try loading font information for T1+aess on input line 29.
-
-(c:/texlive/2012/texmf-dist/tex/latex/ae/t1aess.fd
+ (c:/texlive/2012/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 (c:/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -1653,7 +1675,7 @@ ps-converted-to.pdf Pictures/Logos/CPSE_Logo.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/CPSE_Logo-eps-converted-to.pdf, id=211, 119.44624pt x 50.1875pt
+<Pictures/Logos/CPSE_Logo-eps-converted-to.pdf, id=224, 119.44624pt x 50.1875pt
 >
 File: Pictures/Logos/CPSE_Logo-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/Logos/CPSE_Logo-eps-converted-to.pdf>
@@ -1672,7 +1694,7 @@ s-converted-to.pdf Pictures/Logos/AVT_LOGO.eps>
 (epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/AVT_LOGO-eps-converted-to.pdf, id=212, 2008.50375pt x 575.14874
+<Pictures/Logos/AVT_LOGO-eps-converted-to.pdf, id=225, 2008.50375pt x 575.14874
 pt>
 File: Pictures/Logos/AVT_LOGO-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/Logos/AVT_LOGO-eps-converted-to.pdf>
@@ -1691,7 +1713,7 @@ s-converted-to.pdf Pictures/Logos/PSE_Logo.eps>
 (epstopdf)             \includegraphics on input line 46.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/Logos/PSE_Logo-eps-converted-to.pdf, id=213, 681.54625pt x 681.54625p
+<Pictures/Logos/PSE_Logo-eps-converted-to.pdf, id=226, 681.54625pt x 681.54625p
 t>
 File: Pictures/Logos/PSE_Logo-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/Logos/PSE_Logo-eps-converted-to.pdf>
@@ -1833,7 +1855,7 @@ ps-converted-to.pdf Pictures/tech_comp_graph.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/tech_comp_graph-eps-converted-to.pdf, id=429, 613.29124pt x 289.08pt>
+<Pictures/tech_comp_graph-eps-converted-to.pdf, id=444, 613.29124pt x 289.08pt>
 File: Pictures/tech_comp_graph-eps-converted-to.pdf Graphic file (type pdf)
 <use Pictures/tech_comp_graph-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures/tech_comp_graph-eps-converted-to.pdf used on 
@@ -1873,77 +1895,8 @@ Chapter 4.
 LaTeX Warning: Reference `sec:peng-rob' on page 21 undefined on input line 192.
 
 
-(./Pictures/condenser.tex) (./Pictures/reboiler.tex) [21] [22] [23]
-(./Tables/Discrepancy.tex) [24] [25] [26] (./Pictures/LPC_example.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 515--515
-[][][]|\T1/aess/m/n/12 (+20) ex-ample
- []
-
-(./Tables/LPC_example_data.tex)
-Overfull \hbox (6.10838pt too wide) in paragraph at lines 519--520
-[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 536.
-
-
-LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <6> not available
-(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 536.
-
-[27] (./GNUPlot/LPC_init_o2.tex
-
-LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <5> not available
-(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 104.
-
-Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2.eps>
-(epstopdf)                    date: 2012-09-01 17:32:11
-(epstopdf)                    size: 18918 bytes
-(epstopdf)             Output file: <GNUPlot/LPC_init_o2-eps-converted-to.pdf>
-(epstopdf)                    date: 2012-09-01 17:33:33
-(epstopdf)                    size: 4044 bytes
-(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_o2-eps-co
-nverted-to.pdf GNUPlot/LPC_init_o2.eps>
-(epstopdf)             \includegraphics on input line 105.
-Package epstopdf Info: Output file is already uptodate.
-<GNUPlot/LPC_init_o2-eps-converted-to.pdf, id=703, 238.8925pt x 141.52875pt>
-File: GNUPlot/LPC_init_o2-eps-converted-to.pdf Graphic file (type pdf)
-
-<use GNUPlot/LPC_init_o2-eps-converted-to.pdf>
-Package pdftex.def Info: GNUPlot/LPC_init_o2-eps-converted-to.pdf used on input
- line 105.
-(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
-)
-Overfull \hbox (21.32439pt too wide) in paragraph at lines 107--576
-[][] 
- []
-
-(./GNUPlot/LPC_init_n2.tex
-Package epstopdf Info: Source file: <GNUPlot/LPC_init_n2.eps>
-(epstopdf)                    date: 2012-09-01 17:32:10
-(epstopdf)                    size: 18995 bytes
-(epstopdf)             Output file: <GNUPlot/LPC_init_n2-eps-converted-to.pdf>
-(epstopdf)                    date: 2012-09-01 17:33:35
-(epstopdf)                    size: 3765 bytes
-(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_n2-eps-co
-nverted-to.pdf GNUPlot/LPC_init_n2.eps>
-(epstopdf)             \includegraphics on input line 105.
-Package epstopdf Info: Output file is already uptodate.
-
-<GNUPlot/LPC_init_n2-eps-converted-to.pdf, id=704, 238.8925pt x 141.52875pt>
-File: GNUPlot/LPC_init_n2-eps-converted-to.pdf Graphic file (type pdf)
-
-<use GNUPlot/LPC_init_n2-eps-converted-to.pdf>
-Package pdftex.def Info: GNUPlot/LPC_init_n2-eps-converted-to.pdf used on input
- line 105.
-(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
-)
-Overfull \hbox (21.32439pt too wide) in paragraph at lines 107--582
-[][] 
- []
-
-) (./Pictures/condenser_reboiler.tex
+(./Pictures/condenser.tex) (./Pictures/reboiler.tex) [21] [22])
+(./Pictures/condenser_reboiler.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -1951,14 +1904,9 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-) [28 <./GNUPlot/LPC_init_o2-eps-converted-to.pdf> <./GNUPlot/LPC_init_n2-eps-c
-onverted-to.pdf>] [29] [30]
-(./Pictures/HX_superstructure.tex
-
-LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <7> not available
-(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 117.
-
-) [31] (./pgfplots/Compressor.tex) [32] [33] (./GNUPlot/pr_isenthalpes.tex
+) [23] [24] [25]
+(./Pictures/HX_superstructure.tex) [26] (./pgfplots/Compressor.tex) [27]
+[28] (./GNUPlot/pr_isenthalpes.tex
 Package epstopdf Info: Source file: <GNUPlot/pr_isenthalpes.eps>
 (epstopdf)                    date: 2012-09-04 16:25:07
 (epstopdf)                    size: 22762 bytes
@@ -1971,31 +1919,36 @@ f>
 (epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/pr_isenthalpes-eps-converted-to.pdf, id=770, 238.8925pt x 141.52875pt>
+<GNUPlot/pr_isenthalpes-eps-converted-to.pdf, id=719, 238.8925pt x 141.52875pt>
 File: GNUPlot/pr_isenthalpes-eps-converted-to.pdf Graphic file (type pdf)
 <use GNUPlot/pr_isenthalpes-eps-converted-to.pdf>
 Package pdftex.def Info: GNUPlot/pr_isenthalpes-eps-converted-to.pdf used on in
 put line 111.
 (pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
-) [34 <./GNUPlot/pr_isenthalpes-eps-converted-to.pdf>]) (./Content/Process_dyna
-mic.tex [35] [36]
-(./Pictures/tray_model.tex) [37] [38] [39]) (./Content/Process_econ.tex
-[40] [41] [42] [43] (./Tables/PumpFactorsType.tex)
-(./Tables/PumpFactorsMaterial.tex) [44] (./Tables/MotorTypeFactors.tex)
-[45])
+) [29 <./GNUPlot/pr_isenthalpes-eps-converted-to.pdf>]) (./Content/Process_dyna
+mic.tex [30] [31]
+(./Pictures/tray_model.tex) [32] [33] [34]) (./Content/Process_econ.tex
+[35] [36] [37] [38] (./Tables/PumpFactorsType.tex)
+(./Tables/PumpFactorsMaterial.tex) [39] (./Tables/MotorTypeFactors.tex)
+[40])
 
-LaTeX Warning: Reference `sec:comp_liq' on page 46 undefined on input line 58.
+LaTeX Warning: Reference `sec:comp_liq' on page 41 undefined on input line 58.
 
-[46] (./Content/Process_impl.tex [47] [48] (./Pictures/gP_ModelStructure.tex)
-[49] [50
+[41]
+
+LaTeX Warning: Reference `app:peng_rob_deriv' on page 42 undefined on input lin
+e 83.
+
+(./Content/Process_impl.tex [42] [43] (./Pictures/gP_ModelStructure.tex)
+[44] [45
 
 
-] [51]
+] [46]
 LaTeX Font Info:    Try loading font information for T1+aett on input line 144.
 
  (c:/texlive/2012/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [52]
+) [47]
 Overfull \hbox (10.28485pt too wide) in paragraph at lines 213--214
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2005,7 +1958,7 @@ Overfull \hbox (10.28485pt too wide) in paragraph at lines 214--215
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-)) [53] [54]
+)) [48] [49]
 \openout2 = `Content/optimization.aux'.
 
  (./Content/optimization.tex
@@ -2015,11 +1968,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--19
 
  []
 
-[55
+[50
 
 
 
-] [56]) (./Content/optimization_MINLP.tex
+] [51]) (./Content/optimization_MINLP.tex
 Underfull \hbox (badness 10000) in paragraph at lines 30--36
 
  []
@@ -2029,7 +1982,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--36
 
  []
 
-[57]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 37--53
 
  []
@@ -2049,12 +2002,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--80
 
  []
 
-[58] [59]
+[53] [54]
 Underfull \hbox (badness 10000) in paragraph at lines 125--137
 
  []
 
-[60] (./GNUPlot/FB_Plot.tex
+[55] (./GNUPlot/FB_Plot.tex
 Package epstopdf Info: Source file: <GNUPlot/FB_Plot.eps>
 (epstopdf)                    date: 2012-11-26 14:58:02
 (epstopdf)                    size: 18101 bytes
@@ -2066,7 +2019,7 @@ ted-to.pdf GNUPlot/FB_Plot.eps>
 (epstopdf)             \includegraphics on input line 92.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/FB_Plot-eps-converted-to.pdf, id=1124, 238.8925pt x 96.36pt>
+<GNUPlot/FB_Plot-eps-converted-to.pdf, id=1072, 238.8925pt x 96.36pt>
 File: GNUPlot/FB_Plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/FB_Plot-eps-converted-to.pdf>
@@ -2090,7 +2043,7 @@ rted-to.pdf GNUPlot/DDF_Plot.eps>
 (epstopdf)             \includegraphics on input line 99.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/DDF_Plot-eps-converted-to.pdf, id=1125, 238.8925pt x 96.36pt>
+<GNUPlot/DDF_Plot-eps-converted-to.pdf, id=1073, 238.8925pt x 96.36pt>
 File: GNUPlot/DDF_Plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/DDF_Plot-eps-converted-to.pdf>
@@ -2102,8 +2055,12 @@ Overfull \hbox (6.81407pt too wide) in paragraph at lines 101--176
 [][] 
  []
 
-[61 <./GNUPlot/FB_Plot-eps-converted-to.pdf> <./GNUPlot/DDF_Plot-eps-converted-
-to.pdf>]) (./Content/optimization_application.tex [62]
+[56 <./GNUPlot/FB_Plot-eps-converted-to.pdf> <./GNUPlot/DDF_Plot-eps-converted-
+to.pdf>])) [57]
+\openout2 = `Content/ModelApp.aux'.
+
+ (./Content/ModelApp.tex
+Chapter 6.
 Package epstopdf Info: Source file: <Pictures/ASU_superstructure.eps>
 (epstopdf)                    date: 2012-12-11 17:54:03
 (epstopdf)                    size: 70932 bytes
@@ -2113,20 +2070,99 @@ to.pdf>
 (epstopdf)                    size: 29016 bytes
 (epstopdf)             Command: <repstopdf --outfile=Pictures/ASU_superstructur
 e-eps-converted-to.pdf Pictures/ASU_superstructure.eps>
-(epstopdf)             \includegraphics on input line 32.
+(epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
 
-<Pictures/ASU_superstructure-eps-converted-to.pdf, id=1152, 600.2425pt x 539.01
+<Pictures/ASU_superstructure-eps-converted-to.pdf, id=1099, 600.2425pt x 539.01
 375pt>
 File: Pictures/ASU_superstructure-eps-converted-to.pdf Graphic file (type pdf)
  <use Pictures/ASU_superstructure-eps-converted-to.pdf>
 Package pdftex.def Info: Pictures/ASU_superstructure-eps-converted-to.pdf used 
-on input line 32.
+on input line 9.
 (pdftex.def)             Requested size: 483.69684pt x 434.36984pt.
- [63 <./Pictures/ASU_superstructure-eps-converted-to.pdf>] (./Tables/SS_results
-_cont.tex)
-(./Tables/SS_results_disc.tex) (./Tables/SS_results_time.tex) [64]
-(./Tables/SS_constraints.tex) [65] (./GNUPlot/FB_converge.tex
+
+(./Content/SteadyApp.tex [58
+
+
+
+] [59 <./Pictures/ASU_superstructure-eps-converted-to.pdf>] (./Tables/Discrepan
+cy.tex) [60] [61] [62] (./Pictures/LPC_example.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 221--221
+[][][]|\T1/aess/m/n/12 (+20) ex-ample
+ []
+
+(./Tables/LPC_example_data.tex)
+Overfull \hbox (6.10838pt too wide) in paragraph at lines 225--226
+[][] 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 242.
+
+
+LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <6> not available
+(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 242.
+
+[63] [64] (./GNUPlot/LPC_init_o2.tex
+
+LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <5> not available
+(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 104.
+
+Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2.eps>
+(epstopdf)                    date: 2012-09-01 17:32:11
+(epstopdf)                    size: 18918 bytes
+(epstopdf)             Output file: <GNUPlot/LPC_init_o2-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-09-01 17:33:33
+(epstopdf)                    size: 4044 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_o2-eps-co
+nverted-to.pdf GNUPlot/LPC_init_o2.eps>
+(epstopdf)             \includegraphics on input line 105.
+Package epstopdf Info: Output file is already uptodate.
+<GNUPlot/LPC_init_o2-eps-converted-to.pdf, id=1180, 238.8925pt x 141.52875pt>
+File: GNUPlot/LPC_init_o2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use GNUPlot/LPC_init_o2-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/LPC_init_o2-eps-converted-to.pdf used on input
+ line 105.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (21.32439pt too wide) in paragraph at lines 107--282
+[][] 
+ []
+
+(./GNUPlot/LPC_init_n2.tex
+Package epstopdf Info: Source file: <GNUPlot/LPC_init_n2.eps>
+(epstopdf)                    date: 2012-09-01 17:32:10
+(epstopdf)                    size: 18995 bytes
+(epstopdf)             Output file: <GNUPlot/LPC_init_n2-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-09-01 17:33:35
+(epstopdf)                    size: 3765 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_n2-eps-co
+nverted-to.pdf GNUPlot/LPC_init_n2.eps>
+(epstopdf)             \includegraphics on input line 105.
+Package epstopdf Info: Output file is already uptodate.
+
+<GNUPlot/LPC_init_n2-eps-converted-to.pdf, id=1181, 238.8925pt x 141.52875pt>
+File: GNUPlot/LPC_init_n2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use GNUPlot/LPC_init_n2-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/LPC_init_n2-eps-converted-to.pdf used on input
+ line 105.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (21.32439pt too wide) in paragraph at lines 107--288
+[][] 
+ []
+
+(./Tables/SS_results_cont.tex
+
+LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <7> not available
+(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 5.
+
+) (./Tables/SS_results_disc.tex) (./Tables/SS_results_time.tex) [65 <./GNUPlot/
+LPC_init_o2-eps-converted-to.pdf> <./GNUPlot/LPC_init_n2-eps-converted-to.pdf>]
+(./Tables/SS_constraints.tex) [66] (./GNUPlot/FB_converge.tex
 Package epstopdf Info: Source file: <GNUPlot/FB_converge.eps>
 (epstopdf)                    date: 2012-12-07 20:03:16
 (epstopdf)                    size: 17672 bytes
@@ -2138,21 +2174,21 @@ nverted-to.pdf GNUPlot/FB_converge.eps>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/FB_converge-eps-converted-to.pdf, id=1182, 238.8925pt x 96.36pt>
+<GNUPlot/FB_converge-eps-converted-to.pdf, id=1200, 238.8925pt x 96.36pt>
 File: GNUPlot/FB_converge-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/FB_converge-eps-converted-to.pdf>
 Package pdftex.def Info: GNUPlot/FB_converge-eps-converted-to.pdf used on input
  line 108.
 (pdftex.def)             Requested size: 238.8919pt x 96.35974pt.
-) [66 <./GNUPlot/FB_converge-eps-converted-to.pdf>] [67] (./Tables/SS_results_d
-ual_cont.tex
+) [67 <./GNUPlot/FB_converge-eps-converted-to.pdf>] (./Tables/SS_results_dual_c
+ont.tex
 Overfull \hbox (5.43454pt too wide) in paragraph at lines 5--10
  [] 
  []
 
-) (./Tables/SS_results_dual_disc.tex) [68] [69] [70] [71]
-(./GNUPlot/step_response.tex
+) (./Tables/SS_results_dual_disc.tex) [68]) (./Content/DynamicApp.tex [69]
+[70] [71] [72] (./GNUPlot/step_response.tex
 Package epstopdf Info: Source file: <GNUPlot/B1_Plot.eps>
 (epstopdf)                    date: 2013-01-23 18:43:28
 (epstopdf)                    size: 2076672 bytes
@@ -2164,59 +2200,194 @@ ted-to.pdf GNUPlot/B1_Plot.eps>
 (epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
 
-<GNUPlot/B1_Plot-eps-converted-to.pdf, id=1221, 648.4225pt x 426.59375pt>
+<GNUPlot/B1_Plot-eps-converted-to.pdf, id=1239, 648.4225pt x 426.59375pt>
 File: GNUPlot/B1_Plot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GNUPlot/B1_Plot-eps-converted-to.pdf>
 Package pdftex.def Info: GNUPlot/B1_Plot-eps-converted-to.pdf used on input lin
 e 53.
 (pdftex.def)             Requested size: 648.42091pt x 426.5927pt.
-) [72 <./GNUPlot/B1_Plot-eps-converted-to.pdf>] [73
+) [73 <./GNUPlot/B1_Plot-eps-converted-to.pdf>] (./GNUPlot/N2_ADyn_plus.tex
+Package epstopdf Info: Source file: <GNUPlot/N2_ADyn_plus.eps>
+(epstopdf)                    date: 2013-01-25 14:23:39
+(epstopdf)                    size: 18457 bytes
+(epstopdf)             Output file: <GNUPlot/N2_ADyn_plus-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2013-01-25 14:24:35
+(epstopdf)                    size: 3359 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/N2_ADyn_plus-eps-c
+onverted-to.pdf GNUPlot/N2_ADyn_plus.eps>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
+
+<GNUPlot/N2_ADyn_plus-eps-converted-to.pdf, id=1247, 238.8925pt x 141.52875pt>
+File: GNUPlot/N2_ADyn_plus-eps-converted-to.pdf Graphic file (type pdf)
+
+<use GNUPlot/N2_ADyn_plus-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/N2_ADyn_plus-eps-converted-to.pdf used on inpu
+t line 107.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (6.81407pt too wide) in paragraph at lines 109--152
+[][] 
+ []
+
+(./GNUPlot/N2_ADyn_minus.tex
+Package epstopdf Info: Source file: <GNUPlot/N2_ADyn_minus.eps>
+(epstopdf)                    date: 2013-01-25 14:23:43
+(epstopdf)                    size: 18458 bytes
+(epstopdf)             Output file: <GNUPlot/N2_ADyn_minus-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2013-01-25 14:24:37
+(epstopdf)                    size: 3378 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/N2_ADyn_minus-eps-
+converted-to.pdf GNUPlot/N2_ADyn_minus.eps>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
+
+<GNUPlot/N2_ADyn_minus-eps-converted-to.pdf, id=1248, 238.8925pt x 141.52875pt>
+File: GNUPlot/N2_ADyn_minus-eps-converted-to.pdf Graphic file (type pdf)
+<use GNUPlot/N2_ADyn_minus-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/N2_ADyn_minus-eps-converted-to.pdf used on inp
+ut line 107.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (6.81407pt too wide) in paragraph at lines 109--157
+[][] 
+ []
+
+(./GNUPlot/LPC_init_o2_s1.tex
+Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2_s1.eps>
+(epstopdf)                    date: 2013-01-28 22:57:38
+(epstopdf)                    size: 16969 bytes
+(epstopdf)             Output file: <GNUPlot/LPC_init_o2_s1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-01-28 22:58:57
+(epstopdf)                    size: 3237 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_o2_s1-eps
+-converted-to.pdf GNUPlot/LPC_init_o2_s1.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+
+<GNUPlot/LPC_init_o2_s1-eps-converted-to.pdf, id=1249, 238.8925pt x 141.52875pt
+>
+File: GNUPlot/LPC_init_o2_s1-eps-converted-to.pdf Graphic file (type pdf)
+ <use GNUPlot/LPC_init_o2_s1-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/LPC_init_o2_s1-eps-converted-to.pdf used on in
+put line 99.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (6.81407pt too wide) in paragraph at lines 101--167
+[][] 
+ []
+
+(./GNUPlot/LPC_init_o2_s2.tex
+Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2_s2.eps>
+(epstopdf)                    date: 2013-01-28 22:57:44
+(epstopdf)                    size: 17604 bytes
+(epstopdf)             Output file: <GNUPlot/LPC_init_o2_s2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-01-28 22:58:59
+(epstopdf)                    size: 3504 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_o2_s2-eps
+-converted-to.pdf GNUPlot/LPC_init_o2_s2.eps>
+(epstopdf)             \includegraphics on input line 101.
+Package epstopdf Info: Output file is already uptodate.
+
+<GNUPlot/LPC_init_o2_s2-eps-converted-to.pdf, id=1250, 238.8925pt x 141.52875pt
+>
+File: GNUPlot/LPC_init_o2_s2-eps-converted-to.pdf Graphic file (type pdf)
+ <use GNUPlot/LPC_init_o2_s2-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/LPC_init_o2_s2-eps-converted-to.pdf used on in
+put line 101.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (6.81407pt too wide) in paragraph at lines 103--172
+[][] 
+ []
+
+(./GNUPlot/LPC_init_o2_s3.tex
+Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2_s3.eps>
+(epstopdf)                    date: 2013-01-28 22:57:46
+(epstopdf)                    size: 18262 bytes
+(epstopdf)             Output file: <GNUPlot/LPC_init_o2_s3-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-01-28 22:59:01
+(epstopdf)                    size: 3772 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_o2_s3-eps
+-converted-to.pdf GNUPlot/LPC_init_o2_s3.eps>
+(epstopdf)             \includegraphics on input line 103.
+Package epstopdf Info: Output file is already uptodate.
+
+<GNUPlot/LPC_init_o2_s3-eps-converted-to.pdf, id=1251, 238.8925pt x 141.52875pt
+>
+File: GNUPlot/LPC_init_o2_s3-eps-converted-to.pdf Graphic file (type pdf)
+ <use GNUPlot/LPC_init_o2_s3-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/LPC_init_o2_s3-eps-converted-to.pdf used on in
+put line 103.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (6.81407pt too wide) in paragraph at lines 105--182
+[][] 
+ []
+
+(./GNUPlot/LPC_init_o2_s4.tex
+Package epstopdf Info: Source file: <GNUPlot/LPC_init_o2_s4.eps>
+(epstopdf)                    date: 2013-01-28 22:57:48
+(epstopdf)                    size: 18924 bytes
+(epstopdf)             Output file: <GNUPlot/LPC_init_o2_s4-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-01-28 22:59:03
+(epstopdf)                    size: 4045 bytes
+(epstopdf)             Command: <repstopdf --outfile=GNUPlot/LPC_init_o2_s4-eps
+-converted-to.pdf GNUPlot/LPC_init_o2_s4.eps>
+(epstopdf)             \includegraphics on input line 105.
+Package epstopdf Info: Output file is already uptodate.
+
+<GNUPlot/LPC_init_o2_s4-eps-converted-to.pdf, id=1252, 238.8925pt x 141.52875pt
+>
+File: GNUPlot/LPC_init_o2_s4-eps-converted-to.pdf Graphic file (type pdf)
+ <use GNUPlot/LPC_init_o2_s4-eps-converted-to.pdf>
+Package pdftex.def Info: GNUPlot/LPC_init_o2_s4-eps-converted-to.pdf used on in
+put line 105.
+(pdftex.def)             Requested size: 238.8919pt x 141.5284pt.
+)
+Overfull \hbox (6.81407pt too wide) in paragraph at lines 107--187
+[][] 
+ []
+
+) (./Content/IssuesApp.tex [74
 
 
-])) [74]
+ <./GNUPlot/N2_ADyn_plus-eps-converted-to.pdf> <./GNUPlot/N2_ADyn_minus-eps-con
+verted-to.pdf>] [75 <./GNUPlot/LPC_init_o2_s1-eps-converted-to.pdf> <./GNUPlot/
+LPC_init_o2_s2-eps-converted-to.pdf> <./GNUPlot/LPC_init_o2_s3-eps-converted-to
+.pdf> <./GNUPlot/LPC_init_o2_s4-eps-converted-to.pdf>])) [76]
 \openout2 = `Content/outlook.aux'.
 
  (./Content/outlook.tex
-Chapter 6.
-) [75
+Chapter 7.
+) [77
 
 
 
-] (./Diplomarbeit.bbl [76
+] (./Diplomarbeit.bbl [78
 
 
-] [77]) [78] [79]
-\openout2 = `Content/appendix_pengrob.aux'.
-
- (./Content/appendix_pengrob.tex
-Appendix A.
-[80
-
-
-]) [81]
-\openout2 = `Content/appendix_ModelCompact.aux'.
-
- (./Content/appendix_ModelCompact.tex
-Appendix B.
-) [82
-
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
- (./Diplomarbeit.aux (./Content/Preamble/CoverPage.aux)
-(./Content/Preamble/TaskDescription.aux)
+] [79] [80])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
+ [81]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
+ (./Diplomarbeit.aux
+(./Content/Preamble/CoverPage.aux) (./Content/Preamble/TaskDescription.aux)
 (./Content/Preamble/StatutoryDeclaration.aux) (./Content/Lists.aux)
 (./Content/Abstract.aux) (./Content/Introduction.aux) (./Content/AirSep.aux)
 (./Content/ProcessEconomics.aux) (./Content/ProcessModel.aux)
-(./Content/optimization.aux) (./Content/outlook.aux)
-(./Content/appendix_pengrob.aux) (./Content/appendix_ModelCompact.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
+(./Content/optimization.aux) (./Content/ModelApp.aux) (./Content/outlook.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `Diplomarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 44CC6D5B4E5D05781A5ADB32F33EBCA8;3279.
+(rerunfilecheck)             Checksum: E1D472A6251A3503B8A2E1D265482527;3471.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2227,13 +2398,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 62.
  ) 
 Here is how much of TeX's memory you used:
- 40843 strings out of 493488
- 833330 string characters out of 3144749
- 1088950 words of memory out of 3000000
- 42243 multiletter control sequences out of 15000+200000
+ 40899 strings out of 493488
+ 835069 string characters out of 3144749
+ 1085674 words of memory out of 3000000
+ 42294 multiletter control sequences out of 15000+200000
  76867 words of font info for 355 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  76i,17n,92p,679b,1666s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2256,10 +2427,10 @@ fbrmi10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb
 ve/2012/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb><c:/texlive/2012/tex
 mf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2012/texmf-dist/fo
 nts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Diplomarbeit.pdf (97 pages, 1365730 bytes).
+Output written on Diplomarbeit.pdf (96 pages, 1372083 bytes).
 PDF statistics:
- 1478 PDF objects out of 1728 (max. 8388607)
- 1304 compressed objects within 14 object streams
- 530 named destinations out of 1000 (max. 500000)
- 46113 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1491 PDF objects out of 1728 (max. 8388607)
+ 1312 compressed objects within 14 object streams
+ 518 named destinations out of 1000 (max. 500000)
+ 46167 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -10,7 +10,7 @@
 \usepackage{subcaption}
 %\usepackage{graphics}
 %\usepackage{rotating}
-%\usepackage{pstricks}
+%\usepackage{pstricks} 
 \usepackage{longtable}
 \usepackage{amssymb}
 \usepackage{amsmath}

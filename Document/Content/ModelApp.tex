@@ -1,0 +1,50 @@
+\chapter{Process model application}
+\label{chp:processmodelapp}
+\todo{write chapter introduction}
+
+    \section{Example process}
+        \begin{figure}
+            \footnotesize
+            \center
+            \includegraphics[width=\linewidth]{Pictures/ASU_superstructure}
+            \caption{Example process superstructure.}
+            \label{fig:opt:exppro}
+        \end{figure}
+
+        The developed models were combined to a process flowsheet for the cryogenic air separation process.
+        As no specific process was being evaluated, the process configuration was modeled after an
+        published example process flowsheet \cite{Kooijman.}. \Figref{fig:opt:exppro}
+        shows the flowsheet considered henceforth. Air is drawn from the surrounding at ambient conditions
+        and compressed with inter-cooling stages. Afterwards the entering process stream exchange heat
+        with the product streams.
+
+        The stream is then divided into two separate streams. One part is expanded in a turbine, and fed to
+        the low pressure column (LPC) while the majority is fed to the high pressure column (HPC).
+        Condenser and reboiler are combined in a single unit. A side column to the LPC generates pure
+        argon. The condensate form the HPC is partially fed into the LPC. The oxygen rich sump product form the HPC
+        is used to condensate the CAC top product, and afterwards fed into the LPC. From the reboiler side liquid oxygen
+        is recovered from the process. From the top of LPC and HPC gaseous nitrogen is drawn. Liquid Argon is drawn from 
+        the CAC condenser. 
+        
+        AS can be seen, this process is highly integrated with respect to energy and material streams. For both the
+        steady-state and dynamic process model, the same separation sequence is considered. Compression and heat-exchange 
+        are only explicitly modeled in the steady-state process. While the steady-state models do provide the possibility 
+        to calculate pressure drops by means of an hydraulic model, they were assumed constant in all steady-state applications. 
+        When using the dynamic models, hydraulic equations have to be considered. For the case of the ASU process different column 
+        internals are often installed. The HPC as the smallest column can be economically operated as a trayed column, hence the 
+        respective hydraulic and cost models were employed there. The LPC and CAC are mostly equipped with structured 
+        packings. 
+        
+        Another difference in the steady-state and dynamic models was the considered superstructure. For optimizing the number 
+        of separation stages, a maximum value needs to be guessed. In the steady-state case those were set to 40 for the HPC
+        and 60 for the LPC and CAC respectively. With the steady-state results in mind, these were reduced to 25 for the HPC
+        and 45 for LPC and CAC when constructing the dynamic process.  
+
+    \section{Steady-state models}
+        \input{Content/SteadyApp}
+
+    \section{Dynamic models}
+        \input{Content/DynamicApp}
+        
+    \section{model application issues}
+        \input{Content/IssuesApp}

@@ -1,0 +1,196 @@
+    The results of steady-state optimizations give very valuable information about the desired operation of
+    the process in question. In real-live applications however, processes will always display transient behaviour,
+    which cannot be captured by steady-state models. Even if the steady-state in question is in general a stable one,
+    which means, that the process will return to the previous operation point given an external disturbance, process
+    start-up and shut-down are in most cases still highly dynamic.
+
+    The question of controlling a process is closely linked to the dynamic simulations. Any given process is required
+    to operate within ceratin bounds and subject to external disturbances, which might cause the process to deviate
+    from requirements on product specifications. To be able to handle such disturbances, or in some cases even be able
+    to meet product requirements, control structures are implemented.
+
+    The consideration of dynamics further opens the possibility to extend the optimization beyond monetary measures, or
+    consider transient aspects which play a role in process profitability. This might include the optimization of transition
+    times between multiple steady states, or an improved start-up or shut down behaviour. In case of the ASU which might also
+    be implemented as a utility to a downstream process, the load following behaviour according to utility requirements could
+    also be analyzed.
+
+    In an effort to demonstrate dynamic optimization capabilities, several steps were taken. To be able to consider a control
+    structure, controllers have to be implemented. Beyond that, as the control structure is not known a priori, a control
+    superstructure has to be considered. The aim was to to optimize the control structure for a minimal transition time between
+    the two steady-states considered during steady state optimization. The highly integrated nature of process leads to degrees
+    freedom different from what would be expected from a regular distillation collum. Furthermore are they different
+    from the steady-state case as described in \secref{sec:mathpro:steady:specinit}.
+
+    \subsection{Degrees of freedom}
+        In order to gain more insight into the behaviour of the dynamic models presented above an analysis
+        of the degrees of freedom within the model is at hand. For the degrees of freedom the cost correlations
+        will be disregarded, as they for a closed system of equations given the inputs generated form the column
+        model. Furthermore interdependencies can be disregarded, as the cost model consist only of ''forward''
+        computations. In practical terms this statement can be confirmed since the models can be evaluated
+        with and without costing equations. Hence only the stage and hydraulic equations will be considered.
+
+        For a given column without condenser or reboiler the model is made up of $[n_S (5n_C + 24) + n_F]$
+        differential algebraic equations in $[n_S (5n_C + 29) + n_F (n_S + n_C + 3) + 1]$ variables. In this
+        isolated case all feed flow rates, their composition and enthalpies would be specified. In this case
+        the feeds include a hypothetical condenser reflux (the upper most feed) as well as reboiler reflux
+        (lowest feed). Along with the feeds and their qualities, the feed splits and reflux split have to be
+        assigned. Lastly the column diameter needs to be known. This yields $[n_F (n_S + n_C + 2) + n_S + 1]$
+        specifications. To close the system initial conditions for all states have to be given. There
+        are a total of $[4 n_S ]$ dynamic states in a column section.
+
+        The condenser reboiler unit is made up of a total condenser and a reboiler side. For the condenser side
+        holdups are neglected. While the reboiler side is modeled much like a column stage. The complete model
+        consists of $[14 + 6 n_C]$ equations in $[17 + 6 n_C]$ variables. The three specified variables would
+        commonly correspond to the condenser pressure, reboiler volume and reflux ratio on the condenser side.
+        While other specifications are conceivable, they cannot be made entirely arbitrarily. A specification
+        on the reboiler pressure for instance would result in a high index problem ($\approx n_S^{LPC}$) which
+        could not be solved without drastically reformulating the model.
+
+    \subsection{Dynamic process behaviour}
+        With the dynamic models a more rigorous approach to analysing the process behaviour is possible.
+        Several aspects of the transient behaviour are of interest. To gain an insight into the process dynamics
+        and test the capabilities of the implemented models, several simulation studies have been conducted.
+
+        Especially when dealing with control aspects of a process, the step responses to disturbances in the
+        process are of great interest. Therefore first a study of process reactions to various internal and
+        external disturbances will be conducted. This is followed by a more detailed investigation of some phenomena
+        occurring during process operations.
+
+
+        \subsubsection{Step responses}
+            To identify a possible control structure the dynamic interactions of the process have to be analyzed.
+            The most current method of controlling a process would be model predictive control (MPC), where
+            the set point for all manipulated variables are provided by a central controller, which is based
+            on a rigorous process model. In this case however a simpler and in practice still more common
+            approach is to implement PID control loops. In that case each measured variable is paired
+            with a manipulated variable, which is altered to keep the measured quantity within operational
+            bounds.
+
+            Among the most tested tools to synthesize a control structure are the relative gain array (RGA) and block
+            relative gain (BRG). Those tools provide a measure for the interactions within the process. As it
+            is unlikely, that one manipulated variable will only affect the controlled variable it is assigned to.
+            Intuitively, highly integrated processes display strong interactions between all manipulated and
+            measured variables. To properly calculate the RGA or BRG, a control (linearized) process model
+            in terms of transfer functions is necessary. However, at this stage the requirement is not to find an
+            optimal control structure, but rather a feasible one, which can be used as initial guess for
+            optimization of the same.
+
+            To derive feasible pairings, first all manipulated and measured variables are identified, based on the
+            previously discussed degrees of freedom. The measured variables correspond to the constraints enforced
+            on the process.
+            \begin{itemize}
+                \item LPC nitrogen purity $y_{1,N_2}^{LPC}$
+                \item HPC nitrogen purity $y_{1,N_2}^{HPC}$
+                \item oxygen product purity $x_{O_2}^{CR main}$
+                \item CAC argon purity $y_{1,Ar}^{CAC}$
+                \item nitrogen product flowrate $\dot{n}_{N_2}$
+                \item oxygen product flowrate $\dot{n}_{O_2}$
+                \item argon product flowrate $\dot{n}_{Ar}$
+            \end{itemize}
+
+            The manipulated variables are derived from the degrees of freedom analysis.
+            \begin{itemize}
+                \item main air feed flowrate $\dot{n}_{air}$
+                \item CR main reflux ratio $\nu^{CR main}$
+                \item CR CAC reflux ratio $\nu^{CR CAC}$
+                \item HPC side stream flowrate $S^V_1$
+                \item LPC side stream flowrate 1 $S^V_1$
+                \item LPC side stream flowrate 2 $S^V_2$
+            \end{itemize}
+
+            To analyze the impact of the different manipulated variables, several simulation studies were
+            undertaken. The steady state attained during steady state optimization was taken as nominal operating
+            conditions. To get a feel for the process behaviour, the responses to a $10 \%$ step increase in
+            the manipulated variables was simulated. The results are displayed in \figref{fig:opt:stepresp}.
+
+            Before discussing the results in more detail, some comments have to be made as to how these results
+            were attained, and how they are displayed. While for most cases the step response simulation was
+            straightforward, it did lead to errors for the vapour side draw from the high pressure column. To still
+            produce usable data, a steep ramp was used alternatively. Over a time-interval of 10 seconds, the nominal
+            value was increased  by ten percent, and remained steady afterwards. To produce a meaningful and comparable
+            representation of the simulation results, all values for the measured variables were normalized to their
+            respective values under normal operating conditions. Furthermore there are two time scales employed, indicated
+            on the bar below the graphs. All cases were simulated for the span of an entire day, and the step was applied
+            at the very beginning of the simulation. When analysing the results, it turned out, that dynamic effects were
+            taking place on two different scales. While some measured variables were only approaching steady-state
+            at the end of the day, others reached it within about an hour. The different time scales are due to the
+            nature of the measured variables. Pressure associated values such as flowrates change much more quickly,
+            than temperature or concentrations \cite{Roffel.2000}. It also needs to be pointed out, that the y-scales
+            for the graphs differ between measured variables. To maintain some degree or comparability,
+            the y-scales are constant for each measured variable. In the given process configuration, the changes
+            inflicted by the applied steps are of rather low amplitude. For the considered concentrations, the changes
+            to the order of $10^-{3}$ or 0.1 \% were observed. Non the less, given these responses, preliminary candidates
+            for coupling between controlled and measured variables can be obtained.
+
+            \begin{landscape}
+                \begin{figure}
+                    \center
+                    \input{GNUPlot/step_response}
+                    \caption{step responses.}
+                    \label{fig:opt:stepresp}
+                \end{figure}
+            \end{landscape}
+
+
+
+        \subsubsection{Dynamic profiles}
+            The previous section showed only minor reactions to step changes in the manipulated variables. However
+            a closer look at the dynamic column profiles reveals a much different picture. To analyze the internal
+            column behaviour a external disturbance to the feed pressure was applied. As a result, the concentration
+            profiles within the column undergo a various changes. Especially with high purity separation sequences,
+            a highly non-linear behaviour with two distinct characteristics. For one, two time scales can
+            be observed, in which new steady states are reached. Secondly, the transition time
+            between two steady states relies heavily on the direction of the disturbance \cite{Hwang.1991}. The first
+            effect deal with short- and long-term dynamics, while the second is referred to as asymmetric dynamics.
+
+            \begin{figure}
+                \scriptsize
+                \center
+                \begin{subfigure}{0.48\textwidth}
+                    \input{GNUPlot/N2_ADyn_plus}
+                    \caption{Dynamic profile after feed enthalpy increase.}
+                    \label{fig:N2_ADyn_plus}
+                \end{subfigure}
+                    \begin{subfigure}{0.48\textwidth}
+                    \input{GNUPlot/N2_ADyn_minus}
+                    \caption{Dynamic profile after feed enthalpy decrease.}
+                    \label{fig:N2_ADyn_minus}
+                \end{subfigure}
+            \end{figure}
+
+            \begin{figure}
+                \scriptsize
+                \center
+                \begin{subfigure}{0.48\textwidth}
+                    \input{GNUPlot/LPC_init_o2_s1}
+                    \caption{Dynamic profile after feed enthalpy increase.}
+                    \label{fig:N2_ADyn_plus}
+                \end{subfigure}
+                    \begin{subfigure}{0.48\textwidth}
+                    \input{GNUPlot/LPC_init_o2_s2}
+                    \caption{Dynamic profile after feed enthalpy decrease.}
+                    \label{fig:N2_ADyn_minus}
+                \end{subfigure}
+            \end{figure}
+
+            \begin{figure}
+                \scriptsize
+                \center
+                \begin{subfigure}{0.48\textwidth}
+                    \input{GNUPlot/LPC_init_o2_s3}
+                    \caption{Dynamic profile after feed enthalpy increase.}
+                    \label{fig:N2_ADyn_plus}
+                \end{subfigure}
+                    \begin{subfigure}{0.48\textwidth}
+                    \input{GNUPlot/LPC_init_o2_s4}
+                    \caption{Dynamic profile after feed enthalpy decrease.}
+                    \label{fig:N2_ADyn_minus}
+                \end{subfigure}
+            \end{figure}
+
+
+
+
+
+

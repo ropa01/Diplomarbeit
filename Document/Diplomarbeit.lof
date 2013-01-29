@@ -10,19 +10,18 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces simplified cryogenic air separation process.\relax }}{17}{figure.caption.21}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces superstructures for column and column stages.\relax }}{19}{figure.caption.23}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces example column.\relax }}{27}{figure.caption.33}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces initialization example concentration profiles.\relax }}{28}{figure.caption.34}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Integrated condenser \& reboiler unit.\relax }}{29}{figure.caption.35}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Superstructure for multi-stream heat exchanger. \cite {Yee.1990}\relax }}{31}{figure.caption.38}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Multi-stage compression.\relax }}{33}{figure.caption.41}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Isenthalpes computed by Peng-Robinson EOS.\relax }}{34}{figure.caption.43}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Column tray.\relax }}{37}{figure.caption.45}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{49}{figure.caption.63}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Optimization example process.\relax }}{63}{figure.caption.79}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces NCP convergence failure.\relax }}{66}{figure.caption.85}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces step responses.\relax }}{72}{figure.caption.91}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Integrated condenser \& reboiler unit.\relax }}{23}{figure.caption.30}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Superstructure for multi-stream heat exchanger. \cite {Yee.1990}\relax }}{26}{figure.caption.33}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Multi-stage compression.\relax }}{28}{figure.caption.36}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Isenthalpes computed by Peng-Robinson EOS.\relax }}{29}{figure.caption.38}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Column tray.\relax }}{32}{figure.caption.40}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{44}{figure.caption.58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Example process superstructure.\relax }}{59}{figure.caption.74}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces example column.\relax }}{64}{figure.caption.77}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces initialization example concentration profiles.\relax }}{65}{figure.caption.78}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces NCP convergence failure.\relax }}{67}{figure.caption.84}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces step responses.\relax }}{73}{figure.caption.89}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
