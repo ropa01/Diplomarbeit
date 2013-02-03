@@ -90,12 +90,6 @@ Roger Fletcher and William Morton.
 \newblock {\em Computers {\&} Chemical Engineering}, 23(11-12):1811--1824,
   2000.
 
-\bibitem{Grossmann.2002}
-Ignacio~E. Grossmann.
-\newblock {R}eview of {N}onlinear {M}ixed-{I}nteger and {D}isjunctive
-  {P}rogramming {T}echniques.
-\newblock {\em Optimization and Engineering}, 3(3):227--252, 2002.
-
 \bibitem{Grossmann.2005}
 Ignacio~E. Grossmann, P{\'i}o~A. Aguirre, and Mariana Barttfeld.
 \newblock {O}ptimal synthesis of complex distillation columns using rigorous
@@ -182,6 +176,12 @@ P.~Mahapatra and B.~W. Bequette.
 {Mark Pinto}.
 \newblock {S}caling in g{P}{O}{R}{O}{M}{S}~- training presentation, 2008.
 
+\bibitem{Marquardt.1988}
+Wolfgang Marquardt.
+\newblock {\em {N}ichtlineare {W}ellenausbreitung: {E}in {W}eg zu reduzierten
+  dynamischen {M}odellen von {S}tofftrennprozessen}.
+\newblock VDI Verlag, D{\"u}sseldorf [Germany], 1988.
+
 \bibitem{Marquardt.2008}
 Wolfgang Marquardt.
 \newblock {\em {P}rozessentwicklung in der {V}erfahrenstechnik}.
@@ -205,11 +205,6 @@ Peter~R. Nelson.
 \newblock {\em {O}xygen from air by pressure swing adsorption}.
 \newblock PhD thesis, {Cape Peninsula University of technology}, Cape Town and
   South Africa, 1993.
-
-\bibitem{Nocedal.2006}
-Jorge Nocedal and Stephen~J. Wright.
-\newblock {\em {N}umerical optimization}.
-\newblock Springer, New York, 2 edition, 2006.
 
 \bibitem{Pantelides.2003}
 Constantinos~C. Pantelides.

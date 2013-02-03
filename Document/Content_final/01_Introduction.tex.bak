@@ -1,0 +1,43 @@
+\chapter{Introduction}
+\label{chp:intro}
+Distillation columns are to this day the most prominent way for separating liquid mixtures. Vast amounts of energy
+are used during the separation of various product streams. In fact often the majority of the energy required in
+a given chemical process is consumed in the separation stage. Therefore separation sequences have been under investigation
+for many years. The synthesis of separation sequences poses great challenges, especially if complex
+multi-component mixtures are considered.
+
+Several shortcut methods have been developed for screening of potential separation sequences. If several
+flowsheet alternatives are constructed it becomes necessary to further investigate, which is the most
+suited for requirements of the separation task at hand. To do so rigourous process models which incorporate tray-by-tray balances and
+non-ideal equilibria are employed. One approach, which is currently still carried out in industry practice,
+is to conduct a sequence of process simulations to find the most promising configuration in a manual, trial
+and error based procedure. However this approach is unlikely to yield near optimal results.
+
+The more reliable alternative to synthesize near optimal flow sheets is to perform mathematical optimization
+on a process superstructure. In that context continuous decisions such as operating pressure or temperatures,
+as well as discrete decisions associated with structural choices on the process equipment have to be made. The
+resulting problems are called mixed-integer non-linear programs (MINLP), which pose considerable challenges
+in their solution process. Due to that structural optimization is carried out by experts, with careful consideration
+when setting up the problem and optimization in specialized programs.
+
+On the other hand process simulation in flowsheeting environments such as \aspen or \gproms is an integral
+part of industrial practice. Hence the scope of this thesis is to implement a flexible, easily deployed
+model for process optimization in the aforementioned modeling environment \gproms, which is capable of
+automated model initialization as well as structural optimization.
+The implemented models will then be applied to the cryogenic air separation process. This process is used to
+produce highly pure nitrogen, oxygen and noble gases such as argon. While the components themselves
+do not display any severe non-idealities, the process is highly integrated and coupled in terms of energy
+and material streams. The column configuration features multiple feeds and side draws in conjunction with
+a side stripping section. This makes it especially challenging in terms of process optimization.
+
+The following thesis is structured in six chapters. First a brief description of air separation technologies
+will be given. Subsequently general approaches to estimate the economics associated with process design will be discussed,
+as economic considerations are of major concern when designing a chemical process.
+The third chapter consists of a detailed overview of the models implemented in \gproms. Afterwards,
+the optimization of chemical processes will be dealt with. Within that section, first some general theoretical
+basics of optimization theory are introduced followed by a closer look at solution algorithms for
+discrete-continuous problems. Finally optimization results for the cryogenic air separation
+process are presented. For that example, the performance of different solution approaches and optimization objectives
+in terms of optimality and efficiency will be compared.
+The final chapter summarizes significant parts of the thesis and provides suggestions for further investigation in
+the matter.

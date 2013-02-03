@@ -1,0 +1,41 @@
+\chapter{Appendix A}
+\label{chp:appendix}
+
+\section{Peng-Robinson derived properties}
+\label{app:peng_rob_deriv}
+    The Peng-Robinson equation of state cab be rewritten as a cubic polynomial in terms
+    of the compressibility factor $Z = \frac{pv}{RT}$
+    \Eq{}{
+        0 & = Z^3 + \alpha Z^2 + \beta Z + \gamma \\
+        \alpha & = B - 1 \\
+        \beta & = A - 2B - 3B^3 \\
+        \gamma & = B^3 + B^3 - AB \\
+        A & = \frac{ap}{(RT)^2} \\
+        B & = \frac{bp}{RT}
+    }%
+
+    The \emph{Joule-Thompson} factor cab be expressed as
+    \Eq{}{
+        \mu_{JT} = \frac{1}{c_p} \left[T \left(\fracddpart{v}{T}\right)_p - v \right]
+    }
+    and in terms of the compressibility factor
+    \Eq{}{
+        \left(\fracddpart{v}{T}\right)_p & = \frac{R}{p} \left[T \left(\fracddpart{Z}{T}\right)_p + Z \right] \\
+        \left(\fracddpart{Z}{T}\right)_p & = \frac{\left(\fracddpart{A}{T}\right)_p (B-Z) + \left(\fracddpart{B}{T}\right)_p (6BZ + 2Z - 3B^2 - 2B + A - Z^2)}{3Z^2 + 2 (B-1) Z + (A-2B-3B^2)} \\
+        \left(\fracddpart{A}{T}\right)_p & = \frac{p}{(RT)^2} \left(a' - \frac{2a}{T} \right) \\
+        \left(\fracddpart{B}{T}\right)_p & = \frac{-bp}{RT^2} \\
+        a' & = \frac{da}{dT} = \frac{1}{2} \sum_{i=1}^C \sum_{j=1}^C w_i w_j (1-k_{ij}) \left( \sqrt{\frac{a_j}{a_i}} a'_i + \sqrt{\frac{a_i}{a_j}} a'_j\right) \\
+        a'_i & = \frac{da_i}{dT} = \frac{-m_ia_i}{\left[ 1+m_i(1-\sqrt{\frac{T}{T_{ci}}})\right] \sqrt{TT_{ci}}}
+    }
+    
+    \Eq{eq:pr:fugcoeff}{
+        \ln \varphi & = \frac{1}{RT} \, \int_0^p \left( V - \frac{RT}{p} \right) dp, \\
+        \ln \varphi & = (Z - 1) - \ln Z - \int_{\infty}^V \frac{Z - 1}{V} dV
+    }
+    \Eqml{}{
+        \ln \varphi_i = \frac{b_i}{b} (Z - 1) - \ln \left[ Z \cdot \left( 1 - \frac{b}{V} \right) \right] \\
+            + \frac{1}{b R T} \left[ \frac{\sqrt{2} a b_i}{4 b} - \sqrt{\frac{a a_i}{2}}\right] \ln
+            \left( 1 + \frac{b}{V}\right) \left( \frac{1 + \frac{b}{V} \left( 1 + \sqrt{2} \right)}{
+            1 + \frac{b}{V} \left( 1 - \sqrt{2} \right)} \right)
+    }
+

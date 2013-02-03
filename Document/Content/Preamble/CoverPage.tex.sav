@@ -26,7 +26,7 @@
 
 \begin{minipage}[b]{8.5cm}
 	\begin{flushleft}
-		\raisebox{-2.2mm}{\includegraphics[height=2cm]{Pictures/Logos/AVT_Logo.png}}
+		\raisebox{-2.2mm}{\includegraphics[height=2cm]{Pictures/Logos/AVT_LOGO.eps}}
 		%\textcolor{CPSEBlue}{
 		%\textbf{Professor Efstratios Pistikopoulos} \\ Centre for Process Systems Engineering \\ Imperial College London}
 	\end{flushleft}
@@ -43,7 +43,7 @@
 
 \begin{minipage}[b]{8.5cm}
 	\begin{flushleft}
-		\raisebox{-2.2mm}{\includegraphics[height=2cm]{Pictures/Logos/PSE_Logo.png}}
+		\raisebox{-2.2mm}{\includegraphics[height=2cm]{Pictures/Logos/PSE_Logo.eps}}
 		%\textcolor{CPSEBlue}{
 		%\textbf{Professor Efstratios Pistikopoulos} \\ Centre for Process Systems Engineering \\ Imperial College London}
 	\end{flushleft}
@@ -63,12 +63,13 @@
 
 \begin{center}
 	\vspace{3cm}
-	 \Huge  Capital Cost Evaluation for Optimum Process Design of Cryogenic Air Separation
+	 \Huge  Integration of Model Based Optimal Design Methods in the Process Modeling Environment gPROMS
 	\vspace{1cm}
 	 \vfill \LARGE
 	{Diploma Thesis\\
 	by\\
-	Robert Pack} \vfill{London, SS 2012}
+	Robert Pack} \vfill{London, WS 2012/13}
 \end{center}
 
+\clearpage
 % ende erste Seite

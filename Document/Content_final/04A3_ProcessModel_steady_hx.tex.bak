@@ -1,0 +1,33 @@
+   
+    The issue of heat integration is essential to the economic performance of cryogenic air separation. Foremost
+    one must consider the special column configuration used in the process. Since operation of the condenser in the
+    low pressure section only becomes possible if the reboiler in the high pressure section functions as heat sink,
+    no external utilities are supplied to either unit. Rather they are combined into a single heat exchange unit. Thus
+    the absolute value of the reboiler energy must matched by the energy recovered from the condenser 
+    (see \secref{sec:mathpro:steady:conreb}). Furthermore the material streams entering the process can -- and should -- 
+    exchange heat with the process streams leaving it. The combined condenser \& reboiler for the double effect column is 
+    assumed as a given heat exchange. This makes sense insofar, as this is a necessity in terms of the actual physical 
+    implementation of the process units. Also the usage of the oxygen rich liquid from the HPC as coolant in the Argon 
+    condenser is assumed as fixed.
+
+    This leaves the process stream leaving the compression stage of the process as well as all product and waste streams
+    leaving the process. All those streams are -- for simulation purposes and also in some process implementations  -- fed
+    into a single multi-stream heat exchange unit. In actual processes all heat exchange and much of the process operations
+    take place in the so called ''cold box''. As such a heavily insulated area is referred to. This is done to minimize
+    heat exchange with the surroundings. Therefore and for further reasons compact heat exchange units such as plate-fin
+    multi-stream heat exchangers are favoured when dealing with cryogenic processes in general and the cryogenic air septation
+    in particular.
+
+    Due to the importance of heat integration to the ASU process some thought should be given as to what modelling approach
+    should be employed. Although the field of heat integration is one of the most intensively studied within process engineering,
+    only  a limited amount of approaches is available in open literature \cite{Kamath.2012}.
+    
+    A very simple approach is to employ enthalpy and material balances around the entire unit. 
+    \Eq{}{
+        0 & = \sum_j \left(H_j^{in} - H_j^{out} \right), \\
+        0 & = x_{ji}^{in} - x_{ji}^{out}, \\
+        0 & = p_i^{in} - p_j^{out} - \Delta p_j. 
+        0 & = F_j^{in} - F_j^{out}. 
+    }
+    Here all entering process streams are variable but determined by the respective model equations they are originating from.
+    Hence all but one outlet stream temperature along with all pressure drops must be specified. 

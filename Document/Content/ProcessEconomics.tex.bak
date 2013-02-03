@@ -92,7 +92,7 @@ of evaluating and comparing investment options will be discussed.
         \end{table}
 
     \subsection{During process design}
-        Once the future design has been has been broken down to fewer potential options and first process
+        Once the future design has been broken down to fewer potential options and first process
         flowsheets are available, a more elaborate approach, resulting in much improved estimates, becomes possible.
         In contrast to the most general case, now the aforementioned investment areas can be distinguished.
         The following sections describe how estimates are attained for the respective investment category.
@@ -144,8 +144,7 @@ of evaluating and comparing investment options will be discussed.
         As in the previous section all reference prices need to be scaled for the temporal price
         development. Again the aforementioned indices are used. Furthermore can the prices be corrected for regional
         differences in price structure. Once more correction factors to prices in an reference region in
-        the world (e.g. USA) are employed.
-        \todo[inline]{add ref.}
+        the world (e.g. USA) are employed \cite{Peters.2003}.
 
         In addition to the purchased cost, the costs for installing the process equipment have an significant effect
         on the total needed investment of the process. These installation costs include:
@@ -169,7 +168,7 @@ of evaluating and comparing investment options will be discussed.
         a decentralized control system, as it has been in use for many years. With ever more powerful computers
         a centralized approach, namely model predictive control (MPC) is becoming more relevant. As the
         structure for such a control system may vary significantly from the common designs, the cost factors may
-        as well.
+        as well. 
 
     \subsubsection{Services}
         The utility investments and off-site investments are often referred to as services. Therein included are
@@ -196,7 +195,7 @@ of evaluating and comparing investment options will be discussed.
         	\ncr{t_{op}}{time of process operations}{s}
         }%
 
-        Much in the same way the cost for energy can be approximated. AS for the raw materials, this is once 
+        Much in the same way the cost for energy can be approximated. As for the raw materials, this is once
         more done for each individual process unit, rather then for the process as a whole. Hence
         with the needed energy for equipment $i$ with respect to energy carrier $j$ $e_{ij}$ along with
         the price for energy carrier $j$ $C_{EC}^j$ the total energy cost $C_{EC}$ can be assessed
@@ -207,6 +206,8 @@ of evaluating and comparing investment options will be discussed.
         	\ncr{C^{i}_{EC}}{mass specific cost of energy carrier $i$}{\frac{\$}{kW}}
         	\ncr{\dot{e}_{ij}}{energy flow of to equipment $i$ from energy carrier $j$}{kW}
         }%
+        All cost related to utilities consumed during the operation of the process and not any eventual 
+        down time are calculated using the operating time $t_{op}$
 
     \subsubsection{Working capital}
         The working capital includes all investments necessary for process operations. This means raw

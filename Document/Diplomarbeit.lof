@@ -1,27 +1,33 @@
 \select@language {UKenglish}
+\select@language {ngerman}
+\select@language {ngerman}
+\select@language {UKenglish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of Air Separation Technologies \cite {Prasad.1994}.\relax }}{4}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Air Separation Unit}}{5}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Schematic representation of a three bed PSA process.\relax }}{6}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Membrane unit for gas permeation.\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Comparison of Air Separation Technologies \cite {Prasad.1994}.\relax }}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Air Separation Unit}}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Schematic representation of a three bed PSA process.\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Membrane unit for gas permeation.\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example process superstructure.\relax }}{9}{figure.caption.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Accumulated cash flows over project life-cycle.\cite {Marquardt.2008}\relax }}{14}{figure.caption.16}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Accumulated cash flows over project life-cycle.\cite {Marquardt.2008}\relax }}{17}{figure.caption.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces simplified cryogenic air separation process.\relax }}{17}{figure.caption.21}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces superstructures for column and column stages.\relax }}{19}{figure.caption.23}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Integrated condenser \& reboiler unit.\relax }}{23}{figure.caption.30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Superstructure for multi-stream heat exchanger. \cite {Yee.1990}\relax }}{26}{figure.caption.33}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Multi-stage compression.\relax }}{28}{figure.caption.36}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Isenthalpes computed by Peng-Robinson EOS.\relax }}{29}{figure.caption.38}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Column tray.\relax }}{32}{figure.caption.40}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{44}{figure.caption.58}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces simplified cryogenic air separation process.\relax }}{26}{figure.caption.35}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces superstructures for column and column stages.\relax }}{28}{figure.caption.37}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Integrated condenser \& reboiler unit.\relax }}{32}{figure.caption.45}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Multi-stage compression.\relax }}{35}{figure.caption.47}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Isenthalpes computed by Peng-Robinson EOS.\relax }}{36}{figure.caption.49}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Column tray.\relax }}{39}{figure.caption.51}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Distillation column model structure including sub-models and CASE branches.\relax }}{45}{figure.caption.56}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Outer approximation algorithm.\relax }}{52}{figure.caption.62}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces example column.\relax }}{59}{figure.caption.68}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces initialization example concentration profiles.\relax }}{60}{figure.caption.69}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces NCP convergence failure.\relax }}{62}{figure.caption.75}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces step responses.\relax }}{68}{figure.caption.80}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Example process superstructure.\relax }}{59}{figure.caption.74}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces example column.\relax }}{64}{figure.caption.77}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces initialization example concentration profiles.\relax }}{65}{figure.caption.78}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces NCP convergence failure.\relax }}{67}{figure.caption.84}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces step responses.\relax }}{73}{figure.caption.89}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Superstructure for multi-stream heat exchanger. \cite {Yee.1990}\relax }}{79}{figure.caption.84}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

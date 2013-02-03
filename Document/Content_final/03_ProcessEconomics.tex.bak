@@ -1,0 +1,43 @@
+\chapter{Process economics}
+\label{chp:ProcesEconomics}
+    Aside from question whether a certain process is capable of producing products according to
+    specifications, it needs to be investigated if it does so while meeting economic criteria. The modeling
+    of process economics is a powerful tool to estimate project profitability. Knowledge of process economics
+    is mostly regarded for three types of decisions
+    \regitemize{%
+    	\item{Compare design options with regard to profitability.}
+    	\item{Economically optimize a given design.}
+    	\item{Estimate project profitability}
+    }%
+    In any case the total cost of a given project as well as the cash flow structure will have to be analyzed to supply
+    the decision maker with an accurate estimate of the economic conditions. To do so, adequate measures to compare and
+    analyze a project in economic terms need to be implemented.
+
+    It is evident that, as the more information about a given process becomes available, any cost can be estimated
+    more accurately. During the design phase of a process roughly three different qualities of cost estimation can be identified.
+    \regitemize{
+    	\item{An estimate before designing the process yields an order of magnitude estimation
+    		for supporting market research efforts. (Error $> 30\%$})
+    	\item{An estimate in the early design phase based on essential process equipment. (Error $\pm 30\%$})
+    	\item{An estimate based on an advanced flowsheet and relevant process parameters. (Error $\pm 20\%$})
+    }
+    Once detail engineering commences, even more accurate calculations with errors reducing to $\pm 5\%$
+    can be undertaken\cite{Peters.2003}. At that point a concrete process option will have to be chosen and
+    the investment decision, hence the go-ahead for the project,  will already have to be made. All optimization
+    measures within the scope of this thesis will already have concluded at that time.
+
+    Within \secref{sec:ProjectCost} first we will take a look at how the total cost of a chemical process might be
+    estimated at different design stages. Subsequently in \secref{sec:InvestmentCriteria} some different ways
+    of evaluating and comparing investment options will be discussed.
+
+    \section{Evaluation of chemical processes}
+    \label{sec:ProjectCost}
+    \input{Content_final/03A_ProcessEconomics_eval}
+
+    \section{Investment criteria}
+    \label{sec:InvestmentCriteria}
+    \input{Content_final/03B_ProcessEconomics_invest}
+
+    \section{Economic process model}
+    \input{Content_final/03C_ProcessEconomics_model}
+

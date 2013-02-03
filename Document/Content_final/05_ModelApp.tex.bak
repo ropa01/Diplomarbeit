@@ -1,0 +1,14 @@
+\chapter{Process model application}
+\label{chp:processmodelapp}
+
+    \section{MINLP solution techniques}
+        \input{Content_final/05A_ModelApp_theory}
+
+    \section{Steady-state models}
+        \input{Content_final/05B_ModelApp_steady}
+
+    \section{Dynamic models}
+        \input{Content_final/05C_ModelApp_dynamic}
+
+    \section{Model application issues}
+        \input{Content_final/05D_ModelApp_issues}

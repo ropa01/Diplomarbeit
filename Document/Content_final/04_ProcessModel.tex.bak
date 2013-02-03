@@ -1,0 +1,47 @@
+\chapter{Mathematical process model}
+\label{sec:mathprocess}
+
+    \begin{figure}
+        \center
+        \footnotesize
+        \input{Pictures/ASU_general_color}
+        \caption{simplified cryogenic air separation process.}
+        \label{fig:asu_simple}
+    \end{figure}
+
+    This chapter will illustrate different process units and their mathematical representation.
+    As depicted in \figref{fig:asu_simple} three of the major tasks within the cryogenic air separation process will 
+    be regarded, when formulating the process.
+    These are the compression of ambient air, heat exchange with product streams and the separation of streams.
+    While those different stages are highly interdependent they will be discussed separately and mathematical
+    models for the various process units contained in each stage will be presented.
+
+    The first section (\secref{sec:mathpro:steady}) deals with a steady state version of the process model. Especially
+    for steady state models the issue of initializing the variables in such a way that the solver can converge to a solution
+    becomes crucial. With that in mind the strategies developed to initialize in particular the distillation columns will also
+    be elaborated upon.
+    The second section (\secref{sec:mathpro:dynamic}) is devoted to a dynamic version of the models for some process units.
+    In addition to the models themselves several aspects which arise when considering process dynamics, will also be part
+    of that section.
+    The models used to determine thermodynamic properties of process streams are briefly introduced in \secref{sec:mathpro:thermo}. 
+    However these equations were not manually implemented are available from external routines through a foreign object 
+    interface within \gproms. 
+    All other presented models have been implemented in the equation based process simulator. Certain aspects arising when
+    implementing the models will be discussed in the last section of this chapter \secref{sec:mathpro:implementation}.
+
+
+    \section{Steady - state unit models}
+    \label{sec:mathpro:steady}
+        \input{Content_final/04A_ProcessModel_steady}
+
+    \section{Dynamic unit models}
+    \label{sec:mathpro:dynamic}
+        \input{Content_final/04B_ProcessModel_dynamic}
+
+    \section{Thermodynamic models}
+    \label{sec:mathpro:thermo}
+        \input{Content_final/04C_ProcessModel_thermo}
+
+    \section{Implementation}
+    \label{sec:mathpro:implementation}
+        \input{Content_final/04D_ProcessModel_impl}

@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=0.7]
+    \pgfmathsetmacro{\blockh}{1.5cm}
+    \pgfmathsetmacro{\blockw}{2.2cm}
+    \tikzset{box/.style={draw, rectangle, minimum height=\blockh, minimum width=\blockw, align=center}}
+	\node (A) [box] at (0,0) {NLP} ;
+    \node (B) [box] at (4,0) {MILP} ; 
+    \draw [arrow] (A.east) -- (B.west) ;
+\end{tikzpicture}

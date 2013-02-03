@@ -1,7 +1,7 @@
 \chapter{Process economics}
 \label{chp:ProcesEconomics}
 
-Aside from question whether a certain process is capable of producing products according to 
+Aside from question whether a certain process is capable of producing products according to
 specifications, it needs to be investigated if it does so while meeting economic criteria. The modeling
 of process economics is a powerful tool to estimate project profitability. Knowledge of process economics
 is mostly regarded for three types of decisions
@@ -92,7 +92,7 @@ of evaluating and comparing investment options will be discussed.
         \end{table}
 
     \subsection{During process design}
-        Once the future design has been has been broken down to fewer potential options and first process
+        Once the future design has been broken down to fewer potential options and first process
         flowsheets are available, a more elaborate approach, resulting in much improved estimates, becomes possible.
         In contrast to the most general case, now the aforementioned investment areas can be distinguished.
         The following sections describe how estimates are attained for the respective investment category.
@@ -144,8 +144,7 @@ of evaluating and comparing investment options will be discussed.
         As in the previous section all reference prices need to be scaled for the temporal price
         development. Again the aforementioned indices are used. Furthermore can the prices be corrected for regional
         differences in price structure. Once more correction factors to prices in an reference region in
-        the world (e.g. USA) are employed.
-        \todo[inline]{add ref.}
+        the world (e.g. USA) are employed \cite{Peters.2003}.
 
         In addition to the purchased cost, the costs for installing the process equipment have an significant effect
         on the total needed investment of the process. These installation costs include:
@@ -169,7 +168,7 @@ of evaluating and comparing investment options will be discussed.
         a decentralized control system, as it has been in use for many years. With ever more powerful computers
         a centralized approach, namely model predictive control (MPC) is becoming more relevant. As the
         structure for such a control system may vary significantly from the common designs, the cost factors may
-        as well.
+        as well. 
 
     \subsubsection{Services}
         The utility investments and off-site investments are often referred to as services. Therein included are
@@ -196,10 +195,10 @@ of evaluating and comparing investment options will be discussed.
         	\ncr{t_{op}}{time of process operations}{s}
         }%
 
-        Much in the same way the cost for energy can be approximated. This is once more done for each individual
-        process unit, rather then for the whole process as it has been done for the raw materials. Hence
+        Much in the same way the cost for energy can be approximated. AS for the raw materials, this is once
+        more done for each individual process unit, rather then for the process as a whole. Hence
         with the needed energy for equipment $i$ with respect to energy carrier $j$ $e_{ij}$ along with
-        the price for energy carrier $j$ $C_{EC}^j$ the total energy cost $C_{EC}$ can be assessed.
+        the price for energy carrier $j$ $C_{EC}^j$ the total energy cost $C_{EC}$ can be assessed
         \eq{
         	C_{EC} = \left( \sum_i^{N_{E}} \sum_j^{N_{EC}} \dot{e}_{ij} \cdot C_{EC}^{i} \right) \cdot t_{op}.
         	\ncr{n_{E}}{number of process units}{-}
@@ -211,13 +210,13 @@ of evaluating and comparing investment options will be discussed.
     \subsubsection{Working capital}
         The working capital includes all investments necessary for process operations. This means raw
         materials, payroll, extended credit to customers and so on. In contrast to all other costs the
-        working capital can partially be retrieved when the process seizes operations. How different
+        working capital can partially be retrieved when the process ceases operations. How different
         types of cash flows, extended or owed credit should be handled will be disused in
         \secref{sec:InvestmentCriteria}. In addition to the cost of raw materials needed during process
         operations, which generate a product stream, raw materials are also needed to fill all vessels, reactors,
-        columns and piping that male up the process. The cost of these should be considered as investment
+        columns and piping that make up the process. The cost of these should be considered as investment
         and not as operation cost \cite{Coulson.1999}, since more or less the same amount will remain bound until
-        the process seizes operations and it can (partially) be retrieved.
+        the process ceases operations and it can (partially) be retrieved.
         \eq{
         	C_{FILL} = \sum_i^{N_{RM}} V_i \cdot C_{RM}^{i}.
         	\ncr{C_{FILL}}{cost of raw materials to fill the process}{\$}
@@ -239,11 +238,11 @@ of evaluating and comparing investment options will be discussed.
 
 \section{Investment criteria}
 \label{sec:InvestmentCriteria}
-    The total cost of a project it a very important measure to decide whether to embark on a certain endeavor.
+    The total cost of a project is a very important measure to decide whether to embark on a certain endeavor.
     However in a complex financial system it cannot be taken as the sole factor to compare investment
     alternatives. Different other indices are used to measure the attractiveness or feasibility of an investment. One
     main distinction can be made between different measurements. Those that work with averaged cash flows
-    and consider the project as a singe time periods (\secref{sec:SinglePeriod}) and models that take into
+    and consider the project as a singe time period (\secref{sec:SinglePeriod}) and models that take into
     account cash flows made at different points in time -- so called multi-period models (\secref{sec:MultiPeriod}).
     Some examples for both types of indices are the subject of the rest of this section.
 
@@ -255,7 +254,7 @@ of evaluating and comparing investment options will be discussed.
 
         \subsubsection{Payout time}
             Payout or amortization  time is the time necessary to earn the total investment of the process. It is also
-            often referred to as the break even point. A profitable venture will form that point on begin to make money.
+            often referred to as the break even point. A profitable venture will from that point on begin to make money.
             A shorter payback time can be considered a measure for an more attractive investment.
             \eq{
             	POT = \frac{\textnormal{capital expenditure}}{\textnormal{incoming cash flow / period}}
@@ -338,7 +337,7 @@ of evaluating and comparing investment options will be discussed.
         The factor $\alpha$ in the previous equations denotes whether payments are made at the beginning
         of a period ($\alpha = 1$ or at the end ($\alpha = 0)$
 
-        With that multi-period model can be discussed. Here not only different alternatives can be compared,
+        Given those basic considerations, multi-period model can be discussed. Here not only different alternatives can be compared,
         but also the profitability in comparison with investments in financial products can be assessed.
 
         \subsubsection{Net present value}
@@ -366,14 +365,14 @@ of evaluating and comparing investment options will be discussed.
 
         \subsubsection{Discounted cash flow rate of return}
             The formula for the discounted cash flow rate of return is very similar to the one for a net present value.
-            The difference is, that rather then computing the net present value with given interest rates, the present
+            The difference is, that rather than computing the net present value with given interest rates, the present
             value is set to zero and the resulting interest rate its then calculated. Other than with the previous methods
             no analytical solution can be presented but rather an iterative approach to find a solution to
             \eq{
             	0 = \sum_i^n (r_i - e_i) \cdot q^{-i}.
             }%
             Here its was assumed that all payments -- incoming and outgoing -- are made at the beginning of a period.
-            The only variable is the interest rate which is included in the interest factors $q$. This methods gives
+            The only variable is the interest rate which is included in the interest factors $q$. This method gives
             the interest rate which would be necessary to earn all time dependent expenses within $n$ years. In this
             case a higher $DCFRR$ indicates a more attractive investment.
 

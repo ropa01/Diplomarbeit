@@ -1,107 +1,105 @@
 \select@language {UKenglish}
-\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Air separation technology}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Cryogenic processes}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Adsorption processes}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Membrane processes}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Hybrid processes}{7}{section.2.4}
-\contentsline {chapter}{\numberline {3}Process economics}{8}{chapter.3}
-\contentsline {section}{\numberline {3.1}Project cost}{8}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Before process design}{9}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}During process design}{9}{subsection.3.1.2}
-\contentsline {subsubsection}{Battery limit investment}{10}{section*.10}
-\contentsline {subsubsection}{Services}{11}{section*.11}
-\contentsline {subsubsection}{Working capital}{12}{section*.12}
-\contentsline {subsubsection}{Total investment}{12}{section*.13}
-\contentsline {section}{\numberline {3.2}Investment criteria}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Single period estimation methods}{13}{subsection.3.2.1}
-\contentsline {subsubsection}{Payout time}{13}{section*.14}
-\contentsline {subsubsection}{Return on investment}{13}{section*.15}
-\contentsline {subsection}{\numberline {3.2.2}Multi period estimation methods}{13}{subsection.3.2.2}
-\contentsline {subsubsection}{Net present value}{15}{section*.17}
-\contentsline {subsubsection}{Discounted cash flow rate of return}{15}{section*.18}
-\contentsline {subsubsection}{Annuity method}{16}{section*.19}
-\contentsline {subsubsection}{Interest Rates}{16}{section*.20}
-\contentsline {chapter}{\numberline {4}Mathematical process model}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Steady - state unit models}{18}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Separation}{18}{subsection.4.1.1}
-\contentsline {subsubsection}{Distillation column model}{18}{section*.22}
-\contentsline {paragraph}{Material balances}{19}{section*.24}
-\contentsline {paragraph}{Equilibrium}{20}{section*.25}
-\contentsline {paragraph}{Enthalpy balances}{21}{section*.26}
-\contentsline {paragraph}{Condenser and reboiler}{22}{section*.27}
-\contentsline {paragraph}{Pressure}{23}{section*.29}
-\contentsline {subsection}{\numberline {4.1.2}Integrated condenser \& reboiler}{24}{subsection.4.1.2}
-\contentsline {subsubsection}{Reboiler side}{24}{section*.31}
-\contentsline {subsubsection}{Condenser side}{24}{section*.32}
-\contentsline {subsection}{\numberline {4.1.3}Heat exchange}{24}{subsection.4.1.3}
-\contentsline {paragraph}{Model equations}{27}{section*.34}
-\contentsline {subsection}{\numberline {4.1.4}Compression \& expansion}{27}{subsection.4.1.4}
-\contentsline {subsubsection}{Multi-stage compression}{28}{section*.35}
-\contentsline {subsubsection}{Cooling by expansion}{29}{section*.37}
-\contentsline {section}{\numberline {4.2}Dynamic unit models}{30}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Distillation column model}{30}{subsection.4.2.1}
-\contentsline {subsubsection}{Trayed hydraulics}{32}{section*.39}
-\contentsline {subsubsection}{Structured packing hydraulics}{33}{section*.41}
-\contentsline {subsection}{\numberline {4.2.2}Integrated condenser / reboiler unit}{34}{subsection.4.2.2}
-\contentsline {subsubsection}{Reboiler side}{34}{section*.42}
-\contentsline {subsubsection}{Condenser side}{35}{section*.43}
-\contentsline {subsubsection}{Heat exchange}{35}{section*.44}
-\contentsline {section}{\numberline {4.3}Sizing \& costing models}{35}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Destillation column}{36}{subsection.4.3.1}
-\contentsline {subsubsection}{Trays}{37}{section*.45}
-\contentsline {subsubsection}{Structured packings}{38}{section*.46}
-\contentsline {subsection}{\numberline {4.3.2}Centrifugal pump}{38}{subsection.4.3.2}
-\contentsline {paragraph}{Pump}{39}{section*.47}
-\contentsline {paragraph}{Electric motor}{39}{section*.49}
-\contentsline {subsubsection}{Compressor}{40}{section*.51}
-\contentsline {paragraph}{Centrifugal compressor}{40}{section*.52}
-\contentsline {paragraph}{Reciprocating compressor}{40}{section*.53}
-\contentsline {paragraph}{Screw compressor}{40}{section*.54}
-\contentsline {subsubsection}{Reboiler / condenser}{41}{section*.55}
-\contentsline {paragraph}{Shell and tube heat exchanger}{41}{section*.56}
-\contentsline {paragraph}{Double pipe}{41}{section*.57}
-\contentsline {section}{\numberline {4.4}Thermodynamic models}{41}{section.4.4}
-\contentsline {section}{\numberline {4.5}Implementation}{42}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Model structure}{43}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Initialization procedures}{45}{subsection.4.5.2}
-\contentsline {subsubsection}{Initial specifications}{46}{section*.59}
-\contentsline {subsubsection}{Flash initialization}{46}{section*.60}
-\contentsline {subsubsection}{Linearized material balance}{46}{section*.61}
-\contentsline {subsubsection}{Iterative approach}{48}{section*.62}
-\contentsline {subsubsection}{Side draws}{49}{section*.63}
-\contentsline {chapter}{\numberline {5}Process optimization}{50}{chapter.5}
-\contentsline {section}{\numberline {5.1}Optimization theory}{50}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Karush-Kuhn-Tucker conditions}{50}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Constraint qualifications}{51}{subsection.5.1.2}
-\contentsline {subsubsection}{Slater's constraint qualification (SCQ)}{51}{section*.64}
-\contentsline {subsubsection}{Linear independence constraint qualification (LICQ)}{52}{section*.65}
-\contentsline {subsubsection}{Mangasarian-Fromovitz constraint qualification (MFCQ)}{52}{section*.66}
-\contentsline {section}{\numberline {5.2}Mixed-integer optimization}{52}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Solution techniques}{52}{subsection.5.2.1}
-\contentsline {subsubsection}{Branch \& bound (B\&B)}{54}{section*.67}
-\contentsline {subsubsection}{Outer approximation (OA)}{54}{section*.68}
-\contentsline {subsubsection}{Generalized Benders decomposition (GBD)}{55}{section*.69}
-\contentsline {subsubsection}{Extended cutting plane (ECP)}{55}{section*.70}
-\contentsline {subsection}{\numberline {5.2.2}Continuous reformulation}{56}{subsection.5.2.2}
-\contentsline {subsubsection}{Non-linear complementary problem (NCP)}{56}{section*.72}
-\contentsline {subsubsection}{Differentiable distribution function (DDF)}{57}{section*.73}
-\contentsline {chapter}{\numberline {6}Process model application}{58}{chapter.6}
-\contentsline {section}{\numberline {6.1}Example process}{58}{section.6.1}
-\contentsline {section}{\numberline {6.2}Steady-state models}{58}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Degrees of freedom}{60}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Model initialization}{61}{subsection.6.2.2}
-\contentsline {paragraph}{Example}{63}{figure.caption.77}
-\contentsline {subsection}{\numberline {6.2.3}Steady-state optimization}{65}{subsection.6.2.3}
-\contentsline {subsubsection}{Single steady-state operation}{65}{section*.79}
-\contentsline {subsubsection}{Dual steady-state operation}{68}{section*.85}
-\contentsline {section}{\numberline {6.3}Dynamic models}{69}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Degrees of freedom}{70}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Dynamic process behaviour}{70}{subsection.6.3.2}
-\contentsline {subsubsection}{Step responses}{71}{section*.88}
-\contentsline {subsubsection}{Dynamic profiles}{74}{section*.90}
-\contentsline {section}{\numberline {6.4}model application issues}{74}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Scaling}{74}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Singularities}{76}{subsection.6.4.2}
-\contentsline {chapter}{\numberline {7}Conclusion and further research}{77}{chapter.7}
-\contentsline {chapter}{Bibliography}{78}{chapter*.94}
+\select@language {ngerman}
+\select@language {ngerman}
+\select@language {UKenglish}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Example process}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Air separation technology}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Cryogenic processes}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Adsorption processes}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Membrane processes}{8}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Hybrid processes}{8}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Air separation unit}{9}{section.2.2}
+\contentsline {chapter}{\numberline {3}Process economics}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Evaluation of chemical processes}{11}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Before process design}{12}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}During process design}{12}{subsection.3.1.2}
+\contentsline {subsubsection}{Battery limit investment}{13}{section*.11}
+\contentsline {subsubsection}{Services}{14}{section*.12}
+\contentsline {subsubsection}{Working capital}{15}{section*.13}
+\contentsline {subsubsection}{Total investment}{15}{section*.14}
+\contentsline {section}{\numberline {3.2}Investment criteria}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Single period estimation methods}{16}{subsection.3.2.1}
+\contentsline {subsubsection}{Payout time}{16}{section*.15}
+\contentsline {subsubsection}{Return on investment}{16}{section*.16}
+\contentsline {subsection}{\numberline {3.2.2}Multi period estimation methods}{16}{subsection.3.2.2}
+\contentsline {subsubsection}{Net present value}{18}{section*.18}
+\contentsline {subsubsection}{Discounted cash flow rate of return}{18}{section*.19}
+\contentsline {subsubsection}{Annuity method}{19}{section*.20}
+\contentsline {subsubsection}{Interest Rates}{19}{section*.21}
+\contentsline {section}{\numberline {3.3}Economic process model}{19}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Destillation column}{20}{subsection.3.3.1}
+\contentsline {subsubsection}{Trays}{21}{section*.22}
+\contentsline {subsubsection}{Structured packings}{22}{section*.23}
+\contentsline {subsection}{\numberline {3.3.2}Centrifugal pump}{22}{subsection.3.3.2}
+\contentsline {paragraph}{Pump}{22}{section*.24}
+\contentsline {paragraph}{Electric motor}{23}{section*.26}
+\contentsline {subsubsection}{Compressor}{24}{section*.28}
+\contentsline {paragraph}{Centrifugal compressor}{24}{section*.29}
+\contentsline {paragraph}{Reciprocating compressor}{24}{section*.30}
+\contentsline {paragraph}{Screw compressor}{24}{section*.31}
+\contentsline {subsubsection}{Reboiler / condenser}{25}{section*.32}
+\contentsline {paragraph}{Shell and tube heat exchanger}{25}{section*.33}
+\contentsline {paragraph}{Double pipe}{25}{section*.34}
+\contentsline {chapter}{\numberline {4}Mathematical process model}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}Steady - state unit models}{26}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Separation}{27}{subsection.4.1.1}
+\contentsline {subsubsection}{Distillation column model}{27}{section*.36}
+\contentsline {paragraph}{Material balances}{28}{section*.38}
+\contentsline {paragraph}{Equilibrium}{29}{section*.39}
+\contentsline {paragraph}{Enthalpy balances}{30}{section*.40}
+\contentsline {paragraph}{Condenser and reboiler}{31}{section*.41}
+\contentsline {paragraph}{Pressure}{32}{section*.43}
+\contentsline {subsubsection}{Integrated condenser \& reboiler}{33}{section*.44}
+\contentsline {subsection}{\numberline {4.1.2}Heat exchange}{33}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Compression \& expansion}{34}{subsection.4.1.3}
+\contentsline {subsubsection}{Multi-stage compression}{34}{section*.46}
+\contentsline {subsubsection}{Cooling by expansion}{36}{section*.48}
+\contentsline {section}{\numberline {4.2}Dynamic unit models}{37}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Distillation column model}{37}{subsection.4.2.1}
+\contentsline {subsubsection}{Trayed hydraulics}{39}{section*.50}
+\contentsline {subsubsection}{Structured packing hydraulics}{40}{section*.52}
+\contentsline {subsection}{\numberline {4.2.2}Integrated condenser \& reboiler unit}{41}{subsection.4.2.2}
+\contentsline {subsubsection}{Reboiler side}{41}{section*.53}
+\contentsline {subsubsection}{Condenser side}{42}{section*.54}
+\contentsline {subsubsection}{Heat exchange}{42}{section*.55}
+\contentsline {section}{\numberline {4.3}Thermodynamic models}{42}{section.4.3}
+\contentsline {section}{\numberline {4.4}Model implementation}{43}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Model structure}{43}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Initialization procedures}{46}{subsection.4.4.2}
+\contentsline {subsubsection}{Initial specifications}{47}{section*.57}
+\contentsline {subsubsection}{Flash initialization}{47}{section*.58}
+\contentsline {subsubsection}{Linearized material balance}{47}{section*.59}
+\contentsline {subsubsection}{Iterative approach}{49}{section*.60}
+\contentsline {subsubsection}{Side draws}{50}{section*.61}
+\contentsline {chapter}{\numberline {5}Process model application}{51}{chapter.5}
+\contentsline {section}{\numberline {5.1}MINLP solution techniques}{51}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Outer approximaltion}{51}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Continuous reformulation}{53}{subsection.5.1.2}
+\contentsline {subsubsection}{Non-linear complementary problem (NCP)}{54}{section*.64}
+\contentsline {subsubsection}{Differentiable distribution function (DDF)}{54}{section*.65}
+\contentsline {section}{\numberline {5.2}Steady-state models}{54}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Degrees of freedom}{55}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Model initialization}{56}{subsection.5.2.2}
+\contentsline {paragraph}{Example}{58}{figure.caption.68}
+\contentsline {subsection}{\numberline {5.2.3}Steady-state optimization}{59}{subsection.5.2.3}
+\contentsline {subsubsection}{Single steady-state operation}{60}{section*.70}
+\contentsline {subsubsection}{Dual steady-state operation}{63}{section*.76}
+\contentsline {section}{\numberline {5.3}Dynamic models}{64}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Degrees of freedom}{65}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Dynamic process behaviour}{65}{subsection.5.3.2}
+\contentsline {subsubsection}{Step responses}{65}{section*.79}
+\contentsline {subsubsection}{Dynamic profiles}{69}{section*.81}
+\contentsline {section}{\numberline {5.4}Model application issues}{69}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Scaling}{70}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Singularities}{71}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Time scale}{71}{subsection.5.4.3}
+\contentsline {chapter}{\numberline {6}Conclusion and further research}{73}{chapter.6}
+\contentsline {chapter}{Bibliography}{74}{chapter*.83}
+\contentsline {chapter}{\numberline {A}Simultaneous heat integration}{78}{appendix.A}
+\contentsline {section}{\numberline {A.1}HEN superstructure}{78}{section.A.1}
+\contentsline {paragraph}{Model equations}{80}{section*.85}
+\contentsline {section}{\numberline {A.2}Pinch concept based}{80}{section.A.2}
+\contentsline {chapter}{\numberline {B}Simultaneous control design}{81}{appendix.B}
+\contentsline {chapter}{\numberline {C}Peng Robinson}{82}{appendix.C}
+\contentsline {section}{\numberline {C.1}Peng-Robinson derived properties}{82}{section.C.1}

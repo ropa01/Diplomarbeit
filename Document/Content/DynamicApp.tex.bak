@@ -1,26 +1,22 @@
     The results of steady-state optimizations give very valuable information about the desired operation of
     the process in question. In real-live applications however, processes will always display transient behaviour,
-    which cannot be captured by steady-state models. Even if the steady-state in question is in general a stable one,
-    which means, that the process will return to the previous operation point given an external disturbance, process
-    start-up and shut-down are in most cases still highly dynamic.
-
-    The question of controlling a process is closely linked to the dynamic simulations. Any given process is required
+    which cannot be captured by steady-state models. Any given process is required
     to operate within ceratin bounds and subject to external disturbances, which might cause the process to deviate
-    from requirements on product specifications. To be able to handle such disturbances, or in some cases even be able
-    to meet product requirements, control structures are implemented.
+    from desired operations. To be able to handle such disturbances, or in some cases even be able
+    to operate at all at the specified operating point, control structures are required. By the nature of the question 
+    aspects of stability or operability can only be analyzed based on a dynamic representation of the system. 
 
     The consideration of dynamics further opens the possibility to extend the optimization beyond monetary measures, or
     consider transient aspects which play a role in process profitability. This might include the optimization of transition
-    times between multiple steady states, or an improved start-up or shut down behaviour. In case of the ASU which might also
-    be implemented as a utility to a downstream process, the load following behaviour according to utility requirements could
-    also be analyzed.
-
-    In an effort to demonstrate dynamic optimization capabilities, several steps were taken. To be able to consider a control
-    structure, controllers have to be implemented. Beyond that, as the control structure is not known a priori, a control
-    superstructure has to be considered. The aim was to to optimize the control structure for a minimal transition time between
-    the two steady-states considered during steady state optimization. The highly integrated nature of process leads to degrees
-    freedom different from what would be expected from a regular distillation collum. Furthermore are they different
-    from the steady-state case as described in \secref{sec:mathpro:steady:specinit}.
+    times between multiple steady states, or an improved start-up or shut down behaviour. The product streams from a process 
+    during transition times often have to be discharged. By optimizing the transition process, one might be able produce 
+    marketable or usable product, even during transitions. In case of the ASU which might also be implemented as a utility 
+    to a downstream process, the load following behaviour according to utility requirements could also be analyzed.
+    
+    The remainder of this section is structured as follows. Initially, the dynamic degrees of freedom for the ASU
+    flowsheet are discussed. Subsequently the dynamic process behaviour is analyzed with regards to the sensitivity 
+    to external and internal disturbances. Some conclusions are drawn from the observed dynamic effects, encountered 
+    particularly in high purity distillation processes. 
 
     \subsection{Degrees of freedom}
         In order to gain more insight into the behaviour of the dynamic models presented above an analysis
@@ -132,17 +128,15 @@
                 \end{figure}
             \end{landscape}
 
-
-
         \subsubsection{Dynamic profiles}
             The previous section showed only minor reactions to step changes in the manipulated variables. However
             a closer look at the dynamic column profiles reveals a much different picture. To analyze the internal
             column behaviour a external disturbance to the feed pressure was applied. As a result, the concentration
             profiles within the column undergo a various changes. Especially with high purity separation sequences,
-            a highly non-linear behaviour with two distinct characteristics. For one, two time scales can
+            a highly non-linear behaviour with two distinct characteristics is displayed. For one, two time scales can
             be observed, in which new steady states are reached. Secondly, the transition time
-            between two steady states relies heavily on the direction of the disturbance \cite{Hwang.1991}. The first
-            effect deal with short- and long-term dynamics, while the second is referred to as asymmetric dynamics.
+            between two steady states relies heavily on direction and magnitude of the disturbance \cite{Hwang.1991}.
+            The first effect deals with short- and long-term dynamics, while the second is referred to as asymmetric dynamics.
 
             \begin{figure}
                 \scriptsize
@@ -159,36 +153,11 @@
                 \end{subfigure}
             \end{figure}
 
-            \begin{figure}
-                \scriptsize
-                \center
-                \begin{subfigure}{0.48\textwidth}
-                    \input{GNUPlot/LPC_init_n2_step1}
-                    \caption{Dynamic profile after feed enthalpy increase.}
-                    \label{fig:N2_ADyn_plus}
-                \end{subfigure}
-                    \begin{subfigure}{0.48\textwidth}
-                    \input{GNUPlot/LPC_init_n2_step2}
-                    \caption{Dynamic profile after feed enthalpy decrease.}
-                    \label{fig:N2_ADyn_minus}
-                \end{subfigure}
-            \end{figure}
-            
-            \begin{figure}
-                \scriptsize
-                \center
-                \begin{subfigure}{0.48\textwidth}
-                    \input{GNUPlot/LPC_init_n2_step3}
-                    \caption{Dynamic profile after feed enthalpy increase.}
-                    \label{fig:N2_ADyn_plus}
-                \end{subfigure}
-                    \begin{subfigure}{0.48\textwidth}
-                    \input{GNUPlot/LPC_init_n2_step4}
-                    \caption{Dynamic profile after feed enthalpy decrease.}
-                    \label{fig:N2_ADyn_minus}
-                \end{subfigure}
-            \end{figure}
-            
+            From this preliminary study, of the dynamic process behaviour, it can be concluded, that an effective control strategy,
+            should not only aim at directly maintaining the the product qualities, but rather to stabilize the internal column
+            profiles. As the effects are often on time scales spanning over a day, there is a chance to detect malicious effects to
+            product specifications in advance and and introduce appropriate counter measures.
+
 
 
 

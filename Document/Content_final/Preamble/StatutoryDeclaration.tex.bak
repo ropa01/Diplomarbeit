@@ -1,0 +1,40 @@
+% Task Description
+\thispagestyle{plain}
+
+\begin{center}
+	\LARGE
+	\vspace{3ex} Statutory Declaration
+\end{center}
+
+\normalsize
+
+I herewith declare that I have completed the present thesis independently making use only of
+the specified literature and aids. Sentences or parts of sentences quoted literally are marked as
+quotations; identification of other references with regard to the statement and scope of the
+work is quoted. The thesis in this form or in any other form has not been submitted to an
+examination body and has not been published.
+
+\vspace*{2cm}
+
+\begin{flushright}
+	\begin{minipage}[r]{10cm}
+		\hrule\vspace*{1ex}\hspace{0.3cm} Date \hspace{1.5cm} Signature\\
+		\vspace{1cm}
+	\end{minipage}
+\end{flushright}
+
+\vspace*{2cm}
+
+\begin{center} 
+    \LARGE 
+    \vspace{3ex} Statutory Eidesstattliche Erklärung} 
+\end{center}
+
+Hiermit versichere ich, dass die vorliegende Arbeit von mir selbständig angefertigt wurde und dass 
+ich keine Hilfsmittel benutzt habe, die dem Aufgabensteller nicht bekannt sind. Ich erkläre mich 
+damit einverstanden, dass die vorliegende Arbeit in der Lehrstuhlbibliothek und Datenbank aufbewahrt 
+wird und für den internen Gebrauch kopiert werden darf. 
+
+\vspace*{2cm} 
+
+\clearpage

@@ -1,0 +1,468 @@
+    There are several ways in which a process model in general, and the steady-state models in particular can be used. 
+    In this case, all models have been implemented with the use for operational and structural optimization 
+    in mind. 
+    
+    This section begins, with a discussion of the degrees of freedom, coupled with feasible specifications. 
+    Linked to this matter is the crucial question of model initialization, which is dealt with in the 
+    subsequent section. Finally a look at different optimization setups concludes this section. 
+
+
+    \subsection{Degrees of freedom}
+        The equation systems presented above is comprised of $n_S n_C$ component balances and equilibrium
+        equations, $2n_S$ summation equations and $n_S$ energy balances. This gives a total of $n_S (2n_C + 3)$
+        equations. On the other hand there are $n_S$ temperatures and pressures, $2n_S$ molar flow rates,
+        $n_S$ energy streams, and $n_S n_C$ vapour as well as and liquid concentrations. Additionally the feed flow rates
+        compositions and temperatures and the side draw split fractions or flow rates appear as variables. The
+        feeds and side draws would usually be specified, which leaves a total of $n_S (2n_C + 5)$ variables.
+
+        The pressure profile of a distillation column is usually specified.
+        In terms of unit operations this pressure drop is of high significance,
+        as many columns can only be feasibly operated if the pressure drop does not exceed certain
+        limits. In case of the ASU the production of Argon only became feasible as structured
+        packings, which display a very low pressure drop, became available. This is due to the large
+        number of theoretical stages required to attain the desired Argon purities.
+
+        The energies $Q_i$ denote addition heaters or cooler on the respective stages. For all
+        intermediate stages these values would be specified as well. If all energies are
+        specified, that would -- along with the pressure profile -- sum up to $2 n_S$ specifications,
+        which leaves $n_S (2n_C + 3)$ unknowns. As the number of equations and unknowns are the equal,
+        this system is then well specified.
+
+        In practice it is often challenging to correctly guess the condenser and reboiler heat loads in
+        advance. This is especially true since they have a tremendous impact on the overall performance
+        of the column. Hence it is often desirable to supply other specifications than the respective
+        heat loads. To allow for such specification so called discrepancy functions can be introduced
+        \cite{Henley.op.2011}, which replace the energy balance for the condenser and / or reboiler stage.
+
+        One common specification is the so called reflux ratio $\nu^D = \frac{L_1}{V_1 + S_1^L}$ for
+        the condenser, or the boil-up ratio $\nu^R = \frac{L_N}{V_N}$ for the reboiler.
+        They are defined as the ratio of the molar flowrate sent back into the column over the
+        product flowrate which leaves the column. For the reboiler this denotes a liquid stream,
+        while for the condenser the product can be gaseous and liquid. Specifying this leads to
+        \Eq{eq:reflux}{
+            0 & = L_1 - \nu^D \cdot (V_1 + S_1^L), \\
+            0 & = V_N - \nu^R \cdot L_N,
+        }
+        \ncg{\nu^R}{boliup ratio}{-}
+        \ncg{\nu^D}{reflux ratio}{-}
+        as discrepancy functions. In addition to that further specifications are conceivable. Most
+        commonly distillate ($D$) or bottoms ($B$) flow rates, purities, component flow rates ($d_i, b_i$)
+        or temperatures. The corresponding discrepancy functions are summarized in \tabref{tab:discrepancy}.
+
+        \begin{table}
+            \centering
+            \footnotesize
+            \input{Tables/Discrepancy}
+            \caption{discrepancy functions for different column specifications.}
+            \label{tab:discrepancy}
+        \end{table}
+
+        The specifications for the reboiler stage are quite straightforward, in contrast to that,
+        for the condenser different cases have to be considered. In the most general case the
+        top product can be drawn as vapour and liquid. This case is here called a partial vapour
+        liquid condenser. The other cases are a total condenser, where all the vapour entering the
+        condenser stage is condensed, and all product is drawn as a liquid stream, as well as
+        a partial vapour condenser, where only the reflux is condensed and all product is drawn
+        as vapour. As discussed earlier no VLE takes place in the condenser stage, if a total
+        condenser is specified, which needs to be accounted for. Both the total and partial
+        vapour condensed implicitly include an extra specification since in former case
+        the top vapour product flow rate becomes zero and in the latter the top liquid product
+        flowrate. Furthermore a specification of the condenser energy is infeasible as well as implicitly
+        given for the total condenser. In case of the partial vapour liquid condenser no implicit
+        specification is given, which requires an additional specification. In general two
+        top specifications are necessary, whereas only one bottom specification is required.
+        These top specification can include the condenser duty, any top flowrate, the reflux ratio
+        as well as a newly introduced quantity, the top vapour fraction defined as
+        \Eq{}{
+            \nu^{vap} = \frac{V_1}{V_1 + S_1^L}.
+        }
+        \ncg{\nu^{vap}}{condenser vapour fraction}{-}
+        %
+
+    \subsection{Model initialization}
+    \label{sec:mathpro:steady:specinit}
+        As mentioned before the solution of the MESH equations can pose a considerable problem
+        to numerical solvers. It is therefore necessary to supply the solver with feasible
+        estimates for the involved variables that can be used as an initial guess for
+        convergence of the process model. A lot of effort has been spend to formulate robust strategies
+        to initialize distillation column models. One of the most prominent is the so called
+        Inside-Out algorithm first introduced by Boston and Sullivan \cite{Boston.1974}. Within this
+        algorithm an inner and outer iterative loop are employed. Within the outer loop approximate
+        parameters for simplified models of phase equilibrium and enthalpy are computed by rigorous
+        thermodynamic models and guesses for stage temperatures and concentrations. Within the
+        inner loop new stage temperatures and concentrations are attained by solving the MESH equations
+        using the simplified thermodynamic models. Once the inner loop converges the simplified
+        model parameters are updated within the outer loop by means of the newly calculated
+        temperatures and concentrations. This algorithm converges in many cases even for very poor initial
+        guesses and has been extended to handle complex columns with side-draws and even reactive
+        distillation \cite{Boston.}. It is still in use in the process simulator \aspen.
+        However as it is used within an modular algorithmic environment it is not applicable
+        to equation based simulators such as \gproms.
+
+        More recently other approaches have been published to attain improved initial guesses.
+        Fletcher and Morton \cite{Fletcher.2000} proposed the solution of a column model at
+        infinite reflux and zero feed flow rate. This leads to a much simplified model which can
+        be solved more easily. The computed purities and stage numbers can give valuable insight
+        into the process model. As this approach relies on the solution of a simplified model
+        and has no algorithmic elements, it can be implemented in equation based process simulators.
+
+        Another strategy that has been successfully applied to zeotropic and azeotropic mixtures
+        relies on solving the column model for the limiting case of the adiabatic column \cite{Barttfeld.2002}.
+        The adiabatic column in this case is the column with the minimal entropy production in a real column.
+        To avoid entropy production all streams that come in contact must be in equilibrium. To achieve this
+        the column would have to employ an infinite number of stages and have an infinite number of
+        heat exchangers along its length. The adiabatic column then uses only two heat exchanger in the
+        condenser and reboiler stage and assumes a pinch point at the feed stage. \todo{elaborate on adiabatic column}
+
+        A much simpler approach has proven adequate for many applications \cite{Henley.op.2011}.
+        This approach is also employed as a starting point in this work.
+        Therein feed properties are used as initial guesses. First a linear temperature profile form the boiling
+        temperature to dew temperature of the combined feed mixture is used to initialize temperatures, whereas a simple flash
+        at average column pressure and feed temperature yields a vapour and liquid concentration which is
+        used as uniform profile for every column stage. However as the feed might be sub-cooled liquid or
+        super-heated vapour, the TP-Flash is replaced by a specified vapour fraction. As vapour fraction
+        for the flash initial estimates of the vapour and liquid flow rates at the top and bottom of the
+        column are used. The stage-wise molar flow-rates are computed from the constant molal overflow
+        assumption, which postulates a constant heat of vaporization and yields therefore uniform
+        liquid and vapour flow-rates within a column section. A section in this case is denoted by any
+        feed location where the flow-rates change due to the added feed. In the feed stages a super heated
+        or sub-cooled feed is also considered by means of an extended vapour fraction
+        \Eq{}{
+            q^F = \frac{h^F - h^L}{h^V - h^L}.
+        }
+        %
+        While this approach leads to model convergence in many cases, it is not entirely robust.
+        While the system considered in this case displays only moderate non-idealities it is highly cupeled.
+        Especially the low pressure column (LPC) has multiple feeds and side draws, which leads to non-convergence
+        if the aforementioned initialization strategy is employed. However the fact that the system is
+        not highly non-ideal can be exploited. Whenever the K-values are not too much dependent on mixture
+        composition an intermediate step can be used to refine concentration guesses. The constant molal
+        overflow assumption is retained and the equilibrium ratios are computed based on the initial guesses
+        from the first stage. The component balance is then reformulated only in terms of liquid component
+        flow-rates $l_{ij}$
+        %
+        \Eqml{eq:init:compbalance}{
+            0 = \left((1+s_j^V) \cdot K_{ij} \cdot \frac{V_j}{L_j} + (1+s_j^L) \right) \cdot l_{ij}
+                - \frac{V_{j+1}}{L_{j+1}} \cdot K_{ij+1} \cdot l_{ij+1} - l_{ij-1}
+                \\ - F_j^V \cdot z^V_{i,j} - F_j^L \cdot z_{i,j}^L, \eqanncs.
+        }%
+        \ncr{l_{ij}}{liquid molar flowrate of component $i$ from stage $j$}{\mols}
+        \ncr{v_{ij}}{vapour molar flowrate of component $i$ from stage $j$}{\mols}
+        %
+        \eqref{eq:init:compbalance} is linear in the liquid component flow rates. Furthermore vapour component
+        flow rates are substituted in the linear component balance and can be computed by
+        %
+        \Eq{eq:init:vapflow}{
+            v_{ij} =  K_{ij} \cdot \frac{V_j}{L_j} \cdot l_{ij} \eqanncs.
+        }%
+        %
+        On of the reasons \eqref{eq:init:compbalance} is formulated in terms of component flow rates rather
+        than molar fractions, is that the molar fraction computed in that manner would not be normalized. If
+        the mole fractions are computed from the component flow rates normalization is implicitly given
+        %
+        \Eq{eq:init:liqmolefrac}{
+            x_{ij} = \frac{l_{ij}}{\sum_k^C l_{kj}} \eqanncs,
+        }%
+        \Eq{eq:init:vapmolefrac}{
+            y_{ij} = \frac{v_{ij}}{\sum_k^C v_{kj}} \eqanncs.
+        }%
+        %
+        The total molar flow rates used in \eqref{eq:init:compbalance} are computed by solving
+        stage-wise total mass balances under the constant molal overflow assumption. This assumption
+        postulates that the heat of vaporization is independent of system composition.
+        Therefore always the same amount of liquid enters and leaves a given stage
+    	\Eq{eq:col:cmo}{
+    		0 = L_j + S_j^L - L_{j-1} - (1 - q^F) \cdot F_j \eqannote{j = 1 \dots n_S}.
+    	}%
+        \ncr{F_j}{feed to tray $j$}{\frac{mol}{s}}
+    	\ncr{S_j^V}{vapour side flow from tray $j$}{\frac{mol}{s}}
+    	\ncr{S_j^L}{liquid side flow from tray $j$}{\frac{mol}{s}}
+    	\ncr{V_j}{vapour flow from tray $j$}{\frac{mol}{s}}
+    	\ncr{L_j}{liquid flow from tray $j$}{\frac{mol}{s}}
+        %
+        The vapour total flow rates are then computed from the total mass balances
+        \Eq{eq:col:MassBalance}{
+    		0 = L_j + S_j^L + V_j + S_j^V - L_{j-1} - V_{j+1} - F_j^,
+                \eqannote{j = 1 \dots n_S}.
+    	}%
+        %
+        As no energy balances are included at this stage, the condenser and reboiler stage
+        are characterized by the reflux ($\nu^c = \frac{V_1}{L_1}$) or boilup ratio
+        ($\nu^r = \frac{V_N}{L_N}$) respectively. This leads to
+        \Eq{eq:boilup}{
+            0 = V_1 - \nu^c \cdot L_1, \\
+            0 = L_N - \nu^r \cdot V_N.
+        }
+        %
+        To close the equation system the global mass balance is included
+        \Eq{eq:globalmassbalance}{
+            0 = V_1 + L_N + \sum_{j=1}^{N} ( S_j^V + S_j^L - F_j),
+                \eqannote{j = 1 \dots n_S}.
+        }
+        %
+        \todo{check equations in steady state section!!!}
+        For more complex systems more elaborate strategies have been developed, which essentially try
+        to incorporate some of the principals from the inside out algorithm into an equation based
+        environment. The process simulator \gproms allows for definition of standardized initialization
+        procedures as well as different model variants that can be solved consecutively. With that strategies
+        were developed that proved successful for more complex mixtures and even three phase systems. As
+        these strategies are closely linked to the implementation in \gproms and the programm
+        capabilities, they will be discussed in \secref{sec:mathpro:implementation}
+
+        Furthermore ist should be noted, that not all specifications are compatible with the initialization
+        strategies described above. While this issue has been addressed, it also will be explained in the
+        implementation section.
+
+        \paragraph{Example}
+
+        \begin{figure}
+            \begin{minipage}{0.25\textwidth}
+                \input{Pictures/LPC_example}
+                \caption{example column.}
+                \label{fig:lpc_example}
+            \end{minipage}
+            \begin{minipage}{0.73\textwidth}
+                \raisebox{\depth}{\footnotesize\input{Tables/LPC_example_data}}
+                \captionof{table}{column specifications.}
+                \label{fig:lpc_example}
+            \end{minipage}
+        \end{figure}
+
+        To illustrate how the initialization procedure works an example has been constructed of
+        a rather complex column -- or column section -- with multiple feeds and side draws (\figref{fig:lpc_example}).
+        It is taken from an example process of cryogenic air separation. The column in question
+        is a column section without an condenser stage and displayed the most difficulties in terms
+        of convergence when constructing the process flowsheet.
+
+        In addition to the aforemention initialization strategy, columns with side draws present are handled
+        in a slightly different manner. Initially the side draws are disregarded. Then the initialization procedure
+        is carried out. Once the column without side draws has converged, a homotopy approach
+        \Eq{eq:homotopy}{
+            f(\vec{x}) = (1-\alpha) \cdot f_0(\vec{x}) + \alpha \cdot f_1(\vec{x})
+        }
+        is employed, where the parameter $\alpha$ is initially set to zero and then gradually moved to a value
+        of one. During the initialization homotopies could
+        generally be employed to move from one step to another. While in some cases robustness is improved by
+        such a strategy, it is always computationally far more expensive then simply jumping between different
+        stages.
+
+        For clarity reasons the different steps of the initializations procedure a repeated in a tabular manner
+
+        \begin{enumerate}
+            \item \cpitemize{
+                \item linear temperature profile between dew ($T^{dew}$) and bubble point temperature ($T^{bub}$)
+                    of mixed feed.
+                \item linear profile between feed flash vapour and liquid compositions for liquid stage
+                    compositions.
+                \item constant profile for vapour compositions.
+                \item molar flow rates from constant molar overflow model.
+                \item side draw flow rates set to zero.
+            }
+            \item \cpitemize{
+                \item total molar flow rates form constant molar overflow model.
+                \item simplified equilibrium ratios from initial liquid mole fractions and linear
+                    temperature profile.
+                \item liquid and vapour mole fractions from linearized mass balances.
+            }
+            \item rigorous solution of MESH equations with side draws still set to zero.
+            \item homotopic approach to MESH equations with side draws considered.
+        \end{enumerate}
+
+        \ncr{T^{dew}}{dew point temperature}{K}
+        \ncr{T^{bub}}{bubble point temperature}{K}
+
+        The resulting profiles for oxygen and nitrogen concentrations in the example column can be seen
+        in \figref{fig:lpc_example_o2} and \figref{fig:lpc_example_n2}.
+
+        \begin{figure}
+            \scriptsize
+            \hspace{0.01\textwidth}
+            \begin{subfigure}{0.45\textwidth}
+                \input{GNUPlot/LPC_init_o2}
+                \caption{oxygen concentration profiles.}
+                \label{fig:lpc_example_o2}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}{0.45\textwidth}
+                \input{GNUPlot/LPC_init_n2}
+                \caption{nitrogen concentration profiles.}
+                \label{fig:lpc_example_n2}
+            \end{subfigure}
+            \hspace{0.01\textwidth}
+            \caption{initialization example concentration profiles.}
+        \end{figure}
+
+    \subsection{Steady-state optimization}
+    Initially  optimizations were carried out using the steady-state process models.
+    While an effort has been made to create a realistic scenario, the main focus of this section is to demonstrate
+    optimization capabilities within the model environment \gproms and to compare different solution
+    approaches for complex discrete-continuous problems.
+
+        \subsubsection{Single steady-state operation}
+        In a first case operations for two separate steady-states were optimized. However only structural
+        decisions on the columns were made along with the columns operational parameters.
+        %
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_cont}
+            \caption{steady-state optimization results - continuous variables.}
+            \label{tab:ss_result_cont}
+        \end{table}
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_disc}
+            \caption{steady-state optimization results - discrete variables.}
+            \label{tab:ss_result_disc}
+        \end{table}
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_time}
+            \caption{steady-state optimization results - time consumption.}
+            \label{tab:ss_result_time}
+        \end{table}
+        %
+        The solutions from both algorithms are summarized in \tabref{tab:ss_result_cont} and \tabref{tab:ss_result_disc},
+        where the for contains the results for all continuous decisions and the latter all discrete decisions. Results
+        attained by outer approximation are labelled as ''OA'' and by solving the NCP as ''FB''.
+
+        The objective function considers only capital cost for the separation sequence
+        \Eq{eq:opt:ss_single_objective}{
+            CAPEX = \left( \sum_c C_c^{\text{cap}} \right) \cdot \left(q^{-a} \frac{q^a - 1}{q - 1} \right),
+                \eqannote{c = \left\{ \text{HPC}, \text{LPC}, \text{CAC}\right\} }.
+        }
+        %
+        The difference between the steady-states lies in the requirements on product flow rates and purity. Hence the different
+        constraints enforced for the respective operation modes are summarized in \tabref{tab:ss_constraints}.
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_constraints}
+            \caption{steady-state optimization constraints.}
+            \label{tab:ss_constraints}
+        \end{table}
+
+        When solving the continuous reformulation of the problem, an extra constraint for each integer variable in form of the
+        relaxed Fischer-Burmeister function was added. Furthermore the closure condition for each location decision was added as
+        an equality constraint. This closure condition needs not to be explicitly considered using the outer approximation approach,
+        since this is handled internally by declaring so called special ordered sets of type one. This allows \gproms and the
+        outer approximation algorithm to exploit the special structure of the problem due to the \emph{exclusive or} decisions.
+
+        In order to compare the results of the different solution approaches, various aspects can be taken into consideration.
+        Foremost the objective value is a measure of performance. As the complexity of the underlying problem increases,
+        the matter of time becomes a -- sometimes limiting -- factor. Therefore the time in which a solution is found,
+        is a measure for the algorithm performance as well. However before the results are discussed in greater detail,
+        some further aspects are worth mentioning.
+
+        In the process of solving the continuously reformulated problem, some difficulties arose. While
+        (almost) integer values were found for most structural decisions, even during the initial iteration, especially
+        the LPC column displayed some convergence problems. As the relaxation factor is reduced, the
+        the feasible region between zero and one is is divided into two disjunct regions which become smaller and smaller.
+        In some cases the solutions remain on one side of the feasible domain, namely the one converging to zero,
+        while still fulfilling the closure constraint. As the relaxation factor is reduced, the solver is no longer able to
+        ''make the jump'' to the other side of the domain. This leads to a distribution of small values for the split variables along
+        the column. \Figref{fig:conv_fail} shows a typical example for this type of convergence behaviour. After the initial NLP the
+        feed is somewhat evenly distributed between two stages, neither really dominant. As the relaxation is tightened, the values
+        are reduced, and distributed among more stages to fulfil the closure condition. As the relaxation factor approaches zero the
+        closure condition can no longer be satisfied, which leads to violation of the equality constraint and convergence failure.
+        \begin{figure}
+            \scriptsize
+            \center
+            \input{GNUPlot/FB_converge}
+            \caption{NCP convergence failure.}
+            \label{fig:conv_fail}
+        \end{figure}
+
+        This issue has been addressed, by \cite{Kraemer.2010} who propose a re-initialization strategy based on the magnitude of
+        the Lagrange multipliers associated with the continuous variables. While the results using this adjusted strategy
+        are very promising it could not be implemented within the scope of this thesis. In addition to the adjusted algorithm,
+        the problem formulation can be altered to improve convergence of the solution algorithm. Two strategies can
+        be employed, which exploit the structure of the distillation model, or force the continuous solution to both sides
+        of the feasible domain \cite{Kraemer.2009}.
+
+        The first strategy involves reformulation of purity constraints in terms of the reflux split
+        \Eq{}{
+            \sum_j \zeta_j^R x_j \leq x_{\text{spec}}.
+        }
+        As one will always observe a concentration gradient in a finite distillation column, this formulation favours
+        integer solutions as it competes with a lower capital costs which distributes fractions on lower trays. Hence
+        this strategy is assumed to be most successful for steep concentration gradients at either of the column.
+        It should be considered, that this formulation requires the variable tray location to be on the side at which
+        the specified purity lies. \todo{write about optimization model.}
+
+        The second approach relies on the previously introduced differentiable distribution function. Here a sufficient
+        focus on a given tray can be enforced by adjusting the underlying standard deviation. By introducing that function
+        in the first optimization stage, while continuing with the traditional formulation in the subsequent steps,
+        convergence could be achieved.
+
+        As for the optimization results. It can clearly be seen that both solution approaches return
+        very similar objective values. However somewhat large deviations can be observed in the operational
+        parameters and structural decisions. The deviations given in the results table are based on the results
+        from the outer approximation. The fact that the optimal solutions deviate up to 57 \% in certain parameters
+        further strengthes the argument, that due to the highly non-convex nature of the problem only locally optimal
+        solutions are returned. Furthermore large differences can be seen in the computational time. While the
+        total CPU time is considerably larger for the outer approximation algorithm, the CPU time is smaller.
+        These results however depend heavily on the way the problem is posed. In the course of the thesis several
+        different optimizations have been solved. Some with similar complexity as the cases discussed here.
+        While the NCP always took comparable time for convergence, very large variations were observed,
+        when the outer approximation algorithm was employed. For some cases solution times were even faster
+        than the initial iteration of the NCP. Changes in this behaviour are most likely due to the
+        quality of the linear approximations used to solve the MILP. Drastic changes could be observed
+        when the feasible domain for certain decision variables was adjusted. Furthermore a considerable number
+        of infeasible iterations was observed in the presented case. While in this case infeasible is
+        not meant as violation of constraints but rather failure to converge the underlying process model after
+        solving the MILP. To that regard several observations were made when working with the developed models.
+        As initialization procedures are only carried out when simulating the process and not during optimizations,
+        the solver has to initialize from an available previous solution or a saved variable set. For most cases,
+        when the alteration in the process parameters are not too large, this posed no greater problem. Even changes in stream
+        locations over several stages could be solved from available saved variable sets. However for
+        some integer decisions convergence could fail by changing a stream location by only one tray.
+
+        \subsubsection{Dual steady-state operation}
+        For a second test case it was assumed, that the plant would have to operate under two distinct
+        operation modes. One requiring a very high nitrogen purity and the other focusing on very pure oxygen.
+        The steady states correspond to the ones from the previous section. To simultaneously consider two steady
+        states, two instances of the process were were considered, that were allowed to differ in terms of operational decisions,
+        but fixed in terms of structural decisions. The structural decisions are all stream locations and diameters.
+        The decision variables correspond to the ones from the previous sections.
+
+        This problem could only be converged using the reformulation strategy. The outer approximation algorithm
+        did not converge for this particular case. However it needs to be pointed out, that a very similar case
+        for somewhat less complex scenarios was converged by outer approximation. This particular case however could
+        not even be solved using the optimal solution from the continuous reformulation as an initial guess.
+        Nevertheless it is assumed, that with careful tweaking of the optimization parameters and solver setting
+        convergence could eventually be achieved.
+        Otherwise the same initial point as in the previous section was used to initialize the optimization.
+        The results are summarized in \tabref{tab:ss_result_dual_cont} and \tabref{tab:ss_result_dual_disc}.
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_dual_cont}
+            \caption{dual steady-state optimization results - continuous variables.}
+            \label{tab:ss_result_dual_cont}
+        \end{table}
+        \begin{table}
+            \center
+            \footnotesize
+            \input{Tables/SS_results_dual_disc}
+            \caption{dual steady-state optimization results - discrete variables.}
+            \label{tab:ss_result_dual_disc}
+        \end{table}
+
+        As only one solution approach produced usable results, no comparison can be made as to the quality of the
+        solution. However aside from from solution quality and time consumption, the robustness of a solution algorithm
+        is very important, when it comes to solving complex scenarios. For the examples examined in the scope of this thesis,
+        all problems which could be solved by outer approximation, could also be solved using the reformulation as NCP.
+        In contrast, not all scenarios which where the NCP approach yielded a solution, could be solved by outer approximation.
+
+        This suggests, that the reformulation strategy has are certain advantages in terms of robustness. It needs to be emphasised,
+        that all findings here are limited to the narrow class of scenarios examined. Due to the limited range of problems, the findings
+        deduced here have no claim for generality. Previous studies have shown \cite{Grossmann.2005} that the MINLP formulation
+        of the separation sequence problem often yields (near) integer variables when solved as an NLP. This is due to the fact,
+        that for each feed stream there is a distinct optimal stage. This stage corresponds to the one stage, where the concentration
+        matches the feed concentration as closely as possible. By feeding a stream to such a stage, energy losses due to
+        entropic mixing effects are minimized, and the need for external energy is kept to a minimum. This beneficial effect
+        is not present for other integer decisions. The use of the DDF function or the reformulated purity constraint, as discussed
+        in the previous section is also exclusive to distillation columns.

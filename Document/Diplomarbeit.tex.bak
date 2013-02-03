@@ -3,6 +3,8 @@
 \input{preambel}
 \input{pgfplots/TikZTemplates}
 
+\selectlanguage{UKenglish}
+
 \newboolean{draft}
 %\setboolean{draft}{true}
 \setboolean{draft}{false}
@@ -30,30 +32,48 @@
 
     \pagenumbering{roman}
 	
-    \include{Content/Preamble/CoverPage}
-	\include{Content/Preamble/TaskDescription}
-	\include{Content/Preamble/StatutoryDeclaration}
-    \include{Content/Lists}
+    \include{Content_final/Preamble/CoverPage}
+	\include{Content_final/Preamble/TaskDescription}
+	\include{Content_final/Preamble/StatutoryDeclaration}
+
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    \printnomenclature[2.5cm]
 
     \pagenumbering{arabic}
     \setcounter{page}{1}
 
-	\include{Content/Abstract}
+%	\include{Content/Abstract}
+    \include{Content_final/00_Abstract}
 
-	\include{Content/Introduction}
-	\include{Content/AirSep}
-	\include{Content/ProcessEconomics}
-    \include{Content/ProcessModel}
-    \include{Content/optimization}
-    \include{Content/ModelApp}
-	\include{Content/outlook}
+%	\include{Content/Introduction}
+    \include{Content_final/01_Introduction}
+
+%	\include{Content/AirSep}
+    \include{Content_final/02_ExampleProcess}
+
+%	\include{Content/ProcessEconomics}
+    \include{Content_final/03_ProcessEconomics}
+
+%    \include{Content/ProcessModel}
+    \include{Content_final/04_ProcessModel}
+
+    %\include{Content/optimization}
+
+%    \include{Content/ModelApp}
+    \include{Content_final/05_ModelApp}
+
+%	\include{Content/outlook}
+    \include{Content_final/06_Outlook}
 
     \bibliography{Literature}
 	
     \begin{appendix}
 
-    	\include{Content/appendix_pengrob}
-        \include{Content/appendix_ModelCompact}
+    	\include{Content_final/90_Appendix_heat}
+        \include{Content_final/91_Appendix_control}
+        \include{Content_final/91_Appendix_pengrob}
 
     \end{appendix}
 	

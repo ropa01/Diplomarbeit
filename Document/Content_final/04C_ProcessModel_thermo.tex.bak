@@ -1,0 +1,34 @@
+﻿    Aside from the unit operation models, the behaviour of materials in a process needs to be adequately
+        accounted for. This is done by means of so called equations of state (EOS) and excess Gibbs energy
+        models. In terms of thermodynamics there are only a limited amount of variables. Namely the pressure,
+        density and temperature as well as composition. While equations of state can model a given system in
+        the vapour as well as liquid phase, excess Gibbs energy models only account for the behaviour of a liquid
+        and need to be used in conjunction with other models for the vapour phase. However they have shown
+        considerable better performance for highly non-ideal systems \cite{AndreasPfennig.2003}. As mentioned
+        earlier (\secref{sec:comp_liq}) it is essential to accurately capture the non-idealities of air
+        in order to capture the liquefaction process. In the case of cryogenic air separation, the Peng-Robinson
+        as well as the Benders equation of state have shown satisfactory performance. The Peng-Robinson equation
+        was chosen to be used in the presented model
+        \Eq{eq:peng_rob}{
+            p & = \frac{RT}{V-b} - \frac{a_c \left[1+m\left(1-\sqrt{T_r}\right)\right]^2}{V^2+2bV-b^2} \\
+            m & = 0.37464 + 1.54226 \omega - 0.26992 \omega^2 \\
+            a_c & = 0.45724 \frac{R^2T_c^2}{p_c} \\
+            b & = 0.077796 \frac{RT_c}{p_c} \\
+            \omega & = -1 - \log_{10} \, (p_r^{sat})_{T_r = 0.7}
+        }
+        \ncr{p}{pressure}{Pa}
+        \ncr{m}{parameter in Peng-Robinson EOS}{-}
+        \ncr{a_c}{parameter in Peng-Robinson EOS}{\frac{m^5}{mol^2 s^2}}
+        \ncr{b}{parameter in Peng-Robinson EOS}{\frac{m^3}{mol}}
+
+        However the Peng-Robinson EOS relies on the so called one-fluid theory which models each fluid as pure.
+        To model mixtures the pure component parameters have to be ''mixed''
+        \Eq{}{
+            a & = \sum_{i=1}^C \sum_{j=1}^C y_i y_j a_{ij}, \\
+            a_{ij} & = \sqrt{a_i a_j} (1 - k_{ij}), \\
+            b & = \sum_{i=1}^C y_i b_i.
+        }
+
+        From that EOS numerous relevant properties such as excess enthalpy, fugacity coefficients or densities
+        can be calculated. For a list of some relevant equations refer to \secref{app:peng_rob_deriv}.
+        \todo{which properties should be included? Or move everything to Appendix?}

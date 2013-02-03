@@ -1,5 +1,5 @@
 \documentclass[12pt,onecolumn,headsepline,numbers=noenddot,bibliography=totoc,oneside,a4paper,BCOR8mm,fleqn,abstracton]{scrreprt}
-\usepackage[UKenglish]{babel}
+\usepackage[UKenglish,ngerman]{babel}
 \usepackage{cmbright}
 \usepackage{color}
 \usepackage[T1]{fontenc}
@@ -10,7 +10,7 @@
 \usepackage{subcaption}
 %\usepackage{graphics}
 %\usepackage{rotating}
-%\usepackage{pstricks} 
+%\usepackage{pstricks}
 \usepackage{longtable}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -58,7 +58,14 @@
 %\let\endoldtabular\endtabular
 %\renewenvironment{tabular}{\rowcolors{2}{}{AVTLightBlue}\oldtabular}{\endoldtabular}
 
-\usepackage[colorlinks=true, linkcolor=ImperialDarkBlue, citecolor=ImperialLightBlue, menucolor=black, breaklinks=false, urlcolor=black]{hyperref}
+\usepackage[pdftitle={Integration of Model Based Optimal Design Methods in the Process Modeling Environment gPROMS},
+            pdfauthor={Robert Pack},
+            colorlinks=true,
+            linkcolor=ImperialDarkBlue,
+            citecolor=ImperialLightBlue,
+            menucolor=black,
+            breaklinks=false,
+            urlcolor=RWTHRed]{hyperref}
 %\usepackage{subfloat}
 \usepackage{paralist}
 \usepackage{xifthen}

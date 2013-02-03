@@ -1,0 +1,179 @@
+\chapter{Air separation technology}
+\label{chp:airsep}
+
+    \begin{figure}[h]
+    	\input{Pictures/tech_compar}
+    	\caption{Comparison of Air Separation Technologies \cite{Prasad.1994}.}
+    	\label{fig:tech_compar}
+    \end{figure}
+    The separation of air finds many application in the modern industry. Pure oxygen and nitrogen are
+    are essential for many processes. The yearly amount of oxygen extracted from air exceeds 100 million
+    tonnes and nitrogen even surpassing these numbers \cite{Emsley.2003c2001}. Among the most prominent
+    examples is the production of synthesis gas,
+    which forms the basis for a multitude of very large-scale process operations. In addition the
+    air separation processes find application as a utility provider rather than producer
+    for example in highly efficient integrated combustion cycles \cite{Mahapatra.2010}. Due to the
+    many different applications, pure nitrogen or oxygen is needed with various demands on
+    purity, flow rate or phase composition. Therefore different technologies are suitable to specific tasks.
+    
+    In general three main principles of air separation can be identified; adsorption,
+    cryogenic distillation and transport through membranes. \Figref{fig:tech_compar} illustrates the
+    economically most viable processes depending on product stream volume and purity.
+    In the further course of this chapter the most prevalent  air separation technologies
+    along with their main fields of application and economic scope are introduced.
+
+    \section{Cryogenic processes}
+    \label{sec:cryo_air_sep}
+    \begin{figure}
+        \center
+        \input{Pictures/ASU_general}
+        \caption[Air Separation Unit]{Schematic representation of the cryogenic air separation process.}
+        \label{fig:ASU}
+    \end{figure}
+    Cryogenic air separation processes are implemented over a great variety of industries among others refining,
+    petrochemicals, medical, food \& beverages and environmental \cite{Sirdeshpande.2005}. \Figref{fig:ASU}
+    shows the major unit operations associated with the process. Initially the air is compressed and later re-expanded
+    to reach the low temperatures required for liquefaction. In an intermediate pre-treatment step most unwanted
+    contaminants are removed. Particularly the amount of carbon dioxide in the gas carries great significance, as
+    operating conditions lie beneath its freezing point. Due to freeze out at those low temperatures, especially
+    within the heat exchanger the performance of process units can greatly be reduced, or entirely hindered.
+    The pre-treated air is then cooled against product streams leaving the separation stage of the process. To which extend
+    the refrigeration is  recovered is among the most dominant factors for economic operations. The requirements
+    towards the product streams determine how much can be recovered. Most processes produce gaseous streams at
+    approximately ambient pressure and temperature \cite{Smith.2001} and hence recover the maximum of energy from the
+    process. However often a subsequent compression step or even liquefaction step is employed to deliver the
+    desired product to the consumer.
+
+    In terms of economically feasible operations, the compression denotes a sizable contribution to the capital cost
+    and is responsible for the majority of the operating cost. However when recovering liquid product, the
+    compression work needs to increase in order to compensate for the loss in recoverable refrigeration. Due to the widespread
+    application of the  process, several increasingly complex process configurations are being implemented
+    with different strategies, for internal recovery of pressure energy and refrigeration.
+
+    The cryogenic process can most economically simultaneously produce large quantities of highly pure oxygen and nitrogen.
+    In addition argon and other noble gases can be recovered from the process. Most alternative technologies will
+    produce one single product stream. Additionally the economy of scale can very well be exploited for this
+    process, which is why current developments are towards large scale single train that can produce
+    an excess of several thousand tonnes of product stream per day \cite{Castle.2002}.
+
+    \section{Adsorption processes}
+    \label{sec:psa}
+    Certain materials display a higher affinity to adsorb a specific class of molecules. Nitrogen is
+    more easily adsorbed in zeolites than oxygen. Therefore if air is fed through a
+    zeolite bed, an oxygen rich stream is produced. Since any bed will eventually
+    be saturated and its capability for adsorption be exhausted, the process carries an
+    inherent discontinuity. However, for most processes which yield large product streams,
+    continuous operations are more cost effective.
+
+    To realize a continuous process multiple adsorption vessels are operated simultaneously.
+    Once a bed is saturated, the process is switched to a different vessel and the saturated one
+    is regenerated. Regeneration utilizes the change of adsorption capabilities at varying temperature
+    or pressure. By increasing temperature or lowering pressure can the bed therefore be regenerated.
+    Due to the switching during operations these processes a commonly known as Temperature Swing Adsorption
+    (TSA) or Pressure Swing Adsorption (PSA). For most industrial applications PSA is preferred for its
+    simpler operation and faster cycle times \cite{Smith.2001}.
+
+    The ability to construct very compact units, have led to implementations of PSA processes at
+    very different scales. Briefcase sized units are constructed for treatment of asthma patients or other
+    medical appliances. Larger scale plants have successfully been utilized, for example in the paper industry
+    during the de-lignation of pulp \cite{Nelson.1993}.
+
+    The bed size is the determining factor for equipment cost. Since cycle times are limited by the regeneration
+    step, the bed size and therefore the cost increases rapidly with the product flowrate. For very large
+    scale operations the cryogenic process is more economically viable. However the PSA/TSA process can be operated
+    much more flexible due to drastically shorter start-up times compared to the cryogenic process. Furthermore, no
+    by-products can be recovered from the process without further subsequent separations \cite{Choi.2003}.
+
+    \begin{figure}
+    	\center
+    	\input{Pictures/PSA_tikz.tex}
+    	\caption{Schematic representation of a three bed PSA process.}
+    	\label{fig:PSA}
+    \end{figure}
+
+    \Figref{fig:PSA} shows a simple flowsheet of a PSA process. For continuous operations two separate beds would
+    suffice, however, to expedite cycle times and process throughput as well as exploit possibilities for pressure
+    energy recovery, process configurations with three or more beds are often installed. Variations of the process
+    use sub-atmospheric pressures during the regeneration step. Such processes are commonly referred to as Vacuum Swing
+    Adsorption (VSA).
+
+    \section{Membrane processes}
+    \label{sec:membrane}
+    In case of the membrane process, the type of membrane used leads to very different process characteristics. For the
+    production of oxygen either polymeric membranes (PEM) or ion-transport membranes (ITM) are installed.
+
+     \begin{figure}
+    	\center
+    	\input{pgfplots/GasPermeation}
+	    \caption{Membrane unit for gas permeation.}
+    	\label{fig:gas_permeation}
+    \end{figure}
+
+    Polymeric membranes operate at near ambient conditions. The driving force for separation is the difference
+    in diffusion rates through the membrane \cite{Melin.2007}. The product flowrate and selectivity are the
+    determining factors for capital cost. These are mainly dependent on the membrane area. Hence
+    the capital cost for the process is expected to rise somewhat linear with the product flowrate.
+    The process can economically generate a medium process stream ($\approx 20 \; t/d$) at lower purities.
+    The minimal start-up time and operations near ambient conditions make the process ideal for
+    applications where oxygen enriched process streams suffice and contaminants such as water or carbon
+    dioxide can be tolerated. Membranes which incorporate active species that facilitate oxygen transport
+    trough the membrane bear the potential to greatly improve process performance \cite{Kammermeyer.1976}.
+    In general though, the alternative technologies are more mature than membrane processes.
+
+    Processes with ion exchange membranes are drastically different from the ones with PEM's. Foremost they
+    operate at high temperatures ($\approx 900 K$). At the membrane surface oxygen molecules are ionized
+    and transported through the membrane along an externally applied electric potential. They travel
+    through the membrane at very high flow rates. The process is capable of producing virtually pure
+    oxygen. It is especially suited for integration with power generation processes \cite{Smith.2001}.
+
+    \section{Hybrid processes}
+    The three different alternatives presented before constitute the major technologies for separations
+    of gases and therefore the production of pure nitrogen and oxygen. All technologies have their specific
+    advantages and disadvantages. As the separation of gases remains a major issue when facing upcoming challenges
+    for our industries substantial efforts are being made to improve current processes in terms of ecological
+    and economic performance. A very promising way to achieve such improvements is to combine these technologies
+    to form hybrid processes. Membranes offer many favourable characteristics are subject to limitations when
+    it comes to large flow-rates and high purities. When lower purities are required or the flow-rates are limited
+    they offer an efficient and cost effective way for gas separation. Therefore in the past years several
+    alternatives for PSA - membrane \cite{Akinlabi.2007} or membrane-cryogenic distillation processes \cite{Wankat.2011}
+    have been studied. The membrane can function within the process either as a pretreatment step, where a product enriched
+    stream at medium purities and high flow-rates is produced, or after the main separation, when the main
+    by-products are already removed, as a last stage to reach very high purities.
+    
+        \section{Example process}
+        \begin{figure}
+            \footnotesize
+            \center
+            \includegraphics[width=\linewidth]{Pictures/ASU_superstructure}
+            \caption{Example process superstructure.}
+            \label{fig:opt:exppro}
+        \end{figure}
+
+        The developed models were combined to a process flowsheet for the cryogenic air separation process.
+        As no specific process was being evaluated, the process configuration was modeled after an
+        published example process flowsheet \cite{Kooijman.}. \Figref{fig:opt:exppro}
+        shows the flowsheet considered henceforth. Air is drawn from the surrounding at ambient conditions
+        and compressed with inter-cooling stages. Afterwards the entering process stream exchange heat
+        with the product streams.
+
+        The stream is then divided into two separate streams. One part is expanded in a turbine, and fed to
+        the low pressure column (LPC) while the majority is fed to the high pressure column (HPC).
+        Condenser and reboiler are combined in a single unit. A side column to the LPC generates pure
+        argon. The condensate form the HPC is partially fed into the LPC. The oxygen rich sump product form the HPC
+        is used to condensate the CAC top product, and afterwards fed into the LPC. From the reboiler side liquid oxygen
+        is recovered from the process. From the top of LPC and HPC gaseous nitrogen is drawn. Liquid Argon is drawn from
+        the CAC condenser.
+
+        AS can be seen, this process is highly integrated with respect to energy and material streams. For both the
+        steady-state and dynamic process model, the same separation sequence is considered. Compression and heat-exchange
+        are only explicitly modeled in the steady-state process. While the steady-state models do provide the possibility
+        to calculate pressure drops by means of an hydraulic model, they were assumed constant in all steady-state applications.
+        When using the dynamic models, hydraulic equations have to be considered. For the case of the ASU process different column
+        internals are often installed. The HPC as the smallest column can be economically operated as a trayed column, hence the
+        respective hydraulic and cost models were employed there. The LPC and CAC are mostly equipped with structured
+        packings.
+
+        Another difference in the steady-state and dynamic models was the considered superstructure. For optimizing the number
+        of separation stages, a maximum value needs to be guessed. In the steady-state case those were set to 40 for the HPC
+        and 60 for the LPC and CAC respectively. With the steady-state results in mind, these were reduced to 25 for the HPC
+        and 45 for LPC and CAC when constructing the dynamic process.

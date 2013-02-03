@@ -1,0 +1,273 @@
+ \todo{explain model assumptions, limitations, mention wave therory marquardt paper.}
+
+\subsection{Distillation column model}
+    The previously described column model is based on the assumption of steady-state operations. This means that all
+    derivatives with respect to time are zero. While a model like that offers valuable insight into the operation
+    of a process many aspects remain unclear. Questions of operability or stability of the process, or if a given
+    steady state can actually be acquired in finite are beyond the scope of steady state models. In order to
+    supply answers to aforementioned questions, dynamic versions of the previously discussed unit models
+    are needed. The aim is to retain the capability for structural optimization for the dynamic models.
+
+    First the balance equations have to be rewritten in dynamic form. To do so reservoir terms or holdups
+    are introduced. Namely the component holdups $n_{ij}$ and internal energy $U_j$ for each stage.
+    With that the component balance equations as presented in the previous section can now be rewritten as
+        \Eqml{eq:col:CompBalance_opt}{
+    		\left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \fracdd{n_{ij}}{t} = \left(1 + s_j^V\right)
+                \cdot V_j \cdot y_{i,j} + \left(1 + s_j^L\right) \cdot L_j \cdot x_{i,j} - V_{j+1}
+                \cdot y_{i,j+1} \\ \hfill - L_{j-1} \cdot x_{i,j-1}
+                - \sum_{l=1}^{n_F} \zeta_{lj} \cdot F_j \cdot z_{i,j} - \zeta^R_j \cdot V_N \cdot y_{iN}, \hfill%
+                \\ \eqannote{i = 1 \dots n_C-1, \quad j = 1 \dots N, \quad k = 1 \dots n_F, \quad l = 1 \dots n_F}.
+    	}%
+    While the internal energy balances become
+        \Eqml{eq:col:EnergyBalance}{
+    		\left(1 - \sum_{k=1}^{j-1} \zeta^R_k \right) \fracdd{U_j}{t} = \left(1 + s_j^V\right) \cdot V_j \cdot h^V_{j} + \left(1 + s_j^L\right)
+                \cdot L_j \cdot h^L_{j} - V_{j+1} \cdot h^V_{j+1} \\ \hfill - L_{j-1} \cdot h^L_{j-1}
+                - \sum_{k=1}^{n_F} \zeta_{kj} \cdot F_k \cdot h^{F}_{j} - \zeta^R_j \cdot V_N \cdot h^V_{N}, \hfill
+                \\ \eqannote{i = 1 \dots n_C, \quad j = 1 \dots n_S, \quad k = 1 \dots n_F}.
+    	}%
+    \ncr{n_{ij}}{holdup of component $i$ on stage $j$ }{mol}
+    \ncr{U_j}{internal energy holdup on stage $j$}{J}
+    The summation terms in front of the derivatives are needed if integer optimization is to be carried out with the model.
+    In the steady-state case, no equilibrium took place at inactive stages. However in this case, there are the holdups
+    in connection with the column hydraulics to be considered. While still no equilibrium should take place,
+    even inactive trays will have to have a holdup. By means of the summations, the material balance is
+    effectively transformed into a steady state equation, such that inactive trays will operate at steady-state
+    with constant holdups, and therefore have no effect on the active part of the column.
+
+    In addition to the balance equations further constituent equations need to be introduced. From the
+    steady state model we know the equilibrium equations
+    \Eq{eq:col:Kxy}{
+        y_{ij} & = K_{ij} \cdot x_{ij}, \eqanncs,
+    }%
+    %
+    and the summation equations
+    %
+    \Eq{eq:col:summ_dyn}{
+        1 & = \sum_i^{n_c} y_{ij} \eqanns, \\
+        1 & = \sum_i^{n_c} x_{ij} \eqanns.
+    }%
+    %
+    Furthermore defining equations for the accumulation of moles on each stage in vapour $n_j^V$ and
+    liquid $n_j^L$ phase are needed
+    %
+    \Eq{eq:col:holdup}{
+        n_{ij} & = x_{ij} n_j^L + y_{ij} n_j^V \eqanncs.
+    }%
+    \ncr{n_j^L}{liquid molar holdup on stage $j$}{mol}
+    \ncr{n_j^V}{vapour molar holdup on stage $j$}{mol}
+    %
+    These holdups will fill the volume of a given stage $V_{stage}$. Thus a volume constraint
+    can be written as
+    %
+    \Eq{eq:dyn:volconstraint}{
+        V_{stage} = \frac{n_j^V}{\varrho_j^V} + \frac{n_j^L}{\varrho_j^L} \eqanns.
+    }%
+    \ncr{V_{stage}}{stage volume}{m^3}
+    %
+    The internal energy in a stage corresponds to its enthalpy, reduced by pressure term
+    \Eq{eq:dyn:internergyholdup}{
+        U_j = n^L_j \cdot h^L_j + n^V_j \cdot h^V_j - p_j \cdot V_{stage}
+    }
+    %
+    As we are no longer dealing in steady state hydraulic equations need to be introduced,
+    which determine the liquid and vapour flow rates leaving a separation stage. As the
+    mechanisms driving these flows might be very different depending on the type of internals
+    used, it is not surprising that the corresponding equations are also very different. In the
+    presented model implementation, both trayed columns and structured packings can be handled accordingly.
+
+    \subsubsection{Trayed hydraulics}
+    \label{sec:mathpro:dynamic:trayhyd}
+        \begin{figure}
+            \center
+%            \begin{subfigure}{0.46\textwidth}
+                \center
+                \input{Pictures/tray_model}
+                \caption{Column tray.}
+                \label{fig:col_tray}
+%            \end{subfigure}
+%            \begin{subfigure}{0.46\textwidth}
+%                \center
+%                \input{Pictures/tray_model_len}
+%                \caption{Column tray}
+%                \label{fig:col_tray}
+%            \end{subfigure}
+        \end{figure}
+
+        Trayed column hydraulics can be approximated by the following system of equations.
+        All equations presented here were taken from \cite{Lockett.2009}.
+
+        The liquid flow rates are calculated from the well established francis formula ,
+        derived from the law of Bernoulli and taking effects like bubbling into account
+        %
+        \Eq{eq:col:francis}{
+            L_j = \frac{2}{3} \sqrt{2 g} \varrho^L_j \ell_{weir} \Phi h_{ow}^{\frac{2}{3}} \eqanns.
+        }%
+        \ncc{g}{gravitational constant}{\frac{m}{s^2}}
+        \ncr{\ell_{weir}}{length of tray weir}{m}
+        \ncr{h_{ow}}{height over weir}{m}
+        \ncg{\Phi}{relative froth density}{-}
+        %
+        Where $h_{ow}$ denotes the height of the liquid over the weir, which can be calculated from the
+        froth height $h_f$ and the weir height $h_w$
+        \Eq{}{
+            h_{ow} = h_f - h_w.
+        }
+        \ncr{h_f}{froth height}{m}
+        \ncr{h_w}{weir height}{m}
+        %
+        While the weir height is a tray design parameter the froth height is computed from the clear
+        liquid height and the relative froth density
+        \Eq{}{
+            h_f = \frac{n^L \, MW^L}{A_{active} \, \varrho^L \, \Phi}.
+        }
+        \ncr{A_{active}}{active tray area}{m^2}
+        %
+        Lastly in terms of liquid flow rates, the relative froth density is dependent on the
+        degree of aeration within the liquid, expressed by the aeration factor $\beta$
+        from an empirical equation
+        \Eq{}{
+            \beta_j & = 1 - 0.3593 \left( \frac{V_{j-1} \, MW^V_{j-1}}{A_{active} \, \sqrt{\varrho_{j-1}}} \right)^{0.177709} \eqanns, \\
+            \Phi_j & = 2 \beta_j - 1.
+        }
+        \ncg{\beta}{aeration factor}{-}
+
+        The pressure difference between stages is the driving force for the vapour streams. The pressure drop
+        is modeled as having two contributions, the dry and wet pressure drop. While dry pressure drop
+        stems from the vapour flowing through the holes with in tray, the wet pressure drop is caused by the liquid
+        holdup on the stage.
+        \Eq{eq:col:dp_dyn}{
+            p_j - p_{j+1} = h_{j}^{liq} \varrho_j^L g + 0.5 \xi \varrho_{j+1}^V \left( \frac{q_{j+1}^V}{A_h} \right)^2
+        }%
+
+    \subsubsection{Structured packing hydraulics}
+    \label{sec:mathpro:dynamic:strpackhyd}
+%        \begin{figure}
+%            \input{Pictures/packing_geo}
+%        \end{figure}
+
+        Structured packings and their hydraulic behaviour are currently still under investigation. The number
+        of available correlations for calculation of internal flow-rates is much more limited than for trays or even
+        dumped packings. Among the most established models is the one developed by Bravo et al. \cite{Rocha.1993} at the
+        University of Texas. This model has been extended to be valid in the loading region and account for different types
+        of packing material \cite{Gualito.1997}. As main linking factor between vapour and liquid flow-rates as well as
+        the pressure drop, the liquid holdup has bee identified by the authors. It is expressed in dimensionless form $h_t$ in
+        terms of the corrugation side $S$, and the film thickness $\delta$
+        \Eq{eq:dyn:dimlessholdup}{
+            h_L = \frac{4}{S} \, \delta.
+        }
+        \ncr{h_L}{dimesionless holdup}{-}
+        \ncg{\delta}{film thickness}{m}
+        \ncr{S}{corrugation side}{m}
+        %
+        One very important factor while estimating the hydraulic behaviour is the dry pressure drop per meter packing $\delta p_{dry}$.
+        Within in the presented model it is estimated by
+        \Eq{eq:dyn:drydp}{
+            \delta p_{dry} = \left( \frac{\varrho^G}{\varrho_{air, 1 bar}} \right)^{0.4} \left( \frac{C_1 \varrho^G v_G^2}{S \epsilon^2
+                (\sin \Theta)^2} + \frac{C_2 \mu_G v_G}{S^2 \epsilon \sin \Theta} \right)
+        }
+        \ncg{\Theta}{corrugation angle}{rad}
+        \ncg{\mu_G}{vapour viscosity}{Pa \cdot s}
+        \ncg{\epsilon}{packing void fraction}{-}
+        \ncr{v_G}{vapour velocity}{\frac{m}{s}}
+        \ncr{\delta p_{dry}}{dry pressure drop}{\frac{Pa}{m}}
+        \ncr{C_1}{packing constant}{}
+        \ncr{C_2}{packing constant}{}
+        %
+        Another perquisite for calculating the holdup is the knowledge of the amount of wetted area of the available
+        surface area within the packing. It seems reasonable to assume that this will be dependent on the characteristic
+        of the liquid flow through the packing. To characterize the current, well known dimensionless numbers are
+        used. Namely \emph{Weber} ($We$), \emph{Froude} ($Fr$) and Reynolds ($Re$) numbers
+        \Eq{}{
+            We & = \frac{v_L^2 \varrho_L S}{\sigma}, \\
+            Fr & = \frac{v_L^2}{S g}, \\
+            Re & = \frac{v_L S \varrho_L}{\mu_L}
+        }
+        \ncg{\mu_L}{liquid viscosity}{Pa \cdot s}
+        \ncr{v_L}{liquid velocity}{\frac{m}{s}}
+        %
+        With that an approximation for the holdup correction factor $F_t$ due to partial wetting can be expressed as
+        \Eq{eq:dyn:wettedarea}{
+            F_t = \frac{A_1 \left( We \, Fr \right)^{0.15} S^{A_2}}{Re^{0.2} \, \epsilon^{0.6}
+                (1 - 0.93 \cos \gamma) (\sin \Theta)^{0.3} }
+        }
+        %
+        \Eq{}{
+            h_L = \left( \frac{4 F_t}{S} \right)^{\frac{2}{3}} \left\{ \frac{3 \mu_L v_L}{\varrho_L \epsilon \sin \Theta
+                g \left[ \left( \frac{\varrho_L - \varrho_G}{\varrho_L} \right) \left(1 - \frac{\delta p}{\delta p_{flood}} \right) \right]} \right\}^{\frac{1}{3}}
+        }
+    %
+
+\subsection{Integrated condenser \& reboiler unit}
+    \todo{include Integrated condenser / reboiler unit}
+
+    As it has been stated on several occasions the condenser reboiler unit is essential in the cryogenic air separation process.
+    Even more so, when we consider the dynamics behaviour of the process. In order to model this unit, it is assumed that
+    all vapour entering the stage will be condensed, thus the unit is regarded as total condenser. Furthermore the holdups on the
+    condenser side are assumed to negligible. The reboiler side on the other hand is modeled as an equilibrium stage much like
+    the stages within the column.
+
+    \subsubsection{Reboiler side}
+        As the reboiler side behaves like an equilibrium stage, the governing equations are very similar to those for
+        a stage inside the columns. Hence they will be given without much further comment.
+
+        The material balances
+        \Eq{}{
+            \fracdd{n_i^{reb}}{t} = L_{reb}^{in} \cdot x_{i, reb}^{in} - V_{reb}^{out} \cdot y_i^{reb}
+                - L_{reb}^{out} \cdot x_i^{reb}, \eqannc.
+        }
+        \ncr{n_i^{reb}}{molar holdup of component $i$ in reboiler}{kmol}
+        \ncr{L_{reb}^{in}}{liquid reboiler influx}{\frac{kmol}{s}}
+        \ncr{L_{reb}^{out}}{liquid reboiler outflow}{\frac{kmol}{s}}
+        \ncr{V_{reb}^{out}}{vapour reboiler outflow}{\frac{kmol}{s}}
+        \ncr{y_{i}^{reb}}{reboiler vapour mole fractions}{-}
+        \ncr{x_{i}^{reb}}{reboiler liquid mole fractions}{-}
+        Internal energy balance
+        \Eq{}{
+            \fracdd{U_{reb}}{t} = L_{reb}^{in} \cdot h_{in}^{reb} - V_{reb}^{out} \cdot h_{V}^{reb}
+                - L_{reb}^{out} \cdot h_{L}^{reb} + Q_{CR}.
+        }
+        \ncr{U_{reb}}{reboiler internal energy holdup}{kJ}
+        \ncr{h_{L}^{reb}}{reboiler liquid enthalpy}{\frac{kJ}{kmol}}
+        \ncr{h_{V}^{reb}}{reboiler vapour enthalpy}{\frac{kJ}{kmol}}
+        In addition to the balances the equilibrium and summation equations are necessary to complete
+        the equations system.
+
+        As for the trays hydraulic equations determine the flowrates leaving the unit. For the liquid
+        outlet Bernoulli's principle was used to derive an equation
+        \Eq{}{
+            L_{reb}^{out} = A_{\text{valve}} \varrho_L \sqrt{\frac{2 \cdot \left( \Delta p + \tilde{\varrho}_L g h\right)}{\tilde{\varrho}_L}},
+        }
+        disregarding the height difference an equation for the vapour flowrate can be derived
+        \Eq{}{
+            V_{reb}^{out} = A_{\text{valve}} \varrho_V \sqrt{\frac{2 \Delta p}{\tilde{\varrho}_V}}.
+        }
+
+    \subsubsection{Condenser side}
+        For a total condenser disregarding reservoir terms the mass balances become trivial
+        \Eq{}{
+            L_{con}^{out} = V_{con}^{in}.
+        }
+        To ensure bubble point temperature a summation as well as an equilibrium expression are included
+        \Eq{}{
+            1 & = \sum_i^{n_C} K_i x_{i,con}, \eqannc, \\
+            x_{i, con} & = y_{i, con}^{in}, \eqannote{i = 1 \dots n_C - 1}.
+        }
+        An energy balance around the condenser side determines the transferred energy
+        \Eq{}{
+            Q_{CR} = L_{con} \cdot \left( h_{con}^{in} - h_{con}^{out} \right).
+        }
+
+    \subsubsection{Heat exchange}
+        As the transferred energy is determined form the condenser energy balance, the temperature
+        difference between condenser and reboiler can be calculated by means of
+        \Eq{}{
+            Q_{CR} = \alpha A_{HX} \cdot \left( T_{con} - T_{reb} \right).
+        }
+        Roffel et al \cite{Roffel.2000} found form process data, that the overall heat transfer coefficient ($\alpha A$)
+        can be approximated by a simple formula in terms of the condenser inlet vapour flowrate
+        \Eq{}{
+            \alpha A = c_1 \left( V_{con}^{in} \right)^{0.8}.
+        }
+
+
+

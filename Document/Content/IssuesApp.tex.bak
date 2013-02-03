@@ -1,0 +1,77 @@
+    Aside from the actual model equations care must be taken as to how to implement any set of equations,
+    such that a numerical solver can find feasible solutions. The most prominent issues one is faced with in
+    that context are scaling and singularities within the model. Both aspects will be briefly discussed here.
+
+        \subsection{Scaling}
+        When evaluating a model, or integrating over a given time span, Taylor expansion is used to construct
+        an approximate linear process model. This means, that a system of the form
+        \Eq{eq:lin_sys}{
+            \vec{A} x = b,
+        }
+        is solved to a specified absolute accuracy $\varepsilon$. For a single equation the choice of an appropriate
+        value for $\varepsilon$ is rather simple, given that the magnitude of $\vec{A} x$ and $b$ is known.
+        Here one needs to consider, that if either magnitude is much grater than $\varepsilon$ a large number
+        of iterations will be necessary to solve the system in question. On the other hand, if they are of similar
+        magnitude relative error in the attained solution might become unacceptably high.
+
+        To address these issues it is wise to consider the model scaling while implementing the equations.
+        One approach would be to introduce scaling factors on both sides of an equation. While this
+        may certainly improve scaling for the equation itself, the opposite might be true for the respective derivative.
+        Consider the following simple example \cite{MarkPinto.2008} where to holdups are added to a total holdup
+        \Eq{}{
+            f(M_i) = M_1 + M_2 = M_T
+        }
+        Assuming both holdups are of magnitude $M_1 = M_2 = 10^5kg$, then the function value is $2 \cdot 10^5$, while for
+        the derivative
+        \Eq{}{
+            \fracddpart{f}{M_1} = \fracddpart{f}{M_2} = \fracddpart{f}{M_T} = 1
+        }
+        holds. Introducing a scaling factor of $10^{-5}$ to both sides of the equation would lead to a function value
+        of $2$ but have an adverse effect on the derivatives $\fracddpart{f}{M_i} = 10^{-5}$.
+
+        A more robust approach would be to scale the units of the given equation which can simultaneously improve
+        scaling for the function and its derivatives. Writing the same equation in tonnes would lead to  function value of
+        $200$ while maintaining the well scaled derivatives. Alternatively one can introduce further variables and equations
+        with the aim to get more linear equation and rescale some parts of the original equation. A more linear function
+        leads to more constant Jacobian elements and reduces the need for Jacobian updates which can be very expensive in
+        computational terms.
+        
+        When it comes to the dynamic models, the issue of scaling is extend with another aspect. While for the steady-state
+        models, one could rewrite each equation with different units, as long as each equation is in itself consistent, 
+        the same cannot be said, for the dynamic models. Here it is imperative, to maintain the same time scale for every 
+        dynamic equation. Due to the very large flow-rates, the steady-state and dynamic balances were written in 
+        $\frac{kmol}{hr}$ to achieve a well scaled equation. Considering the various dynamic effects discussed in 
+        the previous section, this seems to coarse to capture all relevant phenomena. Maintaining one time unit as one 
+        hour would lead to integrator steps of $\frac{1}{3600}$ for one second. Considering furthermore the small changes 
+        in the model variables, intuitively this would lead to very badly scaled problems. To somehow accommodate these 
+        considerations, it was decided, to introduce a scaling factor solely on the left hand side of the dynamic equations. 
+        By those means, the time scale of the process model can easily be adjusted for seconds, minutes, hours or days.  
+
+        \subsection{Singularities}
+        Singularities in the models considered here often occur, when a variable is raised to a non-integer power,
+        or the logarithm of a variable is evaluated.
+        Expressions like have no solution within the rational domain, when the respective variable becomes negative.
+        Furthermore when negative exponents are involved a value of zero would lead to a division by zero which is
+        undefined. Even before that the function value might become very large as the variable approaches zero.
+
+        In the context of a distillation column, this issue becomes especially relevant, when optimizations or simulations
+        with inactive trays are carried out. Some flowrates in the inactive section of the model will be zero, depending
+        on whether the top or bottom reflux is optimized, those will be either vapour or liquid flowrates. While a
+        solution of zero might cause issues in some cases, a negative solution introduces even more complications. As the
+        equations are solved within numerical accuracy, this might also lead to (slightly) negative solutions, which will
+        cause the numerical solver to fail. Such scenarios have to be anticipated while implementing the model and
+        appropriate measures have to be taken to ''protect'' such variables from hindering model evaluation.
+
+        As \gproms supports state transition networks, one way is to introduce conditional statements. However
+        those statements will in almost all cases lead to discontinuities in the model. While in principal such
+        discontinuities can be detected by numerical solvers \cite{Pantelides.2003}, they are a further source
+        for instabilities. Hence they should in the best case only be introduces, when there is a physical correspondence
+        in the system behaviour.
+
+        In this thesis the problem was approached by decoupling the flowrates within the column, and the ones used for evaluation
+        of the hydraulic model. With the help of the split fractions active and inactive trays can be distinguished.
+        \Eq{}{
+            V_j^{\text{hyd}} = \left( \sum_{k=1}^j \zeta^R_k \right) \cdot V_j + \left(1 - \left( \sum_{k=1}^j \zeta^R_k \right)\right) \cdot V_1
+        }
+        Here it should be pointed out, that it only needs to be ensured, the the hydraulic model can be evaluated for inactive trays.
+        What results are returned for these trays has no effect for the modelled column operation.

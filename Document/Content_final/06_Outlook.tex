@@ -1,0 +1,38 @@
+\chapter{Conclusion and further research}
+\label{chp:outlook}
+
+Within the presented thesis several models have been implemented, which are suitable to be used for process
+optimization. The most elaborate model concerns distillation columns. Both steady-state and dynamic
+models have been implemented. The core of these models is formed by the so called MESH equations which
+denote the energy and material balances along with the governing equations for the vapour liquid equilibrium
+and a closure condition for the mole fractions.
+
+While these equations are capable of predicting steady-state operations for a given column, there are further
+aspects of great interest to the process designer. For the dynamic models the column dynamics, in form of
+hydraulic equations, have to be considered in order to attain a closed model, whereas for the steady state case
+these can be replaced by respective specifications. Hence these hydraulic equations are implemented as an elective
+module for these column models. To extend the capabilities of these models other modules have also been added which
+are elective for both dynamic and steady-state models. Among those are Murphee tray efficiencies, which account for
+non-equilibrium stages and costing models which yield approximations for an expected size and cost for the
+simulated columns.
+
+When it comes to simulating unit operations with these models the question of model initialization becomes relevant.
+Due to the highly non-linear nature of the equation system, the solver needs to be provided with a good initial
+guess to start convergence to a feasible solution. Complex column configurations with multiple feeds and side draws
+as well as highly non-ideal mixtures further complicate the matter. To approach this problem the model environment
+\gproms offers initialization procedures which allow to solve a sequence of model variants with increasing complexity.
+Several approaches suitable for different systems have been implemented.
+
+Process optimization has been the driving force when implementing these models. Especially structural decisions
+associated with column design such as number of separation stages or feed and side draw locations.
+The resulting mixed-integer non-linear programs are particularly hard to solve. Convergence is is highly
+dependent on model robustness and problem formulation. As discussed in \secref{sec:opt:MINLP} the solution of
+these programs can be approached in several ways. To allow for the the greatest flexibility the model superstructures
+can be adjusted to have variable top or bottom reflux locations. Furthermore a so called differentiable distribution
+function can be incorporated to facilitate convergence to a solution.
+
+From the perspective of an industrial end-user of these models, a drag and drop solution which can easily be deployed
+and yields reliable results is an ideal solution. An effort was made within this thesis to ascertain whether
+if and how such a drag and drop solution might work.
+
+HX integration model have been developed

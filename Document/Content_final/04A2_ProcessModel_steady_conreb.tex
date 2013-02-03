@@ -1,0 +1,41 @@
+        \begin{figure}
+            \center
+            \input{Pictures/condenser_reboiler}
+            \caption{Integrated condenser \& reboiler unit.}
+            \label{fig:mathpro:conreb_ss}
+        \end{figure}
+
+        The integrated condenser reboiler unit is a peculiarity of the ASU process. The fact that condenser and
+        reboiler are linked form the close coupling between both sections of the double effect column.
+        This stems from the fact, that each change in the parameters and operation of this unit will reverberate
+        through the entire process, as they will simultaneously affect boil-up ratio and reflux
+        ratio of the column, both major operational parameters with great effect.
+
+        Therefore a separate model for this unit was developed, rather that simply establishing a couple between the
+        the condenser and the reboiler in the case for two separately modeled column sections.
+
+        The reboiler side is modeled much like an equilibrium stage in the column, considering the entering
+        and leaving streams as depicted in \figref{sec:mathpro:steady:conreb}. However in contrast to the
+        equations supplied for a column section, no integer optimization terms will have to be considered.
+        Furthermore no side draws, or separate feeds are recognized. With that the material balances are
+        \Eq{}{
+            0 = L_{reb}^{in} x_{i,reb}^{in} - L_{reb}^{out} x_{i}^{reb} - V_{reb}^{out} y_{i}^{reb}, \eqannc.
+        }
+        The energy balance taking into account the transferred energy ($Q_{CR}$) becomes therefore
+        \Eq{}{
+            0 = L_{reb}^{in} h_{reb}^{in} - L_{reb}^{out} h^L_{reb} - V_{reb}^{out} h^V_{reb} + Q_{CR}.
+        }
+        The equilibrium and summation equations are analogous to the ones presented for the column model.
+        A pressure drop again is assigned with relation to the lowest column stage.
+
+        The condenser is modeled as a total condenser. The mass and component balances therefore become trivial
+        \Eq{}{
+            x_{i,con} & = y_{i,con}^{in}, \eqannc, \\
+            V_{con}^{in} & = L_{con}^{out}.
+        }
+        The temperature is set to the bubble temperature of the given mixture at an assigned pressure. The
+        enthalpies of the entering and leaving stream can therefore be calculated from the given EOS. And
+        the energy balance determines the transferred energy
+        \Eq{}{
+            0 = V_{con}^{in} h_{con}^{in} - L_{con}^{out} h^L_{con} - Q_{CR}.
+        }

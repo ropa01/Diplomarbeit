@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.7]
+    \pgfmathsetmacro{\blockh}{1.5cm}
+    \pgfmathsetmacro{\blockw}{2.2cm}
+    \tikzset{box/.style={draw, rectangle, minimum height=\blockh, minimum width=\blockw, align=center}}
+	\node (A) [box] at (0,0) {NLP \\ \progref{prog:fixedyNLP}} ;
+    \node (B) [box] at (6,0) {MILP \\ \progref{prog:MILP}} ; 
+    \draw [arrow] (A.east) -- (B.west) ;
+    \draw [arrow] ($(A.west) - (2,0)$) -- (A.west) ; 
+    \draw [arrow] (B.east) -- ($(B.east) + (2,0)$) ;
+    \draw [arrow] (B.south) -- ++(0,-1) -- ++($(A.south) - (B.south)$) -- (A.south) ; 
+\end{tikzpicture}

@@ -1,0 +1,298 @@
+As discussed earlier economic consideration play a major role in process design. In order to account
+for the process economics the cost of the process to be implemented needs to be estimated at the design
+level. However as limited information is available estimation methods have to be employed. In
+\secref{sec:ProjectCost} the general approach for cost estimation of process equipment was
+introduced, where a specific value such as heat-exchange area or vessel size is used to approximate
+equipment cost. However for more specific units extended models are available, where statistical
+data is employed to yield a more realistic fit to cost data. The cost functions and correction
+factors presented in this chapter are, if not stated otherwise, taken from \cite{Seider.2010}.
+Also unless otherwise stated the unit cost is given for the year 2006 ($CE = 500$).
+	
+\subsection{Destillation column}
+    The cost of a given distillation column $C_{\text{column}}$ is comprised of three main parts, the cost
+    for the vessel or tower itself $C_{tower}$, the cost for platforms, ladders, manholes, and nozzles
+    $C_{\text{platform}}$ and the cost for the internals $C_{\text{internals}}$
+    \Eq{}{
+        C_{\text{column}} = C_{\text{tower}} + C_{\text{platform}} + C_{\text{internals}}.
+    }
+    \ncr{C_{\text{column}}}{column cost}{\$}
+	\ncr{C_{tower}}{tower cost}{\$}
+    \ncr{C_{\text{platform}}}{platform cost}{\$}
+    \ncr{C_{\text{internals}}}{cost of column internals}{\$}
+	
+    The determining factors for the cost of a tower are the construction material and the weight of the vessel.
+    The material is considered by multiplying a base cost by a material factor $f_M$. Thus the cost for
+    the tower can be approximated by
+    \Eqml{eq:cost:column:vessel}{
+	   C_{tower} = f_M \cdot \exp\left[ 7.2756 + 0.18255 \cdot \ln(W_{tower}) + 0.02297 \cdot \pow{\ln(W_{tower})}{2} \right],\\
+            \eqannote{9000 \leq W_{tower} \leq 2.5 \cdot 10^6}.
+	}
+    \ncr{W_{tower}}{weight of  a tower}{lbs}
+    In this correlation the weight $W$ is measured in pounds ($[lbs]$)
+
+    For the support structures the following equation has bee presented
+	\Eq{eq:cost:column:support}{
+	   C_{\text{platform}} = 300.9 \cdot \pow{d_{\text{column}}}{0.63316} \cdot \pow{l_{\text{column}}}{0.80161},
+	}	
+    where both the diameter $d_{\text{column}}$ and length $l_{\text{column}}$ are measured in feet ($[ft]$).
+	
+    The weight of the column is attained by calculation its volume and multiplying it by the
+    mass density of the construction material $\tilde{\varrho}$
+    \Eq{eq:cost:column:weight}{
+	   W_{\text{column}} = \pi (d_{\text{column}} + t_s)(l_{\text{column}} + 0.8 \cdot d_{\text{column}}) t_s \cdot \tilde{\varrho}.
+	}	
+    \ncr{t_s}{tower shell thickness}{in}
+    It needs to be noted, that in this formula, all measurements have to be adjusted to the measurement
+    of the density. Newly appearing is the shell thickness $t_s$ of the tower. In order to compute
+    this, several aspects can be considered.
+
+    The ASME pressure vessel code formula is used to compute the minimum thickness due to the design
+    pressure $p_D$ of a tower
+    \Eq{eq:cost:column:wallthickness}{
+		t_p = \frac{p_D \, d_{\text{column}}}{2 \, S \, E - 1.2 p_D},
+	}
+    where $S$ denotes the maximum allowable stress and $E$ the fractional weld efficiency.
+    \ncr{S}{maximum allowable stress}{psi}
+    \ncr{E}{fractional weld efficiency}{-}
+    \ncr{t_p}{shell thickness die to pressure}{in}
+
+    The design pressure is computed from the operating pressure $p_O$
+    \Eq{eq:cost:column:designpressure}{
+		p_D = \max\left\{10,\exp\left[ 0.60600 + 0.91615 \cdot \ln(p_O) + 0.0015655 \cdot \left(\ln(p_O)\right)^2 \right]\right\},
+	}
+    \ncr{p_D}{design pressure}{psig}
+    \ncr{p_O}{operating pressure}{psig}
+    It should be pointed out the the pressures in the previous equation are measured in pound per square inch
+    gauge ($[psig]$).
+
+    In addition to the thickness due to pressure, it should be considered -- especially for tall vessels --
+    that the vessel might have to withstand external forces such as strong winds or earthquakes.
+    To account for external effects a security addition  $t_w$ to the pressure thickness can be computed
+    \Eq{}{
+        t_w = \frac{0.22 (d_{\text{column}} + 18)l_{\text{column}}^2}{S d_{\text{column}}} .
+    }
+    \ncr{t_w}{thickness wind and earthquake correction}{in}
+
+    Therefor the total shell thickness amounts to
+    \Eq{}{
+        t_s = t_p + t_w.
+    }
+
+    In the previous equations the column diameter and length have frequently been used, however no mention
+    has been made as to how to attain these values. While for a given design these values will be fixed,
+    in the context of an optimization they need to be considered as decision variables. These decisions
+    are closely linked to the choice of column internals. In case of the column height the procedure
+    is very similar for columns with trays and structured packings. In case of the diameter however
+    a clear distinction has to be made. This is due to the fact, that a decision regarding the diameter
+    will have to ensure feasible column operations, which means it will have to be large enough to
+    avoid flooding within the column. Consequently the procedures for determining height and diameter
+    will be dealt with separately for each type of internals.
+
+    \subsubsection{Trays}
+        For a trayed column the height can be determined from the number of stages $n_S$ used multiplied by
+        the plate spacing $h_{\text{plate}}$. In addition however it needs to be ensured, that control of the
+        columns is still possible. At the sump of the tower liquid will accumulate during operations.
+        While in an ideal case the liquid level would be constant, that cannot be assumed. Regularly
+        there are three different liquid levels defined in a column. The high level (HLL), normal
+        level (NLL) and the low level (LLL). These levels are defined such that it sufficient time
+        for the liquid to reach these levels ($t_{min}^{HLL}, t_{min}^{NLL}, t_{min}^{LLL}$) ,
+        if no liquid id withdrawn anymore, or no liquid comes down from the column. Furthermore
+        the times for reaching the reboiler inlet and the lowest plat will ne necessary.
+        What duration to reach those levels will be sufficient needs to be decided by a control engineer.
+
+        With these times and heights the height of the tower can be expressed as
+        \Eq{}{
+            l_{\text{column}} = n_S \cdot h_{\text{plate}} + \left(\sum_i t^{i}_{min} H^{i} \right) \cdot
+                \frac{L_{n_S}}{A_{\text{column}} \varrho^L}.
+        }
+        \ncr{h_{\text{plate}}}{plate spacing}{m}
+
+        This leaves the diameter to be determined. The most important factor to that regard is the vapour velocity
+        within the tower. It is to be chosen such that no flooding or entrainment will occur. The following equation
+        to compute these operation boundaries are taken from \cite{Lygeros.1986}.
+
+        First the fractional entrainment factor $ent_j$ for 80\% flooding at each stage $j$ needs to be calculated
+        \Eq{}{
+            ent_j = 2.24 \cdot 10^{-3} \cdot 2.377 \exp\left[ -9.394 \cdot FLV_j^{0.314}\right], \eqanns .
+        }
+        \ncr{ent_j}{fractional entrainment for 80\% flooding on stage $j$}{-}
+        Therein the Sherwood flow parameter $FLV_j$ is used
+        \Eq{}{
+            FLV_j = \frac{\tilde{L_j}}{\tilde{V}_j} \cdot \sqrt{\frac{\tilde{\varrho}^V_j}{\tilde{\varrho}^L_j}}, \eqanns.
+        }
+        \ncr{FLV_j}{Sherwood flow parameter on stage $j$}{-}
+        \Eq{}{
+            v_j^{flood} = 60 \cdot \left( \frac{\sigma_j^L}{20} \right)^{0.2}  \cdot K1_j \cdot
+                \sqrt{\frac{\tilde{\varrho}_j^L - \tilde{\varrho}_j^V}{\tilde{\varrho}^V_j}}, \eqanns, \\
+            K1_j = 1.05 \cdot 10^{-2} + 0.1496 \cdot h_{\text{plate}}^{0.755} \cdot \exp\left[ -1.463 \cdot FLV_j^{0.842} \right], \eqanns.
+        }
+        \ncr{K1}{empirical coefficient}{-}
+        \ncr{v_j^{flood}}{flooding velocity on stage $j$}{\frac{m}{s}}
+        With those values the minimum required column area for each stage $A_j^{min}$ can be calculated
+        \Eq{}{
+            A_j^{min} = \frac{V_j}{\Psi_{flood} \varrho_j^V v_j^{flood}}, \eqanns,
+        }
+        \ncr{A_j^{min}}{minimum column area on stage $j$}{m^2}
+        \ncg{\Psi_{flood}}{fractional allowed flooding}{-}
+        where $\Psi_{flood}$ is a design parameter which determines the degree of flooding allowed and will usually
+        have a value around $0.8$.
+
+    \subsubsection{Structured packings}
+        The calculation of the column height is equivalent to the trayed case, with the one difference, that
+        rather than using the plate spacing as the height for each stage a value called height equivalent
+        to to theoretical plate ($HETP$) ist used. In terms of the column diameter the flooding velocity
+        is determined by the flooding pressure drop as calculated in \secref{sec:mathpro:dynamic:strpackhyd}.
+
+\subsection{Centrifugal pump}
+		Pumps are among the most common units of process equipment. While there are several different
+		kinds of pumps that can be used, the centrifugal pump is one of the most popular choices and
+		denotes a very likely choice for the process conditions considered in this application. Hence
+		other pump types will not be considered at this point.
+		
+		\paragraph{Pump}
+			In terms of operations pumps are best described by the volumetric flow transported $Q$ as
+			well as the pump head $H$, the hight that needs to be overcome. Data taken from the company
+			Mosanto was used to correlate the pump cost to a specific value
+			\Eq{eq:cost:pump:SpecVal}{
+				S = Q \sqrt{H}.
+			}
+			As a reference unit the base price $C_B$ is estimated for a cast iron single-stage
+			vertically split case at 3600 $rpm$
+			\Eq{eq:cost:pump:PumpWOMotor}{
+				C_B = \exp \left\{ 9.7171 - 0.6019 \cdot \ln[S] + 0.0519 (\ln[S])^2 \right\},
+					\eqannote{400 \leq S \leq 100000}.
+			}
+			
+			The most influential scaling factors for the pump price are the material, which is accounted
+			for in the material factor $f_m$, as well as the rotation, case split orientation (horizontal
+			and vertical), the number of stages, covered flow rate range, pump head range and maximum
+			motor power, which are all agglomerated in the type factor $f_T$. Values for these factors
+			are given in \tabref{tab:pump:Type} and \tabref{tab:pump:Material}.
+			
+            \begin{table}
+                \center
+                \begin{subtable}{.68\linewidth}
+                    \footnotesize
+                    \center
+                    \input{Tables/PumpFactorsType}
+                    \caption{type factors.}
+                    \label{tab:pump:Type}
+                \end{subtable}
+                \begin{subtable}{.3\linewidth}
+                    \footnotesize
+                    \center
+                    \input{Tables/PumpFactorsMaterial}
+                    \caption{material factors.}
+                    \label{tab:pump:Material}
+                \end{subtable}
+                \caption{Pump cost factors \cite{Seider.2010}.}
+            \end{table}
+			
+		\paragraph{Electric motor}
+			Separately from the pump itself the motor to drive the compression is considered. While the
+			volumetric flow and the pump head certainly are valid choices to correlate motors for pumps
+			especially, the power consumption is a more general specific value
+			\Eq{eq:cost:pump:MotorPowerConsumption}{
+				P_C = \frac{P_T}{\eta_P \eta_M} = \frac{P_B}{\eta_M}
+			}
+			
+			It can be calculated from the theoretic power of the pump $P_T$ and the efficiencies $\eta_P$
+			$\eta_M$. While an estimate for the expected power consumption might be already available at
+			rather early design stages, the efficiencies will have to be correlated as well if resorting
+			to average values is considered too coarse. Those correlations rely on the volumetric flow in
+			gallons per minute ([gpm]) and the brake horse power $P_B = \frac{P_T}{\eta_P}$.
+			
+			\Eq{eq:cost:pump:MotorEfficiancyP}{
+				\eta_P = -0.316 + 0.24015 \cdot \ln[Q] - 0.01199 \cdot (\ln[Q])^2 \eqannote{50 \leq Q \leq 5000}
+			}
+			\Eq{eq:cost:pump:MotorEfficiancyM}{
+				\eta_M = 0.80 + 0.0319 \cdot \ln[P_B] - 0.00182 \cdot (\ln[P_B])^2 \eqannote{1 \leq P_B \leq 1500}
+			}
+			
+			After having calculated the power which the motor needs to supply its base cost of an open,
+			drip-proof enclosed motor at 3600 $rpm$ can be approximated by
+			\Eqml{eq:cost:pump:Motor}{
+				C_B = \exp\big\{ 5.8259 + 0.13141 \cdot \ln[P_C] + 0.053255 \cdot (\ln[P_C])^2 \\
+					+ 0.028628 \cdot (\ln[P_C])^3 - 0.0035549 \cdot (\ln[P_C])^4 \big\} \eqannote{1 \leq P_C \leq 700}
+			}
+			
+			To adjust the cost for different types of electric motors the type factors from \tabref{tab:pump:MotorTypes}
+			
+            \begin{table}
+                \footnotesize
+                \center
+                \input{Tables/MotorTypeFactors}
+                \caption{Type factors for different motor types.}
+                \label{tab:pump:MotorTypes}
+	        \end{table}
+
+	\subsubsection{Compressor}
+		The cost of compressors is correlated with their respective power consumption measured in horsepower.
+		Although not the most efficient type of compressor, centrifugal compressors are very popular in the
+		process industry, as they are easily controlled an deliver a very steady flow. However as different
+		types might be employed as well base cost correlations for centrifugal, reciprocation and screw
+		compressors are given.
+		
+			\paragraph{Centrifugal compressor}
+				\Eq{eq:cost:compressor:centrifugal}{
+					C_B = \exp\big\{ 7.5800 + 0.80 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 30000}
+				}
+			
+			\paragraph{Reciprocating compressor}
+				\Eq{eq:cost:compressor:centrifugal}{
+					C_B = \exp\big\{ 7.9661 + 0.80 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 20000}
+				}
+				
+			\paragraph{Screw compressor}
+				\Eq{eq:cost:compressor:centrifugal}{
+					C_B = \exp\big\{ 8.1238 + 0.7243 \cdot (\ln[P_C]) \big\} \eqannote{200 \leq P_C \leq 750}
+				}
+		
+		Again as with most other equipment types correction factors are used to adjust for different realization
+		of this piece of equipment. Here type of motor as well as the construction material have the biggest
+		effects on the unit price and are explicitly considered.
+		\Eq{eq:cost:sompressor:factors}{
+			C_p = f_D \, f_M \, C_B
+		}
+		
+		The alternatives to the electric motor ($f_D = 1.0$) are a steam turbine ($f_D = 1.15$) or a gas turbine
+		($f_D = 1.25$). It should however be noted that aside from being the cheapest choice, the electric motor
+		is also the most efficient. Thus the turbines are mostly considered, when process steam or combustion gas
+		is easily available, such that the drawbacks might be eliminated by not having to supply the electric
+		energy for the electric motor. In terms of construction material all base costs are for cast iron or
+		carbon steel. Some appliances may require more resistant and also more expensive materials such as
+		stainless steel ($f_M = 2.5$) or an nickel alloy ($f_M = 5.0$).
+		
+	\subsubsection{Reboiler / condenser}
+		Reboiler and condenser can be characterized as heat exchangers, and be handled in the same way,
+		as the main difference is weather heat is transferred to or from the process stream. In that sense
+		they must be distinguished when considering the operating cost, as the cost for hot or cold
+		auxiliary streams might differ significantly. As customary for heat exchangers the specific
+		quantity for cost correlations is the necessary heat exchange area $A$ measured in $ft$.
+		
+		Again the construction material as well as the operating conditions have an effect on the
+		final cost
+		\Eq{eq:cost:condreb:total}{
+			C_p = f_P \, f_M \, C_B.
+		}
+		
+		The correction for pressures $f_P$ takes into account the operating pressure $P_o$ and
+		is computed by
+		\Eq{eq:cost:condreb:pcorrect}{
+			f_P = 0.8510 + 0.1292 P_o + 0.0198 * P_o^2.
+		}
+		
+		The material correction factor $f_M$
+		\Eq{}{
+			f_M =
+		}
+		
+		\paragraph{Shell and tube heat exchanger}
+		\Eq{eq:cost:condreb}{
+			C_B = \exp\big\{ 11.667 - 0.8709 \cdot \pow{\ln[A]}{} + 0.09005 \cdot \pow{\ln[A]}{2} \big\}
+		}
+		
+		\paragraph{Double pipe}
+		\Eq{}{
+			C_B = \exp\left\{ 7.146 + 0.1600 \cdot \pow{\ln[A]}{} \right\}
+		}

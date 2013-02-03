@@ -1,0 +1,94 @@
+\chapter{Simultaneous heat integration}
+\label{app:heat}
+
+    Traditionally heat integration has been carried out in a sequential manner, where it is for the purposes of process
+    optimization assumed, that all heating and cooling is done by external utilities. After an (locally) optimal
+    process configuration is identified, all hot and cold streams within the process are identified, and their
+    temperature intervals fixed. %In the context of heat integration hot and cold streams do not refer to whether a given
+    %stream has a subjectively high or low temperature, but rather whether a given stream needs to be cooled (hot) or
+    %heated (cold) within the process. %
+    In subsequent steps first the minimum utility requirements, and maximum number of heat exchangers are identified,
+    and a specific heat exchange network (HEN) is designed.
+    While this approach has been successfully applied to a multitude of processes and led to substantial savings,
+    it is questionable if such a sequential approach will yield an optimal or near optimal solution.
+
+    Therefore some efforts have been made to develop efficient strategies for simultaneous process optimization
+    and heat integration. Two general approaches can be distinguished. The first one based on the pinch concept.
+    \todoil{}{elaborate on pinch concept?} These methods are able to identify the minimum heat requirement
+    as well as stream temperatures during process optimization. The first model along these lines was published
+    by Duran and Grossmann \cite{Duran.1986} in 1986. They introduced a limited number of quite well behaved
+    constraints into the optimization model to ensure no minimum driving force violations. Recently
+    this model has been extended to handle phase changes and by fixing the utilities to zero been applied
+    to the design of a multi-stream heat exchanger \cite{Kamath.2012}. The major drawback with these methods
+    \todoil{}{read about and mention transshipment model by Moriari (sequential)}
+    is that one cannot target area of a given heat exchanger as the approach temperatures are not computed
+    by the model. Therefore the sometimes substantial trade-off between the cost for heat exchange area
+    and utility cost cannot be regarded.
+
+    A second approach employs superstructures of a HEN to find optimal matchings of process streams. No pinch
+    point calculations are required, as the actual heat exchange is more or less modeled explicitly. This
+    leads to the benefit, that approach temperatures as well as exchanged heat duties between each stream coupling
+    are known within the model, and the cost of the designed unit can be considered in an economic objective
+    function.
+
+    The approach and respective superstructure adapted in this thesis were first published by Yee and Grossmann
+    \cite{Yee.1990}. \Figref{fig:HX_super} shows the stage wise superstructure for a HEN consisting of two hot
+    and two cold streams.
+
+    \begin{figure}
+        \input{Pictures/HX_superstructure}
+        \caption{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}
+        \label{fig:HX_super}
+    \end{figure}
+%    \stdfig{Pictures/HX_superstructure}{Superstructure for multi-stream heat exchanger. \cite{Yee.1990}}{fig:HX_super}{}
+
+    In this stagewise structure each hot stream can exchange heat with each cold stream within each stage.
+    The following assumptions were made when the model was developed
+    \begin{itemize}
+        \item Constant heat capacities
+        \item Constant heat transfer coefficients
+        \item Countercurrent heat exchangers
+        \item Isothermal mixing at each stage.
+    \end{itemize}
+
+    The assumption of constant heat capacities is a common one in the design of HEN's. When no phase boundaries are passed
+    and the temperature range of the involved is not too wide, it is a reasonably good approximation of the real conditions.
+    While constant heat transfer coefficients a re assumed the model leaves the flexibility to define different
+    coefficients for each pairing of hot and cold streams. Countercurrent heat exchangers are common in industrial practice.
+    This assumption however does not really pose a limitation, as the model can easily be altered to account for concurrent
+    units.
+
+    The last assumption of isothermal mixing is a more major one. It has been introduced as it allows for significant
+    simplifications and leads to a model, where all constraints are linear and all non-linearities are restricted
+    to the objective function. While that is certainly not true for the entire process model, it should at least
+    allow for some reductions in the model complexity. The assumption states, that regardless of which streams a
+    given stream exchanges heat with, it will leave at the same temperature. Due to that all energy balances around
+    each unit in the superstructure can be eliminated as well as the subsequent mixing of the streams.
+
+    \paragraph{Model equations}
+
+    First of all a heat balance at each stage is necessary
+    \Eq{}{
+        F_i (T_{i, \ell} - T_{i, \ell+1}) = \sum_j q_{ijk} \\
+        f_j (T_{i, \ell} - T_{i, \ell+1}) = \sum_i q_{ijk}
+    }
+
+    The heat exchange area $A_{hx}$ can be computed from the exchanged energy, the heat transfer coefficients $\alpha_{ij}$
+    and the logarithmic mean temperature difference $LMTD$.
+    \Eq{}{
+        A_{hx} = \sum_i \sum_j \sum_k \frac{q_{ijk}}{\alpha_{ij} * LMDT_{ijk} + \delta}
+    }
+
+    While the small number $\delta$ is included to avoid problems in the program, when $LMDT$ becomes zero
+    In order to avoid further numerical difficulties when the approach temperatures $\Delta T_{ij}$ at each side of an exchange
+    unit approach zero, it was proposed to use an approximation introduced by Chen \cite{Chen.1987}
+    \Eq{}{
+        LMDT_{ijk} \approx \left[ \Delta T_{ijk} \cdot \Delta T_{ijk+1} \frac{\Delta T_{ijk} + \Delta T_{ijk+1}}{2} \right]^{\frac{1}{3}}.
+    }
+
+    While the approach temperatures are defined as
+    \Eq{}{
+        \Delta T_{ijk} = \max \left\{0, T_{ik} - T_{jk}\right\}
+    }
+    As the $\max$ function is non-smooth and thus non differentiable at the points $T_{ik} = T_{jk}$, \gproms internally uses a smooth
+    approximation. The exact for of which is unknown to the author.

@@ -4,58 +4,166 @@
 0
 1
 Diplomarbeit.tex
-121
-16
-10
+152
+13
+6
 
 Diplomarbeit.tex
 TeX:UNIX
-152154107 0 -1 1271 -1 1085 0 0 934 409 1 73 153 -1 -1 0 0 62 -1 -1 62 1 0 1085 -1   0
-Content\optimization.tex
+152154107 0 -1 1916 -1 1110 0 0 934 409 1 73 68 -1 -1 0 0 62 -1 -1 62 1 0 1110 -1   0
+Content_final\91_Appendix_control.tex
 TeX:UNIX
-1159163 0 -1 1030 -1 1030 175 175 1364 674 0 25 340 -1 -1 0 0 29 -1 -1 29 1 0 1030 -1   0
-Content\optimization_theory.tex
+1159163 0 37 41 -1 59 150 150 1148 642 0 25 34 -1 -1 0 0 38 -1 -1 38 1 0 59 -1   0
+Content_final\00_Abstract.tex
 TeX:UNIX
-17936379 0 -1 583 -1 3859 200 200 1389 699 0 569 153 -1 -1 0 0 36 4 4 36 1 0 3859 -1   0
+1159163 0 -1 0 -1 57 150 150 1148 642 0 25 85 -1 -1 0 0 16 -1 -1 16 1 0 57 -1   0
+Content_final\04_ProcessModel.tex
+TeX:UNIX
+1159163 1 -1 2324 -1 2342 50 50 1048 542 0 257 510 -1 -1 0 0 36 -1 -1 36 1 0 2342 -1   0
+Content_final\04A_ProcessModel_steady.tex
+TeX:UNIX
+1159163 1 -1 771 -1 794 200 200 1198 692 0 297 272 -1 -1 0 0 86 -1 -1 86 1 0 794 -1   0
+Content_final\04A4_ProcessModel_steady_comp.tex
+TeX:UNIX
+1159163 0 -1 0 -1 690 50 50 1048 542 0 201 170 -1 -1 0 0 0 -1 -1 0 1 0 690 -1   0
+Content_final\05_ModelApp.tex
+TeX
+269496315 0 -1 765 -1 953 75 75 1073 567 0 777 204 -1 -1 0 0 35 -1 -1 35 1 0 953 -1   0
+Content_final\02_ExampleProcess.tex
+TeX:UNIX
+1159163 1 -1 33 -1 43 200 200 1198 692 0 161 17 -1 -1 0 0 25 -1 -1 25 1 0 43 -1   0
+Content_final\04A3_ProcessModel_steady_hx.tex
+TeX:UNIX
+1159163 0 -1 2546 -1 1934 25 25 1023 517 0 81 136 -1 -1 0 0 3 -1 -1 3 1 0 1934 -1   0
+Content_final\04A1_ProcessModel_steady_separation.tex
+TeX:UNIX
+1159163 0 -1 12724 -1 12742 225 225 1223 717 0 537 238 -1 -1 0 0 93 -1 -1 93 1 0 12742 -1   0
+Content_final\04C_ProcessModel_thermo.tex
+TeX
+1060859 0 -1 794 -1 1532 0 0 998 492 0 537 272 -1 -1 0 0 104 -1 -1 104 1 0 1532 -1   0
+Content_final\04B_ProcessModel_dynamic.tex
+TeX:UNIX
+1159163 0 -1 1142 -1 11806 0 0 808 473 0 129 3706 -1 -1 0 0 -1 -1 -1 -1 1 0 11806 -1   0
+Content_final\90_Appendix_heat.tex
+TeX:UNIX
+1159163 0 -1 6492 -1 6281 125 125 1123 617 0 305 352 -1 -1 0 0 39 -1 -1 39 1 0 6281 -1   0
+Content_final\06_Outlook.tex
+TeX:UNIX
+1159163 0 -1 0 -1 1793 50 50 1048 542 0 937 357 -1 -1 0 0 -1 -1 -1 -1 1 0 1793 -1   0
+Content_final\03_ProcessEconomics.tex
+TeX:UNIX
+1159163 0 -1 2444 -1 1198 25 25 1023 498 0 257 306 -1 -1 0 0 27 -1 -1 27 1 0 1198 -1   0
+Content_final\04A2_ProcessModel_steady_conreb.tex
+TeX:UNIX
+1159163 0 -1 0 -1 1376 0 0 998 492 0 137 340 -1 -1 0 0 -1 -1 -1 -1 1 0 1376 -1   0
+Content_final\03B_ProcessEconomics_invest.tex
+TeX:UNIX
+269594619 0 -1 1488 -1 1487 150 150 1078 623 0 849 136 -1 -1 0 0 -1 -1 -1 -1 1 0 1487 -1   0
+Content_final\03C_ProcessEconomics_model.tex
+TeX:UNIX
+1159163 0 -1 307 -1 1293 75 75 1073 567 0 65 -4230 -1 -1 0 0 -1 -1 -1 -1 1 0 1293 -1   0
+Content_final\92_Appendix_pengrob.tex
+TeX:UNIX
+269594619 0 -1 35 -1 483 175 175 1173 667 0 241 221 -1 -1 0 0 -1 -1 -1 -1 1 0 483 -1   0
+Content_final\05A_ModelApp_theory.tex
+TeX
+17838075 0 -1 5389 -1 5339 200 200 1198 692 0 321 1275 -1 -1 0 0 0 -1 -1 0 1 0 5339 -1   0
+Content_final\03A_ProcessEconomics_eval.tex
+TeX:UNIX
+1159163 0 -1 4 -1 4 50 50 1048 542 0 57 0 -1 -1 0 0 -1 -1 -1 -1 1 0 4 -1   0
+Content_final\01_Introduction.tex
+TeX:UNIX
+269594619 0 -1 4019 -1 349 175 175 1173 667 0 25 85 -1 -1 0 0 -1 -1 -1 -1 1 0 349 -1   0
 Content\optimization_MINLP.tex
 TeX:UNIX
-17936379 1 -1 12966 -1 12522 225 225 1414 724 1 105 153 -1 -1 0 0 0 -1 -1 0 1 0 12522 -1   0
-Content\optimization_application.tex
-TeX
-1060859 1 -1 23700 -1 29377 0 0 1189 499 1 145 153 -1 -1 0 0 105 -1 -1 105 1 0 29377 -1   0
-Content\Process_steady_separation.tex
+286371835 0 -1 0 -1 13692 225 225 1414 724 1 969 272 -1 -1 0 0 0 -1 -1 0 1 0 13692 -1   0
+Content\optimization_theory.tex
 TeX:UNIX
-1159163 0 -1 20264 -1 37956 150 150 1056 640 1 457 0 -1 -1 0 0 93 -1 -1 93 3 0 37956 -1  1 23485 -1  2 9582 -1   0
-GNUPlot\N2_ADyn_minus.tex
+17936379 0 -1 583 -1 3859 200 200 1389 699 0 577 153 -1 -1 0 0 36 4 4 36 1 0 3859 -1   0
+Content\optimization.tex
 TeX:UNIX
-1159163 0 -1 4505 -1 4019 75 75 1198 567 0 497 148 -1 -1 0 0 40 -1 -1 40 1 0 4019 -1   0
-Content\ModelApp.tex
+1159163 0 -1 1030 -1 1030 175 175 1364 674 0 25 306 -1 -1 0 0 29 -1 -1 29 1 0 1030 -1   0
+preambel.tex
+TeX:UNIX
+1159163 0 -1 234 -1 233 0 0 1009 215 0 217 17 -1 -1 0 0 129 -1 -1 129 1 0 233 -1   0
+Content_final\Preamble\TaskDescription.tex
+TeX:UNIX
+269594619 0 -1 0 -1 2959 175 175 1173 667 0 553 493 -1 -1 0 0 -1 -1 -1 -1 1 0 2959 -1   0
+Content_final\Preamble\StatutoryDeclaration.tex
+TeX:UNIX
+269594619 0 -1 831 -1 765 75 75 1073 567 1 265 323 -1 -1 0 0 18 -1 -1 18 1 0 765 -1   0
+Content\outlook.tex
+TeX:UNIX
+1159163 0 -1 3040 -1 3040 225 225 1650 733 0 345 629 -1 -1 0 0 41 -1 -1 41 1 0 3040 -1   0
+Content\DynamicApp.tex
 TeX
-1060859 0 -1 98 -1 1150 225 225 1164 717 0 809 187 -1 -1 0 0 35 -1 -1 35 1 0 1150 -1   0
+1060859 0 -1 12773 -1 12978 175 175 1114 667 0 73 663 -1 -1 0 0 107 -1 -1 107 1 0 12978 -1   0
 Content\SteadyApp.tex
 TeX
 1060859 0 -1 5202 -1 16911 200 200 1139 692 0 881 153 -1 -1 0 0 118 -1 -1 118 1 0 16911 -1   0
-Content\DynamicApp.tex
+Content\ModelApp.tex
 TeX
-1060859 0 -1 12631 -1 12632 175 175 1114 667 0 385 17 -1 -1 0 0 107 -1 -1 107 1 0 12632 -1   0
-GNUPlot\LPC_init_o2_s1.tex
+269496315 0 -1 3081 -1 2200 225 225 1164 717 0 289 307 -1 -1 0 0 35 -1 -1 35 1 0 2200 -1   0
+Content\introduction.tex
 TeX:UNIX
-269594619 0 -1 3157 -1 3158 125 125 1228 414 0 417 -28 -1 -1 0 0 40 -1 -1 40 1 0 3158 -1   0
-GNUPlot\LPC_init_o2_s2.tex
+1159163 1 -1 0 -1 3726 50 50 984 459 0 25 714 -1 -1 0 0 22 -1 -1 22 1 0 3726 -1   0
+Content\Process_steady_separation.tex
 TeX:UNIX
-1159163 0 -1 3157 -1 4198 100 100 1203 389 0 273 357 -1 -1 0 0 40 -1 -1 40 1 0 4198 -1   0
+1159163 0 -1 19081 -1 19081 150 150 1056 640 1 73 170 -1 -1 0 0 93 -1 -1 93 3 0 19081 -1  1 23480 -1  2 9579 -1   0
+Content\ProcessModel.tex
+TeX:UNIX
+1159163 1 -1 2536 -1 2512 150 150 1056 640 0 57 340 -1 -1 0 0 36 -1 -1 36 1 0 2512 -1   0
+Content\AirSep.tex
+TeX:UNIX
+17936379 0 -1 8451 -1 1024 125 125 1031 615 0 25 272 -1 -1 0 0 35 -1 -1 35 1 0 1024 -1   0
+Content\Intro_AirSep.tex
+TeX
+1060859 0 -1 1550 -1 2976 150 150 1633 658 0 945 544 -1 -1 0 0 22 -1 -1 22 1 0 2976 -1   0
+Content\ProcessModel_new.tex
+TeX:UNIX
+1159163 0 -1 5059 -1 2360 50 50 1048 542 0 329 425 -1 -1 0 0 -1 -1 -1 -1 1 0 2360 -1   0
+Content\ProcessEconomics_new.tex
+TeX:UNIX
+269594619 0 -1 2494 -1 1175 25 25 1023 517 0 153 289 -1 -1 0 0 -1 -1 -1 -1 1 0 1175 -1   0
+Content\ProcessEconomics.tex
+TeX:UNIX
+269594619 0 -1 14074 -1 25849 175 175 1369 633 1 441 564 -1 -1 0 0 27 -1 -1 27 1 0 25849 -1   0
+Content\Process_econ_models.tex
+TeX:UNIX
+1159163 0 -1 0 -1 4881 150 150 1148 642 0 425 1411 -1 -1 0 0 -1 -1 -1 -1 1 0 4881 -1   0
+Content\Process_econ_theory_2.tex
+TeX:UNIX
+269594619 0 -1 141 -1 0 175 175 1173 667 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
+Content\Process_econ_theory.tex
+TeX:UNIX
+269594619 0 -1 13860 -1 13860 125 125 1123 617 0 529 3417 -1 -1 0 0 -1 -1 -1 -1 1 0 13860 -1   0
+Content\lists.tex
+TeX
+1060859 1 -1 90 -1 0 150 150 1131 481 0 25 0 -1 -1 0 0 20 -1 -1 20 1 0 0 -1   0
+Content\ExampleProcess.tex
+TeX:UNIX
+269594619 0 -1 11697 -1 11193 225 225 1223 698 0 321 119 -1 -1 0 0 -1 -1 -1 -1 1 0 11193 -1   0
+Content\Process_econ_new.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 75 75 1073 567 0 25 0 -1 -1 0 0 100 -1 -1 100 1 0 0 -1   0
+GNUPlot\N2_ADyn_plus.tex
+TeX:UNIX
+1159163 0 -1 4020 -1 4433 50 50 1173 542 0 465 306 -1 -1 0 0 40 -1 -1 40 1 0 4433 -1   0
 GNUPlot\LPC_init_o2_s3.tex
 TeX:UNIX
 1159163 0 -1 4286 -1 4283 75 75 1178 364 0 273 323 -1 -1 0 0 40 -1 -1 40 1 0 4283 -1   0
-preambel.tex
+GNUPlot\LPC_init_o2_s2.tex
 TeX:UNIX
-1159163 0 -1 6128 -1 6112 0 0 1009 215 0 81 136 -1 -1 0 0 129 -1 -1 129 1 0 6112 -1   0
-GNUPlot\N2_ADyn_plus.tex
+1159163 0 -1 3157 -1 4198 100 100 1203 389 0 273 357 -1 -1 0 0 40 -1 -1 40 1 0 4198 -1   0
+GNUPlot\LPC_init_o2_s1.tex
 TeX:UNIX
-1159163 0 -1 4020 -1 4433 50 50 1173 542 0 465 318 -1 -1 0 0 40 -1 -1 40 1 0 4433 -1   0
-Content\outlook.tex
+269594619 0 -1 3157 -1 2192 125 125 1228 414 0 289 17 -1 -1 0 0 40 -1 -1 40 1 0 2192 -1   0
+GNUPlot\N2_ADyn_minus.tex
 TeX:UNIX
-1159163 0 -1 3040 -1 3040 225 225 1650 733 0 345 436 -1 -1 0 0 41 -1 -1 41 1 0 3040 -1   0
+269594619 0 -1 4505 -1 4019 75 75 1198 567 0 497 136 -1 -1 0 0 40 -1 -1 40 1 0 4019 -1   0
+Content\optimization_application.tex
+TeX
+1060859 1 -1 23700 -1 29377 0 0 1189 499 1 145 153 -1 -1 0 0 105 -1 -1 105 1 0 29377 -1   0
 GNUPlot\LPC_init_o2_s4.tex
 TeX:UNIX
 269594619 0 -1 3157 -1 4367 50 50 1153 339 0 273 527 -1 -1 0 0 40 -1 -1 40 1 0 4367 -1   0
@@ -98,18 +206,9 @@ TeX
 Content\Process_dynamic.tex
 TeX:UNIX
 1159163 0 -1 11745 -1 11752 25 25 1121 615 0 393 544 -1 -1 0 0 85 -1 -1 85 1 0 11752 -1   0
-Content\ProcessEconomics.tex
-TeX:UNIX
-1159163 2 -1 9677 -1 9676 175 175 1369 633 1 73 357 -1 -1 0 0 27 -1 -1 27 1 0 9676 -1   0
-Content\AirSep.tex
-TeX:UNIX
-17936379 0 -1 8451 -1 8484 125 125 1031 615 0 473 408 -1 -1 0 0 35 -1 -1 35 1 0 8484 -1   0
 Pictures\HX_superstructure.tex
 TeX:UNIX
 269594619 6 -1 7858 -1 7739 150 150 1436 840 0 25 170 -1 -1 0 0 23 -1 -1 23 1 0 7739 -1   0
-Content\ProcessModel.tex
-TeX:UNIX
-269594619 0 -1 1406 -1 1440 150 150 1056 640 0 849 374 -1 -1 0 0 36 -1 -1 36 1 0 1440 -1   0
 Content\Process_econ.tex
 TeX:UNIX
 1159163 0 151 120 -1 9187 125 125 1525 644 1 945 340 -1 -1 0 0 100 -1 -1 100 1 0 9187 -1   0
@@ -125,9 +224,6 @@ TeX
 Content\Preamble\TaskDescription.tex
 TeX:UNIX
 1159163 0 -1 2705 -1 2890 175 175 1109 584 0 121 408 -1 -1 0 0 18 -1 -1 18 1 0 2890 -1   0
-Content\introduction.tex
-TeX:UNIX
-269594619 0 -1 2398 -1 2398 50 50 984 459 0 817 459 -1 -1 0 0 22 -1 -1 22 1 0 2398 -1   0
 Pictures\tech_compar.tex
 TeX:UNIX
 269594619 0 -1 0 -1 79 100 100 1089 442 0 145 51 -1 -1 0 0 12 -1 -1 12 1 0 79 -1   0
@@ -266,9 +362,6 @@ TeX:UNIX
 Content\MathModel.tex
 TeX:UNIX
 1159163 0 -1 14617 -1 14617 50 50 1059 265 1 153 612 -1 -1 0 0 36 -1 -1 36 1 0 14617 -1   0
-Content\lists.tex
-TeX
-1060859 1 -1 90 -1 0 150 150 1131 481 0 25 0 -1 -1 0 0 20 -1 -1 20 1 0 0 -1   0
 :\Users\Abakus W7\Dropbox\Bewerbung\CDI\Lebenslauf\cvheadpic.tex
 TeX:UNIX
 269594619 0 -1 0 -1 803 125 125 1106 456 0 273 340 -1 -1 0 0 30 -1 -1 30 1 0 803 -1   0
@@ -380,68 +473,73 @@ TeX:UNIX
 *listings_gPROMS_def
 <
 *pgfplots/TikZTemplates
-*Content/Preamble/CoverPage
-*Content/Preamble/TaskDescription
-*Content/Preamble/StatutoryDeclaration
-*Content/Lists
-*Content/Abstract
-*Content/Introduction
-*Content/AirSep
+*Content_final/Preamble/CoverPage
+*Content_final/Preamble/TaskDescription
+*Content_final/Preamble/StatutoryDeclaration
+*Content_final/00_Abstract
+*Content_final/01_Introduction
+*Content_final/02_ExampleProcess
 >
 *Pictures/tech_compar
 *Pictures/ASU_general
 *Pictures/PSA_tikz.tex
 *pgfplots/GasPermeation
 <
-*Content/ProcessEconomics
+*Content_final/03_ProcessEconomics
+>
+*Content_final/03A_ProcessEconomics_eval
 >
 *Tables/PriceIndices
+<
+*Content_final/03B_ProcessEconomics_invest
+>
 *pgfplots/ProjectCashFlow
 <
-*Content/ProcessModel
->
-*Pictures/ASU_general_color
-*Content/Process_steady
->
-*Content/Process_steady_separation
->
-*Pictures/col_complete_super
-*Pictures/col_stage_super
-*Pictures/condenser
-*Pictures/reboiler
-<
-*Pictures/condenser_reboiler
-*Pictures/HX_superstructure
-*pgfplots/Compressor
-*GNUPlot/pr_isenthalpes
-<
-*Content/Process_dynamic
->
-*Pictures/tray_model
-<
-*Content/Process_econ
+*Content_final/03C_ProcessEconomics_model
 >
 *Tables/PumpFactorsType
 *Tables/PumpFactorsMaterial
 *Tables/MotorTypeFactors
 <
-*Content/Process_impl
+<
+*Content_final/04_ProcessModel
+>
+*Pictures/ASU_general_color
+*Content_final/04A_ProcessModel_steady
+>
+*Content_final/04A1_ProcessModel_steady_separation
+>
+*Pictures/col_complete_super
+*Pictures/col_stage_super
+*Pictures/condenser
+*Pictures/reboiler
+*Pictures/condenser_reboiler
+<
+*Content_final/04A3_ProcessModel_steady_hx
+*Content_final/04A4_ProcessModel_steady_comp
+>
+*pgfplots/Compressor
+*GNUPlot/pr_isenthalpes
+<
+<
+*Content_final/04B_ProcessModel_dynamic
+>
+*Pictures/tray_model
+<
+*Content_final/04C_ProcessModel_thermo
+*Content_final/04D_ProcessModel_impl
 >
 *Pictures/gP_ModelStructure
 <
 <
-*Content/optimization
+*Content_final/05_ModelApp
 >
-*Content/optimization_theory
-*Content/optimization_MINLP
+*Content_final/05A_ModelApp_theory
 >
 *GNUPlot/FB_Plot
 *GNUPlot/DDF_Plot
 <
-<
-*Content/ModelApp
->
-*Content/SteadyApp
+*Content_final/05B_ModelApp_steady
 >
 *Tables/Discrepancy
 *Pictures/LPC_example
@@ -455,18 +553,20 @@ TeX:UNIX
 *Tables/SS_results_dual_cont
 *Tables/SS_results_dual_disc
 <
-*Content/DynamicApp
+*Content_final/05C_ModelApp_dynamic
 >
 *GNUPlot/step_response
 *GNUPlot/N2_ADyn_plus
 *GNUPlot/N2_ADyn_minus
-*GNUPlot/LPC_init_n2_step1
-*GNUPlot/LPC_init_n2_step2
-*GNUPlot/LPC_init_n2_step3
-*GNUPlot/LPC_init_n2_step4
 <
-*Content/IssuesApp
+*Content_final/05D_ModelApp_issues
 <
-*Content/outlook
+*Content_final/06_Outlook
 *Literature.bib
+*Content_final/90_Appendix_heat
+>
+*Pictures/HX_superstructure
+<
+*Content_final/91_Appendix_control
+*Content_final/92_Appendix_pengrob
 <
